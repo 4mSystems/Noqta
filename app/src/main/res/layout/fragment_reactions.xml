@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200h"
+            android:background="@drawable/back_curve"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp12h"
+            app:cardCornerRadius="@dimen/dp8h"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_reacts_people"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:layout_marginTop="@dimen/dp14h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@string/reacts_people"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toStartOf="@id/tv_reacts_people_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_reacts_people_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp14h"
+                    android:layout_marginEnd="@dimen/dp18w"
+                    android:text="@{viewModel.passingObject.object}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v_reacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_reacts_people" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:background="@{viewModel.reactType.equals(Constants.ALL_REACTIONS)?@color/chat_options:@color/white}"
+                    android:onClick="@{()-> viewModel.buttonActions(Constants.ALL_REACTIONS)}"
+                    android:padding="@dimen/dp8h"
+                    android:text="@{@string/floor.concat(` `).concat(!TextUtils.isEmpty(viewModel.followersResponse.allReacts)?viewModel.followersResponse.allReacts:``)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_reacts" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.reactType.equals(Constants.LIKES_REACTION)?@color/chat_options:@color/white}"
+                    android:drawableEnd="@{viewModel.followersResponse.isLiked?@drawable/ic_like_active:@drawable/ic_like}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:onClick="@{()-> viewModel.buttonActions(Constants.LIKES_REACTION)}"
+                    android:padding="@dimen/dp8h"
+                    android:text="@{!TextUtils.isEmpty(viewModel.followersResponse.likes)?viewModel.followersResponse.likes:``}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintStart_toEndOf="@id/all"
+                    app:layout_constraintTop_toBottomOf="@id/v_reacts" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_post_dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@{viewModel.reactType.equals(Constants.DISLIKES_REACTIONS)?@color/chat_options:@color/white}"
+                    android:drawableEnd="@{viewModel.followersResponse.isDisLiked?@drawable/ic_dislike_active:@drawable/ic_dislike}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:onClick="@{()-> viewModel.buttonActions(Constants.DISLIKES_REACTIONS)}"
+                    android:padding="@dimen/dp8h"
+                    android:text="@{!TextUtils.isEmpty(viewModel.followersResponse.dislikes)?viewModel.followersResponse.dislikes:``}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:layout_constraintStart_toEndOf="@id/likes"
+                    app:layout_constraintTop_toBottomOf="@id/v_reacts" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/br_reacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="all,likes,tv_post_dislike" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/br_reacts" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp18w"
+                    app:adapter="@{viewModel.followersAdapter}"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/v1"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}"
+                    tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_part_service" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

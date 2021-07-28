@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="itemPostViewModel"
+            type="grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_services_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:text="ونش هيدروليك"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintBottom_toBottomOf="@id/tv_services_name_value"
+                app:layout_constraintEnd_toStartOf="@id/tv_services_name_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_services_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@string/remove"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colordark"
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textEnd"
+                app:iconPadding="@dimen/dp8w"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/v_services_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_services_name_value" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_order_location"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/service_location"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@id/tv_service_location_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_services_name" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_location_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="٦شارع الخلود مدينة نصر القاهرة"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_services_name" />
+
+            <View
+                android:id="@+id/v_service_location"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_location" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_client_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_client"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/client_name"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@id/tv_client_name_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_service_location" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_client_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="أحمد بكري"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_service_location" />
+
+            <View
+                android:id="@+id/v_client_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_client_name" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_delivery_time"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/service_time"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@id/tv_service_time_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_client_name" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@string/service_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_client_name" />
+
+            <View
+                android:id="@+id/v_service_status"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_time" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_accept_time"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/aval_order_time"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_service_status_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@string/aval_order_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

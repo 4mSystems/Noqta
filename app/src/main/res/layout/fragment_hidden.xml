@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="viewModel"
+            type="grand.app.aber_provider.pages.services.viewModels.ServicesViewModels" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pages_header"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcPosts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp300h"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:orientation="vertical"
+                app:adapter="@{viewModel.postsAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toTopOf="parent"
+                app:orientation="@{`1`}"
+                app:span="@{`2`}"
+                app:spanCount="2"
+                tools:listitem="@layout/item_service" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/info_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@id/rcPosts">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:drawableStart="@drawable/ic_info"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="تكلفة نفخ الإطارات 30 درهم للإطار الواحد"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_hidden_type"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:hint="@string/hidden_type"
+                android:textColorHint="@color/overlayBackground"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@+id/info_card">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_hidden_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:hint="@string/company"
+                android:textColorHint="@color/overlayBackground"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@+id/input_hidden_type">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_hidden_percentage"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:hint="@string/hidden_percentage"
+                android:textColorHint="@color/overlayBackground"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:endIconDrawable="@drawable/ic_arrow_down"
+                app:endIconMode="custom"
+                app:endIconTint="@color/black"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@+id/input_hidden_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_message"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:hint="@string/service_info_hint"
+                android:textColorHint="@color/overlayBackground"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@+id/input_hidden_percentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100h"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_location"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/car_types"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="@dimen/dp8h"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_search_location"
+                app:iconGravity="textStart"
+                app:iconPadding="@dimen/dp10w"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@id/input_message"
+                app:strokeColor="@color/colorPrimaryOp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pic_time"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/select_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="@dimen/dp8h"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="textStart"
+                app:iconPadding="@dimen/dp10w"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@id/search_location"
+                app:strokeColor="@color/colorPrimaryOp" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18h"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/emergency_services"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@+id/pic_time" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginBottom="@dimen/dp20h"
+                android:background="@{TextUtils.isEmpty(viewModel.message)||viewModel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
+                android:enabled="@{TextUtils.isEmpty(viewModel.message)||viewModel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+                android:text="@string/confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/rcPosts"
+                app:layout_constraintStart_toStartOf="@id/rcPosts"
+                app:layout_constraintTop_toBottomOf="@id/checkbox" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="@{!TextUtils.isEmpty(viewModel.message)&amp;&amp;viewModel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/btn_phone"
+                app:layout_constraintStart_toStartOf="@id/btn_phone"
+                app:layout_constraintTop_toTopOf="@id/btn_phone"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

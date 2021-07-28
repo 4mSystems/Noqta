@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="grand.app.aber_provider.pages.home.viewModels.SearchViewModels" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/curve"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100h"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_pages_header"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16h"
+            android:layout_marginTop="@dimen/dp8h"
+            android:layout_marginEnd="@dimen/dp16h"
+            android:layout_marginBottom="@dimen/dp16h"
+            android:background="@drawable/corner_view_gray_borde"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/dp8w"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:onTextChanged="@{viewmodel.onTextChanged}"
+            android:padding="@dimen/dp16h"
+            android:text="@{viewmodel.search}"
+            android:textColorHint="@color/medium_color"
+            app:drawableTint="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_posts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp10h"
+            app:adapter="@{viewmodel.postsAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            app:layout_constraintTop_toBottomOf="@id/curve"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_search" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

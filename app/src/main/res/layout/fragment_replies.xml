@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="grand.app.aber_provider.pages.postDetails.viewModels.RepliesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.mainComment.user!=null?View.VISIBLE:View.GONE}">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/main_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/send_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/post_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    app:cardCornerRadius="@dimen/dp8h"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_home_item"
+                            android:layout_width="@dimen/dp35w"
+                            android:layout_height="@dimen/dp35h"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:layout_marginBottom="@dimen/dp10h"
+                            android:onClick="@{()-> viewModel.buttonAction(Constants.PROFILE)}"
+                            android:src="@drawable/splash"
+                            app:civ_border_color="@color/colorPrimary"
+                            app:civ_border_width="@dimen/dp1h"
+                            app:imageMarketUrl="@{viewModel.mainComment.user.image}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/item_comment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginEnd="@dimen/dp8w"
+                            app:cardBackgroundColor="@color/comment_card_color"
+                            app:cardCornerRadius="@dimen/dp8h"
+                            app:cardElevation="1dp"
+                            app:cardUseCompatPadding="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                                    android:id="@+id/tv_home_item"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp6w"
+                                    android:layout_marginEnd="@dimen/dp6w"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="@{viewModel.mainComment.user.name}"
+                                    android:textAlignment="viewStart"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colordark"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/ic_close_page" />
+
+                                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                                    android:id="@+id/ic_close_page"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp4h"
+                                    android:layout_marginEnd="@dimen/dp12w"
+                                    android:text="@{viewModel.mainComment.createdAt}"
+                                    android:textColor="@color/colordark"
+                                    android:textSize="@dimen/sp10"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                                    android:id="@+id/tv_desc_post"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewModel.mainComment.text}"
+                                    android:textAlignment="viewStart"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colordarkOp" />
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/main_comment_img"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp100h"
+                                    android:background="@drawable/corner_view_gray_borde"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/splash"
+                                    android:visibility="@{!TextUtils.isEmpty(viewModel.mainComment.image)?View.VISIBLE:View.GONE}"
+                                    app:imageCommentUrl="@{viewModel.mainComment.image}"
+                                    app:riv_border_color="@color/background_gray"
+                                    app:riv_border_width="@dimen/dp2h"
+                                    app:riv_corner_radius="@dimen/dp8h" />
+
+                                <androidx.constraintlayout.helper.widget.Flow
+                                    android:id="@+id/flow1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp6w"
+                                    android:layout_marginTop="@dimen/dp4h"
+                                    android:layout_marginEnd="@dimen/dp6w"
+                                    android:layout_marginBottom="@dimen/dp4h"
+                                    app:constraint_referenced_ids="tv_desc_post,main_comment_img"
+                                    app:flow_horizontalGap="@dimen/dp8w"
+                                    app:flow_maxElementsWrap="1"
+                                    app:flow_verticalGap="@dimen/dp4h"
+                                    app:flow_wrapMode="chain"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_home_item" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_post_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@{viewModel.like?@drawable/ic_like_active:@drawable/ic_like,default=@drawable/ic_like}"
+                            android:drawablePadding="@dimen/dp2w"
+                            android:onClick="@{()-> viewModel.buttonAction(Constants.LIKE)}"
+                            android:text="@string/personal_info"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@{viewModel.like?@color/colorPrimary:@color/colordark,default=@color/colordark}" />
+
+                        <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_post_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_comment"
+                            android:drawablePadding="@dimen/dp2w"
+                            android:onClick="@{()-> viewModel.buttonAction(Constants.MAKE_COMMENT)}"
+                            android:text="@string/tv_rate_product"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colordark" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:id="@+id/flow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp4w"
+                            android:layout_marginBottom="@dimen/dp12h"
+                            app:constraint_referenced_ids="tv_post_like,tv_post_comment"
+                            app:flow_horizontalGap="@dimen/dp15w"
+                            app:flow_horizontalStyle="packed"
+                            app:flow_verticalBias="0"
+                            app:flow_wrapMode="chain"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/item_comment"
+                            app:layout_constraintTop_toBottomOf="@+id/item_comment" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_comments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12h"
+                    app:adapter="@{viewModel.commentsAdapter}"
+                    app:layout_constraintBottom_toTopOf="@id/loadMore"
+                    app:layout_constraintEnd_toEndOf="@id/post_item"
+                    app:layout_constraintStart_toStartOf="@id/post_item"
+                    app:layout_constraintTop_toBottomOf="@id/post_item"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}"
+                    tools:listitem="@layout/item_order_confirmed" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/loadMore"
+                    style="Widget.MaterialComponents.LinearProgressIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp4h"
+                    android:indeterminate="true"
+                    android:visibility="@{viewModel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:trackColor="@color/white"
+                    app:trackThickness="@dimen/dp4h" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/send_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/comment_img"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_marginTop="@dimen/dp4h"
+                android:src="@drawable/splash"
+                android:visibility="@{viewModel.fileObject.size()>0?View.VISIBLE:View.GONE}"
+                app:civ_border_color="@color/background_gray"
+                app:civ_border_width="@dimen/dp2h"
+                app:layout_constraintStart_toStartOf="@id/ic_post_pick_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp15w"
+                android:layout_height="@dimen/dp15h"
+                android:onClick="@{()-> viewModel.buttonAction(Constants.REMOVE_IMAGE)}"
+                android:src="@drawable/ic_remove"
+                android:visibility="@{viewModel.fileObject.size()>0?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="@+id/comment_img"
+                app:layout_constraintTop_toTopOf="@id/comment_img" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_post_pick_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:onClick="@{()-> viewModel.buttonAction(Constants.IMAGE)}"
+                android:src="@mipmap/ic_img_pick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment_img" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp12w"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_post_pick_img"
+                app:layout_constraintTop_toBottomOf="@+id/comment_img">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp4h"
+                    android:padding="@dimen/dp8h">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:background="@color/white"
+                        android:hint="@string/services_price"
+                        android:text="@={viewModel.createCommentRequest.text}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/reply_input_hint"
+                        android:textColorHint="@color/reply_input_hint"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/br"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/br"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="start"
+                        app:constraint_referenced_ids="ic_send,progress" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()-> viewModel.createComment()}"
+                        android:src="@drawable/ic_send"
+                        android:visibility="@{!TextUtils.isEmpty(viewModel.message)&amp;&amp;viewModel.message.equals(Constants.SHOW_PROGRESS)?View.GONE:View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="Widget.MaterialComponents.LinearProgressIndicator"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="@{!TextUtils.isEmpty(viewModel.message)&amp;&amp;viewModel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

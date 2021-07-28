@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="grand.app.aber_provider.pages.postDetails.viewModels.PostDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.postData.user!=null?View.VISIBLE:View.GONE,default=gone}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200h"
+                android:background="@drawable/back_curve_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                android:background="@drawable/corner_view_gray_borde"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_home_item"
+                    android:layout_width="@dimen/dp45w"
+                    android:layout_height="@dimen/dp45h"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:layout_marginBottom="@dimen/dp10h"
+                    android:onClick="@{()-> viewModel.buttonAction(Constants.PROFILE)}"
+                    android:src="@drawable/splash"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="@dimen/dp1h"
+                    app:imageMarketUrl="@{viewModel.postData.user.image}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_home_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@{viewModel.postData.user.name}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark" />
+
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{viewModel.postData.user.job}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    app:constraint_referenced_ids="tv_home_item,tv_desc"
+                    app:flow_maxElementsWrap="1"
+                    app:flow_verticalBias="0"
+                    app:flow_verticalGap="@dimen/dp4w"
+                    app:flow_verticalStyle="spread"
+                    app:flow_wrapMode="chain"
+                    app:layout_constraintBottom_toBottomOf="@id/img_home_item"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_close_page"
+                    app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                    app:layout_constraintTop_toTopOf="@+id/img_home_item" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_close_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:onClick="@{()-> viewModel.buttonAction(Constants.OPTIONS)}"
+                    android:src="@drawable/ic_close_page"
+                    android:visibility="@{viewModel.userData.id==viewModel.postData.user.id?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/img_home_item"
+                    app:tint="@color/colordark" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/br2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="tv_desc,img_home_item" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_title_post"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:text="@{viewModel.postData.title}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/br2" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_desc_post"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp2h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:text="@{viewModel.postData.content}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordarkOp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_post" />
+
+                <View
+                    android:id="@+id/v_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_desc_post" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_live_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/emergency_services"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintStart_toStartOf="@+id/img_home_item"
+                    app:layout_constraintTop_toBottomOf="@+id/v_div" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:text="@string/live_date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintStart_toStartOf="@+id/tv_live_details"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_details" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@{viewModel.postData.liveTime}"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_live_cost_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_details" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_instructor_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:text="@string/instructor_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintStart_toStartOf="@+id/tv_live_details"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_date" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_instructor_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@{viewModel.postData.lecturerName}"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_live_cost_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_date" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:text="@string/tv_colors"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintStart_toStartOf="@+id/tv_live_details"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_instructor_name" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@{viewModel.postData.title}"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_live_cost_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_instructor_name" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_cost_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:text="@string/order_on_way"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintStart_toStartOf="@+id/tv_live_details"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_title" />
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_live_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@{viewModel.postData.cost}"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_live_cost_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_live_title" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp120w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:scaleType="centerCrop"
+                    android:src="@color/overlayBackground"
+                    app:imageCommentUrl="@{viewModel.postData.file}"
+                    app:layout_constraintTop_toBottomOf="@id/tv_live_cost" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()-> viewModel.buttonAction(Constants.PLAY_VIDEO)}"
+                    android:src="@drawable/ic_video_play"
+                    app:layout_constraintBottom_toBottomOf="@id/img_live"
+                    app:layout_constraintEnd_toEndOf="@id/img_live"
+                    app:layout_constraintStart_toStartOf="@id/img_live"
+                    app:layout_constraintTop_toTopOf="@id/img_live" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp20h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:layout_marginBottom="@dimen/dp20h"
+                    android:background="@drawable/corner_view_gradient"
+                    android:text="@string/subscribe_live"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_live" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

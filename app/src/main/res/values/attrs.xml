@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="isValidate" format="integer" />
+        <attr name="android:inputType" />
+        <attr name="android:text" />
+        <attr name="phone_expression" />
+        <attr name="drawable" format="reference" />
+        <attr name="focusable" format="boolean" />
+        <attr name="gravity" />
+    </declare-styleable>
+
+    <attr name="phone_expression" format="enum">
+        <enum name="non" value="0" />
+        <enum name="egypt" value="1" />
+        <enum name="Saudi" value="2" />
+    </attr>
+    <attr name="gravity" format="enum">
+        <enum name="TOP" value="48" />
+    </attr>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
+</resources>

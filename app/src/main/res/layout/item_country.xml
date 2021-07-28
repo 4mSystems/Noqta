@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.util.LayoutDirection" />
+
+        <variable
+            name="itemPostViewModel"
+            type="grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        app:cardCornerRadius="@dimen/dp10h"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15w"
+            android:layout_marginEnd="@dimen/dp15w"
+            android:checked="true"
+            android:layoutDirection="@{itemPostViewModel.lang.equals(`en`)?LayoutDirection.RTL:LayoutDirection.LTR}"
+            android:text="مصر"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:color="@color/dark_grey"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menuHome" />
+    <item
+        android:id="@+id/menuFollowers"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_customer"
+        android:title="@string/menuFollowers" />
+    <item
+        android:id="@+id/menuLive"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_live_streaming"
+        android:title="@string/menuFavorite" />
+
+    <item
+        android:id="@+id/menuAccount"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_user"
+        android:title="@string/menuCart" />
+    <item
+        android:id="@+id/menuMore"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_more"
+        android:title="@string/menuCategories" />
+
+</menu>

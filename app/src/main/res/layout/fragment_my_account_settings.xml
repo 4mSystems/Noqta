@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/curve"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100h"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pages_header"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp25h"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/account_circle"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/edit_profile"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_my_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.INSTURCTOR)}"
+                android:visibility="@{viewmodel.userData.isPromoted==0?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_profile">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_wallet"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/my_wallet"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()-> viewmodel.buttonActions(Constants.INSTURCTOR)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_packages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp13w"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_my_wallet">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_subscription"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/my_address"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:layout_marginBottom="@dimen/dp8h"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.SHOW_LOGOUT_WARNING)}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_packages">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_logout"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/logout"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()-> viewmodel.buttonActions(Constants.SHOW_LOGOUT_WARNING)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
