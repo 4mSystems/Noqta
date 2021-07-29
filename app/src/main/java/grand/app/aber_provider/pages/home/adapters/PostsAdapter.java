@@ -23,8 +23,6 @@ import grand.app.aber_provider.pages.auth.models.UserData;
 import grand.app.aber_provider.pages.home.models.PostData;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment;
-import grand.app.aber_provider.pages.postDetails.LiveDetailsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.PopUp.PopUp;
 import grand.app.aber_provider.utils.helper.MovementHelper;
@@ -68,17 +66,17 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.MenuView> {
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();
             this.lastPosition = position;
-            if (o.equals(Constants.POST_DETAILS)) {
-                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getTitle(), ProductDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
-            } else if (o.equals(Constants.LIVE_TIME)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(menuModel.getId()), menuModel.getTitle(), LiveDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
-            } else if (o.equals(Constants.PROFILE)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getUser().getId()), null, MyServicesOrdersFragment.class.getName(), null);
-            } else if (o.equals(Constants.DELETE)) {
-                showPostOption(holder);
-            } else if (o.equals(Constants.SHARE_POST)) {
-                liveData.setValue(o);
-            }
+//            if (o.equals(Constants.POST_DETAILS)) {
+//                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getTitle(), ProductDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
+//            } else if (o.equals(Constants.LIVE_TIME)) {
+//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(menuModel.getId()), menuModel.getTitle(), LiveDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
+//            } else if (o.equals(Constants.PROFILE)) {
+//                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getUser().getId()), null, MyServicesOrdersFragment.class.getName(), null);
+//            } else if (o.equals(Constants.DELETE)) {
+//                showPostOption(holder);
+//            } else if (o.equals(Constants.SHARE_POST)) {
+//                liveData.setValue(o);
+//            }
 
         });
 

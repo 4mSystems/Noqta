@@ -20,11 +20,11 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,9 +47,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.skip.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback9 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback7 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback8 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback3 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -123,9 +123,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback8);
-            this.appCompatFinish.setOnClickListener(mCallback9);
-            this.skip.setOnClickListener(mCallback7);
+            this.appCompatButtonNext.setOnClickListener(mCallback4);
+            this.appCompatFinish.setOnClickListener(mCallback5);
+            this.skip.setOnClickListener(mCallback3);
         }
     }
     // Listener Stub Implementations

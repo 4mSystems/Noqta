@@ -103,40 +103,6 @@ public class PartServicesViewModels extends BaseViewModel {
         return postRepository;
     }
 
-
-    @BindingMethods({
-            @BindingMethod(
-                    type = BottomNavigationView.class,
-                    attribute = "app:onNavigationItemSelected",
-                    method = "setOnNavigationItemSelectedListener"
-            ),
-    })
-    public class DataBindingAdapter {
-    }
-
-    @SuppressLint("NonConstantResourceId")
-    public boolean onNavigationClick(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menuHome:
-                liveData.setValue(new Mutable(Constants.MENU_HOME));
-                return true;
-            case R.id.menuFollowers:
-                liveData.setValue(new Mutable(Constants.MENU_FOLLOWERS));
-                return true;
-            case R.id.menuAccount:
-                liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
-                return true;
-            case R.id.menuLive:
-                liveData.setValue(new Mutable(Constants.MENU_LIVE));
-                return true;
-            case R.id.menuMore:
-                liveData.setValue(new Mutable(Constants.MORE));
-                return true;
-            default:
-                return true;
-        }
-    }
-
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();

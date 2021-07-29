@@ -47,13 +47,6 @@ public class HomeViewModels extends BaseViewModel {
         compositeDisposable.add(postRepository.getPosts(page, showProgress));
     }
 
-    public void getLivesStreams(int page, boolean showProgress) {
-        compositeDisposable.add(postRepository.getLives(page, showProgress));
-    }
-
-    public void followersPosts(int page, boolean showProgress) {
-        compositeDisposable.add(postRepository.getFollowersPosts(page, showProgress));
-    }
 
     public void deletePost() {
         compositeDisposable.add(postRepository.deletePost(getPostsAdapter().lastSelected));
@@ -101,40 +94,6 @@ public class HomeViewModels extends BaseViewModel {
 
     public PostRepository getPostRepository() {
         return postRepository;
-    }
-
-
-    @BindingMethods({
-            @BindingMethod(
-                    type = BottomNavigationView.class,
-                    attribute = "app:onNavigationItemSelected",
-                    method = "setOnNavigationItemSelectedListener"
-            ),
-    })
-    public class DataBindingAdapter {
-    }
-
-    @SuppressLint("NonConstantResourceId")
-    public boolean onNavigationClick(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menuHome:
-                liveData.setValue(new Mutable(Constants.MENU_HOME));
-                return true;
-            case R.id.menuFollowers:
-                liveData.setValue(new Mutable(Constants.MENU_FOLLOWERS));
-                return true;
-            case R.id.menuAccount:
-                liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
-                return true;
-            case R.id.menuLive:
-                liveData.setValue(new Mutable(Constants.MENU_LIVE));
-                return true;
-            case R.id.menuMore:
-                liveData.setValue(new Mutable(Constants.MORE));
-                return true;
-            default:
-                return true;
-        }
     }
 
     protected void unSubscribeFromObservable() {

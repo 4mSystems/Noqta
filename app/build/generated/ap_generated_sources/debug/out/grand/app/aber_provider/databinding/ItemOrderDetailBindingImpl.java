@@ -25,7 +25,7 @@ public class ItemOrderDetailBindingImpl extends ItemOrderDetailBinding implement
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback40;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class ItemOrderDetailBindingImpl extends ItemOrderDetailBinding implement
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback61 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -119,7 +119,7 @@ public class ItemOrderDetailBindingImpl extends ItemOrderDetailBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback61);
+            this.mboundView0.setOnClickListener(mCallback40);
         }
     }
     // Listener Stub Implementations

@@ -17,8 +17,7 @@ public class LayoutActionBarHomeBindingImpl extends LayoutActionBarHomeBinding  
         sViewsWithIds.put(R.id.toolbar, 1);
         sViewsWithIds.put(R.id.tv_home_bar_text, 2);
         sViewsWithIds.put(R.id.img_home_bar_menu_notifications, 3);
-        sViewsWithIds.put(R.id.img_home_bar_menu_search, 4);
-        sViewsWithIds.put(R.id.badge, 5);
+        sViewsWithIds.put(R.id.badge, 4);
     }
     // views
     @NonNull
@@ -29,13 +28,12 @@ public class LayoutActionBarHomeBindingImpl extends LayoutActionBarHomeBinding  
     // Inverse Binding Event Handlers
 
     public LayoutActionBarHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private LayoutActionBarHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
             , (androidx.appcompat.widget.Toolbar) bindings[1]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[2]
             );

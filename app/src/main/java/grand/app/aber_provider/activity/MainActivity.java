@@ -5,7 +5,11 @@ import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
+
+import com.mobeedev.library.SlidingMenuBuilder;
+import com.mobeedev.library.SlidingNavigation;
+import com.mobeedev.library.dragstate.DragStateListener;
+import com.mobeedev.library.gravity.SlideGravity;
 
 import javax.inject.Inject;
 
@@ -16,14 +20,8 @@ import grand.app.aber_provider.base.ParentActivity;
 import grand.app.aber_provider.customViews.actionbar.HomeActionBarView;
 import grand.app.aber_provider.databinding.ActivityMainBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.services.FragmentConfirmOrder;
-import grand.app.aber_provider.pages.services.WinchFragment;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
-import grand.app.aber_provider.pages.home.HomeFragment;
-import grand.app.aber_provider.pages.settings.SocialMedia;
-import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
 import grand.app.aber_provider.utils.Constants;
-import grand.app.aber_provider.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
     ActivityMainBinding activityMainBinding;
@@ -31,6 +29,7 @@ public class MainActivity extends ParentActivity {
     HomeViewModels viewModel;
     HomeActionBarView homeActionBarView;
     MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
+    SlidingNavigation menuBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,38 +42,35 @@ public class MainActivity extends ParentActivity {
         homeActionBarView = new HomeActionBarView(this);
         activityMainBinding.llBaseActionBarContainer.addView(homeActionBarView);
         viewModel.liveData.setValue(new Mutable(Constants.MENU_HOME));
+        menuBuilder = new SlidingMenuBuilder(this)
+                .withMenuOpened(false)
+                .withContentClickableWhenMenuOpened(true)
+                .withMenuLayout(R.layout.menu)
+                .withToolbarMenuToggle(homeActionBarView.layoutActionBarHomeBinding.toolbar)
+                .addDragStateListener(new DragStateListener() {
+                    @Override
+                    public void onDragStart() {
+                        menuBuilder.openMenu(true);
+                    }
+
+                    @Override
+                    public void onDragEnd(boolean b) {
+
+                    }
+                })
+                .withGravity(SlideGravity.RIGHT) //If LEFT you can swipe a menu from left to right, if RIGHT - the direction is opposite.
+                .withSavedState(savedInstanceState) //If you call the method, layout will restore its opened/closed state
+                .withDragDistance(250) //Horizontal translation of a view. Default == 180dp
+                .withRootViewScale(0.9f) //Content view's scale will be interpolated between 1f and 0.7f. Default == 0.65f;
+                .withRootViewElevation(10) //Content view's elevation will be interpolated between 0 and 10dp. Default == 8.
+                .withRootViewYTranslation(4) //Content view's translationY will be interpolated between 0 and 4. Default == 0
+                .inject();
         setEvents();
     }
 
     private void setEvents() {
-        viewModel.liveData.observe(this, (Observer<Object>) o -> {
-            Mutable mutable = (Mutable) o;
-            handleActions(mutable);
-            switch (((Mutable) o).message) {
-                case Constants.MENU_HOME:
-                    setHomeActionTitle(getResources().getString(R.string.menuHome), "Visible");
-                    MovementHelper.replaceFragment(this, new HomeFragment(), "");
-                    break;
-                case Constants.MENU_FOLLOWERS:
-                    setHomeActionTitle(getResources().getString(R.string.menuFollowers), "Visible");
-                    MovementHelper.replaceFragment(this, new FragmentConfirmOrder(), "");
-                    break;
-                case Constants.MENU_ACCOUNT:
-                    setHomeActionTitle(getResources().getString(R.string.menuCart), null);
-                    MovementHelper.replaceFragment(this, new MyAccountSettingsFragment(), "");
-                    break;
-                case Constants.MENU_LIVE:
-                    setHomeActionTitle(getResources().getString(R.string.menuFavorite), "Visible");
-                    MovementHelper.replaceFragment(this, new WinchFragment(), "");
-                    break;
-                case Constants.MORE:
-                    setHomeActionTitle(getResources().getString(R.string.menuCategories), null);
-                    MovementHelper.replaceFragment(this, new SocialMedia(), "");
-                    break;
-
-            }
-        });
         activityMainBinding.swipeContainer.setOnRefreshListener(() -> refreshingLiveData.setValue(true));
+
     }
 
 

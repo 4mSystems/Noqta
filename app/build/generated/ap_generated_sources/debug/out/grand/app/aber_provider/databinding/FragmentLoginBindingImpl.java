@@ -34,13 +34,13 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback12;
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback13;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -153,10 +153,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback16 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback17 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback18 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback12 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback14 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -355,12 +355,12 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback17);
-            this.loginNoAccount.setOnClickListener(mCallback18);
-            this.loginNoAccountBold.setOnClickListener(mCallback19);
+            this.btnPhone.setOnClickListener(mCallback13);
+            this.loginNoAccount.setOnClickListener(mCallback14);
+            this.loginNoAccountBold.setOnClickListener(mCallback15);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback16);
+            this.tvLoginForget.setOnClickListener(mCallback12);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

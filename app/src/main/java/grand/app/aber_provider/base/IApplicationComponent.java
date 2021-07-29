@@ -15,38 +15,12 @@ import grand.app.aber_provider.pages.auth.login.LoginFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterDocumentsFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterServicesFragment;
-import grand.app.aber_provider.pages.myLocations.AddPlaceFragment;
-import grand.app.aber_provider.pages.myLocations.MyLocationsFragment;
-import grand.app.aber_provider.pages.myOrders.MyOrderDetailsFragment;
-import grand.app.aber_provider.pages.myOrders.MyOrdersFragment;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.packages.PackagesFragment;
-import grand.app.aber_provider.pages.packages.PartServicesFragment;
-import grand.app.aber_provider.pages.services.AberBoxFragment;
-import grand.app.aber_provider.pages.services.BatteriesFragment;
-import grand.app.aber_provider.pages.services.CarCheckFragment;
-import grand.app.aber_provider.pages.services.CarWashFragment;
-import grand.app.aber_provider.pages.services.ChooseServiceTimeFragment;
-import grand.app.aber_provider.pages.services.FragmentConfirmOrder;
-import grand.app.aber_provider.pages.services.FuelFragment;
-import grand.app.aber_provider.pages.services.HiddenFragment;
-import grand.app.aber_provider.pages.services.OilsFragment;
-import grand.app.aber_provider.pages.services.OpenCarFragment;
-import grand.app.aber_provider.pages.services.TiersFragment;
-import grand.app.aber_provider.pages.services.WaterBallonFragment;
-import grand.app.aber_provider.pages.services.WinchFragment;
-import grand.app.aber_provider.pages.home.SearchFragment;
-import grand.app.aber_provider.pages.favorites.FavoritesFragment;
-import grand.app.aber_provider.pages.postDetails.LiveDetailsFragment;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment;
 import grand.app.aber_provider.pages.onBoard.OnBoardFragment;
-import grand.app.aber_provider.pages.postDetails.ReactionsFragment;
-import grand.app.aber_provider.pages.postDetails.RepliesFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
-import grand.app.aber_provider.pages.profile.ProfilePostsFragment;
-import grand.app.aber_provider.pages.profile.QuestionsRequestFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
 import grand.app.aber_provider.pages.settings.LangFragment;
@@ -54,7 +28,6 @@ import grand.app.aber_provider.pages.settings.SocialMedia;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
 import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.pages.splash.SplashFragment;
-import grand.app.aber_provider.pages.myOrders.MyServiceOrderDetailsFragment;
 import grand.app.aber_provider.utils.locations.MapAddressActivity;
 
 //Component refer to an interface or waiter for make an coffee cup to me
@@ -87,8 +60,6 @@ public interface IApplicationComponent {
 
     void inject(HomeFragment normalOrdersFragment);
 
-    void inject(SearchFragment searchFragment);
-
     void inject(NotificationsFragment notificationsFragment);
 
     void inject(MyAccountSettingsFragment myAccountSettingsFragment);
@@ -97,27 +68,9 @@ public interface IApplicationComponent {
 
     void inject(MyServicesOrdersFragment profileFragment);
 
-    void inject(ProfilePostsFragment profilePostsFragment);
-
     void inject(ContactUsFragment contactUsFragment);
 
-    void inject(FragmentConfirmOrder previousOrdersFragment);
-
-    void inject(ProductDetailsFragment sendOfferFragment);
-
-    void inject(RepliesFragment repliesFragment);
-
-    void inject(ReactionsFragment reactionsFragment);
-
     void inject(LangFragment langFragment);
-
-    void inject(MyServiceOrderDetailsFragment appMoneyFragment);
-
-    void inject(FavoritesFragment newPostFragment);
-
-    void inject(WinchFragment liveFragment);
-
-    void inject(LiveDetailsFragment liveDetailsFragment);
 
     void inject(SocialMedia moreFragment);
 
@@ -125,43 +78,9 @@ public interface IApplicationComponent {
 
     void inject(PackagesFragment newLiveFragment);
 
-    void inject(ChooseServiceTimeFragment chooseLiveTimeFragment);
-
-    void inject(CarCheckFragment addAnswerFragment);
-
-    void inject(QuestionsRequestFragment questionsRequestFragment);
-
     void inject(AboutAppFragment aboutAppFragment);
 
     void inject(TermsFragment termsFragment);
-
-    void inject(PartServicesFragment partsServicesFragment);
-
-    void inject(CarWashFragment carWashFragment);
-
-    void inject(TiersFragment tiersFragment);
-
-    void inject(OilsFragment oilsFragment);
-
-    void inject(HiddenFragment hiddenFragment);
-
-    void inject(FuelFragment fuelFragment);
-
-    void inject(WaterBallonFragment ballonFragment);
-
-    void inject(OpenCarFragment openCarFragment);
-
-    void inject(BatteriesFragment batteriesFragment);
-
-    void inject(AberBoxFragment aberBoxFragment);
-
-    void inject(MyOrdersFragment myOrdersFragment);
-
-    void inject(MyOrderDetailsFragment myOrderDetailsFragment);
-
-    void inject(AddPlaceFragment addPlaceFragment);
-
-    void inject(MyLocationsFragment myLocationsFragment);
 
     void inject(AppWalletFragment appWalletFragment);
 

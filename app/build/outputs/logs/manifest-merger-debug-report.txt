@@ -15,6 +15,7 @@ MERGED from [com.google.android.libraries.places:places:2.4.0] C:\Users\MAymanM\
 MERGED from [com.github.GrenderG:Toasty:1.4.2] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\6b6b51e3761ac5307cd5b2349a7fffc5\jetified-Toasty-1.4.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.airbnb.android:lottie:3.6.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\26c39db72ae956f278d62f05c7901c4a\jetified-lottie-3.6.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5365056ac2b668b723f843e823fed15e\jetified-PhotoView-2.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.czerwii:SlidingdrawerMenu:1.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\6c353446afd9e29a5151c206c5513ad7\jetified-SlidingdrawerMenu-1.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\733c3281cd34bd393da6368aaed34631\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\e421b726b6ce74a0951751a6d7002296\jetified-facebook-login-5.15.3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\c80a9afb677c43f4dc63404d991d3303\jetified-facebook-share-5.15.3\AndroidManifest.xml:21:1-31:12
@@ -505,6 +506,8 @@ MERGED from [com.airbnb.android:lottie:3.6.0] C:\Users\MAymanM\.gradle\caches\tr
 MERGED from [com.airbnb.android:lottie:3.6.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\26c39db72ae956f278d62f05c7901c4a\jetified-lottie-3.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5365056ac2b668b723f843e823fed15e\jetified-PhotoView-2.2.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5365056ac2b668b723f843e823fed15e\jetified-PhotoView-2.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.czerwii:SlidingdrawerMenu:1.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\6c353446afd9e29a5151c206c5513ad7\jetified-SlidingdrawerMenu-1.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.czerwii:SlidingdrawerMenu:1.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\6c353446afd9e29a5151c206c5513ad7\jetified-SlidingdrawerMenu-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\733c3281cd34bd393da6368aaed34631\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-android-sdk:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\733c3281cd34bd393da6368aaed34631\jetified-facebook-android-sdk-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\e421b726b6ce74a0951751a6d7002296\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41

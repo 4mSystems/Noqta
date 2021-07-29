@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                                           
+
+                                                
+
+                                                                 
+
+                 
+                            
+                                                                                   
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_register_documents_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30w"
+                android:layout_marginTop="@dimen/dp18h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:text="@string/document"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_percentage"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:progress="60"
+                app:indeterminateAnimationType="disjoint"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorDirectionLinear="startToEnd"
+                app:layout_constraintBottom_toBottomOf="@id/tv_percentage"
+                app:layout_constraintEnd_toStartOf="@id/tv_percentage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register"
+                app:showAnimationBehavior="outward"
+                app:trackColor="@color/overlayBackground"
+                app:trackCornerRadius="@dimen/dp8h"
+                app:trackThickness="@dimen/dp10h" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:text="@string/sex_percentage"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_personal_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18h"
+                android:layout_marginBottom="@dimen/dp18h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_percentage"
+                app:layout_constraintStart_toStartOf="@id/progress_percentage"
+                app:layout_constraintTop_toBottomOf="@id/progress_percentage">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp14w"
+                        android:layout_marginTop="@dimen/dp18h"
+                        android:layout_marginEnd="@dimen/dp15w"
+                        android:hint="@string/commercial_hint"
+                        app:endIconDrawable="@drawable/ic_cloud_computing"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/black"
+                        android:tag="binding_1"                   
+                        app:helperTextTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:startIconDrawable="@drawable/ic_file"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:tag="binding_2"                  
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_company_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp14w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp15w"
+                        android:hint="@string/tax_card"
+                        app:endIconDrawable="@drawable/ic_cloud_computing"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/black"
+                        android:tag="binding_3"                   
+                        app:helperTextTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_name"
+                        app:startIconDrawable="@drawable/ic_file"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_phone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp14w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp14w"
+                        android:hint="@string/identity_number_hint"
+                        android:textAlignment="viewEnd"
+                        app:endIconDrawable="@drawable/ic_cloud_computing"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/black"
+                        android:tag="binding_4"                    
+                        app:helperTextTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_company_name"
+                        app:startIconDrawable="@drawable/ic_file"
+                        app:startIconTint="@color/black">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="phone"
+                            android:tag="binding_5"                   
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textDirection="ltr" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_email"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp14w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp15w"
+                        android:hint="@string/passport_image"
+                        app:endIconDrawable="@drawable/ic_cloud_computing"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/black"
+                        android:tag="binding_6"                    
+                        app:helperTextTextColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/input_phone"
+                        app:startIconDrawable="@drawable/ic_file"
+                        app:startIconTint="@color/black">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/appCompatButtonNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp20h"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:layout_marginBottom="@dimen/dp20h"
+                        android:background="@drawable/corner_view_gradient"                                                                                                                                                                       
+                        android:tag="binding_7"                                                                                                
+                                                                      
+                        android:text="@string/next"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/input_email" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progress"
+                        style="Widget.MaterialComponents.LinearProgressIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        android:tag="binding_8"                                                                                                                        
+                        app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+                        app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                        app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+                        app:trackColor="@color/white"
+                        app:trackThickness="@dimen/dp4h" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

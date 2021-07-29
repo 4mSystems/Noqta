@@ -26,7 +26,7 @@ public class ItemPartBindingImpl extends ItemPartBinding implements grand.app.ab
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback1;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class ItemPartBindingImpl extends ItemPartBinding implements grand.app.ab
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback1 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -121,7 +121,7 @@ public class ItemPartBindingImpl extends ItemPartBinding implements grand.app.ab
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback4);
+            this.mboundView0.setOnClickListener(mCallback1);
         }
     }
     // Listener Stub Implementations

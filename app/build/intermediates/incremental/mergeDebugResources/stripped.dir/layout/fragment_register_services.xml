@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                                           
+
+                                                
+
+                                                                 
+
+                 
+                            
+                                                                                   
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_register_services_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30w"
+                android:layout_marginTop="@dimen/dp18h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:text="@string/my_services"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_percentage"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:progress="100"
+                app:indeterminateAnimationType="disjoint"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorDirectionLinear="startToEnd"
+                app:layout_constraintBottom_toBottomOf="@id/tv_percentage"
+                app:layout_constraintEnd_toStartOf="@id/tv_percentage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register"
+                app:showAnimationBehavior="outward"
+                app:trackColor="@color/overlayBackground"
+                app:trackCornerRadius="@dimen/dp8h"
+                app:trackThickness="@dimen/dp10h" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:text="@string/sex_percentage"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_personal_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp18h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_percentage"
+                app:layout_constraintStart_toStartOf="@id/progress_percentage"
+                app:layout_constraintTop_toBottomOf="@id/progress_percentage">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp10w"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/agree_to"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="@id/appCompatButtonNext"
+                app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                app:layout_constraintTop_toBottomOf="@id/card_personal_info" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:layout_marginBottom="@dimen/dp20h"
+                android:background="@drawable/corner_view_gradient"                                                                                                                                                                       
+                android:tag="binding_1"                                                                                                
+                                                              
+                android:text="@string/register"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:tag="binding_2"                                                                                                                        
+                app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+                app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

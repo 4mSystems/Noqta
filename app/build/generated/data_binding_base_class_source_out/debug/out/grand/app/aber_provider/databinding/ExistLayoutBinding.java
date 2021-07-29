@@ -6,9 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.google.android.material.button.MaterialButton;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewMedium;
 import java.lang.Deprecated;
@@ -16,25 +17,29 @@ import java.lang.Object;
 
 public abstract class ExistLayoutBinding extends ViewDataBinding {
   @NonNull
-  public final CustomTextViewMedium agree;
+  public final MaterialButton agree;
 
   @NonNull
-  public final CustomTextViewMedium decline;
+  public final MaterialButton decline;
 
   @NonNull
-  public final CircleImageView ivLogoutDialogIcon;
+  public final AppCompatImageView icExitDialog;
 
   @NonNull
   public final CustomTextViewMedium logoutTxt;
 
+  @NonNull
+  public final CustomTextViewMedium logoutTxt1;
+
   protected ExistLayoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium agree, CustomTextViewMedium decline, CircleImageView ivLogoutDialogIcon,
-      CustomTextViewMedium logoutTxt) {
+      MaterialButton agree, MaterialButton decline, AppCompatImageView icExitDialog,
+      CustomTextViewMedium logoutTxt, CustomTextViewMedium logoutTxt1) {
     super(_bindingComponent, _root, _localFieldCount);
     this.agree = agree;
     this.decline = decline;
-    this.ivLogoutDialogIcon = ivLogoutDialogIcon;
+    this.icExitDialog = icExitDialog;
     this.logoutTxt = logoutTxt;
+    this.logoutTxt1 = logoutTxt1;
   }
 
   @NonNull

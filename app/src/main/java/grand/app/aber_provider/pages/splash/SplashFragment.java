@@ -21,11 +21,6 @@ import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.FragmentSplashBinding;
-import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
-import grand.app.aber_provider.pages.auth.register.RegisterDocumentsFragment;
-import grand.app.aber_provider.pages.auth.register.RegisterFragment;
-import grand.app.aber_provider.pages.auth.register.RegisterServicesFragment;
-import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 
 public class SplashFragment extends BaseFragment {
@@ -50,13 +45,13 @@ public class SplashFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
 //            if (((Mutable) o).message.equals(Constants.HOME)) {
-//                MovementHelper.startActivityMain(context);
+                MovementHelper.startActivityMain(context);
 ////                finishAllActivities();
 //            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
 //                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
 //                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
 //                } else {
-            MovementHelper.startActivityBase(context, EditProfileFragment.class.getName(), null, null);
+//            MovementHelper.startActivityBase(context, EditProfileFragment.class.getName(), null, null);
 //                }
 
 //            }

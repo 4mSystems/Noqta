@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                           
+
+                                                
+
+                                                                 
+
+                 
+                                    
+                                                                                     
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:tag="layout/item_color_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ic_color"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50h"
+            android:layout_margin="@dimen/dp8h"
+            android:src="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_white_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_color"
+            app:layout_constraintEnd_toEndOf="@id/ic_color"
+            app:layout_constraintStart_toStartOf="@id/ic_color"
+            app:layout_constraintTop_toTopOf="@id/ic_color" />
+
+        <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4h"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:text="أسمر"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colordark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

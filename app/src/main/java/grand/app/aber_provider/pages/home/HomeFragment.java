@@ -37,14 +37,10 @@ import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.databinding.FragmentHomeBinding;
 import grand.app.aber_provider.databinding.OptionDialogBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.home.models.PostData;
 import grand.app.aber_provider.pages.home.models.PostsResponse;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
-import grand.app.aber_provider.pages.favorites.FavoritesFragment;
 import grand.app.aber_provider.utils.Constants;
-import grand.app.aber_provider.utils.helper.AppHelper;
-import grand.app.aber_provider.utils.helper.MovementHelper;
 
 public class HomeFragment extends BaseFragment {
     @Inject
@@ -70,23 +66,6 @@ public class HomeFragment extends BaseFragment {
             switch (((Mutable) o).message) {
                 case Constants.POSTS:
                     viewModel.setMainData(((PostsResponse) (mutable).object).getMainData());
-                    break;
-                case Constants.NEW_POST:
-                    MovementHelper.startActivityForResultWithBundle(requireContext(), new PassingObject(), null, FavoritesFragment.class.getName(), Constants.NEW_POST_REQUEST);
-                    break;
-                case Constants.SEARCH:
-                    MovementHelper.startActivity(requireContext(), SearchFragment.class.getName(), getString(R.string.search), null);
-                    break;
-                case Constants.SHARE_POST:
-                    toastMessage(((StatusMessage) mutable.object).mMessage);
-                    AppHelper.makeActionSound(requireContext(), Constants.SHARE_POST);
-                    break;
-                case Constants.DELETE:
-                    toastMessage(((StatusMessage) mutable.object).mMessage);
-                    viewModel.getPostsAdapter().getPostDataList().remove(viewModel.getPostsAdapter().lastPosition);
-                    viewModel.getPostsAdapter().notifyDataSetChanged();
-                    if (viewModel.getPostsAdapter().getItemCount() == 0)
-                        viewModel.notifyChange(BR.postsAdapter);
                     break;
 
             }

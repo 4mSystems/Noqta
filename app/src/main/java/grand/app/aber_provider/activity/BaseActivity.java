@@ -18,15 +18,9 @@ import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.base.ParentActivity;
 import grand.app.aber_provider.customViews.actionbar.BackActionBarView;
 import grand.app.aber_provider.databinding.ActivityBaseBinding;
-import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
-import grand.app.aber_provider.pages.services.CarCheckFragment;
-import grand.app.aber_provider.pages.postDetails.LiveDetailsFragment;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment;
-import grand.app.aber_provider.pages.postDetails.RepliesFragment;
 import grand.app.aber_provider.pages.splash.SplashFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
-import grand.app.aber_provider.utils.resources.ResourceManager;
 
 public class BaseActivity extends ParentActivity {
     ActivityBaseBinding activityBaseBinding;
@@ -47,8 +41,8 @@ public class BaseActivity extends ParentActivity {
                 String fragmentName = getIntent().getStringExtra(Constants.PAGE);
                 if (fragmentName != null) {
                     try {
-                        if (fragmentName.equals(ProductDetailsFragment.class.getName()) || fragmentName.equals(LiveDetailsFragment.class.getName()))
-                            backActionBarView.flag = 1;
+//                        if (fragmentName.equals(ProductDetailsFragment.class.getName()) || fragmentName.equals(LiveDetailsFragment.class.getName()))
+//                            backActionBarView.flag = 1;
                         Fragment fragment = (Fragment) Class.forName(fragmentName).newInstance();
                         MovementHelper.replaceFragmentTag(this, getBundle(fragment), fragmentName, "");
                     } catch (Exception ex) {
@@ -86,34 +80,17 @@ public class BaseActivity extends ParentActivity {
                 Log.e("getNotification", "getNotification: " + postId);
                 Bundle bundle = new Bundle();
                 backActionBarView.flag = 1;
-                if (!TextUtils.isEmpty(postId) || !TextUtils.isEmpty(userId) || !TextUtils.isEmpty(commentId)) {
-                    if (Constants.POST_TYPE.equals(typeNotifications)) {  // post details
-                        setTitleName("");
-                        ProductDetailsFragment homeMainFragment = new ProductDetailsFragment();
-                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId))));
-                        homeMainFragment.setArguments(bundle);
-                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
-                    } else if (Constants.COMMENT_TYPE.equals(typeNotifications) || Constants.REPLY_TYPE.equals(typeNotifications)) {  // comment details
-                        setTitleName(ResourceManager.getString(R.string.replies));
-                        RepliesFragment homeMainFragment = new RepliesFragment();
-                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(commentId), postId)));
-                        homeMainFragment.setArguments(bundle);
-                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
-                    } else if (Constants.USER_TYPE.equals(typeNotifications)) {  // Profile details
-                        MyServicesOrdersFragment homeMainFragment = new MyServicesOrdersFragment();
-                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(userId))));
-                        homeMainFragment.setArguments(bundle);
-                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
-                    } else if (Constants.ASK_TYPE.equals(typeNotifications)) {  // Ask details
-                        setTitleName(ResourceManager.getString(R.string.previous));
-                        CarCheckFragment homeMainFragment = new CarCheckFragment();
-                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId), Constants.Add_ANSWER)));
-                        homeMainFragment.setArguments(bundle);
-                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
-                    } else {
-                        MovementHelper.startActivityMain(this);
-                    }
-                }
+//                if (!TextUtils.isEmpty(postId) || !TextUtils.isEmpty(userId) || !TextUtils.isEmpty(commentId)) {
+//                    if (Constants.POST_TYPE.equals(typeNotifications)) {  // post details
+//                        setTitleName("");
+//                        ProductDetailsFragment homeMainFragment = new ProductDetailsFragment();
+//                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId))));
+//                        homeMainFragment.setArguments(bundle);
+//                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+//                    } else {
+//                        MovementHelper.startActivityMain(this);
+//                    }
+//                }
             }
         }
     }

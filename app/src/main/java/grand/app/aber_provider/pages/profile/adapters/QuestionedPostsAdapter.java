@@ -21,8 +21,6 @@ import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.ItemColorBinding;
 import grand.app.aber_provider.pages.home.models.PostData;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
-import grand.app.aber_provider.pages.services.CarCheckFragment;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 
@@ -61,11 +59,7 @@ public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPosts
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();
             this.lastPosition = position;
-            if (o.equals(Constants.POST_DETAILS)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(menuModel.getId()), menuModel.getTitle(), ProductDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
-            } else if (o.equals(Constants.Add_ANSWER)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getId(), Constants.Add_ANSWER), menuModel.getTitle(), CarCheckFragment.class.getName(), null);
-            } else if (o.equals(Constants.DELETE)) {
+           if (o.equals(Constants.DELETE)) {
                 liveData.setValue(Constants.DELETE);
             } else if (o.equals(Constants.HIDE_POST)) {
                 liveData.setValue(Constants.HIDE_POST);

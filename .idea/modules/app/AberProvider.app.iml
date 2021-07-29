@@ -205,5 +205,6 @@
     <orderEntry type="library" name="Gradle: com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.makeramen:roundedimageview:2.3.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.chrisbanes:PhotoView:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.czerwii:SlidingdrawerMenu:1.0.1@aar" level="project" />
   </component>
 </module>

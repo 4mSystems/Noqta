@@ -14,30 +14,32 @@ public class ExistLayoutBindingImpl extends ExistLayoutBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.logout_txt, 1);
-        sViewsWithIds.put(R.id.decline, 2);
-        sViewsWithIds.put(R.id.agree, 3);
-        sViewsWithIds.put(R.id.iv_logout_dialog_icon, 4);
+        sViewsWithIds.put(R.id.ic_exit_dialog, 1);
+        sViewsWithIds.put(R.id.logout_txt, 2);
+        sViewsWithIds.put(R.id.logout_txt1, 3);
+        sViewsWithIds.put(R.id.agree, 4);
+        sViewsWithIds.put(R.id.decline, 5);
     }
     // views
     @NonNull
-    private final android.widget.RelativeLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ExistLayoutBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private ExistLayoutBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
+            , (com.google.android.material.button.MaterialButton) bindings[5]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[2]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[4]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
             );
-        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners

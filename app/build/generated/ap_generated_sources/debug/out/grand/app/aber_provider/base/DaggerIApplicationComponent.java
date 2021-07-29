@@ -49,34 +49,11 @@ import grand.app.aber_provider.pages.auth.register.RegisterServicesFragment_Memb
 import grand.app.aber_provider.pages.auth.register.RegisterViewModel;
 import grand.app.aber_provider.pages.auth.register.RegisterViewModel_Factory;
 import grand.app.aber_provider.pages.auth.register.RegisterViewModel_MembersInjector;
-import grand.app.aber_provider.pages.favorites.FavoritesFragment;
-import grand.app.aber_provider.pages.favorites.FavoritesFragment_MembersInjector;
-import grand.app.aber_provider.pages.favorites.viewModels.FavoritesViewModels;
-import grand.app.aber_provider.pages.favorites.viewModels.FavoritesViewModels_Factory;
-import grand.app.aber_provider.pages.favorites.viewModels.FavoritesViewModels_MembersInjector;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.home.HomeFragment_MembersInjector;
-import grand.app.aber_provider.pages.home.SearchFragment;
-import grand.app.aber_provider.pages.home.SearchFragment_MembersInjector;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels_Factory;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels_MembersInjector;
-import grand.app.aber_provider.pages.home.viewModels.SearchViewModels;
-import grand.app.aber_provider.pages.home.viewModels.SearchViewModels_Factory;
-import grand.app.aber_provider.pages.home.viewModels.SearchViewModels_MembersInjector;
-import grand.app.aber_provider.pages.myLocations.AddPlaceFragment;
-import grand.app.aber_provider.pages.myLocations.AddPlaceFragment_MembersInjector;
-import grand.app.aber_provider.pages.myLocations.MyLocationsFragment;
-import grand.app.aber_provider.pages.myLocations.MyLocationsFragment_MembersInjector;
-import grand.app.aber_provider.pages.myLocations.viewModels.MyLocationsViewModel;
-import grand.app.aber_provider.pages.myLocations.viewModels.MyLocationsViewModel_Factory;
-import grand.app.aber_provider.pages.myLocations.viewModels.MyLocationsViewModel_MembersInjector;
-import grand.app.aber_provider.pages.myOrders.MyOrderDetailsFragment;
-import grand.app.aber_provider.pages.myOrders.MyOrderDetailsFragment_MembersInjector;
-import grand.app.aber_provider.pages.myOrders.MyOrdersFragment;
-import grand.app.aber_provider.pages.myOrders.MyOrdersFragment_MembersInjector;
-import grand.app.aber_provider.pages.myOrders.MyServiceOrderDetailsFragment;
-import grand.app.aber_provider.pages.myOrders.MyServiceOrderDetailsFragment_MembersInjector;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment_MembersInjector;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment;
@@ -88,81 +65,17 @@ import grand.app.aber_provider.pages.onBoard.OnBoardFragment;
 import grand.app.aber_provider.pages.onBoard.OnBoardFragment_MembersInjector;
 import grand.app.aber_provider.pages.packages.PackagesFragment;
 import grand.app.aber_provider.pages.packages.PackagesFragment_MembersInjector;
-import grand.app.aber_provider.pages.packages.PartServicesFragment;
-import grand.app.aber_provider.pages.packages.PartServicesFragment_MembersInjector;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment;
-import grand.app.aber_provider.pages.packages.ProductDetailsFragment_MembersInjector;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels_Factory;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels_MembersInjector;
-import grand.app.aber_provider.pages.packages.viewModels.PartServicesViewModels;
-import grand.app.aber_provider.pages.packages.viewModels.PartServicesViewModels_Factory;
-import grand.app.aber_provider.pages.packages.viewModels.PartServicesViewModels_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.LiveDetailsFragment;
-import grand.app.aber_provider.pages.postDetails.LiveDetailsFragment_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.ReactionsFragment;
-import grand.app.aber_provider.pages.postDetails.ReactionsFragment_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.RepliesFragment;
-import grand.app.aber_provider.pages.postDetails.RepliesFragment_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.viewModels.PostDetailsViewModel;
-import grand.app.aber_provider.pages.postDetails.viewModels.PostDetailsViewModel_Factory;
-import grand.app.aber_provider.pages.postDetails.viewModels.PostDetailsViewModel_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel;
-import grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel_Factory;
-import grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel_MembersInjector;
-import grand.app.aber_provider.pages.postDetails.viewModels.RepliesViewModel;
-import grand.app.aber_provider.pages.postDetails.viewModels.RepliesViewModel_Factory;
-import grand.app.aber_provider.pages.postDetails.viewModels.RepliesViewModel_MembersInjector;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment_MembersInjector;
-import grand.app.aber_provider.pages.profile.ProfilePostsFragment;
-import grand.app.aber_provider.pages.profile.ProfilePostsFragment_MembersInjector;
-import grand.app.aber_provider.pages.profile.QuestionsRequestFragment;
-import grand.app.aber_provider.pages.profile.QuestionsRequestFragment_MembersInjector;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel_Factory;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel_MembersInjector;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileFollowersViewModels;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileFollowersViewModels_Factory;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileFollowersViewModels_MembersInjector;
-import grand.app.aber_provider.pages.profile.viewModels.ProfilePostsViewModels;
-import grand.app.aber_provider.pages.profile.viewModels.ProfilePostsViewModels_Factory;
-import grand.app.aber_provider.pages.profile.viewModels.ProfilePostsViewModels_MembersInjector;
 import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels;
 import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels_Factory;
 import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels_MembersInjector;
-import grand.app.aber_provider.pages.profile.viewModels.QuestionsPostsViewModels;
-import grand.app.aber_provider.pages.profile.viewModels.QuestionsPostsViewModels_Factory;
-import grand.app.aber_provider.pages.profile.viewModels.QuestionsPostsViewModels_MembersInjector;
-import grand.app.aber_provider.pages.services.AberBoxFragment;
-import grand.app.aber_provider.pages.services.AberBoxFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.BatteriesFragment;
-import grand.app.aber_provider.pages.services.BatteriesFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.CarCheckFragment;
-import grand.app.aber_provider.pages.services.CarCheckFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.CarWashFragment;
-import grand.app.aber_provider.pages.services.CarWashFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.ChooseServiceTimeFragment;
-import grand.app.aber_provider.pages.services.ChooseServiceTimeFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.FragmentConfirmOrder;
-import grand.app.aber_provider.pages.services.FragmentConfirmOrder_MembersInjector;
-import grand.app.aber_provider.pages.services.FuelFragment;
-import grand.app.aber_provider.pages.services.FuelFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.HiddenFragment;
-import grand.app.aber_provider.pages.services.HiddenFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.OilsFragment;
-import grand.app.aber_provider.pages.services.OilsFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.OpenCarFragment;
-import grand.app.aber_provider.pages.services.OpenCarFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.TiersFragment;
-import grand.app.aber_provider.pages.services.TiersFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.WaterBallonFragment;
-import grand.app.aber_provider.pages.services.WaterBallonFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.WinchFragment;
-import grand.app.aber_provider.pages.services.WinchFragment_MembersInjector;
-import grand.app.aber_provider.pages.services.viewModels.ServicesViewModels;
-import grand.app.aber_provider.pages.services.viewModels.ServicesViewModels_Factory;
-import grand.app.aber_provider.pages.services.viewModels.ServicesViewModels_MembersInjector;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment_MembersInjector;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
@@ -253,10 +166,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
-  private SearchViewModels searchViewModels() {
-    return injectSearchViewModels(SearchViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
   private NotificationsViewModels notificationsViewModels() {
     return injectNotificationsViewModels(NotificationsViewModels_Factory.newInstance(settingsRepositoryProvider.get()));
   }
@@ -273,36 +182,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectProfileViewModels(ProfileViewModels_Factory.newInstance(postRepositoryProvider.get()));
   }
 
-  private ProfilePostsViewModels profilePostsViewModels() {
-    return injectProfilePostsViewModels(ProfilePostsViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
   private SettingsViewModel settingsViewModel() {
     return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
-  }
-
-  private PostDetailsViewModel postDetailsViewModel() {
-    return injectPostDetailsViewModel(PostDetailsViewModel_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private RepliesViewModel repliesViewModel() {
-    return injectRepliesViewModel(RepliesViewModel_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private ReactionsViewModel reactionsViewModel() {
-    return injectReactionsViewModel(ReactionsViewModel_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private ProfileFollowersViewModels profileFollowersViewModels() {
-    return injectProfileFollowersViewModels(ProfileFollowersViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private FavoritesViewModels favoritesViewModels() {
-    return injectFavoritesViewModels(FavoritesViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private ServicesViewModels servicesViewModels() {
-    return injectServicesViewModels(ServicesViewModels_Factory.newInstance(postRepositoryProvider.get()));
   }
 
   private CountriesViewModel countriesViewModel() {
@@ -311,18 +192,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private PackagesViewModels packagesViewModels() {
     return injectPackagesViewModels(PackagesViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private QuestionsPostsViewModels questionsPostsViewModels() {
-    return injectQuestionsPostsViewModels(QuestionsPostsViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private PartServicesViewModels partServicesViewModels() {
-    return injectPartServicesViewModels(PartServicesViewModels_Factory.newInstance(postRepositoryProvider.get()));
-  }
-
-  private MyLocationsViewModel myLocationsViewModel() {
-    return injectMyLocationsViewModel(MyLocationsViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
   private AppWalletViewModel appWalletViewModel() {
@@ -403,11 +272,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
-  public void inject(SearchFragment searchFragment) {
-    injectSearchFragment(searchFragment);
-  }
-
-  @Override
   public void inject(NotificationsFragment notificationsFragment) {
     injectNotificationsFragment(notificationsFragment);
   }
@@ -428,58 +292,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
-  public void inject(ProfilePostsFragment profilePostsFragment) {
-    injectProfilePostsFragment(profilePostsFragment);
-  }
-
-  @Override
   public void inject(ContactUsFragment contactUsFragment) {
     injectContactUsFragment(contactUsFragment);
   }
 
   @Override
-  public void inject(FragmentConfirmOrder previousOrdersFragment) {
-    injectFragmentConfirmOrder(previousOrdersFragment);
-  }
-
-  @Override
-  public void inject(ProductDetailsFragment sendOfferFragment) {
-    injectProductDetailsFragment(sendOfferFragment);
-  }
-
-  @Override
-  public void inject(RepliesFragment repliesFragment) {
-    injectRepliesFragment(repliesFragment);
-  }
-
-  @Override
-  public void inject(ReactionsFragment reactionsFragment) {
-    injectReactionsFragment(reactionsFragment);
-  }
-
-  @Override
   public void inject(LangFragment langFragment) {
     injectLangFragment(langFragment);
-  }
-
-  @Override
-  public void inject(MyServiceOrderDetailsFragment appMoneyFragment) {
-    injectMyServiceOrderDetailsFragment(appMoneyFragment);
-  }
-
-  @Override
-  public void inject(FavoritesFragment newPostFragment) {
-    injectFavoritesFragment(newPostFragment);
-  }
-
-  @Override
-  public void inject(WinchFragment liveFragment) {
-    injectWinchFragment(liveFragment);
-  }
-
-  @Override
-  public void inject(LiveDetailsFragment liveDetailsFragment) {
-    injectLiveDetailsFragment(liveDetailsFragment);
   }
 
   @Override
@@ -498,21 +317,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
-  public void inject(ChooseServiceTimeFragment chooseLiveTimeFragment) {
-    injectChooseServiceTimeFragment(chooseLiveTimeFragment);
-  }
-
-  @Override
-  public void inject(CarCheckFragment addAnswerFragment) {
-    injectCarCheckFragment(addAnswerFragment);
-  }
-
-  @Override
-  public void inject(QuestionsRequestFragment questionsRequestFragment) {
-    injectQuestionsRequestFragment(questionsRequestFragment);
-  }
-
-  @Override
   public void inject(AboutAppFragment aboutAppFragment) {
     injectAboutAppFragment(aboutAppFragment);
   }
@@ -520,76 +324,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(TermsFragment termsFragment) {
     injectTermsFragment(termsFragment);
-  }
-
-  @Override
-  public void inject(PartServicesFragment partsServicesFragment) {
-    injectPartServicesFragment(partsServicesFragment);
-  }
-
-  @Override
-  public void inject(CarWashFragment carWashFragment) {
-    injectCarWashFragment(carWashFragment);
-  }
-
-  @Override
-  public void inject(TiersFragment tiersFragment) {
-    injectTiersFragment(tiersFragment);
-  }
-
-  @Override
-  public void inject(OilsFragment oilsFragment) {
-    injectOilsFragment(oilsFragment);
-  }
-
-  @Override
-  public void inject(HiddenFragment hiddenFragment) {
-    injectHiddenFragment(hiddenFragment);
-  }
-
-  @Override
-  public void inject(FuelFragment fuelFragment) {
-    injectFuelFragment(fuelFragment);
-  }
-
-  @Override
-  public void inject(WaterBallonFragment ballonFragment) {
-    injectWaterBallonFragment(ballonFragment);
-  }
-
-  @Override
-  public void inject(OpenCarFragment openCarFragment) {
-    injectOpenCarFragment(openCarFragment);
-  }
-
-  @Override
-  public void inject(BatteriesFragment batteriesFragment) {
-    injectBatteriesFragment(batteriesFragment);
-  }
-
-  @Override
-  public void inject(AberBoxFragment aberBoxFragment) {
-    injectAberBoxFragment(aberBoxFragment);
-  }
-
-  @Override
-  public void inject(MyOrdersFragment myOrdersFragment) {
-    injectMyOrdersFragment(myOrdersFragment);
-  }
-
-  @Override
-  public void inject(MyOrderDetailsFragment myOrderDetailsFragment) {
-    injectMyOrderDetailsFragment(myOrderDetailsFragment);
-  }
-
-  @Override
-  public void inject(AddPlaceFragment addPlaceFragment) {
-    injectAddPlaceFragment(addPlaceFragment);
-  }
-
-  @Override
-  public void inject(MyLocationsFragment myLocationsFragment) {
-    injectMyLocationsFragment(myLocationsFragment);
   }
 
   @Override
@@ -694,16 +428,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private SearchViewModels injectSearchViewModels(SearchViewModels instance) {
-    SearchViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private SearchFragment injectSearchFragment(SearchFragment instance) {
-    SearchFragment_MembersInjector.injectViewModel(instance, searchViewModels());
-    return instance;
-  }
-
   private NotificationsViewModels injectNotificationsViewModels(NotificationsViewModels instance) {
     NotificationsViewModels_MembersInjector.injectSettingsRepository(instance, settingsRepositoryProvider.get());
     return instance;
@@ -747,16 +471,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private ProfilePostsViewModels injectProfilePostsViewModels(ProfilePostsViewModels instance) {
-    ProfilePostsViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private ProfilePostsFragment injectProfilePostsFragment(ProfilePostsFragment instance) {
-    ProfilePostsFragment_MembersInjector.injectViewModel(instance, profilePostsViewModels());
-    return instance;
-  }
-
   private SettingsViewModel injectSettingsViewModel(SettingsViewModel instance) {
     SettingsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
     return instance;
@@ -767,80 +481,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private FragmentConfirmOrder injectFragmentConfirmOrder(FragmentConfirmOrder instance) {
-    FragmentConfirmOrder_MembersInjector.injectViewModel(instance, homeViewModels());
-    return instance;
-  }
-
-  private PostDetailsViewModel injectPostDetailsViewModel(PostDetailsViewModel instance) {
-    PostDetailsViewModel_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private ProductDetailsFragment injectProductDetailsFragment(ProductDetailsFragment instance) {
-    ProductDetailsFragment_MembersInjector.injectViewModel(instance, postDetailsViewModel());
-    return instance;
-  }
-
-  private RepliesViewModel injectRepliesViewModel(RepliesViewModel instance) {
-    RepliesViewModel_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private RepliesFragment injectRepliesFragment(RepliesFragment instance) {
-    RepliesFragment_MembersInjector.injectViewModel(instance, repliesViewModel());
-    return instance;
-  }
-
-  private ReactionsViewModel injectReactionsViewModel(ReactionsViewModel instance) {
-    ReactionsViewModel_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private ReactionsFragment injectReactionsFragment(ReactionsFragment instance) {
-    ReactionsFragment_MembersInjector.injectViewModel(instance, reactionsViewModel());
-    return instance;
-  }
-
   private LangFragment injectLangFragment(LangFragment instance) {
     LangFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
-    return instance;
-  }
-
-  private ProfileFollowersViewModels injectProfileFollowersViewModels(
-      ProfileFollowersViewModels instance) {
-    ProfileFollowersViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private MyServiceOrderDetailsFragment injectMyServiceOrderDetailsFragment(
-      MyServiceOrderDetailsFragment instance) {
-    MyServiceOrderDetailsFragment_MembersInjector.injectViewModel(instance, profileFollowersViewModels());
-    return instance;
-  }
-
-  private FavoritesViewModels injectFavoritesViewModels(FavoritesViewModels instance) {
-    FavoritesViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private FavoritesFragment injectFavoritesFragment(FavoritesFragment instance) {
-    FavoritesFragment_MembersInjector.injectViewModel(instance, favoritesViewModels());
-    return instance;
-  }
-
-  private ServicesViewModels injectServicesViewModels(ServicesViewModels instance) {
-    ServicesViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private WinchFragment injectWinchFragment(WinchFragment instance) {
-    WinchFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private LiveDetailsFragment injectLiveDetailsFragment(LiveDetailsFragment instance) {
-    LiveDetailsFragment_MembersInjector.injectViewModel(instance, postDetailsViewModel());
     return instance;
   }
 
@@ -869,29 +511,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private ChooseServiceTimeFragment injectChooseServiceTimeFragment(
-      ChooseServiceTimeFragment instance) {
-    ChooseServiceTimeFragment_MembersInjector.injectViewModel(instance, favoritesViewModels());
-    return instance;
-  }
-
-  private CarCheckFragment injectCarCheckFragment(CarCheckFragment instance) {
-    CarCheckFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private QuestionsPostsViewModels injectQuestionsPostsViewModels(
-      QuestionsPostsViewModels instance) {
-    QuestionsPostsViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private QuestionsRequestFragment injectQuestionsRequestFragment(
-      QuestionsRequestFragment instance) {
-    QuestionsRequestFragment_MembersInjector.injectViewModel(instance, questionsPostsViewModels());
-    return instance;
-  }
-
   private AboutAppFragment injectAboutAppFragment(AboutAppFragment instance) {
     AboutAppFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
@@ -899,86 +518,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private TermsFragment injectTermsFragment(TermsFragment instance) {
     TermsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
-    return instance;
-  }
-
-  private PartServicesViewModels injectPartServicesViewModels(PartServicesViewModels instance) {
-    PartServicesViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
-    return instance;
-  }
-
-  private PartServicesFragment injectPartServicesFragment(PartServicesFragment instance) {
-    PartServicesFragment_MembersInjector.injectViewModel(instance, partServicesViewModels());
-    return instance;
-  }
-
-  private CarWashFragment injectCarWashFragment(CarWashFragment instance) {
-    CarWashFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private TiersFragment injectTiersFragment(TiersFragment instance) {
-    TiersFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private OilsFragment injectOilsFragment(OilsFragment instance) {
-    OilsFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private HiddenFragment injectHiddenFragment(HiddenFragment instance) {
-    HiddenFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private FuelFragment injectFuelFragment(FuelFragment instance) {
-    FuelFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private WaterBallonFragment injectWaterBallonFragment(WaterBallonFragment instance) {
-    WaterBallonFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private OpenCarFragment injectOpenCarFragment(OpenCarFragment instance) {
-    OpenCarFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private BatteriesFragment injectBatteriesFragment(BatteriesFragment instance) {
-    BatteriesFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private AberBoxFragment injectAberBoxFragment(AberBoxFragment instance) {
-    AberBoxFragment_MembersInjector.injectViewModel(instance, servicesViewModels());
-    return instance;
-  }
-
-  private MyOrdersFragment injectMyOrdersFragment(MyOrdersFragment instance) {
-    MyOrdersFragment_MembersInjector.injectViewModel(instance, profileViewModels());
-    return instance;
-  }
-
-  private MyOrderDetailsFragment injectMyOrderDetailsFragment(MyOrderDetailsFragment instance) {
-    MyOrderDetailsFragment_MembersInjector.injectViewModel(instance, profileFollowersViewModels());
-    return instance;
-  }
-
-  private MyLocationsViewModel injectMyLocationsViewModel(MyLocationsViewModel instance) {
-    MyLocationsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
-    return instance;
-  }
-
-  private AddPlaceFragment injectAddPlaceFragment(AddPlaceFragment instance) {
-    AddPlaceFragment_MembersInjector.injectViewModel(instance, myLocationsViewModel());
-    return instance;
-  }
-
-  private MyLocationsFragment injectMyLocationsFragment(MyLocationsFragment instance) {
-    MyLocationsFragment_MembersInjector.injectViewModel(instance, myLocationsViewModel());
     return instance;
   }
 

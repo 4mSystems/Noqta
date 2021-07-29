@@ -181,7 +181,7 @@
     <string name="delivered_chat_options">تم تسليم الشحنة</string>
     <string name="subscribe_live">اشترك في البث</string>
     <string name="confirm_chat_options">طلب تأكيد من العميل</string>
-    <string name="cancel">إلغاء</string>
+    <string name="cancel">رجوع</string>
     <string name="image_selected">تم اختيار الصورة بنجاح ,اضغط للارسال</string>
     <string name="on_way">في الطريق</string>
     <string name="follow_market_line_on_way_to_get_order">في الطريق لإستلام الشحنة</string>
@@ -269,7 +269,7 @@
     <string name="company">شركات</string>
     <string name="edit_profile">تعديل حسابي</string>
     <string name="yes">نعم</string>
-    <string name="logout_warning">هل تريد تسجيل الخروج ؟</string>
+    <string name="logout_warning">هل تريد تسجيل الخروج </string>
     <string name="individuals">أفراد</string>
     <string name="change_password">تغير كلمة المرور</string>
     <string name="personal_info">البيانات الشخصية</string>

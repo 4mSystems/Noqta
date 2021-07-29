@@ -25,9 +25,6 @@ public abstract class LayoutActionBarHomeBinding extends ViewDataBinding {
   public final AppCompatImageView imgHomeBarMenuNotifications;
 
   @NonNull
-  public final AppCompatImageView imgHomeBarMenuSearch;
-
-  @NonNull
   public final Toolbar toolbar;
 
   @NonNull
@@ -37,13 +34,11 @@ public abstract class LayoutActionBarHomeBinding extends ViewDataBinding {
   protected HomeViewModels mViewModel;
 
   protected LayoutActionBarHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium badge, AppCompatImageView imgHomeBarMenuNotifications,
-      AppCompatImageView imgHomeBarMenuSearch, Toolbar toolbar,
+      CustomTextViewMedium badge, AppCompatImageView imgHomeBarMenuNotifications, Toolbar toolbar,
       CustomTextViewMedium tvHomeBarText) {
     super(_bindingComponent, _root, _localFieldCount);
     this.badge = badge;
     this.imgHomeBarMenuNotifications = imgHomeBarMenuNotifications;
-    this.imgHomeBarMenuSearch = imgHomeBarMenuSearch;
     this.toolbar = toolbar;
     this.tvHomeBarText = tvHomeBarText;
   }

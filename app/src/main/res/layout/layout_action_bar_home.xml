@@ -51,15 +51,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_home_bar_menu_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/dp15w"
-                    android:src="@drawable/ic_search"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/img_home_bar_menu_notifications"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <grand.app.aber_provider.customViews.views.CustomTextViewMedium
                     android:id="@+id/badge"

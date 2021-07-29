@@ -25,7 +25,7 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -230,7 +230,7 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback6);
+            this.appCompatButtonNext.setOnClickListener(mCallback2);
         }
     }
     // Listener Stub Implementations
