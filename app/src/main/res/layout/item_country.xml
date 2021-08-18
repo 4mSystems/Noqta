@@ -9,8 +9,8 @@
         <import type="android.util.LayoutDirection" />
 
         <variable
-            name="itemPostViewModel"
-            type="grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel" />
+            name="itemViewModel"
+            type="grand.app.aber_provider.pages.auth.countries.viewModels.CountriesItemViewModels" />
     </data>
 
 
@@ -27,9 +27,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15w"
             android:layout_marginEnd="@dimen/dp15w"
-            android:checked="true"
-            android:layoutDirection="@{itemPostViewModel.lang.equals(`en`)?LayoutDirection.RTL:LayoutDirection.LTR}"
-            android:text="مصر"
+            android:checked="@{itemViewModel.countriesData.selected}"
+            android:layoutDirection="@{itemViewModel.lang.equals(`en`)?LayoutDirection.RTL:LayoutDirection.LTR}"
+            android:onClick="@{()-> itemViewModel.itemAction()}"
+            android:text="@{itemViewModel.countriesData.name}"
             android:textAlignment="viewEnd"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colordark"

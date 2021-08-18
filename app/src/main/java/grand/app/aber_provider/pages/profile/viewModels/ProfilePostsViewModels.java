@@ -15,7 +15,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
 import grand.app.aber_provider.pages.profile.adapters.QuestionedPostsAdapter;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.URLS;
 import grand.app.aber_provider.utils.session.UserHelper;
@@ -27,12 +27,12 @@ public class ProfilePostsViewModels extends BaseViewModel {
     private PostsAdapter postsAdapter;
     private QuestionedPostsAdapter questionedPostsAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     MainData mainData;
 
     @Inject
-    public ProfilePostsViewModels(PostRepository postRepository) {
+    public ProfilePostsViewModels(ServicesRepository postRepository) {
         mainData = new MainData();
         this.postRepository = postRepository;
         this.liveData = new MutableLiveData<>();
@@ -112,7 +112,7 @@ public class ProfilePostsViewModels extends BaseViewModel {
         this.mainData = mainData;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

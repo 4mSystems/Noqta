@@ -7,8 +7,8 @@ public class Constants {
     public static final String FOLLOW = "FOLLOW";
     public static final String CANCEL_FOLLOWER = "CANCEL_FOLLOWER";
     public final static String CANCEL_FOLLOWING = "CANCEL_FOLLOWING";
-    public static final String followers = "followers";
-    public static final String followings = "followings";
+    public static final String CITIES = "CITIES";
+    public static final String COUNTRIES = "COUNTRIES";
 
     public final static String GOOGLE_SIGN_IN = "GOOGLE_SIGN_IN";
     public final static String FACE_BOOK = "FACE_BOOK";
@@ -16,7 +16,7 @@ public class Constants {
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String DELETE = "DELETE";
 
-    public final static String ADD_PLACE = "ADD_PLACE";
+    public final static String PACKAGES = "PACKAGES";
     public final static String EMAIL = "email";
     public final static String FIELD = "FIELD";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
@@ -155,7 +155,7 @@ public class Constants {
 
     public static final String CHAT = "chat";
     public static final String APP_MONEY = "APP_MONEY";
-    public static final String SUBSCRIPTION_DATE = "SUBSCRIPTION_DATE";
+    public static final String SUBSCRIPTION = "SUBSCRIPTION";
     public static final String MENU_HOME = "menu_home";
     public static final String MENU_FOLLOWERS = "menu_categories";
     public static final String NEXT = "next";

@@ -13,6 +13,7 @@ import grand.app.aber_provider.connection.ConnectionHelper;
 import grand.app.aber_provider.connection.FileObject;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
+import grand.app.aber_provider.pages.auth.countries.models.CountriesResponse;
 import grand.app.aber_provider.pages.auth.models.ConfirmCodeRequest;
 import grand.app.aber_provider.pages.auth.models.ForgetPasswordRequest;
 import grand.app.aber_provider.pages.auth.models.LoginRequest;
@@ -61,9 +62,15 @@ public class AuthRepository extends BaseRepository {
         return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
                 Constants.REGISTER, false);
     }
-   public Disposable upgradeAccount(RegisterRequest request, List<FileObject> fileObjects) {
-        return connectionHelper.requestApi(URLS.UPGRADE, request, fileObjects, StatusMessage.class,
-                Constants.REGISTER, false);
+
+    public Disposable getCountries() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COUNTRIES, new Object(), CountriesResponse.class,
+                Constants.COUNTRIES, true);
+    }
+
+    public Disposable getCities(int countryId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES + countryId, new Object(), CountriesResponse.class,
+                Constants.CITIES, true);
     }
 
     public Disposable confirmCode(ConfirmCodeRequest request) {
@@ -96,7 +103,8 @@ public class AuthRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, StatusMessage.class,
                 Constants.CHANGE_PASSWORD, false);
     }
-  public Disposable changeProfilePassword(RegisterRequest request) {
+
+    public Disposable changeProfilePassword(RegisterRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PROFILE_PASSWORD, request, StatusMessage.class,
                 Constants.CHANGE_PASSWORD, false);
     }

@@ -91,7 +91,7 @@
     <string name="menuCart">سلة المشتريات</string>
     <string name="wawo">&#160; و &#160;</string>
     <string name="menu_account">حسابي</string>
-    <string name="menu_provider">التقديم كمقدم خدمة</string>
+    <string name="menu_previous_orders">الخدمات السابقة</string>
     <string name="social_media">السوشيال ميديا</string>
     <string name="aval_order_time">مدة قبول الطلب</string>
     <string name="reacts_people">الأشخاص المتفاعلون</string>
@@ -223,7 +223,7 @@
     <string name="order_total">قيمة الطلب</string>
     <string name="order_number">رقم الطلب</string>
     <string name="order_details">تفاصيل الطلب</string>
-    <string name="my_services">الخدمات التي ستقدمها</string>
+    <string name="my_services">طلبات الخدمة</string>
     <string name="my_orders">طلباتي</string>
     <string name="choose_location">تحديد العنوان</string>
     <string name="order_finished">تم تنفيذ الخدمة</string>
@@ -315,4 +315,8 @@
     <string name="choosen_order">الخدمات المختارة</string>
     <string name="add_place">إضافة عنوان</string>
     <string name="register_company_name">اسم الشركة</string>
+    <string name="register_title">أنشاء حساب</string>
+    <string name="select_cities">اختر المدينة</string>
+    <string name="package_title">اشتراكات مقدم الخدمة</string>
+    <string name="more">المزيد</string>
 </resources>

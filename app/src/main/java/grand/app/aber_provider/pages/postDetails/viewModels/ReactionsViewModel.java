@@ -13,7 +13,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.postDetails.models.postReacts.ReactsData;
 import grand.app.aber_provider.pages.profile.adapters.FollowersAdapter;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
 
@@ -21,7 +21,7 @@ public class ReactionsViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     ReactsData followersResponse;
     FollowersAdapter followersAdapter;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
@@ -29,7 +29,7 @@ public class ReactionsViewModel extends BaseViewModel {
     UserActionRequest actionRequest;
 
     @Inject
-    public ReactionsViewModel(PostRepository postRepository) {
+    public ReactionsViewModel(ServicesRepository postRepository) {
         setReactType(Constants.ALL_REACTIONS);
         followersResponse = new ReactsData();
         this.postRepository = postRepository;
@@ -74,7 +74,7 @@ public class ReactionsViewModel extends BaseViewModel {
     }
 
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

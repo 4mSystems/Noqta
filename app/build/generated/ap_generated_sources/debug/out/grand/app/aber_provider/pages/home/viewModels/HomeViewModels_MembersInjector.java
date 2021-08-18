@@ -3,7 +3,7 @@ package grand.app.aber_provider.pages.home.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,14 +11,14 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class HomeViewModels_MembersInjector implements MembersInjector<HomeViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  public HomeViewModels_MembersInjector(Provider<PostRepository> postRepositoryProvider) {
+  public HomeViewModels_MembersInjector(Provider<ServicesRepository> postRepositoryProvider) {
     this.postRepositoryProvider = postRepositoryProvider;
   }
 
   public static MembersInjector<HomeViewModels> create(
-      Provider<PostRepository> postRepositoryProvider) {
+      Provider<ServicesRepository> postRepositoryProvider) {
     return new HomeViewModels_MembersInjector(postRepositoryProvider);
   }
 
@@ -28,7 +28,8 @@ public final class HomeViewModels_MembersInjector implements MembersInjector<Hom
   }
 
   @InjectedFieldSignature("grand.app.aber_provider.pages.home.viewModels.HomeViewModels.postRepository")
-  public static void injectPostRepository(HomeViewModels instance, PostRepository postRepository) {
+  public static void injectPostRepository(HomeViewModels instance,
+      ServicesRepository postRepository) {
     instance.postRepository = postRepository;
   }
 }

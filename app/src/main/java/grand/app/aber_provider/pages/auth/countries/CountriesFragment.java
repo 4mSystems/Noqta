@@ -9,18 +9,21 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
-
 import javax.inject.Inject;
 
+import grand.app.aber_provider.BR;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.databinding.FragmentCountriesBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.model.base.StatusMessage;
+import grand.app.aber_provider.pages.auth.countries.models.CountriesResponse;
 import grand.app.aber_provider.pages.auth.countries.viewModels.CountriesViewModel;
 import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.session.UserHelper;
+
 
 public class CountriesFragment extends BaseFragment {
     FragmentCountriesBinding binding;
@@ -33,6 +36,7 @@ public class CountriesFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getCountries();
         setEvent();
         return binding.getRoot();
     }
@@ -41,9 +45,13 @@ public class CountriesFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (mutable.message.equals(Constants.REGISTER)) {
-                toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
-
+            if (mutable.message.equals(Constants.COUNTRIES)) {
+                viewModel.getCountriesAdapter().updateData(((CountriesResponse) mutable.object).getCountriesDataList());
+                viewModel.notifyChange(BR.countriesAdapter);
+            } else if (mutable.message.equals(Constants.CITIES)) {
+                UserHelper.getInstance(requireActivity()).addCountryId(viewModel.getCountriesAdapter().lastSelected);
+                UserHelper.getInstance(requireActivity()).addCurrency(viewModel.getCountriesAdapter().countriesDataList.get(viewModel.getCountriesAdapter().lastPosition).getCurrency());
+                MovementHelper.startActivity(requireActivity(), CitiesFragment.class.getName(), getString(R.string.register_city_hint), null);
             }
         });
     }

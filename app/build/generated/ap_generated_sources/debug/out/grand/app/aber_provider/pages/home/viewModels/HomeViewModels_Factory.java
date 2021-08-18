@@ -2,7 +2,7 @@
 package grand.app.aber_provider.pages.home.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class HomeViewModels_Factory implements Factory<HomeViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  private final Provider<PostRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> postRepositoryProvider2;
 
-  public HomeViewModels_Factory(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public HomeViewModels_Factory(Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     this.postRepositoryProvider = postRepositoryProvider;
     this.postRepositoryProvider2 = postRepositoryProvider2;
   }
@@ -27,12 +27,12 @@ public final class HomeViewModels_Factory implements Factory<HomeViewModels> {
     return instance;
   }
 
-  public static HomeViewModels_Factory create(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public static HomeViewModels_Factory create(Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     return new HomeViewModels_Factory(postRepositoryProvider, postRepositoryProvider2);
   }
 
-  public static HomeViewModels newInstance(PostRepository postRepository) {
+  public static HomeViewModels newInstance(ServicesRepository postRepository) {
     return new HomeViewModels(postRepository);
   }
 }

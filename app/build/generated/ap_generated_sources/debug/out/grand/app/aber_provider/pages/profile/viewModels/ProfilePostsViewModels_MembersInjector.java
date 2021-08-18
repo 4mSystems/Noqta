@@ -3,7 +3,7 @@ package grand.app.aber_provider.pages.profile.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,14 +11,15 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class ProfilePostsViewModels_MembersInjector implements MembersInjector<ProfilePostsViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  public ProfilePostsViewModels_MembersInjector(Provider<PostRepository> postRepositoryProvider) {
+  public ProfilePostsViewModels_MembersInjector(
+      Provider<ServicesRepository> postRepositoryProvider) {
     this.postRepositoryProvider = postRepositoryProvider;
   }
 
   public static MembersInjector<ProfilePostsViewModels> create(
-      Provider<PostRepository> postRepositoryProvider) {
+      Provider<ServicesRepository> postRepositoryProvider) {
     return new ProfilePostsViewModels_MembersInjector(postRepositoryProvider);
   }
 
@@ -29,7 +30,7 @@ public final class ProfilePostsViewModels_MembersInjector implements MembersInje
 
   @InjectedFieldSignature("grand.app.aber_provider.pages.profile.viewModels.ProfilePostsViewModels.postRepository")
   public static void injectPostRepository(ProfilePostsViewModels instance,
-      PostRepository postRepository) {
+      ServicesRepository postRepository) {
     instance.postRepository = postRepository;
   }
 }

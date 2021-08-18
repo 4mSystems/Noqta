@@ -16,7 +16,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.profile.adapters.FollowersAdapter;
 import grand.app.aber_provider.pages.profile.models.MainFollowersData;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.URLS;
 import grand.app.aber_provider.utils.resources.ResourceManager;
 import io.reactivex.disposables.CompositeDisposable;
@@ -27,13 +27,13 @@ public class ProfileFollowersViewModels extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private FollowersAdapter followersAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     MainFollowersData mainFollowersData;
     UserActionRequest actionRequest;
 
     @Inject
-    public ProfileFollowersViewModels(PostRepository postRepository) {
+    public ProfileFollowersViewModels(ServicesRepository postRepository) {
         actionRequest = new UserActionRequest();
         mainFollowersData = new MainFollowersData();
         this.postRepository = postRepository;
@@ -82,7 +82,7 @@ public class ProfileFollowersViewModels extends BaseViewModel {
         return this.followersAdapter == null ? this.followersAdapter = new FollowersAdapter() : this.followersAdapter;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

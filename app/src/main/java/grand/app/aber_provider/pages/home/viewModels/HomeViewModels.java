@@ -1,27 +1,17 @@
 package grand.app.aber_provider.pages.home.viewModels;
 
-import android.annotation.SuppressLint;
-import android.view.MenuItem;
-
-import androidx.annotation.NonNull;
 import androidx.databinding.Bindable;
-import androidx.databinding.BindingMethod;
-import androidx.databinding.BindingMethods;
 import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.MutableLiveData;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import javax.inject.Inject;
 
 import grand.app.aber_provider.BR;
-import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
-import grand.app.aber_provider.repository.PostRepository;
-import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class HomeViewModels extends BaseViewModel {
@@ -30,13 +20,13 @@ public class HomeViewModels extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private PostsAdapter postsAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     public String search;
     MainData mainData;
 
     @Inject
-    public HomeViewModels(PostRepository postRepository) {
+    public HomeViewModels(ServicesRepository postRepository) {
         mainData = new MainData();
         this.postRepository = postRepository;
         this.liveData = new MutableLiveData<>();
@@ -44,7 +34,7 @@ public class HomeViewModels extends BaseViewModel {
     }
 
     public void posts(int page, boolean showProgress) {
-        compositeDisposable.add(postRepository.getPosts(page, showProgress));
+//        compositeDisposable.add(postRepository.getPackages(page, showProgress));
     }
 
 
@@ -92,7 +82,7 @@ public class HomeViewModels extends BaseViewModel {
         this.mainData = mainData;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

@@ -16,37 +16,26 @@ public class MenuBindingImpl extends MenuBinding  {
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.tv_home, 1);
         sViewsWithIds.put(R.id.v1, 2);
-        sViewsWithIds.put(R.id.tv_favorite, 3);
-        sViewsWithIds.put(R.id.v2, 4);
-        sViewsWithIds.put(R.id.tv_cart, 5);
-        sViewsWithIds.put(R.id.v3, 6);
-        sViewsWithIds.put(R.id.tv_services, 7);
-        sViewsWithIds.put(R.id.rc_services, 8);
-        sViewsWithIds.put(R.id.v4, 9);
-        sViewsWithIds.put(R.id.tv_my_services, 10);
-        sViewsWithIds.put(R.id.v5, 11);
-        sViewsWithIds.put(R.id.tv_account, 12);
-        sViewsWithIds.put(R.id.v6, 13);
-        sViewsWithIds.put(R.id.tv_provider, 14);
-        sViewsWithIds.put(R.id.v7, 15);
-        sViewsWithIds.put(R.id.tv_suggest, 16);
-        sViewsWithIds.put(R.id.v8, 17);
-        sViewsWithIds.put(R.id.tv_privacy, 18);
-        sViewsWithIds.put(R.id.v9, 19);
-        sViewsWithIds.put(R.id.tv_terms, 20);
-        sViewsWithIds.put(R.id.v10, 21);
-        sViewsWithIds.put(R.id.tv_contact, 22);
-        sViewsWithIds.put(R.id.v11, 23);
-        sViewsWithIds.put(R.id.tv_about, 24);
-        sViewsWithIds.put(R.id.v12, 25);
-        sViewsWithIds.put(R.id.tv_social, 26);
-        sViewsWithIds.put(R.id.v13, 27);
-        sViewsWithIds.put(R.id.tv_rate, 28);
-        sViewsWithIds.put(R.id.v14, 29);
-        sViewsWithIds.put(R.id.tv_share, 30);
-        sViewsWithIds.put(R.id.v15, 31);
-        sViewsWithIds.put(R.id.tv_lang, 32);
-        sViewsWithIds.put(R.id.v16, 33);
+        sViewsWithIds.put(R.id.tv_my_services, 3);
+        sViewsWithIds.put(R.id.v5, 4);
+        sViewsWithIds.put(R.id.tv_provider, 5);
+        sViewsWithIds.put(R.id.v7, 6);
+        sViewsWithIds.put(R.id.tv_notifications, 7);
+        sViewsWithIds.put(R.id.v8, 8);
+        sViewsWithIds.put(R.id.tv_privacy, 9);
+        sViewsWithIds.put(R.id.v9, 10);
+        sViewsWithIds.put(R.id.tv_terms, 11);
+        sViewsWithIds.put(R.id.v10, 12);
+        sViewsWithIds.put(R.id.tv_lang, 13);
+        sViewsWithIds.put(R.id.v16, 14);
+        sViewsWithIds.put(R.id.tv_country, 15);
+        sViewsWithIds.put(R.id.v17, 16);
+        sViewsWithIds.put(R.id.tv_city, 17);
+        sViewsWithIds.put(R.id.v15, 18);
+        sViewsWithIds.put(R.id.tv_more, 19);
+        sViewsWithIds.put(R.id.v20, 20);
+        sViewsWithIds.put(R.id.rc_menu_social, 21);
+        sViewsWithIds.put(R.id.grand_logo, 22);
     }
     // views
     @NonNull
@@ -57,43 +46,32 @@ public class MenuBindingImpl extends MenuBinding  {
     // Inverse Binding Event Handlers
 
     public MenuBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 34, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
     }
     private MenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[24]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[12]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[22]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.aber_provider.customViews.grandDialog.GrandImageDialog) bindings[22]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[21]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[17]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[15]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[32]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[10]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[18]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[14]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[28]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[13]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[19]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[7]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[30]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[26]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[16]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[20]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[9]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[11]
             , (android.view.View) bindings[2]
-            , (android.view.View) bindings[21]
-            , (android.view.View) bindings[23]
-            , (android.view.View) bindings[25]
-            , (android.view.View) bindings[27]
-            , (android.view.View) bindings[29]
-            , (android.view.View) bindings[31]
-            , (android.view.View) bindings[33]
+            , (android.view.View) bindings[12]
+            , (android.view.View) bindings[18]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[16]
+            , (android.view.View) bindings[20]
             , (android.view.View) bindings[4]
             , (android.view.View) bindings[6]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[13]
-            , (android.view.View) bindings[15]
-            , (android.view.View) bindings[17]
-            , (android.view.View) bindings[19]
+            , (android.view.View) bindings[8]
+            , (android.view.View) bindings[10]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);

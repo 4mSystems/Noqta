@@ -3,7 +3,7 @@ package grand.app.aber_provider.pages.packages.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,25 +11,26 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class PackagesViewModels_MembersInjector implements MembersInjector<PackagesViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> servicesRepositoryProvider;
 
-  public PackagesViewModels_MembersInjector(Provider<PostRepository> postRepositoryProvider) {
-    this.postRepositoryProvider = postRepositoryProvider;
+  public PackagesViewModels_MembersInjector(
+      Provider<ServicesRepository> servicesRepositoryProvider) {
+    this.servicesRepositoryProvider = servicesRepositoryProvider;
   }
 
   public static MembersInjector<PackagesViewModels> create(
-      Provider<PostRepository> postRepositoryProvider) {
-    return new PackagesViewModels_MembersInjector(postRepositoryProvider);
+      Provider<ServicesRepository> servicesRepositoryProvider) {
+    return new PackagesViewModels_MembersInjector(servicesRepositoryProvider);
   }
 
   @Override
   public void injectMembers(PackagesViewModels instance) {
-    injectPostRepository(instance, postRepositoryProvider.get());
+    injectServicesRepository(instance, servicesRepositoryProvider.get());
   }
 
-  @InjectedFieldSignature("grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels.postRepository")
-  public static void injectPostRepository(PackagesViewModels instance,
-      PostRepository postRepository) {
-    instance.postRepository = postRepository;
+  @InjectedFieldSignature("grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels.servicesRepository")
+  public static void injectServicesRepository(PackagesViewModels instance,
+      ServicesRepository servicesRepository) {
+    instance.servicesRepository = servicesRepository;
   }
 }

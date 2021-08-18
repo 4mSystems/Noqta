@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.smarteist.autoimageslider.SliderView;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewMedium;
@@ -22,7 +22,7 @@ import java.lang.Object;
 
 public abstract class FragmentOnboardBinding extends ViewDataBinding {
   @NonNull
-  public final FloatingActionButton appCompatButtonNext;
+  public final AppCompatImageView appCompatButtonNext;
 
   @NonNull
   public final AppCompatButton appCompatFinish;
@@ -43,7 +43,7 @@ public abstract class FragmentOnboardBinding extends ViewDataBinding {
   protected SplashViewModel mOnBoardViewModels;
 
   protected FragmentOnboardBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FloatingActionButton appCompatButtonNext, AppCompatButton appCompatFinish, Barrier br,
+      AppCompatImageView appCompatButtonNext, AppCompatButton appCompatFinish, Barrier br,
       SliderView imageSlider, ConstraintLayout searchContainer, CustomTextViewMedium skip) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;

@@ -20,11 +20,11 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
-    @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
     private final android.view.View.OnClickListener mCallback4;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -34,7 +34,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     }
     private FragmentOnboardBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (androidx.appcompat.widget.AppCompatButton) bindings[3]
             , (androidx.constraintlayout.widget.Barrier) bindings[5]
             , (com.smarteist.autoimageslider.SliderView) bindings[4]
@@ -47,9 +47,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.skip.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback3 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback4 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback3 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback4 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback2 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -123,15 +123,34 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback4);
-            this.appCompatFinish.setOnClickListener(mCallback5);
-            this.skip.setOnClickListener(mCallback3);
+            this.appCompatButtonNext.setOnClickListener(mCallback3);
+            this.appCompatFinish.setOnClickListener(mCallback4);
+            this.skip.setOnClickListener(mCallback2);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // onBoardViewModels
+                grand.app.aber_provider.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
+                // onBoardViewModels != null
+                boolean onBoardViewModelsJavaLangObjectNull = false;
+
+
+
+                onBoardViewModelsJavaLangObjectNull = (onBoardViewModels) != (null);
+                if (onBoardViewModelsJavaLangObjectNull) {
+
+
+
+
+                    onBoardViewModels.action(grand.app.aber_provider.utils.Constants.NEXT);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // onBoardViewModels
@@ -167,25 +186,6 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
 
 
                     onBoardViewModels.action(grand.app.aber_provider.utils.Constants.PREVIOUS);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // onBoardViewModels
-                grand.app.aber_provider.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
-                // onBoardViewModels != null
-                boolean onBoardViewModelsJavaLangObjectNull = false;
-
-
-
-                onBoardViewModelsJavaLangObjectNull = (onBoardViewModels) != (null);
-                if (onBoardViewModelsJavaLangObjectNull) {
-
-
-
-
-                    onBoardViewModels.action(grand.app.aber_provider.utils.Constants.NEXT);
                 }
                 break;
             }

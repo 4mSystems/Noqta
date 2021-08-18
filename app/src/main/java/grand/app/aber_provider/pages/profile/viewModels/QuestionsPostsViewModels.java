@@ -12,7 +12,7 @@ import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.models.MainData;
 import grand.app.aber_provider.pages.profile.adapters.QuestionedPostsAdapter;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class QuestionsPostsViewModels extends BaseViewModel {
@@ -20,12 +20,12 @@ public class QuestionsPostsViewModels extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private QuestionedPostsAdapter questionedPostsAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     MainData mainData;
 
     @Inject
-    public QuestionsPostsViewModels(PostRepository postRepository) {
+    public QuestionsPostsViewModels(ServicesRepository postRepository) {
         this.postRepository = postRepository;
         this.liveData = new MutableLiveData<>();
         postRepository.setLiveData(liveData);
@@ -68,7 +68,7 @@ public class QuestionsPostsViewModels extends BaseViewModel {
         this.mainData = mainData;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

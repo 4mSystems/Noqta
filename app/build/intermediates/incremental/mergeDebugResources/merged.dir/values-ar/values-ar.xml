@@ -276,9 +276,10 @@
     <string name="menuFollowers">المتابعين</string>
     <string name="menuHome">الرئيسية</string>
     <string name="menu_account">حسابي</string>
-    <string name="menu_provider">التقديم كمقدم خدمة</string>
+    <string name="menu_previous_orders">الخدمات السابقة</string>
     <string name="message_hint">اترك رسالتك هنا</string>
     <string name="million">مليون</string>
+    <string name="more">المزيد</string>
     <string name="msg_server_error">حدث خطأ ما يرجى المحاوله فى وقت اخر</string>
     <string name="mtrl_badge_numberless_content_description">إشعار جديد</string>
     <string name="mtrl_chip_close_icon_content_description">إزالة %1$s</string>
@@ -315,7 +316,7 @@
     <string name="mtrl_picker_toggle_to_year_selection">انقر للتبديل إلى اختيار عام</string>
     <string name="my_address">عناويني</string>
     <string name="my_orders">طلباتي</string>
-    <string name="my_services">الخدمات التي ستقدمها</string>
+    <string name="my_services">طلبات الخدمة</string>
     <string name="my_wallet">محفظتى</string>
     <string name="name_hint">من فضلك قم بكتابة اسمك</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -350,6 +351,7 @@
     <string name="order_status">حالة الطلب</string>
     <string name="order_total">قيمة الطلب</string>
     <string name="ordinary_wash">غسيل عادي</string>
+    <string name="package_title">اشتراكات مقدم الخدمة</string>
     <string name="passport_image">صورة جواز السفر</string>
     <string name="password">كلمة المرور</string>
     <string name="password_hint">قم بإدخال كلمة المرور</string>
@@ -390,6 +392,7 @@
     <string name="register_name">الاسم بالكامل</string>
     <string name="register_password">كلمة المرور *</string>
     <string name="register_phone">رقم الجوال </string>
+    <string name="register_title">أنشاء حساب</string>
     <string name="remove">حذف</string>
     <string name="replies">الردود</string>
     <string name="report">إبلاغ</string>
@@ -401,6 +404,7 @@
     <string name="search">بحث</string>
     <string msgid="6264217191555673260" name="search_menu_title">"البحث"</string>
     <string name="section">القسم التعليمي </string>
+    <string name="select_cities">اختر المدينة</string>
     <string name="select_country">إختر الدولة</string>
     <string name="select_date">تحديد وقت الخدمة</string>
     <string name="select_file">إختر</string>

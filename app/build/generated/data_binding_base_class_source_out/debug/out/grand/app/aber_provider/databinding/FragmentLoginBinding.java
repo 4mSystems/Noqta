@@ -57,9 +57,6 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final CircularProgressIndicator progress;
 
   @NonNull
-  public final CustomTextViewMedium skip;
-
-  @NonNull
   public final CustomTextViewMedium terms;
 
   @NonNull
@@ -75,8 +72,8 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
       AppCompatImageView boardHeader, AppCompatButton btnPhone, TextView curve, Flow flow1,
       TextInputLayout inputPhone, TextInputLayout inputRegisterPassword, CustomTextViewMedium login,
       CustomTextViewMedium loginNoAccount, CustomTextViewMedium loginNoAccountBold,
-      CustomTextViewMedium privacy, CircularProgressIndicator progress, CustomTextViewMedium skip,
-      CustomTextViewMedium terms, CustomTextViewRegular tvLoginForget, View vPrivacy) {
+      CustomTextViewMedium privacy, CircularProgressIndicator progress, CustomTextViewMedium terms,
+      CustomTextViewRegular tvLoginForget, View vPrivacy) {
     super(_bindingComponent, _root, _localFieldCount);
     this.boardHeader = boardHeader;
     this.btnPhone = btnPhone;
@@ -89,7 +86,6 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
     this.loginNoAccountBold = loginNoAccountBold;
     this.privacy = privacy;
     this.progress = progress;
-    this.skip = skip;
     this.terms = terms;
     this.tvLoginForget = tvLoginForget;
     this.vPrivacy = vPrivacy;

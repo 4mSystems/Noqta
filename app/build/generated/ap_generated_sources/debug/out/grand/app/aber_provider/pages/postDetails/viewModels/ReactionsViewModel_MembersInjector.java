@@ -3,7 +3,7 @@ package grand.app.aber_provider.pages.postDetails.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,14 +11,14 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class ReactionsViewModel_MembersInjector implements MembersInjector<ReactionsViewModel> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  public ReactionsViewModel_MembersInjector(Provider<PostRepository> postRepositoryProvider) {
+  public ReactionsViewModel_MembersInjector(Provider<ServicesRepository> postRepositoryProvider) {
     this.postRepositoryProvider = postRepositoryProvider;
   }
 
   public static MembersInjector<ReactionsViewModel> create(
-      Provider<PostRepository> postRepositoryProvider) {
+      Provider<ServicesRepository> postRepositoryProvider) {
     return new ReactionsViewModel_MembersInjector(postRepositoryProvider);
   }
 
@@ -29,7 +29,7 @@ public final class ReactionsViewModel_MembersInjector implements MembersInjector
 
   @InjectedFieldSignature("grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel.postRepository")
   public static void injectPostRepository(ReactionsViewModel instance,
-      PostRepository postRepository) {
+      ServicesRepository postRepository) {
     instance.postRepository = postRepository;
   }
 }

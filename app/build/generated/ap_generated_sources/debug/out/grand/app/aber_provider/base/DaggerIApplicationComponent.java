@@ -25,6 +25,8 @@ import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment_Member
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmViewModel;
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmViewModel_Factory;
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmViewModel_MembersInjector;
+import grand.app.aber_provider.pages.auth.countries.CitiesFragment;
+import grand.app.aber_provider.pages.auth.countries.CitiesFragment_MembersInjector;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment_MembersInjector;
 import grand.app.aber_provider.pages.auth.countries.viewModels.CountriesViewModel;
@@ -101,8 +103,8 @@ import grand.app.aber_provider.pages.splash.SplashViewModel_Factory;
 import grand.app.aber_provider.pages.splash.SplashViewModel_MembersInjector;
 import grand.app.aber_provider.repository.AuthRepository;
 import grand.app.aber_provider.repository.AuthRepository_Factory;
-import grand.app.aber_provider.repository.PostRepository;
-import grand.app.aber_provider.repository.PostRepository_Factory;
+import grand.app.aber_provider.repository.ServicesRepository;
+import grand.app.aber_provider.repository.ServicesRepository_Factory;
 import grand.app.aber_provider.repository.SettingsRepository;
 import grand.app.aber_provider.repository.SettingsRepository_Factory;
 import grand.app.aber_provider.utils.locations.MapAddressActivity;
@@ -119,7 +121,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
-  private Provider<PostRepository> postRepositoryProvider;
+  private Provider<ServicesRepository> servicesRepositoryProvider;
 
   private Provider<AuthRepository> authRepositoryProvider;
 
@@ -139,7 +141,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private HomeViewModels homeViewModels() {
-    return injectHomeViewModels(HomeViewModels_Factory.newInstance(postRepositoryProvider.get()));
+    return injectHomeViewModels(HomeViewModels_Factory.newInstance(servicesRepositoryProvider.get()));
   }
 
   private SplashViewModel splashViewModel() {
@@ -179,7 +181,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ProfileViewModels profileViewModels() {
-    return injectProfileViewModels(ProfileViewModels_Factory.newInstance(postRepositoryProvider.get()));
+    return injectProfileViewModels(ProfileViewModels_Factory.newInstance(servicesRepositoryProvider.get()));
   }
 
   private SettingsViewModel settingsViewModel() {
@@ -191,7 +193,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private PackagesViewModels packagesViewModels() {
-    return injectPackagesViewModels(PackagesViewModels_Factory.newInstance(postRepositoryProvider.get()));
+    return injectPackagesViewModels(PackagesViewModels_Factory.newInstance(servicesRepositoryProvider.get()));
   }
 
   private AppWalletViewModel appWalletViewModel() {
@@ -202,7 +204,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
-    this.postRepositoryProvider = DoubleCheck.provider(PostRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.servicesRepositoryProvider = DoubleCheck.provider(ServicesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
@@ -312,6 +314,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
+  public void inject(CitiesFragment citiesFragment) {
+    injectCitiesFragment(citiesFragment);
+  }
+
+  @Override
   public void inject(PackagesFragment newLiveFragment) {
     injectPackagesFragment(newLiveFragment);
   }
@@ -332,7 +339,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private HomeViewModels injectHomeViewModels(HomeViewModels instance) {
-    HomeViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
+    HomeViewModels_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
     return instance;
   }
 
@@ -461,7 +468,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ProfileViewModels injectProfileViewModels(ProfileViewModels instance) {
-    ProfileViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
+    ProfileViewModels_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
     return instance;
   }
 
@@ -501,8 +508,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private CitiesFragment injectCitiesFragment(CitiesFragment instance) {
+    CitiesFragment_MembersInjector.injectViewModel(instance, countriesViewModel());
+    return instance;
+  }
+
   private PackagesViewModels injectPackagesViewModels(PackagesViewModels instance) {
-    PackagesViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider.get());
+    PackagesViewModels_MembersInjector.injectServicesRepository(instance, servicesRepositoryProvider.get());
     return instance;
   }
 

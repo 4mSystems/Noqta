@@ -16,28 +16,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import grand.app.aber_provider.R;
-import grand.app.aber_provider.databinding.ItemPartBinding;
-import grand.app.aber_provider.pages.home.models.PostData;
-import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
+import grand.app.aber_provider.databinding.ItemPackageBinding;
+import grand.app.aber_provider.pages.packages.models.PackagesData;
+import grand.app.aber_provider.pages.packages.viewModels.ItemPackageViewModels;
 
 public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.MenuView> {
-    List<PostData> postDataList;
-     Context context;
-    public MutableLiveData<Object> liveData = new MutableLiveData<>();
+    List<PackagesData> packagesDataList;
+    Context context;
+    public MutableLiveData<Integer> liveData = new MutableLiveData<>();
+    public int lastSelected = -1;
 
     public PackagesAdapter() {
-        this.postDataList = new ArrayList<>();
+        this.packagesDataList = new ArrayList<>();
     }
 
-
-    public List<PostData> getPostDataList() {
-        return postDataList;
-    }
 
     @NonNull
     @Override
     public MenuView onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_part,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_package,
                 parent, false);
         this.context = parent.getContext();
         return new MenuView(itemView);
@@ -46,20 +43,19 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.MenuVi
 
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
-        PostData menuModel = postDataList.get(position);
-        ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
+        PackagesData menuModel = packagesDataList.get(position);
+        ItemPackageViewModels itemMenuViewModel = new ItemPackageViewModels(menuModel);
+        itemMenuViewModel.getLiveData().observeForever(o -> {
+            lastSelected = menuModel.getId();
+            liveData.setValue(menuModel.getId());
+        });
         holder.setViewModel(itemMenuViewModel);
     }
-    public void update(List<PostData> dataList) {
-        this.postDataList.clear();
-        postDataList.addAll(dataList);
-        notifyDataSetChanged();
-    }
 
-    public void loadMore(@NotNull List<PostData> dataList) {
-        int start = postDataList.size();
-        postDataList.addAll(dataList);
-        notifyItemRangeInserted(start, dataList.size());
+    public void update(List<PackagesData> dataList) {
+        this.packagesDataList.clear();
+        packagesDataList.addAll(dataList);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -76,11 +72,11 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.MenuVi
 
     @Override
     public int getItemCount() {
-        return postDataList.size();
+        return packagesDataList.size();
     }
 
     public class MenuView extends RecyclerView.ViewHolder {
-        public ItemPartBinding itemMenuBinding;
+        public ItemPackageBinding itemMenuBinding;
 
         MenuView(View itemView) {
             super(itemView);
@@ -99,7 +95,7 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.MenuVi
             }
         }
 
-        void setViewModel(ItemHomeViewModel itemViewModels) {
+        void setViewModel(ItemPackageViewModels itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemPostViewModel(itemViewModels);
             }

@@ -9,6 +9,7 @@ import grand.app.aber_provider.connection.ConnectionModule;
 import grand.app.aber_provider.pages.appWallet.AppWalletFragment;
 import grand.app.aber_provider.pages.auth.changePassword.ChangePasswordFragment;
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment;
+import grand.app.aber_provider.pages.auth.countries.CitiesFragment;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.aber_provider.pages.auth.login.LoginFragment;
@@ -75,6 +76,8 @@ public interface IApplicationComponent {
     void inject(SocialMedia moreFragment);
 
     void inject(CountriesFragment instructorFragment);
+
+    void inject(CitiesFragment citiesFragment);
 
     void inject(PackagesFragment newLiveFragment);
 

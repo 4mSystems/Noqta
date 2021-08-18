@@ -2,7 +2,7 @@
 package grand.app.aber_provider.pages.postDetails.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class PostDetailsViewModel_Factory implements Factory<PostDetailsViewModel> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  private final Provider<PostRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> postRepositoryProvider2;
 
-  public PostDetailsViewModel_Factory(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public PostDetailsViewModel_Factory(Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     this.postRepositoryProvider = postRepositoryProvider;
     this.postRepositoryProvider2 = postRepositoryProvider2;
   }
@@ -27,12 +27,13 @@ public final class PostDetailsViewModel_Factory implements Factory<PostDetailsVi
     return instance;
   }
 
-  public static PostDetailsViewModel_Factory create(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public static PostDetailsViewModel_Factory create(
+      Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     return new PostDetailsViewModel_Factory(postRepositoryProvider, postRepositoryProvider2);
   }
 
-  public static PostDetailsViewModel newInstance(PostRepository postRepository) {
+  public static PostDetailsViewModel newInstance(ServicesRepository postRepository) {
     return new PostDetailsViewModel(postRepository);
   }
 }

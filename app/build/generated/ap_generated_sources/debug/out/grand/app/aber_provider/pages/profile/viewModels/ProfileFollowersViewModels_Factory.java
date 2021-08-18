@@ -2,7 +2,7 @@
 package grand.app.aber_provider.pages.profile.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class ProfileFollowersViewModels_Factory implements Factory<ProfileFollowersViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  private final Provider<PostRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> postRepositoryProvider2;
 
-  public ProfileFollowersViewModels_Factory(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public ProfileFollowersViewModels_Factory(Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     this.postRepositoryProvider = postRepositoryProvider;
     this.postRepositoryProvider2 = postRepositoryProvider2;
   }
@@ -28,12 +28,12 @@ public final class ProfileFollowersViewModels_Factory implements Factory<Profile
   }
 
   public static ProfileFollowersViewModels_Factory create(
-      Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+      Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     return new ProfileFollowersViewModels_Factory(postRepositoryProvider, postRepositoryProvider2);
   }
 
-  public static ProfileFollowersViewModels newInstance(PostRepository postRepository) {
+  public static ProfileFollowersViewModels newInstance(ServicesRepository postRepository) {
     return new ProfileFollowersViewModels(postRepository);
   }
 }

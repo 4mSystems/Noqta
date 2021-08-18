@@ -341,8 +341,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_exit_dialog" />
-                            <entry key="sourceFile" value="F:\mostafa elnagar\app_design\Aber\exit_dialog.svg" />
+                            <entry key="outputName" value="ic_more" />
+                            <entry key="sourceFile" value="F:\mostafa elnagar\app_design\Aber\more.svg" />
                           </map>
                         </option>
                       </PersistentState>

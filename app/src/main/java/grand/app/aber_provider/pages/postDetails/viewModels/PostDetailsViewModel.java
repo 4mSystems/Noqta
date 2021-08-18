@@ -19,7 +19,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.models.PostData;
 import grand.app.aber_provider.pages.postDetails.adapters.CommentsAdapter;
 import grand.app.aber_provider.pages.postDetails.models.CreateCommentRequest;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.AppHelper;
 import grand.app.aber_provider.utils.resources.ResourceManager;
@@ -30,7 +30,7 @@ public class PostDetailsViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     PostData postData;
     CommentsAdapter commentsAdapter;
     CreateCommentRequest createCommentRequest;
@@ -41,7 +41,7 @@ public class PostDetailsViewModel extends BaseViewModel {
     List<FileObject> fileObject;
 
     @Inject
-    public PostDetailsViewModel(PostRepository postRepository) {
+    public PostDetailsViewModel(ServicesRepository postRepository) {
         fileObject = new ArrayList<>();
         createCommentRequest = new CreateCommentRequest();
         postData = new PostData();
@@ -194,7 +194,7 @@ public class PostDetailsViewModel extends BaseViewModel {
         return fileObject;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

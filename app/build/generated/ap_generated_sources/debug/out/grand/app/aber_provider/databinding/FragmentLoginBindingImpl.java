@@ -15,15 +15,14 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.board_header, 8);
-        sViewsWithIds.put(R.id.skip, 9);
-        sViewsWithIds.put(R.id.curve, 10);
-        sViewsWithIds.put(R.id.login, 11);
-        sViewsWithIds.put(R.id.input_phone, 12);
-        sViewsWithIds.put(R.id.input_register_password, 13);
-        sViewsWithIds.put(R.id.v_privacy, 14);
-        sViewsWithIds.put(R.id.privacy, 15);
-        sViewsWithIds.put(R.id.terms, 16);
-        sViewsWithIds.put(R.id.flow1, 17);
+        sViewsWithIds.put(R.id.curve, 9);
+        sViewsWithIds.put(R.id.login, 10);
+        sViewsWithIds.put(R.id.input_phone, 11);
+        sViewsWithIds.put(R.id.input_register_password, 12);
+        sViewsWithIds.put(R.id.v_privacy, 13);
+        sViewsWithIds.put(R.id.privacy, 14);
+        sViewsWithIds.put(R.id.terms, 15);
+        sViewsWithIds.put(R.id.flow1, 16);
     }
     // views
     @NonNull
@@ -34,13 +33,13 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback12;
-    @Nullable
     private final android.view.View.OnClickListener mCallback13;
     @Nullable
+    private final android.view.View.OnClickListener mCallback11;
+    @Nullable
     private final android.view.View.OnClickListener mCallback14;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback12;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -120,25 +119,24 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     };
 
     public FragmentLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 17, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
             , (androidx.appcompat.widget.AppCompatButton) bindings[4]
-            , (android.widget.TextView) bindings[10]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[17]
+            , (android.widget.TextView) bindings[9]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[16]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
             , (com.google.android.material.textfield.TextInputLayout) bindings[12]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[13]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[11]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[10]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[6]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[7]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[15]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[14]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[5]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[9]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[16]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[15]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[3]
-            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[13]
             );
         this.btnPhone.setTag(null);
         this.loginNoAccount.setTag(null);
@@ -153,10 +151,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback12 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback13 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback14 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback13 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback11 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback12 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -232,17 +230,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
             mDirtyFlags = 0;
         }
         boolean textUtilsIsEmptyViewmodelMessage = false;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
+        java.lang.String viewmodelLoginRequestPassword = null;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         grand.app.aber_provider.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
+        java.lang.String viewmodelLoginRequestPhone = null;
         java.lang.String viewmodelMessage = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnPhoneAndroidDrawableCornerViewGradientBtnPhoneAndroidDrawableCornerViewPrimaryMedium = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
-        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
-        java.lang.String viewmodelLoginRequestPassword = null;
-        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
-        java.lang.String viewmodelLoginRequestPhone = null;
-        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
@@ -275,10 +273,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
                 textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
             if((dirtyFlags & 0x7L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessage) {
-                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x400L;
                 }
                 else {
-                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x200L;
                 }
             }
 
@@ -296,18 +294,18 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         }
         // batch finished
 
-        if ((dirtyFlags & 0x20L) != 0) {
-
-                if (viewmodelMessage != null) {
-                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
-                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(grand.app.aber_provider.utils.Constants.HIDE_PROGRESS);
-                }
-        }
         if ((dirtyFlags & 0x1000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
                     viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(grand.app.aber_provider.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x200L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(grand.app.aber_provider.utils.Constants.HIDE_PROGRESS);
                 }
         }
 
@@ -329,18 +327,18 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
             }
             if((dirtyFlags & 0x7L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x40L;
                 }
                 else {
-                        dirtyFlags |= 0x200L;
+                        dirtyFlags |= 0x20L;
                 }
             }
 
 
-                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnPhoneAndroidDrawableCornerViewGradientBtnPhoneAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnPhone.getContext(), R.drawable.corner_view_gradient)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnPhone.getContext(), R.drawable.corner_view_primary_medium)));
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnPhoneAndroidDrawableCornerViewGradientBtnPhoneAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnPhone.getContext(), R.drawable.corner_view_gradient)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnPhone.getContext(), R.drawable.corner_view_primary_medium)));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
@@ -355,12 +353,12 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback13);
-            this.loginNoAccount.setOnClickListener(mCallback14);
-            this.loginNoAccountBold.setOnClickListener(mCallback15);
+            this.btnPhone.setOnClickListener(mCallback12);
+            this.loginNoAccount.setOnClickListener(mCallback13);
+            this.loginNoAccountBold.setOnClickListener(mCallback14);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback12);
+            this.tvLoginForget.setOnClickListener(mCallback11);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -373,7 +371,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -407,6 +405,23 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
                 }
                 break;
             }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -424,23 +439,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
                 }
                 break;
             }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.register();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -449,14 +447,14 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.message
         flag 2 (0x3L): null
-        flag 3 (0x4L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 4 (0x5L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 5 (0x6L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 4 (0x5L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
         flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
         flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/

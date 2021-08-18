@@ -1,10 +1,10 @@
 package grand.app.aber_provider.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://taa.my-staff.net/api/";
+    public final static String BASE_URL = "https://aber.my-staff.net/api/";
     // post
-    public final static String POSTS = "v1/posts?page=";
-    public final static String LIVE_STREAMS = "v1/live_stream?page=";
+    public final static String PACKAGES = "v1/provider/packages";
+    public final static String SUBSCRIBE = "v1/provider/package";
     public final static String CREATE_POST = "v1/post";
     public final static String ASK_USER = "v1/ask/post";
     public final static String EDIT_POST = "v1/post/";
@@ -13,10 +13,11 @@ public class URLS {
 
     public final static String SERVICES = "services";
     public final static String LOGIN_SOCIAL = "v1/social_register";
-    public final static String LOGIN_PASSWORD = "v1/login";
+    public final static String LOGIN_PASSWORD = "v1/provider/login";
     public final static String REGISTER = "v1/register";
-    public final static String UPGRADE = "v1/promoted";
-    public final static String BOARD = "v1/welcome";
+    public final static String COUNTRIES = "v1/countries";
+    public final static String CITIES = "v1/cities?governorate_id=";
+    public final static String BOARD = "v1/provider/welcome";
     public final static String CONFIRM_CODE = "v1/code_check";
     public final static String UPDATE_PROFILE = "v1/profile";
     public static final String FORGET_PASSWORD = "v1/code_send";

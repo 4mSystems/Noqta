@@ -10,23 +10,23 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.aber_provider.R;
-import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
+import grand.app.aber_provider.pages.auth.countries.viewModels.CountriesItemViewModels;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ItemCountryBinding extends ViewDataBinding {
   @Bindable
-  protected ItemHomeViewModel mItemPostViewModel;
+  protected CountriesItemViewModels mItemViewModel;
 
   protected ItemCountryBinding(Object _bindingComponent, View _root, int _localFieldCount) {
     super(_bindingComponent, _root, _localFieldCount);
   }
 
-  public abstract void setItemPostViewModel(@Nullable ItemHomeViewModel itemPostViewModel);
+  public abstract void setItemViewModel(@Nullable CountriesItemViewModels itemViewModel);
 
   @Nullable
-  public ItemHomeViewModel getItemPostViewModel() {
-    return mItemPostViewModel;
+  public CountriesItemViewModels getItemViewModel() {
+    return mItemViewModel;
   }
 
   @NonNull

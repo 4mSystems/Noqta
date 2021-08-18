@@ -2,7 +2,7 @@
 package grand.app.aber_provider.pages.postDetails.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class ReactionsViewModel_Factory implements Factory<ReactionsViewModel> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> postRepositoryProvider;
 
-  private final Provider<PostRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> postRepositoryProvider2;
 
-  public ReactionsViewModel_Factory(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public ReactionsViewModel_Factory(Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     this.postRepositoryProvider = postRepositoryProvider;
     this.postRepositoryProvider2 = postRepositoryProvider2;
   }
@@ -27,12 +27,13 @@ public final class ReactionsViewModel_Factory implements Factory<ReactionsViewMo
     return instance;
   }
 
-  public static ReactionsViewModel_Factory create(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
+  public static ReactionsViewModel_Factory create(
+      Provider<ServicesRepository> postRepositoryProvider,
+      Provider<ServicesRepository> postRepositoryProvider2) {
     return new ReactionsViewModel_Factory(postRepositoryProvider, postRepositoryProvider2);
   }
 
-  public static ReactionsViewModel newInstance(PostRepository postRepository) {
+  public static ReactionsViewModel newInstance(ServicesRepository postRepository) {
     return new ReactionsViewModel(postRepository);
   }
 }

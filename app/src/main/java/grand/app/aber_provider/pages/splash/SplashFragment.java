@@ -2,6 +2,7 @@ package grand.app.aber_provider.pages.splash;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,13 @@ import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.FragmentSplashBinding;
+import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
+import grand.app.aber_provider.pages.auth.login.LoginFragment;
+import grand.app.aber_provider.pages.onBoard.OnBoardFragment;
+import grand.app.aber_provider.pages.packages.PackagesFragment;
+import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
     private Context context;
@@ -44,17 +51,21 @@ public class SplashFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.HOME)) {
-                MovementHelper.startActivityMain(context);
-////                finishAllActivities();
-//            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
-//                } else {
-//            MovementHelper.startActivityBase(context, EditProfileFragment.class.getName(), null, null);
-//                }
-
-//            }
+            if (((Mutable) o).message.equals(Constants.HOME)) {
+                if (UserHelper.getInstance(requireActivity()).getCountryId() != 0) {
+                    if (!TextUtils.isEmpty(UserHelper.getInstance(requireActivity()).getUserData().getPackageId()))
+                        MovementHelper.startActivityMain(requireActivity());
+                    else
+                        MovementHelper.startActivityBase(requireActivity(), PackagesFragment.class.getName(), getString(R.string.package_title), null);
+                } else
+                    MovementHelper.startActivityBase(requireActivity(), CountriesFragment.class.getName(), getString(R.string.country), null);
+            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
+                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
+                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
+                } else {
+                    MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
+                }
+            }
         });
     }
 

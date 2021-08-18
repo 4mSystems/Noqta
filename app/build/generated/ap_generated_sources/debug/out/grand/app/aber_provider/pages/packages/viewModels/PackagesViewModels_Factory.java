@@ -2,7 +2,7 @@
 package grand.app.aber_provider.pages.packages.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,29 +10,30 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class PackagesViewModels_Factory implements Factory<PackagesViewModels> {
-  private final Provider<PostRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> servicesRepositoryProvider;
 
-  private final Provider<PostRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> servicesRepositoryProvider2;
 
-  public PackagesViewModels_Factory(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
-    this.postRepositoryProvider = postRepositoryProvider;
-    this.postRepositoryProvider2 = postRepositoryProvider2;
+  public PackagesViewModels_Factory(Provider<ServicesRepository> servicesRepositoryProvider,
+      Provider<ServicesRepository> servicesRepositoryProvider2) {
+    this.servicesRepositoryProvider = servicesRepositoryProvider;
+    this.servicesRepositoryProvider2 = servicesRepositoryProvider2;
   }
 
   @Override
   public PackagesViewModels get() {
-    PackagesViewModels instance = newInstance(postRepositoryProvider.get());
-    PackagesViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider2.get());
+    PackagesViewModels instance = newInstance(servicesRepositoryProvider.get());
+    PackagesViewModels_MembersInjector.injectServicesRepository(instance, servicesRepositoryProvider2.get());
     return instance;
   }
 
-  public static PackagesViewModels_Factory create(Provider<PostRepository> postRepositoryProvider,
-      Provider<PostRepository> postRepositoryProvider2) {
-    return new PackagesViewModels_Factory(postRepositoryProvider, postRepositoryProvider2);
+  public static PackagesViewModels_Factory create(
+      Provider<ServicesRepository> servicesRepositoryProvider,
+      Provider<ServicesRepository> servicesRepositoryProvider2) {
+    return new PackagesViewModels_Factory(servicesRepositoryProvider, servicesRepositoryProvider2);
   }
 
-  public static PackagesViewModels newInstance(PostRepository postRepository) {
-    return new PackagesViewModels(postRepository);
+  public static PackagesViewModels newInstance(ServicesRepository servicesRepository) {
+    return new PackagesViewModels(servicesRepository);
   }
 }

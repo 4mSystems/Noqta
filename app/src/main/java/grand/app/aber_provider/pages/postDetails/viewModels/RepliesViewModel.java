@@ -21,7 +21,7 @@ import grand.app.aber_provider.pages.home.models.commentsAndReplies.Comments;
 import grand.app.aber_provider.pages.home.models.commentsAndReplies.CommentsPaginate;
 import grand.app.aber_provider.pages.postDetails.adapters.CommentsAdapter;
 import grand.app.aber_provider.pages.postDetails.models.CreateCommentRequest;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.AppHelper;
 import io.reactivex.disposables.CompositeDisposable;
@@ -31,7 +31,7 @@ public class RepliesViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     CommentsPaginate commentsPaginate;
     Comments mainComment;
     CommentsAdapter commentsAdapter;
@@ -41,7 +41,7 @@ public class RepliesViewModel extends BaseViewModel {
     public ObservableBoolean like = new ObservableBoolean();
 
     @Inject
-    public RepliesViewModel(PostRepository postRepository) {
+    public RepliesViewModel(ServicesRepository postRepository) {
         fileObject = new ArrayList<>();
         createCommentRequest = new CreateCommentRequest();
         mainComment = new Comments();
@@ -143,7 +143,7 @@ public class RepliesViewModel extends BaseViewModel {
         return fileObject;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

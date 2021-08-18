@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
+                android:layout_marginEnd="@dimen/dp120w"
                 android:drawableStart="@drawable/ic_home"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
@@ -36,89 +36,12 @@
 
             <View
                 android:id="@+id/v1"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_home" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_favorite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/menuFavorite"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v1" />
-
-            <View
-                android:id="@+id/v2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_favorite" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_cart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/menuCart"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v2" />
-
-            <View
-                android:id="@+id/v3"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_cart" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_services"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/menuCategories"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v3" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rc_services"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp20w"
-                android:layout_marginTop="@dimen/dp14h"
-                android:layout_marginEnd="@dimen/dp100w"
-                app:layout_constraintTop_toBottomOf="@id/tv_services" />
-
-            <View
-                android:id="@+id/v4"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/rc_services" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_my_services"
@@ -126,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
+                android:layout_marginEnd="@dimen/dp120w"
                 android:drawableStart="@drawable/ic_my_orders"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
@@ -135,40 +58,16 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v4" />
+                app:layout_constraintTop_toBottomOf="@id/v1" />
 
             <View
                 android:id="@+id/v5"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_my_services" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_account"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/account_circle"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/menu_account"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v5" />
-
-            <View
-                android:id="@+id/v6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_account" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_provider"
@@ -176,36 +75,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/account_circle"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/ic_my_previous_orders"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
-                android:text="@string/menu_provider"
+                android:text="@string/menu_previous_orders"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v6" />
+                app:layout_constraintTop_toBottomOf="@id/v5" />
 
             <View
                 android:id="@+id/v7"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_provider" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_suggest"
+                android:id="@+id/tv_notifications"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_suggest"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/ic_notifications"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
-                android:text="@string/tv_account_suggest"
+                android:text="@string/notifications"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
@@ -213,11 +113,12 @@
 
             <View
                 android:id="@+id/v8"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_suggest" />
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
+                app:layout_constraintTop_toBottomOf="@id/tv_notifications" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_privacy"
@@ -225,11 +126,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_suggest"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/account_circle"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
-                android:text="@string/privacy"
+                android:text="@string/menu_account"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
@@ -237,10 +138,11 @@
 
             <View
                 android:id="@+id/v9"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_privacy" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
@@ -249,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
+                android:layout_marginEnd="@dimen/dp120w"
                 android:drawableStart="@drawable/ic_help"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
@@ -261,136 +163,13 @@
 
             <View
                 android:id="@+id/v10"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_terms" />
 
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_contact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_call_white"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/tv_account_contact"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v10" />
-
-            <View
-                android:id="@+id/v11"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_contact" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_about"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_about"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/about"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v11" />
-
-            <View
-                android:id="@+id/v12"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_about" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_social"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_social_media"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/social_media"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v12" />
-
-            <View
-                android:id="@+id/v13"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_social" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_rate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_rate"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/rate"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v13" />
-
-            <View
-                android:id="@+id/v14"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_rate" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_share"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp15w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
-                android:drawableStart="@drawable/ic_share"
-                android:drawablePadding="@dimen/dp8w"
-                android:gravity="center_vertical|start"
-                android:text="@string/share_app"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v14" />
-
-            <View
-                android:id="@+id/v15"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_share" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_lang"
@@ -398,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp100w"
+                android:layout_marginEnd="@dimen/dp120w"
                 android:drawableStart="@drawable/ic_translate"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
@@ -407,16 +186,119 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:drawableTint="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/v15" />
+                app:layout_constraintTop_toBottomOf="@id/v10" />
 
             <View
                 android:id="@+id/v16"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/white"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
                 app:layout_constraintTop_toBottomOf="@id/tv_lang" />
 
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/ic_flag"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/country"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:drawableTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/v16" />
+
+            <View
+                android:id="@+id/v17"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
+                app:layout_constraintTop_toBottomOf="@id/tv_country" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/ic_town"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/register_city_hint"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:drawableTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/v17" />
+
+            <View
+                android:id="@+id/v15"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
+                app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:drawableStart="@drawable/ic_more"
+                android:drawablePadding="@dimen/dp8w"
+                android:gravity="center_vertical|start"
+                android:text="@string/more"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:drawableTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/v15" />
+
+            <View
+                android:id="@+id/v20"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
+                app:layout_constraintTop_toBottomOf="@id/tv_more" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_menu_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp120w"
+                android:layout_marginBottom="@dimen/dp20h"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/v20" />
+
+            <grand.app.aber_provider.customViews.grandDialog.GrandImageDialog
+                android:id="@+id/grand_logo"
+                android:layout_width="@dimen/dp80w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp10h"
+                android:scaleType="fitXY"
+                android:src="@drawable/by_grand"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/rc_menu_social"
+                app:layout_constraintStart_toStartOf="@id/rc_menu_social"
+                app:layout_constraintTop_toBottomOf="@id/rc_menu_social"
+                app:tint="@color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

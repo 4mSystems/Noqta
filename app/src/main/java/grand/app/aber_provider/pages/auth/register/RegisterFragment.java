@@ -1,5 +1,7 @@
 package grand.app.aber_provider.pages.auth.register;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -9,6 +11,9 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
+
+import java.io.File;
+
 import javax.inject.Inject;
 
 import grand.app.aber_provider.PassingObject;
@@ -16,6 +21,7 @@ import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
+import grand.app.aber_provider.connection.FileObject;
 import grand.app.aber_provider.databinding.FragmentRegisterBinding;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
@@ -23,11 +29,12 @@ import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.LauncherHelper;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.upload.FileOperations;
 
 public class RegisterFragment extends BaseFragment {
     @Inject
     RegisterViewModel viewModel;
-     FragmentRegisterBinding binding;
+    FragmentRegisterBinding binding;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -37,6 +44,15 @@ public class RegisterFragment extends BaseFragment {
         binding.setViewmodel(viewModel);
         setEvent();
         return binding.getRoot();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LauncherHelper.checkPermission(this, 9, (request, result) -> {
+            if (result)
+                pickImageDialogSelect();
+        });
     }
 
     private void setEvent() {
@@ -58,6 +74,17 @@ public class RegisterFragment extends BaseFragment {
 
     }
 
+
+    @Override
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        super.launchActivityResult(request, resultCode, result);
+        if (request == Constants.FILE_TYPE_IMAGE) {
+            FileObject fileObject = FileOperations.getFileObject(getActivity(), result, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
+            viewModel.getFileObject().add(fileObject);
+            viewModel.getRequest().setUser_image(fileObject.getFilePath());
+            binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
+        }
+    }
 
     @Override
     public void onResume() {

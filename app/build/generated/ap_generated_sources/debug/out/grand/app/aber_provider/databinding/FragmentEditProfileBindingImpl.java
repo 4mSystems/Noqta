@@ -39,7 +39,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback16;
     @Nullable
@@ -280,10 +280,10 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback16 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback17 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback18 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback17 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback18 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -585,15 +585,15 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback19);
+            this.appCompatButtonNext.setOnClickListener(mCallback18);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
-            this.mboundView13.setOnClickListener(mCallback18);
-            this.mboundView2.setOnClickListener(mCallback17);
+            this.mboundView13.setOnClickListener(mCallback17);
+            this.mboundView2.setOnClickListener(mCallback16);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback16);
+            this.userImg.setOnClickListener(mCallback15);
         }
         if ((dirtyFlags & 0x2aL) != 0) {
             // api target 1
@@ -627,23 +627,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.updateProfile();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -710,6 +693,23 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
 
 
                     viewmodel.changePasword();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.updateProfile();
                 }
                 break;
             }

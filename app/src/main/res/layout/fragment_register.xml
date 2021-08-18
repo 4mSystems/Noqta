@@ -58,7 +58,7 @@
                 android:layout_marginStart="@dimen/dp30w"
                 android:layout_marginTop="@dimen/dp18h"
                 android:layout_marginEnd="@dimen/dp15w"
-                android:text="@string/register"
+                android:text="@string/personal_info"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/colordark"
                 app:layout_constraintStart_toStartOf="parent"
@@ -174,20 +174,19 @@
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp15w"
                         android:hint="@string/register_company_name"
-                        app:error="@{viewmodel.request.nameError}"
+                        app:error="@{viewmodel.request.companyNameError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/input_name"
                         app:startIconDrawable="@drawable/ic_user"
-
                         app:startIconTint="@color/black">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text="@={viewmodel.request.name}"
+                            android:text="@={viewmodel.request.companyName}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -208,7 +207,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/input_company_name"
                         app:startIconDrawable="@drawable/ic_call_white"
-
                         app:startIconTint="@color/black">
 
                         <androidx.appcompat.widget.AppCompatEditText
@@ -236,7 +234,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/input_phone"
                         app:startIconDrawable="@drawable/ic_email"
-
                         app:startIconTint="@color/black">
 
                         <androidx.appcompat.widget.AppCompatEditText
@@ -257,7 +254,7 @@
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp15w"
                         android:hint="@string/choose_location"
-                        app:error="@{viewmodel.request.emailError}"
+                        app:error="@{viewmodel.request.addressError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -268,8 +265,9 @@
                         <androidx.appcompat.widget.AppCompatEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress"
-                            android:text="@={viewmodel.request.email}"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:text="@={viewmodel.request.address}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -284,7 +282,7 @@
                         android:layout_marginEnd="@dimen/dp14w"
                         android:hint="@string/password"
                         android:textAlignment="viewEnd"
-                        app:error="@{viewmodel.request.careerError}"
+                        app:error="@{viewmodel.request.passwordError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -297,7 +295,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword"
-                            android:text="@={viewmodel.request.job}"
+                            android:text="@={viewmodel.request.password}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -311,7 +309,7 @@
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp15w"
                         android:hint="@string/password_hint_confirm"
-                        app:error="@{viewmodel.request.passwordError}"
+                        app:error="@{viewmodel.request.confirmPasswordError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -324,7 +322,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword"
-                            android:text="@={viewmodel.request.password}"
+                            android:text="@={viewmodel.request.confirmPasswordError}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>

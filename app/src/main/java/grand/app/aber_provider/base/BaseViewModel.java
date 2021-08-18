@@ -29,6 +29,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
     public UserData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
+    public String currency = UserHelper.getInstance(MyApplication.getInstance()).getCurrency();
     public String lang = LanguagesHelper.getCurrentLanguage();
 
     public BaseViewModel() {

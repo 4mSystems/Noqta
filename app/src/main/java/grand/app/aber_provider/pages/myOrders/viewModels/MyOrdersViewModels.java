@@ -9,7 +9,7 @@ import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class MyOrdersViewModels extends BaseViewModel {
@@ -18,12 +18,12 @@ public class MyOrdersViewModels extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private PostsAdapter postsAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     MainData mainData;
 
     @Inject
-    public MyOrdersViewModels(PostRepository postRepository) {
+    public MyOrdersViewModels(ServicesRepository postRepository) {
         mainData = new MainData();
         this.postRepository = postRepository;
         this.liveData = new MutableLiveData<>();
@@ -31,7 +31,7 @@ public class MyOrdersViewModels extends BaseViewModel {
     }
 
     public void posts(int page, boolean showProgress) {
-        compositeDisposable.add(postRepository.getPosts(page, showProgress));
+//        compositeDisposable.add(postRepository.getPackages(page, showProgress));
     }
     @Bindable
     public PostsAdapter getPostsAdapter() {
@@ -56,7 +56,7 @@ public class MyOrdersViewModels extends BaseViewModel {
         this.mainData = mainData;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 

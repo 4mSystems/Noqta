@@ -32,13 +32,13 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     @Nullable
     private final android.view.View.OnClickListener mCallback10;
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
-    @Nullable
     private final android.view.View.OnClickListener mCallback9;
     @Nullable
     private final android.view.View.OnClickListener mCallback7;
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
     private final android.view.View.OnClickListener mCallback6;
     // values
@@ -69,12 +69,12 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
         this.mboundView6.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback10 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
-        mCallback11 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
-        mCallback9 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback7 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback8 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback6 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback10 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
+        mCallback9 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback7 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback8 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback5 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -184,12 +184,12 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.cardMyWallet.setOnClickListener(mCallback8);
-            this.cardProfile.setOnClickListener(mCallback6);
-            this.mboundView2.setOnClickListener(mCallback7);
-            this.mboundView4.setOnClickListener(mCallback9);
-            this.mboundView5.setOnClickListener(mCallback10);
-            this.mboundView6.setOnClickListener(mCallback11);
+            this.cardMyWallet.setOnClickListener(mCallback7);
+            this.cardProfile.setOnClickListener(mCallback5);
+            this.mboundView2.setOnClickListener(mCallback6);
+            this.mboundView4.setOnClickListener(mCallback8);
+            this.mboundView5.setOnClickListener(mCallback9);
+            this.mboundView6.setOnClickListener(mCallback10);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -201,25 +201,6 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
-                }
-                break;
-            }
             case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -239,7 +220,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
                 }
                 break;
             }
-            case 4: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -254,26 +235,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.INSTURCTOR);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
                 }
                 break;
             }
@@ -296,7 +258,45 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
                 }
                 break;
             }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.INSTURCTOR);
+                }
+                break;
+            }
             case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                }
+                break;
+            }
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

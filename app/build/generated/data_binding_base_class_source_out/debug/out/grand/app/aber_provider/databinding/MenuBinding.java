@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import grand.app.aber_provider.R;
+import grand.app.aber_provider.customViews.grandDialog.GrandImageDialog;
 import grand.app.aber_provider.customViews.views.CustomTextViewMedium;
 import grand.app.aber_provider.customViews.views.MenuViewModel;
 import java.lang.Deprecated;
@@ -18,22 +19,16 @@ import java.lang.Object;
 
 public abstract class MenuBinding extends ViewDataBinding {
   @NonNull
-  public final RecyclerView rcServices;
+  public final GrandImageDialog grandLogo;
 
   @NonNull
-  public final CustomTextViewMedium tvAbout;
+  public final RecyclerView rcMenuSocial;
 
   @NonNull
-  public final CustomTextViewMedium tvAccount;
+  public final CustomTextViewMedium tvCity;
 
   @NonNull
-  public final CustomTextViewMedium tvCart;
-
-  @NonNull
-  public final CustomTextViewMedium tvContact;
-
-  @NonNull
-  public final CustomTextViewMedium tvFavorite;
+  public final CustomTextViewMedium tvCountry;
 
   @NonNull
   public final CustomTextViewMedium tvHome;
@@ -42,28 +37,19 @@ public abstract class MenuBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvLang;
 
   @NonNull
+  public final CustomTextViewMedium tvMore;
+
+  @NonNull
   public final CustomTextViewMedium tvMyServices;
+
+  @NonNull
+  public final CustomTextViewMedium tvNotifications;
 
   @NonNull
   public final CustomTextViewMedium tvPrivacy;
 
   @NonNull
   public final CustomTextViewMedium tvProvider;
-
-  @NonNull
-  public final CustomTextViewMedium tvRate;
-
-  @NonNull
-  public final CustomTextViewMedium tvServices;
-
-  @NonNull
-  public final CustomTextViewMedium tvShare;
-
-  @NonNull
-  public final CustomTextViewMedium tvSocial;
-
-  @NonNull
-  public final CustomTextViewMedium tvSuggest;
 
   @NonNull
   public final CustomTextViewMedium tvTerms;
@@ -75,37 +61,19 @@ public abstract class MenuBinding extends ViewDataBinding {
   public final View v10;
 
   @NonNull
-  public final View v11;
-
-  @NonNull
-  public final View v12;
-
-  @NonNull
-  public final View v13;
-
-  @NonNull
-  public final View v14;
-
-  @NonNull
   public final View v15;
 
   @NonNull
   public final View v16;
 
   @NonNull
-  public final View v2;
+  public final View v17;
 
   @NonNull
-  public final View v3;
-
-  @NonNull
-  public final View v4;
+  public final View v20;
 
   @NonNull
   public final View v5;
-
-  @NonNull
-  public final View v6;
 
   @NonNull
   public final View v7;
@@ -120,45 +88,32 @@ public abstract class MenuBinding extends ViewDataBinding {
   protected MenuViewModel mMenuViewModel;
 
   protected MenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView rcServices, CustomTextViewMedium tvAbout, CustomTextViewMedium tvAccount,
-      CustomTextViewMedium tvCart, CustomTextViewMedium tvContact, CustomTextViewMedium tvFavorite,
-      CustomTextViewMedium tvHome, CustomTextViewMedium tvLang, CustomTextViewMedium tvMyServices,
-      CustomTextViewMedium tvPrivacy, CustomTextViewMedium tvProvider, CustomTextViewMedium tvRate,
-      CustomTextViewMedium tvServices, CustomTextViewMedium tvShare, CustomTextViewMedium tvSocial,
-      CustomTextViewMedium tvSuggest, CustomTextViewMedium tvTerms, View v1, View v10, View v11,
-      View v12, View v13, View v14, View v15, View v16, View v2, View v3, View v4, View v5, View v6,
-      View v7, View v8, View v9) {
+      GrandImageDialog grandLogo, RecyclerView rcMenuSocial, CustomTextViewMedium tvCity,
+      CustomTextViewMedium tvCountry, CustomTextViewMedium tvHome, CustomTextViewMedium tvLang,
+      CustomTextViewMedium tvMore, CustomTextViewMedium tvMyServices,
+      CustomTextViewMedium tvNotifications, CustomTextViewMedium tvPrivacy,
+      CustomTextViewMedium tvProvider, CustomTextViewMedium tvTerms, View v1, View v10, View v15,
+      View v16, View v17, View v20, View v5, View v7, View v8, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.rcServices = rcServices;
-    this.tvAbout = tvAbout;
-    this.tvAccount = tvAccount;
-    this.tvCart = tvCart;
-    this.tvContact = tvContact;
-    this.tvFavorite = tvFavorite;
+    this.grandLogo = grandLogo;
+    this.rcMenuSocial = rcMenuSocial;
+    this.tvCity = tvCity;
+    this.tvCountry = tvCountry;
     this.tvHome = tvHome;
     this.tvLang = tvLang;
+    this.tvMore = tvMore;
     this.tvMyServices = tvMyServices;
+    this.tvNotifications = tvNotifications;
     this.tvPrivacy = tvPrivacy;
     this.tvProvider = tvProvider;
-    this.tvRate = tvRate;
-    this.tvServices = tvServices;
-    this.tvShare = tvShare;
-    this.tvSocial = tvSocial;
-    this.tvSuggest = tvSuggest;
     this.tvTerms = tvTerms;
     this.v1 = v1;
     this.v10 = v10;
-    this.v11 = v11;
-    this.v12 = v12;
-    this.v13 = v13;
-    this.v14 = v14;
     this.v15 = v15;
     this.v16 = v16;
-    this.v2 = v2;
-    this.v3 = v3;
-    this.v4 = v4;
+    this.v17 = v17;
+    this.v20 = v20;
     this.v5 = v5;
-    this.v6 = v6;
     this.v7 = v7;
     this.v8 = v8;
     this.v9 = v9;

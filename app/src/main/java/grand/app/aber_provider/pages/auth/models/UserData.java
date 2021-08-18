@@ -15,8 +15,8 @@ public class UserData {
     @SerializedName("account_type")
     private String accountType;
 
-    @SerializedName("active")
-    private int active;
+    @SerializedName("package_id")
+    private String packageId;
 
     @SerializedName("token")
     private String token;
@@ -30,8 +30,8 @@ public class UserData {
     @SerializedName("name")
     private String name;
 
-    @SerializedName("provider_id")
-    private String providerId;
+    @SerializedName("step")
+    private int step;
 
     @SerializedName("id")
     private int id;
@@ -63,10 +63,13 @@ public class UserData {
         return accountType;
     }
 
-    public int getActive() {
-        return active;
+    public String getPackageId() {
+        return packageId;
     }
 
+    public void setPackageId(String packageId) {
+        this.packageId = packageId;
+    }
 
     public String getToken() {
         return token;
@@ -85,8 +88,8 @@ public class UserData {
         return name;
     }
 
-    public String getProviderId() {
-        return providerId;
+    public int getStep() {
+        return step;
     }
 
     public int getId() {

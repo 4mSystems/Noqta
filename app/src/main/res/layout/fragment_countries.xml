@@ -37,6 +37,9 @@
             android:layout_height="0dp"
             tools:listitem="@layout/item_country"
             android:layout_marginTop="@dimen/dp8h"
+            app:adapter="@{viewmodel.countriesAdapter}"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/appCompatButtonNext"
             app:layout_constraintTop_toBottomOf="@id/tv_select_country" />
@@ -48,6 +51,7 @@
             android:layout_margin="@dimen/dp12h"
             android:padding="@dimen/dp10h"
             android:text="@string/next"
+            android:onClick="@{()-> viewmodel.action(Constants.CITIES)}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:backgroundTint="@color/colorPrimary"

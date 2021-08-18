@@ -91,7 +91,7 @@
     <string name="menuCart">حسابي</string>
     <string name="wawo">&#160; و &#160;</string>
     <string name="menu_account">طلبات التوصيل</string>
-    <string name="menu_provider">طلبات المتاجر</string>
+    <string name="menu_previous_orders">طلبات المتاجر</string>
     <string name="social_media">"مسافة الطلب : "</string>
     <string name="aval_order_time">"اسم العميل : "</string>
     <string name="reacts_people">الأشخاص المتفاعلون</string>
@@ -317,4 +317,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register_company_name">اسم الشركة</string>
+    <string name="register_title">أنشاء حساب</string>
+    <string name="select_cities">اختر المدينة</string>
+    <string name="package_title">اشتراكات مقدم الخدمة</string>
+    <string name="more">المزيد</string>
 </resources>

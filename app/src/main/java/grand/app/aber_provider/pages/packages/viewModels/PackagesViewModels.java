@@ -2,64 +2,46 @@ package grand.app.aber_provider.pages.packages.viewModels;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
+
 import javax.inject.Inject;
-import grand.app.aber_provider.BR;
+
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.pages.packages.adapters.PackagesAdapter;
+import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class PackagesViewModels extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private PostsAdapter postsAdapter;
+    PackagesAdapter packagesAdapter;
     @Inject
-    PostRepository postRepository;
-    MainData mainData;
+    ServicesRepository servicesRepository;
 
     @Inject
-    public PackagesViewModels(PostRepository postRepository) {
-        mainData = new MainData();
-        this.postRepository = postRepository;
+    public PackagesViewModels(ServicesRepository servicesRepository) {
+        this.servicesRepository = servicesRepository;
         this.liveData = new MutableLiveData<>();
-        postRepository.setLiveData(liveData);
+        servicesRepository.setLiveData(liveData);
     }
 
-    public void posts(int page, boolean showProgress) {
-        compositeDisposable.add(postRepository.getPosts(page, showProgress));
+    public void getPackages() {
+        compositeDisposable.add(servicesRepository.getPackages());
     }
 
-    public void liveDataActions(String action) {
-        liveData.setValue(new Mutable(action));
-    }
-
-    @Bindable
-    public PostsAdapter getPostsAdapter() {
-        return this.postsAdapter == null ? this.postsAdapter = new PostsAdapter() : this.postsAdapter;
+    public void subscribe(int id) {
+        compositeDisposable.add(servicesRepository.subscribe(id));
     }
 
     @Bindable
-    public MainData getMainData() {
-        return mainData;
+    public PackagesAdapter getPackagesAdapter() {
+        return this.packagesAdapter == null ? this.packagesAdapter = new PackagesAdapter() : this.packagesAdapter;
     }
 
-    @Bindable
-    public void setMainData(MainData mainData) {
-        if (getPostsAdapter().getPostDataList().size() > 0) {
-            getPostsAdapter().loadMore(mainData.getPostDataList());
-        } else {
-            getPostsAdapter().update(mainData.getPostDataList());
-            notifyChange(BR.postsAdapter);
-        }
-        notifyChange(BR.mainData);
-        this.mainData = mainData;
-    }
-
-    public PostRepository getPostRepository() {
-        return postRepository;
+    public ServicesRepository getServicesRepository() {
+        return servicesRepository;
     }
 
     protected void unSubscribeFromObservable() {

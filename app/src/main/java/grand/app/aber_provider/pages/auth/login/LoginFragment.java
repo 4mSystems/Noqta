@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
+
 import javax.inject.Inject;
+
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
@@ -18,6 +20,7 @@ import grand.app.aber_provider.databinding.FragmentLoginBinding;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment;
+import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.aber_provider.pages.auth.models.UsersResponse;
 import grand.app.aber_provider.pages.auth.register.RegisterFragment;
@@ -50,13 +53,13 @@ public class LoginFragment extends BaseFragment {
                 case Constants.LOGIN:
                     toastMessage(((StatusMessage) mutable.object).mMessage);
                     UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-                    MovementHelper.startActivityMain(requireActivity());
+                    MovementHelper.startActivityBase(requireActivity(), CountriesFragment.class.getName(), getString(R.string.country), null);
                     break;
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivity(requireActivity(), ForgetPasswordFragment.class.getName(), null, null);
                     break;
                 case Constants.REGISTER:
-                    MovementHelper.startActivity(requireActivity(), RegisterFragment.class.getName(), null, null);
+                    MovementHelper.startActivity(requireActivity(), RegisterFragment.class.getName(), getString(R.string.register_title), null);
                     break;
                 case Constants.ERROR_NOT_FOUND:
                     showError(String.valueOf(mutable.object));
@@ -64,8 +67,6 @@ public class LoginFragment extends BaseFragment {
                 case Constants.NOT_VERIFIED:
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.loginRequest.getPhone()), null, ConfirmCodeFragment.class.getName(), null);
                     break;
-
-
             }
         });
     }

@@ -17,7 +17,7 @@ import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
 import grand.app.aber_provider.pages.profile.adapters.ReportReasonsAdapter;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
 import grand.app.aber_provider.pages.profile.models.profile.UserProfile;
-import grand.app.aber_provider.repository.PostRepository;
+import grand.app.aber_provider.repository.ServicesRepository;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.URLS;
 import grand.app.aber_provider.utils.session.UserHelper;
@@ -29,14 +29,14 @@ public class ProfileViewModels extends BaseViewModel {
     private PostsAdapter postsAdapter;
     private ReportReasonsAdapter reportReasonsAdapter;
     @Inject
-    PostRepository postRepository;
+    ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
     public String search;
     UserProfile userProfile;
     UserActionRequest actionRequest;
 
     @Inject
-    public ProfileViewModels(PostRepository postRepository) {
+    public ProfileViewModels(ServicesRepository postRepository) {
         userProfile = new UserProfile();
         this.postRepository = postRepository;
         this.liveData = new MutableLiveData<>();
@@ -69,7 +69,7 @@ public class ProfileViewModels extends BaseViewModel {
             url = URLS.CHANGE_FOLLOW_ACTIONS;
         else
             url = URLS.STORE_FOLLOW;
-        actionRequest.setType(url.equals(URLS.CHANGE_FOLLOW_ACTIONS) ? Constants.followers : null);
+        actionRequest.setType(url.equals(URLS.CHANGE_FOLLOW_ACTIONS) ? Constants.CITIES : null);
         actionRequest.setUserId(getPassingObject().getId());
         compositeDisposable.add(postRepository.changeFollowStatus(actionRequest, url));
     }
@@ -116,7 +116,7 @@ public class ProfileViewModels extends BaseViewModel {
         this.userProfile = userProfile;
     }
 
-    public PostRepository getPostRepository() {
+    public ServicesRepository getPostRepository() {
         return postRepository;
     }
 
