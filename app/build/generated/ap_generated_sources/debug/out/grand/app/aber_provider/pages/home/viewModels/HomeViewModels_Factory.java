@@ -10,29 +10,29 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class HomeViewModels_Factory implements Factory<HomeViewModels> {
-  private final Provider<ServicesRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> repositoryProvider;
 
-  private final Provider<ServicesRepository> postRepositoryProvider2;
+  private final Provider<ServicesRepository> repositoryProvider2;
 
-  public HomeViewModels_Factory(Provider<ServicesRepository> postRepositoryProvider,
-      Provider<ServicesRepository> postRepositoryProvider2) {
-    this.postRepositoryProvider = postRepositoryProvider;
-    this.postRepositoryProvider2 = postRepositoryProvider2;
+  public HomeViewModels_Factory(Provider<ServicesRepository> repositoryProvider,
+      Provider<ServicesRepository> repositoryProvider2) {
+    this.repositoryProvider = repositoryProvider;
+    this.repositoryProvider2 = repositoryProvider2;
   }
 
   @Override
   public HomeViewModels get() {
-    HomeViewModels instance = newInstance(postRepositoryProvider.get());
-    HomeViewModels_MembersInjector.injectPostRepository(instance, postRepositoryProvider2.get());
+    HomeViewModels instance = newInstance(repositoryProvider.get());
+    HomeViewModels_MembersInjector.injectRepository(instance, repositoryProvider2.get());
     return instance;
   }
 
-  public static HomeViewModels_Factory create(Provider<ServicesRepository> postRepositoryProvider,
-      Provider<ServicesRepository> postRepositoryProvider2) {
-    return new HomeViewModels_Factory(postRepositoryProvider, postRepositoryProvider2);
+  public static HomeViewModels_Factory create(Provider<ServicesRepository> repositoryProvider,
+      Provider<ServicesRepository> repositoryProvider2) {
+    return new HomeViewModels_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static HomeViewModels newInstance(ServicesRepository postRepository) {
-    return new HomeViewModels(postRepository);
+  public static HomeViewModels newInstance(ServicesRepository repository) {
+    return new HomeViewModels(repository);
   }
 }

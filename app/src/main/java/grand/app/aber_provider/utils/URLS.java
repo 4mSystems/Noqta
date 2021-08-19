@@ -5,7 +5,7 @@ public class URLS {
     // post
     public final static String PACKAGES = "v1/provider/packages";
     public final static String SUBSCRIBE = "v1/provider/package";
-    public final static String CREATE_POST = "v1/post";
+    public final static String HOME = "v1/provider/home";
     public final static String ASK_USER = "v1/ask/post";
     public final static String EDIT_POST = "v1/post/";
     public final static String DELETE_POST = "v1/post/";

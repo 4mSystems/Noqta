@@ -50,7 +50,7 @@ public class Constants {
     public final static String RESPONSE_URL_CHANGED = "changed";
     public final static String MAKE_COMMENT = "MAKE_COMMENT";
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String POST_DETAILS = "ORDER_DETAILS";
+    public final static String ORDER_DETAILS = "ORDER_DETAILS";
     public final static String EDIT = "EDIT";
     public final static String EDIT_COMMENT = "EDIT_COMMENT";
 

@@ -18,10 +18,13 @@ import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.base.ParentActivity;
 import grand.app.aber_provider.customViews.actionbar.HomeActionBarView;
+import grand.app.aber_provider.customViews.views.NavigationDrawerView;
 import grand.app.aber_provider.databinding.ActivityMainBinding;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
     ActivityMainBinding activityMainBinding;
@@ -29,7 +32,8 @@ public class MainActivity extends ParentActivity {
     HomeViewModels viewModel;
     HomeActionBarView homeActionBarView;
     MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
-    SlidingNavigation menuBuilder;
+    public SlidingNavigation menuBuilder;
+    public NavigationDrawerView navigationDrawerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +44,14 @@ public class MainActivity extends ParentActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setViewModel(viewModel);
         homeActionBarView = new HomeActionBarView(this);
+        navigationDrawerView = new NavigationDrawerView(this);
         activityMainBinding.llBaseActionBarContainer.addView(homeActionBarView);
-        viewModel.liveData.setValue(new Mutable(Constants.MENU_HOME));
+        setHomeActionTitle(getResources().getString(R.string.menuHome), "Visible");
+        MovementHelper.replaceFragment(this, new HomeFragment(), "");
         menuBuilder = new SlidingMenuBuilder(this)
                 .withMenuOpened(false)
                 .withContentClickableWhenMenuOpened(true)
-                .withMenuLayout(R.layout.menu)
+                .withMenuView(navigationDrawerView)
                 .withToolbarMenuToggle(homeActionBarView.layoutActionBarHomeBinding.toolbar)
                 .addDragStateListener(new DragStateListener() {
                     @Override
@@ -74,7 +80,7 @@ public class MainActivity extends ParentActivity {
     }
 
 
-    private void setHomeActionTitle(String title, String notificationVisible) {
+    public void setHomeActionTitle(String title, String notificationVisible) {
         homeActionBarView.setTitle(title);
         if (notificationVisible != null) {
             homeActionBarView.notificationVisible(View.VISIBLE);

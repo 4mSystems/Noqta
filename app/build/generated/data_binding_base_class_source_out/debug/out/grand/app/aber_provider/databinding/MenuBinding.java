@@ -52,13 +52,7 @@ public abstract class MenuBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvProvider;
 
   @NonNull
-  public final CustomTextViewMedium tvTerms;
-
-  @NonNull
   public final View v1;
-
-  @NonNull
-  public final View v10;
 
   @NonNull
   public final View v15;
@@ -92,8 +86,8 @@ public abstract class MenuBinding extends ViewDataBinding {
       CustomTextViewMedium tvCountry, CustomTextViewMedium tvHome, CustomTextViewMedium tvLang,
       CustomTextViewMedium tvMore, CustomTextViewMedium tvMyServices,
       CustomTextViewMedium tvNotifications, CustomTextViewMedium tvPrivacy,
-      CustomTextViewMedium tvProvider, CustomTextViewMedium tvTerms, View v1, View v10, View v15,
-      View v16, View v17, View v20, View v5, View v7, View v8, View v9) {
+      CustomTextViewMedium tvProvider, View v1, View v15, View v16, View v17, View v20, View v5,
+      View v7, View v8, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
     this.grandLogo = grandLogo;
     this.rcMenuSocial = rcMenuSocial;
@@ -106,9 +100,7 @@ public abstract class MenuBinding extends ViewDataBinding {
     this.tvNotifications = tvNotifications;
     this.tvPrivacy = tvPrivacy;
     this.tvProvider = tvProvider;
-    this.tvTerms = tvTerms;
     this.v1 = v1;
-    this.v10 = v10;
     this.v15 = v15;
     this.v16 = v16;
     this.v17 = v17;

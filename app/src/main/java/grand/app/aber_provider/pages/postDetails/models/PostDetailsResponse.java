@@ -3,14 +3,14 @@ package grand.app.aber_provider.pages.postDetails.models;
 import com.google.gson.annotations.SerializedName;
 
 import grand.app.aber_provider.model.base.StatusMessage;
-import grand.app.aber_provider.pages.home.models.PostData;
+import grand.app.aber_provider.pages.home.models.Orders;
 
 public class PostDetailsResponse extends StatusMessage {
 
     @SerializedName("data")
-    private PostData postData;
+    private Orders postData;
 
-    public PostData getPostData() {
+    public Orders getPostData() {
         return postData;
     }
 

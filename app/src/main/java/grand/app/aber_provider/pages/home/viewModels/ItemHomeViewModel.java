@@ -4,18 +4,18 @@ package grand.app.aber_provider.pages.home.viewModels;
 import androidx.databinding.Bindable;
 
 import grand.app.aber_provider.base.BaseViewModel;
-import grand.app.aber_provider.pages.home.models.PostData;
+import grand.app.aber_provider.pages.home.models.Orders;
 
 public class ItemHomeViewModel extends BaseViewModel {
-    public PostData postData;
+    public Orders orders;
 
-    public ItemHomeViewModel(PostData postData) {
-        this.postData = postData;
+    public ItemHomeViewModel(Orders orders) {
+        this.orders = orders;
     }
 
     @Bindable
-    public PostData getPostData() {
-        return postData;
+    public Orders getOrders() {
+        return orders;
     }
 
     public void itemAction(String action) {

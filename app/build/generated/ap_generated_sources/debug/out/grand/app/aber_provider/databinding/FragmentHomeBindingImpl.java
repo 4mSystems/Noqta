@@ -14,7 +14,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.searchContainer, 3);
+        sViewsWithIds.put(R.id.searchContainer, 2);
     }
     // views
     @NonNull
@@ -25,17 +25,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 2
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
+        super(bindingComponent, root, 1
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.progress.setTag(null);
         this.rcPosts.setTag(null);
         setRootTag(root);
         // listeners
@@ -45,7 +43,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -73,10 +71,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     }
 
     public void setViewModel(@Nullable grand.app.aber_provider.pages.home.viewModels.HomeViewModels ViewModel) {
-        updateRegistration(1, ViewModel);
+        updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x1L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -86,31 +84,20 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModelSearchProgressVisible((androidx.databinding.ObservableBoolean) object, fieldId);
-            case 1 :
                 return onChangeViewModel((grand.app.aber_provider.pages.home.viewModels.HomeViewModels) object, fieldId);
-        }
-        return false;
-    }
-    private boolean onChangeViewModelSearchProgressVisible(androidx.databinding.ObservableBoolean ViewModelSearchProgressVisible, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x1L;
-            }
-            return true;
         }
         return false;
     }
     private boolean onChangeViewModel(grand.app.aber_provider.pages.home.viewModels.HomeViewModels ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
-                    mDirtyFlags |= 0x2L;
+                    mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.postsAdapter) {
+        else if (fieldId == BR.orderAdapter) {
             synchronized(this) {
-                    mDirtyFlags |= 0x4L;
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -124,59 +111,23 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        boolean viewModelSearchProgressVisibleGet = false;
-        androidx.databinding.ObservableBoolean viewModelSearchProgressVisible = null;
-        int viewModelSearchProgressVisibleViewVISIBLEViewGONE = 0;
-        grand.app.aber_provider.pages.home.adapters.PostsAdapter viewModelPostsAdapter = null;
         grand.app.aber_provider.pages.home.viewModels.HomeViewModels viewModel = mViewModel;
+        grand.app.aber_provider.pages.home.adapters.OrderAdapter viewModelOrderAdapter = null;
 
-        if ((dirtyFlags & 0xfL) != 0) {
-
-
-            if ((dirtyFlags & 0xbL) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.searchProgressVisible
-                        viewModelSearchProgressVisible = viewModel.searchProgressVisible;
-                    }
-                    updateRegistration(0, viewModelSearchProgressVisible);
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
-                    if (viewModelSearchProgressVisible != null) {
-                        // read viewModel.searchProgressVisible.get()
-                        viewModelSearchProgressVisibleGet = viewModelSearchProgressVisible.get();
-                    }
-                if((dirtyFlags & 0xbL) != 0) {
-                    if(viewModelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x20L;
-                    }
-                    else {
-                            dirtyFlags |= 0x10L;
-                    }
+
+                if (viewModel != null) {
+                    // read viewModel.orderAdapter
+                    viewModelOrderAdapter = viewModel.getOrderAdapter();
                 }
-
-
-                    // read viewModel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-                    viewModelSearchProgressVisibleViewVISIBLEViewGONE = ((viewModelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
-            }
-            if ((dirtyFlags & 0xeL) != 0) {
-
-                    if (viewModel != null) {
-                        // read viewModel.postsAdapter
-                        viewModelPostsAdapter = viewModel.getPostsAdapter();
-                    }
-            }
         }
         // batch finished
-        if ((dirtyFlags & 0xbL) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            this.progress.setVisibility(viewModelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            grand.app.aber_provider.base.ApplicationBinding.getItemsV2Binding(this.rcPosts, viewModelPostsAdapter, "1", "1");
+            grand.app.aber_provider.base.ApplicationBinding.getItemsV2Binding(this.rcPosts, viewModelOrderAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -184,12 +135,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.searchProgressVisible
-        flag 1 (0x2L): viewModel
-        flag 2 (0x3L): viewModel.postsAdapter
-        flag 3 (0x4L): null
-        flag 4 (0x5L): viewModel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewModel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 0 (0x1L): viewModel
+        flag 1 (0x2L): viewModel.orderAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

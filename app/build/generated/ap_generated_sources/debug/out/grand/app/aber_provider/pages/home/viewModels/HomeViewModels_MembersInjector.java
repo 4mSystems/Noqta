@@ -11,25 +11,24 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class HomeViewModels_MembersInjector implements MembersInjector<HomeViewModels> {
-  private final Provider<ServicesRepository> postRepositoryProvider;
+  private final Provider<ServicesRepository> repositoryProvider;
 
-  public HomeViewModels_MembersInjector(Provider<ServicesRepository> postRepositoryProvider) {
-    this.postRepositoryProvider = postRepositoryProvider;
+  public HomeViewModels_MembersInjector(Provider<ServicesRepository> repositoryProvider) {
+    this.repositoryProvider = repositoryProvider;
   }
 
   public static MembersInjector<HomeViewModels> create(
-      Provider<ServicesRepository> postRepositoryProvider) {
-    return new HomeViewModels_MembersInjector(postRepositoryProvider);
+      Provider<ServicesRepository> repositoryProvider) {
+    return new HomeViewModels_MembersInjector(repositoryProvider);
   }
 
   @Override
   public void injectMembers(HomeViewModels instance) {
-    injectPostRepository(instance, postRepositoryProvider.get());
+    injectRepository(instance, repositoryProvider.get());
   }
 
-  @InjectedFieldSignature("grand.app.aber_provider.pages.home.viewModels.HomeViewModels.postRepository")
-  public static void injectPostRepository(HomeViewModels instance,
-      ServicesRepository postRepository) {
-    instance.postRepository = postRepository;
+  @InjectedFieldSignature("grand.app.aber_provider.pages.home.viewModels.HomeViewModels.repository")
+  public static void injectRepository(HomeViewModels instance, ServicesRepository repository) {
+    instance.repository = repository;
   }
 }

@@ -33,6 +33,293 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp25h"
+                android:layout_marginEnd="@dimen/dp13w"
+                app:cardUseCompatPadding="true"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_about"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/about"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark"
+                    app:cardUseCompatPadding="true" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.TERMS)}"
+
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_about">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_suggest"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/terms"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.CONTACT)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_terms">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_call_white"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/tv_account_contact"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_suggest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.CONTACT)}"
+
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_contact">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_help"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/tv_account_suggest"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.CONTACT)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_suggest">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_social_media"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/social_media"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.CONTACT)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_social">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_rate"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/rate"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginEnd="@dimen/dp13w"
+                android:onClick="@{()->viewmodel.buttonActions(Constants.SHARE_BAR)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MORE)?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_rate">
+
+                <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_margin="@dimen/dp14h"
+                    android:drawableStart="@drawable/ic_share"
+                    android:drawablePadding="@dimen/dp8w"
+                    android:text="@string/share_app"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,9 +327,10 @@
                 android:layout_marginTop="@dimen/dp25h"
                 android:layout_marginEnd="@dimen/dp13w"
                 android:onClick="@{()->viewmodel.buttonActions(Constants.QUESTIONS)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MENU_ACCOUNT)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="4dp"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/card_share">
 
                 <grand.app.aber_provider.customViews.views.CustomTextViewRegular
                     android:layout_width="match_parent"
@@ -80,7 +368,7 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp13w"
                 android:onClick="@{()-> viewmodel.buttonActions(Constants.INSTURCTOR)}"
-                android:visibility="@{viewmodel.userData.isPromoted==0?View.VISIBLE:View.GONE}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MENU_ACCOUNT)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/card_profile">
@@ -111,6 +399,7 @@
                     app:srcCompat="@drawable/ic_arrow_left"
                     app:tint="@color/white" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_packages"
                 android:layout_width="match_parent"
@@ -118,8 +407,10 @@
                 android:layout_marginStart="@dimen/dp13w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp13w"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MENU_ACCOUNT)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="4dp"
+
                 app:layout_constraintTop_toBottomOf="@id/card_my_wallet">
 
                 <grand.app.aber_provider.customViews.views.CustomTextViewRegular
@@ -156,8 +447,10 @@
                 android:layout_marginEnd="@dimen/dp13w"
                 android:layout_marginBottom="@dimen/dp8h"
                 android:onClick="@{()-> viewmodel.buttonActions(Constants.SHOW_LOGOUT_WARNING)}"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.MENU_ACCOUNT)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="4dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_packages">
 

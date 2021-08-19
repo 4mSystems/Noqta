@@ -20,8 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="4dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -31,7 +33,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp10h"
-                android:text="ونش هيدروليك"
+                android:text="@{itemPostViewModel.orders.serviceName}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colordark"
@@ -65,7 +67,7 @@
 
             <grand.app.aber_provider.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_service_location"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
                 android:drawableStart="@drawable/ic_order_location"
@@ -75,19 +77,21 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
-                app:layout_constraintEnd_toStartOf="@id/tv_service_location_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_services_name" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_service_location_value"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="٦شارع الخلود مدينة نصر القاهرة"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{itemPostViewModel.orders.address}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_service_location"
                 app:layout_constraintTop_toBottomOf="@+id/v_services_name" />
 
             <View
@@ -119,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="أحمد بكري"
+                android:text="@{itemPostViewModel.orders.clientName}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="@string/service_time"
+                android:text="@{itemPostViewModel.orders.is_emergency==1?@string/emergency_services:itemPostViewModel.orders.scheduledAt}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -6,9 +6,9 @@ import grand.app.aber_provider.model.base.StatusMessage;
 
 public class NewPostResponse extends StatusMessage {
     @SerializedName("data")
-    private PostData postData;
+    private Orders postData;
 
-    public PostData getPostData() {
+    public Orders getPostData() {
         return postData;
     }
 }

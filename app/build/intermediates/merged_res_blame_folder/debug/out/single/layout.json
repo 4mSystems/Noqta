@@ -76,12 +76,12 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_detail.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_onboard.xml",
-        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_onboard.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_sale_desc.xml",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_sale_desc.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_onboard.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_onboard.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact.xml",
@@ -162,6 +162,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forget_password.xml",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_forget_password.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_social_menu.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_social_menu.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_services_orders.xml",

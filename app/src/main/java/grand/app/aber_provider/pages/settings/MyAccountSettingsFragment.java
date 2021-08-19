@@ -11,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
@@ -18,20 +20,12 @@ import javax.inject.Inject;
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.databinding.FragmentMyAccountSettingsBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.model.base.StatusMessage;
-import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
-import grand.app.aber_provider.pages.auth.models.UsersResponse;
-import grand.app.aber_provider.pages.packages.PackagesFragment;
-import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.utils.Constants;
-import grand.app.aber_provider.utils.URLS;
-import grand.app.aber_provider.utils.helper.MovementHelper;
-import grand.app.aber_provider.utils.session.UserHelper;
 
 public class MyAccountSettingsFragment extends BaseFragment {
 
@@ -45,6 +39,11 @@ public class MyAccountSettingsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+        }
         setEvent();
         return binding.getRoot();
     }

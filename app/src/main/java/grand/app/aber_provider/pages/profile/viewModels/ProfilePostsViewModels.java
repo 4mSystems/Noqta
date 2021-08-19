@@ -12,7 +12,7 @@ import grand.app.aber_provider.BR;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
+import grand.app.aber_provider.pages.home.adapters.OrderAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
 import grand.app.aber_provider.pages.profile.adapters.QuestionedPostsAdapter;
 import grand.app.aber_provider.repository.ServicesRepository;
@@ -24,7 +24,7 @@ import io.reactivex.disposables.CompositeDisposable;
 public class ProfilePostsViewModels extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private PostsAdapter postsAdapter;
+    private OrderAdapter postsAdapter;
     private QuestionedPostsAdapter questionedPostsAdapter;
     @Inject
     ServicesRepository postRepository;
@@ -65,51 +65,13 @@ public class ProfilePostsViewModels extends BaseViewModel {
     }
 
     @Bindable
-    public PostsAdapter getPostsAdapter() {
-        return this.postsAdapter == null ? this.postsAdapter = new PostsAdapter() : this.postsAdapter;
+    public OrderAdapter getPostsAdapter() {
+        return this.postsAdapter == null ? this.postsAdapter = new OrderAdapter() : this.postsAdapter;
     }
 
     @Bindable
     public QuestionedPostsAdapter getQuestionedPostsAdapter() {
         return this.questionedPostsAdapter == null ? this.questionedPostsAdapter = new QuestionedPostsAdapter() : this.questionedPostsAdapter;
-    }
-
-    @Bindable
-    public MainData getMainData() {
-        return mainData;
-    }
-
-    @Bindable
-    public void setMainData(MainData mainData) {
-        if (!TextUtils.isEmpty(getPassingObject().getObject()) && getPassingObject().getObject().contains(URLS.QUESTIONED_POSTS)) {
-            getPostsAdapter().isPostShare = 0;
-            if (getQuestionedPostsAdapter().getPostDataList().size() > 0) {
-                getQuestionedPostsAdapter().loadMore(mainData.getPostDataList());
-            } else {
-                getQuestionedPostsAdapter().update(mainData.getPostDataList());
-                notifyChange(BR.questionedPostsAdapter);
-            }
-        } else if (!TextUtils.isEmpty(getPassingObject().getObject()) && getPassingObject().getObject().contains(URLS.COMMENTED_POSTS)) {
-            getPostsAdapter().isPostShare = 0;
-            if (getPostsAdapter().getPostDataList().size() > 0) {
-                getPostsAdapter().loadMore(mainData.getPostDataList());
-            } else {
-                getPostsAdapter().update(mainData.getPostDataList());
-                notifyChange(BR.postsAdapter);
-            }
-        } else {
-            getPostsAdapter().isPostShare = Constants.IS_POST_SHARED;
-            getPostsAdapter().userProfile = UserHelper.getInstance(MyApplication.getInstance()).getUserProfile();
-            if (getPostsAdapter().getPostDataList().size() > 0) {
-                getPostsAdapter().loadMore(mainData.getPostDataList());
-            } else {
-                getPostsAdapter().update(mainData.getPostDataList());
-                notifyChange(BR.postsAdapter);
-            }
-        }
-        searchProgressVisible.set(false);
-        notifyChange(BR.mainData);
-        this.mainData = mainData;
     }
 
     public ServicesRepository getPostRepository() {

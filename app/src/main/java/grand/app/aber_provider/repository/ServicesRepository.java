@@ -13,7 +13,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.home.models.NewPostRequest;
 import grand.app.aber_provider.pages.home.models.NewPostResponse;
-import grand.app.aber_provider.pages.home.models.PostsResponse;
+import grand.app.aber_provider.pages.home.models.HomeResponse;
 import grand.app.aber_provider.pages.home.models.ReactPostRequest;
 import grand.app.aber_provider.pages.home.models.commentsAndReplies.CommentResponse;
 import grand.app.aber_provider.pages.packages.models.PackagesResponse;
@@ -58,9 +58,9 @@ public class ServicesRepository extends BaseRepository {
                 Constants.SUBSCRIPTION, true);
     }
 
-    public Disposable getFollowersPosts(int page, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.FOLLOWERS_POSTS + page, new Object(), PostsResponse.class,
-                Constants.POSTS, showProgress);
+    public Disposable getHome() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME, new Object(), HomeResponse.class,
+                Constants.HOME, true);
     }
 
     public Disposable reActions(int postId, int page, boolean showProgress, String reactType) {
@@ -70,10 +70,10 @@ public class ServicesRepository extends BaseRepository {
 
     public Disposable createPost(NewPostRequest newPostRequest, List<FileObject> fileObjects) {
         if (fileObjects.size() == 0)
-            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CREATE_POST, newPostRequest, NewPostResponse.class,
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.HOME, newPostRequest, NewPostResponse.class,
                     Constants.NEW_POST, false);
         else
-            return connectionHelper.requestApi(URLS.CREATE_POST, newPostRequest, fileObjects, NewPostResponse.class,
+            return connectionHelper.requestApi(URLS.HOME, newPostRequest, fileObjects, NewPostResponse.class,
                     Constants.NEW_POST, false);
     }
 
@@ -102,12 +102,12 @@ public class ServicesRepository extends BaseRepository {
 
     public Disposable postDetails(int postId, int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POST_DETAILS + postId + "?page=" + page, new Object(), PostDetailsResponse.class,
-                Constants.POST_DETAILS, showProgress);
+                Constants.ORDER_DETAILS, showProgress);
     }
 
     public Disposable liveDetails(int postId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LIVE_DETAILS + postId, new Object(), PostDetailsResponse.class,
-                Constants.POST_DETAILS, true);
+                Constants.ORDER_DETAILS, true);
     }
 
     public Disposable deletePost(int postId) {
@@ -155,7 +155,7 @@ public class ServicesRepository extends BaseRepository {
     }
 
     public Disposable search(int page, boolean showProgress, String search, String type) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH_POSTS + type + "&search=" + search + "&page=" + page, new Object(), PostsResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH_POSTS + type + "&search=" + search + "&page=" + page, new Object(), HomeResponse.class,
                 Constants.SEARCH, showProgress);
     }
 
@@ -180,12 +180,12 @@ public class ServicesRepository extends BaseRepository {
     }
 
     public Disposable userProfilePosts(int page, String url, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, url + "&page=" + page, new Object(), PostsResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, url + "&page=" + page, new Object(), HomeResponse.class,
                 Constants.PROFILE_POSTS, showProgress);
     }
 
     public Disposable notAnsweredQuestions(int page, String url, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, url + page, new Object(), PostsResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, url + page, new Object(), HomeResponse.class,
                 Constants.PROFILE_POSTS, showProgress);
     }
 

@@ -13,7 +13,7 @@ import grand.app.aber_provider.BR;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
+import grand.app.aber_provider.pages.home.adapters.OrderAdapter;
 import grand.app.aber_provider.pages.profile.adapters.ReportReasonsAdapter;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
 import grand.app.aber_provider.pages.profile.models.profile.UserProfile;
@@ -26,7 +26,7 @@ import io.reactivex.disposables.CompositeDisposable;
 public class ProfileViewModels extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private PostsAdapter postsAdapter;
+    private OrderAdapter postsAdapter;
     private ReportReasonsAdapter reportReasonsAdapter;
     @Inject
     ServicesRepository postRepository;
@@ -95,8 +95,8 @@ public class ProfileViewModels extends BaseViewModel {
     }
 
     @Bindable
-    public PostsAdapter getPostsAdapter() {
-        return this.postsAdapter == null ? this.postsAdapter = new PostsAdapter() : this.postsAdapter;
+    public OrderAdapter getPostsAdapter() {
+        return this.postsAdapter == null ? this.postsAdapter = new OrderAdapter() : this.postsAdapter;
     }
 
     @Bindable

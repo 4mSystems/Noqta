@@ -16,16 +16,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.ItemColorBinding;
-import grand.app.aber_provider.pages.home.models.PostData;
+import grand.app.aber_provider.pages.home.models.Orders;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
 import grand.app.aber_provider.utils.Constants;
-import grand.app.aber_provider.utils.helper.MovementHelper;
 
 public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPostsAdapter.MenuView> {
-    List<PostData> postDataList;
+    List<Orders> postDataList;
     private Context context;
     public int lastSelected = -1;
     public int lastPosition = -1;
@@ -37,7 +35,7 @@ public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPosts
     }
 
 
-    public List<PostData> getPostDataList() {
+    public List<Orders> getPostDataList() {
         return postDataList;
     }
 
@@ -53,8 +51,7 @@ public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPosts
 
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
-        PostData menuModel = postDataList.get(position);
-        menuModel.setProfile(isProfile);
+        Orders menuModel = postDataList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();
@@ -72,13 +69,13 @@ public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPosts
     }
 
 
-    public void update(List<PostData> dataList) {
+    public void update(List<Orders> dataList) {
         this.postDataList.clear();
         postDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
-    public void loadMore(@NotNull List<PostData> dataList) {
+    public void loadMore(@NotNull List<Orders> dataList) {
         int start = postDataList.size();
         postDataList.addAll(dataList);
         notifyItemRangeInserted(start, dataList.size());

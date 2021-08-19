@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import grand.app.aber_provider.model.base.StatusMessage;
 
-public class PostsResponse extends StatusMessage {
+public class HomeResponse extends StatusMessage {
 
 	@SerializedName("data")
 	private MainData mainData;

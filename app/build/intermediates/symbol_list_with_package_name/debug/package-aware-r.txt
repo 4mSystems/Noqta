@@ -3737,11 +3737,18 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
+id card_about
+id card_contact
 id card_my_wallet
 id card_packages
 id card_personal_info
 id card_profile
 id card_put_balance
+id card_rate
+id card_share
+id card_social
+id card_suggest
+id card_terms
 id center
 id center_horizontal
 id center_vertical
@@ -4270,7 +4277,6 @@ id tv_service_time_value
 id tv_services_name
 id tv_services_name_value
 id tv_take_me
-id tv_terms
 id tv_title
 id tv_wallet
 id tv_wallet_balance
@@ -4284,7 +4290,6 @@ id useLogo
 id user_img
 id user_item_code
 id v1
-id v10
 id v15
 id v16
 id v17
@@ -4450,6 +4455,7 @@ layout item_search
 layout item_service
 layout item_size
 layout item_social
+layout item_social_menu
 layout item_wallet_history
 layout layout_action_bar_back
 layout layout_action_bar_home

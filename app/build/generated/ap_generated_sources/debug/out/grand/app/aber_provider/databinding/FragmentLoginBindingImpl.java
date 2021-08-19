@@ -33,13 +33,13 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback28;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -151,10 +151,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback11 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback14 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback12 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback27 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback29 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback28 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback26 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -353,12 +353,12 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback12);
-            this.loginNoAccount.setOnClickListener(mCallback13);
-            this.loginNoAccountBold.setOnClickListener(mCallback14);
+            this.btnPhone.setOnClickListener(mCallback27);
+            this.loginNoAccount.setOnClickListener(mCallback28);
+            this.loginNoAccountBold.setOnClickListener(mCallback29);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback11);
+            this.tvLoginForget.setOnClickListener(mCallback26);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -371,6 +371,40 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.loginPassword();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -402,40 +436,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
 
 
                     viewmodel.forgetPassword();
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.register();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.loginPassword();
                 }
                 break;
             }

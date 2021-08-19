@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemHomeBindingImpl extends ItemHomeBinding  {
+public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.aber_provider.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,17 +14,13 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_services_name, 1);
-        sViewsWithIds.put(R.id.tv_services_name_value, 2);
-        sViewsWithIds.put(R.id.v_services_name, 3);
-        sViewsWithIds.put(R.id.tv_service_location, 4);
-        sViewsWithIds.put(R.id.tv_service_location_value, 5);
-        sViewsWithIds.put(R.id.v_service_location, 6);
-        sViewsWithIds.put(R.id.tv_client_name, 7);
-        sViewsWithIds.put(R.id.tv_client_name_value, 8);
-        sViewsWithIds.put(R.id.v_client_name, 9);
-        sViewsWithIds.put(R.id.tv_service_time, 10);
-        sViewsWithIds.put(R.id.tv_service_time_value, 11);
+        sViewsWithIds.put(R.id.tv_services_name_value, 5);
+        sViewsWithIds.put(R.id.v_services_name, 6);
+        sViewsWithIds.put(R.id.tv_service_location, 7);
+        sViewsWithIds.put(R.id.v_service_location, 8);
+        sViewsWithIds.put(R.id.tv_client_name, 9);
+        sViewsWithIds.put(R.id.v_client_name, 10);
+        sViewsWithIds.put(R.id.tv_service_time, 11);
         sViewsWithIds.put(R.id.v_service_status, 12);
         sViewsWithIds.put(R.id.tv_service_status, 13);
         sViewsWithIds.put(R.id.tv_service_status_value, 14);
@@ -33,6 +29,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback43;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -42,32 +40,37 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
     }
     private ItemHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[9]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[3]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[7]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[8]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[4]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[5]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[2]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[13]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[14]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[10]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[11]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[4]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[1]
-            , (com.google.android.material.button.MaterialButton) bindings[2]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[5]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[8]
             , (android.view.View) bindings[12]
-            , (android.view.View) bindings[3]
+            , (android.view.View) bindings[6]
             );
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.tvClientNameValue.setTag(null);
+        this.tvServiceLocationValue.setTag(null);
+        this.tvServiceTimeValue.setTag(null);
+        this.tvServicesName.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback43 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -95,7 +98,13 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
     }
 
     public void setItemPostViewModel(@Nullable grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel ItemPostViewModel) {
+        updateRegistration(0, ItemPostViewModel);
         this.mItemPostViewModel = ItemPostViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemPostViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -113,6 +122,12 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.orders) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -123,15 +138,107 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int itemPostViewModelOrdersIsEmergency = 0;
+        grand.app.aber_provider.pages.home.models.Orders itemPostViewModelOrders = null;
+        java.lang.String itemPostViewModelOrdersIsEmergencyInt1TvServiceTimeValueAndroidStringEmergencyServicesItemPostViewModelOrdersScheduledAt = null;
+        grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
+        java.lang.String itemPostViewModelOrdersAddress = null;
+        java.lang.String itemPostViewModelOrdersScheduledAt = null;
+        java.lang.String itemPostViewModelOrdersClientName = null;
+        boolean itemPostViewModelOrdersIsEmergencyInt1 = false;
+        java.lang.String itemPostViewModelOrdersServiceName = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemPostViewModel != null) {
+                    // read itemPostViewModel.orders
+                    itemPostViewModelOrders = itemPostViewModel.getOrders();
+                }
+
+
+                if (itemPostViewModelOrders != null) {
+                    // read itemPostViewModel.orders.is_emergency
+                    itemPostViewModelOrdersIsEmergency = itemPostViewModelOrders.getIs_emergency();
+                    // read itemPostViewModel.orders.address
+                    itemPostViewModelOrdersAddress = itemPostViewModelOrders.getAddress();
+                    // read itemPostViewModel.orders.clientName
+                    itemPostViewModelOrdersClientName = itemPostViewModelOrders.getClientName();
+                    // read itemPostViewModel.orders.serviceName
+                    itemPostViewModelOrdersServiceName = itemPostViewModelOrders.getServiceName();
+                }
+
+
+                // read itemPostViewModel.orders.is_emergency == 1
+                itemPostViewModelOrdersIsEmergencyInt1 = (itemPostViewModelOrdersIsEmergency) == (1);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemPostViewModelOrdersIsEmergencyInt1) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+        }
         // batch finished
+
+        if ((dirtyFlags & 0x8L) != 0) {
+
+                if (itemPostViewModelOrders != null) {
+                    // read itemPostViewModel.orders.scheduledAt
+                    itemPostViewModelOrdersScheduledAt = itemPostViewModelOrders.getScheduledAt();
+                }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read itemPostViewModel.orders.is_emergency == 1 ? @android:string/emergency_services : itemPostViewModel.orders.scheduledAt
+                itemPostViewModelOrdersIsEmergencyInt1TvServiceTimeValueAndroidStringEmergencyServicesItemPostViewModelOrdersScheduledAt = ((itemPostViewModelOrdersIsEmergencyInt1) ? (tvServiceTimeValue.getResources().getString(R.string.emergency_services)) : (itemPostViewModelOrdersScheduledAt));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView0.setOnClickListener(mCallback43);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvClientNameValue, itemPostViewModelOrdersClientName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServiceLocationValue, itemPostViewModelOrdersAddress);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServiceTimeValue, itemPostViewModelOrdersIsEmergencyInt1TvServiceTimeValueAndroidStringEmergencyServicesItemPostViewModelOrdersScheduledAt);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServicesName, itemPostViewModelOrdersServiceName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // itemPostViewModel
+        grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
+        // itemPostViewModel != null
+        boolean itemPostViewModelJavaLangObjectNull = false;
+
+
+
+        itemPostViewModelJavaLangObjectNull = (itemPostViewModel) != (null);
+        if (itemPostViewModelJavaLangObjectNull) {
+
+
+
+
+            itemPostViewModel.itemAction(grand.app.aber_provider.utils.Constants.ORDER_DETAILS);
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemPostViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemPostViewModel.orders
+        flag 2 (0x3L): null
+        flag 3 (0x4L): itemPostViewModel.orders.is_emergency == 1 ? @android:string/emergency_services : itemPostViewModel.orders.scheduledAt
+        flag 4 (0x5L): itemPostViewModel.orders.is_emergency == 1 ? @android:string/emergency_services : itemPostViewModel.orders.scheduledAt
     flag mapping end*/
     //end
 }

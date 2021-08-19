@@ -1,15 +1,13 @@
 package grand.app.aber_provider.pages.home.viewModels;
 
 import androidx.databinding.Bindable;
-import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
-import grand.app.aber_provider.BR;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
+import grand.app.aber_provider.pages.home.adapters.OrderAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
 import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
@@ -18,72 +16,39 @@ public class HomeViewModels extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private PostsAdapter postsAdapter;
+    private OrderAdapter orderAdapter;
     @Inject
-    ServicesRepository postRepository;
-    public ObservableBoolean searchProgressVisible = new ObservableBoolean();
-    public String search;
+    ServicesRepository repository;
     MainData mainData;
 
     @Inject
-    public HomeViewModels(ServicesRepository postRepository) {
-        mainData = new MainData();
-        this.postRepository = postRepository;
+    public HomeViewModels(ServicesRepository repository) {
+        this.repository = repository;
         this.liveData = new MutableLiveData<>();
-        postRepository.setLiveData(liveData);
+        repository.setLiveData(liveData);
     }
 
-    public void posts(int page, boolean showProgress) {
-//        compositeDisposable.add(postRepository.getPackages(page, showProgress));
-    }
-
-
-    public void deletePost() {
-        compositeDisposable.add(postRepository.deletePost(getPostsAdapter().lastSelected));
-    }
-
-    public void hidePost() {
-        compositeDisposable.add(postRepository.hidePost(getPostsAdapter().lastSelected));
-    }
-
-    public void sharePost() {
-        compositeDisposable.add(postRepository.sharePost(getPostsAdapter().lastSelected));
-    }
-
-    public void reactPost(String reactType) {
-        compositeDisposable.add(postRepository.reactPost(getPostsAdapter().lastSelected, reactType));
-    }
-
-
-    public void liveDataActions(String action) {
-        liveData.setValue(new Mutable(action));
-    }
-
-    @Bindable
-    public PostsAdapter getPostsAdapter() {
-        return this.postsAdapter == null ? this.postsAdapter = new PostsAdapter() : this.postsAdapter;
+    public void homeOrders() {
+        compositeDisposable.add(repository.getHome());
     }
 
     @Bindable
     public MainData getMainData() {
-        return mainData;
+        return this.mainData == null ? this.mainData = new MainData() : this.mainData;
     }
 
-    @Bindable
     public void setMainData(MainData mainData) {
-        if (getPostsAdapter().getPostDataList().size() > 0) {
-            getPostsAdapter().loadMore(mainData.getPostDataList());
-        } else {
-            getPostsAdapter().update(mainData.getPostDataList());
-            notifyChange(BR.postsAdapter);
-        }
-        searchProgressVisible.set(false);
-        notifyChange(BR.mainData);
+        getOrderAdapter().update(mainData.getOrdersList());
         this.mainData = mainData;
     }
 
-    public ServicesRepository getPostRepository() {
-        return postRepository;
+    @Bindable
+    public OrderAdapter getOrderAdapter() {
+        return this.orderAdapter == null ? this.orderAdapter = new OrderAdapter() : this.orderAdapter;
+    }
+
+    public ServicesRepository getRepository() {
+        return repository;
     }
 
     protected void unSubscribeFromObservable() {

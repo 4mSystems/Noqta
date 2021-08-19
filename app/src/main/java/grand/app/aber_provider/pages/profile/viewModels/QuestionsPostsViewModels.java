@@ -58,9 +58,9 @@ public class QuestionsPostsViewModels extends BaseViewModel {
     public void setMainData(MainData mainData) {
         getQuestionedPostsAdapter().isProfile = false;
         if (getQuestionedPostsAdapter().getPostDataList().size() > 0) {
-            getQuestionedPostsAdapter().loadMore(mainData.getPostDataList());
+            getQuestionedPostsAdapter().loadMore(mainData.getOrdersList());
         } else {
-            getQuestionedPostsAdapter().update(mainData.getPostDataList());
+            getQuestionedPostsAdapter().update(mainData.getOrdersList());
             notifyChange(BR.questionedPostsAdapter);
         }
         searchProgressVisible.set(false);

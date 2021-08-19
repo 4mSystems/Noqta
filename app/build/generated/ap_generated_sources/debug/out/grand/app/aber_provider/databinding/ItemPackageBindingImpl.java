@@ -24,7 +24,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements grand.
     private final grand.app.aber_provider.customViews.views.CustomTextViewMedium mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback40;
+    private final android.view.View.OnClickListener mCallback58;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements grand.
         this.tvPackageDesc.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -175,7 +175,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements grand.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnSubscribe.setOnClickListener(mCallback40);
+            this.btnSubscribe.setOnClickListener(mCallback58);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

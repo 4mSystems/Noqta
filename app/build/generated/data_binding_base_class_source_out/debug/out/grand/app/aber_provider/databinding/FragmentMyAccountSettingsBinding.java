@@ -18,6 +18,12 @@ import java.lang.Object;
 
 public abstract class FragmentMyAccountSettingsBinding extends ViewDataBinding {
   @NonNull
+  public final CardView cardAbout;
+
+  @NonNull
+  public final CardView cardContact;
+
+  @NonNull
   public final CardView cardMyWallet;
 
   @NonNull
@@ -27,18 +33,41 @@ public abstract class FragmentMyAccountSettingsBinding extends ViewDataBinding {
   public final CardView cardProfile;
 
   @NonNull
+  public final CardView cardRate;
+
+  @NonNull
+  public final CardView cardShare;
+
+  @NonNull
+  public final CardView cardSocial;
+
+  @NonNull
+  public final CardView cardSuggest;
+
+  @NonNull
+  public final CardView cardTerms;
+
+  @NonNull
   public final AppCompatImageView curve;
 
   @Bindable
   protected MyAccountSettingsViewModel mViewmodel;
 
   protected FragmentMyAccountSettingsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, CardView cardMyWallet, CardView cardPackages, CardView cardProfile,
-      AppCompatImageView curve) {
+      int _localFieldCount, CardView cardAbout, CardView cardContact, CardView cardMyWallet,
+      CardView cardPackages, CardView cardProfile, CardView cardRate, CardView cardShare,
+      CardView cardSocial, CardView cardSuggest, CardView cardTerms, AppCompatImageView curve) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.cardAbout = cardAbout;
+    this.cardContact = cardContact;
     this.cardMyWallet = cardMyWallet;
     this.cardPackages = cardPackages;
     this.cardProfile = cardProfile;
+    this.cardRate = cardRate;
+    this.cardShare = cardShare;
+    this.cardSocial = cardSocial;
+    this.cardSuggest = cardSuggest;
+    this.cardTerms = cardTerms;
     this.curve = curve;
   }
 

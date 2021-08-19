@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import grand.app.aber_provider.BR;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.adapters.PostsAdapter;
+import grand.app.aber_provider.pages.home.adapters.OrderAdapter;
 import grand.app.aber_provider.pages.home.models.MainData;
 import grand.app.aber_provider.repository.ServicesRepository;
 import io.reactivex.disposables.CompositeDisposable;
@@ -16,7 +16,7 @@ public class MyOrdersViewModels extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private PostsAdapter postsAdapter;
+    private OrderAdapter postsAdapter;
     @Inject
     ServicesRepository postRepository;
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
@@ -34,27 +34,10 @@ public class MyOrdersViewModels extends BaseViewModel {
 //        compositeDisposable.add(postRepository.getPackages(page, showProgress));
     }
     @Bindable
-    public PostsAdapter getPostsAdapter() {
-        return this.postsAdapter == null ? this.postsAdapter = new PostsAdapter() : this.postsAdapter;
+    public OrderAdapter getPostsAdapter() {
+        return this.postsAdapter == null ? this.postsAdapter = new OrderAdapter() : this.postsAdapter;
     }
 
-    @Bindable
-    public MainData getMainData() {
-        return mainData;
-    }
-
-    @Bindable
-    public void setMainData(MainData mainData) {
-        if (getPostsAdapter().getPostDataList().size() > 0) {
-            getPostsAdapter().loadMore(mainData.getPostDataList());
-        } else {
-            getPostsAdapter().update(mainData.getPostDataList());
-            notifyChange(BR.postsAdapter);
-        }
-        searchProgressVisible.set(false);
-        notifyChange(BR.mainData);
-        this.mainData = mainData;
-    }
 
     public ServicesRepository getPostRepository() {
         return postRepository;

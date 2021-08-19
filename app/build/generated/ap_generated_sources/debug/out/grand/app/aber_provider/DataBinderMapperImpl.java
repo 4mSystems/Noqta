@@ -50,6 +50,7 @@ import grand.app.aber_provider.databinding.ItemSearchBindingImpl;
 import grand.app.aber_provider.databinding.ItemServiceBindingImpl;
 import grand.app.aber_provider.databinding.ItemSizeBindingImpl;
 import grand.app.aber_provider.databinding.ItemSocialBindingImpl;
+import grand.app.aber_provider.databinding.ItemSocialMenuBindingImpl;
 import grand.app.aber_provider.databinding.ItemWalletHistoryBindingImpl;
 import grand.app.aber_provider.databinding.LayoutActionBarBackBindingImpl;
 import grand.app.aber_provider.databinding.LayoutActionBarHomeBindingImpl;
@@ -156,21 +157,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMSOCIAL = 44;
 
-  private static final int LAYOUT_ITEMWALLETHISTORY = 45;
+  private static final int LAYOUT_ITEMSOCIALMENU = 45;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 46;
+  private static final int LAYOUT_ITEMWALLETHISTORY = 46;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 47;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 47;
 
-  private static final int LAYOUT_LAYOUTGRAND = 48;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 48;
 
-  private static final int LAYOUT_MENU = 49;
+  private static final int LAYOUT_LAYOUTGRAND = 49;
 
-  private static final int LAYOUT_NOTIFYITEM = 50;
+  private static final int LAYOUT_MENU = 50;
 
-  private static final int LAYOUT_OPTIONDIALOG = 51;
+  private static final int LAYOUT_NOTIFYITEM = 51;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(51);
+  private static final int LAYOUT_OPTIONDIALOG = 52;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(52);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -217,6 +220,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_service, LAYOUT_ITEMSERVICE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_size, LAYOUT_ITEMSIZE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_social, LAYOUT_ITEMSOCIAL);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_social_menu, LAYOUT_ITEMSOCIALMENU);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_wallet_history, LAYOUT_ITEMWALLETHISTORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
@@ -493,6 +497,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_social is invalid. Received: " + tag);
       }
+      case  LAYOUT_ITEMSOCIALMENU: {
+        if ("layout/item_social_menu_0".equals(tag)) {
+          return new ItemSocialMenuBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_social_menu is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMWALLETHISTORY: {
         if ("layout/item_wallet_history_0".equals(tag)) {
           return new ItemWalletHistoryBindingImpl(component, view);
@@ -523,12 +533,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for menu is invalid. Received: " + tag);
       }
-      case  LAYOUT_NOTIFYITEM: {
-        if ("layout/notify_item_0".equals(tag)) {
-          return new NotifyItemBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for notify_item is invalid. Received: " + tag);
-      }
     }
     return null;
   }
@@ -536,6 +540,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_NOTIFYITEM: {
+        if ("layout/notify_item_0".equals(tag)) {
+          return new NotifyItemBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for notify_item is invalid. Received: " + tag);
+      }
       case  LAYOUT_OPTIONDIALOG: {
         if ("layout/option_dialog_0".equals(tag)) {
           return new OptionDialogBindingImpl(component, view);
@@ -608,7 +618,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(45);
+    static final SparseArray<String> sKeys = new SparseArray<String>(48);
 
     static {
       sKeys.put(0, "_all");
@@ -639,28 +649,31 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(25, "notifyViewModel");
       sKeys.put(26, "onBoardAdapter");
       sKeys.put(27, "onBoardViewModels");
-      sKeys.put(28, "orderImages");
-      sKeys.put(29, "packagesAdapter");
-      sKeys.put(30, "packagesData");
-      sKeys.put(31, "passingObject");
-      sKeys.put(32, "peopleData");
-      sKeys.put(33, "postData");
-      sKeys.put(34, "postsAdapter");
-      sKeys.put(35, "questionedPostsAdapter");
-      sKeys.put(36, "raiseWalletRequest");
-      sKeys.put(37, "reactType");
-      sKeys.put(38, "reportData");
-      sKeys.put(39, "reportReasonsAdapter");
-      sKeys.put(40, "userDocuments");
-      sKeys.put(41, "userProfile");
-      sKeys.put(42, "viewModel");
-      sKeys.put(43, "viewmodel");
-      sKeys.put(44, "walletHistoryItem");
+      sKeys.put(28, "orderAdapter");
+      sKeys.put(29, "orderImages");
+      sKeys.put(30, "orders");
+      sKeys.put(31, "packagesAdapter");
+      sKeys.put(32, "packagesData");
+      sKeys.put(33, "passingObject");
+      sKeys.put(34, "peopleData");
+      sKeys.put(35, "postsAdapter");
+      sKeys.put(36, "questionedPostsAdapter");
+      sKeys.put(37, "raiseWalletRequest");
+      sKeys.put(38, "reactType");
+      sKeys.put(39, "reportData");
+      sKeys.put(40, "reportReasonsAdapter");
+      sKeys.put(41, "socialAdapter");
+      sKeys.put(42, "socialMediaData");
+      sKeys.put(43, "userDocuments");
+      sKeys.put(44, "userProfile");
+      sKeys.put(45, "viewModel");
+      sKeys.put(46, "viewmodel");
+      sKeys.put(47, "walletHistoryItem");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(51);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(52);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.aber_provider.R.layout.activity_base);
@@ -707,6 +720,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_service_0", grand.app.aber_provider.R.layout.item_service);
       sKeys.put("layout/item_size_0", grand.app.aber_provider.R.layout.item_size);
       sKeys.put("layout/item_social_0", grand.app.aber_provider.R.layout.item_social);
+      sKeys.put("layout/item_social_menu_0", grand.app.aber_provider.R.layout.item_social_menu);
       sKeys.put("layout/item_wallet_history_0", grand.app.aber_provider.R.layout.item_wallet_history);
       sKeys.put("layout/layout_action_bar_back_0", grand.app.aber_provider.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", grand.app.aber_provider.R.layout.layout_action_bar_home);

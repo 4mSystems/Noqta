@@ -1,5 +1,6 @@
 package grand.app.aber_provider.pages.home.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,31 +20,24 @@ import java.util.List;
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.ItemHomeBinding;
-import grand.app.aber_provider.pages.auth.models.UserData;
-import grand.app.aber_provider.pages.home.models.PostData;
+import grand.app.aber_provider.pages.home.models.Orders;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
-import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.utils.Constants;
-import grand.app.aber_provider.utils.PopUp.PopUp;
 import grand.app.aber_provider.utils.helper.MovementHelper;
-import grand.app.aber_provider.utils.resources.ResourceManager;
-import grand.app.aber_provider.utils.session.UserHelper;
 
-public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.MenuView> {
-    List<PostData> postDataList;
+public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuView> {
+    List<Orders> postDataList;
     private Context context;
     public int lastSelected = -1;
     public int lastPosition = -1;
-    public int isPostShare = 0;
-    public UserData userProfile;
     public MutableLiveData<Object> liveData = new MutableLiveData<>();
 
-    public PostsAdapter() {
+    public OrderAdapter() {
         this.postDataList = new ArrayList<>();
     }
 
 
-    public List<PostData> getPostDataList() {
+    public List<Orders> getPostDataList() {
         return postDataList;
     }
 
@@ -58,17 +52,16 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.MenuView> {
 
 
     @Override
-    public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
-        PostData menuModel = postDataList.get(position);
-        menuModel.setShare(isPostShare);
-        menuModel.setUserProfile(userProfile);
+    public void onBindViewHolder(@NonNull final MenuView holder, @SuppressLint("RecyclerView") final int position) {
+        Orders menuModel = postDataList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();
             this.lastPosition = position;
-//            if (o.equals(Constants.POST_DETAILS)) {
-//                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getTitle(), ProductDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
-//            } else if (o.equals(Constants.LIVE_TIME)) {
+            if (o.equals(Constants.ORDER_DETAILS)) {
+//                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getServiceName(), Detai.class.getName(), Constants.POST_DETAILS_REQUEST);
+            }
+//            else if (o.equals(Constants.LIVE_TIME)) {
 //                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(menuModel.getId()), menuModel.getTitle(), LiveDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
 //            } else if (o.equals(Constants.PROFILE)) {
 //                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getUser().getId()), null, MyServicesOrdersFragment.class.getName(), null);
@@ -83,37 +76,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.MenuView> {
         holder.setViewModel(itemMenuViewModel);
     }
 
-    private void showPostOption(MenuView holder) {
-        List<PopUp> popUpList = new ArrayList<>();
-        if (getPostDataList().get(lastPosition).getShare() == 0 && UserHelper.getInstance(context).getUserData().getId() == getPostDataList().get(lastPosition).getUser().getId() && getPostDataList().get(lastPosition).getLiveStream() == 0) {
-            popUpList.add(new PopUp(ResourceManager.getString(R.string.edit), 1));
-        }
-        if (UserHelper.getInstance(context).getUserData().getId() == getPostDataList().get(lastPosition).getUser().getId())
-            popUpList.add(new PopUp(ResourceManager.getString(R.string.remove), 2));
-        if (getPostDataList().get(lastPosition).getUser().getId() != UserHelper.getInstance(context).getUserData().getId())
-            popUpList.add(new PopUp(ResourceManager.getString(R.string.hide), 3));
-//        PopUpMenuHelper.showPostOptionPopUp(context, holder.itemMenuBinding.icClosePage, popUpList).
-//                setOnMenuItemClickListener(item -> {
-//                    if (popUpList.get(item.getItemId()).getId() == 2)
-//                        liveData.setValue(Constants.DELETE);
-//                    else if (popUpList.get(item.getItemId()).getId() == 3)
-//                        liveData.setValue(Constants.HIDE_POST);
-//                    else
-//                        MovementHelper.startActivityForResultWithBundle(context, new PassingObject(getPostDataList().get(lastPosition)), null, NewPostFragment.class.getName(), Constants.NEW_POST_REQUEST);
-//                    return false;
-//                });
-    }
-
-    public void update(List<PostData> dataList) {
+    public void update(List<Orders> dataList) {
         this.postDataList.clear();
         postDataList.addAll(dataList);
         notifyDataSetChanged();
-    }
-
-    public void loadMore(@NotNull List<PostData> dataList) {
-        int start = postDataList.size();
-        postDataList.addAll(dataList);
-        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

@@ -339,7 +339,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private HomeViewModels injectHomeViewModels(HomeViewModels instance) {
-    HomeViewModels_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
+    HomeViewModels_MembersInjector.injectRepository(instance, servicesRepositoryProvider.get());
     return instance;
   }
 

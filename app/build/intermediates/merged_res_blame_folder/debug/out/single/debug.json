@@ -740,6 +740,10 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\whats.png"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_social_menu.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_social_menu.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_about.xml.flat",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_about.xml"
     },

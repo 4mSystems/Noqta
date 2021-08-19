@@ -39,13 +39,13 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback31;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -280,10 +280,10 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback16 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback17 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback18 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback30 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback31 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback33 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -585,15 +585,15 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback18);
+            this.appCompatButtonNext.setOnClickListener(mCallback33);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
-            this.mboundView13.setOnClickListener(mCallback17);
-            this.mboundView2.setOnClickListener(mCallback16);
+            this.mboundView13.setOnClickListener(mCallback32);
+            this.mboundView2.setOnClickListener(mCallback31);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback15);
+            this.userImg.setOnClickListener(mCallback30);
         }
         if ((dirtyFlags & 0x2aL) != 0) {
             // api target 1
@@ -662,23 +662,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.imageSubmit();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -693,6 +676,23 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
 
 
                     viewmodel.changePasword();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.imageSubmit();
                 }
                 break;
             }

@@ -11,16 +11,12 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.progressindicator.CircularProgressIndicator;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
-  @NonNull
-  public final CircularProgressIndicator progress;
-
   @NonNull
   public final RecyclerView rcPosts;
 
@@ -31,9 +27,8 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   protected HomeViewModels mViewModel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CircularProgressIndicator progress, RecyclerView rcPosts, ConstraintLayout searchContainer) {
+      RecyclerView rcPosts, ConstraintLayout searchContainer) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.progress = progress;
     this.rcPosts = rcPosts;
     this.searchContainer = searchContainer;
   }

@@ -57,37 +57,43 @@ public class BR {
 
   public static final int onBoardViewModels = 27;
 
-  public static final int orderImages = 28;
+  public static final int orderAdapter = 28;
 
-  public static final int packagesAdapter = 29;
+  public static final int orderImages = 29;
 
-  public static final int packagesData = 30;
+  public static final int orders = 30;
 
-  public static final int passingObject = 31;
+  public static final int packagesAdapter = 31;
 
-  public static final int peopleData = 32;
+  public static final int packagesData = 32;
 
-  public static final int postData = 33;
+  public static final int passingObject = 33;
 
-  public static final int postsAdapter = 34;
+  public static final int peopleData = 34;
 
-  public static final int questionedPostsAdapter = 35;
+  public static final int postsAdapter = 35;
 
-  public static final int raiseWalletRequest = 36;
+  public static final int questionedPostsAdapter = 36;
 
-  public static final int reactType = 37;
+  public static final int raiseWalletRequest = 37;
 
-  public static final int reportData = 38;
+  public static final int reactType = 38;
 
-  public static final int reportReasonsAdapter = 39;
+  public static final int reportData = 39;
 
-  public static final int userDocuments = 40;
+  public static final int reportReasonsAdapter = 40;
 
-  public static final int userProfile = 41;
+  public static final int socialAdapter = 41;
 
-  public static final int viewModel = 42;
+  public static final int socialMediaData = 42;
 
-  public static final int viewmodel = 43;
+  public static final int userDocuments = 43;
 
-  public static final int walletHistoryItem = 44;
+  public static final int userProfile = 44;
+
+  public static final int viewModel = 45;
+
+  public static final int viewmodel = 46;
+
+  public static final int walletHistoryItem = 47;
 }
