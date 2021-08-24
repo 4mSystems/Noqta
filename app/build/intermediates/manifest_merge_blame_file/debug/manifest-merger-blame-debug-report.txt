@@ -136,7 +136,7 @@
 70            android:label="@string/app_name"
 70-->F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:51:13-45
 71            android:theme="@style/com_facebook_activity_theme" />
-71-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f2dabba6bdd26395700a0b8a151efa4d\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
+71-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
 72        <activity
 72-->F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:52:9-63:20
 73            android:name="com.facebook.CustomTabActivity"
@@ -161,7 +161,7 @@
 81-->F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:61:23-72
 82            </intent-filter>
 83            <intent-filter>
-83-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f2dabba6bdd26395700a0b8a151efa4d\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
+83-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
 84                <action android:name="android.intent.action.VIEW" />
 84-->F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:56:17-69
 84-->F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:56:25-66
@@ -244,8 +244,8 @@
 126-->[com.google.android.libraries.places:places:2.4.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5ad7e324c969702931f4662c07c2a9f8\jetified-places-2.4.0\AndroidManifest.xml:19:13-55
 127        </activity>
 128        <activity android:name="com.facebook.CustomTabMainActivity" /> <!-- Needs to be explicitly declared on P+ -->
-128-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f2dabba6bdd26395700a0b8a151efa4d\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:9-71
-128-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f2dabba6bdd26395700a0b8a151efa4d\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:19-68
+128-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:9-71
+128-->[com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:19-68
 129        <uses-library
 129-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
 130            android:name="org.apache.http.legacy"
@@ -522,25 +522,25 @@
 285         a completely different provider.
 286        -->
 287        <provider
-287-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:39:9-42:40
+287-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:39:9-42:40
 288            android:name="com.facebook.internal.FacebookInitProvider"
-288-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:40:13-70
+288-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:40:13-70
 289            android:authorities="grand.app.aber_provider.FacebookInitProvider"
-289-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:41:13-72
+289-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:41:13-72
 290            android:exported="false" />
-290-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:42:13-37
+290-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:42:13-37
 291
 292        <receiver
-292-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:44:9-50:20
+292-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:44:9-50:20
 293            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
-293-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:45:13-86
+293-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:45:13-86
 294            android:exported="false" >
-294-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:46:13-37
+294-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:46:13-37
 295            <intent-filter>
-295-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:47:13-49:29
+295-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:47:13-49:29
 296                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
-296-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:17-95
-296-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fb3f8a7c94cadc5e83ffeff83654e408\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
+296-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:17-95
+296-->[com.facebook.android:facebook-core:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fcdd542a8d3d32c5a5625db4f6fdb3b5\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
 297            </intent-filter>
 298        </receiver>
 299

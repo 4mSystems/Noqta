@@ -15,13 +15,9 @@ import grand.app.aber_provider.pages.home.models.NewPostRequest;
 import grand.app.aber_provider.pages.home.models.NewPostResponse;
 import grand.app.aber_provider.pages.home.models.HomeResponse;
 import grand.app.aber_provider.pages.home.models.ReactPostRequest;
-import grand.app.aber_provider.pages.home.models.commentsAndReplies.CommentResponse;
 import grand.app.aber_provider.pages.packages.models.PackagesResponse;
 import grand.app.aber_provider.pages.packages.models.RequestToSend;
-import grand.app.aber_provider.pages.postDetails.models.CreateCommentRequest;
-import grand.app.aber_provider.pages.postDetails.models.PostDetailsResponse;
-import grand.app.aber_provider.pages.postDetails.models.RepliesResponse;
-import grand.app.aber_provider.pages.postDetails.models.postReacts.PostReactsResponse;
+import grand.app.aber_provider.pages.postDetails.models.OrderDetailsResponse;
 import grand.app.aber_provider.pages.profile.models.FollowersResponse;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
 import grand.app.aber_provider.pages.profile.models.profile.UserProfileResponse;
@@ -63,10 +59,6 @@ public class ServicesRepository extends BaseRepository {
                 Constants.HOME, true);
     }
 
-    public Disposable reActions(int postId, int page, boolean showProgress, String reactType) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POST_REACTS + postId + "&type=" + reactType + "&page=" + page, new Object(), PostReactsResponse.class,
-                Constants.POST_REACTS, showProgress);
-    }
 
     public Disposable createPost(NewPostRequest newPostRequest, List<FileObject> fileObjects) {
         if (fileObjects.size() == 0)
@@ -100,13 +92,13 @@ public class ServicesRepository extends BaseRepository {
                     Constants.NEW_POST, false);
     }
 
-    public Disposable postDetails(int postId, int page, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POST_DETAILS + postId + "?page=" + page, new Object(), PostDetailsResponse.class,
-                Constants.ORDER_DETAILS, showProgress);
+    public Disposable orderDetails(int orderId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POST_DETAILS + orderId, new Object(), OrderDetailsResponse.class,
+                Constants.ORDER_DETAILS, true);
     }
 
     public Disposable liveDetails(int postId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LIVE_DETAILS + postId, new Object(), PostDetailsResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LIVE_DETAILS + postId, new Object(), OrderDetailsResponse.class,
                 Constants.ORDER_DETAILS, true);
     }
 
@@ -134,26 +126,6 @@ public class ServicesRepository extends BaseRepository {
         return connectionHelper.requestApiBackground(Constants.POST_REQUEST, URLS.REACT_POST, new ReactPostRequest(postId, reactType));
     }
 
-    public Disposable comment(CreateCommentRequest commentRequest, List<FileObject> fileObjects) {
-        if (commentRequest.getCommentId() == 0) {
-            if (fileObjects.size() > 0)
-                return connectionHelper.requestApi(URLS.MAKE_COMMENT, commentRequest, fileObjects, CommentResponse.class,
-                        Constants.COMMENT, false);
-            else
-                return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.MAKE_COMMENT, commentRequest, CommentResponse.class,
-                        Constants.COMMENT, false);
-        } else {
-            if (fileObjects.size() > 0)
-                return connectionHelper.requestApi(URLS.EDIT_COMMENT + commentRequest.getCommentId(), commentRequest, fileObjects, CommentResponse.class,
-                        Constants.EDIT_COMMENT, false);
-            else
-                return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_COMMENT + commentRequest.getCommentId(), commentRequest, CommentResponse.class,
-                        Constants.EDIT_COMMENT, false);
-        }
-
-
-    }
-
     public Disposable search(int page, boolean showProgress, String search, String type) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SEARCH_POSTS + type + "&search=" + search + "&page=" + page, new Object(), HomeResponse.class,
                 Constants.SEARCH, showProgress);
@@ -167,11 +139,6 @@ public class ServicesRepository extends BaseRepository {
     public Disposable deletePostComment(int commentId) {
         return connectionHelper.requestApi(Constants.DELETE_REQUEST, URLS.DELETE_COMMENT + commentId, new Object(), StatusMessage.class,
                 Constants.DELETE_COMMENT, true);
-    }
-
-    public Disposable replies(int commentId, int page, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COMMENT_REPLIES + commentId + "&page=" + page, new Object(), RepliesResponse.class,
-                Constants.REPLIES, showProgress);
     }
 
     public Disposable userProfile(int postId) {

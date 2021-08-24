@@ -4,12 +4,12 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_register_documents.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\notify_item.xml",
-        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\notify_item.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_part_service.xml",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_part_service.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\notify_item.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\notify_item.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_size.xml",
@@ -42,6 +42,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_about.xml",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_contact.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_contact.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\change_dialog.xml",
@@ -128,8 +132,8 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_confirm_code.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_part.xml",
-        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_part.xml"
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_order_details.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_order_details.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_edit_profile.xml",

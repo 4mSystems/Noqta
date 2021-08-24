@@ -44,16 +44,14 @@
                 android:layout_marginEnd="@dimen/dp15w"
                 android:hint="@string/register_name"
                 android:textAlignment="viewStart"
-                android:textColorHint="@color/overlayBackground"
+                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/text_input_layout_stroke_color_medium"
                 app:error="@{viewmodel.contactUsRequest.nameError}"
                 app:helperTextTextColor="@color/colordark"
-                app:hintTextColor="@color/medium_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:startIconDrawable="@drawable/ic_person"
-                app:startIconTint="@color/colorPrimary">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
@@ -61,8 +59,8 @@
                     android:inputType="text"
                     android:text="@={viewmodel.contactUsRequest.name}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/overlayBackground" />
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -75,11 +73,11 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp12w"
                 android:hint="@string/email"
-                android:textColorHint="@color/overlayBackground"
+                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/text_input_layout_stroke_color_medium"
                 app:error="@{viewmodel.contactUsRequest.emailError}"
                 app:helperTextTextColor="@color/black"
-                app:hintTextColor="@color/medium_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_name">
@@ -90,8 +88,8 @@
                     android:inputType="textEmailAddress"
                     android:text="@={viewmodel.contactUsRequest.email}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/overlayBackground" />
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -103,8 +101,7 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp15w"
                 android:hint="@string/register_phone"
-                android:textColorHint="@color/overlayBackground"
-
+                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/text_input_layout_stroke_color"
                 app:error="@{viewmodel.contactUsRequest.phoneError}"
                 app:helperTextTextColor="@color/black"
@@ -118,8 +115,8 @@
                     android:inputType="phone"
                     android:text="@={viewmodel.contactUsRequest.phone}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/overlayBackground"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textDirection="ltr" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +129,7 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp12w"
                 android:hint="@string/message_hint"
-                android:textColorHint="@color/overlayBackground"
+                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/text_input_layout_stroke_color"
                 app:error="@{viewmodel.contactUsRequest.noteError}"
                 app:helperTextTextColor="@color/black"
@@ -147,9 +144,31 @@
                     android:inputType="textMultiLine"
                     android:text="@={viewmodel.contactUsRequest.message}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/overlayBackground" />
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rc_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.CONTACT)?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/input_contact_message">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp4h"
+                    app:adapter="@{viewmodel.contactsAdapter}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}" />
+            </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButtonNext"
@@ -168,7 +187,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_contact_message" />
+                app:layout_constraintTop_toBottomOf="@id/rc_contact" />
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"

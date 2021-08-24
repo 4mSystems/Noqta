@@ -22,6 +22,7 @@ import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.ItemHomeBinding;
 import grand.app.aber_provider.pages.home.models.Orders;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
+import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 
@@ -59,17 +60,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuView> {
             this.lastSelected = menuModel.getId();
             this.lastPosition = position;
             if (o.equals(Constants.ORDER_DETAILS)) {
-//                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getServiceName(), Detai.class.getName(), Constants.POST_DETAILS_REQUEST);
+                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(menuModel.getId()), menuModel.getServiceName(), OrderDetailsFragment.class.getName(), Constants.ORDER_DETAILS_REQUEST);
+            } else if (o.equals(Constants.DELETE)) {
+                liveData.setValue(o);
             }
-//            else if (o.equals(Constants.LIVE_TIME)) {
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(menuModel.getId()), menuModel.getTitle(), LiveDetailsFragment.class.getName(), Constants.POST_DETAILS_REQUEST);
-//            } else if (o.equals(Constants.PROFILE)) {
-//                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getUser().getId()), null, MyServicesOrdersFragment.class.getName(), null);
-//            } else if (o.equals(Constants.DELETE)) {
-//                showPostOption(holder);
-//            } else if (o.equals(Constants.SHARE_POST)) {
-//                liveData.setValue(o);
-//            }
 
         });
 

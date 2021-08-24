@@ -1,7 +1,6 @@
 package grand.app.aber_provider.pages.home;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +42,6 @@ public class HomeFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) requireContext(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            Log.e("setEvent", "setEvent: " + mutable.message);
             if (Constants.HOME.equals(((Mutable) o).message)) {
                 viewModel.setMainData(((HomeResponse) (mutable).object).getMainData());
                 mainActivity().navigationDrawerView.menuViewModel.setMainData(viewModel.getMainData());

@@ -26,6 +26,7 @@ import grand.app.aber_provider.databinding.FragmentLoginBindingImpl;
 import grand.app.aber_provider.databinding.FragmentMyAccountSettingsBindingImpl;
 import grand.app.aber_provider.databinding.FragmentNotificationsBindingImpl;
 import grand.app.aber_provider.databinding.FragmentOnboardBindingImpl;
+import grand.app.aber_provider.databinding.FragmentOrderDetailsBindingImpl;
 import grand.app.aber_provider.databinding.FragmentPackagesBindingImpl;
 import grand.app.aber_provider.databinding.FragmentRegisterBindingImpl;
 import grand.app.aber_provider.databinding.FragmentRegisterDocumentsBindingImpl;
@@ -35,6 +36,7 @@ import grand.app.aber_provider.databinding.FragmentSocialMediaBindingImpl;
 import grand.app.aber_provider.databinding.FragmentSplashBindingImpl;
 import grand.app.aber_provider.databinding.FragmentTermsBindingImpl;
 import grand.app.aber_provider.databinding.ItemColorBindingImpl;
+import grand.app.aber_provider.databinding.ItemContactBindingImpl;
 import grand.app.aber_provider.databinding.ItemCountryBindingImpl;
 import grand.app.aber_provider.databinding.ItemExtraServicesBindingImpl;
 import grand.app.aber_provider.databinding.ItemFavoriteBindingImpl;
@@ -109,71 +111,75 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTONBOARD = 20;
 
-  private static final int LAYOUT_FRAGMENTPACKAGES = 21;
+  private static final int LAYOUT_FRAGMENTORDERDETAILS = 21;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 22;
+  private static final int LAYOUT_FRAGMENTPACKAGES = 22;
 
-  private static final int LAYOUT_FRAGMENTREGISTERDOCUMENTS = 23;
+  private static final int LAYOUT_FRAGMENTREGISTER = 23;
 
-  private static final int LAYOUT_FRAGMENTREGISTERSERVICES = 24;
+  private static final int LAYOUT_FRAGMENTREGISTERDOCUMENTS = 24;
 
-  private static final int LAYOUT_FRAGMENTSERVICESORDERS = 25;
+  private static final int LAYOUT_FRAGMENTREGISTERSERVICES = 25;
 
-  private static final int LAYOUT_FRAGMENTSOCIALMEDIA = 26;
+  private static final int LAYOUT_FRAGMENTSERVICESORDERS = 26;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 27;
+  private static final int LAYOUT_FRAGMENTSOCIALMEDIA = 27;
 
-  private static final int LAYOUT_FRAGMENTTERMS = 28;
+  private static final int LAYOUT_FRAGMENTSPLASH = 28;
 
-  private static final int LAYOUT_ITEMCOLOR = 29;
+  private static final int LAYOUT_FRAGMENTTERMS = 29;
 
-  private static final int LAYOUT_ITEMCOUNTRY = 30;
+  private static final int LAYOUT_ITEMCOLOR = 30;
 
-  private static final int LAYOUT_ITEMEXTRASERVICES = 31;
+  private static final int LAYOUT_ITEMCONTACT = 31;
 
-  private static final int LAYOUT_ITEMFAVORITE = 32;
+  private static final int LAYOUT_ITEMCOUNTRY = 32;
 
-  private static final int LAYOUT_ITEMHOME = 33;
+  private static final int LAYOUT_ITEMEXTRASERVICES = 33;
 
-  private static final int LAYOUT_ITEMORDERCONFIRMED = 34;
+  private static final int LAYOUT_ITEMFAVORITE = 34;
 
-  private static final int LAYOUT_ITEMORDERDETAIL = 35;
+  private static final int LAYOUT_ITEMHOME = 35;
 
-  private static final int LAYOUT_ITEMORDERSERVICE = 36;
+  private static final int LAYOUT_ITEMORDERCONFIRMED = 36;
 
-  private static final int LAYOUT_ITEMPACKAGE = 37;
+  private static final int LAYOUT_ITEMORDERDETAIL = 37;
 
-  private static final int LAYOUT_ITEMPARTSERVICE = 38;
+  private static final int LAYOUT_ITEMORDERSERVICE = 38;
 
-  private static final int LAYOUT_ITEMREQUIREDSERVICE = 39;
+  private static final int LAYOUT_ITEMPACKAGE = 39;
 
-  private static final int LAYOUT_ITEMSALEDESC = 40;
+  private static final int LAYOUT_ITEMPARTSERVICE = 40;
 
-  private static final int LAYOUT_ITEMSEARCH = 41;
+  private static final int LAYOUT_ITEMREQUIREDSERVICE = 41;
 
-  private static final int LAYOUT_ITEMSERVICE = 42;
+  private static final int LAYOUT_ITEMSALEDESC = 42;
 
-  private static final int LAYOUT_ITEMSIZE = 43;
+  private static final int LAYOUT_ITEMSEARCH = 43;
 
-  private static final int LAYOUT_ITEMSOCIAL = 44;
+  private static final int LAYOUT_ITEMSERVICE = 44;
 
-  private static final int LAYOUT_ITEMSOCIALMENU = 45;
+  private static final int LAYOUT_ITEMSIZE = 45;
 
-  private static final int LAYOUT_ITEMWALLETHISTORY = 46;
+  private static final int LAYOUT_ITEMSOCIAL = 46;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 47;
+  private static final int LAYOUT_ITEMSOCIALMENU = 47;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 48;
+  private static final int LAYOUT_ITEMWALLETHISTORY = 48;
 
-  private static final int LAYOUT_LAYOUTGRAND = 49;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 49;
 
-  private static final int LAYOUT_MENU = 50;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 50;
 
-  private static final int LAYOUT_NOTIFYITEM = 51;
+  private static final int LAYOUT_LAYOUTGRAND = 51;
 
-  private static final int LAYOUT_OPTIONDIALOG = 52;
+  private static final int LAYOUT_MENU = 52;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(52);
+  private static final int LAYOUT_NOTIFYITEM = 53;
+
+  private static final int LAYOUT_OPTIONDIALOG = 54;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(54);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -196,6 +202,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_my_account_settings, LAYOUT_FRAGMENTMYACCOUNTSETTINGS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_notifications, LAYOUT_FRAGMENTNOTIFICATIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_onboard, LAYOUT_FRAGMENTONBOARD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_order_details, LAYOUT_FRAGMENTORDERDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_packages, LAYOUT_FRAGMENTPACKAGES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_register, LAYOUT_FRAGMENTREGISTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_register_documents, LAYOUT_FRAGMENTREGISTERDOCUMENTS);
@@ -205,6 +212,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_terms, LAYOUT_FRAGMENTTERMS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_color, LAYOUT_ITEMCOLOR);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_contact, LAYOUT_ITEMCONTACT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_country, LAYOUT_ITEMCOUNTRY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_extra_services, LAYOUT_ITEMEXTRASERVICES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_favorite, LAYOUT_ITEMFAVORITE);
@@ -353,6 +361,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for fragment_onboard is invalid. Received: " + tag);
       }
+      case  LAYOUT_FRAGMENTORDERDETAILS: {
+        if ("layout/fragment_order_details_0".equals(tag)) {
+          return new FragmentOrderDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_order_details is invalid. Received: " + tag);
+      }
       case  LAYOUT_FRAGMENTPACKAGES: {
         if ("layout/fragment_packages_0".equals(tag)) {
           return new FragmentPackagesBindingImpl(component, view);
@@ -406,6 +420,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new ItemColorBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for item_color is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCONTACT: {
+        if ("layout/item_contact_0".equals(tag)) {
+          return new ItemContactBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_contact is invalid. Received: " + tag);
       }
       case  LAYOUT_ITEMCOUNTRY: {
         if ("layout/item_country_0".equals(tag)) {
@@ -521,6 +541,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_action_bar_home is invalid. Received: " + tag);
       }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
       case  LAYOUT_LAYOUTGRAND: {
         if ("layout/layout_grand_0".equals(tag)) {
           return new LayoutGrandBindingImpl(component, view);
@@ -533,13 +560,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for menu is invalid. Received: " + tag);
       }
-    }
-    return null;
-  }
-
-  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
-      View view, int internalId, Object tag) {
-    switch(internalId) {
       case  LAYOUT_NOTIFYITEM: {
         if ("layout/notify_item_0".equals(tag)) {
           return new NotifyItemBindingImpl(component, view);
@@ -618,62 +638,58 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(48);
+    static final SparseArray<String> sKeys = new SparseArray<String>(44);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
       sKeys.put(3, "comments");
-      sKeys.put(4, "commentsAdapter");
-      sKeys.put(5, "countriesAdapter");
-      sKeys.put(6, "countriesData");
-      sKeys.put(7, "createCommentRequest");
-      sKeys.put(8, "fileObject");
-      sKeys.put(9, "followersAdapter");
-      sKeys.put(10, "followersResponse");
-      sKeys.put(11, "historyWalletData");
-      sKeys.put(12, "itemOrderViewModel");
-      sKeys.put(13, "itemPostViewModel");
-      sKeys.put(14, "itemViewModel");
-      sKeys.put(15, "itemWalletViewModel");
-      sKeys.put(16, "mainComment");
-      sKeys.put(17, "mainData");
-      sKeys.put(18, "mainFollowersData");
-      sKeys.put(19, "mapAddressViewModel");
-      sKeys.put(20, "menuViewModel");
-      sKeys.put(21, "message");
-      sKeys.put(22, "notificationsAdapter");
-      sKeys.put(23, "notificationsData");
-      sKeys.put(24, "notifyItemViewModels");
-      sKeys.put(25, "notifyViewModel");
-      sKeys.put(26, "onBoardAdapter");
-      sKeys.put(27, "onBoardViewModels");
-      sKeys.put(28, "orderAdapter");
-      sKeys.put(29, "orderImages");
-      sKeys.put(30, "orders");
-      sKeys.put(31, "packagesAdapter");
-      sKeys.put(32, "packagesData");
-      sKeys.put(33, "passingObject");
-      sKeys.put(34, "peopleData");
-      sKeys.put(35, "postsAdapter");
-      sKeys.put(36, "questionedPostsAdapter");
-      sKeys.put(37, "raiseWalletRequest");
-      sKeys.put(38, "reactType");
-      sKeys.put(39, "reportData");
-      sKeys.put(40, "reportReasonsAdapter");
-      sKeys.put(41, "socialAdapter");
-      sKeys.put(42, "socialMediaData");
-      sKeys.put(43, "userDocuments");
-      sKeys.put(44, "userProfile");
-      sKeys.put(45, "viewModel");
-      sKeys.put(46, "viewmodel");
-      sKeys.put(47, "walletHistoryItem");
+      sKeys.put(4, "contact");
+      sKeys.put(5, "contactsAdapter");
+      sKeys.put(6, "countriesAdapter");
+      sKeys.put(7, "countriesData");
+      sKeys.put(8, "followersAdapter");
+      sKeys.put(9, "historyWalletData");
+      sKeys.put(10, "itemOrderViewModel");
+      sKeys.put(11, "itemPostViewModel");
+      sKeys.put(12, "itemViewModel");
+      sKeys.put(13, "itemWalletViewModel");
+      sKeys.put(14, "mainData");
+      sKeys.put(15, "mainFollowersData");
+      sKeys.put(16, "mapAddressViewModel");
+      sKeys.put(17, "menuViewModel");
+      sKeys.put(18, "message");
+      sKeys.put(19, "notificationsAdapter");
+      sKeys.put(20, "notificationsData");
+      sKeys.put(21, "notifyItemViewModels");
+      sKeys.put(22, "notifyViewModel");
+      sKeys.put(23, "onBoardAdapter");
+      sKeys.put(24, "onBoardViewModels");
+      sKeys.put(25, "orderAdapter");
+      sKeys.put(26, "orderDetailsMain");
+      sKeys.put(27, "orders");
+      sKeys.put(28, "packagesAdapter");
+      sKeys.put(29, "packagesData");
+      sKeys.put(30, "passingObject");
+      sKeys.put(31, "peopleData");
+      sKeys.put(32, "postsAdapter");
+      sKeys.put(33, "questionedPostsAdapter");
+      sKeys.put(34, "raiseWalletRequest");
+      sKeys.put(35, "reportData");
+      sKeys.put(36, "reportReasonsAdapter");
+      sKeys.put(37, "socialAdapter");
+      sKeys.put(38, "socialMediaData");
+      sKeys.put(39, "userDocuments");
+      sKeys.put(40, "userProfile");
+      sKeys.put(41, "viewModel");
+      sKeys.put(42, "viewmodel");
+      sKeys.put(43, "walletHistoryItem");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(52);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(54);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.aber_provider.R.layout.activity_base);
@@ -696,6 +712,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_my_account_settings_0", grand.app.aber_provider.R.layout.fragment_my_account_settings);
       sKeys.put("layout/fragment_notifications_0", grand.app.aber_provider.R.layout.fragment_notifications);
       sKeys.put("layout/fragment_onboard_0", grand.app.aber_provider.R.layout.fragment_onboard);
+      sKeys.put("layout/fragment_order_details_0", grand.app.aber_provider.R.layout.fragment_order_details);
       sKeys.put("layout/fragment_packages_0", grand.app.aber_provider.R.layout.fragment_packages);
       sKeys.put("layout/fragment_register_0", grand.app.aber_provider.R.layout.fragment_register);
       sKeys.put("layout/fragment_register_documents_0", grand.app.aber_provider.R.layout.fragment_register_documents);
@@ -705,6 +722,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_splash_0", grand.app.aber_provider.R.layout.fragment_splash);
       sKeys.put("layout/fragment_terms_0", grand.app.aber_provider.R.layout.fragment_terms);
       sKeys.put("layout/item_color_0", grand.app.aber_provider.R.layout.item_color);
+      sKeys.put("layout/item_contact_0", grand.app.aber_provider.R.layout.item_contact);
       sKeys.put("layout/item_country_0", grand.app.aber_provider.R.layout.item_country);
       sKeys.put("layout/item_extra_services_0", grand.app.aber_provider.R.layout.item_extra_services);
       sKeys.put("layout/item_favorite_0", grand.app.aber_provider.R.layout.item_favorite);

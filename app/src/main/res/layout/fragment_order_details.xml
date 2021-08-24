@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="grand.app.aber_provider.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150h"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150h"
+                android:layout_marginTop="@dimen/dp100h"
+                android:background="@drawable/back_curve_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/card_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp48h"
+                    android:layout_marginBottom="@dimen/dp8h"
+                    android:background="@drawable/corner_view_gray_borde">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp18h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.total).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_home_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp30h"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:text="@{viewModel.orderDetailsMain.user.name}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_home_job"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:layout_marginBottom="@dimen/dp8h"
+                        android:drawableStart="@drawable/ic_detail_location"
+                        android:drawablePadding="@dimen/dp4w"
+                        android:text="@{viewModel.orderDetailsMain.address}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_item" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_img"
+                    android:layout_width="@dimen/dp80w"
+                    android:layout_height="@dimen/dp80h"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:src="@drawable/splash"
+                    app:civ_border_color="@color/background_gray"
+                    app:civ_border_width="6dp"
+                    app:imageCommentUrl="@{viewModel.orderDetailsMain.user.image}" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12h"
+                android:layout_marginTop="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/card_time"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_personal_info">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/item_img"
+                        android:layout_width="@dimen/dp50w"
+                        android:layout_height="@dimen/dp50h"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:src="@drawable/ic_winch"
+                        app:imageUrl="@{viewModel.orderDetailsMain.mainService.image}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewModel.orderDetailsMain.mainService.name}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/item_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_service_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:text="@string/service_type"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="@id/card_service"
+                app:layout_constraintStart_toStartOf="@id/card_service"
+                app:layout_constraintTop_toBottomOf="@id/card_service" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card_service"
+                app:layout_constraintTop_toBottomOf="@id/card_personal_info">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/item_time_warning"
+                        android:layout_width="@dimen/dp50w"
+                        android:layout_height="@dimen/dp50h"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:src="@drawable/ic_delivery_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewModel.orderDetailsMain.isEmergency==0?@string/emergency_services:viewModel.orderDetailsMain.scheduledAt}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/item_time_warning" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_delivery_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:text="@string/delivery_time"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="@id/card_time"
+                app:layout_constraintStart_toStartOf="@id/card_time"
+                app:layout_constraintTop_toBottomOf="@id/card_time" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_delivery_time,tv_service_type" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_main_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/br">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/required_service_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/required_service_type"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/required_service_type" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_car_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_main_service">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/car_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/car_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/car_image_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8h"
+                        android:src="@drawable/ic_car_desc"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/car_desc" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/car_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6w"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/car_types"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toStartOf="@+id/car_type_value"
+                        app:layout_constraintStart_toEndOf="@id/car_image_desc"
+                        app:layout_constraintTop_toTopOf="@id/car_image_desc" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/car_cat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6w"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/car_categories"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toTopOf="@id/ca_year"
+                        app:layout_constraintEnd_toStartOf="@+id/car_cat_value"
+                        app:layout_constraintStart_toEndOf="@id/car_image_desc"
+                        app:layout_constraintTop_toBottomOf="@id/car_type" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/ca_year"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/making_year"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="@id/car_image_desc"
+                        app:layout_constraintEnd_toStartOf="@id/ca_year_value"
+                        app:layout_constraintStart_toEndOf="@id/car_image_desc" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/car_type_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/car_types"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/car_image_desc" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/car_cat_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/car_categories"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toTopOf="@id/ca_year_value"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/car_type_value" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/ca_year_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:text="@string/making_year"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="@id/car_image_desc"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_other_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_car_desc">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/other_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/other_service"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/other_service" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_extra_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_other_service">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/extra_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/extra_services"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/extra_service" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_extra_service">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/extra_services"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_services_cost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@string/service_cost"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toStartOf="@id/tv_total_services_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_invoice" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_total_services_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.subtotal).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_invoice" />
+
+                    <View
+                        android:id="@+id/v_services_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total_services_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_services_extra_cost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@string/service_additional_total"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toStartOf="@id/tv_services_extra_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_services_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_services_extra_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.extraFees).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_services_price" />
+
+                    <View
+                        android:id="@+id/v_services__extra_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp10h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/tv_services_extra_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_delivery_cost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@string/services_moving_price"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toStartOf="@id/tv_delivery_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_services__extra_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_delivery_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.deliveryFees).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_services__extra_price" />
+
+                    <View
+                        android:id="@+id/v_delivery_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp10h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/tv_delivery_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_eme_cost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@string/emergency_services_cost"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toStartOf="@id/tv_eme_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_delivery_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_eme_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.emergencyCost).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_delivery_price" />
+
+                    <View
+                        android:id="@+id/v_eme_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp10h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/tv_eme_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@string/total_cost"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tv_total_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_eme_price" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:text="@{String.valueOf(viewModel.orderDetailsMain.total).concat(` `).concat(viewModel.currency)}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_eme_price" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_battery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_invoice">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_battery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/battery_image"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150h"
+                        android:layout_margin="@dimen/dp10h"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_battery"
+                        app:riv_corner_radius="@dimen/dp8h" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_battery">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_tier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/tier_image"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150h"
+                        android:layout_margin="@dimen/dp10h"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tier"
+                        app:riv_corner_radius="@dimen/dp8h" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_tier">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_service_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/service_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_service_desc_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12h"
+                        android:text="@string/service_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/medium_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_service_desc" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/location_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150h"
+                        android:layout_margin="@dimen/dp10h"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_service_desc_value"
+                        app:riv_corner_radius="@dimen/dp8h" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginBottom="@dimen/dp10h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/accept"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_reject"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_desc" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:layout_marginBottom="@dimen/dp10h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/reject"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colordark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_accept"
+                app:layout_constraintTop_toBottomOf="@id/card_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

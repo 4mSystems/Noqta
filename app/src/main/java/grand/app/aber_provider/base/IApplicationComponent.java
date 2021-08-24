@@ -21,11 +21,12 @@ import grand.app.aber_provider.pages.packages.PackagesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment;
 import grand.app.aber_provider.pages.onBoard.OnBoardFragment;
+import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
 import grand.app.aber_provider.pages.settings.LangFragment;
-import grand.app.aber_provider.pages.settings.SocialMedia;
+import grand.app.aber_provider.pages.settings.SocialMediaFragment;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
 import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.pages.splash.SplashFragment;
@@ -61,6 +62,8 @@ public interface IApplicationComponent {
 
     void inject(HomeFragment normalOrdersFragment);
 
+    void inject(OrderDetailsFragment detailsFragment);
+
     void inject(NotificationsFragment notificationsFragment);
 
     void inject(MyAccountSettingsFragment myAccountSettingsFragment);
@@ -73,7 +76,7 @@ public interface IApplicationComponent {
 
     void inject(LangFragment langFragment);
 
-    void inject(SocialMedia moreFragment);
+    void inject(SocialMediaFragment moreFragment);
 
     void inject(CountriesFragment instructorFragment);
 

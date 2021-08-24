@@ -25,7 +25,7 @@
     <string name="password">كلمة المرور</string>
     <string name="login">تسجيل الدخول</string>
     <string name="phone">من فضلك ادخل رقم الجوال او البريد الاكتروني</string>
-    <string name="invalidEmail">بريد الكترونى خاطئ,  Taa@example.com</string>
+    <string name="invalidEmail">بريد الكترونى خاطئ, ِAber@example.com</string>
     <string name="invalidPassword">كلمة المرور ضعيفه على الاقل 8 حروف وارقام</string>
     <string name="invalidPhone">Invalid phone</string>
     <string name="fieldRequired">هذا الحقل مطلوب</string>
@@ -133,7 +133,7 @@
     <string name="order_shipped">تم الشحن</string>
     <string name="my_wallet">محفظتى</string>
     <string name="new_live_title">أضف عنوان للبث</string>
-    <string name="new_live_desc">أضف وصف للبث</string>
+    <string name="service_desc">تفاصيل أكثر عن الخدمة</string>
     <string name="market_delegate_count">عدد المناديب</string>
     <string name="be_delegate">سجلني كمندوب</string>
     <string name="section">القسم التعليمي </string>
@@ -189,7 +189,7 @@
     <string name="market_order_done_processing">تمت المعالجة</string>
     <string name="follow_on_way">في الطريق إلي تسليم الشحنة</string>
     <string name="follow_provider">تتبع مقدم الخدمة</string>
-    <string name="my_address">عناويني</string>
+    <string name="subscrubtions">تجديد الاشتراك</string>
     <string name="on_way_warning">يجب تغير الحاله فى الطريق اولا</string>
     <string name="finish_order_dialog_title">كود تأكيد التوصيل</string>
     <string name="finish_order_dialog_hint">أدخل الكود المرسل الى العميل</string>
@@ -242,7 +242,7 @@
     <string name="english">English</string>
     <string name="arabic">عربي</string>
     <string name="change_lang_btn">تغيير</string>
-    <string name="required_service_type">نوع الخدمات المطلوبة</string>
+    <string name="required_service_type"> الخدمات المطلوبة</string>
     <string name="order_status">حالة الطلب</string>
     <string name="total">الإجمالي</string>
     <string name="pay">دفع</string>
@@ -306,11 +306,11 @@
     <string name="change_password_successfully">تم تغير كلمة المرور بنجاح</string>
     <string name="empty_data">لا توجد بيانات</string>
     <string name="new_post_desc_hint">المواصفات</string>
-    <string name="car_categories">فئة المركبة</string>
+    <string name="car_categories">فئة السيارة</string>
     <string name="skip">تخطي</string>
     <string name="agree_to">أوافق علي سياسة الخصوصية والشروط والاحكام</string>
     <string name="service_info_hint">تفاصيل أكثر عن الخدمة</string>
-    <string name="car_types">نوع المركبة</string>
+    <string name="car_types">نوع السيارة</string>
     <string name="confirm_order">تأكيد الطلب</string>
     <string name="choosen_order">الخدمات المختارة</string>
     <string name="add_place">إضافة عنوان</string>
@@ -319,4 +319,17 @@
     <string name="select_cities">اختر المدينة</string>
     <string name="package_title">اشتراكات مقدم الخدمة</string>
     <string name="more">المزيد</string>
+    <string name="view_details">عرض التفاصيل</string>
+    <string name="service_type">نوع الخدمة</string>
+    <string name="delivery_time">وقت التنفيذ</string>
+    <string name="car_desc">مواصفات السيارة</string>
+    <string name="other_service">مواصفات أخري</string>
+    <string name="extra_services">خدمات أضافية</string>
+    <string name="service_additional_total">تكلفة الخدمات الأضافية</string>
+    <string name="services_moving_price">تكلفة الانتقال</string>
+    <string name="emergency_services_cost">تكلفة الخدمة الطارئة</string>
+    <string name="battery_image">صورة البطارية المرفقة</string>
+    <string name="tier_image">صورة الإطار المرفقة</string>
+    <string name="accept">قبول الطلب</string>
+    <string name="reject">رفض الطلب</string>
 </resources>

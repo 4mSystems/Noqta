@@ -10,7 +10,9 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.notifications.models.NotificationsResponse;
 import grand.app.aber_provider.pages.settings.models.AboutResponse;
+import grand.app.aber_provider.pages.settings.models.ContactResponse;
 import grand.app.aber_provider.pages.settings.models.ContactUsRequest;
+import grand.app.aber_provider.pages.settings.models.SocialResponse;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -53,5 +55,13 @@ public class SettingsRepository extends BaseRepository {
                 Constants.CONTACT, false);
     }
 
+    public Disposable getContact() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_CONTACT, new Object(), ContactResponse.class,
+                Constants.GET_CONTACT, true);
+    }
 
+    public Disposable getSocial() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_SOCIAL, new Object(), SocialResponse.class,
+                Constants.SOCIAL, true);
+    }
 }

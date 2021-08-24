@@ -14,10 +14,12 @@ public class ItemExtraServicesBindingImpl extends ItemExtraServicesBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_extra, 1);
-        sViewsWithIds.put(R.id.ic_switch, 2);
+        sViewsWithIds.put(R.id.tv_name, 1);
+        sViewsWithIds.put(R.id.price, 2);
     }
     // views
+    @NonNull
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
@@ -28,11 +30,11 @@ public class ItemExtraServicesBindingImpl extends ItemExtraServicesBinding  {
     }
     private ItemExtraServicesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.switchmaterial.SwitchMaterial) bindings[2]
-            , (com.google.android.material.card.MaterialCardView) bindings[0]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[2]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[1]
             );
-        this.infoCard.setTag(null);
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

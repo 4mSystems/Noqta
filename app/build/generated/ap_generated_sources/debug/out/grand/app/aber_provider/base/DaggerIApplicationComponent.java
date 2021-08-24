@@ -70,6 +70,11 @@ import grand.app.aber_provider.pages.packages.PackagesFragment_MembersInjector;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels_Factory;
 import grand.app.aber_provider.pages.packages.viewModels.PackagesViewModels_MembersInjector;
+import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment;
+import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment_MembersInjector;
+import grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel;
+import grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel_Factory;
+import grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel_MembersInjector;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment_MembersInjector;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel;
@@ -86,8 +91,8 @@ import grand.app.aber_provider.pages.settings.LangFragment;
 import grand.app.aber_provider.pages.settings.LangFragment_MembersInjector;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment_MembersInjector;
-import grand.app.aber_provider.pages.settings.SocialMedia;
-import grand.app.aber_provider.pages.settings.SocialMedia_MembersInjector;
+import grand.app.aber_provider.pages.settings.SocialMediaFragment;
+import grand.app.aber_provider.pages.settings.SocialMediaFragment_MembersInjector;
 import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.pages.settings.TermsFragment_MembersInjector;
 import grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel;
@@ -166,6 +171,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private RegisterViewModel registerViewModel() {
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
+  private OrderDetailsViewModel orderDetailsViewModel() {
+    return injectOrderDetailsViewModel(OrderDetailsViewModel_Factory.newInstance(servicesRepositoryProvider.get()));
   }
 
   private NotificationsViewModels notificationsViewModels() {
@@ -274,6 +283,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
+  public void inject(OrderDetailsFragment detailsFragment) {
+    injectOrderDetailsFragment(detailsFragment);
+  }
+
+  @Override
   public void inject(NotificationsFragment notificationsFragment) {
     injectNotificationsFragment(notificationsFragment);
   }
@@ -304,8 +318,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
-  public void inject(SocialMedia moreFragment) {
-    injectSocialMedia(moreFragment);
+  public void inject(SocialMediaFragment moreFragment) {
+    injectSocialMediaFragment(moreFragment);
   }
 
   @Override
@@ -435,6 +449,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private OrderDetailsViewModel injectOrderDetailsViewModel(OrderDetailsViewModel instance) {
+    OrderDetailsViewModel_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
+    return instance;
+  }
+
+  private OrderDetailsFragment injectOrderDetailsFragment(OrderDetailsFragment instance) {
+    OrderDetailsFragment_MembersInjector.injectViewModel(instance, orderDetailsViewModel());
+    return instance;
+  }
+
   private NotificationsViewModels injectNotificationsViewModels(NotificationsViewModels instance) {
     NotificationsViewModels_MembersInjector.injectSettingsRepository(instance, settingsRepositoryProvider.get());
     return instance;
@@ -493,8 +517,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private SocialMedia injectSocialMedia(SocialMedia instance) {
-    SocialMedia_MembersInjector.injectViewModel(instance, myAccountSettingsViewModel());
+  private SocialMediaFragment injectSocialMediaFragment(SocialMediaFragment instance) {
+    SocialMediaFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

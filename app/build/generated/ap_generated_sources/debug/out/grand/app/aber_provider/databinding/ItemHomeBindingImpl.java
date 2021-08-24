@@ -14,56 +14,63 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_services_name_value, 5);
-        sViewsWithIds.put(R.id.v_services_name, 6);
-        sViewsWithIds.put(R.id.tv_service_location, 7);
-        sViewsWithIds.put(R.id.v_service_location, 8);
-        sViewsWithIds.put(R.id.tv_client_name, 9);
-        sViewsWithIds.put(R.id.v_client_name, 10);
-        sViewsWithIds.put(R.id.tv_service_time, 11);
-        sViewsWithIds.put(R.id.v_service_status, 12);
-        sViewsWithIds.put(R.id.tv_service_status, 13);
-        sViewsWithIds.put(R.id.tv_service_status_value, 14);
+        sViewsWithIds.put(R.id.tv_services_name_value, 6);
+        sViewsWithIds.put(R.id.v_services_name, 7);
+        sViewsWithIds.put(R.id.tv_service_location, 8);
+        sViewsWithIds.put(R.id.v_service_location, 9);
+        sViewsWithIds.put(R.id.tv_client_name, 10);
+        sViewsWithIds.put(R.id.v_client_name, 11);
+        sViewsWithIds.put(R.id.tv_service_time, 12);
+        sViewsWithIds.put(R.id.v_service_status, 13);
+        sViewsWithIds.put(R.id.tv_service_status, 14);
+        sViewsWithIds.put(R.id.tv_service_status_value, 15);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
+    @NonNull
+    private final grand.app.aber_provider.customViews.views.CustomTextViewMedium mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback52;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private ItemHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[9]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[10]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[3]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[7]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[8]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[2]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[13]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[14]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[11]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[15]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[12]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[4]
             , (grand.app.aber_provider.customViews.views.CustomTextViewRegular) bindings[1]
-            , (com.google.android.material.button.MaterialButton) bindings[5]
-            , (android.view.View) bindings[10]
-            , (android.view.View) bindings[8]
-            , (android.view.View) bindings[12]
-            , (android.view.View) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[9]
+            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[7]
             );
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView5 = (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5];
+        this.mboundView5.setTag(null);
         this.tvClientNameValue.setTag(null);
         this.tvServiceLocationValue.setTag(null);
         this.tvServiceTimeValue.setTag(null);
         this.tvServicesName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback52 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback53 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -200,7 +207,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback43);
+            this.mboundView0.setOnClickListener(mCallback52);
+            this.mboundView5.setOnClickListener(mCallback53);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -214,21 +222,45 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // itemPostViewModel
-        grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
-        // itemPostViewModel != null
-        boolean itemPostViewModelJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // itemPostViewModel
+                grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
+                // itemPostViewModel != null
+                boolean itemPostViewModelJavaLangObjectNull = false;
 
 
 
-        itemPostViewModelJavaLangObjectNull = (itemPostViewModel) != (null);
-        if (itemPostViewModelJavaLangObjectNull) {
+                itemPostViewModelJavaLangObjectNull = (itemPostViewModel) != (null);
+                if (itemPostViewModelJavaLangObjectNull) {
 
 
 
 
-            itemPostViewModel.itemAction(grand.app.aber_provider.utils.Constants.ORDER_DETAILS);
+                    itemPostViewModel.itemAction(grand.app.aber_provider.utils.Constants.ORDER_DETAILS);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemPostViewModel
+                grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
+                // itemPostViewModel != null
+                boolean itemPostViewModelJavaLangObjectNull = false;
+
+
+
+                itemPostViewModelJavaLangObjectNull = (itemPostViewModel) != (null);
+                if (itemPostViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemPostViewModel.itemAction(grand.app.aber_provider.utils.Constants.ORDER_DETAILS);
+                }
+                break;
+            }
         }
     }
     // dirty flag

@@ -15,46 +15,38 @@
             type="grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel" />
     </data>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/info_card"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp4h"
-        app:cardCornerRadius="@dimen/dp8h"
-        app:cardElevation="4dp"
-        app:strokeColor="@color/colorPrimaryOp"
-        app:strokeWidth="1dp">
+        android:layout_marginTop="@dimen/dp8h"
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp6h"
+            android:drawableStart="@drawable/ic_circle"
+            android:drawablePadding="@dimen/dp4w"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/medium_color"
+            app:layout_constraintEnd_toStartOf="@id/price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--        android:text="@{itemViewModel.extra.name}"-->
 
-            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
-                android:id="@+id/tv_extra"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8h"
-                android:layout_marginEnd="@dimen/dp8h"
-                android:layout_marginBottom="@dimen/dp8h"
-                android:text="هل تريد غسل الموتور ؟"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colordark"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/ic_switch"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/ic_switch" />
+        <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp6h"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--        android:text="@{itemViewModel.extra.price.concat(` `).concat(itemViewModel.extra.currency)}"-->
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/ic_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp8h"
-                android:layout_marginEnd="@dimen/dp14w"
-                android:layout_marginBottom="@dimen/dp8h"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

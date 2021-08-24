@@ -14,7 +14,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.curve, 22);
+        sViewsWithIds.put(R.id.curve, 23);
     }
     // views
     @NonNull
@@ -32,9 +32,11 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     @NonNull
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView2;
     @NonNull
-    private final androidx.cardview.widget.CardView mboundView20;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView20;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView21;
+    private final androidx.cardview.widget.CardView mboundView21;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView22;
     @NonNull
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView4;
     @NonNull
@@ -42,6 +44,8 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     @NonNull
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView8;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
     private final android.view.View.OnClickListener mCallback17;
     @Nullable
@@ -69,6 +73,8 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
     @Nullable
+    private final android.view.View.OnClickListener mCallback26;
+    @Nullable
     private final android.view.View.OnClickListener mCallback12;
     @Nullable
     private final android.view.View.OnClickListener mCallback24;
@@ -87,7 +93,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
     // Inverse Binding Event Handlers
 
     public FragmentMyAccountSettingsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
     }
     private FragmentMyAccountSettingsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -101,7 +107,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
             , (androidx.cardview.widget.CardView) bindings[9]
             , (androidx.cardview.widget.CardView) bindings[7]
             , (androidx.cardview.widget.CardView) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[22]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[23]
             );
         this.cardAbout.setTag(null);
         this.cardContact.setTag(null);
@@ -127,10 +133,12 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
         this.mboundView18.setTag(null);
         this.mboundView2 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2];
         this.mboundView2.setTag(null);
-        this.mboundView20 = (androidx.cardview.widget.CardView) bindings[20];
+        this.mboundView20 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[20];
         this.mboundView20.setTag(null);
-        this.mboundView21 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[21];
+        this.mboundView21 = (androidx.cardview.widget.CardView) bindings[21];
         this.mboundView21.setTag(null);
+        this.mboundView22 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[22];
+        this.mboundView22.setTag(null);
         this.mboundView4 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[4];
         this.mboundView4.setTag(null);
         this.mboundView6 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6];
@@ -139,6 +147,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
         this.mboundView8.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback27 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 22);
         mCallback17 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 12);
         mCallback25 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 20);
         mCallback15 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 10);
@@ -152,6 +161,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
         mCallback20 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 15);
         mCallback16 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 11);
         mCallback14 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 9);
+        mCallback26 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 21);
         mCallback12 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 7);
         mCallback24 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 19);
         mCallback10 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
@@ -293,6 +303,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
             this.cardAbout.setOnClickListener(mCallback6);
             this.cardContact.setOnClickListener(mCallback10);
             this.cardMyWallet.setOnClickListener(mCallback22);
+            this.cardPackages.setOnClickListener(mCallback24);
             this.cardProfile.setOnClickListener(mCallback20);
             this.cardRate.setOnClickListener(mCallback16);
             this.cardShare.setOnClickListener(mCallback18);
@@ -305,8 +316,9 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
             this.mboundView16.setOnClickListener(mCallback21);
             this.mboundView18.setOnClickListener(mCallback23);
             this.mboundView2.setOnClickListener(mCallback7);
-            this.mboundView20.setOnClickListener(mCallback24);
-            this.mboundView21.setOnClickListener(mCallback25);
+            this.mboundView20.setOnClickListener(mCallback25);
+            this.mboundView21.setOnClickListener(mCallback26);
+            this.mboundView22.setOnClickListener(mCallback27);
             this.mboundView4.setOnClickListener(mCallback9);
             this.mboundView6.setOnClickListener(mCallback11);
             this.mboundView8.setOnClickListener(mCallback13);
@@ -324,13 +336,32 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
             this.cardSocial.setVisibility(viewmodelPassingObjectObjectEqualsConstantsMOREViewVISIBLEViewGONE);
             this.cardSuggest.setVisibility(viewmodelPassingObjectObjectEqualsConstantsMOREViewVISIBLEViewGONE);
             this.cardTerms.setVisibility(viewmodelPassingObjectObjectEqualsConstantsMOREViewVISIBLEViewGONE);
-            this.mboundView20.setVisibility(viewmodelPassingObjectObjectEqualsConstantsMENUACCOUNTViewVISIBLEViewGONE);
+            this.mboundView21.setVisibility(viewmodelPassingObjectObjectEqualsConstantsMENUACCOUNTViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 22: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
+                }
+                break;
+            }
             case 12: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -365,7 +396,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SUBSCRIPTION);
                 }
                 break;
             }
@@ -384,7 +415,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SOCIAL);
                 }
                 break;
             }
@@ -422,7 +453,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.COMPLAINTS);
                 }
                 break;
             }
@@ -441,7 +472,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.PROFILE);
                 }
                 break;
             }
@@ -460,7 +491,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.CONTACT);
                 }
                 break;
             }
@@ -517,7 +548,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.ABOUT);
                 }
                 break;
             }
@@ -536,7 +567,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.PROFILE);
                 }
                 break;
             }
@@ -574,7 +605,26 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.CONTACT);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SOCIAL);
+                }
+                break;
+            }
+            case 21: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
                 }
                 break;
             }
@@ -593,7 +643,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.CONTACT);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.COMPLAINTS);
                 }
                 break;
             }
@@ -612,7 +662,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SHOW_LOGOUT_WARNING);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.SUBSCRIPTION);
                 }
                 break;
             }
@@ -669,7 +719,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.TERMS);
                 }
                 break;
             }
@@ -707,7 +757,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.QUESTIONS);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.ABOUT);
                 }
                 break;
             }

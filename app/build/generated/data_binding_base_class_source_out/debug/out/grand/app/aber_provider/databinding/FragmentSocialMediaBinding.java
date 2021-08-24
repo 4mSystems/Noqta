@@ -11,7 +11,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.aber_provider.R;
-import grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel;
+import grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -23,7 +23,7 @@ public abstract class FragmentSocialMediaBinding extends ViewDataBinding {
   public final AppCompatImageView imgRegister;
 
   @Bindable
-  protected MyAccountSettingsViewModel mViewmodel;
+  protected SettingsViewModel mViewmodel;
 
   protected FragmentSocialMediaBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView curve, AppCompatImageView imgRegister) {
@@ -32,10 +32,10 @@ public abstract class FragmentSocialMediaBinding extends ViewDataBinding {
     this.imgRegister = imgRegister;
   }
 
-  public abstract void setViewmodel(@Nullable MyAccountSettingsViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);
 
   @Nullable
-  public MyAccountSettingsViewModel getViewmodel() {
+  public SettingsViewModel getViewmodel() {
     return mViewmodel;
   }
 

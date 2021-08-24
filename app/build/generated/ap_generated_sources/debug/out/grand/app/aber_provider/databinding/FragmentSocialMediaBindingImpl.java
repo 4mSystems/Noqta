@@ -14,27 +14,31 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.curve, 1);
-        sViewsWithIds.put(R.id.imgRegister, 2);
+        sViewsWithIds.put(R.id.curve, 2);
+        sViewsWithIds.put(R.id.imgRegister, 3);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentSocialMediaBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentSocialMediaBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
+        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -43,7 +47,7 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -62,7 +66,7 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel) variable);
+            setViewmodel((grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -70,22 +74,34 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel Viewmodel) {
+    public void setViewmodel(@Nullable grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel) object, fieldId);
+                return onChangeViewmodel((grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.socialAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -99,7 +115,24 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.aber_provider.pages.settings.adapters.SocialAdapter viewmodelSocialAdapter = null;
+        grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.socialAdapter
+                    viewmodelSocialAdapter = viewmodel.getSocialAdapter();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            grand.app.aber_provider.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelSocialAdapter, "1", "1");
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -107,7 +140,8 @@ public class FragmentSocialMediaBindingImpl extends FragmentSocialMediaBinding  
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.socialAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

@@ -26,7 +26,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
     private final androidx.appcompat.widget.AppCompatEditText mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback67;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -135,7 +135,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback57 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback67 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -419,7 +419,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback57);
+            this.appCompatButtonNext.setOnClickListener(mCallback67);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }

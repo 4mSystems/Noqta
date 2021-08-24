@@ -35,8 +35,6 @@ grand/app/aber_provider/model/RateRequest.java
  grand.app.aber_provider.model.RateRequest
 grand/app/aber_provider/databinding/ItemRequiredServiceBinding.java
  grand.app.aber_provider.databinding.ItemRequiredServiceBinding
-grand/app/aber_provider/pages/postDetails/models/MaxOrderOffer.java
- grand.app.aber_provider.pages.postDetails.models.MaxOrderOffer
 grand/app/aber_provider/pages/settings/viewModels/MyAccountSettingsViewModel.java
  grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel
 grand/app/aber_provider/pages/auth/models/ForgetPasswordRequest.java
@@ -51,13 +49,14 @@ grand/app/aber_provider/customViews/grandDialog/GrandImageDialog.java
 grand/app/aber_provider/pages/packages/adapters/PackagesAdapter.java
  grand.app.aber_provider.pages.packages.adapters.PackagesAdapter
  grand.app.aber_provider.pages.packages.adapters.PackagesAdapter$MenuView
-grand/app/aber_provider/pages/postDetails/models/postReacts/PostReactsResponse.java
- grand.app.aber_provider.pages.postDetails.models.postReacts.PostReactsResponse
 grand/app/aber_provider/utils/locations/GPSLocation.java
  grand.app.aber_provider.utils.locations.GPSLocation
  grand.app.aber_provider.utils.locations.GPSLocation$1
 grand/app/aber_provider/pages/appWallet/viewModels/ItemAppWalletHistoryViewModel.java
  grand.app.aber_provider.pages.appWallet.viewModels.ItemAppWalletHistoryViewModel
+grand/app/aber_provider/pages/settings/adapters/SocialAdapter.java
+ grand.app.aber_provider.pages.settings.adapters.SocialAdapter
+ grand.app.aber_provider.pages.settings.adapters.SocialAdapter$MenuView
 grand/app/aber_provider/pages/auth/countries/viewModels/CountriesViewModel.java
  grand.app.aber_provider.pages.auth.countries.viewModels.CountriesViewModel
 grand/app/aber_provider/repository/AuthRepository.java
@@ -83,10 +82,10 @@ grand/app/aber_provider/base/BaseViewModel.java
  grand.app.aber_provider.base.BaseViewModel
 grand/app/aber_provider/databinding/FragmentAppWalletBinding.java
  grand.app.aber_provider.databinding.FragmentAppWalletBinding
+grand/app/aber_provider/pages/postDetails/viewModels/OrderDetailsViewModel.java
+ grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel
 grand/app/aber_provider/databinding/ItemSocialBinding.java
  grand.app.aber_provider.databinding.ItemSocialBinding
-grand/app/aber_provider/pages/postDetails/models/OrderDetailsData.java
- grand.app.aber_provider.pages.postDetails.models.OrderDetailsData
 grand/app/aber_provider/pages/profile/models/FollowersResponse.java
  grand.app.aber_provider.pages.profile.models.FollowersResponse
 grand/app/aber_provider/pages/auth/models/UsersResponse.java
@@ -126,8 +125,6 @@ grand/app/aber_provider/customViews/views/CustomTextViewRegular.java
  grand.app.aber_provider.customViews.views.CustomTextViewRegular
 grand/app/aber_provider/pages/settings/LangFragment.java
  grand.app.aber_provider.pages.settings.LangFragment
-grand/app/aber_provider/pages/postDetails/viewModels/PostDetailsViewModel.java
- grand.app.aber_provider.pages.postDetails.viewModels.PostDetailsViewModel
 grand/app/aber_provider/pages/settings/viewModels/ItemSocialViewModel.java
  grand.app.aber_provider.pages.settings.viewModels.ItemSocialViewModel
 grand/app/aber_provider/utils/resources/ResourceManager.java
@@ -143,6 +140,10 @@ grand/app/aber_provider/databinding/ItemCountryBinding.java
  grand.app.aber_provider.databinding.ItemCountryBinding
 grand/app/aber_provider/databinding/ActivityBaseBinding.java
  grand.app.aber_provider.databinding.ActivityBaseBinding
+grand/app/aber_provider/pages/settings/viewModels/ItemContactViewModel.java
+ grand.app.aber_provider.pages.settings.viewModels.ItemContactViewModel
+grand/app/aber_provider/pages/settings/SocialMediaFragment.java
+ grand.app.aber_provider.pages.settings.SocialMediaFragment
 grand/app/aber_provider/pages/profile/adapters/FollowersAdapter.java
  grand.app.aber_provider.pages.profile.adapters.FollowersAdapter
  grand.app.aber_provider.pages.profile.adapters.FollowersAdapter$MenuView
@@ -188,6 +189,8 @@ grand/app/aber_provider/utils/validation/Validate.java
  grand.app.aber_provider.utils.validation.Validate
 grand/app/aber_provider/utils/helper/AppHelper.java
  grand.app.aber_provider.utils.helper.AppHelper
+grand/app/aber_provider/pages/postDetails/models/OrderDetailsMain.java
+ grand.app.aber_provider.pages.postDetails.models.OrderDetailsMain
 grand/app/aber_provider/pages/settings/viewModels/DocumentsViewModel.java
  grand.app.aber_provider.pages.settings.viewModels.DocumentsViewModel
 grand/app/aber_provider/pages/onBoard/models/BoardResponse.java
@@ -196,6 +199,8 @@ grand/app/aber_provider/pages/profile/viewModels/ItemReportReasonsViewModel.java
  grand.app.aber_provider.pages.profile.viewModels.ItemReportReasonsViewModel
 grand/app/aber_provider/databinding/OptionDialogBinding.java
  grand.app.aber_provider.databinding.OptionDialogBinding
+grand/app/aber_provider/pages/postDetails/OrderDetailsFragment.java
+ grand.app.aber_provider.pages.postDetails.OrderDetailsFragment
 grand/app/aber_provider/pages/profile/models/profile/UserProfileResponse.java
  grand.app.aber_provider.pages.profile.models.profile.UserProfileResponse
 grand/app/aber_provider/databinding/FragmentEditProfileBinding.java
@@ -219,14 +224,12 @@ grand/app/aber_provider/pages/myOrders/viewModels/MyOrdersViewModels.java
  grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels
 grand/app/aber_provider/databinding/FragmentAboutBinding.java
  grand.app.aber_provider.databinding.FragmentAboutBinding
-grand/app/aber_provider/pages/postDetails/viewModels/RepliesViewModel.java
- grand.app.aber_provider.pages.postDetails.viewModels.RepliesViewModel
 grand/app/aber_provider/databinding/MenuBinding.java
  grand.app.aber_provider.databinding.MenuBinding
-grand/app/aber_provider/pages/postDetails/models/PostDetailsResponse.java
- grand.app.aber_provider.pages.postDetails.models.PostDetailsResponse
 grand/app/aber_provider/repository/BaseRepository.java
  grand.app.aber_provider.repository.BaseRepository
+grand/app/aber_provider/pages/postDetails/models/SubServices.java
+ grand.app.aber_provider.pages.postDetails.models.SubServices
 grand/app/aber_provider/databinding/ItemPackageBinding.java
  grand.app.aber_provider.databinding.ItemPackageBinding
 grand/app/aber_provider/pages/appWallet/models/RaiseWalletRequest.java
@@ -251,6 +254,8 @@ grand/app/aber_provider/utils/helper/MovementHelper.java
  grand.app.aber_provider.utils.helper.MovementHelper
 grand/app/aber_provider/pages/appWallet/models/RaiseWalletResponse.java
  grand.app.aber_provider.pages.appWallet.models.RaiseWalletResponse
+grand/app/aber_provider/pages/postDetails/models/MainServices.java
+ grand.app.aber_provider.pages.postDetails.models.MainServices
 grand/app/aber_provider/utils/images/PhotoFullPopupWindow.java
  grand.app.aber_provider.utils.images.PhotoFullPopupWindow
  grand.app.aber_provider.utils.images.PhotoFullPopupWindow$1
@@ -271,6 +276,8 @@ grand/app/aber_provider/utils/PopUp/PopUp.java
  grand.app.aber_provider.utils.PopUp.PopUp
 grand/app/aber_provider/pages/settings/ContactUsFragment.java
  grand.app.aber_provider.pages.settings.ContactUsFragment
+grand/app/aber_provider/pages/postDetails/models/OrderDetailsResponse.java
+ grand.app.aber_provider.pages.postDetails.models.OrderDetailsResponse
 grand/app/aber_provider/utils/images/ImageConstants.java
  grand.app.aber_provider.utils.images.ImageConstants
 grand/app/aber_provider/utils/locations/MapAddressViewModel.java
@@ -294,8 +301,6 @@ grand/app/aber_provider/repository/ServicesRepository.java
  grand.app.aber_provider.repository.ServicesRepository
 grand/app/aber_provider/databinding/ItemOrderConfirmedBinding.java
  grand.app.aber_provider.databinding.ItemOrderConfirmedBinding
-grand/app/aber_provider/pages/postDetails/models/postReacts/ReactsData.java
- grand.app.aber_provider.pages.postDetails.models.postReacts.ReactsData
 grand/app/aber_provider/databinding/ItemSocialMenuBinding.java
  grand.app.aber_provider.databinding.ItemSocialMenuBinding
 grand/app/aber_provider/pages/home/models/NewPostRequest.java
@@ -308,16 +313,14 @@ grand/app/aber_provider/pages/auth/models/LoginRequest.java
  grand.app.aber_provider.pages.auth.models.LoginRequest
 grand/app/aber_provider/pages/profile/viewModels/EditProfileViewModel.java
  grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel
-grand/app/aber_provider/pages/postDetails/models/CreateCommentRequest.java
- grand.app.aber_provider.pages.postDetails.models.CreateCommentRequest
+grand/app/aber_provider/databinding/FragmentOrderDetailsBinding.java
+ grand.app.aber_provider.databinding.FragmentOrderDetailsBinding
 grand/app/aber_provider/utils/session/UserHelper.java
  grand.app.aber_provider.utils.session.UserHelper
 grand/app/aber_provider/databinding/FragmentOnboardBinding.java
  grand.app.aber_provider.databinding.FragmentOnboardBinding
 grand/app/aber_provider/pages/profile/models/MainFollowersData.java
  grand.app.aber_provider.pages.profile.models.MainFollowersData
-grand/app/aber_provider/pages/postDetails/viewModels/ReactionsViewModel.java
- grand.app.aber_provider.pages.postDetails.viewModels.ReactionsViewModel
 grand/app/aber_provider/pages/auth/models/UserData.java
  grand.app.aber_provider.pages.auth.models.UserData
 grand/app/aber_provider/pages/home/models/NewPostResponse.java
@@ -417,8 +420,6 @@ grand/app/aber_provider/databinding/FragmentCountriesBinding.java
  grand.app.aber_provider.databinding.FragmentCountriesBinding
 grand/app/aber_provider/pages/appWallet/AppWalletFragment.java
  grand.app.aber_provider.pages.appWallet.AppWalletFragment
-grand/app/aber_provider/pages/postDetails/models/MaxOfferResponse.java
- grand.app.aber_provider.pages.postDetails.models.MaxOfferResponse
 grand/app/aber_provider/connection/FileObject.java
  grand.app.aber_provider.connection.FileObject
 grand/app/aber_provider/pages/onBoard/OnBoardAdapter.java
@@ -428,8 +429,9 @@ grand/app/aber_provider/utils/Constants.java
  grand.app.aber_provider.utils.Constants
 grand/app/aber_provider/pages/appWallet/models/HistoryWalletData.java
  grand.app.aber_provider.pages.appWallet.models.HistoryWalletData
-grand/app/aber_provider/pages/postDetails/models/RepliesResponse.java
- grand.app.aber_provider.pages.postDetails.models.RepliesResponse
+grand/app/aber_provider/pages/settings/adapters/ContactsAdapter.java
+ grand.app.aber_provider.pages.settings.adapters.ContactsAdapter
+ grand.app.aber_provider.pages.settings.adapters.ContactsAdapter$MenuView
 grand/app/aber_provider/utils/PopUp/PopUpMenuHelper.java
  grand.app.aber_provider.utils.PopUp.PopUpMenuHelper
 grand/app/aber_provider/pages/appWallet/models/WalletHistoryItem.java
@@ -455,8 +457,6 @@ grand/app/aber_provider/pages/profile/models/reportReasons/ReportResponse.java
  grand.app.aber_provider.pages.profile.models.reportReasons.ReportResponse
 grand/app/aber_provider/databinding/FragmentRegisterDocumentsBinding.java
  grand.app.aber_provider.databinding.FragmentRegisterDocumentsBinding
-grand/app/aber_provider/pages/settings/SocialMedia.java
- grand.app.aber_provider.pages.settings.SocialMedia
 grand/app/aber_provider/pages/auth/login/LoginViewModel.java
  grand.app.aber_provider.pages.auth.login.LoginViewModel
 grand/app/aber_provider/databinding/FragmentSplashBinding.java
@@ -483,8 +483,6 @@ grand/app/aber_provider/customViews/actionbar/HomeActionBarView.java
  grand.app.aber_provider.customViews.actionbar.HomeActionBarView
 grand/app/aber_provider/customViews/views/CustomTextViewMedium.java
  grand.app.aber_provider.customViews.views.CustomTextViewMedium
-grand/app/aber_provider/pages/postDetails/viewModels/ItemImagesViewModel.java
- grand.app.aber_provider.pages.postDetails.viewModels.ItemImagesViewModel
 grand/app/aber_provider/databinding/ItemFavoriteBinding.java
  grand.app.aber_provider.databinding.ItemFavoriteBinding
 grand/app/aber_provider/utils/URLS.java
@@ -495,6 +493,8 @@ grand/app/aber_provider/pages/auth/models/RegisterRequest.java
  grand.app.aber_provider.pages.auth.models.RegisterRequest
 grand/app/aber_provider/pages/settings/AboutAppFragment.java
  grand.app.aber_provider.pages.settings.AboutAppFragment
+grand/app/aber_provider/pages/settings/models/ContactResponse.java
+ grand.app.aber_provider.pages.settings.models.ContactResponse
 grand/app/aber_provider/pages/packages/viewModels/ItemPackageViewModels.java
  grand.app.aber_provider.pages.packages.viewModels.ItemPackageViewModels
 grand/app/aber_provider/pages/packages/models/RequestToSend.java
@@ -505,6 +505,8 @@ grand/app/aber_provider/base/ApplicationBinding.java
  grand.app.aber_provider.base.ApplicationBinding
 grand/app/aber_provider/base/ParentActivity.java
  grand.app.aber_provider.base.ParentActivity
+grand/app/aber_provider/databinding/ItemContactBinding.java
+ grand.app.aber_provider.databinding.ItemContactBinding
 grand/app/aber_provider/pages/notifications/viewModels/NotificationsViewModels.java
  grand.app.aber_provider.pages.notifications.viewModels.NotificationsViewModels
 grand/app/aber_provider/databinding/LayoutActionBarHomeBinding.java

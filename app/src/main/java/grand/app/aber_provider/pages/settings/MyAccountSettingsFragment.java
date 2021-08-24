@@ -20,12 +20,16 @@ import javax.inject.Inject;
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.databinding.FragmentMyAccountSettingsBinding;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.packages.PackagesFragment;
+import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.resources.ResourceManager;
 
 public class MyAccountSettingsFragment extends BaseFragment {
 
@@ -53,25 +57,25 @@ public class MyAccountSettingsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (((Mutable) o).message) {
-//                case Constants.MENU_LIVE:
-//                    MovementHelper.startActivity(context, PackagesFragment.class.getName(), getResources().getString(R.string.menuFavorite), null);
-//                    break;
-//                case Constants.INSTURCTOR:
-//                    MovementHelper.startActivity(context, CountriesFragment.class.getName(), getResources().getString(R.string.my_wallet), null);
-//                    break;
-//                case Constants.COMPLAINTS:
-//                    MovementHelper.startActivity(context, ContactUsFragment.class.getName(), getResources().getString(R.string.tv_account_suggest), null);
-//                    break;
-//                case Constants.PROFILE:
-//                    MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.userData.getId()), null, MyServicesOrdersFragment.class.getName(), null);
-//                    break;
-//                case Constants.UPDATE_PROFILE:
-//                    toastMessage(((StatusMessage) mutable.object).mMessage);
-//                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-//                    break;
-//                case Constants.LANGUAGE:
-//                    MovementHelper.startActivity(context, LangFragment.class.getName(), getString(R.string.lang), null);
-//                    break;
+                case Constants.ABOUT:
+                    MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
+                    break;
+                case Constants.TERMS:
+                    MovementHelper.startActivity(context, TermsFragment.class.getName(), getResources().getString(R.string.terms), null);
+                    break;
+                case Constants.COMPLAINTS:
+                case Constants.CONTACT:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(((Mutable) o).message), ResourceManager.getString(R.string.tv_account_contact), ContactUsFragment.class.getName(), null);
+                    break;
+                case Constants.SOCIAL:
+                    MovementHelper.startActivity(context, SocialMediaFragment.class.getName(), ResourceManager.getString(R.string.social_media), null);
+                    break;
+                case Constants.PROFILE:
+                    MovementHelper.startActivity(context, EditProfileFragment.class.getName(), ResourceManager.getString(R.string.profile), null);
+                    break;
+                case Constants.SUBSCRIPTION:
+                    MovementHelper.startActivity(context, PackagesFragment.class.getName(), getString(R.string.package_title), null);
+                    break;
 //                case Constants.FOLLOWERS:
 //                    MovementHelper.startActivityWithBundle(context, new PassingObject(URLS.USER_FOLLOWERS + viewModel.userData.getId()), getString(R.string.my_services), MyServiceOrderDetailsFragment.class.getName(), null);
 //                    break;

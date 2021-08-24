@@ -28,7 +28,7 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
     private final com.google.android.material.textfield.TextInputEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback40;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -92,7 +92,7 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
         this.rcWalletHistory.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback37 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -187,7 +187,7 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.chargeAppWalletBtn.setOnClickListener(mCallback37);
+            this.chargeAppWalletBtn.setOnClickListener(mCallback40);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {

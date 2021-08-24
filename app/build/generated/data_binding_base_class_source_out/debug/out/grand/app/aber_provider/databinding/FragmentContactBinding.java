@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -40,13 +41,16 @@ public abstract class FragmentContactBinding extends ViewDataBinding {
   @NonNull
   public final CircularProgressIndicator progress;
 
+  @NonNull
+  public final CardView rcContact;
+
   @Bindable
   protected SettingsViewModel mViewmodel;
 
   protected FragmentContactBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatButton appCompatButtonNext, AppCompatImageView curve,
       TextInputLayout inputContactMessage, TextInputLayout inputName, TextInputLayout inputPhone,
-      TextInputLayout inputRegisterEmail, CircularProgressIndicator progress) {
+      TextInputLayout inputRegisterEmail, CircularProgressIndicator progress, CardView rcContact) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.curve = curve;
@@ -55,6 +59,7 @@ public abstract class FragmentContactBinding extends ViewDataBinding {
     this.inputPhone = inputPhone;
     this.inputRegisterEmail = inputRegisterEmail;
     this.progress = progress;
+    this.rcContact = rcContact;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);

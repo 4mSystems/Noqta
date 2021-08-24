@@ -20,7 +20,7 @@ public class Constants {
     public final static String EMAIL = "email";
     public final static String FIELD = "FIELD";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
-    public static final String DIS_LIKE = "DIS_LIKE";
+    public static final String GET_CONTACT = "GET_CONTACT";
     public static final String LIKE = "LIKE";
     public static final String COMMENT = "COMMENT";
 
@@ -89,7 +89,7 @@ public class Constants {
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
 
     public static final String front_car_image = "front_car_image";
-    public static final int POST_DETAILS_REQUEST = 380;
+    public static final int ORDER_DETAILS_REQUEST = 380;
 
     public static final String back_car_image = "back_car_image";
     public static final int COMMENT_REQUEST = 381;
@@ -132,7 +132,7 @@ public class Constants {
 
     public static final String MORE = "MORE";
     public static final String RATE_APP = "RATE_APP";
-    public static final String ASK = "ASK";
+    public static final String SOCIAL = "SOCIAL";
     public static final int SHOW_CURVE = 1;
     public static final String MEDIA = "MEDIA";
     public static final String SEE_FIRST = "SEE_FIRST";

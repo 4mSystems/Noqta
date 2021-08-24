@@ -14,20 +14,16 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_home, 4);
-        sViewsWithIds.put(R.id.v1, 5);
-        sViewsWithIds.put(R.id.tv_my_services, 6);
-        sViewsWithIds.put(R.id.v5, 7);
-        sViewsWithIds.put(R.id.tv_provider, 8);
-        sViewsWithIds.put(R.id.v7, 9);
-        sViewsWithIds.put(R.id.tv_notifications, 10);
-        sViewsWithIds.put(R.id.v8, 11);
-        sViewsWithIds.put(R.id.v9, 12);
-        sViewsWithIds.put(R.id.tv_lang, 13);
-        sViewsWithIds.put(R.id.v16, 14);
-        sViewsWithIds.put(R.id.tv_country, 15);
-        sViewsWithIds.put(R.id.v17, 16);
-        sViewsWithIds.put(R.id.tv_city, 17);
+        sViewsWithIds.put(R.id.v1, 8);
+        sViewsWithIds.put(R.id.tv_my_services, 9);
+        sViewsWithIds.put(R.id.v5, 10);
+        sViewsWithIds.put(R.id.tv_provider, 11);
+        sViewsWithIds.put(R.id.v7, 12);
+        sViewsWithIds.put(R.id.tv_notifications, 13);
+        sViewsWithIds.put(R.id.v8, 14);
+        sViewsWithIds.put(R.id.v9, 15);
+        sViewsWithIds.put(R.id.v16, 16);
+        sViewsWithIds.put(R.id.v17, 17);
         sViewsWithIds.put(R.id.v15, 18);
         sViewsWithIds.put(R.id.v20, 19);
         sViewsWithIds.put(R.id.grand_logo, 20);
@@ -37,9 +33,17 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback39;
+    private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback40;
+    private final android.view.View.OnClickListener mCallback45;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback43;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback42;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback46;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback44;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -50,35 +54,43 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
     private MenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (grand.app.aber_provider.customViews.grandDialog.GrandImageDialog) bindings[20]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[17]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[15]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[7]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[4]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[6]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[9]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[13]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[2]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[6]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[10]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[8]
-            , (android.view.View) bindings[5]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[11]
+            , (android.view.View) bindings[8]
             , (android.view.View) bindings[18]
-            , (android.view.View) bindings[14]
             , (android.view.View) bindings[16]
+            , (android.view.View) bindings[17]
             , (android.view.View) bindings[19]
-            , (android.view.View) bindings[7]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[10]
             , (android.view.View) bindings[12]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[15]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.rcMenuSocial.setTag(null);
+        this.tvCity.setTag(null);
+        this.tvCountry.setTag(null);
+        this.tvHome.setTag(null);
+        this.tvLang.setTag(null);
         this.tvMore.setTag(null);
         this.tvPrivacy.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback47 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
+        mCallback45 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback43 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback44 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -174,15 +186,19 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.tvMore.setOnClickListener(mCallback40);
-            this.tvPrivacy.setOnClickListener(mCallback39);
+            this.tvCity.setOnClickListener(mCallback46);
+            this.tvCountry.setOnClickListener(mCallback45);
+            this.tvHome.setOnClickListener(mCallback42);
+            this.tvLang.setOnClickListener(mCallback44);
+            this.tvMore.setOnClickListener(mCallback47);
+            this.tvPrivacy.setOnClickListener(mCallback43);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 6: {
                 // localize variables for thread safety
                 // menuViewModel
                 grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
@@ -197,7 +213,26 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
 
 
 
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_ACCOUNT);
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MORE);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.COUNTRIES);
                 }
                 break;
             }
@@ -216,7 +251,64 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
 
 
 
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MORE);
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_ACCOUNT);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_HOME);
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.CITIES);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.LANGUAGE);
                 }
                 break;
             }

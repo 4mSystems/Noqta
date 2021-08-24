@@ -22,7 +22,7 @@ public class URLS {
     public final static String UPDATE_PROFILE = "v1/profile";
     public static final String FORGET_PASSWORD = "v1/code_send";
     public static final String CHANGE_PASSWORD = "v1/change_password";
-    public static final String FOLLOWERS_POSTS = "v1/following/posts?page=";
+    public final static String GET_CONTACT = "v1/contact_us";
     public final static String SEARCH_POSTS = "v1/search?type=";
     public final static String REACT_POST = "v1/react/post";
     public final static String MAKE_COMMENT = "v1/comment";
@@ -30,7 +30,7 @@ public class URLS {
     public final static String EDIT_COMMENT = "v1/comment/";
     public final static String HIDE_POST = "v1/hide/post";
     public final static String SHARE_POST = "v1/share/post?page=";
-    public final static String POST_DETAILS = "v1/post/";
+    public final static String POST_DETAILS = "v1/provider/order/";
     public final static String COMMENT_REPLIES = "v1/comment/replies?comment_id=";
     public static final String POST_REACTS = "v1/reacts?post_id=";
     public final static String CREATE_LIVE = "v1/live_stream";
@@ -39,7 +39,7 @@ public class URLS {
     public static final String NOTIFICATIONS = "v1/notifications?page=";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String USER_PROFILE = "v1/profile?user_id=";
-    public final static String SHARED_POSTS = "v1/profile/shared/posts?user_id=";
+    public static final String GET_SOCIAL = "v1/social_media";
     public static final String COMMENTED_POSTS = "v1/profile/commented/posts?user_id=";
     public static final String QUESTIONED_POSTS = "v1/profile/questioned/posts?user_id=";
     public static final String NOT_ANSWERED_QUESTIONED_POSTS = "v1/question_request/post?page=";

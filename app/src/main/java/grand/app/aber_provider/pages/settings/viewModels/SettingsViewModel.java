@@ -11,6 +11,8 @@ import javax.inject.Inject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseViewModel;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.settings.adapters.ContactsAdapter;
+import grand.app.aber_provider.pages.settings.adapters.SocialAdapter;
 import grand.app.aber_provider.pages.settings.models.AboutData;
 import grand.app.aber_provider.pages.settings.models.ContactUsRequest;
 import grand.app.aber_provider.repository.SettingsRepository;
@@ -25,6 +27,8 @@ public class SettingsViewModel extends BaseViewModel {
     @Inject
     SettingsRepository repository;
     AboutData aboutData;
+    ContactsAdapter contactsAdapter;
+    SocialAdapter socialAdapter;
 
     @Inject
     public SettingsViewModel(SettingsRepository repository) {
@@ -43,12 +47,20 @@ public class SettingsViewModel extends BaseViewModel {
             liveData.setValue(new Mutable(Constants.ERROR_TOAST));
     }
 
+    public void getContact() {
+        compositeDisposable.add(repository.getContact());
+    }
+
     public void about() {
         compositeDisposable.add(repository.about());
     }
 
     public void terms() {
         compositeDisposable.add(repository.terms());
+    }
+
+    public void socialMedia() {
+        compositeDisposable.add(repository.getSocial());
     }
 
     public void onLangChange(RadioGroup radioGroup, int id) {
@@ -60,6 +72,16 @@ public class SettingsViewModel extends BaseViewModel {
 
     public void changeLang() {
         liveData.setValue(new Mutable(Constants.LANGUAGE));
+    }
+
+    @Bindable
+    public ContactsAdapter getContactsAdapter() {
+        return this.contactsAdapter == null ? this.contactsAdapter = new ContactsAdapter() : this.contactsAdapter;
+    }
+
+    @Bindable
+    public SocialAdapter getSocialAdapter() {
+        return this.socialAdapter == null ? this.socialAdapter = new SocialAdapter() : this.socialAdapter;
     }
 
     @Bindable

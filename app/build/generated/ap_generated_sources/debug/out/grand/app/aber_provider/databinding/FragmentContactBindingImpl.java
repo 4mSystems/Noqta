@@ -14,11 +14,13 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.curve, 11);
+        sViewsWithIds.put(R.id.curve, 13);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView10;
     @NonNull
     private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     @NonNull
@@ -29,7 +31,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback71;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -183,17 +185,18 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     };
 
     public FragmentContactBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
     }
     private FragmentContactBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 5
-            , (androidx.appcompat.widget.AppCompatButton) bindings[9]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[11]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
             , (com.google.android.material.textfield.TextInputLayout) bindings[1]
             , (com.google.android.material.textfield.TextInputLayout) bindings[5]
             , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[10]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[12]
+            , (androidx.cardview.widget.CardView) bindings[9]
             );
         this.appCompatButtonNext.setTag(null);
         this.inputContactMessage.setTag(null);
@@ -202,6 +205,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.inputRegisterEmail.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView10 = (androidx.recyclerview.widget.RecyclerView) bindings[10];
+        this.mboundView10.setTag(null);
         this.mboundView2 = (androidx.appcompat.widget.AppCompatEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView4 = (androidx.appcompat.widget.AppCompatEditText) bindings[4];
@@ -211,16 +216,17 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.mboundView8 = (com.google.android.material.textfield.TextInputEditText) bindings[8];
         this.mboundView8.setTag(null);
         this.progress.setTag(null);
+        this.rcContact.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback61 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback71 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x40L;
+                mDirtyFlags = 0x100L;
         }
         requestRebind();
     }
@@ -316,9 +322,21 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
             }
             return true;
         }
-        else if (fieldId == BR.message) {
+        else if (fieldId == BR.passingObject) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.contactsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x40L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80L;
             }
             return true;
         }
@@ -333,18 +351,23 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
             mDirtyFlags = 0;
         }
         java.lang.String viewmodelContactUsRequestNoteErrorGet = null;
+        grand.app.aber_provider.PassingObject viewmodelPassingObject = null;
         grand.app.aber_provider.pages.settings.models.ContactUsRequest viewmodelContactUsRequest = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelContactUsRequestNameError = null;
         java.lang.String viewmodelMessage = null;
+        java.lang.String viewmodelPassingObjectObject = null;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelContactUsRequestEmailErrorGet = null;
+        boolean viewmodelPassingObjectObjectEqualsConstantsCONTACT = false;
         android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = null;
+        grand.app.aber_provider.pages.settings.adapters.ContactsAdapter viewmodelContactsAdapter = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelContactUsRequestPhoneError = null;
         java.lang.String viewmodelContactUsRequestName = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelContactUsRequestNameErrorGet = null;
+        int viewmodelPassingObjectObjectEqualsConstantsCONTACTViewVISIBLEViewGONE = 0;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
@@ -357,17 +380,48 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0x7fL) != 0) {
+        if ((dirtyFlags & 0x1ffL) != 0) {
 
 
-            if ((dirtyFlags & 0x5fL) != 0) {
+            if ((dirtyFlags & 0x130L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.passingObject
+                        viewmodelPassingObject = viewmodel.getPassingObject();
+                    }
+
+
+                    if (viewmodelPassingObject != null) {
+                        // read viewmodel.passingObject.object
+                        viewmodelPassingObjectObject = viewmodelPassingObject.getObject();
+                    }
+
+
+                    if (viewmodelPassingObjectObject != null) {
+                        // read viewmodel.passingObject.object.equals(Constants.CONTACT)
+                        viewmodelPassingObjectObjectEqualsConstantsCONTACT = viewmodelPassingObjectObject.equals(grand.app.aber_provider.utils.Constants.CONTACT);
+                    }
+                if((dirtyFlags & 0x130L) != 0) {
+                    if(viewmodelPassingObjectObjectEqualsConstantsCONTACT) {
+                            dirtyFlags |= 0x4000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x2000L;
+                    }
+                }
+
+
+                    // read viewmodel.passingObject.object.equals(Constants.CONTACT) ? View.VISIBLE : View.GONE
+                    viewmodelPassingObjectObjectEqualsConstantsCONTACTViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsConstantsCONTACT) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0x11fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.contactUsRequest
                         viewmodelContactUsRequest = viewmodel.getContactUsRequest();
                     }
 
-                if ((dirtyFlags & 0x51L) != 0) {
+                if ((dirtyFlags & 0x111L) != 0) {
 
                         if (viewmodelContactUsRequest != null) {
                             // read viewmodel.contactUsRequest.nameError
@@ -381,7 +435,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                             viewmodelContactUsRequestNameErrorGet = viewmodelContactUsRequestNameError.get();
                         }
                 }
-                if ((dirtyFlags & 0x52L) != 0) {
+                if ((dirtyFlags & 0x112L) != 0) {
 
                         if (viewmodelContactUsRequest != null) {
                             // read viewmodel.contactUsRequest.phoneError
@@ -395,7 +449,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                             viewmodelContactUsRequestPhoneErrorGet = viewmodelContactUsRequestPhoneError.get();
                         }
                 }
-                if ((dirtyFlags & 0x50L) != 0) {
+                if ((dirtyFlags & 0x110L) != 0) {
 
                         if (viewmodelContactUsRequest != null) {
                             // read viewmodel.contactUsRequest.name
@@ -408,7 +462,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                             viewmodelContactUsRequestEmail = viewmodelContactUsRequest.getEmail();
                         }
                 }
-                if ((dirtyFlags & 0x54L) != 0) {
+                if ((dirtyFlags & 0x114L) != 0) {
 
                         if (viewmodelContactUsRequest != null) {
                             // read viewmodel.contactUsRequest.noteError
@@ -422,7 +476,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                             viewmodelContactUsRequestNoteErrorGet = viewmodelContactUsRequestNoteError.get();
                         }
                 }
-                if ((dirtyFlags & 0x58L) != 0) {
+                if ((dirtyFlags & 0x118L) != 0) {
 
                         if (viewmodelContactUsRequest != null) {
                             // read viewmodel.contactUsRequest.emailError
@@ -437,7 +491,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                         }
                 }
             }
-            if ((dirtyFlags & 0x70L) != 0) {
+            if ((dirtyFlags & 0x190L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.message
@@ -447,38 +501,45 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
 
                     // read TextUtils.isEmpty(viewmodel.message)
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
-                if((dirtyFlags & 0x70L) != 0) {
+                if((dirtyFlags & 0x190L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x1000L;
                     }
                     else {
-                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x800L;
                     }
                 }
 
 
                     // read !TextUtils.isEmpty(viewmodel.message)
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0x70L) != 0) {
+                if((dirtyFlags & 0x190L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x10000L;
+                            dirtyFlags |= 0x100000L;
                     }
                     else {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x80000L;
                     }
                 }
+            }
+            if ((dirtyFlags & 0x150L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.contactsAdapter
+                        viewmodelContactsAdapter = viewmodel.getContactsAdapter();
+                    }
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x200L) != 0) {
+        if ((dirtyFlags & 0x800L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
                     viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(grand.app.aber_provider.utils.Constants.HIDE_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x10000L) != 0) {
+        if ((dirtyFlags & 0x100000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
@@ -486,28 +547,28 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                 }
         }
 
-        if ((dirtyFlags & 0x70L) != 0) {
+        if ((dirtyFlags & 0x190L) != 0) {
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0x70L) != 0) {
+            if((dirtyFlags & 0x190L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
-                        dirtyFlags |= 0x100L;
-                        dirtyFlags |= 0x1000L;
+                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x10000L;
                 }
                 else {
-                        dirtyFlags |= 0x80L;
-                        dirtyFlags |= 0x800L;
+                        dirtyFlags |= 0x200L;
+                        dirtyFlags |= 0x8000L;
                 }
             }
-            if((dirtyFlags & 0x70L) != 0) {
+            if((dirtyFlags & 0x190L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x4000L;
+                        dirtyFlags |= 0x40000L;
                 }
                 else {
-                        dirtyFlags |= 0x2000L;
+                        dirtyFlags |= 0x20000L;
                 }
             }
 
@@ -520,49 +581,59 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0x70L) != 0) {
+        if ((dirtyFlags & 0x190L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium);
             this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x40L) != 0) {
+        if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback61);
+            this.appCompatButtonNext.setOnClickListener(mCallback71);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x54L) != 0) {
+        if ((dirtyFlags & 0x114L) != 0) {
             // api target 1
 
             this.inputContactMessage.setError(viewmodelContactUsRequestNoteErrorGet);
         }
-        if ((dirtyFlags & 0x51L) != 0) {
+        if ((dirtyFlags & 0x111L) != 0) {
             // api target 1
 
             this.inputName.setError(viewmodelContactUsRequestNameErrorGet);
         }
-        if ((dirtyFlags & 0x52L) != 0) {
+        if ((dirtyFlags & 0x112L) != 0) {
             // api target 1
 
             this.inputPhone.setError(viewmodelContactUsRequestPhoneErrorGet);
         }
-        if ((dirtyFlags & 0x58L) != 0) {
+        if ((dirtyFlags & 0x118L) != 0) {
             // api target 1
 
             this.inputRegisterEmail.setError(viewmodelContactUsRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x50L) != 0) {
+        if ((dirtyFlags & 0x150L) != 0) {
+            // api target 1
+
+            grand.app.aber_provider.base.ApplicationBinding.getItemsV2Binding(this.mboundView10, viewmodelContactsAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0x110L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelContactUsRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelContactUsRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelContactUsRequestPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelContactUsRequestMessage);
+        }
+        if ((dirtyFlags & 0x130L) != 0) {
+            // api target 1
+
+            this.rcContact.setVisibility(viewmodelPassingObjectObjectEqualsConstantsCONTACTViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
@@ -591,18 +662,22 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         flag 2 (0x3L): viewmodel.contactUsRequest.noteError
         flag 3 (0x4L): viewmodel.contactUsRequest.emailError
         flag 4 (0x5L): viewmodel
-        flag 5 (0x6L): viewmodel.message
-        flag 6 (0x7L): null
-        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 5 (0x6L): viewmodel.passingObject
+        flag 6 (0x7L): viewmodel.contactsAdapter
+        flag 7 (0x8L): viewmodel.message
+        flag 8 (0x9L): null
+        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 13 (0xeL): viewmodel.passingObject.object.equals(Constants.CONTACT) ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): viewmodel.passingObject.object.equals(Constants.CONTACT) ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

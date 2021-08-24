@@ -184,7 +184,6 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tv_service_status_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
@@ -197,10 +196,21 @@
                 android:text="@string/aval_order_time"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
 
+            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/dp10h"
+                android:text="@string/view_details"
+                android:textAlignment="center"
+                android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_status" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

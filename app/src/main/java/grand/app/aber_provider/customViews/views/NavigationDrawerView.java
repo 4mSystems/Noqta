@@ -15,9 +15,12 @@ import grand.app.aber_provider.base.ParentActivity;
 import grand.app.aber_provider.customViews.actionbar.HomeActionBarView;
 import grand.app.aber_provider.databinding.MenuBinding;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.auth.countries.CitiesFragment;
+import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
+import grand.app.aber_provider.pages.settings.LangFragment;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
 import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.utils.Constants;
@@ -79,34 +82,15 @@ public class NavigationDrawerView extends RelativeLayout {
                 case Constants.MENU_ACCOUNT:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.MENU_ACCOUNT), ResourceManager.getString(R.string.menu_account), MyAccountSettingsFragment.class.getName(), null);
                     break;
-//                case Constants.SUGGESTION:
-//                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.SUGGESTION), ResourceManager.getString(R.string.tv_account_suggest), ContactUsFragment.class.getName(), null);
-//                    break;
-//                case Constants.CONTACT:
-//                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CONTACT), ResourceManager.getString(R.string.tv_account_contact), ContactUsFragment.class.getName(), null);
-//                    break;
-//                case Constants.MENU_ACCOUNT:
-//                    MovementHelper.startActivity(context, MyAccountSettingsFragment.class.getName(), ResourceManager.getString(R.string.menu_account), null);
-//                    break;
-//                case Constants.SOCIAL:
-//                    MovementHelper.startActivity(context, SocialMediaFragment.class.getName(), ResourceManager.getString(R.string.social_media), null);
-//                    break;
-//                case Constants.CART:
-//                    MovementHelper.startActivity(context, CartFragment.class.getName(), ResourceManager.getString(R.string.menuCart), null);
-//                    break;
-//                case Constants.FAVORITE:
-//                    MovementHelper.startActivity(context, FavoritesFragment.class.getName(), ResourceManager.getString(R.string.menuFavorite), null);
-//                    break;
-//                case Constants.COUNTRIES:
-//                    MovementHelper.startActivity(context, CountriesFragment.class.getName(), ResourceManager.getString(R.string.country), null);
-//                    break;
-//                case Constants.SERVICES:
-//                    MovementHelper.startActivity(context, MyServicesOrdersFragment.class.getName(), ResourceManager.getString(R.string.my_services), null);
-//                    break;
-//                case Constants.LANGUAGE:
-//                    MovementHelper.startActivity(context, LangFragment.class.getName(), ResourceManager.getString(R.string.change_lang), null);
-//                    break;
-
+                case Constants.COUNTRIES:
+                    MovementHelper.startActivity(context, CountriesFragment.class.getName(), ResourceManager.getString(R.string.country), null);
+                    break;
+                case Constants.CITIES:
+                    MovementHelper.startActivity(context, CitiesFragment.class.getName(), ResourceManager.getString(R.string.register_city_hint), null);
+                    break;
+                case Constants.LANGUAGE:
+                    MovementHelper.startActivity(context, LangFragment.class.getName(), ResourceManager.getString(R.string.lang), null);
+                    break;
             }
         });
     }

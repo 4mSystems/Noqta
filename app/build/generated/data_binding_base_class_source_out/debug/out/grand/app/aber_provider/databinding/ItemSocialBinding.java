@@ -12,7 +12,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import grand.app.aber_provider.R;
-import grand.app.aber_provider.pages.profile.viewModels.ItemPeopleViewModel;
+import grand.app.aber_provider.pages.settings.viewModels.ItemSocialViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -24,7 +24,7 @@ public abstract class ItemSocialBinding extends ViewDataBinding {
   public final AppCompatImageView icSocial;
 
   @Bindable
-  protected ItemPeopleViewModel mItemViewModel;
+  protected ItemSocialViewModel mItemViewModel;
 
   protected ItemSocialBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton appCompatButtonNext, AppCompatImageView icSocial) {
@@ -33,10 +33,10 @@ public abstract class ItemSocialBinding extends ViewDataBinding {
     this.icSocial = icSocial;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemPeopleViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemSocialViewModel itemViewModel);
 
   @Nullable
-  public ItemPeopleViewModel getItemViewModel() {
+  public ItemSocialViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

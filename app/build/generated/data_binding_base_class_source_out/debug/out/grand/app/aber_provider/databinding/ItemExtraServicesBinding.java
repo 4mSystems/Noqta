@@ -9,8 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewRegular;
 import grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel;
@@ -19,23 +17,19 @@ import java.lang.Object;
 
 public abstract class ItemExtraServicesBinding extends ViewDataBinding {
   @NonNull
-  public final SwitchMaterial icSwitch;
+  public final CustomTextViewRegular price;
 
   @NonNull
-  public final MaterialCardView infoCard;
-
-  @NonNull
-  public final CustomTextViewRegular tvExtra;
+  public final CustomTextViewRegular tvName;
 
   @Bindable
   protected ItemCommentsViewModel mItemViewModel;
 
   protected ItemExtraServicesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      SwitchMaterial icSwitch, MaterialCardView infoCard, CustomTextViewRegular tvExtra) {
+      CustomTextViewRegular price, CustomTextViewRegular tvName) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.icSwitch = icSwitch;
-    this.infoCard = infoCard;
-    this.tvExtra = tvExtra;
+    this.price = price;
+    this.tvName = tvName;
   }
 
   public abstract void setItemViewModel(@Nullable ItemCommentsViewModel itemViewModel);
