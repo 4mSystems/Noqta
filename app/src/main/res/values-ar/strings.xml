@@ -256,15 +256,15 @@
     <string name="battery_size">حجم البطارية</string>
     <string name="remove">حذف</string>
     <string name="battery_type">نوع البطارية</string>
-    <string name="car_motor_number">ادخل رقم شاسية السيارة</string>
+    <string name="car_motor_number"> رقم شاسية السيارة</string>
     <string name="edit_account">تعديل الحساب</string>
     <string name="making_year">سنة الصنع</string>
     <string name="total_cost">السعر الكلي</string>
     <string name="water_gallwon_amount">عدد الجالونات</string>
     <string name="detail_user_phone">الجوال</string>
     <string name="water_amount">اختر عدد الليترات</string>
-    <string name="fuel_categories">اختر فئة الوقود</string>
-    <string name="fuel_type">اختر نوع الوقود</string>
+    <string name="fuel_categories"> فئة الوقود</string>
+    <string name="fuel_type"> نوع الوقود</string>
     <string name="hidden_percentage">اختر نسبة الإخفاء</string>
     <string name="company">شركات</string>
     <string name="edit_profile">تعديل حسابي</string>
@@ -274,14 +274,14 @@
     <string name="change_password">تغير كلمة المرور</string>
     <string name="personal_info">البيانات الشخصية</string>
     <string name="add_to_cart">أضف الي السلة</string>
-    <string name="hidden_type">اختر نوع المخفي</string>
+    <string name="hidden_type"> نوع المخفي</string>
     <string name="tv_rate_product">قيم المنتج</string>
     <string name="thirty_percentage">30 %</string>
     <string name="sex_percentage">60 %</string>
     <string name="full_percentage">100 %</string>
     <string name="additional_desc">مواصفات مطلوبة</string>
     <string name="share_app">مشاركة التطبيق</string>
-    <string name="oil_types">اختر نوع الزيت</string>
+    <string name="oil_types"> نوع الزيت</string>
     <string name="facebook_app_id">848381712702842</string>
     <string name="fb_login_protocol_scheme">fb848381712702842</string>
     <string name="option_dialog_delete">هل تريد الحذف ؟</string>
@@ -330,6 +330,9 @@
     <string name="emergency_services_cost">تكلفة الخدمة الطارئة</string>
     <string name="battery_image">صورة البطارية المرفقة</string>
     <string name="tier_image">صورة الإطار المرفقة</string>
+    <string name="license_civil_image_hint"> صورة رخصة القيادة</string>
     <string name="accept">قبول الطلب</string>
     <string name="reject">رفض الطلب</string>
+    <string name="oil_liguid">أرقام اللزوجة</string>
+    <string name="hidden_color">لون المخفي</string>
 </resources>

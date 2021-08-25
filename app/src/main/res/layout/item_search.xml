@@ -12,7 +12,7 @@
 
         <variable
             name="itemViewModel"
-            type="grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel" />
+            type="grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

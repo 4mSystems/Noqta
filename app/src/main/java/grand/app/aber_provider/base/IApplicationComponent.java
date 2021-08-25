@@ -21,7 +21,7 @@ import grand.app.aber_provider.pages.packages.PackagesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment;
 import grand.app.aber_provider.pages.onBoard.OnBoardFragment;
-import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment;
+import grand.app.aber_provider.pages.orderDetails.OrderDetailsFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;

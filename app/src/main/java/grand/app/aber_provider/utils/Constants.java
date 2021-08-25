@@ -170,11 +170,12 @@ public class Constants {
     public static final String FOLLOWER_ID = "follower_id";
     public static final String COMMENT_ID = "comment_id";
     //NOTIFICATIONS TYPES
-    public static final String POST_TYPE = "post";
-    public static final String COMMENT_TYPE = "comment";
-    public static final String ASK_TYPE = "ask";
-    public static final String REPLY_TYPE = "reply";
-    public static final String USER_TYPE = "user";
+    public static final String TIER = "tyre";
+    public static final String OIL = "oil";
+    public static final String HIDDEN = "glass";
+    public static final String FUEL = "fuel";
+    public static final String OPEN_CAR = "vehicle";
+    public static final String BATTERY = "battery";
 
 
 }

@@ -22,7 +22,7 @@ import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.ItemHomeBinding;
 import grand.app.aber_provider.pages.home.models.Orders;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
-import grand.app.aber_provider.pages.postDetails.OrderDetailsFragment;
+import grand.app.aber_provider.pages.orderDetails.OrderDetailsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 

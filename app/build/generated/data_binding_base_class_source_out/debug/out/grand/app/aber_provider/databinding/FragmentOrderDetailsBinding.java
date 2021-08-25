@@ -21,7 +21,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewMedium;
 import grand.app.aber_provider.customViews.views.CustomTextViewRegular;
-import grand.app.aber_provider.pages.postDetails.viewModels.OrderDetailsViewModel;
+import grand.app.aber_provider.pages.orderDetails.viewModels.OrderDetailsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -87,9 +87,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
   public final CardView cardService;
 
   @NonNull
-  public final CardView cardTier;
-
-  @NonNull
   public final CardView cardTime;
 
   @NonNull
@@ -144,9 +141,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvHomeJob;
 
   @NonNull
-  public final CustomTextViewMedium tvInvoice;
-
-  @NonNull
   public final CustomTextViewMedium tvPrice;
 
   @NonNull
@@ -166,9 +160,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewRegular tvServicesExtraPrice;
-
-  @NonNull
-  public final CustomTextViewMedium tvTier;
 
   @NonNull
   public final CustomTextViewMedium tvTotal;
@@ -205,19 +196,18 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
       CustomTextViewRegular carTypeValue, CardView cardBattery, CardView cardCarDesc,
       CardView cardDesc, CardView cardExtraService, CardView cardInvoice, CardView cardMainService,
       CardView cardOtherService, RelativeLayout cardPersonalInfo, CardView cardService,
-      CardView cardTier, CardView cardTime, CustomTextViewMedium extraService,
-      ConstraintLayout header, AppCompatImageView itemImg, AppCompatImageView itemTimeWarning,
+      CardView cardTime, CustomTextViewMedium extraService, ConstraintLayout header,
+      AppCompatImageView itemImg, AppCompatImageView itemTimeWarning,
       RoundedImageView locationImage, CustomTextViewMedium otherService,
       CustomTextViewMedium requiredServiceType, ConstraintLayout searchContainer,
       TextView textView2, CustomTextViewMedium tvBattery, CustomTextViewRegular tvDeliveryCost,
       CustomTextViewRegular tvDeliveryPrice, CustomTextViewRegular tvDeliveryTime,
       CustomTextViewRegular tvEmeCost, CustomTextViewRegular tvEmePrice,
-      CustomTextViewMedium tvHomeItem, CustomTextViewMedium tvHomeJob,
-      CustomTextViewMedium tvInvoice, CustomTextViewMedium tvPrice,
+      CustomTextViewMedium tvHomeItem, CustomTextViewMedium tvHomeJob, CustomTextViewMedium tvPrice,
       CustomTextViewMedium tvServiceDesc, CustomTextViewMedium tvServiceDescValue,
       CustomTextViewRegular tvServiceType, CustomTextViewRegular tvServicesCost,
       CustomTextViewRegular tvServicesExtraCost, CustomTextViewRegular tvServicesExtraPrice,
-      CustomTextViewMedium tvTier, CustomTextViewMedium tvTotal, CustomTextViewRegular tvTotalPrice,
+      CustomTextViewMedium tvTotal, CustomTextViewRegular tvTotalPrice,
       CustomTextViewRegular tvTotalServicesPrice, CircleImageView userProfileImg,
       View vDeliveryPrice, View vEmePrice, View vServicesExtraPrice, View vServicesPrice) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -241,7 +231,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
     this.cardOtherService = cardOtherService;
     this.cardPersonalInfo = cardPersonalInfo;
     this.cardService = cardService;
-    this.cardTier = cardTier;
     this.cardTime = cardTime;
     this.extraService = extraService;
     this.header = header;
@@ -260,7 +249,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
     this.tvEmePrice = tvEmePrice;
     this.tvHomeItem = tvHomeItem;
     this.tvHomeJob = tvHomeJob;
-    this.tvInvoice = tvInvoice;
     this.tvPrice = tvPrice;
     this.tvServiceDesc = tvServiceDesc;
     this.tvServiceDescValue = tvServiceDescValue;
@@ -268,7 +256,6 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
     this.tvServicesCost = tvServicesCost;
     this.tvServicesExtraCost = tvServicesExtraCost;
     this.tvServicesExtraPrice = tvServicesExtraPrice;
-    this.tvTier = tvTier;
     this.tvTotal = tvTotal;
     this.tvTotalPrice = tvTotalPrice;
     this.tvTotalServicesPrice = tvTotalServicesPrice;

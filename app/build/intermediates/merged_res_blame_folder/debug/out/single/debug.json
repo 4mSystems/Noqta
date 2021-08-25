@@ -416,6 +416,10 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_service.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_order_options_details.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_options_details.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_facebook.xml.flat",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_facebook.xml"
     },
@@ -622,10 +626,6 @@
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_chat.png.flat",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-hdpi\\ic_chat.png"
-    },
-    {
-        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_order_confirmed.xml.flat",
-        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_confirmed.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_countries.xml.flat",

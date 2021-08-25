@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewRegular;
-import grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel;
+import grand.app.aber_provider.pages.orderDetails.viewModels.ItemRequiredOrderServiceViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -20,22 +20,26 @@ public abstract class ItemRequiredServiceBinding extends ViewDataBinding {
   public final CustomTextViewRegular tvName;
 
   @NonNull
+  public final CustomTextViewRegular tvPrice;
+
+  @NonNull
   public final View vChoosenOrder;
 
   @Bindable
-  protected ItemCommentsViewModel mItemViewModel;
+  protected ItemRequiredOrderServiceViewModel mItemViewModel;
 
   protected ItemRequiredServiceBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular tvName, View vChoosenOrder) {
+      CustomTextViewRegular tvName, CustomTextViewRegular tvPrice, View vChoosenOrder) {
     super(_bindingComponent, _root, _localFieldCount);
     this.tvName = tvName;
+    this.tvPrice = tvPrice;
     this.vChoosenOrder = vChoosenOrder;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemCommentsViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemRequiredOrderServiceViewModel itemViewModel);
 
   @Nullable
-  public ItemCommentsViewModel getItemViewModel() {
+  public ItemRequiredOrderServiceViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

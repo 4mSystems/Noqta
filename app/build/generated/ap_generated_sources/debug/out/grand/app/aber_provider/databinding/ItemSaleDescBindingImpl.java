@@ -64,7 +64,7 @@ public class ItemSaleDescBindingImpl extends ItemSaleDescBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel) variable);
+            setItemViewModel((grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel) variable);
         }
         else {
             variableSet = false;
@@ -72,7 +72,7 @@ public class ItemSaleDescBindingImpl extends ItemSaleDescBinding  {
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel ItemViewModel) {
         this.mItemViewModel = ItemViewModel;
     }
 
@@ -80,11 +80,11 @@ public class ItemSaleDescBindingImpl extends ItemSaleDescBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel) object, fieldId);
+                return onChangeItemViewModel((grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;

@@ -17,7 +17,7 @@ import grand.app.aber_provider.pages.home.models.HomeResponse;
 import grand.app.aber_provider.pages.home.models.ReactPostRequest;
 import grand.app.aber_provider.pages.packages.models.PackagesResponse;
 import grand.app.aber_provider.pages.packages.models.RequestToSend;
-import grand.app.aber_provider.pages.postDetails.models.OrderDetailsResponse;
+import grand.app.aber_provider.pages.orderDetails.models.OrderDetailsResponse;
 import grand.app.aber_provider.pages.profile.models.FollowersResponse;
 import grand.app.aber_provider.pages.profile.models.UserActionRequest;
 import grand.app.aber_provider.pages.profile.models.profile.UserProfileResponse;

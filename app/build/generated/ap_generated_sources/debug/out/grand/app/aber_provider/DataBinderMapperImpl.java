@@ -41,8 +41,8 @@ import grand.app.aber_provider.databinding.ItemCountryBindingImpl;
 import grand.app.aber_provider.databinding.ItemExtraServicesBindingImpl;
 import grand.app.aber_provider.databinding.ItemFavoriteBindingImpl;
 import grand.app.aber_provider.databinding.ItemHomeBindingImpl;
-import grand.app.aber_provider.databinding.ItemOrderConfirmedBindingImpl;
 import grand.app.aber_provider.databinding.ItemOrderDetailBindingImpl;
+import grand.app.aber_provider.databinding.ItemOrderOptionsDetailsBindingImpl;
 import grand.app.aber_provider.databinding.ItemOrderServiceBindingImpl;
 import grand.app.aber_provider.databinding.ItemPackageBindingImpl;
 import grand.app.aber_provider.databinding.ItemPartServiceBindingImpl;
@@ -141,9 +141,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMHOME = 35;
 
-  private static final int LAYOUT_ITEMORDERCONFIRMED = 36;
+  private static final int LAYOUT_ITEMORDERDETAIL = 36;
 
-  private static final int LAYOUT_ITEMORDERDETAIL = 37;
+  private static final int LAYOUT_ITEMORDEROPTIONSDETAILS = 37;
 
   private static final int LAYOUT_ITEMORDERSERVICE = 38;
 
@@ -217,8 +217,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_extra_services, LAYOUT_ITEMEXTRASERVICES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_favorite, LAYOUT_ITEMFAVORITE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_home, LAYOUT_ITEMHOME);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_order_confirmed, LAYOUT_ITEMORDERCONFIRMED);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_order_detail, LAYOUT_ITEMORDERDETAIL);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_order_options_details, LAYOUT_ITEMORDEROPTIONSDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_order_service, LAYOUT_ITEMORDERSERVICE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_package, LAYOUT_ITEMPACKAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_part_service, LAYOUT_ITEMPARTSERVICE);
@@ -451,17 +451,17 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_home is invalid. Received: " + tag);
       }
-      case  LAYOUT_ITEMORDERCONFIRMED: {
-        if ("layout/item_order_confirmed_0".equals(tag)) {
-          return new ItemOrderConfirmedBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for item_order_confirmed is invalid. Received: " + tag);
-      }
       case  LAYOUT_ITEMORDERDETAIL: {
         if ("layout/item_order_detail_0".equals(tag)) {
           return new ItemOrderDetailBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for item_order_detail is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMORDEROPTIONSDETAILS: {
+        if ("layout/item_order_options_details_0".equals(tag)) {
+          return new ItemOrderOptionsDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_order_options_details is invalid. Received: " + tag);
       }
       case  LAYOUT_ITEMORDERSERVICE: {
         if ("layout/item_order_service_0".equals(tag)) {
@@ -638,53 +638,57 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(44);
+    static final SparseArray<String> sKeys = new SparseArray<String>(48);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "comments");
+      sKeys.put(3, "childServices");
       sKeys.put(4, "contact");
       sKeys.put(5, "contactsAdapter");
       sKeys.put(6, "countriesAdapter");
       sKeys.put(7, "countriesData");
-      sKeys.put(8, "followersAdapter");
-      sKeys.put(9, "historyWalletData");
-      sKeys.put(10, "itemOrderViewModel");
-      sKeys.put(11, "itemPostViewModel");
-      sKeys.put(12, "itemViewModel");
-      sKeys.put(13, "itemWalletViewModel");
-      sKeys.put(14, "mainData");
-      sKeys.put(15, "mainFollowersData");
-      sKeys.put(16, "mapAddressViewModel");
-      sKeys.put(17, "menuViewModel");
-      sKeys.put(18, "message");
-      sKeys.put(19, "notificationsAdapter");
-      sKeys.put(20, "notificationsData");
-      sKeys.put(21, "notifyItemViewModels");
-      sKeys.put(22, "notifyViewModel");
-      sKeys.put(23, "onBoardAdapter");
-      sKeys.put(24, "onBoardViewModels");
-      sKeys.put(25, "orderAdapter");
-      sKeys.put(26, "orderDetailsMain");
-      sKeys.put(27, "orders");
-      sKeys.put(28, "packagesAdapter");
-      sKeys.put(29, "packagesData");
-      sKeys.put(30, "passingObject");
-      sKeys.put(31, "peopleData");
-      sKeys.put(32, "postsAdapter");
-      sKeys.put(33, "questionedPostsAdapter");
-      sKeys.put(34, "raiseWalletRequest");
-      sKeys.put(35, "reportData");
-      sKeys.put(36, "reportReasonsAdapter");
-      sKeys.put(37, "socialAdapter");
-      sKeys.put(38, "socialMediaData");
-      sKeys.put(39, "userDocuments");
-      sKeys.put(40, "userProfile");
-      sKeys.put(41, "viewModel");
-      sKeys.put(42, "viewmodel");
-      sKeys.put(43, "walletHistoryItem");
+      sKeys.put(8, "extraRequiredAdapter");
+      sKeys.put(9, "followersAdapter");
+      sKeys.put(10, "historyWalletData");
+      sKeys.put(11, "itemOrderViewModel");
+      sKeys.put(12, "itemPostViewModel");
+      sKeys.put(13, "itemViewModel");
+      sKeys.put(14, "itemWalletViewModel");
+      sKeys.put(15, "mainData");
+      sKeys.put(16, "mainFollowersData");
+      sKeys.put(17, "mapAddressViewModel");
+      sKeys.put(18, "menuViewModel");
+      sKeys.put(19, "message");
+      sKeys.put(20, "notificationsAdapter");
+      sKeys.put(21, "notificationsData");
+      sKeys.put(22, "notifyItemViewModels");
+      sKeys.put(23, "notifyViewModel");
+      sKeys.put(24, "onBoardAdapter");
+      sKeys.put(25, "onBoardViewModels");
+      sKeys.put(26, "optionsDetailsAdapter");
+      sKeys.put(27, "orderAdapter");
+      sKeys.put(28, "orderDetailsMain");
+      sKeys.put(29, "orders");
+      sKeys.put(30, "packagesAdapter");
+      sKeys.put(31, "packagesData");
+      sKeys.put(32, "passingObject");
+      sKeys.put(33, "peopleData");
+      sKeys.put(34, "postsAdapter");
+      sKeys.put(35, "questionedPostsAdapter");
+      sKeys.put(36, "raiseWalletRequest");
+      sKeys.put(37, "reportData");
+      sKeys.put(38, "reportReasonsAdapter");
+      sKeys.put(39, "service");
+      sKeys.put(40, "servicesRequiredAdapter");
+      sKeys.put(41, "socialAdapter");
+      sKeys.put(42, "socialMediaData");
+      sKeys.put(43, "userDocuments");
+      sKeys.put(44, "userProfile");
+      sKeys.put(45, "viewModel");
+      sKeys.put(46, "viewmodel");
+      sKeys.put(47, "walletHistoryItem");
     }
   }
 
@@ -727,8 +731,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_extra_services_0", grand.app.aber_provider.R.layout.item_extra_services);
       sKeys.put("layout/item_favorite_0", grand.app.aber_provider.R.layout.item_favorite);
       sKeys.put("layout/item_home_0", grand.app.aber_provider.R.layout.item_home);
-      sKeys.put("layout/item_order_confirmed_0", grand.app.aber_provider.R.layout.item_order_confirmed);
       sKeys.put("layout/item_order_detail_0", grand.app.aber_provider.R.layout.item_order_detail);
+      sKeys.put("layout/item_order_options_details_0", grand.app.aber_provider.R.layout.item_order_options_details);
       sKeys.put("layout/item_order_service_0", grand.app.aber_provider.R.layout.item_order_service);
       sKeys.put("layout/item_package_0", grand.app.aber_provider.R.layout.item_package);
       sKeys.put("layout/item_part_service_0", grand.app.aber_provider.R.layout.item_part_service);

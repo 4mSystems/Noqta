@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewRegular;
-import grand.app.aber_provider.pages.postDetails.viewModels.ItemCommentsViewModel;
+import grand.app.aber_provider.pages.orderDetails.viewModels.ItemChildServiceViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -23,7 +23,7 @@ public abstract class ItemExtraServicesBinding extends ViewDataBinding {
   public final CustomTextViewRegular tvName;
 
   @Bindable
-  protected ItemCommentsViewModel mItemViewModel;
+  protected ItemChildServiceViewModel mItemViewModel;
 
   protected ItemExtraServicesBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular price, CustomTextViewRegular tvName) {
@@ -32,10 +32,10 @@ public abstract class ItemExtraServicesBinding extends ViewDataBinding {
     this.tvName = tvName;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemCommentsViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemChildServiceViewModel itemViewModel);
 
   @Nullable
-  public ItemCommentsViewModel getItemViewModel() {
+  public ItemChildServiceViewModel getItemViewModel() {
     return mItemViewModel;
   }
 
