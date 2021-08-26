@@ -14,7 +14,8 @@ import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.home.models.NewPostRequest;
 import grand.app.aber_provider.pages.home.models.NewPostResponse;
 import grand.app.aber_provider.pages.home.models.HomeResponse;
-import grand.app.aber_provider.pages.home.models.ReactPostRequest;
+import grand.app.aber_provider.pages.home.models.OrderStatusRequest;
+import grand.app.aber_provider.pages.myOrders.models.MyOrdersResponse;
 import grand.app.aber_provider.pages.packages.models.PackagesResponse;
 import grand.app.aber_provider.pages.packages.models.RequestToSend;
 import grand.app.aber_provider.pages.orderDetails.models.OrderDetailsResponse;
@@ -60,13 +61,13 @@ public class ServicesRepository extends BaseRepository {
     }
 
 
-    public Disposable createPost(NewPostRequest newPostRequest, List<FileObject> fileObjects) {
-        if (fileObjects.size() == 0)
-            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.HOME, newPostRequest, NewPostResponse.class,
-                    Constants.NEW_POST, false);
+    public Disposable myOrders(int page, boolean showProgress, int orderType) {
+        if (orderType == Constants.CURRENT)
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_CURRENT_ORDERS + page, new Object(), MyOrdersResponse.class,
+                    Constants.MY_ORDERS, showProgress);
         else
-            return connectionHelper.requestApi(URLS.HOME, newPostRequest, fileObjects, NewPostResponse.class,
-                    Constants.NEW_POST, false);
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_LAST_ORDERS + page, new Object(), MyOrdersResponse.class,
+                    Constants.MY_ORDERS, showProgress);
     }
 
     public Disposable createLive(NewPostRequest newPostRequest, List<FileObject> fileObjects) {
@@ -119,11 +120,17 @@ public class ServicesRepository extends BaseRepository {
 
     public Disposable sharePost(int postId) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SHARE_POST, new NewPostRequest(String.valueOf(postId)), StatusMessage.class,
-                Constants.SHARE_POST, true);
+                Constants.REJECT_ORDER, true);
     }
 
-    public Disposable reactPost(int postId, String reactType) {
-        return connectionHelper.requestApiBackground(Constants.POST_REQUEST, URLS.REACT_POST, new ReactPostRequest(postId, reactType));
+    public Disposable changeStatus(int orderId, int status) {
+        if (status == -1)
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REJECT_ORDER, new OrderStatusRequest(orderId, null), StatusMessage.class,
+                    Constants.REJECT_ORDER, true);
+        else
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_STATUS, new OrderStatusRequest(orderId, String.valueOf(status)), StatusMessage.class,
+                    Constants.CHANGE_ORDER_STATUS, true);
+
     }
 
     public Disposable search(int page, boolean showProgress, String search, String type) {
@@ -163,7 +170,7 @@ public class ServicesRepository extends BaseRepository {
 
     public Disposable changeFollowStatus(UserActionRequest actionRequest, String url) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, url, actionRequest, StatusMessage.class,
-                Constants.FOLLOW, true);
+                Constants.FOLLOW_ORDER, true);
     }
 
     public Disposable seeFirst(UserActionRequest actionRequest) {

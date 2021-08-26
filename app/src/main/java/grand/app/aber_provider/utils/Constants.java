@@ -4,7 +4,7 @@ public class Constants {
 
     public static final String BAN_USER = "BAN_USER";
     public static final String FOLLOWERS = "FOLLOWERS";
-    public static final String FOLLOW = "FOLLOW";
+    public static final String FOLLOW_ORDER = "FOLLOW_ORDER";
     public static final String CANCEL_FOLLOWER = "CANCEL_FOLLOWER";
     public final static String CANCEL_FOLLOWING = "CANCEL_FOLLOWING";
     public static final String CITIES = "CITIES";
@@ -21,15 +21,15 @@ public class Constants {
     public final static String FIELD = "FIELD";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
     public static final String GET_CONTACT = "GET_CONTACT";
-    public static final String LIKE = "LIKE";
+    public static final int CURRENT = 0;
+    public static final int LAST = 1;
     public static final String COMMENT = "COMMENT";
 
     public final static String UPDATE_PROFILE = "update_profile";
-    public static final int RC_SIGN_IN = 175;
 
 
     public final static String IMAGE = "image";
-    public final static String FILE = "file";
+    public final static String MY_ORDERS = "MY_ORDERS";
     public final static String HOME = "HOME";
     public final static String BACKGROUND_API = "BACKGROUND_API";
 
@@ -64,8 +64,8 @@ public class Constants {
     public static final String POST_REACTS = "POST_REACTS";
     public static final String PLAY_VIDEO = "PLAY_VIDEO";
     public static final String HIDE_POST = "HIDE_POST";
-    public static final String SHARE_POST = "SHARE_POST";
-    public static final String OPTIONS = "OPTIONS";
+    public static final String REJECT_ORDER = "REJECT_ORDER";
+    public static final String CHANGE_ORDER_STATUS = "CHANGE_ORDER_STATUS";
     public static final String DELETE_COMMENT = "DELETE_COMMENT";
     public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
     public static final String SHARE_BAR = "SHARE_BAR";
@@ -133,8 +133,7 @@ public class Constants {
     public static final String MORE = "MORE";
     public static final String RATE_APP = "RATE_APP";
     public static final String SOCIAL = "SOCIAL";
-    public static final int SHOW_CURVE = 1;
-    public static final String MEDIA = "MEDIA";
+    public static final String WALLET = "WALLET";
     public static final String SEE_FIRST = "SEE_FIRST";
     public static final String INSTURCTOR = "INSTURCTOR";
     public static final String WITH_DROW = "WITH_DROW";

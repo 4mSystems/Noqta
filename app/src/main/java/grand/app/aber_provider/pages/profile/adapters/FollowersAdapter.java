@@ -57,9 +57,6 @@ public class FollowersAdapter extends RecyclerView.Adapter<FollowersAdapter.Menu
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
         UserData menuModel = userDataList.get(position);
-        menuModel.setFollowVisible(isFollowVisible);
-        if (!TextUtils.isEmpty(followBtnText))
-            menuModel.setFollowBtnText(followBtnText);
         ItemPeopleViewModel itemMenuViewModel = new ItemPeopleViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();

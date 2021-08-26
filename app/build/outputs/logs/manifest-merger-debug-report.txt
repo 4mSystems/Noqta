@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\653c0f946c5315008bbf10455b56778e\databinding-adapters-4.1.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\718c4683e1aa43a9f8d30ed4fc22f412\databinding-runtime-4.1.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\ee4b9d7c82c7c791fbf1c29863d4e493\jetified-Oops-No-Internet-v1.1.2\AndroidManifest.xml:2:1-14:12
@@ -23,6 +23,7 @@ MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.grad
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f4a5e08fb7f764a99012c221fe5833d1\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a11970503541389f40776e20113dfc04\jetified-rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\77290043613468def68e5e044f03f25c\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.github.jd-alexander:library:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4609c8230b6eb1648539b666a5d1d506\jetified-library-1.1.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fd0441406d33cf8496f2cae013546030\jetified-play-services-auth-19.2.0\AndroidManifest.xml:17:1-40:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\87bcf39571d4d5f382fcd2a385003fd9\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -119,22 +120,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\MAymanM
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f9fdcbd507130267461cce88aa01168e\jetified-dagger-lint-aar-2.30.1\AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4fe06c63905161105066054087f58872\jetified-volley-1.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\111198091f9267e6cfc506566567aa7f\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
-INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
+INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
 	package
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:4:5-38
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-95:12
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:1-103:12
 		INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:2:11-69
@@ -237,7 +238,7 @@ ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:20:5
 	android:name
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:20:22-74
 application
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:22:5-93:19
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:22:5-101:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\0f12eff98186791d169dd8720173cce0\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\0f12eff98186791d169dd8720173cce0\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\1256201b925291c10163ce61c277858a\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -256,6 +257,8 @@ MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.grad
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:29:5-50:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\77290043613468def68e5e044f03f25c\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\77290043613468def68e5e044f03f25c\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.jd-alexander:library:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4609c8230b6eb1648539b666a5d1d506\jetified-library-1.1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.github.jd-alexander:library:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4609c8230b6eb1648539b666a5d1d506\jetified-library-1.1.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fd0441406d33cf8496f2cae013546030\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
@@ -396,90 +399,106 @@ ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:44:9
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:46:13-52
 	android:name
 		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:45:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:47:9-49:50
+	android:value
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:49:13-47
+	android:name
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:48:13-58
 activity#com.facebook.FacebookActivity
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:48:9-51:48
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:50:9-53:48
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
 	android:label
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:51:13-45
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:53:13-45
 	android:configChanges
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:50:13-96
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:52:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:49:13-57
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:51:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:52:9-63:20
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:54:9-65:20
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
 	tools:node
 		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\df4b690d71f548262528151e57545aa4\jetified-facebook-common-5.15.3\AndroidManifest.xml:38:13-31
 	android:exported
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:54:13-36
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:56:13-36
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:53:13-58
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:55:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:55:13-62:29
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:57:13-64:29
 action#android.intent.action.VIEW
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:56:17-69
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:58:17-69
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:56:25-66
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:58:25-66
 category#android.intent.category.DEFAULT
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:58:17-76
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:60:17-76
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:58:27-73
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:60:27-73
 category#android.intent.category.BROWSABLE
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:59:17-78
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:61:17-78
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:59:27-75
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:61:27-75
 data
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:61:17-75
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:63:17-75
 	android:scheme
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:61:23-72
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:63:23-72
+activity#grand.app.aber_provider.utils.locations.MapAddressActivity
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:66:9-70:70
+	android:screenOrientation
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:69:13-49
+	android:windowSoftInputMode
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:70:13-67
+	android:configChanges
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:68:13-74
+	android:name
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:67:13-86
 activity#grand.app.aber_provider.activity.MainActivity
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:64:9-68:57
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:72:9-76:57
 	android:screenOrientation
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:75:13-49
 	android:windowSoftInputMode
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:68:13-54
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:76:13-54
 	android:configChanges
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:66:13-74
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:74:13-74
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:65:13-73
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:73:13-73
 activity#grand.app.aber_provider.activity.BaseActivity
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:70:9-81:20
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:78:9-89:20
 	android:screenOrientation
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:73:13-49
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:81:13-49
 	android:windowSoftInputMode
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:74:13-54
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:82:13-54
 	android:configChanges
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:72:13-74
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:80:13-74
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:71:13-73
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:79:13-73
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:75:13-80:29
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:83:13-88:29
 action#android.intent.action.MAIN
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:76:17-69
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:84:17-69
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:76:25-66
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:84:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:79:17-77
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:87:17-77
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:79:27-74
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:87:27-74
 service#grand.app.aber_provider.base.MyFirebaseMessagingService
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:84:9-91:19
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:92:9-99:19
 	android:exported
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:86:13-36
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:94:13-36
 	tools:ignore
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:87:13-43
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:95:13-43
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:85:13-83
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:93:13-83
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:88:13-90:29
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:96:13-98:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:89:17-78
+ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:97:17-78
 	android:name
-		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:89:25-75
+		ADDED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml:97:25-75
 uses-sdk
 INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\mostafa elnagar\AberProvider\app\src\main\AndroidManifest.xml
@@ -522,6 +541,8 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\MAymanM\.gradle\cach
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a11970503541389f40776e20113dfc04\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\77290043613468def68e5e044f03f25c\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\77290043613468def68e5e044f03f25c\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.jd-alexander:library:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4609c8230b6eb1648539b666a5d1d506\jetified-library-1.1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.jd-alexander:library:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4609c8230b6eb1648539b666a5d1d506\jetified-library-1.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d6b11143e62e615652031de30c6a3df4\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\fd0441406d33cf8496f2cae013546030\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44

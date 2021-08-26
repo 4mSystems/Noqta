@@ -22,9 +22,9 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
     private final grand.app.aber_provider.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
-    @Nullable
     private final android.view.View.OnClickListener mCallback50;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,8 +45,8 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback50 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback50 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -147,8 +147,8 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback50);
-            this.mboundView0.setOnClickListener(mCallback49);
+            this.appCompatButtonNext.setOnClickListener(mCallback51);
+            this.mboundView0.setOnClickListener(mCallback50);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

@@ -27,7 +27,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     @Nullable
     private final android.view.View.OnClickListener mCallback58;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback59;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,8 +51,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback57 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback59 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -156,8 +156,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.locationSearch.setOnClickListener(mCallback57);
-            this.mboundView3.setOnClickListener(mCallback58);
+            this.locationSearch.setOnClickListener(mCallback58);
+            this.mboundView3.setOnClickListener(mCallback59);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -169,23 +169,6 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // mapAddressViewModel
-                grand.app.aber_provider.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
-                // mapAddressViewModel != null
-                boolean mapAddressViewModelJavaLangObjectNull = false;
-
-
-
-                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
-                if (mapAddressViewModelJavaLangObjectNull) {
-
-
-                    mapAddressViewModel.submit();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // mapAddressViewModel
@@ -200,6 +183,23 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
 
 
                     mapAddressViewModel.toSearchPlace();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // mapAddressViewModel
+                grand.app.aber_provider.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
+                // mapAddressViewModel != null
+                boolean mapAddressViewModelJavaLangObjectNull = false;
+
+
+
+                mapAddressViewModelJavaLangObjectNull = (mapAddressViewModel) != (null);
+                if (mapAddressViewModelJavaLangObjectNull) {
+
+
+                    mapAddressViewModel.submit();
                 }
                 break;
             }

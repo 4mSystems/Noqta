@@ -18,6 +18,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.auth.countries.CitiesFragment;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
+import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
 import grand.app.aber_provider.pages.settings.LangFragment;
@@ -31,7 +32,6 @@ public class NavigationDrawerView extends RelativeLayout {
     public MutableLiveData<Mutable> liveData;
     public MenuBinding layoutNavigationDrawerBinding;
     AppCompatActivity context;
-    HomeActionBarView homeActionBarView;
     public MenuViewModel menuViewModel;
 
     public NavigationDrawerView(AppCompatActivity context) {
@@ -62,10 +62,6 @@ public class NavigationDrawerView extends RelativeLayout {
         setEvents();
     }
 
-    public void setActionBar(HomeActionBarView homeActionBarView) {
-        this.homeActionBarView = homeActionBarView;
-    }
-
     private void setEvents() {
         menuViewModel.getLiveData().observe(context, o -> {
             ((MainActivity) context).menuBuilder.closeMenu(true);
@@ -91,6 +87,13 @@ public class NavigationDrawerView extends RelativeLayout {
                 case Constants.LANGUAGE:
                     MovementHelper.startActivity(context, LangFragment.class.getName(), ResourceManager.getString(R.string.lang), null);
                     break;
+                case Constants.MY_ORDERS:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CURRENT), ResourceManager.getString(R.string.current), MyServicesOrdersFragment.class.getName(), null);
+                    break;
+                case Constants.PREVIOUS:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.LAST), ResourceManager.getString(R.string.previous), MyServicesOrdersFragment.class.getName(), null);
+                    break;
+
             }
         });
     }

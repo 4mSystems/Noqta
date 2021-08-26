@@ -66,7 +66,7 @@
     <string name="register_city_hint">  المدينة</string>
     <string name="street">اسم الشارع</string>
     <string name="add">أضافة</string>
-    <string name="wallet_balance">app_wallet</string>
+    <string name="wallet_balance">رصيد المحفظة</string>
     <string name="put_wallet_balance">أضف المبلغ</string>
     <string name="charge_app_wallet_btn_text">شحن المحفظة</string>
     <string name="commercial_hint">السجل التجارى</string>
@@ -183,7 +183,7 @@
     <string name="confirm_chat_options">طلب تأكيد من العميل</string>
     <string name="cancel">رجوع</string>
     <string name="image_selected">تم اختيار الصورة بنجاح ,اضغط للارسال</string>
-    <string name="on_way">في الطريق</string>
+    <string name="on_way">تم التحرك الى موقع العميل</string>
     <string name="follow_market_line_on_way_to_get_order">في الطريق لإستلام الشحنة</string>
     <string name="market_order_processing">في الطريق إلي مكان المعالجة</string>
     <string name="market_order_done_processing">تمت المعالجة</string>
@@ -227,7 +227,7 @@
     <string name="my_orders">طلباتي</string>
     <string name="choose_location">تحديد العنوان</string>
     <string name="order_finished">تم تنفيذ الخدمة</string>
-    <string name="order_arrived">تم الوصول</string>
+    <string name="order_arrived"> الوصول</string>
     <string name="detect_location_btn">تحديد موقعك الحالي</string>
     <string name="location_search_activity_hint">بحث عن موقع</string>
     <string name="order_accepted">تم قبول طلبك</string>
@@ -335,4 +335,7 @@
     <string name="reject">رفض الطلب</string>
     <string name="oil_liguid">أرقام اللزوجة</string>
     <string name="hidden_color">لون المخفي</string>
+    <string name="user_location">تتبع العميل</string>
+    <string name="wallet_history_1">تم إضافة</string>
+    <string name="wallet_history_2">لإلغاء الطلب بعد التحرك</string>
 </resources>

@@ -23,13 +23,10 @@ import grand.app.aber_provider.pages.appWallet.viewModels.ItemAppWalletHistoryVi
 public class AppWalletAdapter extends RecyclerView.Adapter<AppWalletAdapter.MenuView> {
     List<WalletHistoryItem> walletHistoryItemList;
     Context context;
+    String balance;
 
     public AppWalletAdapter() {
         this.walletHistoryItemList = new ArrayList<>();
-    }
-
-    public List<WalletHistoryItem> getWalletHistoryItemList() {
-        return walletHistoryItemList;
     }
 
     @NonNull
@@ -45,12 +42,14 @@ public class AppWalletAdapter extends RecyclerView.Adapter<AppWalletAdapter.Menu
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
         WalletHistoryItem menuModel = walletHistoryItemList.get(position);
+        menuModel.setBalance(balance);
         ItemAppWalletHistoryViewModel itemMenuViewModel = new ItemAppWalletHistoryViewModel(menuModel);
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<WalletHistoryItem> dataList) {
+    public void update(List<WalletHistoryItem> dataList, String balance) {
+        this.balance = balance;
         this.walletHistoryItemList.clear();
         walletHistoryItemList.addAll(dataList);
         notifyDataSetChanged();

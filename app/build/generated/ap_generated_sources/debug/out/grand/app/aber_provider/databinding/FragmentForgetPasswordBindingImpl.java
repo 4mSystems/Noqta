@@ -28,11 +28,11 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback57;
+    @Nullable
     private final android.view.View.OnClickListener mCallback55;
     @Nullable
     private final android.view.View.OnClickListener mCallback56;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback54;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -100,9 +100,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback56 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback54 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback57 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback55 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback56 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -298,10 +298,10 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback55);
-            this.back.setOnClickListener(mCallback54);
+            this.appCompatButtonNext.setOnClickListener(mCallback56);
+            this.back.setOnClickListener(mCallback55);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback56);
+            this.tvLoginForget.setOnClickListener(mCallback57);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -313,23 +313,6 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendCode();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -363,6 +346,23 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendCode();
                 }
                 break;
             }

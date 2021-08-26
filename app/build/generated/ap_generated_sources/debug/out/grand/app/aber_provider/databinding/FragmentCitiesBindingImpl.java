@@ -23,7 +23,7 @@ public class FragmentCitiesBindingImpl extends FragmentCitiesBinding implements 
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback49;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentCitiesBindingImpl extends FragmentCitiesBinding implements 
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback48 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback49 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,7 +134,7 @@ public class FragmentCitiesBindingImpl extends FragmentCitiesBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback48);
+            this.appCompatButtonNext.setOnClickListener(mCallback49);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

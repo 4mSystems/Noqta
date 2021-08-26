@@ -13,11 +13,7 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.item_wallet_type, 1);
-        sViewsWithIds.put(R.id.item_wallet_code, 2);
-        sViewsWithIds.put(R.id.item_wallet_date, 3);
-        sViewsWithIds.put(R.id.item_balance_money, 4);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -37,6 +33,10 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[3]
             , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
             );
+        this.itemBalanceMoney.setTag(null);
+        this.itemWalletCode.setTag(null);
+        this.itemWalletDate.setTag(null);
+        this.itemWalletType.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
@@ -47,7 +47,7 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -75,7 +75,13 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
     }
 
     public void setItemWalletViewModel(@Nullable grand.app.aber_provider.pages.appWallet.viewModels.ItemAppWalletHistoryViewModel ItemWalletViewModel) {
+        updateRegistration(0, ItemWalletViewModel);
         this.mItemWalletViewModel = ItemWalletViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemWalletViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -93,6 +99,12 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.walletHistoryItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -103,7 +115,102 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.aber_provider.pages.appWallet.viewModels.ItemAppWalletHistoryViewModel itemWalletViewModel = mItemWalletViewModel;
+        java.lang.String itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangString = null;
+        java.lang.String textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalanceItemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrencyJavaLangString = null;
+        java.lang.String itemWalletViewModelCurrency = null;
+        java.lang.String itemWalletViewModelTitle = null;
+        boolean textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance = false;
+        grand.app.aber_provider.pages.appWallet.models.WalletHistoryItem itemWalletViewModelWalletHistoryItem = null;
+        java.lang.String stringValueOfItemWalletViewModelWalletHistoryItemId = null;
+        boolean TextUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance1 = false;
+        java.lang.String itemWalletViewModelWalletHistoryItemUpdatedAt = null;
+        int itemWalletViewModelWalletHistoryItemId = 0;
+        java.lang.String itemWalletViewModelWalletHistoryItemBalance = null;
+        java.lang.String itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrency = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemWalletViewModel != null) {
+                        // read itemWalletViewModel.title
+                        itemWalletViewModelTitle = itemWalletViewModel.title;
+                    }
+            }
+
+                if (itemWalletViewModel != null) {
+                    // read itemWalletViewModel.walletHistoryItem
+                    itemWalletViewModelWalletHistoryItem = itemWalletViewModel.getWalletHistoryItem();
+                }
+
+
+                if (itemWalletViewModelWalletHistoryItem != null) {
+                    // read itemWalletViewModel.walletHistoryItem.updatedAt
+                    itemWalletViewModelWalletHistoryItemUpdatedAt = itemWalletViewModelWalletHistoryItem.getUpdatedAt();
+                    // read itemWalletViewModel.walletHistoryItem.id
+                    itemWalletViewModelWalletHistoryItemId = itemWalletViewModelWalletHistoryItem.getId();
+                    // read itemWalletViewModel.walletHistoryItem.balance
+                    itemWalletViewModelWalletHistoryItemBalance = itemWalletViewModelWalletHistoryItem.getBalance();
+                }
+
+
+                // read String.valueOf(itemWalletViewModel.walletHistoryItem.id)
+                stringValueOfItemWalletViewModelWalletHistoryItemId = java.lang.String.valueOf(itemWalletViewModelWalletHistoryItemId);
+                // read TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance)
+                textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance = android.text.TextUtils.isEmpty(itemWalletViewModelWalletHistoryItemBalance);
+
+
+                // read !TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance)
+                TextUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance1 = !textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance;
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance1) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+        }
         // batch finished
+
+        if ((dirtyFlags & 0x10L) != 0) {
+
+                if (itemWalletViewModelWalletHistoryItemBalance != null) {
+                    // read itemWalletViewModel.walletHistoryItem.balance.concat(" ")
+                    itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangString = itemWalletViewModelWalletHistoryItemBalance.concat(" ");
+                }
+                if (itemWalletViewModel != null) {
+                    // read itemWalletViewModel.currency
+                    itemWalletViewModelCurrency = itemWalletViewModel.currency;
+                }
+
+
+                if (itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangString != null) {
+                    // read itemWalletViewModel.walletHistoryItem.balance.concat(" ").concat(itemWalletViewModel.currency)
+                    itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrency = itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangString.concat(itemWalletViewModelCurrency);
+                }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read !TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance) ? itemWalletViewModel.walletHistoryItem.balance.concat(" ").concat(itemWalletViewModel.currency) : ""
+                textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalanceItemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrencyJavaLangString = ((TextUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalance1) ? (itemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrency) : (""));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.itemBalanceMoney, textUtilsIsEmptyItemWalletViewModelWalletHistoryItemBalanceItemWalletViewModelWalletHistoryItemBalanceConcatJavaLangStringConcatItemWalletViewModelCurrencyJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.itemWalletCode, stringValueOfItemWalletViewModelWalletHistoryItemId);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.itemWalletDate, itemWalletViewModelWalletHistoryItemUpdatedAt);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.itemWalletType, itemWalletViewModelTitle);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -111,7 +218,10 @@ public class ItemWalletHistoryBindingImpl extends ItemWalletHistoryBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemWalletViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemWalletViewModel.walletHistoryItem
+        flag 2 (0x3L): null
+        flag 3 (0x4L): !TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance) ? itemWalletViewModel.walletHistoryItem.balance.concat(" ").concat(itemWalletViewModel.currency) : ""
+        flag 4 (0x5L): !TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance) ? itemWalletViewModel.walletHistoryItem.balance.concat(" ").concat(itemWalletViewModel.currency) : ""
     flag mapping end*/
     //end
 }

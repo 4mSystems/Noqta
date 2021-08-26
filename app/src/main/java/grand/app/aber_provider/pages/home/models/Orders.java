@@ -16,6 +16,10 @@ public class Orders {
     private String scheduledAt;
     @SerializedName("address")
     private String address;
+    @SerializedName("total")
+    private String total;
+    @SerializedName("acceptance_period")
+    private String acceptancePeriod;
 
     public int getId() {
         return id;
@@ -39,5 +43,13 @@ public class Orders {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public String getAcceptancePeriod() {
+        return acceptancePeriod;
     }
 }

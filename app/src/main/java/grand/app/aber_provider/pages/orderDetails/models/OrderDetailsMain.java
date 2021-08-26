@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import grand.app.aber_provider.R;
 import grand.app.aber_provider.pages.auth.models.UserData;
+import grand.app.aber_provider.utils.resources.ResourceManager;
 
 public class OrderDetailsMain {
 
@@ -72,6 +74,18 @@ public class OrderDetailsMain {
 
     @SerializedName("status")
     private int status;
+
+    private String statusText;
+
+    private String staticLocationImage;
+
+    public String getStaticLocationImage() {
+        return staticLocationImage;
+    }
+
+    public void setStaticLocationImage(String staticLocationImage) {
+        this.staticLocationImage = staticLocationImage;
+    }
 
     public String getImage() {
         return image;
@@ -155,6 +169,25 @@ public class OrderDetailsMain {
 
     public int getStatus() {
         return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public void setStatusText(String statusText) {
+        this.statusText = statusText;
+    }
+
+    public String getStatusText() {
+        if (status == 1)
+            return statusText = ResourceManager.getString(R.string.on_way);
+        else if (status == 2)
+            return statusText = ResourceManager.getString(R.string.order_arrived);
+        else if (status == 3)
+            return statusText = ResourceManager.getString(R.string.order_finished);
+        else
+            return statusText;
     }
 
     public double getEmergencyCost() {

@@ -62,33 +62,6 @@ public class ProfileViewModels extends BaseViewModel {
         }
     }
 
-    public void cancelFollow() {
-        getPostRepository().setLiveData(liveData);
-        String url;
-        if (getUserProfile().isIs_follow())
-            url = URLS.CHANGE_FOLLOW_ACTIONS;
-        else
-            url = URLS.STORE_FOLLOW;
-        actionRequest.setType(url.equals(URLS.CHANGE_FOLLOW_ACTIONS) ? Constants.CITIES : null);
-        actionRequest.setUserId(getPassingObject().getId());
-        compositeDisposable.add(postRepository.changeFollowStatus(actionRequest, url));
-    }
-
-    public void seeFirst() {
-        getPostRepository().setLiveData(liveData);
-        actionRequest.setUserId(getPassingObject().getId());
-        compositeDisposable.add(postRepository.seeFirst(actionRequest));
-    }
-
-    public void banUser() {
-        getPostRepository().setLiveData(liveData);
-        actionRequest.setUserId(getPassingObject().getId());
-        compositeDisposable.add(postRepository.banUser(actionRequest));
-    }
-
-    public void reportReasons() {
-        compositeDisposable.add(postRepository.reportReasons());
-    }
 
     public void liveDataActions(String action) {
         liveData.setValue(new Mutable(action));

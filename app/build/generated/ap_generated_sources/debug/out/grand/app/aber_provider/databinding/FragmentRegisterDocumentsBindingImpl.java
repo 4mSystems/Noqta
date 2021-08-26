@@ -26,7 +26,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
     private final androidx.appcompat.widget.AppCompatEditText mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback67;
+    private final android.view.View.OnClickListener mCallback68;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -135,14 +135,14 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback68 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x20L;
+                mDirtyFlags = 0x40L;
         }
         requestRebind();
     }
@@ -227,9 +227,15 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
             }
             return true;
         }
-        else if (fieldId == BR.message) {
+        else if (fieldId == BR.request) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x20L;
             }
             return true;
         }
@@ -264,17 +270,17 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0x3fL) != 0) {
+        if ((dirtyFlags & 0x7fL) != 0) {
 
 
-            if ((dirtyFlags & 0x2fL) != 0) {
+            if ((dirtyFlags & 0x5fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.request
                         viewmodelRequest = viewmodel.getRequest();
                     }
 
-                if ((dirtyFlags & 0x28L) != 0) {
+                if ((dirtyFlags & 0x58L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.phone
@@ -283,7 +289,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                             viewmodelRequestName = viewmodelRequest.getName();
                         }
                 }
-                if ((dirtyFlags & 0x29L) != 0) {
+                if ((dirtyFlags & 0x59L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.nameError
@@ -297,7 +303,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                             viewmodelRequestNameErrorGet = viewmodelRequestNameError.get();
                         }
                 }
-                if ((dirtyFlags & 0x2aL) != 0) {
+                if ((dirtyFlags & 0x5aL) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.phoneError
@@ -311,7 +317,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                             viewmodelRequestPhoneErrorGet = viewmodelRequestPhoneError.get();
                         }
                 }
-                if ((dirtyFlags & 0x2cL) != 0) {
+                if ((dirtyFlags & 0x5cL) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.emailError
@@ -326,7 +332,7 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                         }
                 }
             }
-            if ((dirtyFlags & 0x38L) != 0) {
+            if ((dirtyFlags & 0x68L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.message
@@ -336,38 +342,38 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
 
                     // read TextUtils.isEmpty(viewmodel.message)
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
-                if((dirtyFlags & 0x38L) != 0) {
+                if((dirtyFlags & 0x68L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x4000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x2000L;
                     }
                 }
 
 
                     // read !TextUtils.isEmpty(viewmodel.message)
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0x38L) != 0) {
+                if((dirtyFlags & 0x68L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x10000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x8000L;
                     }
                 }
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x8000L) != 0) {
+        if ((dirtyFlags & 0x10000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
                     viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(grand.app.aber_provider.utils.Constants.SHOW_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x1000L) != 0) {
+        if ((dirtyFlags & 0x2000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
@@ -375,28 +381,28 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                 }
         }
 
-        if ((dirtyFlags & 0x38L) != 0) {
+        if ((dirtyFlags & 0x68L) != 0) {
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0x38L) != 0) {
+            if((dirtyFlags & 0x68L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
                         dirtyFlags |= 0x80L;
                         dirtyFlags |= 0x800L;
                 }
-                else {
-                        dirtyFlags |= 0x40L;
+            }
+            if((dirtyFlags & 0x68L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
                         dirtyFlags |= 0x400L;
                 }
-            }
-            if((dirtyFlags & 0x38L) != 0) {
-                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x200L;
-                }
                 else {
-                        dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x200L;
                 }
             }
 
@@ -409,38 +415,38 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0x38L) != 0) {
+        if ((dirtyFlags & 0x68L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium);
             this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x20L) != 0) {
+        if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback67);
+            this.appCompatButtonNext.setOnClickListener(mCallback68);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x28L) != 0) {
+        if ((dirtyFlags & 0x58L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.auto, viewmodelRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewmodelRequestPhone);
         }
-        if ((dirtyFlags & 0x29L) != 0) {
+        if ((dirtyFlags & 0x59L) != 0) {
             // api target 1
 
             this.inputCompanyName.setError(viewmodelRequestNameErrorGet);
             this.inputName.setError(viewmodelRequestNameErrorGet);
         }
-        if ((dirtyFlags & 0x2cL) != 0) {
+        if ((dirtyFlags & 0x5cL) != 0) {
             // api target 1
 
             this.inputEmail.setError(viewmodelRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x2aL) != 0) {
+        if ((dirtyFlags & 0x5aL) != 0) {
             // api target 1
 
             this.inputPhone.setError(viewmodelRequestPhoneErrorGet);
@@ -471,18 +477,19 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         flag 1 (0x2L): viewmodel.request.phoneError
         flag 2 (0x3L): viewmodel.request.emailError
         flag 3 (0x4L): viewmodel
-        flag 4 (0x5L): viewmodel.message
-        flag 5 (0x6L): null
-        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 4 (0x5L): viewmodel.request
+        flag 5 (0x6L): viewmodel.message
+        flag 6 (0x7L): null
         flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
         flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
         flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

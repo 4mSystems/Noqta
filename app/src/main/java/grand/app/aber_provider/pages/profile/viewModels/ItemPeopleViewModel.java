@@ -21,12 +21,12 @@ public class ItemPeopleViewModel extends BaseViewModel {
     }
 
     public void itemAction() {
-        if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.sort)))
-            getLiveData().setValue(Constants.FOLLOW);
-        else if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.ordinary_wash)))
-            getLiveData().setValue(Constants.CANCEL_FOLLOWER);
-        else if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.tire_desc)))
-            getLiveData().setValue(Constants.CANCEL_FOLLOWING);
+//        if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.sort)))
+//            getLiveData().setValue(Constants.FOLLOW_ORDER);
+//        else if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.ordinary_wash)))
+//            getLiveData().setValue(Constants.CANCEL_FOLLOWER);
+//        else if (getPeopleData().getFollowBtnText().equals(ResourceManager.getString(R.string.tire_desc)))
+//            getLiveData().setValue(Constants.CANCEL_FOLLOWING);
 
     }
 

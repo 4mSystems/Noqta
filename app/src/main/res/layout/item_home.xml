@@ -37,23 +37,18 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colordark"
-                app:layout_constraintBottom_toBottomOf="@id/tv_services_name_value"
                 app:layout_constraintEnd_toStartOf="@id/tv_services_name_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
+            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_services_name_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="@string/remove"
+                android:text="@{itemPostViewModel.orders.total.concat(` `).concat(itemPostViewModel.currency)}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
-                app:backgroundTint="@color/colordark"
-                app:icon="@drawable/ic_delete"
-                app:iconGravity="textEnd"
-                app:iconPadding="@dimen/dp8w"
+                android:textColor="@color/colordark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +58,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp8h"
                 android:background="@color/line_color"
-                app:layout_constraintTop_toBottomOf="@id/tv_services_name_value" />
+                app:layout_constraintTop_toBottomOf="@id/tv_services_name" />
 
             <grand.app.aber_provider.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_service_location"
@@ -184,6 +179,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                android:visibility="@{!TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@id/tv_service_status_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
@@ -196,6 +192,7 @@
                 android:text="@string/aval_order_time"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
+                android:visibility="@{!TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
 
@@ -204,10 +201,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp12h"
                 android:background="@color/colorPrimary"
+                android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
                 android:padding="@dimen/dp10h"
                 android:text="@string/view_details"
                 android:textAlignment="center"
-                android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/tv_service_status" />

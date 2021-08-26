@@ -30,6 +30,9 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
   public final Barrier br;
 
   @NonNull
+  public final View br2;
+
+  @NonNull
   public final MaterialButton btnAccept;
 
   @NonNull
@@ -114,6 +117,9 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
   public final ConstraintLayout searchContainer;
 
   @NonNull
+  public final MaterialButton status;
+
+  @NonNull
   public final TextView textView2;
 
   @NonNull
@@ -189,8 +195,8 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
   protected OrderDetailsViewModel mViewModel;
 
   protected FragmentOrderDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br, MaterialButton btnAccept, MaterialButton btnReject, CustomTextViewRegular caYear,
-      CustomTextViewRegular caYearValue, CustomTextViewRegular carCat,
+      Barrier br, View br2, MaterialButton btnAccept, MaterialButton btnReject,
+      CustomTextViewRegular caYear, CustomTextViewRegular caYearValue, CustomTextViewRegular carCat,
       CustomTextViewRegular carCatValue, CustomTextViewMedium carDesc,
       AppCompatImageView carImageDesc, CustomTextViewRegular carType,
       CustomTextViewRegular carTypeValue, CardView cardBattery, CardView cardCarDesc,
@@ -200,10 +206,11 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
       AppCompatImageView itemImg, AppCompatImageView itemTimeWarning,
       RoundedImageView locationImage, CustomTextViewMedium otherService,
       CustomTextViewMedium requiredServiceType, ConstraintLayout searchContainer,
-      TextView textView2, CustomTextViewMedium tvBattery, CustomTextViewRegular tvDeliveryCost,
-      CustomTextViewRegular tvDeliveryPrice, CustomTextViewRegular tvDeliveryTime,
-      CustomTextViewRegular tvEmeCost, CustomTextViewRegular tvEmePrice,
-      CustomTextViewMedium tvHomeItem, CustomTextViewMedium tvHomeJob, CustomTextViewMedium tvPrice,
+      MaterialButton status, TextView textView2, CustomTextViewMedium tvBattery,
+      CustomTextViewRegular tvDeliveryCost, CustomTextViewRegular tvDeliveryPrice,
+      CustomTextViewRegular tvDeliveryTime, CustomTextViewRegular tvEmeCost,
+      CustomTextViewRegular tvEmePrice, CustomTextViewMedium tvHomeItem,
+      CustomTextViewMedium tvHomeJob, CustomTextViewMedium tvPrice,
       CustomTextViewMedium tvServiceDesc, CustomTextViewMedium tvServiceDescValue,
       CustomTextViewRegular tvServiceType, CustomTextViewRegular tvServicesCost,
       CustomTextViewRegular tvServicesExtraCost, CustomTextViewRegular tvServicesExtraPrice,
@@ -212,6 +219,7 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
       View vDeliveryPrice, View vEmePrice, View vServicesExtraPrice, View vServicesPrice) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
+    this.br2 = br2;
     this.btnAccept = btnAccept;
     this.btnReject = btnReject;
     this.caYear = caYear;
@@ -240,6 +248,7 @@ public abstract class FragmentOrderDetailsBinding extends ViewDataBinding {
     this.otherService = otherService;
     this.requiredServiceType = requiredServiceType;
     this.searchContainer = searchContainer;
+    this.status = status;
     this.textView2 = textView2;
     this.tvBattery = tvBattery;
     this.tvDeliveryCost = tvDeliveryCost;

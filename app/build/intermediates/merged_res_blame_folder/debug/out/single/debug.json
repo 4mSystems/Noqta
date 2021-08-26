@@ -400,6 +400,10 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_follow_up_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_follow_up_orders.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_notify_item.xml.flat",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\notify_item.xml"
     },
@@ -618,6 +622,10 @@
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\drawable_parts.png.flat",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\parts.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_user_location.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_user_location.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_about.xml.flat",

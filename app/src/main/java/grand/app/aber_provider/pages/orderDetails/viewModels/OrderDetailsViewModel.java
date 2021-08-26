@@ -3,7 +3,6 @@ package grand.app.aber_provider.pages.orderDetails.viewModels;
 import android.text.TextUtils;
 
 import androidx.databinding.Bindable;
-import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
@@ -41,6 +40,14 @@ public class OrderDetailsViewModel extends BaseViewModel {
         compositeDisposable.add(postRepository.orderDetails(getPassingObject().getId()));
     }
 
+    public void changeStatus(int status) {
+        compositeDisposable.add(postRepository.changeStatus(orderDetailsMain.getId(), status));
+    }
+
+    public void toFollowOrder() {
+        liveData.setValue(new Mutable(Constants.FOLLOW_ORDER));
+    }
+
     @Bindable
     public OrderDetailsMain getOrderDetailsMain() {
         return this.orderDetailsMain == null ? this.orderDetailsMain = new OrderDetailsMain() : this.orderDetailsMain;
@@ -57,6 +64,8 @@ public class OrderDetailsViewModel extends BaseViewModel {
             orderDetailsMain.getChildServices().addAll(getOptionsDetailsAdapter().getServiceList());
         }
         getOptionsDetailsAdapter().update(orderDetailsMain.getChildServices());
+        // static map
+        orderDetailsMain.setStaticLocationImage("https://maps.googleapis.com/maps/api/staticmap?center=".concat(orderDetailsMain.getLatitude()).concat(",").concat(orderDetailsMain.getLongitude()).concat("&zoom=16&size=400x400&key=").concat(ResourceManager.getString(R.string.google_map)));
         notifyChange(BR.extraRequiredAdapter);
         notifyChange(BR.servicesRequiredAdapter);
         notifyChange(BR.orderDetailsMain);

@@ -14,7 +14,7 @@
 
         <variable
             name="viewModel"
-            type="grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels" />
+            type="grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,42 +31,30 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_services"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp14w"
-            android:layout_marginTop="@dimen/dp15h"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_order_service" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp15h"
-            android:layout_marginBottom="@dimen/dp8h"
-            android:text="@string/current"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/colorPrimary"
-            app:icon="@drawable/ic_arrow_down"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/white"
-            app:layout_constraintStart_toStartOf="@id/rc_services"
-            app:layout_constraintTop_toBottomOf="@id/rc_services"
-            app:strokeColor="@color/white"
-            app:strokeWidth="2dp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/frame_profile"
+            android:id="@+id/rc_orders"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/dp12h"
+            app:adapter="@{viewModel.orderAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/curve"
-            tools:listitem="@layout/item_main_service_order" />
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:listitem="@layout/item_home" />
 
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewModel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

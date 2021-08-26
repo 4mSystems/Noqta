@@ -60,7 +60,7 @@ public class QuestionedPostsAdapter extends RecyclerView.Adapter<QuestionedPosts
                 liveData.setValue(Constants.DELETE);
             } else if (o.equals(Constants.HIDE_POST)) {
                 liveData.setValue(Constants.HIDE_POST);
-            } else if (o.equals(Constants.SHARE_POST)) {
+            } else if (o.equals(Constants.REJECT_ORDER)) {
                 liveData.setValue(o);
             }
 

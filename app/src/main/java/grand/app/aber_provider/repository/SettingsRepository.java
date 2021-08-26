@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import grand.app.aber_provider.connection.ConnectionHelper;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.model.base.StatusMessage;
+import grand.app.aber_provider.pages.appWallet.models.WalletHistoryResponse;
 import grand.app.aber_provider.pages.notifications.models.NotificationsResponse;
 import grand.app.aber_provider.pages.settings.models.AboutResponse;
 import grand.app.aber_provider.pages.settings.models.ContactResponse;
@@ -64,4 +65,9 @@ public class SettingsRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_SOCIAL, new Object(), SocialResponse.class,
                 Constants.SOCIAL, true);
     }
+    public Disposable walletHistory() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.WALLET_HISTORY, new Object(), WalletHistoryResponse.class,
+                Constants.WALLET, true);
+    }
+
 }

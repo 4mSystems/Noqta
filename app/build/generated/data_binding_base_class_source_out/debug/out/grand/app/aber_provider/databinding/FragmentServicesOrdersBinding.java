@@ -11,8 +11,9 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import grand.app.aber_provider.R;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels;
+import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -21,27 +22,27 @@ public abstract class FragmentServicesOrdersBinding extends ViewDataBinding {
   public final AppCompatImageView curve;
 
   @NonNull
-  public final RecyclerView frameProfile;
+  public final CircularProgressIndicator progress;
 
   @NonNull
-  public final RecyclerView rcServices;
+  public final RecyclerView rcOrders;
 
   @Bindable
-  protected ProfileViewModels mViewModel;
+  protected MyOrdersViewModels mViewModel;
 
   protected FragmentServicesOrdersBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, AppCompatImageView curve, RecyclerView frameProfile,
-      RecyclerView rcServices) {
+      int _localFieldCount, AppCompatImageView curve, CircularProgressIndicator progress,
+      RecyclerView rcOrders) {
     super(_bindingComponent, _root, _localFieldCount);
     this.curve = curve;
-    this.frameProfile = frameProfile;
-    this.rcServices = rcServices;
+    this.progress = progress;
+    this.rcOrders = rcOrders;
   }
 
-  public abstract void setViewModel(@Nullable ProfileViewModels viewModel);
+  public abstract void setViewModel(@Nullable MyOrdersViewModels viewModel);
 
   @Nullable
-  public ProfileViewModels getViewModel() {
+  public MyOrdersViewModels getViewModel() {
     return mViewModel;
   }
 

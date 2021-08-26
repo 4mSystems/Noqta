@@ -59,7 +59,7 @@ public class AuthRepository extends BaseRepository {
     }
 
     public Disposable register(RegisterRequest request, List<FileObject> fileObjects) {
-        return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
+        return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, UsersResponse.class,
                 Constants.REGISTER, false);
     }
 

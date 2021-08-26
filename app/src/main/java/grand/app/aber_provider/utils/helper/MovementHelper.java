@@ -27,6 +27,7 @@ import grand.app.aber_provider.activity.MainActivity;
 import grand.app.aber_provider.base.ParentActivity;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.R;
+import grand.app.aber_provider.utils.locations.MapAddressActivity;
 import grand.app.aber_provider.utils.resources.ResourceManager;
 
 import static android.app.Activity.RESULT_OK;
@@ -91,22 +92,6 @@ public class MovementHelper {
         fragmentTransaction.commit();
     }
 
-    public static void replaceProfileFragment(Context context, Fragment fragment, PassingObject passingObject) {
-        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(Constants.BUNDLE, new Gson().toJson(passingObject));
-        fragment.setArguments(bundle);
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame_profile, fragment);
-        fragmentTransaction.commit();
-    }
-
-    public static void replaceHomeFragment(Context context, Fragment fragment) {
-        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().replace(CONTAINER_ID, fragment);
-        fragmentTransaction.commit();
-    }
-
-
     public static void popLastFragment(Context context) {
         ((FragmentActivity) context).getSupportFragmentManager().popBackStack();
     }
@@ -127,7 +112,14 @@ public class MovementHelper {
         }
         from.startActivity(intent);
     }
-
+    public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject, String name, int request) {
+        Intent intent = new Intent(from, MapAddressActivity.class);
+        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
+        if (name != null) {
+            intent.putExtra(Constants.NAME_BAR, name);
+        }
+        LauncherHelper.execute(intent, request, from);
+    }
     public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, int request) {
         Intent intent = new Intent(from, BaseActivity.class);
         intent.putExtra(Constants.PAGE, page);

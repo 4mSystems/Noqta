@@ -3555,6 +3555,7 @@ drawable ic_swap_vert_24dp
 drawable ic_town
 drawable ic_translate
 drawable ic_user
+drawable ic_user_location
 drawable ic_wallet
 drawable ic_warning
 drawable ic_wifi_24dp
@@ -3723,6 +3724,7 @@ id bottom
 id bounce
 id box_count
 id br
+id br2
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
@@ -3763,7 +3765,6 @@ id card_other_service
 id card_packages
 id card_personal_info
 id card_profile
-id card_put_balance
 id card_rate
 id card_service
 id card_share
@@ -3776,7 +3777,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id charge_app_wallet_btn
 id checkbox
 id checked
 id child_text
@@ -3877,9 +3877,9 @@ id fl_home_container
 id flip
 id floating
 id flow1
+id follow_img_map
 id forever
 id fragment_container_view_tag
-id frame_profile
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -4114,8 +4114,8 @@ id rc_contact
 id rc_filter
 id rc_menu_social
 id rc_notifications
+id rc_orders
 id rc_posts
-id rc_services
 id rc_wallet_history
 id rectangle
 id rectangles
@@ -4194,6 +4194,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status
 id status_bar_latest_event_content
 id stop
 id stretch
@@ -4481,6 +4482,7 @@ layout fragment_confirm_code
 layout fragment_contact
 layout fragment_countries
 layout fragment_edit_profile
+layout fragment_follow_up_orders
 layout fragment_forget_password
 layout fragment_home
 layout fragment_lang
@@ -5149,8 +5151,11 @@ string tv_colors
 string tv_points_header
 string tv_rate_product
 string tv_sizes
+string user_location
 string view_details
 string wallet_balance
+string wallet_history_1
+string wallet_history_2
 string water_amount
 string water_gallwon_amount
 string wawo

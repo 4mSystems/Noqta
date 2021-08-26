@@ -6,28 +6,24 @@ import java.util.List;
 
 public class HistoryWalletData {
 
-	@SerializedName("wallet")
-	private String wallet;
+	@SerializedName("balance")
+	private String balance;
 
-	@SerializedName("user_wallet_recharges")
+	@SerializedName("orders")
 	private List<WalletHistoryItem> userWalletRecharges;
 
-	@SerializedName("id")
-	private int id;
+	@SerializedName("cancel_fees")
+	private String cancel_fees;
 
-	public String getWallet(){
-		return wallet;
+	public String getBalance() {
+		return balance;
 	}
 
-	public List<WalletHistoryItem> getUserWalletRecharges(){
+	public List<WalletHistoryItem> getUserWalletRecharges() {
 		return userWalletRecharges;
 	}
 
-	public void setWallet(String wallet) {
-		this.wallet = wallet;
-	}
-
-	public int getId(){
-		return id;
+	public String getCancel_fees() {
+		return cancel_fees;
 	}
 }

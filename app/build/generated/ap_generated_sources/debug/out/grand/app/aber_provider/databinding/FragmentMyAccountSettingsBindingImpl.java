@@ -434,7 +434,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.INSTURCTOR);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.WALLET);
                 }
                 break;
             }
@@ -700,7 +700,7 @@ public class FragmentMyAccountSettingsBindingImpl extends FragmentMyAccountSetti
 
 
 
-                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.INSTURCTOR);
+                    viewmodel.buttonActions(grand.app.aber_provider.utils.Constants.WALLET);
                 }
                 break;
             }

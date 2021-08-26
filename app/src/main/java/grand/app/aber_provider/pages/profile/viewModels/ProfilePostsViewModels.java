@@ -55,10 +55,6 @@ public class ProfilePostsViewModels extends BaseViewModel {
         compositeDisposable.add(postRepository.sharePost(getPostsAdapter().lastSelected));
     }
 
-    public void reactPost(String reactType) {
-        compositeDisposable.add(postRepository.reactPost(getPostsAdapter().lastSelected, reactType));
-    }
-
 
     public void liveDataActions(String action) {
         liveData.setValue(new Mutable(action));

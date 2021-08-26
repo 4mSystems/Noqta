@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.button.MaterialButton;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.customViews.views.CustomTextViewRegular;
 import grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel;
@@ -45,7 +44,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   public final CustomTextViewRegular tvServicesName;
 
   @NonNull
-  public final MaterialButton tvServicesNameValue;
+  public final CustomTextViewRegular tvServicesNameValue;
 
   @NonNull
   public final View vClientName;
@@ -67,8 +66,8 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
       CustomTextViewRegular tvServiceLocation, CustomTextViewRegular tvServiceLocationValue,
       CustomTextViewRegular tvServiceStatus, CustomTextViewRegular tvServiceStatusValue,
       CustomTextViewRegular tvServiceTime, CustomTextViewRegular tvServiceTimeValue,
-      CustomTextViewRegular tvServicesName, MaterialButton tvServicesNameValue, View vClientName,
-      View vServiceLocation, View vServiceStatus, View vServicesName) {
+      CustomTextViewRegular tvServicesName, CustomTextViewRegular tvServicesNameValue,
+      View vClientName, View vServiceLocation, View vServiceStatus, View vServicesName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.tvClientName = tvClientName;
     this.tvClientNameValue = tvClientNameValue;

@@ -56,8 +56,13 @@ import grand.app.aber_provider.pages.home.HomeFragment_MembersInjector;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels_Factory;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels_MembersInjector;
+import grand.app.aber_provider.pages.myOrders.FollowUpOrderFragment;
+import grand.app.aber_provider.pages.myOrders.FollowUpOrderFragment_MembersInjector;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment_MembersInjector;
+import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels;
+import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels_Factory;
+import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels_MembersInjector;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment;
 import grand.app.aber_provider.pages.notifications.NotificationsFragment_MembersInjector;
 import grand.app.aber_provider.pages.notifications.viewModels.NotificationsViewModels;
@@ -80,9 +85,6 @@ import grand.app.aber_provider.pages.profile.EditProfileFragment_MembersInjector
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel_Factory;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel_MembersInjector;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels_Factory;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels_MembersInjector;
 import grand.app.aber_provider.pages.settings.AboutAppFragment;
 import grand.app.aber_provider.pages.settings.AboutAppFragment_MembersInjector;
 import grand.app.aber_provider.pages.settings.ContactUsFragment;
@@ -189,8 +191,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectEditProfileViewModel(EditProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
-  private ProfileViewModels profileViewModels() {
-    return injectProfileViewModels(ProfileViewModels_Factory.newInstance(servicesRepositoryProvider.get()));
+  private MyOrdersViewModels myOrdersViewModels() {
+    return injectMyOrdersViewModels(MyOrdersViewModels_Factory.newInstance(servicesRepositoryProvider.get()));
   }
 
   private SettingsViewModel settingsViewModel() {
@@ -352,6 +354,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectAppWalletFragment(appWalletFragment);
   }
 
+  @Override
+  public void inject(FollowUpOrderFragment followUpOrderFragment) {
+    injectFollowUpOrderFragment(followUpOrderFragment);
+  }
+
   private HomeViewModels injectHomeViewModels(HomeViewModels instance) {
     HomeViewModels_MembersInjector.injectRepository(instance, servicesRepositoryProvider.get());
     return instance;
@@ -491,14 +498,14 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private ProfileViewModels injectProfileViewModels(ProfileViewModels instance) {
-    ProfileViewModels_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
+  private MyOrdersViewModels injectMyOrdersViewModels(MyOrdersViewModels instance) {
+    MyOrdersViewModels_MembersInjector.injectPostRepository(instance, servicesRepositoryProvider.get());
     return instance;
   }
 
   private MyServicesOrdersFragment injectMyServicesOrdersFragment(
       MyServicesOrdersFragment instance) {
-    MyServicesOrdersFragment_MembersInjector.injectViewModel(instance, profileViewModels());
+    MyServicesOrdersFragment_MembersInjector.injectViewModel(instance, myOrdersViewModels());
     return instance;
   }
 
@@ -564,6 +571,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AppWalletFragment injectAppWalletFragment(AppWalletFragment instance) {
     AppWalletFragment_MembersInjector.injectViewModel(instance, appWalletViewModel());
+    return instance;
+  }
+
+  private FollowUpOrderFragment injectFollowUpOrderFragment(FollowUpOrderFragment instance) {
+    FollowUpOrderFragment_MembersInjector.injectViewModel(instance, orderDetailsViewModel());
     return instance;
   }
 

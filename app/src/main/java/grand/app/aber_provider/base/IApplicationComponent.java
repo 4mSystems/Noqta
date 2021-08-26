@@ -16,6 +16,7 @@ import grand.app.aber_provider.pages.auth.login.LoginFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterDocumentsFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterServicesFragment;
+import grand.app.aber_provider.pages.myOrders.FollowUpOrderFragment;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
 import grand.app.aber_provider.pages.packages.PackagesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
@@ -89,6 +90,8 @@ public interface IApplicationComponent {
     void inject(TermsFragment termsFragment);
 
     void inject(AppWalletFragment appWalletFragment);
+
+    void inject(FollowUpOrderFragment followUpOrderFragment);
 
     @Component.Builder
     interface Builder {

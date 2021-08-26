@@ -6,6 +6,8 @@
 
         <import type="android.view.View" />
 
+        <import type="android.text.TextUtils" />
+
         <variable
             name="itemWalletViewModel"
             type="grand.app.aber_provider.pages.appWallet.viewModels.ItemAppWalletHistoryViewModel" />
@@ -15,8 +17,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp6w"
-        android:layout_marginEnd="@dimen/dp6w"
         app:cardCornerRadius="@dimen/dp6h"
         app:cardElevation="@dimen/dp4h"
         app:cardUseCompatPadding="true">
@@ -31,9 +31,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:text="شحن رصيد"
+                android:text="@{itemWalletViewModel.title}"
                 android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#313131"
                 app:layout_constraintEnd_toStartOf="@id/item_balance_money"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:text="scscwss5141515515"
+                android:text="@{String.valueOf(itemWalletViewModel.walletHistoryItem.id)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
@@ -60,7 +60,7 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginBottom="@dimen/dp8h"
-                android:text="الأحد 5/5/2020"
+                android:text="@{itemWalletViewModel.walletHistoryItem.updatedAt}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginEnd="@dimen/dp15w"
-                android:text="٥٠ درهم"
+                android:text="@{!TextUtils.isEmpty(itemWalletViewModel.walletHistoryItem.balance)?itemWalletViewModel.walletHistoryItem.balance.concat(` `).concat(itemWalletViewModel.currency):``}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colordark"
                 app:layout_constraintEnd_toEndOf="parent"

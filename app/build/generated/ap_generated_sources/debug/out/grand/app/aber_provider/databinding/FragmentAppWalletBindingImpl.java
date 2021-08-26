@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding implements grand.app.aber_provider.generated.callback.OnClickListener.Listener {
+public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding  {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,92 +14,44 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.header_layout, 4);
-        sViewsWithIds.put(R.id.curve, 5);
-        sViewsWithIds.put(R.id.card_my_wallet, 6);
-        sViewsWithIds.put(R.id.tv_wallet_balance, 7);
-        sViewsWithIds.put(R.id.tv_wallet, 8);
-        sViewsWithIds.put(R.id.card_put_balance, 9);
+        sViewsWithIds.put(R.id.header_layout, 3);
+        sViewsWithIds.put(R.id.curve, 4);
+        sViewsWithIds.put(R.id.card_my_wallet, 5);
+        sViewsWithIds.put(R.id.tv_wallet_balance, 6);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
-    @NonNull
-    private final com.google.android.material.textfield.TextInputEditText mboundView1;
+    private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback40;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
-        @Override
-        public void onChange() {
-            // Inverse of viewmodel.raiseWalletRequest.amount
-            //         is viewmodel.raiseWalletRequest.setAmount((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
-            // localize variables for thread safety
-            // viewmodel.raiseWalletRequest != null
-            boolean viewmodelRaiseWalletRequestJavaLangObjectNull = false;
-            // viewmodel != null
-            boolean viewmodelJavaLangObjectNull = false;
-            // viewmodel.raiseWalletRequest
-            grand.app.aber_provider.pages.appWallet.models.RaiseWalletRequest viewmodelRaiseWalletRequest = null;
-            // viewmodel.raiseWalletRequest.amount
-            java.lang.String viewmodelRaiseWalletRequestAmount = null;
-            // viewmodel
-            grand.app.aber_provider.pages.appWallet.viewModels.AppWalletViewModel viewmodel = mViewmodel;
-
-
-
-            viewmodelJavaLangObjectNull = (viewmodel) != (null);
-            if (viewmodelJavaLangObjectNull) {
-
-
-                viewmodelRaiseWalletRequest = viewmodel.getRaiseWalletRequest();
-
-                viewmodelRaiseWalletRequestJavaLangObjectNull = (viewmodelRaiseWalletRequest) != (null);
-                if (viewmodelRaiseWalletRequestJavaLangObjectNull) {
-
-
-
-
-                    viewmodelRaiseWalletRequest.setAmount(((java.lang.String) (callbackArg_0)));
-                }
-            }
-        }
-    };
 
     public FragmentAppWalletBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentAppWalletBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.cardview.widget.CardView) bindings[6]
-            , (androidx.cardview.widget.CardView) bindings[9]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[4]
+            , (androidx.cardview.widget.CardView) bindings[5]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
             , (androidx.recyclerview.widget.RecyclerView) bindings[2]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[8]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[1]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[6]
             );
-        this.chargeAppWalletBtn.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (com.google.android.material.textfield.TextInputEditText) bindings[1];
-        this.mboundView1.setTag(null);
         this.rcWalletHistory.setTag(null);
+        this.tvWallet.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -151,6 +103,12 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
             }
             return true;
         }
+        else if (fieldId == BR.historyWalletData) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -161,65 +119,70 @@ public class FragmentAppWalletBindingImpl extends FragmentAppWalletBinding imple
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.aber_provider.pages.appWallet.models.HistoryWalletData viewmodelHistoryWalletData = null;
         grand.app.aber_provider.pages.appWallet.adapters.AppWalletAdapter viewmodelAppWalletAdapter = null;
-        grand.app.aber_provider.pages.appWallet.models.RaiseWalletRequest viewmodelRaiseWalletRequest = null;
-        java.lang.String viewmodelRaiseWalletRequestAmount = null;
+        java.lang.String viewmodelHistoryWalletDataBalance = null;
+        java.lang.String viewmodelHistoryWalletDataBalanceConcatJavaLangStringConcatViewmodelCurrency = null;
+        java.lang.String viewmodelCurrency = null;
+        java.lang.String viewmodelHistoryWalletDataBalanceConcatJavaLangString = null;
         grand.app.aber_provider.pages.appWallet.viewModels.AppWalletViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.appWalletAdapter
-                    viewmodelAppWalletAdapter = viewmodel.getAppWalletAdapter();
-                    // read viewmodel.raiseWalletRequest
-                    viewmodelRaiseWalletRequest = viewmodel.getRaiseWalletRequest();
+                    // read viewmodel.historyWalletData
+                    viewmodelHistoryWalletData = viewmodel.getHistoryWalletData();
+                    // read viewmodel.currency
+                    viewmodelCurrency = viewmodel.currency;
                 }
 
 
-                if (viewmodelRaiseWalletRequest != null) {
-                    // read viewmodel.raiseWalletRequest.amount
-                    viewmodelRaiseWalletRequestAmount = viewmodelRaiseWalletRequest.getAmount();
+                if (viewmodelHistoryWalletData != null) {
+                    // read viewmodel.historyWalletData.balance
+                    viewmodelHistoryWalletDataBalance = viewmodelHistoryWalletData.getBalance();
                 }
+
+
+                if (viewmodelHistoryWalletDataBalance != null) {
+                    // read viewmodel.historyWalletData.balance.concat(" ")
+                    viewmodelHistoryWalletDataBalanceConcatJavaLangString = viewmodelHistoryWalletDataBalance.concat(" ");
+                }
+
+
+                if (viewmodelHistoryWalletDataBalanceConcatJavaLangString != null) {
+                    // read viewmodel.historyWalletData.balance.concat(" ").concat(viewmodel.currency)
+                    viewmodelHistoryWalletDataBalanceConcatJavaLangStringConcatViewmodelCurrency = viewmodelHistoryWalletDataBalanceConcatJavaLangString.concat(viewmodelCurrency);
+                }
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.appWalletAdapter
+                        viewmodelAppWalletAdapter = viewmodel.getAppWalletAdapter();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            this.chargeAppWalletBtn.setOnClickListener(mCallback40);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
-        }
-        if ((dirtyFlags & 0x3L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelRaiseWalletRequestAmount);
             grand.app.aber_provider.base.ApplicationBinding.getItemsV2Binding(this.rcWalletHistory, viewmodelAppWalletAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvWallet, viewmodelHistoryWalletDataBalanceConcatJavaLangStringConcatViewmodelCurrency);
         }
     }
     // Listener Stub Implementations
     // callback impls
-    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        grand.app.aber_provider.pages.appWallet.viewModels.AppWalletViewModel viewmodel = mViewmodel;
-
-
-
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
-
-
-            viewmodel.putInWallet();
-        }
-    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.historyWalletData
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

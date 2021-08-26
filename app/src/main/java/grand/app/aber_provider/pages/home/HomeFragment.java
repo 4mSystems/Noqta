@@ -1,5 +1,7 @@
 package grand.app.aber_provider.pages.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,17 +12,22 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import java.io.File;
+
 import javax.inject.Inject;
 
+import grand.app.aber_provider.BR;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
+import grand.app.aber_provider.connection.FileObject;
 import grand.app.aber_provider.databinding.FragmentHomeBinding;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.home.models.HomeResponse;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.utils.upload.FileOperations;
 
 public class HomeFragment extends BaseFragment {
     @Inject
@@ -52,8 +59,19 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void onResume() {
-        super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
+        super.onResume();
         mainActivity().enableRefresh(false);
+    }
+
+    @Override
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        super.launchActivityResult(request, resultCode, result);
+        if (request == Constants.ORDER_DETAILS_REQUEST) {
+            viewModel.getOrderAdapter().getPostDataList().clear();
+            viewModel.notifyChange(BR.orderAdapter);
+            viewModel.getRepository().setLiveData(viewModel.liveData);
+            viewModel.homeOrders();
+        }
     }
 }

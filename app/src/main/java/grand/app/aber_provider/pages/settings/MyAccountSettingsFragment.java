@@ -20,6 +20,7 @@ import javax.inject.Inject;
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.databinding.FragmentMyAccountSettingsBinding;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.appWallet.AppWalletFragment;
 import grand.app.aber_provider.pages.packages.PackagesFragment;
 import grand.app.aber_provider.pages.profile.EditProfileFragment;
 import grand.app.aber_provider.pages.settings.viewModels.MyAccountSettingsViewModel;
@@ -76,12 +77,12 @@ public class MyAccountSettingsFragment extends BaseFragment {
                 case Constants.SUBSCRIPTION:
                     MovementHelper.startActivity(context, PackagesFragment.class.getName(), getString(R.string.package_title), null);
                     break;
-//                case Constants.FOLLOWERS:
-//                    MovementHelper.startActivityWithBundle(context, new PassingObject(URLS.USER_FOLLOWERS + viewModel.userData.getId()), getString(R.string.my_services), MyServiceOrderDetailsFragment.class.getName(), null);
-//                    break;
-//                case Constants.SHOW_LOGOUT_WARNING:
-//                    exitDialog(getString(R.string.logout_warning));
-//                    break;
+                case Constants.WALLET:
+                    MovementHelper.startActivity(context, AppWalletFragment.class.getName(), getString(R.string.my_wallet), null);
+                    break;
+                case Constants.SHOW_LOGOUT_WARNING:
+                    exitDialog(getString(R.string.logout_warning));
+                    break;
 
             }
         });
@@ -90,7 +91,6 @@ public class MyAccountSettingsFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-//        ((MainActivity) context).enableRefresh(false);
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 

@@ -12,10 +12,13 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
+import com.google.android.material.tabs.TabLayout;
+
 import java.io.File;
 
 import javax.inject.Inject;
 
+import grand.app.aber_provider.BR;
 import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseFragment;
@@ -24,8 +27,7 @@ import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.connection.FileObject;
 import grand.app.aber_provider.databinding.FragmentRegisterBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.model.base.StatusMessage;
-import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment;
+import grand.app.aber_provider.pages.auth.models.UsersResponse;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.LauncherHelper;
 import grand.app.aber_provider.utils.helper.MovementHelper;
@@ -42,6 +44,27 @@ public class RegisterFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 0) {
+                    viewModel.getRequest().setIsCompany("0");
+                } else if (tab.getPosition() == 1) {
+                    viewModel.getRequest().setIsCompany("1");
+                }
+                viewModel.notifyChange(BR.request);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         setEvent();
         return binding.getRoot();
     }
@@ -65,9 +88,9 @@ public class RegisterFragment extends BaseFragment {
                     LauncherHelper.execute(LauncherHelper.storage);
                     break;
                 case Constants.REGISTER:
-                    toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
-                    viewModel.goBack(requireActivity());
-                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getPhone()), null, ConfirmCodeFragment.class.getName(), null);
+                    toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
+                    finishActivity();
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getPhone()), getString(R.string.register), RegisterDocumentsFragment.class.getName(), null);
                     break;
             }
         });

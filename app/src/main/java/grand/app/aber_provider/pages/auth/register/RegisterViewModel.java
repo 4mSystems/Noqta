@@ -3,6 +3,7 @@ package grand.app.aber_provider.pages.auth.register;
 import android.text.TextUtils;
 import android.widget.CompoundButton;
 
+import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class RegisterViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
         request = new RegisterRequest();
+        request.setIsCompany("0");
     }
 
     public void register() {
@@ -56,6 +58,7 @@ public class RegisterViewModel extends BaseViewModel {
     public void onCheckedChange(CompoundButton button, boolean check) {
         isTermsAccepted = check;
     }
+
     public void imageSubmit() {
         liveData.setValue(new Mutable(Constants.IMAGE));
     }
@@ -72,7 +75,7 @@ public class RegisterViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-
+    @Bindable
     public RegisterRequest getRequest() {
         return request;
     }

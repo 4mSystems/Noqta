@@ -21,7 +21,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback73;
+    private final android.view.View.OnClickListener mCallback78;
     // values
     // listeners
     private OnCheckedChangeListenerImpl mViewmodelOnLangChangeAndroidWidgetRadioGroupOnCheckedChangeListener;
@@ -46,7 +46,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
         this.radioGroup.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback73 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback78 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -175,7 +175,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback73);
+            this.btnPhone.setOnClickListener(mCallback78);
         }
     }
     // Listener Stub Implementations

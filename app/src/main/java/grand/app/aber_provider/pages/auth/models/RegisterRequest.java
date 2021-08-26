@@ -56,9 +56,11 @@ public class RegisterRequest {
         if (!Validate.isValid(name, Constants.FIELD)) {
             nameError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(companyName, Constants.FIELD)) {
-            companyNameError.set(Validate.error);
-            valid = false;
+        } else if (isCompany.equals("1")) {
+            if (!Validate.isValid(companyName, Constants.FIELD)) {
+                companyNameError.set(Validate.error);
+                valid = false;
+            }
         } else if (!Validate.isValid(phone, Constants.FIELD)) {
             phoneError.set(Validate.error);
             valid = false;

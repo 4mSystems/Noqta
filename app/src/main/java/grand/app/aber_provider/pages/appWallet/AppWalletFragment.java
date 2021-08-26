@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
+
 import javax.inject.Inject;
 
 import grand.app.aber_provider.R;
@@ -16,7 +17,9 @@ import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.databinding.FragmentAppWalletBinding;
 import grand.app.aber_provider.model.base.Mutable;
+import grand.app.aber_provider.pages.appWallet.models.WalletHistoryResponse;
 import grand.app.aber_provider.pages.appWallet.viewModels.AppWalletViewModel;
+import grand.app.aber_provider.utils.Constants;
 
 public class AppWalletFragment extends BaseFragment {
     FragmentAppWalletBinding binding;
@@ -38,17 +41,9 @@ public class AppWalletFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (Constants.RAISE_WALLET.equals(mutable.message)) {
-//                toastMessage(((RaiseWalletResponse) mutable.object).mMessage);
-//                viewModel.getAppWalletAdapter().getWalletHistoryItemList().add(((RaiseWalletResponse) mutable.object).getData());
-//                viewModel.getHistoryWalletData().setWallet(String.valueOf(Double.parseDouble(viewModel.getHistoryWalletData().getWallet()) + Double.parseDouble(((RaiseWalletResponse) mutable.object).getData().getAmount())));
-//                viewModel.getAppWalletAdapter().notifyItemInserted(viewModel.getAppWalletAdapter().getItemCount() - 1);
-//                viewModel.notifyChange(BR.historyWalletData);
-//            } else if (Constants.WALLET_HISTORY.equals(mutable.message)) {
-//                viewModel.setHistoryWalletData(((WalletHistoryResponse) mutable.object).getData());
-//            } else if (Constants.EMPTY_DRIVER.equals(mutable.message)) {
-//                toastErrorMessage(getString(R.string.not_active));
-//            }
+            if (Constants.WALLET.equals(mutable.message)) {
+                viewModel.setHistoryWalletData(((WalletHistoryResponse) mutable.object).getData());
+            }
         });
     }
 

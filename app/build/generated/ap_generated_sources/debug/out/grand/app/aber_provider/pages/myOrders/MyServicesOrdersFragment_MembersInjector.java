@@ -3,7 +3,7 @@ package grand.app.aber_provider.pages.myOrders;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels;
+import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,14 +11,14 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class MyServicesOrdersFragment_MembersInjector implements MembersInjector<MyServicesOrdersFragment> {
-  private final Provider<ProfileViewModels> viewModelProvider;
+  private final Provider<MyOrdersViewModels> viewModelProvider;
 
-  public MyServicesOrdersFragment_MembersInjector(Provider<ProfileViewModels> viewModelProvider) {
+  public MyServicesOrdersFragment_MembersInjector(Provider<MyOrdersViewModels> viewModelProvider) {
     this.viewModelProvider = viewModelProvider;
   }
 
   public static MembersInjector<MyServicesOrdersFragment> create(
-      Provider<ProfileViewModels> viewModelProvider) {
+      Provider<MyOrdersViewModels> viewModelProvider) {
     return new MyServicesOrdersFragment_MembersInjector(viewModelProvider);
   }
 
@@ -29,7 +29,7 @@ public final class MyServicesOrdersFragment_MembersInjector implements MembersIn
 
   @InjectedFieldSignature("grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment.viewModel")
   public static void injectViewModel(MyServicesOrdersFragment instance,
-      ProfileViewModels viewModel) {
+      MyOrdersViewModels viewModel) {
     instance.viewModel = viewModel;
   }
 }

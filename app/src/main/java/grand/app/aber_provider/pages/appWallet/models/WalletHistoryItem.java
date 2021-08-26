@@ -4,38 +4,36 @@ import com.google.gson.annotations.SerializedName;
 
 public class WalletHistoryItem {
 
-	@SerializedName("amount")
-	private String amount;
+    @SerializedName("updated_at")
+    private String updatedAt;
+    private String balance;
+    @SerializedName("cancel_fees")
+    private String cancelFess;
 
-	@SerializedName("user_id")
-	private int userId;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("payment_id")
-	private String paymentId;
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
 
-	@SerializedName("created_at")
-	private String createdAt;
+    public int getId() {
+        return id;
+    }
 
-	@SerializedName("id")
-	private int id;
+    public String getBalance() {
+        return balance;
+    }
 
-	public String getAmount(){
-		return amount;
-	}
+    public void setBalance(String balance) {
+        this.balance = balance;
+    }
 
-	public int getUserId(){
-		return userId;
-	}
+    public String getCancelFess() {
+        return cancelFess;
+    }
 
-	public String getPaymentId(){
-		return paymentId;
-	}
-
-	public String getCreatedAt(){
-		return createdAt;
-	}
-
-	public int getId(){
-		return id;
-	}
+    public void setCancelFess(String cancelFess) {
+        this.cancelFess = cancelFess;
+    }
 }

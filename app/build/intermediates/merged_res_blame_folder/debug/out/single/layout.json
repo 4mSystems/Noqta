@@ -16,6 +16,10 @@
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_size.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_follow_up_orders.xml",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_follow_up_orders.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_order_confirmed.xml",
         "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_confirmed.xml"
     },

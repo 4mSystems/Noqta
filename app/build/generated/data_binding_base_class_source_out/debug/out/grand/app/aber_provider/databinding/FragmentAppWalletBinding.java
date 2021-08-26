@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -23,12 +22,6 @@ import java.lang.Object;
 public abstract class FragmentAppWalletBinding extends ViewDataBinding {
   @NonNull
   public final CardView cardMyWallet;
-
-  @NonNull
-  public final CardView cardPutBalance;
-
-  @NonNull
-  public final AppCompatButton chargeAppWalletBtn;
 
   @NonNull
   public final AppCompatImageView curve;
@@ -49,13 +42,11 @@ public abstract class FragmentAppWalletBinding extends ViewDataBinding {
   protected AppWalletViewModel mViewmodel;
 
   protected FragmentAppWalletBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardMyWallet, CardView cardPutBalance, AppCompatButton chargeAppWalletBtn,
-      AppCompatImageView curve, ConstraintLayout headerLayout, RecyclerView rcWalletHistory,
-      CustomTextViewMedium tvWallet, CustomTextViewMedium tvWalletBalance) {
+      CardView cardMyWallet, AppCompatImageView curve, ConstraintLayout headerLayout,
+      RecyclerView rcWalletHistory, CustomTextViewMedium tvWallet,
+      CustomTextViewMedium tvWalletBalance) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardMyWallet = cardMyWallet;
-    this.cardPutBalance = cardPutBalance;
-    this.chargeAppWalletBtn = chargeAppWalletBtn;
     this.curve = curve;
     this.headerLayout = headerLayout;
     this.rcWalletHistory = rcWalletHistory;

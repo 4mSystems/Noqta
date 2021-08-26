@@ -19,7 +19,7 @@
     <string name="connection_AirPlane_Mode">Airplane mode</string>
     <string name="connection_invaild_msg">Poor Internet Connection</string>
     <string name="please_select_another_file">Please select another file</string>
-    <string name="google_map">AIzaSyCjsvKLJRP5P00s2xMRbJKWIQ2bCifh9bs</string>
+    <string name="google_map">AIzaSyAG9F2HDaTi93fzTTB0vdj5G0Ol6ys2SgQ</string>
     <string name="email_hint">البريد الالكترونى</string>
     <string name="email"> البريد الإلكترونى</string>
     <string name="password">كلمة المرور</string>
@@ -335,4 +335,7 @@
     <string name="reject">رفض الطلب</string>
     <string name="oil_liguid">أرقام اللزوجة</string>
     <string name="hidden_color">لون المخفي</string>
+    <string name="user_location">تتبع العميل</string>
+    <string name="wallet_history_1">تم إضافة</string>
+    <string name="wallet_history_2">لإلغاء الطلب بعد التحرك</string>
 </resources>

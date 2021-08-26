@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -18,7 +17,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.orderDetailsMain.user!=null?View.VISIBLE:View.GONE}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchContainer"
@@ -122,7 +122,6 @@
                 android:layout_marginStart="@dimen/dp12h"
                 android:layout_marginTop="@dimen/dp12h"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintEnd_toStartOf="@+id/card_time"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -178,7 +177,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/card_service"
@@ -241,7 +239,6 @@
                 android:layout_margin="@dimen/dp12h"
                 android:visibility="@{viewModel.orderDetailsMain.subServices.size()>0?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/br">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -281,7 +278,7 @@
                 android:layout_margin="@dimen/dp12h"
                 android:visibility="@{viewModel.orderDetailsMain.vehicle!=null?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
+
                 app:layout_constraintTop_toBottomOf="@id/card_main_service">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -390,7 +387,7 @@
                 android:layout_margin="@dimen/dp12h"
                 android:visibility="@{viewModel.orderDetailsMain.childServices.size()==0?View.GONE:View.VISIBLE}"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
+
                 app:layout_constraintTop_toBottomOf="@id/card_car_desc">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -430,7 +427,6 @@
                 android:layout_margin="@dimen/dp12h"
                 android:visibility="@{viewModel.orderDetailsMain.extraServices.size()==0?View.GONE:View.VISIBLE}"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/card_other_service">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -469,7 +465,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
+
                 app:layout_constraintTop_toBottomOf="@id/card_extra_service">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -641,7 +637,6 @@
                 android:layout_margin="@dimen/dp12h"
                 android:visibility="@{!TextUtils.isEmpty(viewModel.orderDetailsMain.image)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/card_invoice">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -678,7 +673,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/card_battery">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -715,12 +709,15 @@
                         android:layout_margin="@dimen/dp10h"
                         android:scaleType="centerCrop"
                         android:src="@drawable/splash"
+                        android:onClick="@{()-> viewModel.toFollowOrder()}"
+                        app:imageUrl="@{viewModel.orderDetailsMain.staticLocationImage}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_service_desc_value"
                         app:riv_corner_radius="@dimen/dp8h" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_accept"
@@ -729,10 +726,12 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp15h"
                 android:layout_marginBottom="@dimen/dp10h"
+                android:onClick="@{()-> viewModel.changeStatus(1)}"
                 android:padding="@dimen/dp8h"
                 android:text="@string/accept"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
+                android:visibility="@{viewModel.orderDetailsMain.status==0?View.VISIBLE:View.GONE,default=gone}"
                 app:backgroundTint="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btn_reject"
@@ -748,16 +747,46 @@
                 android:layout_marginTop="@dimen/dp15h"
                 android:layout_marginEnd="@dimen/dp8w"
                 android:layout_marginBottom="@dimen/dp10h"
+                android:onClick="@{()-> viewModel.changeStatus(-1)}"
                 android:padding="@dimen/dp8h"
                 android:text="@string/reject"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
+                android:visibility="@{viewModel.orderDetailsMain.status==0?View.VISIBLE:View.GONE,default=gone}"
                 app:backgroundTint="@color/colordark"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_accept"
                 app:layout_constraintTop_toBottomOf="@id/card_desc" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginBottom="@dimen/dp10h"
+                android:onClick="@{()->viewModel.changeStatus(viewModel.orderDetailsMain.status+1)}"
+                android:padding="@dimen/dp8h"
+                android:text="@{viewModel.orderDetailsMain.statusText}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:visibility="@{viewModel.orderDetailsMain.status!=0 &amp;&amp; viewModel.orderDetailsMain.status!=4?View.VISIBLE:View.GONE}"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="@dimen/dp6h"
+                app:layout_constraintBottom_toTopOf="@+id/br2"
+                app:layout_constraintEnd_toEndOf="@id/card_desc"
+                app:layout_constraintStart_toStartOf="@id/card_desc"
+                app:layout_constraintTop_toBottomOf="@id/card_desc"
+                app:rippleColor="@color/colordark" />
+
+            <View
+                android:id="@+id/br2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/status" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
