@@ -28,7 +28,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
     }
 
     public void submit() {
-        if (userData==null) {
+        if (userData == null) {
             if (request.isPasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
                     setMessage(Constants.SHOW_PROGRESS);
@@ -36,7 +36,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
                 } else
                     liveData.setValue(new Mutable(Constants.NOT_MATCH_PASSWORD));
             }
-        }else {
+        } else {
             if (request.isUpdatePasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
                     setMessage(Constants.SHOW_PROGRESS);

@@ -21,6 +21,7 @@ import grand.app.aber_provider.repository.AuthRepository;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.resources.ResourceManager;
 import grand.app.aber_provider.utils.session.UserHelper;
+import grand.app.aber_provider.utils.validation.Validate;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class RegisterViewModel extends BaseViewModel {
@@ -31,6 +32,7 @@ public class RegisterViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     RegisterRequest request;
     boolean isTermsAccepted = false;
+    ServicesAdapter servicesAdapter;
 
     @Inject
     public RegisterViewModel(AuthRepository repository) {
@@ -38,29 +40,62 @@ public class RegisterViewModel extends BaseViewModel {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
-        request = new RegisterRequest();
-        request.setIsCompany("0");
+    }
+
+    public void authServices() {
+        compositeDisposable.add(repository.authServices());
     }
 
     public void register() {
         getRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
+        getRequest().setStep("1");
         if (getRequest().isValid()) {
-            if (!TextUtils.isEmpty(getRequest().getUser_image())) {
-                setMessage(Constants.SHOW_PROGRESS);
-                compositeDisposable.add(repository.register(request, fileObject));
-            } else {
-                liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.select_image_profile)));
-            }
+            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
+                if (!TextUtils.isEmpty(getRequest().getUser_image())) {
+                    setMessage(Constants.SHOW_PROGRESS);
+                    compositeDisposable.add(repository.register(request, fileObject));
+                } else {
+                    liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.select_image_profile)));
+                }
+            } else
+                liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.password_not_match)));
         } else
             liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.empty_warning)));
+    }
+
+    public void registerDoc() {
+        getRequest().setStep("2");
+        if (getRequest().isDocValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
+            compositeDisposable.add(repository.register(request, fileObject));
+        } else
+            liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.empty_warning)));
+    }
+
+    public void registerServices() {
+        getRequest().setStep("3");
+        if (getServicesAdapter().selectedIds.size() > 0) {
+            if (isTermsAccepted) {
+                getRequest().setMainServicesId(getServicesAdapter().selectedIds);
+                setMessage(Constants.SHOW_PROGRESS);
+                compositeDisposable.add(repository.register(request, fileObject));
+            } else
+                liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.terms_warning)));
+        } else
+            liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.services_warning)));
     }
 
     public void onCheckedChange(CompoundButton button, boolean check) {
         isTermsAccepted = check;
     }
 
-    public void imageSubmit() {
-        liveData.setValue(new Mutable(Constants.IMAGE));
+    public void imageSubmit(String action) {
+        liveData.setValue(new Mutable(action));
+    }
+
+    @Bindable
+    public ServicesAdapter getServicesAdapter() {
+        return this.servicesAdapter == null ? this.servicesAdapter = new ServicesAdapter() : this.servicesAdapter;
     }
 
     private void unSubscribeFromObservable() {
@@ -77,7 +112,7 @@ public class RegisterViewModel extends BaseViewModel {
 
     @Bindable
     public RegisterRequest getRequest() {
-        return request;
+        return this.request == null ? this.request = new RegisterRequest() : this.request;
     }
 
     public List<FileObject> getFileObject() {

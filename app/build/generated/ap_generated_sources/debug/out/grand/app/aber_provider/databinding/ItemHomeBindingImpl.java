@@ -29,9 +29,9 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
     private final grand.app.aber_provider.customViews.views.CustomTextViewMedium mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback58;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -69,8 +69,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         this.tvServicesNameValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback54 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback59 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -247,8 +247,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback53);
-            this.mboundView8.setOnClickListener(mCallback54);
+            this.mboundView0.setOnClickListener(mCallback58);
+            this.mboundView8.setOnClickListener(mCallback59);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

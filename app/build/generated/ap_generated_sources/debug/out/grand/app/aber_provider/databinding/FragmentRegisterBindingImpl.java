@@ -39,15 +39,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback63;
+    private final android.view.View.OnClickListener mCallback70;
     @Nullable
-    private final android.view.View.OnClickListener mCallback64;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback69;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback65;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback66;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -202,24 +204,20 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private androidx.databinding.InverseBindingListener mboundView16androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.confirmPasswordError.get()
-            //         is viewmodel.request.confirmPasswordError.set((java.lang.String) callbackArg_0)
+            // Inverse of viewmodel.request.confirmPassword
+            //         is viewmodel.request.setConfirmPassword((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView16);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.request
             grand.app.aber_provider.pages.auth.models.RegisterRequest viewmodelRequest = null;
-            // viewmodel.request.confirmPasswordError
-            androidx.databinding.ObservableField<java.lang.String> viewmodelRequestConfirmPasswordError = null;
-            // viewmodel.request.confirmPasswordError.get()
-            java.lang.String viewmodelRequestConfirmPasswordErrorGet = null;
+            // viewmodel.request.confirmPassword
+            java.lang.String viewmodelRequestConfirmPassword = null;
             // viewmodel
             grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
             boolean viewmodelRequestJavaLangObjectNull = false;
-            // viewmodel.request.confirmPasswordError != null
-            boolean viewmodelRequestConfirmPasswordErrorJavaLangObjectNull = false;
 
 
 
@@ -233,16 +231,9 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if (viewmodelRequestJavaLangObjectNull) {
 
 
-                    viewmodelRequestConfirmPasswordError = viewmodelRequest.confirmPasswordError;
-
-                    viewmodelRequestConfirmPasswordErrorJavaLangObjectNull = (viewmodelRequestConfirmPasswordError) != (null);
-                    if (viewmodelRequestConfirmPasswordErrorJavaLangObjectNull) {
 
 
-
-
-                        viewmodelRequestConfirmPasswordError.set(((java.lang.String) (callbackArg_0)));
-                    }
+                    viewmodelRequest.setConfirmPassword(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -377,11 +368,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback62 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback63 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback64 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
-        mCallback60 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback61 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback67 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback70 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
+        mCallback68 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback69 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback65 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback66 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -562,6 +554,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestPasswordError = null;
         java.lang.String viewmodelRequestConfirmPasswordErrorGet = null;
         java.lang.String viewmodelRequestPassword = null;
+        java.lang.String viewmodelRequestConfirmPassword = null;
         java.lang.String viewmodelRequestPhone = null;
         boolean viewmodelRequestIsCompanyEqualsJavaLangString1 = false;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
@@ -612,6 +605,8 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                             viewmodelRequestCompanyName = viewmodelRequest.getCompanyName();
                             // read viewmodel.request.password
                             viewmodelRequestPassword = viewmodelRequest.getPassword();
+                            // read viewmodel.request.confirmPassword
+                            viewmodelRequestConfirmPassword = viewmodelRequest.getConfirmPassword();
                             // read viewmodel.request.phone
                             viewmodelRequestPhone = viewmodelRequest.getPhone();
                             // read viewmodel.request.address
@@ -829,18 +824,19 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x400L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback62);
+            this.appCompatButtonNext.setOnClickListener(mCallback68);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.loginNoAccount.setOnClickListener(mCallback63);
-            this.loginNoAccountBold.setOnClickListener(mCallback64);
+            this.loginNoAccount.setOnClickListener(mCallback69);
+            this.loginNoAccountBold.setOnClickListener(mCallback70);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
+            this.mboundView12.setOnClickListener(mCallback67);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView14, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView14androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
-            this.mboundView2.setOnClickListener(mCallback61);
+            this.mboundView2.setOnClickListener(mCallback66);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback60);
+            this.userImg.setOnClickListener(mCallback65);
         }
         if ((dirtyFlags & 0x580L) != 0) {
             // api target 1
@@ -850,6 +846,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewmodelRequestAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView14, viewmodelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView16, viewmodelRequestConfirmPassword);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelRequestCompanyName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelRequestPhone);
         }
@@ -882,7 +879,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             // api target 1
 
             this.inputNewPassword.setError(viewmodelRequestConfirmPasswordErrorGet);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView16, viewmodelRequestConfirmPasswordErrorGet);
         }
         if ((dirtyFlags & 0x5a0L) != 0) {
             // api target 1
@@ -900,6 +896,25 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
             case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.PICK_UP_LOCATION);
+                }
+                break;
+            }
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -954,14 +969,8 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel.userData.image
-                java.lang.String viewmodelUserDataImage = null;
-                // viewmodel.userData
-                grand.app.aber_provider.pages.auth.models.UserData viewmodelUserData = null;
                 // viewmodel
                 grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-                // viewmodel.userData != null
-                boolean viewmodelUserDataJavaLangObjectNull = false;
 
 
 
@@ -971,17 +980,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
 
-                    viewmodelUserData = viewmodel.userData;
-
-                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
-                    if (viewmodelUserDataJavaLangObjectNull) {
-
-
-                        viewmodelUserDataImage = viewmodelUserData.getImage();
-
-
-                        viewmodel.showImage(viewmodelUserDataImage, callbackArg_0);
-                    }
+                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.IMAGE);
                 }
                 break;
             }
@@ -998,7 +997,9 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.imageSubmit();
+
+
+                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.IMAGE);
                 }
                 break;
             }

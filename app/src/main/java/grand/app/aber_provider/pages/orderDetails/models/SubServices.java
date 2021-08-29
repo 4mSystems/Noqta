@@ -10,6 +10,10 @@ public class SubServices {
     private String name;
     @SerializedName("price")
     private String price;
+    @SerializedName("image")
+    private String image;
+    @SerializedName("selected")
+    private boolean selected;
 
     public int getId() {
         return id;
@@ -33,5 +37,17 @@ public class SubServices {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

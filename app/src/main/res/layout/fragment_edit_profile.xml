@@ -19,7 +19,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewmodel.request.name!=null?View.VISIBLE:View.GONE}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp4w"
                 android:layout_marginBottom="@dimen/dp4h"
-                android:onClick="@{()->viewmodel.imageSubmit()}"
+                android:onClick="@{()->viewmodel.imageSubmit(Constants.IMAGE)}"
                 android:src="@drawable/ic_profile_camera"
                 app:layout_constraintBottom_toBottomOf="@id/user_img"
                 app:layout_constraintStart_toStartOf="@id/user_img" />
@@ -101,10 +102,11 @@
                 android:layout_marginEnd="@dimen/dp15w"
                 android:enabled="false"
                 android:hint="@string/register_company_name"
+                android:visibility="@{viewmodel.request.isCompany.equals(`1`)?View.VISIBLE:View.GONE}"
                 app:endIconDrawable="@drawable/ic_password"
                 app:endIconMode="custom"
                 app:endIconTint="@color/black"
-                app:error="@{viewmodel.request.nameError}"
+                app:error="@{viewmodel.request.companyNameError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="@={viewmodel.request.name}"
+                    android:text="@={viewmodel.request.companyName}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -185,7 +187,7 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp15w"
                 android:hint="@string/choose_location"
-                app:error="@{viewmodel.request.emailError}"
+                app:error="@{viewmodel.request.addressError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -196,8 +198,10 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:text="@={viewmodel.request.email}"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:onClick="@{()->viewmodel.imageSubmit(Constants.PICK_UP_LOCATION)}"
+                    android:text="@={viewmodel.request.address}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -235,7 +239,7 @@
                 android:layout_marginStart="@dimen/dp30w"
                 android:layout_marginTop="@dimen/dp18h"
                 android:layout_marginEnd="@dimen/dp15w"
-                android:text="@string/my_services"
+                android:text="@string/profile_services"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/colordark"
                 app:layout_constraintStart_toStartOf="parent"
@@ -255,7 +259,10 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    app:adapter="@{viewmodel.servicesAdapter}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}" />
             </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.AppCompatButton

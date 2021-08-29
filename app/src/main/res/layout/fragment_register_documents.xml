@@ -12,6 +12,8 @@
 
         <import type="grand.app.aber_provider.utils.Constants" />
 
+        <import type="grand.app.aber_provider.utils.session.UserHelper" />
+
         <variable
             name="viewmodel"
             type="grand.app.aber_provider.pages.auth.register.RegisterViewModel" />
@@ -99,10 +101,11 @@
                         android:layout_marginTop="@dimen/dp18h"
                         android:layout_marginEnd="@dimen/dp15w"
                         android:hint="@string/commercial_hint"
+                        android:visibility="@{UserHelper.getInstance(context).accountType.equals(`0`)?View.GONE:View.VISIBLE}"
                         app:endIconDrawable="@drawable/ic_cloud_computing"
                         app:endIconMode="custom"
                         app:endIconTint="@color/black"
-                        app:error="@{viewmodel.request.nameError}"
+                        app:error="@{viewmodel.request.licenceError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +119,8 @@
                             android:layout_height="wrap_content"
                             android:focusable="false"
                             android:inputType="text"
-                            android:text="@={viewmodel.request.name}"
+                            android:onClick="@{()-> viewmodel.imageSubmit(Constants.COMMERCIAL_IMAGE)}"
+                            android:text="@={viewmodel.request.licence_image}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -130,10 +134,11 @@
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp15w"
                         android:hint="@string/tax_card"
+                        android:visibility="@{UserHelper.getInstance(context).accountType.equals(`0`)?View.GONE:View.VISIBLE}"
                         app:endIconDrawable="@drawable/ic_cloud_computing"
                         app:endIconMode="custom"
                         app:endIconTint="@color/black"
-                        app:error="@{viewmodel.request.nameError}"
+                        app:error="@{viewmodel.request.taxError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -146,6 +151,8 @@
                             android:layout_height="wrap_content"
                             android:focusable="false"
                             android:inputType="text"
+                            android:onClick="@{()-> viewmodel.imageSubmit(Constants.TAX_CARD_PHOTO)}"
+                            android:text="@={viewmodel.request.tax_image}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -163,7 +170,7 @@
                         app:endIconDrawable="@drawable/ic_cloud_computing"
                         app:endIconMode="custom"
                         app:endIconTint="@color/black"
-                        app:error="@{viewmodel.request.phoneError}"
+                        app:error="@{viewmodel.request.identityError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -175,11 +182,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:focusable="false"
-                            android:inputType="phone"
-                            android:text="@={viewmodel.request.phone}"
+                            android:inputType="text"
+                            android:onClick="@{()-> viewmodel.imageSubmit(Constants.NATIONAL_ID_PHOTO)}"
+                            android:text="@={viewmodel.request.identity_image}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textDirection="ltr" />
+                            android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -194,7 +201,7 @@
                         app:endIconDrawable="@drawable/ic_cloud_computing"
                         app:endIconMode="custom"
                         app:endIconTint="@color/black"
-                        app:error="@{viewmodel.request.emailError}"
+                        app:error="@{viewmodel.request.passportError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -207,6 +214,8 @@
                             android:layout_height="wrap_content"
                             android:focusable="false"
                             android:inputType="text"
+                            android:onClick="@{()-> viewmodel.imageSubmit(Constants.PASSPORT_PHOTO)}"
+                            android:text="@={viewmodel.request.passport_image}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -221,7 +230,7 @@
                         android:layout_marginBottom="@dimen/dp20h"
                         android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
                         android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
-                        android:onClick="@{()-> viewmodel.register()}"
+                        android:onClick="@{()-> viewmodel.registerDoc()}"
                         android:text="@string/next"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/white"

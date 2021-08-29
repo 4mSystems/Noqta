@@ -143,15 +143,6 @@ public class ServicesRepository extends BaseRepository {
                 Constants.SEARCH, showProgress);
     }
 
-    public Disposable deletePostComment(int commentId) {
-        return connectionHelper.requestApi(Constants.DELETE_REQUEST, URLS.DELETE_COMMENT + commentId, new Object(), StatusMessage.class,
-                Constants.DELETE_COMMENT, true);
-    }
-
-    public Disposable userProfile(int postId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.USER_PROFILE + postId, new Object(), UserProfileResponse.class,
-                Constants.PROFILE, true);
-    }
 
     public Disposable userProfilePosts(int page, String url, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, url + "&page=" + page, new Object(), HomeResponse.class,

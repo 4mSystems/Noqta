@@ -18,12 +18,15 @@ import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.databinding.FragmentLoginBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.model.base.StatusMessage;
 import grand.app.aber_provider.pages.auth.confirmCode.ConfirmCodeFragment;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.auth.forgetPassword.ForgetPasswordFragment;
+import grand.app.aber_provider.pages.auth.models.UserData;
 import grand.app.aber_provider.pages.auth.models.UsersResponse;
+import grand.app.aber_provider.pages.auth.register.RegisterDocumentsFragment;
 import grand.app.aber_provider.pages.auth.register.RegisterFragment;
+import grand.app.aber_provider.pages.auth.register.RegisterServicesFragment;
+import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 import grand.app.aber_provider.utils.session.UserHelper;
@@ -51,9 +54,19 @@ public class LoginFragment extends BaseFragment {
             viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             switch (((Mutable) o).message) {
                 case Constants.LOGIN:
-                    toastMessage(((StatusMessage) mutable.object).mMessage);
-                    UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-                    MovementHelper.startActivityBase(requireActivity(), CountriesFragment.class.getName(), getString(R.string.country), null);
+                    UserData userData = ((UsersResponse) mutable.object).getData();
+                    if (userData.getStep() == 3) {
+                        toastMessage(((UsersResponse) mutable.object).mMessage);
+                        UserHelper.getInstance(requireActivity()).userLogin(userData);
+                        MovementHelper.startActivityBase(requireActivity(), CountriesFragment.class.getName(), getString(R.string.country), null);
+                    } else {
+                        UserHelper.getInstance(requireActivity()).addJwt(userData.getToken());
+                        UserHelper.getInstance(requireActivity()).addAccountType(userData.getAccountType());
+                        if (userData.getStep() == 1)
+                            MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, userData.getPhone()), getString(R.string.register), RegisterDocumentsFragment.class.getName(), null);
+                        else if (userData.getStep() == 2)
+                            MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, userData.getPhone()), getString(R.string.register), RegisterServicesFragment.class.getName(), null);
+                    }
                     break;
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivity(requireActivity(), ForgetPasswordFragment.class.getName(), null, null);
@@ -67,6 +80,13 @@ public class LoginFragment extends BaseFragment {
                 case Constants.NOT_VERIFIED:
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.loginRequest.getPhone()), null, ConfirmCodeFragment.class.getName(), null);
                     break;
+                case Constants.TERMS:
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.TERMS), getResources().getString(R.string.terms), TermsFragment.class.getName(), null);
+                    break;
+                case Constants.PRIVACY:
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.PRIVACY), getResources().getString(R.string.privacy), TermsFragment.class.getName(), null);
+                    break;
+
             }
         });
     }

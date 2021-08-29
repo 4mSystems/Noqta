@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -236,16 +237,26 @@ public class ConnectionHelper {
 
     private Map<String, String> getParameters(final Object requestData) {
         Map<String, String> params = new HashMap<>();
-        if (requestData != null) {
-            try {
-                JSONObject jsonObject = new JSONObject(gson.toJson(requestData));
-                for (int i = 0; i < jsonObject.names().length(); i++) {
+        try {
+            JSONObject jsonObject = new JSONObject(gson.toJson(requestData));
+            for (int i = 0; i < jsonObject.names().length(); i++) {
+//                jsonObject.get(jsonObject.names().getString(i));
+                if (jsonObject.get(jsonObject.names().getString(i)) instanceof JSONArray) {
+                    JSONArray jsonArray = (JSONArray) jsonObject.get(jsonObject.names().getString(i));
+                    for (int j = 0; j < jsonArray.length(); j++) {
+                        {
+                            String name = jsonObject.names().getString(i) + "[" + j + "]";
+                            params.put(name, jsonArray.get(j) + "");
+                        }
+                    }
+                } else
                     params.put(jsonObject.names().getString(i), jsonObject.get(jsonObject.names().getString(i)) + "");
-                }
-            } catch (Exception e) {
-//                liveData.setValue(new Mutable(Constants.ERROR, e.getMessage()));
-                e.getStackTrace();
+                Log.e("PARAMS", jsonObject.names().getString(i) + ":" + jsonObject.get(jsonObject.names().getString(i)) + "");
             }
+            Log.e("PARAMS", params.size() + "");
+        } catch (Exception e) {
+            Log.e("PARAMS", e.getStackTrace() + "");
+            e.getStackTrace();
         }
         return params;
     }

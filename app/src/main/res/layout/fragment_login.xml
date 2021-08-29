@@ -178,6 +178,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/privacy"
                 android:textAlignment="viewEnd"
+                android:onClick="@{()-> viewmodel.settings(Constants.PRIVACY)}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark" />
 
@@ -186,6 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/terms"
+                android:onClick="@{()-> viewmodel.settings(Constants.TERMS)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark" />

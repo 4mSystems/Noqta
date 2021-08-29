@@ -38,7 +38,7 @@ public class ConfirmViewModel extends BaseViewModel {
 
     public void resendCode() {
         setMessage(Constants.SHOW_PROGRESS);
-        compositeDisposable.add(repository.forgetPassword(new ForgetPasswordRequest(getPassingObject().getObject(), getRequest().getType())));
+        compositeDisposable.add(repository.forgetPassword(new ForgetPasswordRequest(getPassingObject().getObject(),getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER ? "verify" : "reset")));
     }
 
     private void unSubscribeFromObservable() {

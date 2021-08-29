@@ -38,16 +38,8 @@ public class LoginViewModel extends BaseViewModel {
         }
     }
 
-    public void loginWithSocial() {
-        compositeDisposable.add(repository.loginWithSocial(loginRequest));
-    }
-
-    public void toFacebook() {
-        liveData.setValue(new Mutable(Constants.FACE_BOOK));
-    }
-
-    public void googleSignIn() {
-        liveData.setValue(new Mutable(Constants.GOOGLE_SIGN_IN));
+    public void settings(String action) {
+        liveData.setValue(new Mutable(action));
     }
 
     public void register() {

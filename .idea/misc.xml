@@ -18,13 +18,15 @@
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/drawable/ic_social_media.xml" value="0.17828947368421053" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/drawable/ic_suggest.xml" value="0.17828947368421053" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/drawable/ic_user_location.xml" value="0.271" />
-        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/activity_map_address.xml" value="0.1680921052631579" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/activity_map_address.xml" value="0.1" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_app_wallet.xml" value="0.22" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_cities.xml" value="0.10894808743169399" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_confirm_code.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_contact.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_countries.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_edit_profile.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_follow_up_orders.xml" value="0.10382513661202186" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_forget_password.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_home.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_login.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_my_account_settings.xml" value="0.1680921052631579" />
@@ -32,8 +34,11 @@
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_order_details.xml" value="0.2" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_packages.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_register.xml" value="0.1680921052631579" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_register_documents.xml" value="0.1680921052631579" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_register_services.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_services_orders.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/fragment_social_media.xml" value="0.1680921052631579" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_auth_services.xml" value="0.18" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_color.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_contact.xml" value="0.10894808743169399" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_country.xml" value="0.1680921052631579" />
@@ -43,6 +48,7 @@
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_order_options_details.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_package.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_part.xml" value="0.1680921052631579" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_part_service.xml" value="0.10382513661202186" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_required_service.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_social.xml" value="0.10894808743169399" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/item_social_menu.xml" value="0.10894808743169399" />
@@ -50,6 +56,7 @@
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/layout_grand.xml" value="0.10894808743169399" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/loader_animation.xml" value="0.1680921052631579" />
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/menu.xml" value="0.2" />
+        <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/option_dialog.xml" value="0.1680921052631579" />
       </map>
     </option>
   </component>

@@ -20,7 +20,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements grand.
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback29;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,7 +37,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements grand.
         this.tvName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback28 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback29 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -133,7 +133,7 @@ public class ItemContactBindingImpl extends ItemContactBinding implements grand.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.tvName.setOnClickListener(mCallback28);
+            this.tvName.setOnClickListener(mCallback29);
         }
     }
     // Listener Stub Implementations

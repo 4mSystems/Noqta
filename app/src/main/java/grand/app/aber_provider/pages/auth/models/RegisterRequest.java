@@ -4,6 +4,8 @@ import androidx.databinding.ObservableField;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.validation.Validate;
 
@@ -34,7 +36,14 @@ public class RegisterRequest {
     private String longitude;
     @SerializedName("address")
     private String address;
+    @SerializedName("main_service_ids")
+    private List<Integer> mainServicesId;
+
     private String user_image;
+    private String licence_image;
+    private String tax_image;
+    private String identity_image;
+    private String passport_image;
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
     public transient ObservableField<String> passwordError = new ObservableField<>();
@@ -42,10 +51,10 @@ public class RegisterRequest {
     public transient ObservableField<String> confirmPasswordError = new ObservableField<>();
     public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> companyNameError = new ObservableField<>();
-    public transient ObservableField<String> nationalError = new ObservableField<>();
-    public transient ObservableField<String> lectureError = new ObservableField<>();
-    public transient ObservableField<String> sectionError = new ObservableField<>();
-    public transient ObservableField<String> hoursError = new ObservableField<>();
+    public transient ObservableField<String> licenceError = new ObservableField<>();
+    public transient ObservableField<String> taxError = new ObservableField<>();
+    public transient ObservableField<String> identityError = new ObservableField<>();
+    public transient ObservableField<String> passportError = new ObservableField<>();
     public transient ObservableField<String> addressError = new ObservableField<>();
 
     public RegisterRequest() {
@@ -80,31 +89,19 @@ public class RegisterRequest {
         return valid;
     }
 
-    public boolean isUpgradeValid() {
+    public boolean isDocValid() {
         boolean valid = true;
-        if (!Validate.isValid(name, Constants.FIELD)) {
-            nameError.set(Validate.error);
+        if (!Validate.isValid(licence_image, Constants.FIELD) && getIsCompany().equals("1")) {
+            licenceError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(email, Constants.EMAIL)) {
-            emailError.set(Validate.error);
+        } else if (!Validate.isValid(tax_image, Constants.FIELD) && getIsCompany().equals("1")) {
+            taxError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(phone, Constants.FIELD)) {
-            phoneError.set(Validate.error);
+        } else if (!Validate.isValid(identity_image, Constants.FIELD)) {
+            identityError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(step, Constants.FIELD)) {
-            nationalError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(isCompany, Constants.FIELD)) {
-            lectureError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(latitude, Constants.FIELD)) {
-            sectionError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(longitude, Constants.FIELD)) {
-            hoursError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(address, Constants.FIELD)) {
-            addressError.set(Validate.error);
+        } else if (!Validate.isValid(passport_image, Constants.FIELD)) {
+            passportError.set(Validate.error);
             valid = false;
         }
         return valid;
@@ -115,14 +112,19 @@ public class RegisterRequest {
         if (!Validate.isValid(name, Constants.FIELD)) {
             nameError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(email, Constants.EMAIL)) {
-            emailError.set(Validate.error);
-            valid = false;
+        } else if (isCompany.equals("1")) {
+            if (!Validate.isValid(companyName, Constants.FIELD)) {
+                companyNameError.set(Validate.error);
+                valid = false;
+            }
         } else if (!Validate.isValid(phone, Constants.FIELD)) {
             phoneError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(companyName, Constants.FIELD)) {
-            companyNameError.set(Validate.error);
+        } else if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(address, Constants.FIELD)) {
+            addressError.set(Validate.error);
             valid = false;
         }
         return valid;
@@ -226,7 +228,6 @@ public class RegisterRequest {
     }
 
     public void setStep(String step) {
-        nationalError.set(null);
         this.step = step;
     }
 
@@ -235,7 +236,7 @@ public class RegisterRequest {
     }
 
     public void setIsCompany(String isCompany) {
-        lectureError.set(null);
+        taxError.set(null);
         this.isCompany = isCompany;
     }
 
@@ -244,7 +245,7 @@ public class RegisterRequest {
     }
 
     public void setLatitude(String latitude) {
-        sectionError.set(null);
+        identityError.set(null);
         this.latitude = latitude;
     }
 
@@ -253,7 +254,7 @@ public class RegisterRequest {
     }
 
     public void setLongitude(String longitude) {
-        hoursError.set(null);
+        passportError.set(null);
         this.longitude = longitude;
     }
 
@@ -273,5 +274,49 @@ public class RegisterRequest {
     public void setOldPassword(String oldPassword) {
         oldError.set(null);
         this.oldPassword = oldPassword;
+    }
+
+    public String getLicence_image() {
+        return licence_image;
+    }
+
+    public void setLicence_image(String licence_image) {
+        licenceError.set(null);
+        this.licence_image = licence_image;
+    }
+
+    public String getTax_image() {
+        return tax_image;
+    }
+
+    public void setTax_image(String tax_image) {
+        taxError.set(null);
+        this.tax_image = tax_image;
+    }
+
+    public String getIdentity_image() {
+        return identity_image;
+    }
+
+    public void setIdentity_image(String identity_image) {
+        identityError.set(null);
+        this.identity_image = identity_image;
+    }
+
+    public String getPassport_image() {
+        return passport_image;
+    }
+
+    public void setPassport_image(String passport_image) {
+        passportError.set(null);
+        this.passport_image = passport_image;
+    }
+
+    public List<Integer> getMainServicesId() {
+        return mainServicesId;
+    }
+
+    public void setMainServicesId(List<Integer> mainServicesId) {
+        this.mainServicesId = mainServicesId;
     }
 }

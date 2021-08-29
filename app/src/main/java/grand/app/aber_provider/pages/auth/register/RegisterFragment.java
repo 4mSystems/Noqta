@@ -3,7 +3,6 @@ package grand.app.aber_provider.pages.auth.register;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +30,7 @@ import grand.app.aber_provider.pages.auth.models.UsersResponse;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.LauncherHelper;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.session.UserHelper;
 import grand.app.aber_provider.utils.upload.FileOperations;
 
 public class RegisterFragment extends BaseFragment {
@@ -44,6 +44,8 @@ public class RegisterFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getRequest().setIsCompany("0");
+        UserHelper.getInstance(requireActivity()).addJwt(null);
         binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -72,9 +74,9 @@ public class RegisterFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LauncherHelper.checkPermission(this, 9, (request, result) -> {
+        LauncherHelper.checkPermission(this, Constants.FILE_TYPE_IMAGE, (request, result) -> {
             if (result)
-                pickImageDialogSelect();
+                pickImageDialogSelect(request);
         });
     }
 
@@ -90,8 +92,14 @@ public class RegisterFragment extends BaseFragment {
                 case Constants.REGISTER:
                     toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
                     finishActivity();
+                    UserHelper.getInstance(requireActivity()).addJwt(((UsersResponse) ((Mutable) o).object).getData().getToken());
+                    UserHelper.getInstance(requireActivity()).addAccountType(viewModel.getRequest().getIsCompany());
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getPhone()), getString(R.string.register), RegisterDocumentsFragment.class.getName(), null);
                     break;
+                case Constants.PICK_UP_LOCATION:
+                    MovementHelper.startMapActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.choose_location), Constants.LOCATION_REQUEST);
+                    break;
+
             }
         });
 
@@ -106,6 +114,11 @@ public class RegisterFragment extends BaseFragment {
             viewModel.getFileObject().add(fileObject);
             viewModel.getRequest().setUser_image(fileObject.getFilePath());
             binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
+        } else if (request == Constants.LOCATION_REQUEST) {
+            viewModel.getRequest().setAddress(result.getStringExtra(Constants.ADDRESS));
+            viewModel.getRequest().setLatitude(String.valueOf(result.getDoubleExtra(Constants.LAT, 0.0)));
+            viewModel.getRequest().setLongitude(String.valueOf(result.getDoubleExtra(Constants.LNG, 0.0)));
+            viewModel.notifyChange(BR.request);
         }
     }
 

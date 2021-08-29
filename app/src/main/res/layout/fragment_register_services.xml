@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp15h"
                 android:layout_marginEnd="@dimen/dp15w"
-                android:text="@string/sex_percentage"
+                android:text="@string/full_percentage"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colordark"
@@ -87,7 +87,11 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    app:adapter="@{viewmodel.servicesAdapter}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}"
+                    tools:listitem="@layout/item_auth_services" />
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.checkbox.MaterialCheckBox
@@ -98,6 +102,7 @@
                 android:layout_marginEnd="@dimen/dp10w"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
+                android:onCheckedChanged="@{(compoundButton, checked) -> viewmodel.onCheckedChange(compoundButton, checked)}"
                 android:text="@string/agree_to"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -116,7 +121,7 @@
                 android:layout_marginBottom="@dimen/dp20h"
                 android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
                 android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
-                android:onClick="@{()-> viewmodel.register()}"
+                android:onClick="@{()-> viewmodel.registerServices()}"
                 android:text="@string/register"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"

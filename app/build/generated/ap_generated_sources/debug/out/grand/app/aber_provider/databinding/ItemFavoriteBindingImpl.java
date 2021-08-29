@@ -24,7 +24,7 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding implements gran
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback40;
+    private final android.view.View.OnClickListener mCallback44;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding implements gran
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback44 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,7 +117,7 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding implements gran
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback40);
+            this.mboundView0.setOnClickListener(mCallback44);
         }
     }
     // Listener Stub Implementations

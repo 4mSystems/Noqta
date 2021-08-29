@@ -39,8 +39,8 @@ public class BaseFragment extends Fragment {
     }
 
 
-    protected void pickImageDialogSelect() {
-        FileOperations.pickImage(context);
+    protected void pickImageDialogSelect(int request) {
+        FileOperations.pickImage(context, request);
     }
 
     protected void pickPostMedia(Context context) {

@@ -5,8 +5,12 @@ public class Constants {
     public static final String BAN_USER = "BAN_USER";
     public static final String FOLLOWERS = "FOLLOWERS";
     public static final String FOLLOW_ORDER = "FOLLOW_ORDER";
-    public static final String CANCEL_FOLLOWER = "CANCEL_FOLLOWER";
-    public final static String CANCEL_FOLLOWING = "CANCEL_FOLLOWING";
+    public static final String COMMERCIAL_IMAGE = "commercial_register_photo";
+    public final static String TAX_CARD_PHOTO = "tax_card_photo";
+    public final static int COMMERCIAL_REQUEST = 6001;
+    public final static int TAX_REQUEST = 6002;
+    public final static int IDENTITY_REQUEST = 6003;
+    public final static int PASSPORT_REQUEST = 6004;
     public static final String CITIES = "CITIES";
     public static final String COUNTRIES = "COUNTRIES";
 
@@ -34,12 +38,12 @@ public class Constants {
     public final static String BACKGROUND_API = "BACKGROUND_API";
 
     public final static String LOGOUT = "logout";
-    public final static String REMOVE_IMAGE = "REMOVE_IMAGE";
+    public final static String NATIONAL_ID_PHOTO = "national_id_photo";
 
     public final static String SHOW_LOGOUT_WARNING = "SHOW_LOGOUT_WARNING";
-    public final static String POSTS = "POSTS";
+    public final static String PASSPORT_PHOTO = "passport_photo";
     public final static String NEW_POST = "NEW_POST";
-    public final static int NEW_POST_REQUEST = 6001;
+
     public final static String ERROR_TOAST = "error_toast";
 
     public final static String ERROR = "error";
@@ -48,16 +52,15 @@ public class Constants {
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
     public final static String RESPONSE_URL_CHANGED = "changed";
-    public final static String MAKE_COMMENT = "MAKE_COMMENT";
+
     public final static String FAILURE_CONNECTION = "failure_connection";
     public final static String ORDER_DETAILS = "ORDER_DETAILS";
-    public final static String EDIT = "EDIT";
-    public final static String EDIT_COMMENT = "EDIT_COMMENT";
+
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "ar";
     public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
-    public static final String MENU_LIVE = "MENU_LIVE";
+    public static final int LOCATION_REQUEST = 6005;
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
@@ -94,7 +97,7 @@ public class Constants {
     public static final String back_car_image = "back_car_image";
     public static final int COMMENT_REQUEST = 381;
 
-    public static final String ALL_REACTIONS = "all";
+    public static final String PRIVACY = "PRIVACY";
     public static final String LIKES_REACTION = "like";
     public static final String DISLIKES_REACTIONS = "dislike";
     public static final String PROFILE_POSTS = "PROFILE_POSTS";

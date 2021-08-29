@@ -49,25 +49,14 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-        <!--        <RelativeLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent">-->
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/map_view"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:initMap="@{mapAddressViewModel.mMapLatLng}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_container" />
-
-        <!--            <LinearLayout-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_centerInParent="true"-->
-        <!--                android:gravity="center"-->
-        <!--                android:orientation="vertical">-->
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_marker_center"
@@ -79,9 +68,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/map_view" />
-        <!--            </LinearLayout>-->
-
-        <!--        </RelativeLayout>-->
 
         <ProgressBar
             android:id="@+id/map_progress"

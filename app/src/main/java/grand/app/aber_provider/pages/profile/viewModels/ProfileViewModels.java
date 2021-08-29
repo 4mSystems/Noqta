@@ -45,7 +45,7 @@ public class ProfileViewModels extends BaseViewModel {
     }
 
     public void userProfile() {
-        compositeDisposable.add(postRepository.userProfile(getPassingObject().getId()));
+//        compositeDisposable.add(postRepository.userProfile(getPassingObject().getId()));
     }
 
     public void reportUser() {

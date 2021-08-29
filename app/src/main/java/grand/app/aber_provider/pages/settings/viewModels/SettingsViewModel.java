@@ -56,7 +56,10 @@ public class SettingsViewModel extends BaseViewModel {
     }
 
     public void terms() {
-        compositeDisposable.add(repository.terms());
+        if (getPassingObject().getObject().equals(Constants.TERMS))
+            compositeDisposable.add(repository.terms());
+        else
+            compositeDisposable.add(repository.privacy());
     }
 
     public void socialMedia() {

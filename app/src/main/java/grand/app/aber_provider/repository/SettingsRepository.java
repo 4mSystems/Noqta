@@ -51,6 +51,11 @@ public class SettingsRepository extends BaseRepository {
                 Constants.TERMS, true);
     }
 
+    public Disposable privacy() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PRIVACY, new Object(), AboutResponse.class,
+                Constants.TERMS, true);
+    }
+
     public Disposable sendContact(ContactUsRequest contactUsRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONTACT_US, contactUsRequest, StatusMessage.class,
                 Constants.CONTACT, false);
@@ -65,6 +70,7 @@ public class SettingsRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_SOCIAL, new Object(), SocialResponse.class,
                 Constants.SOCIAL, true);
     }
+
     public Disposable walletHistory() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.WALLET_HISTORY, new Object(), WalletHistoryResponse.class,
                 Constants.WALLET, true);

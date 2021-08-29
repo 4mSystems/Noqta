@@ -9,7 +9,7 @@ import grand.app.aber_provider.pages.auth.models.UserData;
 
 public class UserHelper {
     private static UserHelper mInstance;
-     Context mCtx;
+    Context mCtx;
     private static final String SHARED_PREF_NAME = "myshared";
     private static final String SHARED_PREF_NAME_NO_DELETED = "NO_DELETED";
 
@@ -106,6 +106,7 @@ public class UserHelper {
         editor.apply();
         return true;
     }
+
     public void addCountNotification(int count) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME_NO_DELETED, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -132,6 +133,7 @@ public class UserHelper {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("jwt", null);
     }
+
     public void addCountryId(int count) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -154,6 +156,18 @@ public class UserHelper {
     public String getCurrency() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("currency", "");
+    }
+
+    public void addAccountType(String type) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("type", type);
+        editor.apply();
+    }
+
+    public String getAccountType() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("type", "");
     }
 
 }

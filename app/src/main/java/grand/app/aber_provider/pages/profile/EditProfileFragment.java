@@ -18,6 +18,8 @@ import java.io.File;
 
 import javax.inject.Inject;
 
+import grand.app.aber_provider.BR;
+import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.activity.BaseActivity;
 import grand.app.aber_provider.base.BaseFragment;
@@ -28,6 +30,7 @@ import grand.app.aber_provider.databinding.FragmentEditProfileBinding;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.auth.changePassword.ChangePasswordFragment;
 import grand.app.aber_provider.pages.auth.models.UsersResponse;
+import grand.app.aber_provider.pages.profile.models.profile.UserProfileResponse;
 import grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.LauncherHelper;
@@ -46,6 +49,7 @@ public class EditProfileFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.userProfile();
         setEvent();
         return binding.getRoot();
     }
@@ -67,6 +71,12 @@ public class EditProfileFragment extends BaseFragment {
                 case Constants.CHANGE_PASSWORD:
                     MovementHelper.startActivity(requireActivity(), ChangePasswordFragment.class.getName(), null, null);
                     break;
+                case Constants.PROFILE:
+                    viewModel.updateUserData(((UserProfileResponse) mutable.object).getUserProfile());
+                    break;
+                case Constants.PICK_UP_LOCATION:
+                    MovementHelper.startMapActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.choose_location), Constants.LOCATION_REQUEST);
+                    break;
 
             }
         });
@@ -82,9 +92,9 @@ public class EditProfileFragment extends BaseFragment {
     @Override
     public void onAttach(@NotNull Context context) {
         super.onAttach(context);
-        LauncherHelper.checkPermission(this, 9, (request, result) -> {
+        LauncherHelper.checkPermission(this, Constants.FILE_TYPE_IMAGE, (request, result) -> {
             if (result)
-                pickImageDialogSelect();
+                pickImageDialogSelect(request);
         });
 
     }
@@ -95,7 +105,14 @@ public class EditProfileFragment extends BaseFragment {
         if (request == Constants.FILE_TYPE_IMAGE) {
             FileObject fileObject = FileOperations.getFileObject(getActivity(), result, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
             viewModel.getFileObject().add(fileObject);
+            viewModel.getRequest().setUser_image(fileObject.getFilePath());
             binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
+        } else if (request == Constants.LOCATION_REQUEST) {
+            viewModel.getRequest().setAddress(result.getStringExtra(Constants.ADDRESS));
+            viewModel.getRequest().setLatitude(String.valueOf(result.getDoubleExtra(Constants.LAT, 0.0)));
+            viewModel.getRequest().setLongitude(String.valueOf(result.getDoubleExtra(Constants.LNG, 0.0)));
+            viewModel.notifyChange(BR.request);
         }
     }
+
 }

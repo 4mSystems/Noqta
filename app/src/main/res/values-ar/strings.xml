@@ -34,7 +34,7 @@
     <string name="select_country">إختر الدولة</string>
     <string name="country_next">التالى</string>
     <string name="login_header">تسجيل الدخول</string>
-    <string name="login_phone">رقم الجوال / البريد الالكتروني</string>
+    <string name="login_phone">رقم الجوال </string>
     <string name="login_header_number"> رقم الجوال</string>
     <string name="login_forget">نسيت كلمة المرور ؟</string>
     <string name="forget_header">نسيت كلمة المرور</string>
@@ -338,4 +338,11 @@
     <string name="user_location">تتبع العميل</string>
     <string name="wallet_history_1">تم إضافة</string>
     <string name="wallet_history_2">لإلغاء الطلب بعد التحرك</string>
+    <string name="commercial_selected">تم اختيار صورة السجل التجارى بنجاح</string>
+    <string name="tax_selected">تم اختيار صورة البطاقة الضريبية بنجاح</string>
+    <string name="national_selected">تم اختيار صورة الهوية بنجاح</string>
+    <string name="passport_selected">تم اختيار صورة جواز السفر بنجاح</string>
+    <string name="services_warning">يجب اختيار خدمة واحده على الاقل</string>
+    <string name="terms_warning">يرجى على الموافقة على الشروك والاحكام</string>
+    <string name="profile_services">اختر الخدمات التي ستقدمها</string>
 </resources>

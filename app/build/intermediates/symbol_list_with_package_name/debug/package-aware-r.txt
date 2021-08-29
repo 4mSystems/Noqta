@@ -3909,6 +3909,7 @@ id ic_color
 id ic_exit_dialog
 id ic_parts_image
 id ic_resource
+id ic_service
 id ic_social
 id ic_switch
 id icon
@@ -4499,6 +4500,7 @@ layout fragment_services_orders
 layout fragment_social_media
 layout fragment_splash
 layout fragment_terms
+layout item_auth_services
 layout item_color
 layout item_contact
 layout item_country
@@ -4757,6 +4759,7 @@ string com_facebook_smart_login_confirmation_title
 string com_facebook_tooltip_default
 string comment
 string commercial_hint
+string commercial_selected
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -4993,6 +4996,7 @@ string my_orders
 string my_services
 string my_wallet
 string name_hint
+string national_selected
 string navigation_drawer_close
 string navigation_drawer_open
 string new_live_title
@@ -5029,6 +5033,7 @@ string ordinary_wash
 string other_service
 string package_title
 string passport_image
+string passport_selected
 string password
 string password_hint
 string password_hint_confirm
@@ -5061,6 +5066,7 @@ string previous
 string privacy
 string product_total
 string profile
+string profile_services
 string project_id
 string promo_code_total
 string put_wallet_balance
@@ -5111,6 +5117,7 @@ string service_time
 string service_type
 string services_moving_price
 string services_price
+string services_warning
 string settings
 string sex_percentage
 string share_app
@@ -5130,8 +5137,10 @@ string subscribe
 string subscribe_live
 string subscrubtions
 string tax_card
+string tax_selected
 string terms
 string terms_auth
+string terms_warning
 string thirty_percentage
 string tier_image
 string tire_desc

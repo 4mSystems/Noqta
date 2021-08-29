@@ -83,19 +83,21 @@ public class BR {
 
   public static final int service = 40;
 
-  public static final int servicesRequiredAdapter = 41;
+  public static final int servicesAdapter = 41;
 
-  public static final int socialAdapter = 42;
+  public static final int servicesRequiredAdapter = 42;
 
-  public static final int socialMediaData = 43;
+  public static final int socialAdapter = 43;
 
-  public static final int userDocuments = 44;
+  public static final int socialMediaData = 44;
 
-  public static final int userProfile = 45;
+  public static final int userDocuments = 45;
 
-  public static final int viewModel = 46;
+  public static final int userProfile = 46;
 
-  public static final int viewmodel = 47;
+  public static final int viewModel = 47;
 
-  public static final int walletHistoryItem = 48;
+  public static final int viewmodel = 48;
+
+  public static final int walletHistoryItem = 49;
 }

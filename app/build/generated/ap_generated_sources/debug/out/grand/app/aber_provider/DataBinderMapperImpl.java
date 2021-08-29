@@ -36,6 +36,7 @@ import grand.app.aber_provider.databinding.FragmentServicesOrdersBindingImpl;
 import grand.app.aber_provider.databinding.FragmentSocialMediaBindingImpl;
 import grand.app.aber_provider.databinding.FragmentSplashBindingImpl;
 import grand.app.aber_provider.databinding.FragmentTermsBindingImpl;
+import grand.app.aber_provider.databinding.ItemAuthServicesBindingImpl;
 import grand.app.aber_provider.databinding.ItemColorBindingImpl;
 import grand.app.aber_provider.databinding.ItemContactBindingImpl;
 import grand.app.aber_provider.databinding.ItemCountryBindingImpl;
@@ -132,57 +133,59 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTTERMS = 30;
 
-  private static final int LAYOUT_ITEMCOLOR = 31;
+  private static final int LAYOUT_ITEMAUTHSERVICES = 31;
 
-  private static final int LAYOUT_ITEMCONTACT = 32;
+  private static final int LAYOUT_ITEMCOLOR = 32;
 
-  private static final int LAYOUT_ITEMCOUNTRY = 33;
+  private static final int LAYOUT_ITEMCONTACT = 33;
 
-  private static final int LAYOUT_ITEMEXTRASERVICES = 34;
+  private static final int LAYOUT_ITEMCOUNTRY = 34;
 
-  private static final int LAYOUT_ITEMFAVORITE = 35;
+  private static final int LAYOUT_ITEMEXTRASERVICES = 35;
 
-  private static final int LAYOUT_ITEMHOME = 36;
+  private static final int LAYOUT_ITEMFAVORITE = 36;
 
-  private static final int LAYOUT_ITEMORDERDETAIL = 37;
+  private static final int LAYOUT_ITEMHOME = 37;
 
-  private static final int LAYOUT_ITEMORDEROPTIONSDETAILS = 38;
+  private static final int LAYOUT_ITEMORDERDETAIL = 38;
 
-  private static final int LAYOUT_ITEMORDERSERVICE = 39;
+  private static final int LAYOUT_ITEMORDEROPTIONSDETAILS = 39;
 
-  private static final int LAYOUT_ITEMPACKAGE = 40;
+  private static final int LAYOUT_ITEMORDERSERVICE = 40;
 
-  private static final int LAYOUT_ITEMPARTSERVICE = 41;
+  private static final int LAYOUT_ITEMPACKAGE = 41;
 
-  private static final int LAYOUT_ITEMREQUIREDSERVICE = 42;
+  private static final int LAYOUT_ITEMPARTSERVICE = 42;
 
-  private static final int LAYOUT_ITEMSALEDESC = 43;
+  private static final int LAYOUT_ITEMREQUIREDSERVICE = 43;
 
-  private static final int LAYOUT_ITEMSEARCH = 44;
+  private static final int LAYOUT_ITEMSALEDESC = 44;
 
-  private static final int LAYOUT_ITEMSERVICE = 45;
+  private static final int LAYOUT_ITEMSEARCH = 45;
 
-  private static final int LAYOUT_ITEMSIZE = 46;
+  private static final int LAYOUT_ITEMSERVICE = 46;
 
-  private static final int LAYOUT_ITEMSOCIAL = 47;
+  private static final int LAYOUT_ITEMSIZE = 47;
 
-  private static final int LAYOUT_ITEMSOCIALMENU = 48;
+  private static final int LAYOUT_ITEMSOCIAL = 48;
 
-  private static final int LAYOUT_ITEMWALLETHISTORY = 49;
+  private static final int LAYOUT_ITEMSOCIALMENU = 49;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 50;
+  private static final int LAYOUT_ITEMWALLETHISTORY = 50;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 51;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 51;
 
-  private static final int LAYOUT_LAYOUTGRAND = 52;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 52;
 
-  private static final int LAYOUT_MENU = 53;
+  private static final int LAYOUT_LAYOUTGRAND = 53;
 
-  private static final int LAYOUT_NOTIFYITEM = 54;
+  private static final int LAYOUT_MENU = 54;
 
-  private static final int LAYOUT_OPTIONDIALOG = 55;
+  private static final int LAYOUT_NOTIFYITEM = 55;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(55);
+  private static final int LAYOUT_OPTIONDIALOG = 56;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(56);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -215,6 +218,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_social_media, LAYOUT_FRAGMENTSOCIALMEDIA);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.fragment_terms, LAYOUT_FRAGMENTTERMS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_auth_services, LAYOUT_ITEMAUTHSERVICES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_color, LAYOUT_ITEMCOLOR);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_contact, LAYOUT_ITEMCONTACT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.aber_provider.R.layout.item_country, LAYOUT_ITEMCOUNTRY);
@@ -425,6 +429,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for fragment_terms is invalid. Received: " + tag);
       }
+      case  LAYOUT_ITEMAUTHSERVICES: {
+        if ("layout/item_auth_services_0".equals(tag)) {
+          return new ItemAuthServicesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_auth_services is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMCOLOR: {
         if ("layout/item_color_0".equals(tag)) {
           return new ItemColorBindingImpl(component, view);
@@ -539,12 +549,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_wallet_history is invalid. Received: " + tag);
       }
-      case  LAYOUT_LAYOUTACTIONBARBACK: {
-        if ("layout/layout_action_bar_back_0".equals(tag)) {
-          return new LayoutActionBarBackBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
-      }
     }
     return null;
   }
@@ -552,6 +556,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_LAYOUTACTIONBARBACK: {
+        if ("layout/layout_action_bar_back_0".equals(tag)) {
+          return new LayoutActionBarBackBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
+      }
       case  LAYOUT_LAYOUTACTIONBARHOME: {
         if ("layout/layout_action_bar_home_0".equals(tag)) {
           return new LayoutActionBarHomeBindingImpl(component, view);
@@ -648,7 +658,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(49);
+    static final SparseArray<String> sKeys = new SparseArray<String>(50);
 
     static {
       sKeys.put(0, "_all");
@@ -692,19 +702,20 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(38, "reportReasonsAdapter");
       sKeys.put(39, "request");
       sKeys.put(40, "service");
-      sKeys.put(41, "servicesRequiredAdapter");
-      sKeys.put(42, "socialAdapter");
-      sKeys.put(43, "socialMediaData");
-      sKeys.put(44, "userDocuments");
-      sKeys.put(45, "userProfile");
-      sKeys.put(46, "viewModel");
-      sKeys.put(47, "viewmodel");
-      sKeys.put(48, "walletHistoryItem");
+      sKeys.put(41, "servicesAdapter");
+      sKeys.put(42, "servicesRequiredAdapter");
+      sKeys.put(43, "socialAdapter");
+      sKeys.put(44, "socialMediaData");
+      sKeys.put(45, "userDocuments");
+      sKeys.put(46, "userProfile");
+      sKeys.put(47, "viewModel");
+      sKeys.put(48, "viewmodel");
+      sKeys.put(49, "walletHistoryItem");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(55);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(56);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.aber_provider.R.layout.activity_base);
@@ -737,6 +748,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_social_media_0", grand.app.aber_provider.R.layout.fragment_social_media);
       sKeys.put("layout/fragment_splash_0", grand.app.aber_provider.R.layout.fragment_splash);
       sKeys.put("layout/fragment_terms_0", grand.app.aber_provider.R.layout.fragment_terms);
+      sKeys.put("layout/item_auth_services_0", grand.app.aber_provider.R.layout.item_auth_services);
       sKeys.put("layout/item_color_0", grand.app.aber_provider.R.layout.item_color);
       sKeys.put("layout/item_contact_0", grand.app.aber_provider.R.layout.item_contact);
       sKeys.put("layout/item_country_0", grand.app.aber_provider.R.layout.item_country);

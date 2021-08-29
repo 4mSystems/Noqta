@@ -282,23 +282,13 @@ public class FileOperations {
             }
         }
         String filePath = getPath(context, dataUrl);
-//        CompressObject compressObject;
-//        Log.e("FilePath", " >> " + filePath);
-//        if (fileType == Constants.FILE_TYPE_IMAGE) {
-//            compressObject = new ImageCompression().compressImage(filePath);
-//            Log.e("FilePathAfterCompress", " >> " + filePath);
-//        } else {
-//            compressObject = new CompressObject();
-//            compressObject.setBytes(fileToBytes(filePath));
-//        }
         FileObject volleyFileObject = new FileObject(paramName, filePath, fileType);
-//        volleyFileObject.setCompressObject(compressObject);
         volleyFileObject.setUri(dataUrl);
         return volleyFileObject;
     }
 
 
-    public static void pickImage(Context context) {
+    public static void pickImage(Context context, int request) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
@@ -316,7 +306,7 @@ public class FileOperations {
                         } else {
                             intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         }
-                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), Constants.FILE_TYPE_IMAGE, context);
+                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), request, context);
                     }).show();
         } else {
             ActivityCompat.requestPermissions(((Activity) context), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1007);

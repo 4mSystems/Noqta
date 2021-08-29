@@ -44,13 +44,14 @@ public class ChangePasswordFragment extends BaseFragment {
     }
 
     private void setEvent() {
-        viewModel.liveData.observe( requireActivity(), (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (((Mutable) o).message.equals(Constants.CHANGE_PASSWORD)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                showSuccessDialog();
+//                showSuccessDialog();
+                finishActivity();
             } else if (((Mutable) o).message.equals(Constants.NOT_MATCH_PASSWORD)) {
                 showError(getResources().getString(R.string.password_not_match));
             }

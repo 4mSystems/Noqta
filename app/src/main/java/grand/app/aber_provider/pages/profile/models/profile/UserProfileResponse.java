@@ -3,13 +3,14 @@ package grand.app.aber_provider.pages.profile.models.profile;
 import com.google.gson.annotations.SerializedName;
 
 import grand.app.aber_provider.model.base.StatusMessage;
+import grand.app.aber_provider.pages.auth.models.UserData;
 
 public class UserProfileResponse extends StatusMessage {
 
     @SerializedName("data")
-    private UserProfile userProfile;
+    private UserData userProfile;
 
-    public UserProfile getUserProfile() {
+    public UserData getUserProfile() {
         return userProfile;
     }
 }

@@ -22,9 +22,9 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
     private final grand.app.aber_provider.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback55;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,8 +45,8 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback50 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback51 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback56 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback55 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -147,8 +147,8 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback51);
-            this.mboundView0.setOnClickListener(mCallback50);
+            this.appCompatButtonNext.setOnClickListener(mCallback56);
+            this.mboundView0.setOnClickListener(mCallback55);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -161,7 +161,7 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 grand.app.aber_provider.pages.settings.viewModels.ItemSocialViewModel itemViewModel = mItemViewModel;
@@ -178,7 +178,7 @@ public class ItemSocialBindingImpl extends ItemSocialBinding implements grand.ap
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemViewModel
                 grand.app.aber_provider.pages.settings.viewModels.ItemSocialViewModel itemViewModel = mItemViewModel;

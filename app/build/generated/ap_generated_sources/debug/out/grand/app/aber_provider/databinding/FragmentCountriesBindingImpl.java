@@ -23,7 +23,7 @@ public class FragmentCountriesBindingImpl extends FragmentCountriesBinding imple
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback75;
+    private final android.view.View.OnClickListener mCallback85;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentCountriesBindingImpl extends FragmentCountriesBinding imple
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback75 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback85 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,7 +134,7 @@ public class FragmentCountriesBindingImpl extends FragmentCountriesBinding imple
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback75);
+            this.appCompatButtonNext.setOnClickListener(mCallback85);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

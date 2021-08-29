@@ -11,6 +11,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
 import com.google.gson.Gson;
+
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
 import javax.inject.Inject;
 
 import grand.app.aber_provider.PassingObject;
@@ -25,6 +29,7 @@ import grand.app.aber_provider.pages.auth.changePassword.ChangePasswordFragment;
 import grand.app.aber_provider.pages.auth.models.UsersResponse;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.session.LanguagesHelper;
 import grand.app.aber_provider.utils.session.UserHelper;
 
 public class ConfirmCodeFragment extends BaseFragment {
@@ -52,7 +57,11 @@ public class ConfirmCodeFragment extends BaseFragment {
     private void startTimer() {
         countDownTimer = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
-                binding.tvForgetTimer.setText(millisUntilFinished / 1000 + " : 00");
+                String time = "" + String.format(new Locale(LanguagesHelper.getCurrentLanguage()), "%d : %d ",
+                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)), TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished));
+                binding.tvForgetTimer.setText(time);
+
             }
 
             public void onFinish() {

@@ -38,18 +38,6 @@ public class MapAddressViewModel extends BaseViewModel {
         arabicAddress = new ObservableField<>();
     }
 
-    @BindingAdapter("initMap")
-    public static void initMap(final MapView mapView, final LatLng latLng) {
-//        if (mapView != null) {
-//            mapView.onCreate(new Bundle());
-//            mapView.getMapAsync(new OnMapReadyCallback() {
-//                @Override
-//                public void onMapReady(final GoogleMap googleMap) {
-//                }
-//            });
-//        }
-    }
-
     public void toSearchPlace() {
         getLiveData().setValue(Constants.SEARCH_LOCATION);
     }

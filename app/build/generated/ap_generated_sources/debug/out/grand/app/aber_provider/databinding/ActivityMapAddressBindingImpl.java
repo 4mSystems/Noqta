@@ -14,7 +14,8 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.search_container, 4);
+        sViewsWithIds.put(R.id.search_container, 3);
+        sViewsWithIds.put(R.id.map_view, 4);
         sViewsWithIds.put(R.id.img_marker_center, 5);
         sViewsWithIds.put(R.id.map_progress, 6);
     }
@@ -22,12 +23,12 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView3;
+    private final androidx.appcompat.widget.AppCompatButton mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback63;
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback64;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -36,30 +37,29 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private ActivityMapAddressBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 2
+        super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
             , (com.google.android.material.textfield.TextInputEditText) bindings[1]
             , (android.widget.ProgressBar) bindings[6]
-            , (com.google.android.gms.maps.MapView) bindings[2]
-            , (android.widget.LinearLayout) bindings[4]
+            , (com.google.android.gms.maps.MapView) bindings[4]
+            , (android.widget.LinearLayout) bindings[3]
             );
         this.locationSearch.setTag(null);
-        this.mapView.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (androidx.appcompat.widget.AppCompatButton) bindings[3];
-        this.mboundView3.setTag(null);
+        this.mboundView2 = (androidx.appcompat.widget.AppCompatButton) bindings[2];
+        this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback59 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback63 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback64 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -101,8 +101,6 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         switch (localFieldId) {
             case 0 :
                 return onChangeMapAddressViewModel((grand.app.aber_provider.utils.locations.MapAddressViewModel) object, fieldId);
-            case 1 :
-                return onChangeMapAddressViewModelMMapLatLng((androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng>) object, fieldId);
         }
         return false;
     }
@@ -110,15 +108,6 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
-            }
-            return true;
-        }
-        return false;
-    }
-    private boolean onChangeMapAddressViewModelMMapLatLng(androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> MapAddressViewModelMMapLatLng, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -133,36 +122,12 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
             mDirtyFlags = 0;
         }
         grand.app.aber_provider.utils.locations.MapAddressViewModel mapAddressViewModel = mMapAddressViewModel;
-        androidx.databinding.ObservableField<com.google.android.gms.maps.model.LatLng> mapAddressViewModelMMapLatLng = null;
-        com.google.android.gms.maps.model.LatLng mapAddressViewModelMMapLatLngGet = null;
-
-        if ((dirtyFlags & 0x7L) != 0) {
-
-
-
-                if (mapAddressViewModel != null) {
-                    // read mapAddressViewModel.mMapLatLng
-                    mapAddressViewModelMMapLatLng = mapAddressViewModel.mMapLatLng;
-                }
-                updateRegistration(1, mapAddressViewModelMMapLatLng);
-
-
-                if (mapAddressViewModelMMapLatLng != null) {
-                    // read mapAddressViewModel.mMapLatLng.get()
-                    mapAddressViewModelMMapLatLngGet = mapAddressViewModelMMapLatLng.get();
-                }
-        }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.locationSearch.setOnClickListener(mCallback58);
-            this.mboundView3.setOnClickListener(mCallback59);
-        }
-        if ((dirtyFlags & 0x7L) != 0) {
-            // api target 1
-
-            grand.app.aber_provider.utils.locations.MapAddressViewModel.initMap(this.mapView, mapAddressViewModelMMapLatLngGet);
+            this.locationSearch.setOnClickListener(mCallback63);
+            this.mboundView2.setOnClickListener(mCallback64);
         }
     }
     // Listener Stub Implementations
@@ -209,8 +174,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): mapAddressViewModel
-        flag 1 (0x2L): mapAddressViewModel.mMapLatLng
-        flag 2 (0x3L): null
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }
