@@ -27,10 +27,8 @@ import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.databinding.FragmentServicesOrdersBinding;
 import grand.app.aber_provider.model.base.Mutable;
-import grand.app.aber_provider.pages.home.models.HomeResponse;
 import grand.app.aber_provider.pages.myOrders.models.MyOrdersResponse;
 import grand.app.aber_provider.pages.myOrders.viewModels.MyOrdersViewModels;
-import grand.app.aber_provider.pages.profile.viewModels.ProfileViewModels;
 import grand.app.aber_provider.utils.Constants;
 
 public class MyServicesOrdersFragment extends BaseFragment {

@@ -29,7 +29,6 @@
                 android:layout_height="@dimen/dp40h"
                 android:layout_margin="@dimen/dp8h"
                 app:imageUrl="@{itemViewModel.socialMediaData.image}"
-                android:src="@drawable/ic_facebook"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

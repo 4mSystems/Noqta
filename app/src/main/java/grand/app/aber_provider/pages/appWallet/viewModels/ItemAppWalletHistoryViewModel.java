@@ -14,7 +14,6 @@ public class ItemAppWalletHistoryViewModel extends BaseViewModel {
     public ItemAppWalletHistoryViewModel(WalletHistoryItem walletHistoryItem) {
         this.walletHistoryItem = walletHistoryItem;
         title = ResourceManager.getString(R.string.wallet_history_1).concat(" ").concat(walletHistoryItem.getCancelFess()).concat(" ").concat(currency).concat(" ").concat(ResourceManager.getString(R.string.wallet_history_2));
-
     }
 
     @Bindable

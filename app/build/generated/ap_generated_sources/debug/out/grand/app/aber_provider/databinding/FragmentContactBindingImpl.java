@@ -31,7 +31,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback79;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -219,7 +219,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.rcContact.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback86 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback79 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -591,7 +591,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback86);
+            this.appCompatButtonNext.setOnClickListener(mCallback79);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);

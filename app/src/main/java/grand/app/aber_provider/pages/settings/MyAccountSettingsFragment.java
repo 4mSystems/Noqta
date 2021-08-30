@@ -29,6 +29,7 @@ import grand.app.aber_provider.base.BaseFragment;
 import grand.app.aber_provider.base.IApplicationComponent;
 import grand.app.aber_provider.base.MyApplication;
 import grand.app.aber_provider.utils.Constants;
+import grand.app.aber_provider.utils.helper.AppHelper;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 import grand.app.aber_provider.utils.resources.ResourceManager;
 
@@ -62,7 +63,7 @@ public class MyAccountSettingsFragment extends BaseFragment {
                     MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
                     break;
                 case Constants.TERMS:
-                    MovementHelper.startActivity(context, TermsFragment.class.getName(), getResources().getString(R.string.terms), null);
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.TERMS), getResources().getString(R.string.terms), TermsFragment.class.getName(), null);
                     break;
                 case Constants.COMPLAINTS:
                 case Constants.CONTACT:
@@ -79,6 +80,12 @@ public class MyAccountSettingsFragment extends BaseFragment {
                     break;
                 case Constants.WALLET:
                     MovementHelper.startActivity(context, AppWalletFragment.class.getName(), getString(R.string.my_wallet), null);
+                    break;
+                case Constants.RATE_APP:
+                    AppHelper.rateApp(requireActivity());
+                    break;
+                case Constants.SHARE_BAR:
+                    AppHelper.shareApp(requireActivity());
                     break;
                 case Constants.SHOW_LOGOUT_WARNING:
                     exitDialog(getString(R.string.logout_warning));

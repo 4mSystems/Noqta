@@ -43,13 +43,13 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
     private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -286,11 +286,11 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback36 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback37 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
-        mCallback38 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback39 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback43 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback42 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback40 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback41 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -709,16 +709,16 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback40);
+            this.appCompatButtonNext.setOnClickListener(mCallback43);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
-            this.mboundView12.setOnClickListener(mCallback38);
+            this.mboundView12.setOnClickListener(mCallback41);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
-            this.mboundView13.setOnClickListener(mCallback39);
-            this.mboundView2.setOnClickListener(mCallback37);
+            this.mboundView13.setOnClickListener(mCallback42);
+            this.mboundView2.setOnClickListener(mCallback40);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userImg.setOnClickListener(mCallback36);
+            this.userImg.setOnClickListener(mCallback39);
         }
         if ((dirtyFlags & 0x260L) != 0) {
             // api target 1
@@ -771,23 +771,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.changePasword();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -823,6 +806,40 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
                 }
                 break;
             }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.updateProfile();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.changePasword();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -839,23 +856,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
 
 
                     viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.IMAGE);
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.profile.viewModels.EditProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.updateProfile();
                 }
                 break;
             }

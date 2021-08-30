@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp4h"
+        android:enabled="@{itemPostViewModel.orders.position?true:false}"
         android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="4dp">
@@ -179,7 +180,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
-                android:visibility="@{!TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)?View.VISIBLE:View.GONE}"
+                android:visibility="@{itemPostViewModel.orders.acceptancePeriod!=0?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@id/tv_service_status_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
@@ -189,10 +190,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="@string/aval_order_time"
+                android:text="@{itemPostViewModel.orders.acceptMilSeconds}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
-                android:visibility="@{!TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)?View.VISIBLE:View.GONE}"
+                android:visibility="@{itemPostViewModel.orders.acceptancePeriod!=0?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v_service_status" />
 
@@ -200,10 +201,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp12h"
-                android:background="@color/colorPrimary"
+                android:background="@{itemPostViewModel.orders.position?@color/colorPrimary:@color/medium_color,default=@color/colorPrimary}"
+                android:enabled="@{itemPostViewModel.orders.position?true:false}"
                 android:onClick="@{()-> itemPostViewModel.itemAction(Constants.ORDER_DETAILS)}"
                 android:padding="@dimen/dp10h"
-                android:text="@string/view_details"
+                android:text="@{itemPostViewModel.orders.position?@string/view_details:@string/expire,default=@string/view_details}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"

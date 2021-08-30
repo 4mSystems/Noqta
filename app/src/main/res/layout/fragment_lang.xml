@@ -60,6 +60,15 @@
                 android:text="@string/arabic"
                 android:textAlignment="viewStart" />
 
+            <RadioButton
+                android:id="@+id/urdu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/white"
+                android:checked="@{viewmodel.lang.equals(`ur`)?true:false}"
+                android:text="@string/urdu"
+                android:textAlignment="viewStart" />
         </RadioGroup>
 
         <androidx.appcompat.widget.AppCompatButton

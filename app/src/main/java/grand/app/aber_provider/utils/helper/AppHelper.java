@@ -239,15 +239,4 @@ public class AppHelper {
 
     }
 
-    public static void makeActionSound(Context context, String type) {
-        Uri defaultSoundUri;
-        if (type.equals(Constants.COMMENT)) {
-            defaultSoundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + MyApplication.getInstance().getPackageName() + "/" + R.raw.comment);
-        } else if (type.equals(Constants.REJECT_ORDER))
-            defaultSoundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + MyApplication.getInstance().getPackageName() + "/" + R.raw.share);
-        else
-            defaultSoundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + MyApplication.getInstance().getPackageName() + "/" + R.raw.like);
-        Ringtone r = RingtoneManager.getRingtone(context, defaultSoundUri);
-        r.play();
-    }
 }

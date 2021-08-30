@@ -31,21 +31,21 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback77;
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback74;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback72;
     @Nullable
-    private final android.view.View.OnClickListener mCallback52;
+    private final android.view.View.OnClickListener mCallback78;
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback76;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback75;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback73;
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback71;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -89,14 +89,14 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
         this.tvProvider.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
-        mCallback47 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback45 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback52 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 8);
-        mCallback50 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
-        mCallback48 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback46 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback51 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 7);
+        mCallback77 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 7);
+        mCallback74 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback72 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
+        mCallback78 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 8);
+        mCallback76 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 6);
+        mCallback75 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback73 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback71 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -192,20 +192,115 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.tvCity.setOnClickListener(mCallback51);
-            this.tvCountry.setOnClickListener(mCallback50);
-            this.tvHome.setOnClickListener(mCallback45);
-            this.tvLang.setOnClickListener(mCallback49);
-            this.tvMore.setOnClickListener(mCallback52);
-            this.tvMyServices.setOnClickListener(mCallback46);
-            this.tvPrivacy.setOnClickListener(mCallback48);
-            this.tvProvider.setOnClickListener(mCallback47);
+            this.tvCity.setOnClickListener(mCallback77);
+            this.tvCountry.setOnClickListener(mCallback76);
+            this.tvHome.setOnClickListener(mCallback71);
+            this.tvLang.setOnClickListener(mCallback75);
+            this.tvMore.setOnClickListener(mCallback78);
+            this.tvMyServices.setOnClickListener(mCallback72);
+            this.tvPrivacy.setOnClickListener(mCallback74);
+            this.tvProvider.setOnClickListener(mCallback73);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 7: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.CITIES);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_ACCOUNT);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MY_ORDERS);
+                }
+                break;
+            }
+            case 8: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MORE);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // menuViewModel
+                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.COUNTRIES);
+                }
+                break;
+            }
             case 5: {
                 // localize variables for thread safety
                 // menuViewModel
@@ -260,101 +355,6 @@ public class MenuBindingImpl extends MenuBinding implements grand.app.aber_provi
 
 
                     menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_HOME);
-                }
-                break;
-            }
-            case 8: {
-                // localize variables for thread safety
-                // menuViewModel
-                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MORE);
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // menuViewModel
-                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.COUNTRIES);
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // menuViewModel
-                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MENU_ACCOUNT);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // menuViewModel
-                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.MY_ORDERS);
-                }
-                break;
-            }
-            case 7: {
-                // localize variables for thread safety
-                // menuViewModel
-                grand.app.aber_provider.customViews.views.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.liveDataActions(grand.app.aber_provider.utils.Constants.CITIES);
                 }
                 break;
             }

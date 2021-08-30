@@ -14,7 +14,7 @@ public class Constants {
     public static final String CITIES = "CITIES";
     public static final String COUNTRIES = "COUNTRIES";
 
-    public final static String GOOGLE_SIGN_IN = "GOOGLE_SIGN_IN";
+    public final static String REMOVE = "REMOVE";
     public final static String FACE_BOOK = "FACE_BOOK";
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";

@@ -34,18 +34,22 @@ public abstract class FragmentLangBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium tvTakeMe;
 
+  @NonNull
+  public final RadioButton urdu;
+
   @Bindable
   protected SettingsViewModel mViewmodel;
 
   protected FragmentLangBinding(Object _bindingComponent, View _root, int _localFieldCount,
       RadioButton arabic, AppCompatButton btnPhone, RadioButton english, RadioGroup radioGroup,
-      CustomTextViewMedium tvTakeMe) {
+      CustomTextViewMedium tvTakeMe, RadioButton urdu) {
     super(_bindingComponent, _root, _localFieldCount);
     this.arabic = arabic;
     this.btnPhone = btnPhone;
     this.english = english;
     this.radioGroup = radioGroup;
     this.tvTakeMe = tvTakeMe;
+    this.urdu = urdu;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);

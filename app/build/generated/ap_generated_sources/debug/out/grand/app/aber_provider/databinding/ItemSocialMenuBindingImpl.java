@@ -20,7 +20,7 @@ public class ItemSocialMenuBindingImpl extends ItemSocialMenuBinding implements 
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,7 +37,7 @@ public class ItemSocialMenuBindingImpl extends ItemSocialMenuBinding implements 
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback7 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,7 +140,7 @@ public class ItemSocialMenuBindingImpl extends ItemSocialMenuBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback6);
+            this.mboundView0.setOnClickListener(mCallback7);
         }
     }
     // Listener Stub Implementations

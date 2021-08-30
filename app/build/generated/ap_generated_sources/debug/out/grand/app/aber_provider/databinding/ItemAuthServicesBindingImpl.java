@@ -20,7 +20,7 @@ public class ItemAuthServicesBindingImpl extends ItemAuthServicesBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback83;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemAuthServicesBindingImpl extends ItemAuthServicesBinding impleme
         this.tvPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback54 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback83 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -152,7 +152,7 @@ public class ItemAuthServicesBindingImpl extends ItemAuthServicesBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.tvPrice.setOnClickListener(mCallback54);
+            this.tvPrice.setOnClickListener(mCallback83);
         }
     }
     // Listener Stub Implementations

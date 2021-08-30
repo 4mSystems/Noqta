@@ -22,7 +22,7 @@ public class ItemCountryBindingImpl extends ItemCountryBinding implements grand.
     private final com.google.android.material.radiobutton.MaterialRadioButton mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback81;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemCountryBindingImpl extends ItemCountryBinding implements grand.
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback87 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback81 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -181,7 +181,7 @@ public class ItemCountryBindingImpl extends ItemCountryBinding implements grand.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback87);
+            this.mboundView1.setOnClickListener(mCallback81);
         }
     }
     // Listener Stub Implementations

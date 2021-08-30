@@ -14,29 +14,30 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_take_me, 5);
+        sViewsWithIds.put(R.id.tv_take_me, 6);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback82;
     // values
     // listeners
     private OnCheckedChangeListenerImpl mViewmodelOnLangChangeAndroidWidgetRadioGroupOnCheckedChangeListener;
     // Inverse Binding Event Handlers
 
     public FragmentLangBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentLangBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.RadioButton) bindings[3]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
             , (android.widget.RadioButton) bindings[2]
             , (android.widget.RadioGroup) bindings[1]
-            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[5]
+            , (grand.app.aber_provider.customViews.views.CustomTextViewMedium) bindings[6]
+            , (android.widget.RadioButton) bindings[4]
             );
         this.arabic.setTag(null);
         this.btnPhone.setTag(null);
@@ -44,9 +45,10 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.radioGroup.setTag(null);
+        this.urdu.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback88 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback82 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,11 +119,13 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
         }
         boolean viewmodelLangEqualsJavaLangStringAr = false;
         android.widget.RadioGroup.OnCheckedChangeListener viewmodelOnLangChangeAndroidWidgetRadioGroupOnCheckedChangeListener = null;
-        java.lang.String viewmodelLang = null;
         boolean viewmodelLangEqualsJavaLangStringArBooleanTrueBooleanFalse = false;
-        boolean viewmodelLangEqualsJavaLangStringEnBooleanTrueBooleanFalse = false;
-        grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+        boolean viewmodelLangEqualsJavaLangStringUr = false;
         boolean viewmodelLangEqualsJavaLangStringEn = false;
+        java.lang.String viewmodelLang = null;
+        boolean viewmodelLangEqualsJavaLangStringEnBooleanTrueBooleanFalse = false;
+        boolean viewmodelLangEqualsJavaLangStringUrBooleanTrueBooleanFalse = false;
+        grand.app.aber_provider.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -138,6 +142,8 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
                 if (viewmodelLang != null) {
                     // read viewmodel.lang.equals("ar")
                     viewmodelLangEqualsJavaLangStringAr = viewmodelLang.equals("ar");
+                    // read viewmodel.lang.equals("ur")
+                    viewmodelLangEqualsJavaLangStringUr = viewmodelLang.equals("ur");
                     // read viewmodel.lang.equals("en")
                     viewmodelLangEqualsJavaLangStringEn = viewmodelLang.equals("en");
                 }
@@ -147,6 +153,14 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
                 }
                 else {
                         dirtyFlags |= 0x4L;
+                }
+            }
+            if((dirtyFlags & 0x3L) != 0) {
+                if(viewmodelLangEqualsJavaLangStringUr) {
+                        dirtyFlags |= 0x80L;
+                }
+                else {
+                        dirtyFlags |= 0x40L;
                 }
             }
             if((dirtyFlags & 0x3L) != 0) {
@@ -161,6 +175,8 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
 
                 // read viewmodel.lang.equals("ar") ? true : false
                 viewmodelLangEqualsJavaLangStringArBooleanTrueBooleanFalse = ((viewmodelLangEqualsJavaLangStringAr) ? (true) : (false));
+                // read viewmodel.lang.equals("ur") ? true : false
+                viewmodelLangEqualsJavaLangStringUrBooleanTrueBooleanFalse = ((viewmodelLangEqualsJavaLangStringUr) ? (true) : (false));
                 // read viewmodel.lang.equals("en") ? true : false
                 viewmodelLangEqualsJavaLangStringEnBooleanTrueBooleanFalse = ((viewmodelLangEqualsJavaLangStringEn) ? (true) : (false));
         }
@@ -171,11 +187,12 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.arabic, viewmodelLangEqualsJavaLangStringArBooleanTrueBooleanFalse);
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.english, viewmodelLangEqualsJavaLangStringEnBooleanTrueBooleanFalse);
             androidx.databinding.adapters.RadioGroupBindingAdapter.setListeners(this.radioGroup, (android.widget.RadioGroup.OnCheckedChangeListener)viewmodelOnLangChangeAndroidWidgetRadioGroupOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.urdu, viewmodelLangEqualsJavaLangStringUrBooleanTrueBooleanFalse);
         }
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback88);
+            this.btnPhone.setOnClickListener(mCallback82);
         }
     }
     // Listener Stub Implementations
@@ -216,6 +233,8 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements gran
         flag 3 (0x4L): viewmodel.lang.equals("ar") ? true : false
         flag 4 (0x5L): viewmodel.lang.equals("en") ? true : false
         flag 5 (0x6L): viewmodel.lang.equals("en") ? true : false
+        flag 6 (0x7L): viewmodel.lang.equals("ur") ? true : false
+        flag 7 (0x8L): viewmodel.lang.equals("ur") ? true : false
     flag mapping end*/
     //end
 }

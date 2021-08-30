@@ -59,6 +59,8 @@ public class EditProfileViewModel extends BaseViewModel {
         getRequest().setEmail(userProfile.getEmail());
         getRequest().setAddress(userProfile.getAddress());
         getRequest().setIsCompany(userProfile.getIsCompany());
+        getRequest().setLatitude(String.valueOf(userProfile.getLatitude()));
+        getRequest().setLongitude(String.valueOf(userProfile.getLongitude()));
         getServicesAdapter().update(userProfile.getMainService());
         notifyChange(BR.servicesAdapter);
         notifyChange(BR.request);

@@ -30,15 +30,15 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback74;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
-    private final android.view.View.OnClickListener mCallback76;
+    private final android.view.View.OnClickListener mCallback63;
     @Nullable
-    private final android.view.View.OnClickListener mCallback75;
+    private final android.view.View.OnClickListener mCallback64;
     @Nullable
-    private final android.view.View.OnClickListener mCallback77;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback78;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -225,11 +225,11 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback74 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback76 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
-        mCallback75 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback77 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback78 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback62 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback63 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback64 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 5);
+        mCallback60 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback61 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -578,16 +578,16 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback78);
-            this.auto.setOnClickListener(mCallback74);
+            this.appCompatButtonNext.setOnClickListener(mCallback64);
+            this.auto.setOnClickListener(mCallback60);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
             this.inputCompanyName.setVisibility(userHelperGetInstanceContextAccountTypeEqualsJavaLangString0ViewGONEViewVISIBLE);
             this.inputName.setVisibility(userHelperGetInstanceContextAccountTypeEqualsJavaLangString0ViewGONEViewVISIBLE);
-            this.mboundView4.setOnClickListener(mCallback75);
+            this.mboundView4.setOnClickListener(mCallback61);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            this.mboundView6.setOnClickListener(mCallback76);
+            this.mboundView6.setOnClickListener(mCallback62);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
-            this.mboundView8.setOnClickListener(mCallback77);
+            this.mboundView8.setOnClickListener(mCallback63);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xb0L) != 0) {
@@ -623,25 +623,6 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.COMMERCIAL_IMAGE);
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -658,25 +639,6 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
 
 
                     viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.NATIONAL_ID_PHOTO);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.TAX_CARD_PHOTO);
                 }
                 break;
             }
@@ -713,6 +675,44 @@ public class FragmentRegisterDocumentsBindingImpl extends FragmentRegisterDocume
 
 
                     viewmodel.registerDoc();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.COMMERCIAL_IMAGE);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.imageSubmit(grand.app.aber_provider.utils.Constants.TAX_CARD_PHOTO);
                 }
                 break;
             }

@@ -29,9 +29,9 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
     private final grand.app.aber_provider.customViews.views.CustomTextViewMedium mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -69,8 +69,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         this.tvServicesNameValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback58 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback31 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -145,23 +145,27 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        boolean textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod = false;
         int itemPostViewModelOrdersIsEmergency = 0;
-        boolean TextUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod1 = false;
-        grand.app.aber_provider.pages.home.models.Orders itemPostViewModelOrders = null;
         java.lang.String itemPostViewModelOrdersIsEmergencyInt1TvServiceTimeValueAndroidStringEmergencyServicesItemPostViewModelOrdersScheduledAt = null;
-        int textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriodViewVISIBLEViewGONE = 0;
         java.lang.String itemPostViewModelOrdersTotalConcatJavaLangStringConcatItemPostViewModelCurrency = null;
-        java.lang.String itemPostViewModelCurrency = null;
-        java.lang.String itemPostViewModelOrdersTotal = null;
+        boolean itemPostViewModelOrdersPositionBooleanTrueBooleanFalse = false;
+        int itemPostViewModelOrdersPositionMboundView8AndroidColorColorPrimaryMboundView8AndroidColorMediumColor = 0;
         grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
         java.lang.String itemPostViewModelOrdersAddress = null;
         java.lang.String itemPostViewModelOrdersScheduledAt = null;
+        boolean itemPostViewModelOrdersPosition = false;
         java.lang.String itemPostViewModelOrdersTotalConcatJavaLangString = null;
         java.lang.String itemPostViewModelOrdersClientName = null;
         boolean itemPostViewModelOrdersIsEmergencyInt1 = false;
+        int itemPostViewModelOrdersAcceptancePeriodInt0ViewVISIBLEViewGONE = 0;
+        long itemPostViewModelOrdersAcceptancePeriod = 0;
+        boolean itemPostViewModelOrdersAcceptancePeriodInt0 = false;
+        grand.app.aber_provider.pages.home.models.Orders itemPostViewModelOrders = null;
+        java.lang.String itemPostViewModelCurrency = null;
+        java.lang.String itemPostViewModelOrdersTotal = null;
+        java.lang.String itemPostViewModelOrdersPositionMboundView8AndroidStringViewDetailsMboundView8AndroidStringExpire = null;
         java.lang.String itemPostViewModelOrdersServiceName = null;
-        java.lang.String itemPostViewModelOrdersAcceptancePeriod = null;
+        java.lang.String itemPostViewModelOrdersAcceptMilSeconds = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -178,23 +182,45 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
                 if (itemPostViewModelOrders != null) {
                     // read itemPostViewModel.orders.is_emergency
                     itemPostViewModelOrdersIsEmergency = itemPostViewModelOrders.getIs_emergency();
-                    // read itemPostViewModel.orders.total
-                    itemPostViewModelOrdersTotal = itemPostViewModelOrders.getTotal();
                     // read itemPostViewModel.orders.address
                     itemPostViewModelOrdersAddress = itemPostViewModelOrders.getAddress();
+                    // read itemPostViewModel.orders.position
+                    itemPostViewModelOrdersPosition = itemPostViewModelOrders.position;
                     // read itemPostViewModel.orders.clientName
                     itemPostViewModelOrdersClientName = itemPostViewModelOrders.getClientName();
-                    // read itemPostViewModel.orders.serviceName
-                    itemPostViewModelOrdersServiceName = itemPostViewModelOrders.getServiceName();
                     // read itemPostViewModel.orders.acceptancePeriod
                     itemPostViewModelOrdersAcceptancePeriod = itemPostViewModelOrders.getAcceptancePeriod();
+                    // read itemPostViewModel.orders.total
+                    itemPostViewModelOrdersTotal = itemPostViewModelOrders.getTotal();
+                    // read itemPostViewModel.orders.serviceName
+                    itemPostViewModelOrdersServiceName = itemPostViewModelOrders.getServiceName();
+                    // read itemPostViewModel.orders.acceptMilSeconds
+                    itemPostViewModelOrdersAcceptMilSeconds = itemPostViewModelOrders.getAcceptMilSeconds();
                 }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemPostViewModelOrdersPosition) {
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x800L;
+                }
+            }
 
 
                 // read itemPostViewModel.orders.is_emergency == 1
                 itemPostViewModelOrdersIsEmergencyInt1 = (itemPostViewModelOrdersIsEmergency) == (1);
-                // read TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)
-                TextUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod1 = android.text.TextUtils.isEmpty(itemPostViewModelOrdersAcceptancePeriod);
+                // read itemPostViewModel.orders.position ? true : false
+                itemPostViewModelOrdersPositionBooleanTrueBooleanFalse = ((itemPostViewModelOrdersPosition) ? (true) : (false));
+                // read itemPostViewModel.orders.position ? @android:color/colorPrimary : @android:color/medium_color
+                itemPostViewModelOrdersPositionMboundView8AndroidColorColorPrimaryMboundView8AndroidColorMediumColor = ((itemPostViewModelOrdersPosition) ? (getColorFromResource(mboundView8, R.color.colorPrimary)) : (getColorFromResource(mboundView8, R.color.medium_color)));
+                // read itemPostViewModel.orders.position ? @android:string/view_details : @android:string/expire
+                itemPostViewModelOrdersPositionMboundView8AndroidStringViewDetailsMboundView8AndroidStringExpire = ((itemPostViewModelOrdersPosition) ? (mboundView8.getResources().getString(R.string.view_details)) : (mboundView8.getResources().getString(R.string.expire)));
+                // read itemPostViewModel.orders.acceptancePeriod != 0
+                itemPostViewModelOrdersAcceptancePeriodInt0 = (itemPostViewModelOrdersAcceptancePeriod) != (0);
             if((dirtyFlags & 0x7L) != 0) {
                 if(itemPostViewModelOrdersIsEmergencyInt1) {
                         dirtyFlags |= 0x10L;
@@ -203,30 +229,26 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
                         dirtyFlags |= 0x8L;
                 }
             }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemPostViewModelOrdersAcceptancePeriodInt0) {
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x200L;
+                }
+            }
                 if (itemPostViewModelOrdersTotal != null) {
                     // read itemPostViewModel.orders.total.concat(" ")
                     itemPostViewModelOrdersTotalConcatJavaLangString = itemPostViewModelOrdersTotal.concat(" ");
                 }
 
 
-                // read !TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod)
-                textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod = !TextUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod1;
-            if((dirtyFlags & 0x7L) != 0) {
-                if(textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod) {
-                        dirtyFlags |= 0x40L;
-                }
-                else {
-                        dirtyFlags |= 0x20L;
-                }
-            }
+                // read itemPostViewModel.orders.acceptancePeriod != 0 ? View.VISIBLE : View.GONE
+                itemPostViewModelOrdersAcceptancePeriodInt0ViewVISIBLEViewGONE = ((itemPostViewModelOrdersAcceptancePeriodInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 if (itemPostViewModelOrdersTotalConcatJavaLangString != null) {
                     // read itemPostViewModel.orders.total.concat(" ").concat(itemPostViewModel.currency)
                     itemPostViewModelOrdersTotalConcatJavaLangStringConcatItemPostViewModelCurrency = itemPostViewModelOrdersTotalConcatJavaLangString.concat(itemPostViewModelCurrency);
                 }
-
-
-                // read !TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod) ? View.VISIBLE : View.GONE
-                textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriodViewVISIBLEViewGONE = ((textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriod) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
 
@@ -247,16 +269,20 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback58);
-            this.mboundView8.setOnClickListener(mCallback59);
+            this.mboundView0.setOnClickListener(mCallback30);
+            this.mboundView8.setOnClickListener(mCallback31);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
+            this.mboundView0.setEnabled(itemPostViewModelOrdersPositionBooleanTrueBooleanFalse);
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.mboundView8, androidx.databinding.adapters.Converters.convertColorToDrawable(itemPostViewModelOrdersPositionMboundView8AndroidColorColorPrimaryMboundView8AndroidColorMediumColor));
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, itemPostViewModelOrdersPositionMboundView8AndroidStringViewDetailsMboundView8AndroidStringExpire);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvClientNameValue, itemPostViewModelOrdersClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServiceLocationValue, itemPostViewModelOrdersAddress);
-            this.tvServiceStatus.setVisibility(textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriodViewVISIBLEViewGONE);
-            this.tvServiceStatusValue.setVisibility(textUtilsIsEmptyItemPostViewModelOrdersAcceptancePeriodViewVISIBLEViewGONE);
+            this.tvServiceStatus.setVisibility(itemPostViewModelOrdersAcceptancePeriodInt0ViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServiceStatusValue, itemPostViewModelOrdersAcceptMilSeconds);
+            this.tvServiceStatusValue.setVisibility(itemPostViewModelOrdersAcceptancePeriodInt0ViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServiceTimeValue, itemPostViewModelOrdersIsEmergencyInt1TvServiceTimeValueAndroidStringEmergencyServicesItemPostViewModelOrdersScheduledAt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServicesName, itemPostViewModelOrdersServiceName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvServicesNameValue, itemPostViewModelOrdersTotalConcatJavaLangStringConcatItemPostViewModelCurrency);
@@ -266,7 +292,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemPostViewModel
                 grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
@@ -285,7 +311,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
                 }
                 break;
             }
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemPostViewModel
                 grand.app.aber_provider.pages.home.viewModels.ItemHomeViewModel itemPostViewModel = mItemPostViewModel;
@@ -314,8 +340,14 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ab
         flag 2 (0x3L): null
         flag 3 (0x4L): itemPostViewModel.orders.is_emergency == 1 ? @android:string/emergency_services : itemPostViewModel.orders.scheduledAt
         flag 4 (0x5L): itemPostViewModel.orders.is_emergency == 1 ? @android:string/emergency_services : itemPostViewModel.orders.scheduledAt
-        flag 5 (0x6L): !TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod) ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): !TextUtils.isEmpty(itemPostViewModel.orders.acceptancePeriod) ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): itemPostViewModel.orders.position ? true : false
+        flag 6 (0x7L): itemPostViewModel.orders.position ? true : false
+        flag 7 (0x8L): itemPostViewModel.orders.position ? @android:color/colorPrimary : @android:color/medium_color
+        flag 8 (0x9L): itemPostViewModel.orders.position ? @android:color/colorPrimary : @android:color/medium_color
+        flag 9 (0xaL): itemPostViewModel.orders.acceptancePeriod != 0 ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): itemPostViewModel.orders.acceptancePeriod != 0 ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): itemPostViewModel.orders.position ? @android:string/view_details : @android:string/expire
+        flag 12 (0xdL): itemPostViewModel.orders.position ? @android:string/view_details : @android:string/expire
     flag mapping end*/
     //end
 }

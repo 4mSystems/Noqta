@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentRegisterServicesBindingImpl extends FragmentRegisterServicesBinding implements grand.app.aber_provider.generated.callback.OnClickListener.Listener, grand.app.aber_provider.generated.callback.OnCheckedChangeListener.Listener {
+public class FragmentRegisterServicesBindingImpl extends FragmentRegisterServicesBinding implements grand.app.aber_provider.generated.callback.OnCheckedChangeListener.Listener, grand.app.aber_provider.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -26,9 +26,9 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback2;
     @Nullable
-    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback1;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,8 +55,8 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback1 = new grand.app.aber_provider.generated.callback.OnCheckedChangeListener(this, 1);
+        mCallback2 = new grand.app.aber_provider.generated.callback.OnCheckedChangeListener(this, 1);
+        mCallback3 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -253,8 +253,8 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback2);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback1, (androidx.databinding.InverseBindingListener)null);
+            this.appCompatButtonNext.setOnClickListener(mCallback3);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback2, (androidx.databinding.InverseBindingListener)null);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -264,22 +264,6 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
     }
     // Listener Stub Implementations
     // callback impls
-    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
-
-
-            viewmodel.registerServices();
-        }
-    }
     public final void _internalCallbackOnCheckedChanged(int sourceId , android.widget.CompoundButton callbackArg_0, boolean callbackArg_1) {
         // localize variables for thread safety
         // viewmodel != null
@@ -296,6 +280,22 @@ public class FragmentRegisterServicesBindingImpl extends FragmentRegisterService
 
 
             viewmodel.onCheckedChange(callbackArg_0, callbackArg_1);
+        }
+    }
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.aber_provider.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.registerServices();
         }
     }
     // dirty flag

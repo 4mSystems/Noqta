@@ -69,8 +69,10 @@ public class SettingsViewModel extends BaseViewModel {
     public void onLangChange(RadioGroup radioGroup, int id) {
         if (id == R.id.arabic) {
             lang = "ar";
-        } else
+        } else if (id == R.id.english)
             lang = "en";
+        else
+            lang = "ur";
     }
 
     public void changeLang() {

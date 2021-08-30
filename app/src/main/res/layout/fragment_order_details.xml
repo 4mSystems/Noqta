@@ -136,7 +136,6 @@
                         android:layout_width="@dimen/dp50w"
                         android:layout_height="@dimen/dp50h"
                         android:layout_marginTop="@dimen/dp4h"
-                        android:src="@drawable/ic_winch"
                         app:imageUrl="@{viewModel.orderDetailsMain.mainService.image}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

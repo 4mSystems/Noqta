@@ -63,13 +63,13 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
     private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback79;
+    private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback82;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback80;
+    private final android.view.View.OnClickListener mCallback65;
     @Nullable
-    private final android.view.View.OnClickListener mCallback81;
+    private final android.view.View.OnClickListener mCallback66;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -175,10 +175,10 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         this.userProfileImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback79 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
-        mCallback82 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
-        mCallback80 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
-        mCallback81 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback67 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 3);
+        mCallback68 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 4);
+        mCallback65 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 1);
+        mCallback66 = new grand.app.aber_provider.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -685,10 +685,10 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.btnAccept.setOnClickListener(mCallback80);
-            this.btnReject.setOnClickListener(mCallback81);
-            this.locationImage.setOnClickListener(mCallback79);
-            this.status.setOnClickListener(mCallback82);
+            this.btnAccept.setOnClickListener(mCallback66);
+            this.btnReject.setOnClickListener(mCallback67);
+            this.locationImage.setOnClickListener(mCallback65);
+            this.status.setOnClickListener(mCallback68);
         }
         if ((dirtyFlags & 0x23L) != 0) {
             // api target 1
@@ -743,7 +743,7 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 3: {
                 // localize variables for thread safety
                 // viewModel
                 grand.app.aber_provider.pages.orderDetails.viewModels.OrderDetailsViewModel viewModel = mViewModel;
@@ -756,7 +756,9 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 if (viewModelJavaLangObjectNull) {
 
 
-                    viewModel.toFollowOrder();
+
+
+                    viewModel.changeStatus(-1);
                 }
                 break;
             }
@@ -799,6 +801,23 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 }
                 break;
             }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                grand.app.aber_provider.pages.orderDetails.viewModels.OrderDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toFollowOrder();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewModel
@@ -814,25 +833,6 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
 
 
                     viewModel.changeStatus(1);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewModel
-                grand.app.aber_provider.pages.orderDetails.viewModels.OrderDetailsViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.changeStatus(-1);
                 }
                 break;
             }

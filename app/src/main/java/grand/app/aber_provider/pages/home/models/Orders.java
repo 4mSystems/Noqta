@@ -18,8 +18,10 @@ public class Orders {
     private String address;
     @SerializedName("total")
     private String total;
-    @SerializedName("acceptance_period")
-    private String acceptancePeriod;
+    //    @SerializedName("acceptance_period")
+    private long acceptancePeriod;
+    private String acceptMilSeconds;
+    public boolean position = true;
 
     public int getId() {
         return id;
@@ -49,7 +51,19 @@ public class Orders {
         return total;
     }
 
-    public String getAcceptancePeriod() {
+    public long getAcceptancePeriod() {
         return acceptancePeriod;
+    }
+
+    public void setAcceptancePeriod(long acceptancePeriod) {
+        this.acceptancePeriod = acceptancePeriod;
+    }
+
+    public String getAcceptMilSeconds() {
+        return acceptMilSeconds;
+    }
+
+    public void setAcceptMilSeconds(String acceptMilSeconds) {
+        this.acceptMilSeconds = acceptMilSeconds;
     }
 }
