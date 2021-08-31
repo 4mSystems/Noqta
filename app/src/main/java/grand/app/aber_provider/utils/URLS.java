@@ -26,7 +26,6 @@ public class URLS {
     public final static String SEARCH_POSTS = "v1/search?type=";
     public final static String CHANGE_STATUS = "v1/provider/order/update_status";
     public final static String REJECT_ORDER = "v1/provider/order/reject";
-    public final static String DELETE_COMMENT = "v1/comment/";
     public final static String MY_CURRENT_ORDERS = "v1/provider/orders/current?page=";
     public final static String MY_LAST_ORDERS = "v1/provider/orders/latest?page=";
     public final static String HIDE_POST = "v1/hide/post";
@@ -37,22 +36,16 @@ public class URLS {
     public final static String CREATE_LIVE = "v1/live_stream";
     public final static String LIVE_DETAILS = "v1/live_stream/details/";
     public static final String CONTACT_US = "v1/contact_us";
-    public static final String NOTIFICATIONS = "v1/notifications?page=";
+    public static final String NOTIFICATIONS = "v1/provider/notifications?page=";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String USER_PROFILE = "v1/provider/profile";
     public static final String GET_SOCIAL = "v1/social_media";
-    public static final String COMMENTED_POSTS = "v1/profile/commented/posts?user_id=";
-    public static final String QUESTIONED_POSTS = "v1/profile/questioned/posts?user_id=";
-    public static final String NOT_ANSWERED_QUESTIONED_POSTS = "v1/question_request/post?page=";
-    public static final String USER_FOLLOWERS = "v1/followers?user_id=";
-    public static final String CHANGE_FOLLOW_ACTIONS = "v1/unfollow";
     public static final String PRIVACY = "v1/privacy_policy";
     public static final String REPORT_REASONS = "v1/report_reasons";
     public static final String CHANGE_PROFILE_PASSWORD = "v1/profile/password";
     public static final String BAN_USER = "v1/profile/ban";
     public static final String ABOUT = "v1/about_us";
     public static final String TERMS = "v1/terms_condition";
-    public final static String USER_FOLLOWING = "v1/followings?user_id=";
     public final static String REPORT_USER = "v1/profile/report";
     public final static String SEE_FIRST = "v1/follow/see_first";
 

@@ -63,8 +63,8 @@ public class ParentActivity extends AppCompatActivity implements
     protected boolean notification_checked = false;
 
     protected void initializeLanguage() {
-        LanguagesHelper.changeLanguage(this, "ar");
-        LanguagesHelper.changeLanguage(MyApplication.getInstance(), "ar");
+        LanguagesHelper.changeLanguage(this, LanguagesHelper.getCurrentLanguage());
+        LanguagesHelper.changeLanguage(MyApplication.getInstance(), LanguagesHelper.getCurrentLanguage());
     }
 
     protected void initializeToken() {

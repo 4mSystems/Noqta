@@ -57,9 +57,11 @@ public class ConfirmCodeFragment extends BaseFragment {
     private void startTimer() {
         countDownTimer = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
+                long mil = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished));
+                long min = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished);
                 String time = "" + String.format(new Locale(LanguagesHelper.getCurrentLanguage()), "%d : %d ",
-                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
-                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)), TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished));
+                        LanguagesHelper.getCurrentLanguage().equals("ar") || LanguagesHelper.getCurrentLanguage().equals("ur") ? mil : min, LanguagesHelper.getCurrentLanguage().equals("ar") ? min : mil);
+
                 binding.tvForgetTimer.setText(time);
 
             }

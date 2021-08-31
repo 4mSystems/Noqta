@@ -74,6 +74,12 @@ public class OrderDetailsMain {
 
     @SerializedName("status")
     private int status;
+    @SerializedName("canceled")
+    private int canceled;
+
+    public int getCanceled() {
+        return canceled;
+    }
 
     private String statusText;
 
@@ -180,14 +186,19 @@ public class OrderDetailsMain {
     }
 
     public String getStatusText() {
-        if (status == 1)
-            return statusText = ResourceManager.getString(R.string.on_way);
-        else if (status == 2)
-            return statusText = ResourceManager.getString(R.string.order_arrived);
-        else if (status == 3)
-            return statusText = ResourceManager.getString(R.string.order_finished);
-        else
-            return statusText;
+        if (canceled == 1) {
+            return statusText = ResourceManager.getString(R.string.cancel_service);
+        } else {
+            if (status == 1)
+                return statusText = ResourceManager.getString(R.string.on_way);
+            else if (status == 2)
+                return statusText = ResourceManager.getString(R.string.order_arrived);
+            else if (status == 3)
+                return statusText = ResourceManager.getString(R.string.order_finished);
+            else
+                return statusText;
+        }
+
     }
 
     public double getEmergencyCost() {

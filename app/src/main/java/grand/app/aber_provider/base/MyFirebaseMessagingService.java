@@ -12,7 +12,6 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
@@ -41,30 +40,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NotNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-//        if (!TextUtils.isEmpty(remoteMessage.getData().get("chat")) && remoteMessage.getData().get("chat") != null) {
-//            showNotification(remoteMessage.getData());
-//            Intent intent = new Intent();
-//            intent.putExtra("chat", remoteMessage.getData().get("chat"));
-//            intent.setAction("app.te.receiver");
-//            sendBroadcast(intent);
-//        } else {
         UserHelper.getInstance(MyApplication.getInstance()).addCountNotification(UserHelper.getInstance(MyApplication.getInstance()).getCountNotification() + 1);
         Intent intent = new Intent();
         intent.putExtra("counter", UserHelper.getInstance(MyApplication.getInstance()).getCountNotification());
         intent.setAction("app.te.receiver");
         sendBroadcast(intent);
         showNotification(remoteMessage.getData());
-//        }
     }
 
     private void showNotification(Map<String, String> notification) {
         Intent intent = new Intent(this, BaseActivity.class);
         intent.putExtra("is_notification", true);
         intent.putExtra(Constants.TYPE, notification.get(Constants.TYPE));
-        intent.putExtra(Constants.POST_ID, notification.get(Constants.POST_ID));
-        intent.putExtra(Constants.COMMENT_ID, notification.get(Constants.COMMENT_ID));
-        intent.putExtra(Constants.FOLLOWER_ID, notification.get(Constants.FOLLOWER_ID));
-        Log.e("showNotification", "showNotification: "+notification.get(Constants.POST_ID) );
+        intent.putExtra(Constants.ORDER_ID, notification.get(Constants.ORDER_ID));
         // Set the Activity to start in a new, empty task
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);

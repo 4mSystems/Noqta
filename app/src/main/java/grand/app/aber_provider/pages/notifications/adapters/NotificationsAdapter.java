@@ -14,11 +14,15 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.databinding.NotifyItemBinding;
 import grand.app.aber_provider.pages.notifications.itemViewModels.NotificationsItemViewModels;
 import grand.app.aber_provider.pages.notifications.models.NotificationsData;
+import grand.app.aber_provider.pages.orderDetails.OrderDetailsFragment;
+import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.resources.ResourceManager;
 
 public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdapter.ViewHolder> {
     public List<NotificationsData> notificationsDataList;
@@ -43,8 +47,8 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
         NotificationsData dataModel = notificationsDataList.get(position);
         NotificationsItemViewModels homeItemViewModels = new NotificationsItemViewModels(dataModel);
         homeItemViewModels.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-            switch (dataModel.getType()) {
-
+            if (dataModel.getType().equals(Constants.ORDER_SERVICE)) {
+                MovementHelper.startActivityForResultWithBundle(MovementHelper.unwrap(context), new PassingObject(dataModel.getOrderServiceId()), ResourceManager.getString(R.string.service_details), OrderDetailsFragment.class.getName(), Constants.ORDER_DETAILS_REQUEST);
             }
         });
         holder.setViewModel(homeItemViewModels);

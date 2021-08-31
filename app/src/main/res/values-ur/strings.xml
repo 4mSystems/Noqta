@@ -19,7 +19,7 @@
     <string name="connection_AirPlane_Mode">Airplane mode</string>
     <string name="connection_invaild_msg">Poor Internet Connection</string>
     <string name="please_select_another_file">Please select another file</string>
-    <string name="google_map">AIzaSyCjsvKLJRP5P00s2xMRbJKWIQ2bCifh9bs</string>
+    <string name="google_map">AIzaSyAG9F2HDaTi93fzTTB0vdj5G0Ol6ys2SgQ</string>
     <string name="email_hint">البريد الالكترونى</string>
     <string name="email"> البريد الإلكترونى</string>
     <string name="password">كلمة المرور</string>
@@ -196,4 +196,8 @@
     <string name="terms_warning">يرجى على الموافقة على الشروك والاحكام</string>
     <string name="profile_services">اختر الخدمات التي ستقدمها</string>
     <string name="urdu">الاوردية</string>
+    <string name="minute">دقيقة</string>
+    <string name="service_details">Service details</string>
+    <string name="cancel_service">cancel the service</string>
+
 </resources>

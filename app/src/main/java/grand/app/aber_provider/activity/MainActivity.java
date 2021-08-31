@@ -25,6 +25,7 @@ import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.home.viewModels.HomeViewModels;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.session.LanguagesHelper;
 
 public class MainActivity extends ParentActivity {
     ActivityMainBinding activityMainBinding;
@@ -64,7 +65,7 @@ public class MainActivity extends ParentActivity {
 
                     }
                 })
-                .withGravity(SlideGravity.RIGHT) //If LEFT you can swipe a menu from left to right, if RIGHT - the direction is opposite.
+                .withGravity(LanguagesHelper.getCurrentLanguage().equals("ar") || LanguagesHelper.getCurrentLanguage().equals("ur") ? SlideGravity.RIGHT : SlideGravity.LEFT) //If LEFT you can swipe a menu from left to right, if RIGHT - the direction is opposite.
                 .withSavedState(savedInstanceState) //If you call the method, layout will restore its opened/closed state
                 .withDragDistance(250) //Horizontal translation of a view. Default == 180dp
                 .withRootViewScale(0.9f) //Content view's scale will be interpolated between 1f and 0.7f. Default == 0.65f;

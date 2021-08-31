@@ -18,7 +18,7 @@ public class Orders {
     private String address;
     @SerializedName("total")
     private String total;
-    //    @SerializedName("acceptance_period")
+    @SerializedName("acceptance_period")
     private long acceptancePeriod;
     private String acceptMilSeconds;
     public boolean position = true;

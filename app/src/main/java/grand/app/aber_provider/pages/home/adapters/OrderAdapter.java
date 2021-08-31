@@ -2,7 +2,6 @@ package grand.app.aber_provider.pages.home.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,10 +55,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuView> {
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, @SuppressLint("RecyclerView") final int position) {
         Orders menuModel = postDataList.get(position);
-        if (position == 0)
-            menuModel.setAcceptancePeriod(30000);
-        else
-            menuModel.setAcceptancePeriod(postDataList.get(position - 1).getAcceptancePeriod() + 30000);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
             this.lastSelected = menuModel.getId();

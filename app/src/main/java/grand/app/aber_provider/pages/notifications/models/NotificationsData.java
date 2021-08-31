@@ -14,12 +14,10 @@ public class NotificationsData {
     private String type;
     @SerializedName("user_id")
     private int user_id;
-    @SerializedName("follower_id")
-    private int followerId;
-    @SerializedName("post_id")
-    private int post_id;
-    @SerializedName("comment_id")
-    private int comment_id;
+    @SerializedName("order_id")
+    private int orderId;
+    @SerializedName("order_service_id")
+    private int orderServiceId;
 
     public String getCreated_at() {
         return created_at;
@@ -41,15 +39,12 @@ public class NotificationsData {
         return user_id;
     }
 
-    public int getFollowerId() {
-        return followerId;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public int getPost_id() {
-        return post_id;
+    public int getOrderServiceId() {
+        return orderServiceId;
     }
 
-    public int getComment_id() {
-        return comment_id;
-    }
 }

@@ -168,9 +168,9 @@ public class Constants {
     public static final String GET_APP_MONEY = "GET_APP_MONEY";
     // NOTIFICATIONS
     public static final String TYPE = "type";
-    public static final String POST_ID = "post_id";
-    public static final String FOLLOWER_ID = "follower_id";
-    public static final String COMMENT_ID = "comment_id";
+    public static final String ORDER_ID = "order_id";
+    public static final String SERVICE_TYPE = "service";
+    public static final String ORDER_SERVICE = "order_service";
     //NOTIFICATIONS TYPES
     public static final String TIER = "tyre";
     public static final String OIL = "oil";

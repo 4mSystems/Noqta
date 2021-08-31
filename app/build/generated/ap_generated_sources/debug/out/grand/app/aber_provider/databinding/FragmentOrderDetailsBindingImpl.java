@@ -289,6 +289,7 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         java.lang.String viewModelOrderDetailsMainUserName = null;
         boolean TextUtilsIsEmptyViewModelOrderDetailsMainImage1 = false;
         int viewModelOrderDetailsMainStatusInt0ViewVISIBLEViewGONE = 0;
+        boolean viewModelOrderDetailsMainCanceledInt1 = false;
         grand.app.aber_provider.pages.orderDetails.models.OrderDetailsMain viewModelOrderDetailsMain = null;
         int viewModelOrderDetailsMainStatus = 0;
         boolean viewModelOrderDetailsMainChildServicesSizeInt0 = false;
@@ -306,6 +307,7 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         grand.app.aber_provider.pages.orderDetails.adapters.ServicesRequiredAdapter viewModelServicesRequiredAdapter = null;
         java.lang.String stringValueOfViewModelOrderDetailsMainEmergencyCost = null;
         int viewModelOrderDetailsMainExtraServicesSize = 0;
+        int viewModelOrderDetailsMainCanceled = 0;
         java.lang.String viewModelCurrency = null;
         java.lang.String viewModelOrderDetailsMainImage = null;
         java.util.List<grand.app.aber_provider.pages.orderDetails.models.SubServices> viewModelOrderDetailsMainSubServices = null;
@@ -318,6 +320,7 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         java.lang.String stringValueOfViewModelOrderDetailsMainSubtotal = null;
         java.util.List<grand.app.aber_provider.pages.orderDetails.models.ChildServices> viewModelOrderDetailsMainChildServices = null;
         boolean viewModelOrderDetailsMainVehicleJavaLangObjectNull = false;
+        boolean viewModelOrderDetailsMainCanceledInt1BooleanTrueBooleanFalse = false;
         grand.app.aber_provider.pages.orderDetails.adapters.ServicesRequiredAdapter viewModelExtraRequiredAdapter = null;
         boolean viewModelOrderDetailsMainMainServiceIdInt9 = false;
         java.lang.String viewModelOrderDetailsMainStaticLocationImage = null;
@@ -378,6 +381,8 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                         viewModelOrderDetailsMainTotal = viewModelOrderDetailsMain.getTotal();
                         // read viewModel.orderDetailsMain.extraServices
                         viewModelOrderDetailsMainExtraServices = viewModelOrderDetailsMain.getExtraServices();
+                        // read viewModel.orderDetailsMain.canceled
+                        viewModelOrderDetailsMainCanceled = viewModelOrderDetailsMain.getCanceled();
                         // read viewModel.orderDetailsMain.image
                         viewModelOrderDetailsMainImage = viewModelOrderDetailsMain.getImage();
                         // read viewModel.orderDetailsMain.subServices
@@ -413,6 +418,8 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                     stringValueOfViewModelOrderDetailsMainSubtotal = java.lang.String.valueOf(viewModelOrderDetailsMainSubtotal);
                     // read String.valueOf(viewModel.orderDetailsMain.total)
                     stringValueOfViewModelOrderDetailsMainTotal = java.lang.String.valueOf(viewModelOrderDetailsMainTotal);
+                    // read viewModel.orderDetailsMain.canceled != 1
+                    viewModelOrderDetailsMainCanceledInt1 = (viewModelOrderDetailsMainCanceled) != (1);
                     // read TextUtils.isEmpty(viewModel.orderDetailsMain.image)
                     textUtilsIsEmptyViewModelOrderDetailsMainImage = android.text.TextUtils.isEmpty(viewModelOrderDetailsMainImage);
                     // read viewModel.orderDetailsMain.user != null
@@ -433,6 +440,14 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 }
                 if((dirtyFlags & 0x23L) != 0) {
                     if(ViewModelOrderDetailsMainStatusInt01) {
+                            dirtyFlags |= 0x80000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40000L;
+                    }
+                }
+                if((dirtyFlags & 0x23L) != 0) {
+                    if(viewModelOrderDetailsMainCanceledInt1) {
                             dirtyFlags |= 0x20000L;
                     }
                     else {
@@ -441,26 +456,26 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 }
                 if((dirtyFlags & 0x23L) != 0) {
                     if(viewModelOrderDetailsMainUserJavaLangObjectNull) {
-                            dirtyFlags |= 0x80000L;
+                            dirtyFlags |= 0x200000L;
                     }
                     else {
-                            dirtyFlags |= 0x40000L;
+                            dirtyFlags |= 0x100000L;
                     }
                 }
                 if((dirtyFlags & 0x23L) != 0) {
                     if(viewModelOrderDetailsMainVehicleJavaLangObjectNull) {
-                            dirtyFlags |= 0x800000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x400000L;
-                    }
-                }
-                if((dirtyFlags & 0x23L) != 0) {
-                    if(viewModelOrderDetailsMainIsEmergencyInt1) {
                             dirtyFlags |= 0x2000000L;
                     }
                     else {
                             dirtyFlags |= 0x1000000L;
+                    }
+                }
+                if((dirtyFlags & 0x23L) != 0) {
+                    if(viewModelOrderDetailsMainIsEmergencyInt1) {
+                            dirtyFlags |= 0x8000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x4000000L;
                     }
                 }
                     if (viewModelOrderDetailsMainExtraServices != null) {
@@ -509,6 +524,8 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                     }
                     // read viewModel.orderDetailsMain.status == 0 ? View.VISIBLE : View.GONE
                     viewModelOrderDetailsMainStatusInt0ViewVISIBLEViewGONE = ((viewModelOrderDetailsMainStatusInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewModel.orderDetailsMain.canceled != 1 ? true : false
+                    viewModelOrderDetailsMainCanceledInt1BooleanTrueBooleanFalse = ((viewModelOrderDetailsMainCanceledInt1) ? (true) : (false));
                     // read !TextUtils.isEmpty(viewModel.orderDetailsMain.image)
                     TextUtilsIsEmptyViewModelOrderDetailsMainImage1 = !textUtilsIsEmptyViewModelOrderDetailsMainImage;
                     // read viewModel.orderDetailsMain.user != null ? View.VISIBLE : View.GONE
@@ -533,18 +550,18 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 }
                 if((dirtyFlags & 0x23L) != 0) {
                     if(viewModelOrderDetailsMainExtraServicesSizeInt0) {
-                            dirtyFlags |= 0x20000000L;
+                            dirtyFlags |= 0x80000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000000L;
+                            dirtyFlags |= 0x40000000L;
                     }
                 }
                 if((dirtyFlags & 0x23L) != 0) {
                     if(viewModelOrderDetailsMainSubServicesSizeInt0) {
-                            dirtyFlags |= 0x8000000L;
+                            dirtyFlags |= 0x20000000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags |= 0x10000000L;
                     }
                 }
                 if((dirtyFlags & 0x23L) != 0) {
@@ -630,12 +647,12 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         }
         // batch finished
 
-        if ((dirtyFlags & 0x20000L) != 0) {
+        if ((dirtyFlags & 0x80000L) != 0) {
 
                 // read viewModel.orderDetailsMain.status != 4
                 viewModelOrderDetailsMainStatusInt4 = (viewModelOrderDetailsMainStatus) != (4);
         }
-        if ((dirtyFlags & 0x1000000L) != 0) {
+        if ((dirtyFlags & 0x4000000L) != 0) {
 
                 if (viewModelOrderDetailsMain != null) {
                     // read viewModel.orderDetailsMain.scheduledAt
@@ -670,10 +687,10 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
                 viewModelOrderDetailsMainIsEmergencyInt1MboundView7AndroidStringEmergencyServicesViewModelOrderDetailsMainScheduledAt = ((viewModelOrderDetailsMainIsEmergencyInt1) ? (mboundView7.getResources().getString(R.string.emergency_services)) : (viewModelOrderDetailsMainScheduledAt));
             if((dirtyFlags & 0x23L) != 0) {
                 if(viewModelOrderDetailsMainStatusInt0ViewModelOrderDetailsMainStatusInt4BooleanFalse) {
-                        dirtyFlags |= 0x200000L;
+                        dirtyFlags |= 0x800000L;
                 }
                 else {
-                        dirtyFlags |= 0x100000L;
+                        dirtyFlags |= 0x400000L;
                 }
             }
 
@@ -709,6 +726,7 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
             grand.app.aber_provider.base.ApplicationBinding.loadCommentImage(this.mboundView25, viewModelOrderDetailsMainImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewModelOrderDetailsMainMainServiceName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewModelOrderDetailsMainIsEmergencyInt1MboundView7AndroidStringEmergencyServicesViewModelOrderDetailsMainScheduledAt);
+            this.status.setEnabled(viewModelOrderDetailsMainCanceledInt1BooleanTrueBooleanFalse);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.status, viewModelOrderDetailsMainStatusText);
             this.status.setVisibility(viewModelOrderDetailsMainStatusInt0ViewModelOrderDetailsMainStatusInt4BooleanFalseViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvBattery, viewModelOrderDetailsMainMainServiceIdInt9TvBatteryAndroidStringTierImageViewModelOrderDetailsMainMainServiceIdInt19TvBatteryAndroidStringLicenseCivilImageHintTvBatteryAndroidStringBatteryImage);
@@ -857,20 +875,22 @@ public class FragmentOrderDetailsBindingImpl extends FragmentOrderDetailsBinding
         flag 13 (0xeL): viewModel.orderDetailsMain.childServices.size() == 0 ? View.GONE : View.VISIBLE
         flag 14 (0xfL): !TextUtils.isEmpty(viewModel.orderDetailsMain.image) ? View.VISIBLE : View.GONE
         flag 15 (0x10L): !TextUtils.isEmpty(viewModel.orderDetailsMain.image) ? View.VISIBLE : View.GONE
-        flag 16 (0x11L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false
-        flag 17 (0x12L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false
-        flag 18 (0x13L): viewModel.orderDetailsMain.user != null ? View.VISIBLE : View.GONE
-        flag 19 (0x14L): viewModel.orderDetailsMain.user != null ? View.VISIBLE : View.GONE
-        flag 20 (0x15L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false ? View.VISIBLE : View.GONE
-        flag 21 (0x16L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false ? View.VISIBLE : View.GONE
-        flag 22 (0x17L): viewModel.orderDetailsMain.vehicle != null ? View.VISIBLE : View.GONE
-        flag 23 (0x18L): viewModel.orderDetailsMain.vehicle != null ? View.VISIBLE : View.GONE
-        flag 24 (0x19L): viewModel.orderDetailsMain.isEmergency == 1 ? @android:string/emergency_services : viewModel.orderDetailsMain.scheduledAt
-        flag 25 (0x1aL): viewModel.orderDetailsMain.isEmergency == 1 ? @android:string/emergency_services : viewModel.orderDetailsMain.scheduledAt
-        flag 26 (0x1bL): viewModel.orderDetailsMain.subServices.size() > 0 ? View.VISIBLE : View.GONE
-        flag 27 (0x1cL): viewModel.orderDetailsMain.subServices.size() > 0 ? View.VISIBLE : View.GONE
-        flag 28 (0x1dL): viewModel.orderDetailsMain.extraServices.size() == 0 ? View.GONE : View.VISIBLE
-        flag 29 (0x1eL): viewModel.orderDetailsMain.extraServices.size() == 0 ? View.GONE : View.VISIBLE
+        flag 16 (0x11L): viewModel.orderDetailsMain.canceled != 1 ? true : false
+        flag 17 (0x12L): viewModel.orderDetailsMain.canceled != 1 ? true : false
+        flag 18 (0x13L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false
+        flag 19 (0x14L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false
+        flag 20 (0x15L): viewModel.orderDetailsMain.user != null ? View.VISIBLE : View.GONE
+        flag 21 (0x16L): viewModel.orderDetailsMain.user != null ? View.VISIBLE : View.GONE
+        flag 22 (0x17L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false ? View.VISIBLE : View.GONE
+        flag 23 (0x18L): viewModel.orderDetailsMain.status != 0 ? viewModel.orderDetailsMain.status != 4 : false ? View.VISIBLE : View.GONE
+        flag 24 (0x19L): viewModel.orderDetailsMain.vehicle != null ? View.VISIBLE : View.GONE
+        flag 25 (0x1aL): viewModel.orderDetailsMain.vehicle != null ? View.VISIBLE : View.GONE
+        flag 26 (0x1bL): viewModel.orderDetailsMain.isEmergency == 1 ? @android:string/emergency_services : viewModel.orderDetailsMain.scheduledAt
+        flag 27 (0x1cL): viewModel.orderDetailsMain.isEmergency == 1 ? @android:string/emergency_services : viewModel.orderDetailsMain.scheduledAt
+        flag 28 (0x1dL): viewModel.orderDetailsMain.subServices.size() > 0 ? View.VISIBLE : View.GONE
+        flag 29 (0x1eL): viewModel.orderDetailsMain.subServices.size() > 0 ? View.VISIBLE : View.GONE
+        flag 30 (0x1fL): viewModel.orderDetailsMain.extraServices.size() == 0 ? View.GONE : View.VISIBLE
+        flag 31 (0x20L): viewModel.orderDetailsMain.extraServices.size() == 0 ? View.GONE : View.VISIBLE
     flag mapping end*/
     //end
 }
