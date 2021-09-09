@@ -52,7 +52,7 @@ public class SplashFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.HOME)) {
-                if (UserHelper.getInstance(requireActivity()).getCountryId() != 0) {
+                if (UserHelper.getInstance(requireActivity()).getCountriesData() != null) {
                     if (!TextUtils.isEmpty(UserHelper.getInstance(requireActivity()).getUserData().getPackageId()))
                         MovementHelper.startActivityMain(requireActivity());
                     else

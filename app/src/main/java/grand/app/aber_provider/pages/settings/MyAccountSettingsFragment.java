@@ -66,6 +66,8 @@ public class MyAccountSettingsFragment extends BaseFragment {
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.TERMS), getResources().getString(R.string.terms), TermsFragment.class.getName(), null);
                     break;
                 case Constants.COMPLAINTS:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(((Mutable) o).message), ResourceManager.getString(R.string.tv_account_suggest), ContactUsFragment.class.getName(), null);
+                    break;
                 case Constants.CONTACT:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(((Mutable) o).message), ResourceManager.getString(R.string.tv_account_contact), ContactUsFragment.class.getName(), null);
                     break;

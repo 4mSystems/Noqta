@@ -23,6 +23,7 @@
             android:layout_marginTop="@dimen/dp4h"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_back"
+            android:rotation="180"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -181,9 +181,9 @@
     <string name="battery_image">Attached battery picture</string>
     <string name="tier_image">Picture frame attached</string>
     <string name="license_civil_image_hint">Driver\'s license photo</string>
-    <string name="accept">Request Accept</string>
-    <string name="reject">Rejection of the application</string>
-    <string name="oil_liguid">oil liquid</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="oil_liquid">Oil liquid</string>
     <string name="hidden_color">Hidden color</string>
     <string name="user_location">customer tracking</string>
     <string name="wallet_history_1">added</string>
@@ -199,4 +199,7 @@
     <string name="minute">Minute</string>
     <string name="service_details">Service details</string>
     <string name="cancel_service">cancel the service</string>
+    <string name="access_location">Location update</string>
+    <string name="location_title">Detect location</string>
+
 </resources>

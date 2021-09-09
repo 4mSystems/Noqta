@@ -1,0 +1,650 @@
+[
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_notify_item.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\notify_item.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_next.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_next.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_edit_profile.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_edit_profile.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_auth_services.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_auth_services.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_change_dialog.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\change_dialog.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_price_container.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xhdpi\\price_container.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_back.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_share.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_share.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_logo.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-hdpi\\ic_logo.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_logo.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_logout.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_logout.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_layout_action_bar_home.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\layout_action_bar_home.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_side_menu.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\side_menu.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\color_text_input_layout_stroke_color_medium.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\color\\text_input_layout_stroke_color_medium.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_border_grand_call.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\border_grand_call.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_border_grand_whats.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\border_grand_whats.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_home_notification.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_home_notification.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_home.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_email.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_email.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_splash.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xhdpi\\splash.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\anim_shake_vibrate.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\anim\\shake_vibrate.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_home.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_home.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_about.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_subscription.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_subscription.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_by_grand.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\by_grand.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_pages_header.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_pages_header.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_password.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_password.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_detect_map_icon.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_detect_map_icon.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_my_account_settings.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_my_account_settings.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\color_text_input_layout_stroke_color.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\color\\text_input_layout_stroke_color.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_layout_action_bar_back.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\layout_action_bar_back.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_grand_exit.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\grand_exit.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\color_navigation_selection.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\color\\navigation_selection.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_lang.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_lang.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_board_header.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxhdpi\\board_header.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_delivery_time.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_delivery_time.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_social_media.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_social_media.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_by_grand_black.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\by_grand_black.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\font_medium.otf.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\font\\medium.otf"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_warning.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_warning.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_map_address.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\activity_map_address.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v24_ic_detail_location.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v24\\ic_detail_location.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_base.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\activity_base.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_register_services.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_register_services.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\anim_jump_fast.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\anim\\jump_fast.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_wallet.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_wallet.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_contact.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_contact.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_contact.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_contact.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_cloud_computing.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_cloud_computing.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_popup_photo_full.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\popup_photo_full.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_board_header.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\board_header.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_logo.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_flag.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_flag.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_splash.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-mdpi\\splash.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_follow_up_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_follow_up_orders.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_about.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_about.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_cities.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_cities.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_app_wallet.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_app_wallet.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_user.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_user.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_wallet_history.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_wallet_history.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_grand_g.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\grand_g.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_town.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_town.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_login.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_splash.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\splash.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_side_menu.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-hdpi\\side_menu.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_corner_view_gray_borde.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\corner_view_gray_borde.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_countries.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_countries.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_price_container.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-mdpi\\price_container.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_menu.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\menu.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_winch.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_winch.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-xxxhdpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_loader_animation.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\loader_animation.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-xxhdpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_exist_layout.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\exist_layout.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_price_container.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxxhdpi\\price_container.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_notifications.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_forget_password.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_forget_password.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_whats.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\whats.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_order_location.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_order_location.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_onboard.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_onboard.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_badge_bg_with_shadow.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\badge_bg_with_shadow.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_change_password.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_logo.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-mdpi\\ic_logo.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_user_location.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_user_location.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_terms.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_terms.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_my_address.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_my_address.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_suggest.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_suggest.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_social_media.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_social_media.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_circle.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_circle.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_accept_time.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_accept_time.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_country.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_country.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\raw_notify_default.mp3.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\raw\\notify_default.mp3"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_order_options_details.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_order_options_details.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_services_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_services_orders.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_logo.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_board_header.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-mdpi\\board_header.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_rate.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_rate.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_social_menu.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_social_menu.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_my_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_my_orders.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_call.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_call.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_profile_camera.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_profile_camera.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_corner_view_primary_medium.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\corner_view_primary_medium.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_account_circle.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\account_circle.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_detail_location.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_detail_location.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_board_header.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xhdpi\\board_header.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_extra_services.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_extra_services.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_more.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_more.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_required_service.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_required_service.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_confirm_code.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_confirm_code.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_home.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_option_dialog.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\option_dialog.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_price_container.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxhdpi\\price_container.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_side_menu.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xhdpi\\side_menu.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_call_white.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_call_white.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_my_previous_orders.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_my_previous_orders.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_notifications.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_notifications.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_curve_profile.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\back_curve_profile.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_splash.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_splash.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_corner_view_gradient.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\corner_view_gradient.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_packages.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_packages.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_order_details.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_order_details.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_board_header.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-hdpi\\board_header.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_translate.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_translate.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_border_grand.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\border_grand.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_package.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_package.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_register_documents.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_register_documents.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_search.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_side_menu.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxhdpi\\side_menu.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_exit_dialog.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_exit_dialog.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_splash.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-hdpi\\splash.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_side_menu.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-mdpi\\side_menu.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_car_desc.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_car_desc.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_onboard_slider_item.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\onboard_slider_item.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_item_social.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\item_social.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_layout_grand.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\layout_grand.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_help.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_help.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_price_container.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-hdpi\\price_container.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_file.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_file.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_client.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_client.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_arrow_left.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_arrow_left.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_splash.png.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable-xxhdpi\\splash.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\layout_fragment_register.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\AberProvider\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_resource_package.xml.flat",
+        "source": "F:\\mostafa elnagar\\AberProvider\\app\\src\\main\\res\\drawable\\ic_resource_package.xml"
+    }
+]

@@ -22,6 +22,7 @@ import grand.app.aber_provider.pages.orderDetails.OrderDetailsFragment;
 import grand.app.aber_provider.pages.splash.SplashFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
+import grand.app.aber_provider.utils.resources.ResourceManager;
 
 public class BaseActivity extends ParentActivity {
     ActivityBaseBinding activityBaseBinding;
@@ -80,8 +81,8 @@ public class BaseActivity extends ParentActivity {
                 Bundle bundle = new Bundle();
                 backActionBarView.flag = 1;
                 if (!TextUtils.isEmpty(postId)) {
-                    if (Constants.SERVICE_TYPE.equals(typeNotifications)) {  // post details
-                        setTitleName("");
+                    if (Constants.ORDER_SERVICE.equals(typeNotifications)) {  // post details
+                        setTitleName(ResourceManager.getString(R.string.service_details));
                         OrderDetailsFragment homeMainFragment = new OrderDetailsFragment();
                         bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId))));
                         homeMainFragment.setArguments(bundle);

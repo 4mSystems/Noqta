@@ -12,6 +12,7 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
@@ -40,6 +41,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NotNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+        Log.e("MyFirebaseMessagingService", ": " + remoteMessage.getData());
         UserHelper.getInstance(MyApplication.getInstance()).addCountNotification(UserHelper.getInstance(MyApplication.getInstance()).getCountNotification() + 1);
         Intent intent = new Intent();
         intent.putExtra("counter", UserHelper.getInstance(MyApplication.getInstance()).getCountNotification());

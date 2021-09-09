@@ -49,8 +49,7 @@ public class CountriesFragment extends BaseFragment {
                 viewModel.getCountriesAdapter().updateData(((CountriesResponse) mutable.object).getCountriesDataList());
                 viewModel.notifyChange(BR.countriesAdapter);
             } else if (mutable.message.equals(Constants.CITIES)) {
-                UserHelper.getInstance(requireActivity()).addCountryId(viewModel.getCountriesAdapter().lastSelected);
-                UserHelper.getInstance(requireActivity()).addCurrency(viewModel.getCountriesAdapter().countriesDataList.get(viewModel.getCountriesAdapter().lastPosition).getCurrency());
+                UserHelper.getInstance(requireActivity()).userCountry(viewModel.getCountriesAdapter().countriesDataList.get(viewModel.getCountriesAdapter().lastPosition));
                 MovementHelper.startActivity(requireActivity(), CitiesFragment.class.getName(), getString(R.string.register_city_hint), null);
             }
         });

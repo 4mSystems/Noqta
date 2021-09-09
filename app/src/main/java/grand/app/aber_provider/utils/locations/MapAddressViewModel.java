@@ -59,5 +59,7 @@ public class MapAddressViewModel extends BaseViewModel {
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(place.getLatLng(), 15.0f));
 
     }
-
+    public void back() {
+        getLiveData().setValue(Constants.BACK);
+    }
 }

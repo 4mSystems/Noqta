@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 
+import grand.app.aber_provider.pages.auth.countries.models.CountriesData;
 import grand.app.aber_provider.pages.auth.models.UserData;
 
 public class UserHelper {
@@ -50,27 +51,27 @@ public class UserHelper {
         return gson.fromJson(json, UserData.class);
     }
 
-    public void userProfile(UserData userData) {
+    public void userCountry(CountriesData countriesData) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(userData);
-        editor.putString("userProfile", json);
+        String json = gson.toJson(countriesData);
+        editor.putString("CountriesData", json);
         editor.apply();
         editor.commit();
 
     }
 
-    public String addUserProfile() {
+    public String addCountriesData() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("userProfile", null);
+        return sharedPreferences.getString("CountriesData", null);
 
     }
 
-    public UserData getUserProfile() {
+    public CountriesData getCountriesData() {
         Gson gson = new Gson();
-        String json = addUserProfile();
-        return gson.fromJson(json, UserData.class);
+        String json = addCountriesData();
+        return gson.fromJson(json, CountriesData.class);
     }
 
     public void addIsFirst(boolean isFirst) {
@@ -132,30 +133,6 @@ public class UserHelper {
     public String getJwt() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("jwt", null);
-    }
-
-    public void addCountryId(int count) {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("CountryId", count);
-        editor.apply();
-    }
-
-    public int getCountryId() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("CountryId", 0);
-    }
-
-    public void addCurrency(String currency) {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("currency", currency);
-        editor.apply();
-    }
-
-    public String getCurrency() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("currency", "");
     }
 
     public void addAccountType(String type) {

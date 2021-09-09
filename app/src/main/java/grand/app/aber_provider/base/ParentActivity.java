@@ -33,6 +33,7 @@ import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.auth.login.LoginFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.LauncherHelper;
+import grand.app.aber_provider.utils.helper.LauncherInterface;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 import grand.app.aber_provider.utils.resources.ResourceManager;
 import grand.app.aber_provider.utils.services.RealTimeReceiver;
@@ -156,6 +157,8 @@ public class ParentActivity extends AppCompatActivity implements
             toastError((String) mutable.object);
         } else if (mutable.message.equals(Constants.ERROR_TOAST) && mutable.object instanceof String) {
             toastError((String) mutable.object);
+        } else if (mutable.message.equals(Constants.ERROR_NOT_FOUND) && mutable.object instanceof String) {
+            toastError((String) mutable.object);
         } else if (mutable.message.equals(Constants.FAILURE_CONNECTION)) {
             hideProgress();
         } else if (mutable.message.equals(Constants.LOGOUT)) {
@@ -259,6 +262,7 @@ public class ParentActivity extends AppCompatActivity implements
                 Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     @Override

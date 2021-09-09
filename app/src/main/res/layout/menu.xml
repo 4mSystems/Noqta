@@ -112,6 +112,7 @@
                 android:drawableStart="@drawable/ic_notifications"
                 android:drawablePadding="@dimen/dp8w"
                 android:gravity="center_vertical|start"
+                android:onClick="@{()-> menuViewModel.liveDataActions(Constants.NOTIFICATIONS)}"
                 android:text="@string/notifications"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

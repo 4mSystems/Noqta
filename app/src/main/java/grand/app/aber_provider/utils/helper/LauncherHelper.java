@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -46,7 +47,7 @@ public class LauncherHelper {
     }
 
     public static void onActivityResult(ParentActivity fragment, LauncherInterface.activityResultInterface resultInterface) {
-        ((ParentActivity) fragment).someActivityResultLauncher = fragment.registerForActivityResult(
+        fragment.someActivityResultLauncher = fragment.registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == Activity.RESULT_OK || result.getResultCode() == launcherRequest) {

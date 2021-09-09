@@ -6,7 +6,6 @@ import androidx.databinding.Bindable;
 import grand.app.aber_provider.BR;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.base.BaseViewModel;
-import grand.app.aber_provider.pages.home.models.commentsAndReplies.Comments;
 import grand.app.aber_provider.pages.orderDetails.models.ChildServices;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.resources.ResourceManager;
@@ -26,7 +25,7 @@ public class ItemChildServiceViewModel extends BaseViewModel {
         }
         if (getChildServices().getType().equals(Constants.OIL)) {
             getChildServices().setChildText(ResourceManager.getString(R.string.oil_types));
-            getChildServices().setSubChildText(ResourceManager.getString(R.string.oil_liguid));
+            getChildServices().setSubChildText(ResourceManager.getString(R.string.oil_liquid));
         }
         if (getChildServices().getType().equals(Constants.HIDDEN)) {
             getChildServices().setParentText(ResourceManager.getString(R.string.hidden_type));

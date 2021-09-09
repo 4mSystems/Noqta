@@ -118,6 +118,8 @@ public class MapAddressActivity extends FragmentActivity implements
                         AutocompleteActivityMode.FULLSCREEN, fields)
                         .build(this);
                 startActivityForResult(intent, Constants.AUTOCOMPLETE_REQUEST_CODE);
+            } else if (o.equals(Constants.BACK)) {
+                finish();
             }
             closeKeyboard();
         });

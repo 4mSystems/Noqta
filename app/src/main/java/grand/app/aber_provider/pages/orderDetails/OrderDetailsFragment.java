@@ -1,11 +1,16 @@
 package grand.app.aber_provider.pages.orderDetails;
 
+import android.Manifest;
+import android.content.IntentSender;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
@@ -14,6 +19,15 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
 
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.tasks.Task;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -62,6 +76,7 @@ public class OrderDetailsFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) requireContext(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.ORDER_DETAILS.equals(((Mutable) o).message)) {
                 viewModel.setOrderDetailsMain(((OrderDetailsResponse) (mutable).object).getOrderDetailsMain());
                 startUpdateLocation();
@@ -73,12 +88,12 @@ public class OrderDetailsFragment extends BaseFragment {
             } else if (Constants.CHANGE_ORDER_STATUS.equals(((Mutable) o).message)) {
                 viewModel.getOrderDetailsMain().setStatus(viewModel.getOrderDetailsMain().getStatus() + 1);
                 if (viewModel.getOrderDetailsMain().getStatus() == 4) {
-                    MovementHelper.finishWithResult(new PassingObject(), requireActivity(), Constants.ORDER_DETAILS_REQUEST);
                     cancelUpdateLocation();
+                    MovementHelper.finishWithResult(new PassingObject(), requireActivity(), Constants.ORDER_DETAILS_REQUEST);
                 }
-                startUpdateLocation();
                 toastMessage(((StatusMessage) (mutable).object).mMessage);
                 viewModel.notifyChange(BR.orderDetailsMain);
+                startUpdateLocation();
             }
         });
     }
@@ -93,26 +108,30 @@ public class OrderDetailsFragment extends BaseFragment {
     }
 
     private void startUpdateLocation() {
-        if (viewModel.getOrderDetailsMain().getStatus() >= 1 || viewModel.getOrderDetailsMain().getStatus() >= 3) {
-            try {
-                if (!isWorkScheduled(WorkManager.getInstance().getWorkInfosByTag(OrderDetailsFragment.class.getName()).get())) {
-                    PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(LocationWorkers.class, 15, TimeUnit.MINUTES)
-                            .addTag(OrderDetailsFragment.class.getName())
-                            .build();
-                    WorkManager.getInstance().enqueueUniquePeriodicWork("Location", ExistingPeriodicWorkPolicy.REPLACE, periodicWork);
-                } else {
-                    cancelUpdateLocation();
-                    startUpdateLocation();
+        if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            enableLocationDialog();
+        } else {
+            if (viewModel.getOrderDetailsMain().getStatus() == 1 && viewModel.getOrderDetailsMain().getStatus() <= 3) {
+                try {
+                    if (!isWorkScheduled(WorkManager.getInstance(requireActivity()).getWorkInfosForUniqueWork(OrderDetailsFragment.class.getName()).get())) {
+                        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(LocationWorkers.class, 10, TimeUnit.MINUTES)
+                                .addTag(OrderDetailsFragment.class.getName())
+                                .build();
+                        WorkManager.getInstance(requireActivity()).enqueueUniquePeriodicWork(OrderDetailsFragment.class.getName(), ExistingPeriodicWorkPolicy.REPLACE, periodicWork);
+                    } else {
+                        cancelUpdateLocation();
+                        startUpdateLocation();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         }
-
     }
 
     private void cancelUpdateLocation() {
-        WorkManager.getInstance().cancelAllWorkByTag(OrderDetailsFragment.class.getName());
+        WorkManager.getInstance(requireActivity()).cancelUniqueWork(OrderDetailsFragment.class.getName());
     }
 
     @Override
@@ -120,4 +139,28 @@ public class OrderDetailsFragment extends BaseFragment {
         super.onResume();
         viewModel.getPostRepository().setLiveData(viewModel.liveData);
     }
+
+    public void enableLocationDialog() {
+        LocationRequest locationRequest = new LocationRequest();
+        LocationSettingsRequest settingsRequest = new LocationSettingsRequest.Builder()
+                .addLocationRequest(locationRequest).build();
+        SettingsClient client = LocationServices.getSettingsClient(requireActivity());
+        Task<LocationSettingsResponse> task = client
+                .checkLocationSettings(settingsRequest);
+        task.addOnFailureListener((AppCompatActivity) requireActivity(), e -> {
+            int statusCode = ((ApiException) e).getStatusCode();
+            if (statusCode == LocationSettingsStatusCodes.RESOLUTION_REQUIRED) {
+                try {
+                    ResolvableApiException resolvable =
+                            (ResolvableApiException) e;
+                    resolvable.startResolutionForResult
+                            ((AppCompatActivity) requireActivity(),
+                                    1019);
+                } catch (IntentSender.SendIntentException sendEx) {
+                    sendEx.printStackTrace();
+                }
+            }
+        });
+    }
+
 }

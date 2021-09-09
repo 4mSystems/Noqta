@@ -58,15 +58,15 @@ public class OnBoardFragment extends BaseFragment {
         fragmentOnboardBinding.imageSlider.setCurrentPageListener(currentPosition -> {
             if (currentPosition == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
                 fragmentOnboardBinding.skip.setVisibility(View.GONE);
-                fragmentOnboardBinding.appCompatFinish.setVisibility(View.VISIBLE);
-                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
+//                fragmentOnboardBinding.appCompatFinish.setVisibility(View.VISIBLE);
+//                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
             } else {
                 if (currentPosition != 0) {
                     fragmentOnboardBinding.skip.setVisibility(View.VISIBLE);
                 } else
                     fragmentOnboardBinding.skip.setVisibility(View.GONE);
-                fragmentOnboardBinding.appCompatFinish.setVisibility(View.GONE);
-                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.VISIBLE);
+//                fragmentOnboardBinding.appCompatFinish.setVisibility(View.GONE);
+//                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.VISIBLE);
             }
         });
         return fragmentOnboardBinding.getRoot();
@@ -81,9 +81,8 @@ public class OnBoardFragment extends BaseFragment {
                 case Constants.NEXT:
                     if (viewModel.getOnBoardAdapter().pagerList.size() > 0)
                         if (fragmentOnboardBinding.imageSlider.getCurrentPagePosition() == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
-                            fragmentOnboardBinding.skip.setVisibility(View.GONE);
-                            fragmentOnboardBinding.appCompatFinish.setVisibility(View.VISIBLE);
-                            fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
+                            UserHelper.getInstance(context).addIsFirst(false);
+                            MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
                         } else {
                             if (fragmentOnboardBinding.imageSlider.getCurrentPagePosition() != 0) {
                                 fragmentOnboardBinding.skip.setVisibility(View.VISIBLE);

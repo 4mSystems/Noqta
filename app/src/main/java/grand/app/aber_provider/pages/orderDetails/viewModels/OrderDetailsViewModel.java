@@ -41,6 +41,7 @@ public class OrderDetailsViewModel extends BaseViewModel {
     }
 
     public void changeStatus(int status) {
+        setMessage(Constants.SHOW_PROGRESS);
         compositeDisposable.add(postRepository.changeStatus(orderDetailsMain.getId(), status));
     }
 

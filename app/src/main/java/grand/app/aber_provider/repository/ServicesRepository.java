@@ -129,7 +129,7 @@ public class ServicesRepository extends BaseRepository {
                     Constants.REJECT_ORDER, true);
         else
             return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_STATUS, new OrderStatusRequest(orderId, String.valueOf(status)), StatusMessage.class,
-                    Constants.CHANGE_ORDER_STATUS, true);
+                    Constants.CHANGE_ORDER_STATUS, status == 1);
 
     }
 

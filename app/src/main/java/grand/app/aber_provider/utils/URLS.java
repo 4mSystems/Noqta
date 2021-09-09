@@ -42,7 +42,7 @@ public class URLS {
     public static final String GET_SOCIAL = "v1/social_media";
     public static final String PRIVACY = "v1/privacy_policy";
     public static final String REPORT_REASONS = "v1/report_reasons";
-    public static final String CHANGE_PROFILE_PASSWORD = "v1/profile/password";
+    public static final String CHANGE_PROFILE_PASSWORD = "v1/provider/profile/password";
     public static final String BAN_USER = "v1/profile/ban";
     public static final String ABOUT = "v1/about_us";
     public static final String TERMS = "v1/terms_condition";

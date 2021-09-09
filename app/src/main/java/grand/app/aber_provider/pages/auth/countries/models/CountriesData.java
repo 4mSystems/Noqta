@@ -6,9 +6,12 @@ public class CountriesData {
 
     @SerializedName("name")
     private String name;
-    @SerializedName("currency")
-    private String currency;
-
+    @SerializedName("currency_ar")
+    private String currencyAr;
+    @SerializedName("currency_en")
+    private String currencyEn;
+    @SerializedName("currency_ur")
+    private String currencyUr;
     @SerializedName("id")
     private int id;
     private boolean isSelected;
@@ -29,7 +32,15 @@ public class CountriesData {
         return isSelected;
     }
 
-    public String getCurrency() {
-        return currency;
+    public String getCurrencyAr() {
+        return currencyAr;
+    }
+
+    public String getCurrencyEn() {
+        return currencyEn;
+    }
+
+    public String getCurrencyUr() {
+        return currencyUr;
     }
 }

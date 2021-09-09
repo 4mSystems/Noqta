@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
                 android:onClick="@{()-> viewmodel.goBack(context)}"
+                android:rotation="180"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -121,6 +122,7 @@
                 app:hideLineWhenFilled="false"
                 app:itemCount="4"
                 app:itemHeight="70dp"
+                app:itemRadius="@dimen/dp8h"
                 app:itemSpacing="@dimen/dp8w"
                 app:itemWidth="70dp"
                 app:layout_constraintEnd_toEndOf="parent"

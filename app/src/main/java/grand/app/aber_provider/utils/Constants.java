@@ -14,8 +14,8 @@ public class Constants {
     public static final String CITIES = "CITIES";
     public static final String COUNTRIES = "COUNTRIES";
 
-    public final static String REMOVE = "REMOVE";
-    public final static String FACE_BOOK = "FACE_BOOK";
+    public final static int LOCATION_STARTED = 1;
+    public final static int STOP_LOCATION = 2;
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String DELETE = "DELETE";
@@ -27,7 +27,7 @@ public class Constants {
     public static final String GET_CONTACT = "GET_CONTACT";
     public static final int CURRENT = 0;
     public static final int LAST = 1;
-    public static final String COMMENT = "COMMENT";
+    public static final String BACK = "BACK";
 
     public final static String UPDATE_PROFILE = "update_profile";
 
@@ -168,7 +168,7 @@ public class Constants {
     public static final String GET_APP_MONEY = "GET_APP_MONEY";
     // NOTIFICATIONS
     public static final String TYPE = "type";
-    public static final String ORDER_ID = "order_id";
+    public static final String ORDER_ID = "order_service_id";
     public static final String SERVICE_TYPE = "service";
     public static final String ORDER_SERVICE = "order_service";
     //NOTIFICATIONS TYPES

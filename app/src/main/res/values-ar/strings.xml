@@ -183,7 +183,7 @@
     <string name="license_civil_image_hint"> صورة رخصة القيادة</string>
     <string name="accept">قبول الطلب</string>
     <string name="reject">رفض الطلب</string>
-    <string name="oil_liguid">أرقام اللزوجة</string>
+    <string name="oil_liquid">أرقام اللزوجة</string>
     <string name="hidden_color">لون المخفي</string>
     <string name="user_location">تتبع العميل</string>
     <string name="wallet_history_1">تم إضافة</string>
@@ -199,5 +199,7 @@
     <string name="minute">دقيقة</string>
     <string name="service_details"> تفاصيل الخدمة</string>
     <string name="cancel_service">تم إلغاء الخدمة</string>
+    <string name="access_location">تحديت موقعك</string>
+    <string name="location_title">تحديد العنوان</string>
 
 </resources>

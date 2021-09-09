@@ -55,7 +55,7 @@ public class OrderDetailsMain {
     private double emergencyCost;
 
     @SerializedName("subtotal")
-    private int subtotal;
+    private double subtotal;
 
     @SerializedName("sub_services")
     private List<SubServices> subServices;
@@ -149,7 +149,7 @@ public class OrderDetailsMain {
         return deliveryFees;
     }
 
-    public int getSubtotal() {
+    public double getSubtotal() {
         return subtotal;
     }
 

@@ -34,7 +34,7 @@ public class CountriesViewModel extends BaseViewModel {
     }
 
     public void getCities() {
-        compositeDisposable.add(repository.getCities(UserHelper.getInstance(MyApplication.getInstance()).getCountryId()));
+        compositeDisposable.add(repository.getCities(UserHelper.getInstance(MyApplication.getInstance()).getCountriesData().getId()));
     }
 
     public void action(String action) {

@@ -12,18 +12,15 @@ import grand.app.aber_provider.PassingObject;
 import grand.app.aber_provider.R;
 import grand.app.aber_provider.activity.MainActivity;
 import grand.app.aber_provider.base.ParentActivity;
-import grand.app.aber_provider.customViews.actionbar.HomeActionBarView;
 import grand.app.aber_provider.databinding.MenuBinding;
 import grand.app.aber_provider.model.base.Mutable;
 import grand.app.aber_provider.pages.auth.countries.CitiesFragment;
 import grand.app.aber_provider.pages.auth.countries.CountriesFragment;
 import grand.app.aber_provider.pages.home.HomeFragment;
 import grand.app.aber_provider.pages.myOrders.MyServicesOrdersFragment;
-import grand.app.aber_provider.pages.settings.AboutAppFragment;
-import grand.app.aber_provider.pages.settings.ContactUsFragment;
+import grand.app.aber_provider.pages.notifications.NotificationsFragment;
 import grand.app.aber_provider.pages.settings.LangFragment;
 import grand.app.aber_provider.pages.settings.MyAccountSettingsFragment;
-import grand.app.aber_provider.pages.settings.TermsFragment;
 import grand.app.aber_provider.utils.Constants;
 import grand.app.aber_provider.utils.helper.MovementHelper;
 import grand.app.aber_provider.utils.resources.ResourceManager;
@@ -92,6 +89,9 @@ public class NavigationDrawerView extends RelativeLayout {
                     break;
                 case Constants.PREVIOUS:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.LAST), ResourceManager.getString(R.string.previous), MyServicesOrdersFragment.class.getName(), null);
+                    break;
+                case Constants.NOTIFICATIONS:
+                    MovementHelper.startActivity(context, NotificationsFragment.class.getName(), ResourceManager.getString(R.string.notifications), null);
                     break;
 
             }
