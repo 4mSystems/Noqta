@@ -11,8 +11,10 @@ import grand.app.notta.pages.auth.confirmCode.ConfirmCodeFragment;
 import grand.app.notta.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.notta.pages.auth.login.LoginFragment;
 import grand.app.notta.pages.auth.register.RegisterFragment;
+import grand.app.notta.pages.home.HomeFragment;
 import grand.app.notta.pages.onBoard.OnBoardFragment;
 import grand.app.notta.pages.splash.SplashFragment;
+
 @Singleton
 @Component(modules = {ConnectionModule.class, LiveData.class})
 public interface IApplicationComponent {
@@ -33,6 +35,8 @@ public interface IApplicationComponent {
     void inject(ChangePasswordFragment changePasswordFragment);
 
     void inject(RegisterFragment registerFragment);
+
+    void inject(HomeFragment homeFragment);
 
     @Component.Builder
     interface Builder {

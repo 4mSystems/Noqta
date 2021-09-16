@@ -69,7 +69,9 @@
         <entry key="..\:/mostafa elnagar/AberProvider/app/src/main/res/layout/option_dialog.xml" value="0.1680921052631579" />
         <entry key="app/src/main/res/drawable/corner_view_gradient.xml" value="0.20921052631578949" />
         <entry key="app/src/main/res/drawable/corner_view_gray_borde.xml" value="0.20921052631578949" />
+        <entry key="app/src/main/res/drawable/corner_view_gray_border.xml" value="0.20662768031189083" />
         <entry key="app/src/main/res/drawable/corner_view_primary_medium.xml" value="0.20921052631578949" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.20921052631578949" />
         <entry key="app/src/main/res/drawable/tab_bg_normal.xml" value="0.20662768031189083" />
         <entry key="app/src/main/res/drawable/tab_bg_normal_blue.xml" value="0.20662768031189083" />
         <entry key="app/src/main/res/drawable/tab_color_selector.xml" value="0.20921052631578949" />
@@ -79,10 +81,12 @@
         <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_confirm_code.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_onboard.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.19638157894736843" />
+        <entry key="app/src/main/res/layout/item_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_action_bar_home.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/menu.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/option_dialog.xml" value="0.10230263157894737" />
