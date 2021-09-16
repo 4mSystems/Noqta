@@ -4,9 +4,9 @@
 
     <data>
 
-        <variable
-            name="viewModel"
-            type="grand.app.aber_provider.pages.home.viewModels.HomeViewModels" />
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="nottaome.viewModels.HomeViewModels" />-->
 
     </data>
 
@@ -28,11 +28,11 @@
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize">
 
-                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                <grand.app.notta.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_home_bar_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/menuHome"
+                    android:text="Home"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/white"
@@ -52,7 +52,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+                <grand.app.notta.customViews.views.CustomTextViewMedium
                     android:id="@+id/badge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -4,9 +4,9 @@
 
     <data>
 
-        <variable
-            name="viewModel"
-            type="grand.app.aber_provider.pages.home.viewModels.HomeViewModels" />
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="nottaome.viewModels.HomeViewModels" />-->
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

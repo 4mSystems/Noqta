@@ -11,7 +11,7 @@
 
         <variable
             name="baseViewModel"
-            type="grand.app.aber_provider.base.BaseViewModel" />
+            type="grand.app.notta.base.BaseViewModel" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

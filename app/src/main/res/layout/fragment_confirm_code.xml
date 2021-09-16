@@ -10,11 +10,11 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="grand.app.aber_provider.utils.Constants" />
+        <import type="grand.app.notta.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="grand.app.aber_provider.pages.auth.confirmCode.ConfirmViewModel" />
+            type="grand.app.notta.pages.auth.confirmCode.ConfirmViewModel" />
     </data>
 
 
@@ -31,10 +31,21 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/board_header"
+                android:src="@drawable/board_header_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <grand.app.notta.customViews.views.CustomTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4h"
+                android:text="@string/verify_phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/back"
@@ -42,63 +53,34 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
                 android:onClick="@{()-> viewmodel.goBack(context)}"
-                android:rotation="180"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/back" />
 
-            <TextView
-                android:id="@+id/curve"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/dp120h"
-                android:background="@drawable/back_curve_profile"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+            <grand.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_login_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp20h"
-                android:text="@{viewmodel.passingObject.id==1?@string/confirm_header:@string/confirm_account}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/curve" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_login_logo"
-                android:layout_width="@dimen/dp160w"
-                android:layout_height="@dimen/dp100h"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_login_title" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewRegular
-                android:id="@+id/tv_confirm_header_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp40w"
-                android:layout_marginTop="@dimen/dp6h"
-                android:layout_marginEnd="@dimen/dp40w"
-                android:text="@{viewmodel.passingObject.id==1?@string/confirm_header_text:@string/confirm_header_text_forget}"
+                android:layout_marginStart="@dimen/dp25w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp25w"
+                android:text="@string/confirm_header"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#8A98A3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/medium_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_login_logo" />
+                app:layout_constraintTop_toBottomOf="@+id/board_header" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_verify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login_title" />
 
             <com.chaos.view.PinView
                 android:id="@+id/pin_Validate"
@@ -127,26 +109,56 @@
                 app:itemWidth="70dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_header_text"
+                app:layout_constraintTop_toBottomOf="@+id/ic_verify"
                 app:lineWidth="2dp"
                 app:viewType="rectangle" />
+
+            <grand.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_login_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:enabled="false"
+                android:onClick="@{()->viewmodel.resendCode()}"
+                android:text="@string/confirm_resend"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_forget_timer" />
+
+            <grand.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_forget_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25h"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pin_Validate" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButtonNext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp50h"
+                android:layout_marginTop="@dimen/dp25h"
                 android:layout_marginEnd="@dimen/dp12w"
+                android:layout_marginBottom="@dimen/dp12h"
                 android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
                 android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
                 android:onClick="@{()->viewmodel.confirmCode()}"
-                android:text="@string/confirm"
+                android:text="@string/verify"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pin_Validate" />
+                app:layout_constraintTop_toBottomOf="@id/tv_login_forget" />
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"
@@ -161,35 +173,6 @@
                 app:trackColor="@color/white"
                 app:trackThickness="@dimen/dp4h" />
 
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_login_forget"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginBottom="@dimen/dp12h"
-                android:enabled="false"
-                android:onClick="@{()->viewmodel.resendCode()}"
-                android:text="@string/confirm_resend"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_forget_timer" />
-
-            <grand.app.aber_provider.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_forget_timer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp25h"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatButtonNext" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

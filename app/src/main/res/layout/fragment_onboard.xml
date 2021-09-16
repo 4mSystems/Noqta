@@ -6,11 +6,11 @@
 
         <import type="android.view.View" />
 
-        <import type="grand.app.aber_provider.utils.Constants" />
+        <import type="grand.app.notta.utils.Constants" />
 
         <variable
             name="onBoardViewModels"
-            type="grand.app.aber_provider.pages.splash.SplashViewModel" />
+            type="grand.app.notta.pages.splash.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +42,7 @@
             app:sliderScrollTimeInSec="3"
             app:sliderStartAutoCycle="false" />
 
-        <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+        <grand.app.notta.customViews.views.CustomTextViewMedium
             android:id="@+id/skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

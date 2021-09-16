@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.171" />
 
-    <grand.app.aber_provider.customViews.views.CustomTextViewMedium
+    <grand.app.notta.customViews.views.CustomTextViewMedium
         android:id="@+id/tv_board_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_auto_image_slider" />
 
-    <grand.app.aber_provider.customViews.views.CustomTextViewRegular
+    <grand.app.notta.customViews.views.CustomTextViewRegular
         android:id="@+id/tv_board_desc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

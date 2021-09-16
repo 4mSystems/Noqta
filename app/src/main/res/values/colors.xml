@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F7AB00</color>
+    <color name="colorPrimary">#223772</color>
     <color name="colorPrimaryOp">#4DF7AB00</color>
-    <color name="colorPrimaryDark">#F7AB00</color>
-    <color name="colorAccent">#8000D376</color>
+    <color name="colorPrimaryDark">#0A1D4E</color>
+    <color name="colorAccent">#FBB32A</color>
     <color name="colordark">#2E2E2E</color>
     <color name="colordarkOp">#F23C475C</color>
     <color name="app_background">#1A1A1A</color>
@@ -29,6 +29,6 @@
     <color name="account">#717171</color>
     <color name="comment_card_color">#B3F5F5F5</color>
     <color name="reply_input_hint">#918FB7</color>
-    <color name="post_btn">#FEC647</color>
+    <color name="red">#FE4747</color>
 
 </resources>
