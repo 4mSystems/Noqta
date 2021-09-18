@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="grand.app.notta">
+    package="te.app.notta">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -20,7 +20,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="grand.app.notta.base.MyApplication"
+        android:name="te.app.notta.base.MyApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -43,12 +43,12 @@
             android:resource="@color/colorPrimary" />
 
         <activity
-            android:name="grand.app.notta.activity.MainActivity"
+            android:name="te.app.notta.activity.MainActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden" />
 
         <activity
-            android:name="grand.app.notta.activity.BaseActivity"
+            android:name="te.app.notta.activity.BaseActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -61,7 +61,7 @@
         <!--        taamarbota031@gmail.com-->
         <!--        123456taa-->
         <service
-            android:name="grand.app.notta.base.MyFirebaseMessagingService"
+            android:name="te.app.notta.base.MyFirebaseMessagingService"
             android:exported="true"
             tools:ignore="ExportedService">
             <intent-filter>

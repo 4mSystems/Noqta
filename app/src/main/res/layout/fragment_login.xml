@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="grand.app.moon.views.fragments.SplashFragment">
+    tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
 
@@ -10,11 +10,11 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="grand.app.notta.utils.Constants" />
+        <import type="te.app.notta.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="grand.app.notta.pages.auth.login.LoginViewModel" />
+            type="te.app.notta.pages.auth.login.LoginViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -45,7 +45,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/board_header" />
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_login_forget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
                 app:trackColor="@color/white"
                 app:trackThickness="@dimen/dp4h" />
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark" />
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_no_account_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

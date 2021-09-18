@@ -5,15 +5,10 @@
     <color name="colorPrimaryDark">#0A1D4E</color>
     <color name="colorAccent">#FBB32A</color>
     <color name="colordark">#2E2E2E</color>
-    <color name="colordarkOp">#F23C475C</color>
-    <color name="app_background">#1A1A1A</color>
-    <color name="app_base_ground">#FAFAFA</color>
     <color name="overlayBackground">#7f989c9f</color>
     <color name="white">#FFFFFF</color>
-    <color name="home_item">#1B1B1B</color>
     <color name="black">#ff000000</color>
     <color name="black_op">#2E2E2E</color>
-    <color name="dark_grey">#848484</color>
     <color name="zxing_transparent">#00000000</color>
     <color name="bg_grand_call">#fff8701a</color>
     <color name="bg_grand_what">#ffc85711</color>
@@ -21,14 +16,8 @@
     <color name="medium_color">#9C9C9C</color>
     <color name="line_color">#42707070</color>
     <color name="second_line_color">#474747</color>
-    <color name="colorYellow">#FED831</color>
-    <color name="background_gray">#F2F2F2</color>
-    <color name="black_lang">#802E2E2E</color>
-    <color name="left_chat">#4C5264</color>
-    <color name="chat_options">#F5F5F5</color>
-    <color name="account">#717171</color>
-    <color name="comment_card_color">#B3F5F5F5</color>
-    <color name="reply_input_hint">#918FB7</color>
-    <color name="red">#FE4747</color>
+    <color name="red">#B03040</color>
+    <color name="red_chance">#FF2E6E</color>
+    <color name="green">#0ED268</color>
 
 </resources>

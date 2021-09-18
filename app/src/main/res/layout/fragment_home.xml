@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="grand.app.moon.views.fragments.SplashFragment">
+    tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
 
         <variable
             name="viewmodel"
-            type="grand.app.notta.pages.home.viewModels.HomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <grand.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.notta.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_home_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <grand.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.notta.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_home_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
             app:layout_constraintStart_toStartOf="@id/tv_home_desc"
             app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
 
-        <grand.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.notta.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_home_body"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

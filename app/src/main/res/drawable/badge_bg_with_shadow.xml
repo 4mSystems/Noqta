@@ -2,13 +2,13 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item >
         <shape android:shape="oval">
-            <solid android:color="#FEC647" />
+            <solid android:color="@color/overlayBackground" />
             <size android:width="1dp"
                 android:height="1dp" />
         </shape>
     </item>
 
-    <item android:bottom="1dp" android:right="0.5dp">
+    <item android:bottom=".5dp" android:right=".5dp" android:left=".5dp" android:top=".5dp">
         <shape android:shape="oval" >
             <solid android:color="@color/white"/>
             <size android:width="20dp"

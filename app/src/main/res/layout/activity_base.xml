@@ -3,7 +3,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="grand.app.moon.views.activities.BaseActivity">
+    tools:context="te.app.moon.views.activities.BaseActivity">
 
     <data>
 
@@ -11,7 +11,7 @@
 
         <variable
             name="baseViewModel"
-            type="grand.app.notta.base.BaseViewModel" />
+            type="te.app.notta.base.BaseViewModel" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

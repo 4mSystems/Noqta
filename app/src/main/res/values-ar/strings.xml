@@ -81,5 +81,27 @@
     <string name="search_home_hint">Search Group Name or teacher name ?</string>
     <string name="home_body">Noqta Groups , Join Now !</string>
     <string name="join">Join</string>
+    <string name="tasks_body">Noqta Group Tasks , Les Go</string>
+    <string name="shop">Shop</string>
+    <string name="your_point1">You have</string>
+    <string name="your_point2">Points</string>
+    <string name="exchange">Exchage points Now</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="my_groups">My Groups</string>
+    <string name="my_points">My points</string>
+    <string name="my_gifts">My gifts</string>
+    <string name="about_title">About Noqta</string>
+    <string name="about_app">About Noqta</string>
+    <string name="contact_title">Contact us</string>
+    <string name="message_hint">Message</string>
+    <string name="group_desc">About Group</string>
+    <string name="group_info">Groups Basic information</string>
+    <string name="leave">Leave Group</string>
+    <string name="group_members_info">Group Students</string>
+    <string name="show_all">Show All</string>
+    <string name="group_members_tasks">Recent Tasks</string>
+    <string name="finish">Finsh Now</string>
+    <string name="take_chance">Take Chance</string>
 
 </resources>

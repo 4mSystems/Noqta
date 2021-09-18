@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ic_user"
+                android:layout_width="@dimen/dp65w"
+                android:layout_height="@dimen/dp65h"
+                android:layout_margin="@dimen/dp4h"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/dp10h" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_group_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4h"
+                android:text="New car model 2021"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_user"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_desc_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4h"
+                android:text="Just a guy who loves programming. I love to build Awesome Programs and Games"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_user"
+                app:layout_constraintTop_toBottomOf="@+id/tv_group_name" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="ic_user,tv_desc_point" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/colorAccent"
+                android:text="@string/exchange"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/br2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

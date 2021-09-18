@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="grand.app.moon.views.fragments.SplashFragment">
+    tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
 
         <variable
             name="viewmodel"
-            type="grand.app.notta.pages.splash.SplashViewModel" />
+            type="te.app.notta.pages.splash.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

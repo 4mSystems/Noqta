@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="grand.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -29,7 +29,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_group_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 app:layout_constraintStart_toEndOf="@+id/ic_user"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <grand.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_user_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 app:layout_constraintStart_toEndOf="@+id/ic_user"
                 app:layout_constraintTop_toBottomOf="@+id/tv_group_name" />
 
-            <grand.app.notta.customViews.views.CustomTextViewRegular
+            <te.app.notta.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_user_work"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,77 +96,59 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_students"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8w"
-                android:layout_marginBottom="@dimen/dp12h"
                 android:text="96\nStudents"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp10"
-                app:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_tasks"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/br1" />
+                android:textSize="@dimen/sp8"
+                app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_tasks"
-                android:layout_width="0dp"
+                android:id="@+id/btn_groups"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8w"
-                android:layout_marginBottom="@dimen/dp12h"
-                android:text="96\nStudents"
+                android:text="15\ntasks"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp10"
-
-                app:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_requests"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/btn_students"
-                app:layout_constraintTop_toBottomOf="@id/br1" />
+                android:textSize="@dimen/sp8"
+                app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_requests"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8w"
-                android:layout_marginBottom="@dimen/dp12h"
-                android:text="96\nStudents"
+                android:text="96\nRequest"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp10"
-                app:backgroundTint="@color/white"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_join"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/btn_tasks"
-                app:layout_constraintTop_toBottomOf="@id/br1" />
+                android:textSize="@dimen/sp8"
+                app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_join"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8w"
-                android:layout_marginEnd="@dimen/dp8w"
-                android:layout_marginBottom="@dimen/dp12h"
                 android:text="@string/join"
-                app:icon="@drawable/ic_icon_awesome_user_plus"
-                app:iconGravity="textTop"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
+                android:textSize="@dimen/sp8"
                 app:backgroundTint="@color/colorPrimaryDark"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/btn_requests"
-                app:layout_constraintTop_toBottomOf="@id/br1" />
+                app:icon="@drawable/ic_request_waiting"
+                app:iconGravity="textTop" />
 
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join"
+                app:flow_horizontalGap="@dimen/dp6w"
+                app:flow_horizontalStyle="packed"
+                app:flow_verticalGap="@dimen/dp2w"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/br1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

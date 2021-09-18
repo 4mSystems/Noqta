@@ -51,7 +51,7 @@
     <string name="register_header">Please Fill the Registration Form</string>
     <string name="register_name">Name</string>
     <string name="name_hint">Please write your name</string>
-    <string name="register_phone">Mobile number</string>
+    <string name="register_phone">Phone</string>
     <string name="register">Sign up</string>
     <string name="have_account">Already have an account?</string>
     <string name="old_password">Old password</string>
@@ -78,5 +78,27 @@
     <string name="search_home_hint">Search Group Name or teacher name ?</string>
     <string name="home_body"><font fgcolor='#FBB32A'>Noqta </font> Groups , Join Now !</string>
     <string name="join">Join</string>
+    <string name="tasks_body"><font fgcolor='#FBB32A'>Noqta </font> Group Tasks , Les Go</string>
+    <string name="shop">Shop</string>
+    <string name="your_point1">You have</string>
+    <string name="your_point2">Points</string>
+    <string name="exchange">Exchage points Now</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="my_groups">My Groups</string>
+    <string name="my_points">My points</string>
+    <string name="my_gifts">My gifts</string>
+    <string name="about_title">About Noqta</string>
+    <string name="about_app">About Noqta</string>
+    <string name="contact_title">Contact us</string>
+    <string name="message_hint">Message</string>
+    <string name="group_desc"><font fgcolor='#FBB32A'>About </font> Group</string>
+    <string name="group_info"><font fgcolor='#FBB32A'>Group </font> Basic information</string>
+    <string name="leave">Leave Group</string>
+    <string name="group_members_info"><font fgcolor='#FBB32A'>Group </font>Students</string>
+    <string name="show_all"><u>Show All</u></string>
+    <string name="group_members_tasks"><font fgcolor='#FBB32A'>Recent </font> Tasks</string>
+    <string name="finish">Finsh Now</string>
+    <string name="take_chance">Take Chance</string>
 
 </resources>
