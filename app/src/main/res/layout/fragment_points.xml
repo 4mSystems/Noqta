@@ -11,106 +11,124 @@
             type="te.app.notta.pages.home.viewModels.PointsViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/board_header"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dp120h"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_board_home"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <te.app.notta.customViews.views.CustomTextViewMedium
-            android:id="@+id/tv_home_username"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp25h"
-            android:text="@string/shop"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_points"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp12h"
-            app:cardCornerRadius="@dimen/dp8h"
-            app:cardElevation="2dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/board_header">
+            android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/board_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp120h"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_board_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp25h"
+                android:text="@string/shop"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_points"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/board_header">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_gifts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp15h"
-                    android:src="@drawable/ic_gift"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <te.app.notta.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_your_point1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/your_point1"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colordark" />
-
-                <te.app.notta.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_your_point2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="250"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colorAccent" />
-
-                <te.app.notta.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_your_point3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/your_point2"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colordark" />
-
-                <androidx.constraintlayout.helper.widget.Flow
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp8h"
-                    app:constraint_referenced_ids="tv_your_point1,tv_your_point2,tv_your_point3"
-                    app:flow_horizontalGap="4dp"
-                    app:flow_horizontalStyle="packed"
-                    app:flow_maxElementsWrap="3"
-                    app:flow_wrapMode="chain"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ic_gifts" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_gifts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp15h"
+                        android:src="@drawable/ic_gift"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.notta.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_your_point1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_point1"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark" />
+
+                    <te.app.notta.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_your_point2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorAccent" />
+
+                    <te.app.notta.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_your_point3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_point2"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark" />
+
+                    <androidx.constraintlayout.helper.widget.Flow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8h"
+                        app:constraint_referenced_ids="tv_your_point1,tv_your_point2,tv_your_point3"
+                        app:flow_horizontalGap="4dp"
+                        app:flow_horizontalStyle="packed"
+                        app:flow_maxElementsWrap="3"
+                        app:flow_wrapMode="chain"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ic_gifts" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                app:layout_constraintEnd_toEndOf="@id/card_points"
+                app:layout_constraintStart_toStartOf="@id/card_points"
+                app:layout_constraintTop_toBottomOf="@id/card_points"
+                tools:listitem="@layout/item_points" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp12h"
-            app:layout_constraintEnd_toEndOf="@id/card_points"
-            app:layout_constraintStart_toStartOf="@id/card_points"
-            app:layout_constraintTop_toBottomOf="@id/card_points"
-            tools:listitem="@layout/item_points" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp16h"
+            android:contentDescription="@string/app_name"
+            app:backgroundTint="@color/colorAccent"
+            app:borderWidth="2dp"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:rippleColor="@color/overlayBackground"
+            app:srcCompat="@drawable/ic_add_gift"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

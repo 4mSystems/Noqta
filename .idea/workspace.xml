@@ -22,213 +22,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ef5e3ba-ded4-4e80-9f2a-86306ddaf051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/IApplicationComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/register/EditProfileFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/GroupDetailsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/MyGroupsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/PointsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/TasksFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/viewModels/ItemHomeViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/viewModels/PointsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/AboutFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/ContactUsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/MoreFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/ProfileFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/models/ContactUsRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/viewModels/SettingsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_logo_colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_logo_colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_logo_colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_logo_colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_logo_colored.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_about.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_contact.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_edit_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_exit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_gift.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_groups.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icon_awesome_check_double.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icon_ionic_md_time.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_icon_material_location_on.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_points.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_rate.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_request_waiting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_terms.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_group_details.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_more.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_groups.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_points.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_hor_member.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_more.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_points.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_recent_task.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/views/IncrementalView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/addAnswer/AddAnswerFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/addAnswer/viewModels/AddAnswerViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/GroupMembersFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/settings/LangFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/teacher/AddGiftFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/teacher/AddGroupFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/teacher/StudentRequestsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/teacher/viewModels/AddGroupViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_check_accent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_gift.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_cloud_upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_kuwait.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lang.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_remove.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_requets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_united_states.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_answer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_gift.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_group.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_group_members.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lang.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_requests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/incremental_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_member.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_student_request.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBinderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBinderMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/BR.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/BR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/DataBinderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/DataBinderMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/base/DaggerIApplicationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/base/DaggerIApplicationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/base/LiveData_GetMutableLiveDataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/base/LiveData_GetMutableLiveDataFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/connection/ConnectionHelper_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/connection/ConnectionHelper_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/connection/ConnectionHelper_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/connection/ConnectionHelper_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/connection/ConnectionModule_WebServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/connection/ConnectionModule_WebServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/ActivityBaseBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/ActivityBaseBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/ActivityMainBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/ActivityMainBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentChangePasswordBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentChangePasswordBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentConfirmCodeBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentConfirmCodeBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentForgetPasswordBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentForgetPasswordBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentLoginBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentLoginBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentOnboardBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentOnboardBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentRegisterBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentRegisterBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/FragmentSplashBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/FragmentSplashBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/LayoutActionBarBackBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/LayoutActionBarBackBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/LayoutActionBarHomeBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/LayoutActionBarHomeBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/LayoutGrandBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/LayoutGrandBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/databinding/MenuBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/databinding/MenuBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/generated/callback/OnClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/generated/callback/OnClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/changePassword/ChangePasswordFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/changePassword/ChangePasswordFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/changePassword/ChangePasswordViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/changePassword/ChangePasswordViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/changePassword/ChangePasswordViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/changePassword/ChangePasswordViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/confirmCode/ConfirmCodeFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/confirmCode/ConfirmCodeFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/confirmCode/ConfirmViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/confirmCode/ConfirmViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/confirmCode/ConfirmViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/confirmCode/ConfirmViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/login/LoginFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/login/LoginFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/login/LoginViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/login/LoginViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/login/LoginViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/login/LoginViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/register/RegisterFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/register/RegisterFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/register/RegisterViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/register/RegisterViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/auth/register/RegisterViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/auth/register/RegisterViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/onBoard/OnBoardFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/onBoard/OnBoardFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/splash/SplashFragment_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/splash/SplashFragment_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/splash/SplashViewModel_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/splash/SplashViewModel_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/pages/splash/SplashViewModel_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/pages/splash/SplashViewModel_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/repository/AuthRepository_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/repository/AuthRepository_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/repository/AuthRepository_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/repository/AuthRepository_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/repository/BaseRepository_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/repository/BaseRepository_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/repository/ServiceRepository_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/repository/ServiceRepository_Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/notta/repository/ServiceRepository_MembersInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/te/app/notta/repository/ServiceRepository_MembersInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/grand/app/notta/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/te/app/notta/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/grand/app/structure/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/te/app/structure/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/PassingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/PassingObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/activity/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/ApplicationBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/ApplicationBinding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/ApplicationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/ApplicationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/BaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/BaseFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/BaseViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/BaseViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/ConnectivityReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/ConnectivityReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/IApplicationComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/LiveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/LiveData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/base/ParentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/ParentActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/connection/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/connection/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/connection/ConnectionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/connection/ConnectionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/connection/ConnectionListenerInterFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/connection/ConnectionListenerInterFace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/connection/ConnectionModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/connection/ConnectionModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/connection/FileObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/connection/FileObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/actionbar/BackActionBarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/actionbar/BackActionBarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/actionbar/HomeActionBarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/actionbar/HomeActionBarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/actionbar/MenuActionBarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/actionbar/MenuActionBarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/grandDialog/GrandImageDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/grandDialog/GrandImageDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/views/CustomTextViewMedium.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/views/CustomTextViewMedium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/views/CustomTextViewRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/views/CustomTextViewRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/views/MenuViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/views/MenuViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/customViews/views/NavigationDrawerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/customViews/views/NavigationDrawerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/Links.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/Links.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/Meta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/Meta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/PaginateMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/PaginateMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/RateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/RateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/base/Mutable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/base/Mutable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/model/base/StatusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/model/base/StatusMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/changePassword/ChangePasswordFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/changePassword/ChangePasswordFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/changePassword/ChangePasswordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/changePassword/ChangePasswordViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/confirmCode/ConfirmCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/confirmCode/ConfirmCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/confirmCode/ConfirmViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/confirmCode/ConfirmViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/forgetPassword/ForgetPasswordViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/login/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/login/LoginFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/login/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/login/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/ChangePasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/ChangePasswordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/ConfirmCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/ConfirmCodeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/ForgetPasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/ForgetPasswordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/models/UsersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/models/UsersResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/register/RegisterFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/register/RegisterFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/auth/register/RegisterViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/auth/register/RegisterViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/home/viewModels/HomeViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/home/viewModels/HomeViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/home/viewModels/ItemHomeViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/onBoard/IntroItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/onBoard/IntroItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/onBoard/OnBoardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/onBoard/OnBoardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/onBoard/OnBoardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/onBoard/OnBoardFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/onBoard/models/BoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/onBoard/models/BoardResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/onBoard/models/OnBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/onBoard/models/OnBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/splash/SplashFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/splash/SplashFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/pages/splash/SplashViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/splash/SplashViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/repository/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/repository/AuthRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/repository/ServiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/PopUp/PopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/PopUp/PopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/PopUp/PopUpInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/PopUp/PopUpInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/PopUp/PopUpMenuHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/PopUp/PopUpMenuHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/URLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/URLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/helper/AppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/helper/AppHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/helper/LauncherHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/helper/LauncherHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/helper/LauncherInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/helper/LauncherInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/helper/MovementHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/helper/MovementHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/images/ImageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/images/ImageConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/images/PhotoFullPopupWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/images/PhotoFullPopupWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/resources/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/resources/ResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/services/RealTimeReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/services/RealTimeReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/session/LanguagesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/session/LanguagesHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/session/MyContextWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/session/MyContextWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/session/SharedPreferenceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/session/SharedPreferenceHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/session/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/session/UserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/timer/TimePickerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/timer/TimePickerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/upload/FileOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/upload/FileOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/upload/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/upload/FileUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/notta/utils/validation/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/utils/validation/Validate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/badge_bg_with_shadow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/badge_bg_with_shadow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_change_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_change_password.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_confirm_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_confirm_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_forget_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_forget_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/IApplicationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/base/IApplicationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/splash/SplashFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/splash/SplashFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_group_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_group_details.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_onboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_onboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_points.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_points.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_action_bar_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_action_bar_back.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_action_bar_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_action_bar_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/onboard_slider_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/onboard_slider_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_points.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_points.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/grand/app/structure/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/te/app/structure/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,6 +130,7 @@
     <property name="SelectDeploymentTargetsDialog.selectedDevices" value="GBT4C19302004296&#10;9007925a" />
     <property name="WORKMANAGER_INSPECTOR_NOTIFICATION_DISMISSED" value="true" />
     <property name="android-custom-view/home/elnagar/StudioProjects/aberprovider/app/src/main/java/grand/app/aber_provider/customViews/views/NavigationDrawerView.java_SELECTED" value="NavigationDrawerView" />
+    <property name="android-custom-view/home/elnagar/StudioProjects/aberprovider/app/src/main/java/te/app/notta/customViews/views/IncrementalView.java_SELECTED" value="IncrementalView" />
     <property name="android-custom-viewC:/Users/MAymanM/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.3.0/45a346a05e7ff27a01c59452379c5939cbb53c03/appcompat-1.3.0-sources.jar!/androidx/appcompat/widget/Toolbar.java_SELECTED" value="Toolbar" />
     <property name="android-custom-viewC:/Users/MAymanM/AppData/Local/Android/Sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="TextView" />
     <property name="android-custom-viewF:/mostafa elnagar/AberProvider/app/src/main/java/grand/app/aber_provider/customViews/actionbar/BackActionBarView.java_SELECTED" value="BackActionBarView" />
@@ -306,7 +146,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
     <property name="multi-representation-previewC:/Users/MAymanM/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.3.0/45a346a05e7ff27a01c59452379c5939cbb53c03/appcompat-1.3.0-sources.jar!/androidx/appcompat/widget/Toolbar.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/MAymanM/AppData/Local/Android/Sdk/sources/android-30/android/widget/TextView.java_selected" value="Custom views" />
     <property name="multi-representation-previewF:/mostafa elnagar/AberProvider/app/src/main/java/grand/app/aber_provider/customViews/menu/NavigationDrawerView.java_selected" value="Custom views" />
@@ -324,11 +164,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/te/app/notta/pages/addAnswer" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/grand/app/aber_provider/pages" />
-      <recent name="F:\mostafa elnagar\AberProvider\app\src\main\res\layout" />
-      <recent name="F:\mostafa elnagar\AberProvider\app\src\main\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\mostafa elnagar\AberProvider\app\src\main\res\drawable" />
@@ -340,11 +180,11 @@
       <recent name="grand.app.aber_user.pages.services" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="te.app.notta.pages.home" />
-      <recent name="te.app.notta.pages.settings.models" />
       <recent name="te.app.notta.pages.settings" />
-      <recent name="grand.app.notta.pages.home" />
-      <recent name="grand.app.notta.pages.settings" />
+      <recent name="te.app.notta.pages.teacher" />
+      <recent name="te.app.notta.pages.teacher.viewModels" />
+      <recent name="te.app.notta.pages.home" />
+      <recent name="te.app.notta.pages.addAnswer" />
     </key>
   </component>
   <component name="RunManager">

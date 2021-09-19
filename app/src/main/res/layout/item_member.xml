@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/tv_member"
+            android:layout_width="@dimen/dp60w"
+            android:layout_height="@dimen/dp60h"
+            android:layout_margin="@dimen/dp4h"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/dp8h" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/user_btn"
+            android:layout_width="@dimen/dp27w"
+            android:layout_height="@dimen/dp27h"
+            android:layout_marginTop="@dimen/dp50h"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tv_member"
+            app:layout_constraintStart_toStartOf="@id/tv_member"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.notta.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginTop="@dimen/dp8h"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:text="Mostafa Elnagar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_member"
+            app:layout_constraintTop_toTopOf="@id/tv_member" />
+
+        <te.app.notta.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_user_work"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginTop="@dimen/dp4h"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Senior Software Developer"
+            android:textAlignment="viewStart"
+            android:textColor="@color/medium_color"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_member"
+            app:layout_constraintTop_toBottomOf="@+id/tv_teacher_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp10h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/user_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

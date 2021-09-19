@@ -103,5 +103,35 @@
     <string name="group_members_tasks">Recent Tasks</string>
     <string name="finish">Finsh Now</string>
     <string name="take_chance">Take Chance</string>
+    <string name="add_answer">Answer Task</string>
+    <string name="task_answer">Task Answer</string>
+    <string name="task_answer_hint">Text Answer</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="upload_images_hint">Please Upload answer images that the task required and shown by the teacher</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="upload_video_hint">Please Upload answer video that the task required and shown by the teacher</string>
+    <string name="send_answer">Send answer Now</string>
+    <string name="group_student">Group Student</string>
+    <string name="specialist">Specialist</string>
+    <string name="group_name">Gruop Name</string>
+    <string name="group_description">Group Description</string>
+    <string name="group_students_number">Number of students</string>
+    <string name="group_tasks_number">Number of Tasks</string>
+    <string name="group_date">Date of Group</string>
+    <string name="group_student_mention">Mention Students for Join Group</string>
+    <string name="create_group">Create Group</string>
+    <string name="create_gift">Add Gift</string>
+    <string name="gift_name">Gift Name</string>
+    <string name="gift_description">Gift Desciption</string>
+    <string name="gift_points_number">Number of Points</string>
+    <string name="gift_image">Gift Image</string>
+    <string name="my_requests">My Requests</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="change_lang">Change Language</string>
+    <string name="change_lang_page">Change Language</string>
+    <string name="change_lang_body">Select the preferred language to use in Noqta application , we work in several languages</string>
+    <string name="arabic">عربي</string>
+    <string name="english">English</string>
 
 </resources>

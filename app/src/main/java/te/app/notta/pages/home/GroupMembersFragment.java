@@ -1,6 +1,5 @@
-package te.app.notta.pages.splash;
+package te.app.notta.pages.home;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,42 +7,37 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-
-import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.notta.R;
 import te.app.notta.base.BaseFragment;
 import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
+import te.app.notta.databinding.FragmentGroupMembersBinding;
 import te.app.notta.model.base.Mutable;
-import te.app.notta.R;
-import te.app.notta.databinding.FragmentSplashBinding;
-import te.app.notta.pages.addAnswer.AddAnswerFragment;
 import te.app.notta.pages.auth.login.LoginFragment;
+import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.utils.helper.MovementHelper;
 
-public class SplashFragment extends BaseFragment {
-    private Context context;
-    FragmentSplashBinding fragmentSplashBinding;
+public class GroupMembersFragment extends BaseFragment {
+    FragmentGroupMembersBinding tasksBinding;
     @Inject
-    SplashViewModel viewModel;
+    HomeViewModel viewModel;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragmentSplashBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        tasksBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_group_members, container, false);
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        fragmentSplashBinding.setViewmodel(viewModel);
+        tasksBinding.setViewmodel(viewModel);
         setEvent();
-        viewModel.runSplash();
-        return fragmentSplashBinding.getRoot();
+        return tasksBinding.getRoot();
     }
 
     private void setEvent() {
-        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
 //            if (((Mutable) o).message.equals(Constants.HOME)) {
@@ -52,7 +46,7 @@ public class SplashFragment extends BaseFragment {
 //                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
 //                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
 //                } else {
-            MovementHelper.startActivityBase(requireActivity(), AddAnswerFragment.class.getName(), null, null);
+            MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
 //                }
 //            }
         });
@@ -64,9 +58,4 @@ public class SplashFragment extends BaseFragment {
 //        viewModel.repository.setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
-    }
 }

@@ -141,11 +141,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp8w"
+                android:layout_marginStart="@dimen/dp8w"
                 app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join"
                 app:flow_horizontalGap="@dimen/dp6w"
                 app:flow_horizontalStyle="packed"
                 app:flow_verticalGap="@dimen/dp2w"
-                app:flow_wrapMode="chain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/br1" />
