@@ -3,8 +3,8 @@ package te.app.notta.pages.auth.confirmCode;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import te.app.notta.repository.AuthRepository;
 import javax.inject.Provider;
+import te.app.notta.repository.AuthRepository;
 
 @SuppressWarnings({
     "unchecked",

@@ -25,7 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/board_header"
                 android:layout_width="0dp"
@@ -192,11 +191,12 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp15w"
                 android:hint="@string/certificates"
+                android:visibility="@{viewmodel.request.type.equals(`2`)?View.VISIBLE:View.GONE}"
                 app:boxCornerRadiusBottomEnd="@dimen/dp27h"
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
-                app:error="@{viewmodel.request.emailError}"
+                app:error="@{viewmodel.request.fileError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -206,8 +206,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_upload"
-                    android:inputType="textEmailAddress"
-                    android:text="@={viewmodel.request.email}"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
+                    android:text="@={viewmodel.request.file}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -221,21 +223,25 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp15w"
                 android:hint="@string/specialist"
+                android:visibility="@{viewmodel.request.type.equals(`2`)?View.VISIBLE:View.GONE}"
                 app:boxCornerRadiusBottomEnd="@dimen/dp27h"
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
-                app:error="@{viewmodel.request.emailError}"
+                app:error="@{viewmodel.request.specialError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_certifcate">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/specialist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:inputType="text"
-                    android:text="@={viewmodel.request.email}"
+                    android:onClick="@{()->viewmodel.action(Constants.POP)}"
+                    android:text="@={viewmodel.request.special}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -253,7 +259,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
-                app:error="@{viewmodel.request.confirmPasswordError}"
+                app:error="@{viewmodel.request.passwordError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -264,7 +270,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:text="@={viewmodel.request.confirmPassword}"
+                    android:text="@={viewmodel.request.password}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -333,7 +339,7 @@
                 android:id="@+id/login_no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{()-> viewmodel.register()}"
+                android:onClick="@{()-> viewmodel.goBack(context)}"
                 android:text="@string/have_account"
                 android:textAlignment="viewEnd"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -343,7 +349,7 @@
                 android:id="@+id/login_no_account_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{()-> viewmodel.register()}"
+                android:onClick="@{()-> viewmodel.goBack(context)}"
                 android:text="@string/login_header"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

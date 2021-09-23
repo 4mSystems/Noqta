@@ -121,16 +121,5 @@ public class UserHelper {
         return sharedPreferences.getString("jwt", null);
     }
 
-    public void addAccountType(String type) {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("type", type);
-        editor.apply();
-    }
-
-    public String getAccountType() {
-        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("type", "");
-    }
 
 }

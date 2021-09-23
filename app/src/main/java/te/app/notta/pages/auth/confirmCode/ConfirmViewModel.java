@@ -28,8 +28,7 @@ public class ConfirmViewModel extends BaseViewModel {
     }
 
     public void confirmCode() {
-        getRequest().setPhone(getPassingObject().getObject());
-        getRequest().setType(getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER ? "verify" : "reset");
+        getRequest().setEmail(getPassingObject().getObject());
         if (request.isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             compositeDisposable.add(repository.confirmCode(request));
@@ -38,7 +37,7 @@ public class ConfirmViewModel extends BaseViewModel {
 
     public void resendCode() {
         setMessage(Constants.SHOW_PROGRESS);
-        compositeDisposable.add(repository.forgetPassword(new ForgetPasswordRequest(getPassingObject().getObject(),getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER ? "verify" : "reset")));
+        compositeDisposable.add(repository.forgetPassword(new ForgetPasswordRequest(getPassingObject().getObject())));
     }
 
     private void unSubscribeFromObservable() {

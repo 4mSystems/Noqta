@@ -7,10 +7,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class StatusMessage {
 
-    @SerializedName("message")
+    @SerializedName("msg")
     @Expose
     public String mMessage;
-    @SerializedName("code")
+    @SerializedName("status")
     @Expose
     public int mStatus;
 

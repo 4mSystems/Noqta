@@ -17,6 +17,7 @@ import te.app.notta.pages.auth.models.ConfirmCodeRequest;
 import te.app.notta.pages.auth.models.ForgetPasswordRequest;
 import te.app.notta.pages.auth.models.LoginRequest;
 import te.app.notta.pages.auth.models.RegisterRequest;
+import te.app.notta.pages.auth.models.SpecialistResponse;
 import te.app.notta.pages.auth.models.UsersResponse;
 import te.app.notta.pages.onBoard.models.BoardResponse;
 import te.app.notta.utils.Constants;
@@ -58,10 +59,10 @@ public class AuthRepository extends BaseRepository {
 
     public Disposable register(RegisterRequest request, List<FileObject> fileObjects) {
         if (fileObjects.size() > 0)
-            return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, UsersResponse.class,
+            return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
                     Constants.REGISTER, false);
         else
-            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, UsersResponse.class,
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
                     Constants.REGISTER, false);
     }
 
@@ -96,6 +97,11 @@ public class AuthRepository extends BaseRepository {
     public Disposable changeProfilePassword(RegisterRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PROFILE_PASSWORD, request, StatusMessage.class,
                 Constants.CHANGE_PASSWORD, false);
+    }
+
+    public Disposable getSpecialist() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SPECIALIST, new Object(), SpecialistResponse.class,
+                Constants.SPECIALIST, true);
     }
 
 }

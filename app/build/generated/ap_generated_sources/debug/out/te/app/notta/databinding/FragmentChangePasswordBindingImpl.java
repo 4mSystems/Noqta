@@ -14,33 +14,34 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 11);
-        sViewsWithIds.put(R.id.curve, 12);
-        sViewsWithIds.put(R.id.tv_change_header_text, 13);
+        sViewsWithIds.put(R.id.board_header, 10);
+        sViewsWithIds.put(R.id.ic_verify, 11);
+        sViewsWithIds.put(R.id.tv_login_title, 12);
+        sViewsWithIds.put(R.id.tv_login_title1, 13);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final com.google.android.material.textfield.TextInputEditText mboundView4;
+    private final com.google.android.material.textfield.TextInputEditText mboundView3;
     @NonNull
-    private final com.google.android.material.textfield.TextInputEditText mboundView6;
+    private final com.google.android.material.textfield.TextInputEditText mboundView5;
     @NonNull
-    private final com.google.android.material.textfield.TextInputEditText mboundView8;
+    private final com.google.android.material.textfield.TextInputEditText mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback13;
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.oldPassword
             //         is viewmodel.request.setOldPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -72,12 +73,12 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView6androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView5androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.password
             //         is viewmodel.request.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView6);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView5);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -109,12 +110,12 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView8androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView7androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.confirmPassword
             //         is viewmodel.request.setConfirmPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView8);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView7);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -152,16 +153,16 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     }
     private FragmentChangePasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 4
-            , (androidx.appcompat.widget.AppCompatButton) bindings[9]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[8]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
-            , (android.widget.TextView) bindings[12]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[10]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[4]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[2]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[9]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             );
         this.appCompatButtonNext.setTag(null);
         this.back.setTag(null);
@@ -170,18 +171,17 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.inputOldPassword.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
-        this.mboundView4.setTag(null);
-        this.mboundView6 = (com.google.android.material.textfield.TextInputEditText) bindings[6];
-        this.mboundView6.setTag(null);
-        this.mboundView8 = (com.google.android.material.textfield.TextInputEditText) bindings[8];
-        this.mboundView8.setTag(null);
+        this.mboundView3 = (com.google.android.material.textfield.TextInputEditText) bindings[3];
+        this.mboundView3.setTag(null);
+        this.mboundView5 = (com.google.android.material.textfield.TextInputEditText) bindings[5];
+        this.mboundView5.setTag(null);
+        this.mboundView7 = (com.google.android.material.textfield.TextInputEditText) bindings[7];
+        this.mboundView7.setTag(null);
         this.progress.setTag(null);
-        this.tvLoginTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -295,7 +295,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestOldError = null;
-        java.lang.String viewmodelUserDataJavaLangObjectNullTvLoginTitleAndroidStringChangeHeaderTvLoginTitleAndroidStringChangePassword = null;
         java.lang.String viewmodelMessage = null;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelRequestPasswordErrorGet = null;
@@ -391,10 +390,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0x38L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x200L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x100L;
                     }
                 }
 
@@ -403,10 +402,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
                 if((dirtyFlags & 0x38L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x80000L;
+                            dirtyFlags |= 0x20000L;
                     }
                     else {
-                            dirtyFlags |= 0x40000L;
+                            dirtyFlags |= 0x10000L;
                     }
                 }
             }
@@ -422,32 +421,28 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                     viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
                 if((dirtyFlags & 0x28L) != 0) {
                     if(viewmodelUserDataJavaLangObjectNull) {
-                            dirtyFlags |= 0x80L;
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                     }
                     else {
-                            dirtyFlags |= 0x40L;
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                     }
                 }
 
 
-                    // read viewmodel.userData != null ? @android:string/change_header : @android:string/change_password
-                    viewmodelUserDataJavaLangObjectNullTvLoginTitleAndroidStringChangeHeaderTvLoginTitleAndroidStringChangePassword = ((viewmodelUserDataJavaLangObjectNull) ? (tvLoginTitle.getResources().getString(R.string.change_header)) : (tvLoginTitle.getResources().getString(R.string.change_password)));
                     // read viewmodel.userData != null ? View.VISIBLE : View.GONE
                     viewmodelUserDataJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelUserDataJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x400L) != 0) {
+        if ((dirtyFlags & 0x100L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
                     viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.notta.utils.Constants.HIDE_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x80000L) != 0) {
+        if ((dirtyFlags & 0x20000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
@@ -463,20 +458,20 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
             if((dirtyFlags & 0x38L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
-                        dirtyFlags |= 0x200L;
-                        dirtyFlags |= 0x2000L;
+                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x800L;
                 }
                 else {
-                        dirtyFlags |= 0x100L;
-                        dirtyFlags |= 0x1000L;
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x400L;
                 }
             }
             if((dirtyFlags & 0x38L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x20000L;
+                        dirtyFlags |= 0x8000L;
                 }
                 else {
-                        dirtyFlags |= 0x10000L;
+                        dirtyFlags |= 0x4000L;
                 }
             }
 
@@ -499,11 +494,11 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback15);
-            this.back.setOnClickListener(mCallback14);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
+            this.appCompatButtonNext.setOnClickListener(mCallback14);
+            this.back.setOnClickListener(mCallback13);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x29L) != 0) {
             // api target 1
@@ -519,10 +514,9 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             // api target 1
 
             this.inputOldPassword.setVisibility(viewmodelUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelRequestOldPassword);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelRequestPassword);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelRequestConfirmPassword);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvLoginTitle, viewmodelUserDataJavaLangObjectNullTvLoginTitleAndroidStringChangeHeaderTvLoginTitleAndroidStringChangePassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelRequestOldPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewmodelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewmodelRequestConfirmPassword);
         }
         if ((dirtyFlags & 0x2aL) != 0) {
             // api target 1
@@ -534,23 +528,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.submit();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -569,6 +546,23 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.submit();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -580,20 +574,18 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         flag 3 (0x4L): viewmodel
         flag 4 (0x5L): viewmodel.message
         flag 5 (0x6L): null
-        flag 6 (0x7L): viewmodel.userData != null ? @android:string/change_header : @android:string/change_password
-        flag 7 (0x8L): viewmodel.userData != null ? @android:string/change_header : @android:string/change_password
-        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 14 (0xfL): viewmodel.userData != null ? View.VISIBLE : View.GONE
-        flag 15 (0x10L): viewmodel.userData != null ? View.VISIBLE : View.GONE
-        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 12 (0xdL): viewmodel.userData != null ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.userData != null ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

@@ -12,6 +12,7 @@ import te.app.notta.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.notta.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.notta.pages.auth.login.LoginFragment;
 import te.app.notta.pages.auth.register.RegisterFragment;
+import te.app.notta.pages.home.GroupDetailsFragment;
 import te.app.notta.pages.home.GroupMembersFragment;
 import te.app.notta.pages.home.HomeFragment;
 import te.app.notta.pages.home.MyGroupsFragment;
@@ -79,6 +80,7 @@ public interface IApplicationComponent {
     void inject(StudentRequestsFragment studentRequestsFragment);
 
     void inject(LangFragment langFragment);
+    void inject(GroupDetailsFragment groupDetailsFragment);
 
     @Component.Builder
     interface Builder {

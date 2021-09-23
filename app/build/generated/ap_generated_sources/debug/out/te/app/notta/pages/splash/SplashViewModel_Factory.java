@@ -2,8 +2,8 @@
 package te.app.notta.pages.splash;
 
 import dagger.internal.Factory;
-import te.app.notta.repository.AuthRepository;
 import javax.inject.Provider;
+import te.app.notta.repository.AuthRepository;
 
 @SuppressWarnings({
     "unchecked",

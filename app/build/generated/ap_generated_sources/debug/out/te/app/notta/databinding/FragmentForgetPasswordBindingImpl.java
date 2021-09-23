@@ -14,12 +14,12 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 6);
-        sViewsWithIds.put(R.id.curve, 7);
-        sViewsWithIds.put(R.id.tv_login_title, 8);
-        sViewsWithIds.put(R.id.tv_login_title1, 9);
-        sViewsWithIds.put(R.id.tv_login_header_number, 10);
-        sViewsWithIds.put(R.id.input_phone, 11);
+        sViewsWithIds.put(R.id.board_header, 5);
+        sViewsWithIds.put(R.id.ic_verify, 6);
+        sViewsWithIds.put(R.id.tv_login_title, 7);
+        sViewsWithIds.put(R.id.tv_login_title1, 8);
+        sViewsWithIds.put(R.id.tv_login_header_number, 9);
+        sViewsWithIds.put(R.id.input_phone, 10);
     }
     // views
     @NonNull
@@ -27,8 +27,6 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     @NonNull
     private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback13;
     @Nullable
     private final android.view.View.OnClickListener mCallback11;
     @Nullable
@@ -39,16 +37,16 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.phone
-            //         is viewmodel.request.setPhone((java.lang.String) callbackArg_0)
+            // Inverse of viewmodel.request.email
+            //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.request.email
+            java.lang.String viewmodelRequestEmail = null;
             // viewmodel.request
             te.app.notta.pages.auth.models.ForgetPasswordRequest viewmodelRequest = null;
-            // viewmodel.request.phone
-            java.lang.String viewmodelRequestPhone = null;
             // viewmodel
             te.app.notta.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
@@ -68,27 +66,26 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
 
-                    viewmodelRequest.setPhone(((java.lang.String) (callbackArg_0)));
+                    viewmodelRequest.setEmail(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
     };
 
     public FragmentForgetPasswordBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private FragmentForgetPasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatButton) bindings[3]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
-            , (android.widget.TextView) bindings[7]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[10]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[5]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[10]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[8]
-            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[7]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[8]
             );
         this.appCompatButtonNext.setTag(null);
         this.back.setTag(null);
@@ -97,10 +94,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.mboundView2 = (androidx.appcompat.widget.AppCompatEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.progress.setTag(null);
-        this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         mCallback12 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
@@ -178,10 +173,10 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
             mDirtyFlags = 0;
         }
         te.app.notta.pages.auth.models.ForgetPasswordRequest viewmodelRequest = null;
-        java.lang.String viewmodelRequestPhone = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
+        java.lang.String viewmodelRequestEmail = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         java.lang.String viewmodelMessage = null;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
@@ -203,8 +198,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
                     if (viewmodelRequest != null) {
-                        // read viewmodel.request.phone
-                        viewmodelRequestPhone = viewmodelRequest.getPhone();
+                        // read viewmodel.request.email
+                        viewmodelRequestEmail = viewmodelRequest.getEmail();
                     }
             }
 
@@ -301,36 +296,17 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
             this.appCompatButtonNext.setOnClickListener(mCallback12);
             this.back.setOnClickListener(mCallback11);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelRequestPhone);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelRequestEmail);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null

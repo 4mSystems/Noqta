@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="grand.app.notta"
+3    package="te.app.notta"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -55,8 +55,8 @@
 25
 26    <application
 26-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:22:5-72:19
-27        android:name="grand.app.notta.base.MyApplication"
-27-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:23:9-58
+27        android:name="te.app.notta.base.MyApplication"
+27-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:23:9-55
 28        android:allowBackup="false"
 28-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:24:9-36
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -103,16 +103,16 @@
 51
 52        <activity
 52-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:45:9-48:57
-53            android:name="grand.app.notta.activity.MainActivity"
-53-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:46:13-65
+53            android:name="te.app.notta.activity.MainActivity"
+53-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:46:13-62
 54            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
 54-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:47:13-96
 55            android:windowSoftInputMode="stateHidden" />
 55-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:48:13-54
 56        <activity
 56-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:50:9-60:20
-57            android:name="grand.app.notta.activity.BaseActivity"
-57-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:51:13-65
+57            android:name="te.app.notta.activity.BaseActivity"
+57-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:51:13-62
 58            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
 58-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:52:13-96
 59            android:windowSoftInputMode="stateHidden" >
@@ -135,8 +135,8 @@
 68        <!-- 123456taa -->
 69        <service
 69-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:63:9-70:19
-70            android:name="grand.app.notta.base.MyFirebaseMessagingService"
-70-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:64:13-75
+70            android:name="te.app.notta.base.MyFirebaseMessagingService"
+70-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:64:13-72
 71            android:exported="true" >
 71-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:65:13-36
 72            <intent-filter>
@@ -270,7 +270,7 @@
 144-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8225bc1eb9d6361acfbc29c28478e345/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
 145            android:name="com.google.firebase.provider.FirebaseInitProvider"
 145-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8225bc1eb9d6361acfbc29c28478e345/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
-146            android:authorities="grand.app.notta.firebaseinitprovider"
+146            android:authorities="te.app.notta.firebaseinitprovider"
 146-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8225bc1eb9d6361acfbc29c28478e345/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
 147            android:directBootAware="true"
 147-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8225bc1eb9d6361acfbc29c28478e345/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
@@ -292,7 +292,7 @@
 156-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/92e1800c2dc48ba529c96c908f4a03e0/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 157            android:name="com.squareup.picasso.PicassoProvider"
 157-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/92e1800c2dc48ba529c96c908f4a03e0/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
-158            android:authorities="grand.app.notta.com.squareup.picasso"
+158            android:authorities="te.app.notta.com.squareup.picasso"
 158-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/92e1800c2dc48ba529c96c908f4a03e0/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 159            android:exported="false" />
 159-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/92e1800c2dc48ba529c96c908f4a03e0/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
@@ -315,7 +315,7 @@
 169-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/cc1b78387f68e50f131a6131e4d6d2b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 170            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
 170-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/cc1b78387f68e50f131a6131e4d6d2b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-171            android:authorities="grand.app.notta.lifecycle-process"
+171            android:authorities="te.app.notta.lifecycle-process"
 171-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/cc1b78387f68e50f131a6131e4d6d2b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
 172            android:exported="false"
 172-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/cc1b78387f68e50f131a6131e4d6d2b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37

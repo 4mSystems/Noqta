@@ -24,7 +24,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="@dimen/dp20w"
             android:layout_marginEnd="@dimen/dp20w"
-            app:layout_constraintBottom_toTopOf="@id/br"
+            app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -46,52 +46,27 @@
             android:id="@+id/skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15w"
             android:layout_marginEnd="@dimen/dp15w"
-            android:layout_marginBottom="@dimen/dp15w"
-            android:onClick="@{()->onBoardViewModels.action(Constants.PREVIOUS)}"
+            android:drawableEnd="@drawable/ic_double_arrow"
+            android:onClick="@{()->onBoardViewModels.action(Constants.LOGIN)}"
             android:text="@string/drop_off_skip"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/appCompatButtonNext"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/appCompatButtonNext" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/appCompatButtonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp14w"
+            android:layout_marginEnd="@dimen/dp14w"
             android:layout_marginBottom="@dimen/dp14h"
             android:onClick="@{()->onBoardViewModels.action(Constants.NEXT)}"
             android:src="@drawable/ic_next"
+            android:visibility="@{onBoardViewModels.onBoardAdapter.pagerList.size()>0?View.VISIBLE:View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/br"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:barrierDirection="top"
-            app:constraint_referenced_ids="appCompatButtonNext,appCompatFinish" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatFinish"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp35w"
-            android:layout_marginEnd="@dimen/dp35w"
-            android:layout_marginBottom="@dimen/dp20h"
-            android:background="@drawable/corner_view_gradient"
-            android:onClick="@{()->onBoardViewModels.action(Constants.START_APP)}"
-            android:text="@string/startApp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/white"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

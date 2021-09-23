@@ -1,4 +1,5 @@
 package te.app.notta.databinding;
+import te.app.notta.R;
 import te.app.notta.BR;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

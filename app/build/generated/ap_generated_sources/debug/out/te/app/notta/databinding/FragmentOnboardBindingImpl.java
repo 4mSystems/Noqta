@@ -14,49 +14,42 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.imageSlider, 4);
-        sViewsWithIds.put(R.id.br, 5);
+        sViewsWithIds.put(R.id.imageSlider, 3);
     }
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentOnboardBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentOnboardBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
-            , (androidx.constraintlayout.widget.Barrier) bindings[5]
-            , (com.smarteist.autoimageslider.SliderView) bindings[4]
+            , (com.smarteist.autoimageslider.SliderView) bindings[3]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[1]
             );
         this.appCompatButtonNext.setTag(null);
-        this.appCompatFinish.setTag(null);
         this.searchContainer.setTag(null);
         this.skip.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback6 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback4 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback2 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -108,6 +101,12 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
             }
             return true;
         }
+        else if (fieldId == BR.onBoardAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -118,14 +117,61 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int onBoardViewModelsOnBoardAdapterPagerListSize = 0;
+        te.app.notta.pages.onBoard.OnBoardAdapter onBoardViewModelsOnBoardAdapter = null;
+        int onBoardViewModelsOnBoardAdapterPagerListSizeInt0ViewVISIBLEViewGONE = 0;
+        java.util.List<te.app.notta.pages.onBoard.models.OnBoard> onBoardViewModelsOnBoardAdapterPagerList = null;
         te.app.notta.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
+        boolean onBoardViewModelsOnBoardAdapterPagerListSizeInt0 = false;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (onBoardViewModels != null) {
+                    // read onBoardViewModels.onBoardAdapter
+                    onBoardViewModelsOnBoardAdapter = onBoardViewModels.getOnBoardAdapter();
+                }
+
+
+                if (onBoardViewModelsOnBoardAdapter != null) {
+                    // read onBoardViewModels.onBoardAdapter.pagerList
+                    onBoardViewModelsOnBoardAdapterPagerList = onBoardViewModelsOnBoardAdapter.pagerList;
+                }
+
+
+                if (onBoardViewModelsOnBoardAdapterPagerList != null) {
+                    // read onBoardViewModels.onBoardAdapter.pagerList.size()
+                    onBoardViewModelsOnBoardAdapterPagerListSize = onBoardViewModelsOnBoardAdapterPagerList.size();
+                }
+
+
+                // read onBoardViewModels.onBoardAdapter.pagerList.size() > 0
+                onBoardViewModelsOnBoardAdapterPagerListSizeInt0 = (onBoardViewModelsOnBoardAdapterPagerListSize) > (0);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(onBoardViewModelsOnBoardAdapterPagerListSizeInt0) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read onBoardViewModels.onBoardAdapter.pagerList.size() > 0 ? View.VISIBLE : View.GONE
+                onBoardViewModelsOnBoardAdapterPagerListSizeInt0ViewVISIBLEViewGONE = ((onBoardViewModelsOnBoardAdapterPagerListSizeInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback5);
-            this.appCompatFinish.setOnClickListener(mCallback6);
-            this.skip.setOnClickListener(mCallback4);
+            this.appCompatButtonNext.setOnClickListener(mCallback3);
+            this.skip.setOnClickListener(mCallback2);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.appCompatButtonNext.setVisibility(onBoardViewModelsOnBoardAdapterPagerListSizeInt0ViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
@@ -151,25 +197,6 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
                 }
                 break;
             }
-            case 3: {
-                // localize variables for thread safety
-                // onBoardViewModels
-                te.app.notta.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
-                // onBoardViewModels != null
-                boolean onBoardViewModelsJavaLangObjectNull = false;
-
-
-
-                onBoardViewModelsJavaLangObjectNull = (onBoardViewModels) != (null);
-                if (onBoardViewModelsJavaLangObjectNull) {
-
-
-
-
-                    onBoardViewModels.action(te.app.notta.utils.Constants.START_APP);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // onBoardViewModels
@@ -185,7 +212,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
 
 
 
-                    onBoardViewModels.action(te.app.notta.utils.Constants.PREVIOUS);
+                    onBoardViewModels.action(te.app.notta.utils.Constants.LOGIN);
                 }
                 break;
             }
@@ -195,7 +222,10 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): onBoardViewModels
-        flag 1 (0x2L): null
+        flag 1 (0x2L): onBoardViewModels.onBoardAdapter
+        flag 2 (0x3L): null
+        flag 3 (0x4L): onBoardViewModels.onBoardAdapter.pagerList.size() > 0 ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): onBoardViewModels.onBoardAdapter.pagerList.size() > 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

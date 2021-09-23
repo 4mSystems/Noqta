@@ -67,7 +67,7 @@
                 android:layout_marginEnd="@dimen/dp25w"
                 android:text="@string/confirm_header"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ic_verify"
                 app:lineWidth="2dp"
-                app:viewType="rectangle" />
+                app:viewType="none" />
 
             <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_login_forget"

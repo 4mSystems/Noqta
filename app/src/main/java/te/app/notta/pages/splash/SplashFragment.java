@@ -23,7 +23,10 @@ import te.app.notta.R;
 import te.app.notta.databinding.FragmentSplashBinding;
 import te.app.notta.pages.addAnswer.AddAnswerFragment;
 import te.app.notta.pages.auth.login.LoginFragment;
+import te.app.notta.pages.onBoard.OnBoardFragment;
+import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
+import te.app.notta.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
     private Context context;
@@ -46,15 +49,15 @@ public class SplashFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.HOME)) {
-//                        MovementHelper.startActivityMain(requireActivity());
-//            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
-//                } else {
-            MovementHelper.startActivityBase(requireActivity(), AddAnswerFragment.class.getName(), null, null);
-//                }
-//            }
+            if (((Mutable) o).message.equals(Constants.HOME)) {
+                MovementHelper.startActivityMain(requireActivity());
+            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
+                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
+                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
+                } else {
+                    MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
+                }
+            }
         });
     }
 

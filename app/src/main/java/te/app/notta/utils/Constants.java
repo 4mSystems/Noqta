@@ -2,8 +2,8 @@ package te.app.notta.utils;
 
 public class Constants {
 
-    public static final String BAN_USER = "BAN_USER";
-    public static final String FOLLOWERS = "FOLLOWERS";
+    public static final String SPECIALIST = "SPECIALIST";
+    public static final String POP = "POP";
     public static final String FOLLOW_ORDER = "FOLLOW_ORDER";
     public static final String COMMERCIAL_IMAGE = "commercial_register_photo";
     public final static String TAX_CARD_PHOTO = "tax_card_photo";
@@ -33,7 +33,7 @@ public class Constants {
 
 
     public final static String IMAGE = "image";
-    public final static String MY_ORDERS = "MY_ORDERS";
+    public final static String FILE = "file";
     public final static String HOME = "HOME";
     public final static String BACKGROUND_API = "BACKGROUND_API";
 

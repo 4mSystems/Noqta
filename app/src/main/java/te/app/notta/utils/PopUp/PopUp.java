@@ -1,7 +1,11 @@
 package te.app.notta.utils.PopUp;
 
+import com.google.gson.annotations.SerializedName;
+
 public class PopUp {
+    @SerializedName("name")
     private String name;
+    @SerializedName("id")
     private int id;
 
     public PopUp() {

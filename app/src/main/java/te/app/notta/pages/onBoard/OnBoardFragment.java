@@ -20,7 +20,12 @@ import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.FragmentOnboardBinding;
 import te.app.notta.model.base.Mutable;
+import te.app.notta.pages.auth.login.LoginFragment;
+import te.app.notta.pages.onBoard.models.BoardResponse;
 import te.app.notta.pages.splash.SplashViewModel;
+import te.app.notta.utils.Constants;
+import te.app.notta.utils.helper.MovementHelper;
+import te.app.notta.utils.session.UserHelper;
 
 
 public class OnBoardFragment extends BaseFragment {
@@ -50,15 +55,13 @@ public class OnBoardFragment extends BaseFragment {
         viewModel.getSlider();
         liveDataListeners();
         // fill list screen
-//        fragmentOnboardBinding.imageSlider.setCurrentPageListener(currentPosition -> {
-//            if (currentPosition == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
-//                fragmentOnboardBinding.skip.setVisibility(View.GONE);
-//                fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.startApp));
-//            } else {
-//                fragmentOnboardBinding.skip.setVisibility(View.VISIBLE);
-//                fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.next));
-//            }
-//        });
+        fragmentOnboardBinding.imageSlider.setCurrentPageListener(currentPosition -> {
+            if (currentPosition == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
+                fragmentOnboardBinding.skip.setVisibility(View.GONE);
+            } else {
+                fragmentOnboardBinding.skip.setVisibility(View.VISIBLE);
+            }
+        });
         return fragmentOnboardBinding.getRoot();
     }
 
@@ -68,23 +71,22 @@ public class OnBoardFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (((Mutable) o).message) {
-//                case Constants.NEXT:
-//                    if (fragmentOnboardBinding.appCompatButtonNext.getText().toString().equals(getResources().getString(R.string.next)))
-//                        fragmentOnboardBinding.imageSlider.setCurrentPagePosition(fragmentOnboardBinding.imageSlider.getCurrentPagePosition() + 1);
-//                    else {
-//                        UserHelper.getInstance(context).addIsFirst(true);
-//                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
-//                    }
-//                    break;
-//                case Constants.BOARD:
-//                    viewModel.getOnBoardAdapter().updateData(((BoardResponse) ((Mutable) o).object).getOnBoardList());
-//                    viewModel.setupSlider(fragmentOnboardBinding.imageSlider);
-//                    if (viewModel.getOnBoardAdapter().pagerList.size() == 1)
-//                        fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.startApp));
-//                    break;
-//                case Constants.LOGIN:
-//                    MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
-//                    break;
+                case Constants.NEXT:
+                    if (fragmentOnboardBinding.imageSlider.getCurrentPagePosition()!= viewModel.getOnBoardAdapter().pagerList.size() - 1)
+                        fragmentOnboardBinding.imageSlider.setCurrentPagePosition(fragmentOnboardBinding.imageSlider.getCurrentPagePosition() + 1);
+                    else {
+                        UserHelper.getInstance(context).addIsFirst(false);
+                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                    }
+                    break;
+                case Constants.BOARD:
+                    viewModel.getOnBoardAdapter().updateData(((BoardResponse) ((Mutable) o).object).getOnBoardList());
+                    viewModel.setupSlider(fragmentOnboardBinding.imageSlider);
+                    break;
+                case Constants.LOGIN:
+                    UserHelper.getInstance(context).addIsFirst(false);
+                    MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                    break;
             }
         });
 

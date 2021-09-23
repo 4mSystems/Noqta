@@ -31,23 +31,21 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback6;
     @Nullable
     private final android.view.View.OnClickListener mCallback7;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.loginRequest.phone
-            //         is viewmodel.loginRequest.setPhone((java.lang.String) callbackArg_0)
+            // Inverse of viewmodel.loginRequest.email
+            //         is viewmodel.loginRequest.setEmail((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
             // localize variables for thread safety
-            // viewmodel.loginRequest.phone
-            java.lang.String viewmodelLoginRequestPhone = null;
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.loginRequest != null
@@ -56,6 +54,8 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             te.app.notta.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
             // viewmodel
             te.app.notta.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+            // viewmodel.loginRequest.email
+            java.lang.String viewmodelLoginRequestEmail = null;
 
 
 
@@ -71,7 +71,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
 
 
 
-                    viewmodelLoginRequest.setPhone(((java.lang.String) (callbackArg_0)));
+                    viewmodelLoginRequest.setEmail(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -143,10 +143,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback6 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback5 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -227,7 +227,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         java.lang.String viewmodelLoginRequestPassword = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         te.app.notta.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
-        java.lang.String viewmodelLoginRequestPhone = null;
+        java.lang.String viewmodelLoginRequestEmail = null;
         java.lang.String viewmodelMessage = null;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
@@ -250,8 +250,8 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                     if (viewmodelLoginRequest != null) {
                         // read viewmodel.loginRequest.password
                         viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
-                        // read viewmodel.loginRequest.phone
-                        viewmodelLoginRequestPhone = viewmodelLoginRequest.getPhone();
+                        // read viewmodel.loginRequest.email
+                        viewmodelLoginRequestEmail = viewmodelLoginRequest.getEmail();
                     }
             }
 
@@ -345,17 +345,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback8);
-            this.loginNoAccount.setOnClickListener(mCallback9);
-            this.loginNoAccountBold.setOnClickListener(mCallback10);
+            this.btnPhone.setOnClickListener(mCallback6);
+            this.loginNoAccount.setOnClickListener(mCallback7);
+            this.loginNoAccountBold.setOnClickListener(mCallback8);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback7);
+            this.tvLoginForget.setOnClickListener(mCallback5);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelLoginRequestPhone);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelLoginRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelLoginRequestPassword);
         }
     }
@@ -363,23 +363,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.loginPassword();
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -394,6 +377,23 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
 
 
                     viewmodel.register();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.loginPassword();
                 }
                 break;
             }

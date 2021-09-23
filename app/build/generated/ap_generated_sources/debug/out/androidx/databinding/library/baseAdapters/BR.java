@@ -17,5 +17,7 @@ public class BR {
 
   public static final int request = 7;
 
-  public static final int viewmodel = 8;
+  public static final int viewModel = 8;
+
+  public static final int viewmodel = 9;
 }

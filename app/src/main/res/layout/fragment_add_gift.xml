@@ -181,8 +181,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/input_points"
                 app:layout_constraintEnd_toEndOf="@id/input_points"
                 app:layout_constraintTop_toTopOf="@id/input_points"
-                app:type="4"
-                app:value="1" />
+                app:type="4" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"

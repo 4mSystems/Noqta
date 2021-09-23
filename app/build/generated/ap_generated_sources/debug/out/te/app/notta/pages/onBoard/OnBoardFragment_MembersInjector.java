@@ -3,8 +3,8 @@ package te.app.notta.pages.onBoard;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import te.app.notta.pages.splash.SplashViewModel;
 import javax.inject.Provider;
+import te.app.notta.pages.splash.SplashViewModel;
 
 @SuppressWarnings({
     "unchecked",

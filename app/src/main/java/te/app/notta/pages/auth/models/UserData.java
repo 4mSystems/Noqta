@@ -9,11 +9,11 @@ public class UserData {
     @SerializedName("image")
     private String image;
 
-    @SerializedName("account_type")
-    private String accountType;
+    @SerializedName("type")
+    private String type;
 
-    @SerializedName("package_id")
-    private String packageId;
+    @SerializedName("points")
+    private String points;
 
     @SerializedName("token")
     private String token;
@@ -23,36 +23,32 @@ public class UserData {
 
     @SerializedName("name")
     private String name;
-    @SerializedName("company_name")
-    private String companyName;
-    @SerializedName("is_company")
-    private String isCompany;
+    @SerializedName("store")
+    private String store;
+    @SerializedName("specialist_id")
+    private String specialist_id;
 
-    @SerializedName("step")
-    private int step;
+    @SerializedName("access_token")
+    private String access_token;
 
     @SerializedName("id")
     private int id;
 
     @SerializedName("email")
     private String email;
-    @SerializedName("latitude")
-    private double latitude;
-    @SerializedName("longitude")
-    private double longitude;
-    @SerializedName("address")
-    private String address;
+    @SerializedName("specialist_name")
+    private String specialistName;
 
     public String getImage() {
         return image;
     }
 
-    public String getPackageId() {
-        return packageId;
+    public String getType() {
+        return type;
     }
 
-    public void setPackageId(String packageId) {
-        this.packageId = packageId;
+    public String getPoints() {
+        return points;
     }
 
     public String getToken() {
@@ -67,8 +63,16 @@ public class UserData {
         return name;
     }
 
-    public int getStep() {
-        return step;
+    public String getStore() {
+        return store;
+    }
+
+    public String getSpecialist_id() {
+        return specialist_id;
+    }
+
+    public String getAccess_token() {
+        return access_token;
     }
 
     public int getId() {
@@ -79,27 +83,7 @@ public class UserData {
         return email;
     }
 
-    public String getAccountType() {
-        return accountType;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public String getIsCompany() {
-        return isCompany;
+    public String getSpecialistName() {
+        return specialistName;
     }
 }

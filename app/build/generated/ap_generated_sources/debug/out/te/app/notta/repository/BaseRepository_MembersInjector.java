@@ -3,8 +3,8 @@ package te.app.notta.repository;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import te.app.notta.connection.ConnectionHelper;
 import javax.inject.Provider;
+import te.app.notta.connection.ConnectionHelper;
 
 @SuppressWarnings({
     "unchecked",

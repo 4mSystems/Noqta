@@ -1,7 +1,5 @@
 package te.app.notta.pages.auth.register;
 
-import android.widget.CompoundButton;
-
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -10,12 +8,19 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import te.app.notta.R;
 import te.app.notta.base.BaseViewModel;
+import te.app.notta.base.MyApplication;
 import te.app.notta.connection.FileObject;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.auth.models.RegisterRequest;
 import te.app.notta.repository.AuthRepository;
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.notta.utils.Constants;
+import te.app.notta.utils.PopUp.PopUp;
+import te.app.notta.utils.resources.ResourceManager;
+import te.app.notta.utils.session.UserHelper;
+import te.app.notta.utils.validation.Validate;
 
 public class RegisterViewModel extends BaseViewModel {
     MutableLiveData<Mutable> liveData;
@@ -24,7 +29,7 @@ public class RegisterViewModel extends BaseViewModel {
     AuthRepository repository;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     RegisterRequest request;
-    boolean isTermsAccepted = false;
+    public List<PopUp> specialist = new ArrayList<>();
 
     @Inject
     public RegisterViewModel(AuthRepository repository) {
@@ -35,29 +40,21 @@ public class RegisterViewModel extends BaseViewModel {
     }
 
     public void register() {
-//        getRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
-//        getRequest().setStep("1");
-//        if (getRequest().isValid()) {
-//            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
-//                if (!TextUtils.isEmpty(getRequest().getUser_image())) {
-//                    setMessage(Constants.SHOW_PROGRESS);
-//                    compositeDisposable.add(repository.register(request, fileObject));
-//                } else {
-//                    liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.select_image_profile)));
-//                }
-//            } else
-//                liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.password_not_match)));
-//        } else
-//            liveData.setValue(new Mutable(Constants.ERROR, ResourceManager.getString(R.string.empty_warning)));
+        getRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
+        if (getRequest().isValid()) {
+            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
+                setMessage(Constants.SHOW_PROGRESS);
+                compositeDisposable.add(repository.register(request, getFileObject()));
+            } else
+                liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.password_not_match)));
+        }
     }
 
-
-
-    public void onCheckedChange(CompoundButton button, boolean check) {
-        isTermsAccepted = check;
+    public void getSpecialist() {
+        compositeDisposable.add(repository.getSpecialist());
     }
 
-    public void imageSubmit(String action) {
+    public void action(String action) {
         liveData.setValue(new Mutable(action));
     }
 

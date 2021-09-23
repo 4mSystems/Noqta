@@ -153,8 +153,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/input_students"
                 app:layout_constraintEnd_toEndOf="@id/input_students"
                 app:layout_constraintTop_toTopOf="@id/input_students"
-                app:type="4"
-                app:value="1" />
+                app:type="4" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_tasks"
@@ -191,8 +190,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/input_tasks"
                 app:layout_constraintEnd_toEndOf="@id/input_tasks"
                 app:layout_constraintTop_toTopOf="@id/input_tasks"
-                app:type="4"
-                app:value="1" />
+                app:type="4" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_date"

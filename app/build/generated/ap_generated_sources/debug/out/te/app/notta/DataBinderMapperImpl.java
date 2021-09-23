@@ -6,19 +6,6 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
-import te.app.notta.databinding.ActivityBaseBindingImpl;
-import te.app.notta.databinding.ActivityMainBindingImpl;
-import te.app.notta.databinding.FragmentChangePasswordBindingImpl;
-import te.app.notta.databinding.FragmentConfirmCodeBindingImpl;
-import te.app.notta.databinding.FragmentForgetPasswordBindingImpl;
-import te.app.notta.databinding.FragmentLoginBindingImpl;
-import te.app.notta.databinding.FragmentOnboardBindingImpl;
-import te.app.notta.databinding.FragmentRegisterBindingImpl;
-import te.app.notta.databinding.FragmentSplashBindingImpl;
-import te.app.notta.databinding.LayoutActionBarBackBindingImpl;
-import te.app.notta.databinding.LayoutActionBarHomeBindingImpl;
-import te.app.notta.databinding.LayoutGrandBindingImpl;
-import te.app.notta.databinding.MenuBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,46 +15,155 @@ import java.lang.String;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import te.app.notta.databinding.ActivityBaseBindingImpl;
+import te.app.notta.databinding.ActivityMainBindingImpl;
+import te.app.notta.databinding.FragmentAboutBindingImpl;
+import te.app.notta.databinding.FragmentAddAnswerBindingImpl;
+import te.app.notta.databinding.FragmentAddGiftBindingImpl;
+import te.app.notta.databinding.FragmentAddGroupBindingImpl;
+import te.app.notta.databinding.FragmentChangePasswordBindingImpl;
+import te.app.notta.databinding.FragmentConfirmCodeBindingImpl;
+import te.app.notta.databinding.FragmentContactBindingImpl;
+import te.app.notta.databinding.FragmentEditProfileBindingImpl;
+import te.app.notta.databinding.FragmentForgetPasswordBindingImpl;
+import te.app.notta.databinding.FragmentGroupDetailsBindingImpl;
+import te.app.notta.databinding.FragmentGroupMembersBindingImpl;
+import te.app.notta.databinding.FragmentHomeBindingImpl;
+import te.app.notta.databinding.FragmentLangBindingImpl;
+import te.app.notta.databinding.FragmentLoginBindingImpl;
+import te.app.notta.databinding.FragmentMoreBindingImpl;
+import te.app.notta.databinding.FragmentMyGroupsBindingImpl;
+import te.app.notta.databinding.FragmentOnboardBindingImpl;
+import te.app.notta.databinding.FragmentPointsBindingImpl;
+import te.app.notta.databinding.FragmentProfileBindingImpl;
+import te.app.notta.databinding.FragmentRegisterBindingImpl;
+import te.app.notta.databinding.FragmentRequestsBindingImpl;
+import te.app.notta.databinding.FragmentSplashBindingImpl;
+import te.app.notta.databinding.FragmentTasksBindingImpl;
+import te.app.notta.databinding.ItemHomeBindingImpl;
+import te.app.notta.databinding.ItemHorMemberBindingImpl;
+import te.app.notta.databinding.ItemMemberBindingImpl;
+import te.app.notta.databinding.ItemMoreBindingImpl;
+import te.app.notta.databinding.ItemPointsBindingImpl;
+import te.app.notta.databinding.ItemProfileBindingImpl;
+import te.app.notta.databinding.ItemRecentTaskBindingImpl;
+import te.app.notta.databinding.ItemStudentRequestBindingImpl;
+import te.app.notta.databinding.LayoutActionBarBackBindingImpl;
+import te.app.notta.databinding.LayoutActionBarHomeBindingImpl;
+import te.app.notta.databinding.LayoutGrandBindingImpl;
+import te.app.notta.databinding.MenuBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
 
   private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 3;
+  private static final int LAYOUT_FRAGMENTABOUT = 3;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 4;
+  private static final int LAYOUT_FRAGMENTADDANSWER = 4;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 5;
+  private static final int LAYOUT_FRAGMENTADDGIFT = 5;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 6;
+  private static final int LAYOUT_FRAGMENTADDGROUP = 6;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 7;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 7;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 8;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 8;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 9;
+  private static final int LAYOUT_FRAGMENTCONTACT = 9;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 10;
+  private static final int LAYOUT_FRAGMENTEDITPROFILE = 10;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 11;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 11;
 
-  private static final int LAYOUT_LAYOUTGRAND = 12;
+  private static final int LAYOUT_FRAGMENTGROUPDETAILS = 12;
 
-  private static final int LAYOUT_MENU = 13;
+  private static final int LAYOUT_FRAGMENTGROUPMEMBERS = 13;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(13);
+  private static final int LAYOUT_FRAGMENTHOME = 14;
+
+  private static final int LAYOUT_FRAGMENTLANG = 15;
+
+  private static final int LAYOUT_FRAGMENTLOGIN = 16;
+
+  private static final int LAYOUT_FRAGMENTMORE = 17;
+
+  private static final int LAYOUT_FRAGMENTMYGROUPS = 18;
+
+  private static final int LAYOUT_FRAGMENTONBOARD = 19;
+
+  private static final int LAYOUT_FRAGMENTPOINTS = 20;
+
+  private static final int LAYOUT_FRAGMENTPROFILE = 21;
+
+  private static final int LAYOUT_FRAGMENTREGISTER = 22;
+
+  private static final int LAYOUT_FRAGMENTREQUESTS = 23;
+
+  private static final int LAYOUT_FRAGMENTSPLASH = 24;
+
+  private static final int LAYOUT_FRAGMENTTASKS = 25;
+
+  private static final int LAYOUT_ITEMHOME = 26;
+
+  private static final int LAYOUT_ITEMHORMEMBER = 27;
+
+  private static final int LAYOUT_ITEMMEMBER = 28;
+
+  private static final int LAYOUT_ITEMMORE = 29;
+
+  private static final int LAYOUT_ITEMPOINTS = 30;
+
+  private static final int LAYOUT_ITEMPROFILE = 31;
+
+  private static final int LAYOUT_ITEMRECENTTASK = 32;
+
+  private static final int LAYOUT_ITEMSTUDENTREQUEST = 33;
+
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 34;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 35;
+
+  private static final int LAYOUT_LAYOUTGRAND = 36;
+
+  private static final int LAYOUT_MENU = 37;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(37);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_answer, LAYOUT_FRAGMENTADDANSWER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_gift, LAYOUT_FRAGMENTADDGIFT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_group, LAYOUT_FRAGMENTADDGROUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_change_password, LAYOUT_FRAGMENTCHANGEPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_contact, LAYOUT_FRAGMENTCONTACT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_edit_profile, LAYOUT_FRAGMENTEDITPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_group_details, LAYOUT_FRAGMENTGROUPDETAILS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_group_members, LAYOUT_FRAGMENTGROUPMEMBERS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_lang, LAYOUT_FRAGMENTLANG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_more, LAYOUT_FRAGMENTMORE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_my_groups, LAYOUT_FRAGMENTMYGROUPS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_onboard, LAYOUT_FRAGMENTONBOARD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_points, LAYOUT_FRAGMENTPOINTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_register, LAYOUT_FRAGMENTREGISTER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_requests, LAYOUT_FRAGMENTREQUESTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_tasks, LAYOUT_FRAGMENTTASKS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_home, LAYOUT_ITEMHOME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_hor_member, LAYOUT_ITEMHORMEMBER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_member, LAYOUT_ITEMMEMBER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_more, LAYOUT_ITEMMORE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_points, LAYOUT_ITEMPOINTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_profile, LAYOUT_ITEMPROFILE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_recent_task, LAYOUT_ITEMRECENTTASK);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_student_request, LAYOUT_ITEMSTUDENTREQUEST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_grand, LAYOUT_LAYOUTGRAND);
@@ -95,6 +191,30 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTABOUT: {
+          if ("layout/fragment_about_0".equals(tag)) {
+            return new FragmentAboutBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_about is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTADDANSWER: {
+          if ("layout/fragment_add_answer_0".equals(tag)) {
+            return new FragmentAddAnswerBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_answer is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTADDGIFT: {
+          if ("layout/fragment_add_gift_0".equals(tag)) {
+            return new FragmentAddGiftBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_gift is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTADDGROUP: {
+          if ("layout/fragment_add_group_0".equals(tag)) {
+            return new FragmentAddGroupBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_group is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
           if ("layout/fragment_change_password_0".equals(tag)) {
             return new FragmentChangePasswordBindingImpl(component, view);
@@ -107,11 +227,47 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_confirm_code is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTCONTACT: {
+          if ("layout/fragment_contact_0".equals(tag)) {
+            return new FragmentContactBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_contact is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTEDITPROFILE: {
+          if ("layout/fragment_edit_profile_0".equals(tag)) {
+            return new FragmentEditProfileBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_edit_profile is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTFORGETPASSWORD: {
           if ("layout/fragment_forget_password_0".equals(tag)) {
             return new FragmentForgetPasswordBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_forget_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTGROUPDETAILS: {
+          if ("layout/fragment_group_details_0".equals(tag)) {
+            return new FragmentGroupDetailsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_group_details is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTGROUPMEMBERS: {
+          if ("layout/fragment_group_members_0".equals(tag)) {
+            return new FragmentGroupMembersBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_group_members is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTHOME: {
+          if ("layout/fragment_home_0".equals(tag)) {
+            return new FragmentHomeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_home is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTLANG: {
+          if ("layout/fragment_lang_0".equals(tag)) {
+            return new FragmentLangBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_lang is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTLOGIN: {
           if ("layout/fragment_login_0".equals(tag)) {
@@ -119,11 +275,35 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTMORE: {
+          if ("layout/fragment_more_0".equals(tag)) {
+            return new FragmentMoreBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_more is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTMYGROUPS: {
+          if ("layout/fragment_my_groups_0".equals(tag)) {
+            return new FragmentMyGroupsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_my_groups is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTONBOARD: {
           if ("layout/fragment_onboard_0".equals(tag)) {
             return new FragmentOnboardBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_onboard is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTPOINTS: {
+          if ("layout/fragment_points_0".equals(tag)) {
+            return new FragmentPointsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_points is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTPROFILE: {
+          if ("layout/fragment_profile_0".equals(tag)) {
+            return new FragmentProfileBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_profile is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTREGISTER: {
           if ("layout/fragment_register_0".equals(tag)) {
@@ -131,11 +311,71 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_register is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTREQUESTS: {
+          if ("layout/fragment_requests_0".equals(tag)) {
+            return new FragmentRequestsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_requests is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTSPLASH: {
           if ("layout/fragment_splash_0".equals(tag)) {
             return new FragmentSplashBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_splash is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTTASKS: {
+          if ("layout/fragment_tasks_0".equals(tag)) {
+            return new FragmentTasksBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_tasks is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMHOME: {
+          if ("layout/item_home_0".equals(tag)) {
+            return new ItemHomeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_home is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMHORMEMBER: {
+          if ("layout/item_hor_member_0".equals(tag)) {
+            return new ItemHorMemberBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_hor_member is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMMEMBER: {
+          if ("layout/item_member_0".equals(tag)) {
+            return new ItemMemberBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_member is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMMORE: {
+          if ("layout/item_more_0".equals(tag)) {
+            return new ItemMoreBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_more is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMPOINTS: {
+          if ("layout/item_points_0".equals(tag)) {
+            return new ItemPointsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_points is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMPROFILE: {
+          if ("layout/item_profile_0".equals(tag)) {
+            return new ItemProfileBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_profile is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMRECENTTASK: {
+          if ("layout/item_recent_task_0".equals(tag)) {
+            return new ItemRecentTaskBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_recent_task is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMSTUDENTREQUEST: {
+          if ("layout/item_student_request_0".equals(tag)) {
+            return new ItemStudentRequestBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_student_request is invalid. Received: " + tag);
         }
         case  LAYOUT_LAYOUTACTIONBARBACK: {
           if ("layout/layout_action_bar_back_0".equals(tag)) {
@@ -206,7 +446,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(9);
+    static final SparseArray<String> sKeys = new SparseArray<String>(10);
 
     static {
       sKeys.put(0, "_all");
@@ -217,23 +457,48 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(5, "onBoardViewModels");
       sKeys.put(6, "passingObject");
       sKeys.put(7, "request");
-      sKeys.put(8, "viewmodel");
+      sKeys.put(8, "viewModel");
+      sKeys.put(9, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(13);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(37);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.notta.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", te.app.notta.R.layout.activity_main);
+      sKeys.put("layout/fragment_about_0", te.app.notta.R.layout.fragment_about);
+      sKeys.put("layout/fragment_add_answer_0", te.app.notta.R.layout.fragment_add_answer);
+      sKeys.put("layout/fragment_add_gift_0", te.app.notta.R.layout.fragment_add_gift);
+      sKeys.put("layout/fragment_add_group_0", te.app.notta.R.layout.fragment_add_group);
       sKeys.put("layout/fragment_change_password_0", te.app.notta.R.layout.fragment_change_password);
       sKeys.put("layout/fragment_confirm_code_0", te.app.notta.R.layout.fragment_confirm_code);
+      sKeys.put("layout/fragment_contact_0", te.app.notta.R.layout.fragment_contact);
+      sKeys.put("layout/fragment_edit_profile_0", te.app.notta.R.layout.fragment_edit_profile);
       sKeys.put("layout/fragment_forget_password_0", te.app.notta.R.layout.fragment_forget_password);
+      sKeys.put("layout/fragment_group_details_0", te.app.notta.R.layout.fragment_group_details);
+      sKeys.put("layout/fragment_group_members_0", te.app.notta.R.layout.fragment_group_members);
+      sKeys.put("layout/fragment_home_0", te.app.notta.R.layout.fragment_home);
+      sKeys.put("layout/fragment_lang_0", te.app.notta.R.layout.fragment_lang);
       sKeys.put("layout/fragment_login_0", te.app.notta.R.layout.fragment_login);
+      sKeys.put("layout/fragment_more_0", te.app.notta.R.layout.fragment_more);
+      sKeys.put("layout/fragment_my_groups_0", te.app.notta.R.layout.fragment_my_groups);
       sKeys.put("layout/fragment_onboard_0", te.app.notta.R.layout.fragment_onboard);
+      sKeys.put("layout/fragment_points_0", te.app.notta.R.layout.fragment_points);
+      sKeys.put("layout/fragment_profile_0", te.app.notta.R.layout.fragment_profile);
       sKeys.put("layout/fragment_register_0", te.app.notta.R.layout.fragment_register);
+      sKeys.put("layout/fragment_requests_0", te.app.notta.R.layout.fragment_requests);
       sKeys.put("layout/fragment_splash_0", te.app.notta.R.layout.fragment_splash);
+      sKeys.put("layout/fragment_tasks_0", te.app.notta.R.layout.fragment_tasks);
+      sKeys.put("layout/item_home_0", te.app.notta.R.layout.item_home);
+      sKeys.put("layout/item_hor_member_0", te.app.notta.R.layout.item_hor_member);
+      sKeys.put("layout/item_member_0", te.app.notta.R.layout.item_member);
+      sKeys.put("layout/item_more_0", te.app.notta.R.layout.item_more);
+      sKeys.put("layout/item_points_0", te.app.notta.R.layout.item_points);
+      sKeys.put("layout/item_profile_0", te.app.notta.R.layout.item_profile);
+      sKeys.put("layout/item_recent_task_0", te.app.notta.R.layout.item_recent_task);
+      sKeys.put("layout/item_student_request_0", te.app.notta.R.layout.item_student_request);
       sKeys.put("layout/layout_action_bar_back_0", te.app.notta.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", te.app.notta.R.layout.layout_action_bar_home);
       sKeys.put("layout/layout_grand_0", te.app.notta.R.layout.layout_grand);

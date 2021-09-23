@@ -5,19 +5,17 @@ import android.text.TextUtils;
 import com.google.gson.annotations.SerializedName;
 
 public class ConfirmCodeRequest {
-    @SerializedName("phone")
-    private String phone;
+    @SerializedName("email")
+    private String email;
     @SerializedName("code")
     private String code;
-    @SerializedName("type")
-    private String type;
 
-    public String getPhone() {
-        return phone;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getCode() {
@@ -32,11 +30,4 @@ public class ConfirmCodeRequest {
         return (!TextUtils.isEmpty(code));
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 }

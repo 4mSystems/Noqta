@@ -1,9 +1,9 @@
 package te.app.notta.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://aber.my-staff.net/api/";
+    public final static String BASE_URL = "http://noqta-learn.com/api/";
     // post
-    public final static String PACKAGES = "v1/provider/packages";
+    public final static String SPECIALIST = "teacher/get-specialists";
     public final static String SUBSCRIBE = "v1/provider/package";
     public final static String HOME = "v1/provider/home";
     public final static String ASK_USER = "v1/ask/post";
@@ -13,14 +13,14 @@ public class URLS {
 
     public final static String SERVICES = "services";
     public final static String LOGIN_SOCIAL = "v1/social_register";
-    public final static String LOGIN_PASSWORD = "v1/provider/login";
-    public final static String REGISTER = "v1/provider/register";
+    public final static String LOGIN_PASSWORD = "user/login";
+    public final static String REGISTER = "user/register";
     public final static String COUNTRIES = "v1/countries";
     public final static String CITIES = "v1/cities?governorate_id=";
-    public final static String BOARD = "v1/provider/welcome";
-    public final static String CONFIRM_CODE = "v1/provider/code_check";
+    public final static String BOARD = "app/app-explanation";
+    public final static String CONFIRM_CODE = "user/otp-check";
     public final static String UPDATE_PROFILE = "v1/provider/profile";
-    public static final String FORGET_PASSWORD = "v1/provider/code_send";
+    public static final String FORGET_PASSWORD = "user/verify-email";
     public static final String CHANGE_PASSWORD = "v1/provider/change_password";
     public final static String GET_CONTACT = "v1/contact_us";
     public final static String SEARCH_POSTS = "v1/search?type=";

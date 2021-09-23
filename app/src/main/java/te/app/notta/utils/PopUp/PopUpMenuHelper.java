@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PopUpMenuHelper {
 
-    public static PopupMenu showPostOptionPopUp(Context context, View view, List<PopUp> types) {
+    public static PopupMenu showSpecialistPopUp(Context context, View view, List<PopUp> types) {
         PopupMenu typesPopUps;
         typesPopUps = new PopupMenu(context, view);
         for (int i = 0; i < types.size(); i++) {

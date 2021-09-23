@@ -49,13 +49,9 @@ public class SplashViewModel extends BaseViewModel {
         }, 3000);
     }
 
-    public void toLogin() {
-        liveData.setValue(new Mutable(Constants.LOGIN));
-    }
 
     @Bindable
     public OnBoardAdapter getOnBoardAdapter() {
-        notifyChange(BR.onBoardAdapter);
         return onBoardAdapter;
     }
 
@@ -77,6 +73,7 @@ public class SplashViewModel extends BaseViewModel {
 
     public void setupSlider(SliderView sliderView) {
         sliderView.setSliderAdapter(onBoardAdapter);
+        notifyChange(BR.onBoardAdapter);
     }
 
     public void action(String action) {

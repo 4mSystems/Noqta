@@ -6,35 +6,27 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class ForgetPasswordRequest {
-    @SerializedName("phone")
+    @SerializedName("email")
     @Expose
-    private String phone;
-    @SerializedName("type")
-    @Expose
-    private String type;
+    private String email;
 
     public ForgetPasswordRequest() {
     }
 
-    public ForgetPasswordRequest(String phone, String type) {
-        this.phone = phone;
-        this.type = type;
+    public ForgetPasswordRequest(String email) {
+        this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setEmail(String email) {
+        this.email = email;
 
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public boolean isValid() {
-        return (!TextUtils.isEmpty(phone));
+        return (!TextUtils.isEmpty(email));
     }
 }

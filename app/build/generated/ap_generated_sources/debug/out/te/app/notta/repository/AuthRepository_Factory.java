@@ -2,8 +2,8 @@
 package te.app.notta.repository;
 
 import dagger.internal.Factory;
-import te.app.notta.connection.ConnectionHelper;
 import javax.inject.Provider;
+import te.app.notta.connection.ConnectionHelper;
 
 @SuppressWarnings({
     "unchecked",

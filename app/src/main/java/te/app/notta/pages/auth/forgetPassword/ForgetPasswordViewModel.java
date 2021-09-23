@@ -27,7 +27,6 @@ public class ForgetPasswordViewModel extends BaseViewModel {
     }
 
     public void sendCode() {
-        getRequest().setType("reset");
         if (getRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             compositeDisposable.add(repository.forgetPassword(request));

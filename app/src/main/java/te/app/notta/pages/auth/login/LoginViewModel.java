@@ -19,7 +19,6 @@ public class LoginViewModel extends BaseViewModel {
     AuthRepository repository;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     LoginRequest loginRequest;
-    String cpp;
 
     @Inject
     public LoginViewModel(AuthRepository repository) {

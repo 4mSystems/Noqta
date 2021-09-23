@@ -1,5 +1,77 @@
 [
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_hor_member.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_hor_member.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_points.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_points.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_recent_task.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_recent_task.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_contact.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_about.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_group.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_add_group.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_answer.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_add_answer.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_change_password.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_register.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_more.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_more.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_groups.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_my_groups.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_back.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_confirm_code.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_more.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_onboard.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lang.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_lang.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_main.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_grand.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_grand.xml"
     },
@@ -12,43 +84,67 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/menu.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_tasks.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_tasks.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_login.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_change_password.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_requests.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_requests.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_splash.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_points.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_points.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_profile.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_edit_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_profile.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_details.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_group_details.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_base.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_register.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_home.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_back.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_confirm_code.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_gift.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_add_gift.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_onboard.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_members.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_group_members.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_member.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_member.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_student_request.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_student_request.xml"
     }
 ]

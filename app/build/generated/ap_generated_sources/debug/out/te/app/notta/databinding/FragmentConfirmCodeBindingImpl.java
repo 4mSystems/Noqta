@@ -14,21 +14,21 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 8);
-        sViewsWithIds.put(R.id.curve, 9);
-        sViewsWithIds.put(R.id.img_login_logo, 10);
-        sViewsWithIds.put(R.id.tv_forget_timer, 11);
+        sViewsWithIds.put(R.id.board_header, 6);
+        sViewsWithIds.put(R.id.tv_login_title, 7);
+        sViewsWithIds.put(R.id.ic_verify, 8);
+        sViewsWithIds.put(R.id.tv_forget_timer, 9);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback24;
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -71,21 +71,19 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     };
 
     public FragmentConfirmCodeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private FragmentConfirmCodeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
-            , (android.widget.TextView) bindings[9]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
-            , (com.chaos.view.PinView) bindings[4]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[6]
-            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[11]
+            , (com.chaos.view.PinView) bindings[2]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[5]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[7]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             );
         this.appCompatButtonNext.setTag(null);
         this.back.setTag(null);
@@ -93,21 +91,19 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.mboundView0.setTag(null);
         this.pinValidate.setTag(null);
         this.progress.setTag(null);
-        this.tvConfirmHeaderText.setTag(null);
         this.tvLoginForget.setTag(null);
-        this.tvLoginTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback1 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -159,15 +155,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
             }
             return true;
         }
-        else if (fieldId == BR.passingObject) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
-        }
         else if (fieldId == BR.message) {
             synchronized(this) {
-                    mDirtyFlags |= 0x4L;
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -181,62 +171,24 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.notta.PassingObject viewmodelPassingObject = null;
         te.app.notta.pages.auth.models.ConfirmCodeRequest viewmodelRequest = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
-        boolean viewmodelPassingObjectIdInt1 = false;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         java.lang.String viewmodelMessage = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
-        java.lang.String viewmodelPassingObjectIdInt1TvLoginTitleAndroidStringConfirmHeaderTvLoginTitleAndroidStringConfirmAccount = null;
-        int viewmodelPassingObjectId = 0;
         android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelRequestCode = null;
-        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
-        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
-        java.lang.String viewmodelPassingObjectIdInt1TvConfirmHeaderTextAndroidStringConfirmHeaderTextTvConfirmHeaderTextAndroidStringConfirmHeaderTextForget = null;
-        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         te.app.notta.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0xfL) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
-            if ((dirtyFlags & 0xbL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.passingObject
-                        viewmodelPassingObject = viewmodel.getPassingObject();
-                    }
-
-
-                    if (viewmodelPassingObject != null) {
-                        // read viewmodel.passingObject.id
-                        viewmodelPassingObjectId = viewmodelPassingObject.getId();
-                    }
-
-
-                    // read viewmodel.passingObject.id == 1
-                    viewmodelPassingObjectIdInt1 = (viewmodelPassingObjectId) == (1);
-                if((dirtyFlags & 0xbL) != 0) {
-                    if(viewmodelPassingObjectIdInt1) {
-                            dirtyFlags |= 0x20L;
-                            dirtyFlags |= 0x2000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x10L;
-                            dirtyFlags |= 0x1000L;
-                    }
-                }
-
-
-                    // read viewmodel.passingObject.id == 1 ? @android:string/confirm_header : @android:string/confirm_account
-                    viewmodelPassingObjectIdInt1TvLoginTitleAndroidStringConfirmHeaderTvLoginTitleAndroidStringConfirmAccount = ((viewmodelPassingObjectIdInt1) ? (tvLoginTitle.getResources().getString(R.string.confirm_header)) : (tvLoginTitle.getResources().getString(R.string.confirm_account)));
-                    // read viewmodel.passingObject.id == 1 ? @android:string/confirm_header_text : @android:string/confirm_header_text_forget
-                    viewmodelPassingObjectIdInt1TvConfirmHeaderTextAndroidStringConfirmHeaderTextTvConfirmHeaderTextAndroidStringConfirmHeaderTextForget = ((viewmodelPassingObjectIdInt1) ? (tvConfirmHeaderText.getResources().getString(R.string.confirm_header_text)) : (tvConfirmHeaderText.getResources().getString(R.string.confirm_header_text_forget)));
-            }
-            if ((dirtyFlags & 0x9L) != 0) {
+            if ((dirtyFlags & 0x5L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.request
@@ -249,114 +201,106 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                         viewmodelRequestCode = viewmodelRequest.getCode();
                     }
             }
-            if ((dirtyFlags & 0xdL) != 0) {
 
-                    if (viewmodel != null) {
-                        // read viewmodel.message
-                        viewmodelMessage = viewmodel.getMessage();
-                    }
-
-
-                    // read TextUtils.isEmpty(viewmodel.message)
-                    textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
-                if((dirtyFlags & 0xdL) != 0) {
-                    if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x200L;
-                    }
-                    else {
-                            dirtyFlags |= 0x100L;
-                    }
+                if (viewmodel != null) {
+                    // read viewmodel.message
+                    viewmodelMessage = viewmodel.getMessage();
                 }
 
 
-                    // read !TextUtils.isEmpty(viewmodel.message)
-                    TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0xdL) != 0) {
-                    if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x20000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x10000L;
-                    }
+                // read TextUtils.isEmpty(viewmodel.message)
+                textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessage) {
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x200L;
+                }
+            }
+
+
+                // read !TextUtils.isEmpty(viewmodel.message)
+                TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelMessage1) {
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x800L;
                 }
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x100L) != 0) {
-
-                if (viewmodelMessage != null) {
-                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
-                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.notta.utils.Constants.HIDE_PROGRESS);
-                }
-        }
-        if ((dirtyFlags & 0x20000L) != 0) {
+        if ((dirtyFlags & 0x1000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
                     viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.notta.utils.Constants.SHOW_PROGRESS);
                 }
         }
+        if ((dirtyFlags & 0x200L) != 0) {
 
-        if ((dirtyFlags & 0xdL) != 0) {
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.notta.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0xdL) != 0) {
+            if((dirtyFlags & 0x7L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
                         dirtyFlags |= 0x80L;
-                        dirtyFlags |= 0x800L;
-                }
-                else {
-                        dirtyFlags |= 0x40L;
-                        dirtyFlags |= 0x400L;
                 }
             }
-            if((dirtyFlags & 0xdL) != 0) {
+            if((dirtyFlags & 0x7L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x8000L;
+                        dirtyFlags |= 0x40L;
                 }
                 else {
-                        dirtyFlags |= 0x4000L;
+                        dirtyFlags |= 0x20L;
                 }
             }
 
 
-                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_gradient)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_primary_medium)));
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_gradient)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_primary_medium)));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium);
             this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback2);
-            this.back.setOnClickListener(mCallback1);
+            this.appCompatButtonNext.setOnClickListener(mCallback24);
+            this.back.setOnClickListener(mCallback22);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinValidate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinValidateandroidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback3);
+            this.tvLoginForget.setOnClickListener(mCallback23);
         }
-        if ((dirtyFlags & 0x9L) != 0) {
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.pinValidate, viewmodelRequestCode);
-        }
-        if ((dirtyFlags & 0xbL) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvConfirmHeaderText, viewmodelPassingObjectIdInt1TvConfirmHeaderTextAndroidStringConfirmHeaderTextTvConfirmHeaderTextAndroidStringConfirmHeaderTextForget);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvLoginTitle, viewmodelPassingObjectIdInt1TvLoginTitleAndroidStringConfirmHeaderTvLoginTitleAndroidStringConfirmAccount);
         }
     }
     // Listener Stub Implementations
@@ -364,6 +308,23 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
             case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.resendCode();
+                }
+                break;
+            }
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -398,46 +359,24 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                 }
                 break;
             }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.resendCode();
-                }
-                break;
-            }
         }
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.passingObject
-        flag 2 (0x3L): viewmodel.message
-        flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.passingObject.id == 1 ? @android:string/confirm_header : @android:string/confirm_account
-        flag 5 (0x6L): viewmodel.passingObject.id == 1 ? @android:string/confirm_header : @android:string/confirm_account
-        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 1 (0x2L): viewmodel.message
+        flag 2 (0x3L): null
+        flag 3 (0x4L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 4 (0x5L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
         flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 12 (0xdL): viewmodel.passingObject.id == 1 ? @android:string/confirm_header_text : @android:string/confirm_header_text_forget
-        flag 13 (0xeL): viewmodel.passingObject.id == 1 ? @android:string/confirm_header_text : @android:string/confirm_header_text_forget
-        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }
