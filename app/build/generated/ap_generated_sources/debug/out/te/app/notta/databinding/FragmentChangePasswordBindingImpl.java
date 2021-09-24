@@ -30,7 +30,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final com.google.android.material.textfield.TextInputEditText mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
     // values
@@ -180,8 +180,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -494,8 +494,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback14);
-            this.back.setOnClickListener(mCallback13);
+            this.appCompatButtonNext.setOnClickListener(mCallback15);
+            this.back.setOnClickListener(mCallback14);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
@@ -528,6 +528,23 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.submit();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -543,23 +560,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.submit();
                 }
                 break;
             }

@@ -130,5 +130,19 @@
     <string name="change_lang_body">Select the preferred language to use in Noqta application , we work in several languages</string>
     <string name="arabic">عربي</string>
     <string name="english">English</string>
+    <string name="menuHome">Home</string>
+    <string name="menuTasks">Tasks</string>
+    <string name="menuProfile">Profile</string>
+    <string name="menuMore">More</string>
+    <string name="hi">Hi ,</string>
+    <string name="success_title">You Created Group Successfully</string>
+    <string name="success_body">The group will be shown automatically at the time you created you can receive student Request Too</string>
+    <string name="close">Close</string>
+    <string name="students">\nStudent</string>
+    <string name="tasks">\ntask</string>
+    <string name="requests">\nRequest</string>
+    <string name="invite_student">Invite students to your group</string>
+    <string name="invite">Invite</string>
+    <string name="search_student_hint">Search for student</string>
 
 </resources>

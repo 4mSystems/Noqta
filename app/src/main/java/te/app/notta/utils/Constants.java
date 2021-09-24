@@ -4,15 +4,15 @@ public class Constants {
 
     public static final String SPECIALIST = "SPECIALIST";
     public static final String POP = "POP";
-    public static final String FOLLOW_ORDER = "FOLLOW_ORDER";
-    public static final String COMMERCIAL_IMAGE = "commercial_register_photo";
-    public final static String TAX_CARD_PHOTO = "tax_card_photo";
+    public static final String ADD_GROUP = "ADD_GROUP";
+    public static final String ADD_ONE = "ADD_ONE";
+    public final static String ADD_TWO = "ADD_TWO";
     public final static int COMMERCIAL_REQUEST = 6001;
     public final static int TAX_REQUEST = 6002;
     public final static int IDENTITY_REQUEST = 6003;
     public final static int PASSPORT_REQUEST = 6004;
-    public static final String CITIES = "CITIES";
-    public static final String COUNTRIES = "COUNTRIES";
+    public static final String STUDENT = "STUDENT";
+    public static final String SEND_INVITATIONS = "SEND_INVITATIONS";
 
     public final static int LOCATION_STARTED = 1;
     public final static int STOP_LOCATION = 2;
@@ -95,7 +95,7 @@ public class Constants {
     public static final int ORDER_DETAILS_REQUEST = 380;
 
     public static final String back_car_image = "back_car_image";
-    public static final int COMMENT_REQUEST = 381;
+    public static final int ADD_GROUP_REQUEST = 381;
 
     public static final String PRIVACY = "PRIVACY";
     public static final String LIKES_REACTION = "like";

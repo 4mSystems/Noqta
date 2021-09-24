@@ -4,10 +4,10 @@ public class URLS {
     public final static String BASE_URL = "http://noqta-learn.com/api/";
     // post
     public final static String SPECIALIST = "teacher/get-specialists";
-    public final static String SUBSCRIBE = "v1/provider/package";
-    public final static String HOME = "v1/provider/home";
-    public final static String ASK_USER = "v1/ask/post";
-    public final static String EDIT_POST = "v1/post/";
+    public final static String ADD_GROUP = "teacher/create-group";
+    public final static String HOME = "teacher/get-my-groups";
+    public final static String INVITE_STUDENTS = "teacher/search-students?search_key=";
+    public final static String SEND_INVITATIONS = "teacher/invite-students";
     public final static String DELETE_POST = "v1/post/";
     public final static String DELETE_QUESTIONED_POST = "v1/question_request?post_id=";
 

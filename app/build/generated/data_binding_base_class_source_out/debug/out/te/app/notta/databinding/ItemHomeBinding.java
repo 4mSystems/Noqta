@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.button.MaterialButton;
+import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -39,7 +39,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   public final MaterialButton btnTechType;
 
   @NonNull
-  public final AppCompatImageView icUser;
+  public final RoundedImageView icUser;
 
   @NonNull
   public final CustomTextViewMedium tvGroupName;
@@ -55,7 +55,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
 
   protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br1,
       MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRequests,
-      MaterialButton btnStudents, MaterialButton btnTechType, AppCompatImageView icUser,
+      MaterialButton btnStudents, MaterialButton btnTechType, RoundedImageView icUser,
       CustomTextViewMedium tvGroupName, CustomTextViewMedium tvUserName,
       CustomTextViewRegular tvUserWork) {
     super(_bindingComponent, _root, _localFieldCount);

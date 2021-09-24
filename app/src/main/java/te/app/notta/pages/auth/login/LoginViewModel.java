@@ -30,7 +30,8 @@ public class LoginViewModel extends BaseViewModel {
 
 
     public void loginPassword() {
-        getLoginRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
+//        getLoginRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
+        getLoginRequest().setToken("sagfkjsdgf");
         if (getLoginRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             compositeDisposable.add(repository.loginPassword(loginRequest));

@@ -4,21 +4,21 @@ package te.app.notta.pages.teacher.viewModels;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.notta.repository.AuthRepository;
+import te.app.notta.repository.GroupRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class AddGroupViewModel_MembersInjector implements MembersInjector<AddGroupViewModel> {
-  private final Provider<AuthRepository> repositoryProvider;
+  private final Provider<GroupRepository> repositoryProvider;
 
-  public AddGroupViewModel_MembersInjector(Provider<AuthRepository> repositoryProvider) {
+  public AddGroupViewModel_MembersInjector(Provider<GroupRepository> repositoryProvider) {
     this.repositoryProvider = repositoryProvider;
   }
 
   public static MembersInjector<AddGroupViewModel> create(
-      Provider<AuthRepository> repositoryProvider) {
+      Provider<GroupRepository> repositoryProvider) {
     return new AddGroupViewModel_MembersInjector(repositoryProvider);
   }
 
@@ -28,7 +28,7 @@ public final class AddGroupViewModel_MembersInjector implements MembersInjector<
   }
 
   @InjectedFieldSignature("te.app.notta.pages.teacher.viewModels.AddGroupViewModel.repository")
-  public static void injectRepository(AddGroupViewModel instance, AuthRepository repository) {
+  public static void injectRepository(AddGroupViewModel instance, GroupRepository repository) {
     instance.repository = repository;
   }
 }

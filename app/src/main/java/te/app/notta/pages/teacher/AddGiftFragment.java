@@ -15,11 +15,13 @@ import te.app.notta.R;
 import te.app.notta.base.BaseFragment;
 import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
+import te.app.notta.base.ParentActivity;
 import te.app.notta.databinding.FragmentAddGiftBinding;
 import te.app.notta.databinding.FragmentAddGroupBinding;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.auth.login.LoginFragment;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel;
+import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
 public class AddGiftFragment extends BaseFragment {
@@ -51,6 +53,7 @@ public class AddGiftFragment extends BaseFragment {
 //                }
 //            }
         });
+
     }
 
     @Override

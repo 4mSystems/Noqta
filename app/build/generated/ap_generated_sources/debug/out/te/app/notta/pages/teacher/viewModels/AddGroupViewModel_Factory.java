@@ -3,19 +3,19 @@ package te.app.notta.pages.teacher.viewModels;
 
 import dagger.internal.Factory;
 import javax.inject.Provider;
-import te.app.notta.repository.AuthRepository;
+import te.app.notta.repository.GroupRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class AddGroupViewModel_Factory implements Factory<AddGroupViewModel> {
-  private final Provider<AuthRepository> repositoryProvider;
+  private final Provider<GroupRepository> repositoryProvider;
 
-  private final Provider<AuthRepository> repositoryProvider2;
+  private final Provider<GroupRepository> repositoryProvider2;
 
-  public AddGroupViewModel_Factory(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public AddGroupViewModel_Factory(Provider<GroupRepository> repositoryProvider,
+      Provider<GroupRepository> repositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
   }
@@ -27,12 +27,12 @@ public final class AddGroupViewModel_Factory implements Factory<AddGroupViewMode
     return instance;
   }
 
-  public static AddGroupViewModel_Factory create(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public static AddGroupViewModel_Factory create(Provider<GroupRepository> repositoryProvider,
+      Provider<GroupRepository> repositoryProvider2) {
     return new AddGroupViewModel_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static AddGroupViewModel newInstance(AuthRepository repository) {
+  public static AddGroupViewModel newInstance(GroupRepository repository) {
     return new AddGroupViewModel(repository);
   }
 }

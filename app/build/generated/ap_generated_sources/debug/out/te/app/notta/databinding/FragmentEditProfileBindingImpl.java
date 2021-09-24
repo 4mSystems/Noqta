@@ -28,9 +28,9 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     private final androidx.appcompat.widget.AppCompatEditText mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback11;
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback10;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -137,8 +137,8 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -401,9 +401,9 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback10);
+            this.appCompatButtonNext.setOnClickListener(mCallback11);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback9);
+            this.mboundView1.setOnClickListener(mCallback10);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x2cL) != 0) {

@@ -39,7 +39,7 @@ import te.app.notta.utils.session.UserHelper;
 
 public class ParentActivity extends AppCompatActivity implements
         ConnectivityReceiver.ConnectivityReceiverListener, RealTimeReceiver.MessageReceiverListener, RealTimeReceiver.NotificationCounterListener {
-    public MutableLiveData<Boolean> locationLiveData;
+    public MutableLiveData<Mutable> mutableLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
     RealTimeReceiver realTimeReceiver = new RealTimeReceiver();
     public ActivityResultLauncher<Intent> someActivityResultLauncher;
@@ -48,7 +48,7 @@ public class ParentActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        locationLiveData = new MutableLiveData<>();
+        mutableLiveData = new MutableLiveData<>();
         initializeLanguage();
         initializeToken();
         initializeProgress();

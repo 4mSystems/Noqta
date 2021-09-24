@@ -20,12 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ic_user"
                 android:layout_width="@dimen/dp65w"
                 android:layout_height="@dimen/dp65h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
+                app:riv_corner_radius_bottom_right="@dimen/dp4h"
+                app:riv_corner_radius_bottom_left="@dimen/dp4h"
+                app:imageUrl="@{viewModel.groupItem.teacher.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
-                android:text="Physics Group for Secondary"
+                android:text="@{viewModel.groupItem.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black_op"
@@ -49,7 +52,7 @@
                 android:layout_margin="@dimen/dp4h"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Mostafa Elnagar"
+                android:text="@{viewModel.groupItem.teacher.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/second_line_color"
@@ -64,7 +67,7 @@
                 android:layout_margin="@dimen/dp4h"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Senior Software Developer"
+                android:text="@{viewModel.groupItem.description}"
                 android:textAlignment="viewStart"
                 android:textColor="@color/medium_color"
                 android:textSize="@dimen/sp10"
@@ -79,10 +82,10 @@
                 android:layout_marginEnd="@dimen/dp4w"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
-                android:text="Physics Teacher"
+                android:text="@{viewModel.groupItem.teacher.specialistName}"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
+                android:textSize="@dimen/sp6"
                 app:backgroundTint="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_group_name" />
@@ -96,9 +99,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_students"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="96\nStudents"
+                android:text="@{viewModel.groupItem.studentsCount.concat(@string/students)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp8"
@@ -106,9 +109,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_groups"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="15\ntasks"
+                android:text="@{viewModel.groupItem.tasksCount.concat(@string/tasks)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp8"
@@ -116,9 +119,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_requests"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="96\nRequest"
+                android:text="@{viewModel.groupItem.requestsCount.concat(@string/requests)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp8"
@@ -126,7 +129,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_join"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/join"
                 android:textAllCaps="false"
@@ -139,13 +142,14 @@
             <androidx.constraintlayout.helper.widget.Flow
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp8w"
-                android:layout_marginStart="@dimen/dp8w"
                 app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join"
                 app:flow_horizontalGap="@dimen/dp6w"
                 app:flow_horizontalStyle="packed"
                 app:flow_verticalGap="@dimen/dp2w"
+                app:flow_wrapMode="chain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/br1" />

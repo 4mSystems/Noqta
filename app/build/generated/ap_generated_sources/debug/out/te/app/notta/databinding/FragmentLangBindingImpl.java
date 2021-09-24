@@ -32,7 +32,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback35;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,7 +61,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -135,7 +135,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback30);
+            this.back.setOnClickListener(mCallback35);
         }
     }
     // Listener Stub Implementations

@@ -315,9 +315,9 @@ ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:42:13-84
 activity#te.app.notta.activity.MainActivity
-ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:45:9-48:57
+ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:45:9-48:70
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:48:13-54
+		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:48:13-67
 	android:configChanges
 		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:47:13-96
 	android:name
@@ -325,7 +325,7 @@ ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifes
 activity#te.app.notta.activity.BaseActivity
 ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:50:9-60:20
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:53:13-54
+		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:53:13-67
 	android:configChanges
 		ADDED from /home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:52:13-96
 	android:name

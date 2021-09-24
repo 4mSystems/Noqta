@@ -29,7 +29,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback30;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,7 +55,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback28 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -129,7 +129,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback28);
+            this.back.setOnClickListener(mCallback30);
         }
     }
     // Listener Stub Implementations

@@ -80,7 +80,7 @@ public class ConfirmCodeFragment extends BaseFragment {
             if (((Mutable) o).message.equals(Constants.CONFIRM_CODE)) {
                 toastMessage(((UsersResponse) mutable.object).mMessage);
                 if (viewModel.getPassingObject().getId() != Constants.CHECK_CONFIRM_NAV_REGISTER) {
-                    UserHelper.getInstance(requireActivity()).addJwt(((UsersResponse) ((Mutable) o).object).getData().getToken());
+                    UserHelper.getInstance(requireActivity()).addJwt(((UsersResponse) ((Mutable) o).object).getData().getAccess_token());
                     MovementHelper.startActivity(requireActivity(), ChangePasswordFragment.class.getName(), null, null);
                 }
                 viewModel.goBack(requireActivity());

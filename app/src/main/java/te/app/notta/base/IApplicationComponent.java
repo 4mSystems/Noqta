@@ -28,6 +28,7 @@ import te.app.notta.pages.settings.ProfileFragment;
 import te.app.notta.pages.splash.SplashFragment;
 import te.app.notta.pages.teacher.AddGiftFragment;
 import te.app.notta.pages.teacher.AddGroupFragment;
+import te.app.notta.pages.teacher.InviteStudentsToGroupFragment;
 import te.app.notta.pages.teacher.StudentRequestsFragment;
 
 @Singleton
@@ -80,7 +81,10 @@ public interface IApplicationComponent {
     void inject(StudentRequestsFragment studentRequestsFragment);
 
     void inject(LangFragment langFragment);
+
     void inject(GroupDetailsFragment groupDetailsFragment);
+
+    void inject(InviteStudentsToGroupFragment inviteStudentsToGroupFragment);
 
     @Component.Builder
     interface Builder {

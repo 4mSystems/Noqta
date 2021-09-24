@@ -3,8 +3,10 @@ package te.app.notta.customViews.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,13 +19,16 @@ import androidx.databinding.InverseBindingAdapter;
 import androidx.databinding.InverseBindingListener;
 
 import te.app.notta.R;
+import te.app.notta.base.ParentActivity;
+import te.app.notta.model.base.Mutable;
+import te.app.notta.utils.Constants;
 
 public class IncrementalView extends ConstraintLayout {
     View view;
-    private TextView incrementalViewText;
+    public TextView incrementalViewText;
     ImageView increment, decrement;
     public String value = "1";
-    int type;
+    String type;
     Context context;
 
     public IncrementalView(@NonNull Context context) {
@@ -51,7 +56,7 @@ public class IncrementalView extends ConstraintLayout {
         int n = a.getIndexCount();
         for (int i = 0; i < n; i++) {
             //note that you are accessing standard attributes using your attrs identifier
-            type = a.getInt(R.styleable.IncrementalView_type, 0);
+            type = a.getString(R.styleable.IncrementalView_type);
         }
         a.recycle();
         view = inflate(getContext(), R.layout.incremental_view, this);
@@ -59,11 +64,15 @@ public class IncrementalView extends ConstraintLayout {
         increment = findViewById(R.id.increment);
         decrement = findViewById(R.id.decrement);
         increment.setOnClickListener(v -> {
-            incrementalViewText.setText(String.valueOf(Integer.parseInt(incrementalViewText.getText().toString()) + 1));
+            Log.e("initView", "initView: " + type);
+            incrementalViewText.setText(String.valueOf(Integer.parseInt(!TextUtils.isEmpty(incrementalViewText.getText().toString()) ? incrementalViewText.getText().toString() : "1") + 1));
+            ((ParentActivity) context).mutableLiveData.setValue(new Mutable(type, incrementalViewText.getText()));
         });
         decrement.setOnClickListener(v -> {
-            if (!incrementalViewText.getText().toString().equals("0") && !incrementalViewText.getText().toString().equals("1"))
-                incrementalViewText.setText(String.valueOf(Integer.parseInt(incrementalViewText.getText().toString()) - 1));
+            if (!incrementalViewText.getText().toString().equals("0") && !incrementalViewText.getText().toString().equals("1")) {
+                incrementalViewText.setText(String.valueOf(Integer.parseInt(!TextUtils.isEmpty(incrementalViewText.getText().toString()) ? incrementalViewText.getText().toString() : "1") - 1));
+                ((ParentActivity) context).mutableLiveData.setValue(new Mutable(type, incrementalViewText.getText()));
+            }
         });
         value = incrementalViewText.getText().toString();
     }

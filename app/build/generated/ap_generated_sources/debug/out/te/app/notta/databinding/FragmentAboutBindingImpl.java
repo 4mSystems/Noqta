@@ -28,7 +28,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
     private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback17;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback17 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -125,7 +125,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback15);
+            this.mboundView1.setOnClickListener(mCallback17);
         }
     }
     // Listener Stub Implementations

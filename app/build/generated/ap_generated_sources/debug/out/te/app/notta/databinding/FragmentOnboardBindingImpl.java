@@ -21,7 +21,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.skip.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback2 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -165,8 +165,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback3);
-            this.skip.setOnClickListener(mCallback2);
+            this.appCompatButtonNext.setOnClickListener(mCallback4);
+            this.skip.setOnClickListener(mCallback3);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -178,25 +178,6 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // onBoardViewModels
-                te.app.notta.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
-                // onBoardViewModels != null
-                boolean onBoardViewModelsJavaLangObjectNull = false;
-
-
-
-                onBoardViewModelsJavaLangObjectNull = (onBoardViewModels) != (null);
-                if (onBoardViewModelsJavaLangObjectNull) {
-
-
-
-
-                    onBoardViewModels.action(te.app.notta.utils.Constants.NEXT);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // onBoardViewModels
@@ -213,6 +194,25 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
 
 
                     onBoardViewModels.action(te.app.notta.utils.Constants.LOGIN);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // onBoardViewModels
+                te.app.notta.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
+                // onBoardViewModels != null
+                boolean onBoardViewModelsJavaLangObjectNull = false;
+
+
+
+                onBoardViewModelsJavaLangObjectNull = (onBoardViewModels) != (null);
+                if (onBoardViewModelsJavaLangObjectNull) {
+
+
+
+
+                    onBoardViewModels.action(te.app.notta.utils.Constants.NEXT);
                 }
                 break;
             }

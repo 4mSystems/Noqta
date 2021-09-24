@@ -5,6 +5,7 @@ import dagger.internal.DoubleCheck;
 import javax.inject.Provider;
 import te.app.notta.activity.BaseActivity;
 import te.app.notta.activity.MainActivity;
+import te.app.notta.activity.MainActivity_MembersInjector;
 import te.app.notta.connection.Api;
 import te.app.notta.connection.ConnectionHelper;
 import te.app.notta.connection.ConnectionHelper_Factory;
@@ -84,6 +85,8 @@ import te.app.notta.pages.teacher.AddGiftFragment;
 import te.app.notta.pages.teacher.AddGiftFragment_MembersInjector;
 import te.app.notta.pages.teacher.AddGroupFragment;
 import te.app.notta.pages.teacher.AddGroupFragment_MembersInjector;
+import te.app.notta.pages.teacher.InviteStudentsToGroupFragment;
+import te.app.notta.pages.teacher.InviteStudentsToGroupFragment_MembersInjector;
 import te.app.notta.pages.teacher.StudentRequestsFragment;
 import te.app.notta.pages.teacher.StudentRequestsFragment_MembersInjector;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel;
@@ -91,6 +94,8 @@ import te.app.notta.pages.teacher.viewModels.AddGroupViewModel_Factory;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel_MembersInjector;
 import te.app.notta.repository.AuthRepository;
 import te.app.notta.repository.AuthRepository_Factory;
+import te.app.notta.repository.GroupRepository;
+import te.app.notta.repository.GroupRepository_Factory;
 
 @SuppressWarnings({
     "unchecked",
@@ -100,6 +105,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<Api> webServiceProvider;
 
   private Provider<ConnectionHelper> connectionHelperProvider;
+
+  private Provider<GroupRepository> groupRepositoryProvider;
 
   private Provider<AuthRepository> authRepositoryProvider;
 
@@ -114,6 +121,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   public static IApplicationComponent create() {
     return new Builder().build();
+  }
+
+  private HomeViewModel homeViewModel() {
+    return injectHomeViewModel(HomeViewModel_Factory.newInstance(groupRepositoryProvider.get()));
   }
 
   private SplashViewModel splashViewModel() {
@@ -140,10 +151,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
-  private HomeViewModel homeViewModel() {
-    return injectHomeViewModel(HomeViewModel_Factory.newInstance(authRepositoryProvider.get()));
-  }
-
   private PointsViewModel pointsViewModel() {
     return injectPointsViewModel(PointsViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
@@ -157,18 +164,20 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddGroupViewModel addGroupViewModel() {
-    return injectAddGroupViewModel(AddGroupViewModel_Factory.newInstance(authRepositoryProvider.get()));
+    return injectAddGroupViewModel(AddGroupViewModel_Factory.newInstance(groupRepositoryProvider.get()));
   }
 
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
+    this.groupRepositoryProvider = DoubleCheck.provider(GroupRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
   public void inject(MainActivity mainActivity) {
+    injectMainActivity(mainActivity);
   }
 
   @Override
@@ -290,6 +299,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectGroupDetailsFragment(groupDetailsFragment);
   }
 
+  @Override
+  public void inject(InviteStudentsToGroupFragment inviteStudentsToGroupFragment) {
+    injectInviteStudentsToGroupFragment(inviteStudentsToGroupFragment);
+  }
+
+  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
+    HomeViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
+    return instance;
+  }
+
+  private MainActivity injectMainActivity(MainActivity instance) {
+    MainActivity_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
   private SplashViewModel injectSplashViewModel(SplashViewModel instance) {
     SplashViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
     return instance;
@@ -352,11 +376,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private RegisterFragment injectRegisterFragment(RegisterFragment instance) {
     RegisterFragment_MembersInjector.injectViewModel(instance, registerViewModel());
-    return instance;
-  }
-
-  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
-    HomeViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
     return instance;
   }
 
@@ -431,7 +450,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddGroupViewModel injectAddGroupViewModel(AddGroupViewModel instance) {
-    AddGroupViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    AddGroupViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
     return instance;
   }
 
@@ -457,6 +476,12 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private GroupDetailsFragment injectGroupDetailsFragment(GroupDetailsFragment instance) {
     GroupDetailsFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
+  private InviteStudentsToGroupFragment injectInviteStudentsToGroupFragment(
+      InviteStudentsToGroupFragment instance) {
+    InviteStudentsToGroupFragment_MembersInjector.injectViewModel(instance, addGroupViewModel());
     return instance;
   }
 

@@ -9,16 +9,25 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
+import te.app.notta.customViews.views.CustomBottomNavigationView;
+import te.app.notta.pages.home.viewModels.HomeViewModel;
 
 public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
+  public final FloatingActionButton fab;
+
+  @NonNull
   public final FrameLayout flHomeContainer;
+
+  @NonNull
+  public final CustomBottomNavigationView homeNavigationMenu;
 
   @NonNull
   public final LinearLayout llBaseActionBarContainer;
@@ -26,17 +35,26 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final ConstraintLayout llBaseContainer;
 
-  @NonNull
-  public final SwipeRefreshLayout swipeContainer;
+  @Bindable
+  protected HomeViewModel mViewModel;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FrameLayout flHomeContainer, LinearLayout llBaseActionBarContainer,
-      ConstraintLayout llBaseContainer, SwipeRefreshLayout swipeContainer) {
+      FloatingActionButton fab, FrameLayout flHomeContainer,
+      CustomBottomNavigationView homeNavigationMenu, LinearLayout llBaseActionBarContainer,
+      ConstraintLayout llBaseContainer) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.fab = fab;
     this.flHomeContainer = flHomeContainer;
+    this.homeNavigationMenu = homeNavigationMenu;
     this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.llBaseContainer = llBaseContainer;
-    this.swipeContainer = swipeContainer;
+  }
+
+  public abstract void setViewModel(@Nullable HomeViewModel viewModel);
+
+  @Nullable
+  public HomeViewModel getViewModel() {
+    return mViewModel;
   }
 
   @NonNull

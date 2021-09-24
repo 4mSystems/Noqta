@@ -6,11 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
@@ -21,6 +23,9 @@ import te.app.notta.customViews.views.IncrementalView;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel;
 
 public abstract class FragmentAddGroupBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton appCompatButtonNext;
+
   @NonNull
   public final TextInputEditText auto;
 
@@ -52,10 +57,16 @@ public abstract class FragmentAddGroupBinding extends ViewDataBinding {
   public final TextInputLayout inputStudents;
 
   @NonNull
-  public final TextInputLayout inputStudentsMembers;
+  public final TextInputLayout inputTasks;
 
   @NonNull
-  public final TextInputLayout inputTasks;
+  public final TextInputEditText noOfStudents;
+
+  @NonNull
+  public final TextInputEditText noOfTasks;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
 
   @NonNull
   public final CustomTextViewMedium tvProfileTitle;
@@ -64,13 +75,15 @@ public abstract class FragmentAddGroupBinding extends ViewDataBinding {
   protected AddGroupViewModel mViewmodel;
 
   protected FragmentAddGroupBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText auto, FloatingActionButton back, AppCompatImageView boardHeader,
-      AppCompatImageView icLogo, IncrementalView incrementalViewStudentCount,
-      IncrementalView incrementalViewTasksCount, TextInputLayout inputDate,
-      TextInputLayout inputGroupDesc, TextInputLayout inputGroupName, TextInputLayout inputStudents,
-      TextInputLayout inputStudentsMembers, TextInputLayout inputTasks,
+      AppCompatButton appCompatButtonNext, TextInputEditText auto, FloatingActionButton back,
+      AppCompatImageView boardHeader, AppCompatImageView icLogo,
+      IncrementalView incrementalViewStudentCount, IncrementalView incrementalViewTasksCount,
+      TextInputLayout inputDate, TextInputLayout inputGroupDesc, TextInputLayout inputGroupName,
+      TextInputLayout inputStudents, TextInputLayout inputTasks, TextInputEditText noOfStudents,
+      TextInputEditText noOfTasks, CircularProgressIndicator progress,
       CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appCompatButtonNext = appCompatButtonNext;
     this.auto = auto;
     this.back = back;
     this.boardHeader = boardHeader;
@@ -81,8 +94,10 @@ public abstract class FragmentAddGroupBinding extends ViewDataBinding {
     this.inputGroupDesc = inputGroupDesc;
     this.inputGroupName = inputGroupName;
     this.inputStudents = inputStudents;
-    this.inputStudentsMembers = inputStudentsMembers;
     this.inputTasks = inputTasks;
+    this.noOfStudents = noOfStudents;
+    this.noOfTasks = noOfTasks;
+    this.progress = progress;
     this.tvProfileTitle = tvProfileTitle;
   }
 
