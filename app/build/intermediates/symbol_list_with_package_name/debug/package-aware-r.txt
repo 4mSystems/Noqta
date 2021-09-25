@@ -435,6 +435,7 @@ attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
+attr fit_mode
 attr floatingActionButtonStyle
 attr flow_firstHorizontalBias
 attr flow_firstHorizontalStyle
@@ -469,6 +470,7 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr forceApplySystemWindowInsetTop
+attr foreground
 attr foregroundInsidePadding
 attr framePosition
 attr gapBetweenBars
@@ -675,6 +677,8 @@ attr lottie_repeatMode
 attr lottie_scale
 attr lottie_speed
 attr lottie_url
+attr matchHeightToWidth
+attr matchWidthToHeight
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -1381,6 +1385,9 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tedbottompicker_camera
+color tedbottompicker_gallery
+color tedbottompicker_selected
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color text_input_layout_stroke_color
@@ -2920,6 +2927,8 @@ dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
+dimen tedbottompicker_grid_layout_margin
+dimen tedbottompicker_selected_image_height
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
 dimen test_navigation_bar_active_item_min_width
@@ -3066,6 +3075,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable gallery_photo_selected
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable grand_exit
@@ -3074,30 +3084,37 @@ drawable ic_about
 drawable ic_account
 drawable ic_add
 drawable ic_add_gift
+drawable ic_add_task
+drawable ic_arrow_down
 drawable ic_arrow_left
 drawable ic_back
 drawable ic_board_home
 drawable ic_call_white
+drawable ic_camera
 drawable ic_check_accent
 drawable ic_check_white
 drawable ic_check_white_24dp
+drawable ic_clear
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
 drawable ic_close
 drawable ic_cloud_upload
 drawable ic_contact
+drawable ic_delete
 drawable ic_double_arrow
 drawable ic_edit_profile
 drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_exit
 drawable ic_forget
+drawable ic_gallery
 drawable ic_gift
 drawable ic_groups
 drawable ic_home
 drawable ic_home_notification
 drawable ic_icon_awesome_check_double
 drawable ic_icon_awesome_user_plus
+drawable ic_icon_feather_check_circle
 drawable ic_icon_ionic_md_time
 drawable ic_icon_material_location_on
 drawable ic_info_outline_white_24dp
@@ -3128,6 +3145,8 @@ drawable ic_united_states
 drawable ic_upload
 drawable ic_user
 drawable ic_verify
+drawable ic_warning
+drawable img_error
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3292,13 +3311,17 @@ id br4
 id br5
 id btn_change
 id btn_close
+id btn_done
 id btn_groups
 id btn_join
 id btn_phone
+id btn_remove
 id btn_requests
 id btn_students
+id btn_task
 id btn_tech
 id btn_tech_type
+id btn_yes
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -3491,6 +3514,8 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_auto_image_slider
+id iv_close
+id iv_thumbnail
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3542,9 +3567,9 @@ id media_actions
 id member_profile
 id menuAccount
 id menuAdd
-id menuConversations
-id menuFavorites
 id menuHome
+id menuMore
+id menuTasks
 id message
 id middle
 id mini
@@ -3628,7 +3653,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
-id rc_filter
+id rc_gallery
+id rc_groups
 id rc_members
 id rc_students
 id rectangle
@@ -3644,6 +3670,7 @@ id right_side
 id rl_custom_layout
 id rl_grand_call
 id rl_grand_whats
+id root
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -3671,6 +3698,10 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id selected_photo
+id selected_photos_container
+id selected_photos_container_frame
+id selected_photos_empty
 id selection_type
 id sharedValueSet
 id sharedValueUnset
@@ -3794,6 +3825,7 @@ id tv_grand_url
 id tv_group_desc
 id tv_group_desc_value
 id tv_group_name
+id tv_header
 id tv_home_bar_text
 id tv_home_body
 id tv_home_desc
@@ -3813,6 +3845,7 @@ id tv_setting_item
 id tv_show_all
 id tv_tasks
 id tv_teacher_name
+id tv_title
 id tv_user_name
 id tv_user_work
 id tv_video
@@ -3837,6 +3870,7 @@ id vertical
 id vertical_only
 id video_container
 id view_offset_helper
+id view_title_container
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -3926,6 +3960,7 @@ layout abc_tooltip
 layout activity_base
 layout activity_main
 layout custom_dialog
+layout delete_sheet
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3945,6 +3980,7 @@ layout fragment_about
 layout fragment_add_answer
 layout fragment_add_gift
 layout fragment_add_group
+layout fragment_add_task
 layout fragment_change_password
 layout fragment_confirm_code
 layout fragment_contact
@@ -3952,6 +3988,7 @@ layout fragment_edit_profile
 layout fragment_forget_password
 layout fragment_group_details
 layout fragment_group_members
+layout fragment_group_students
 layout fragment_home
 layout fragment_invite_student
 layout fragment_lang
@@ -4046,6 +4083,9 @@ layout select_dialog_singlechoice_material
 layout slider_view
 layout success_sheet
 layout support_simple_spinner_dropdown_item
+layout tedbottompicker_content_view
+layout tedbottompicker_grid_item
+layout tedbottompicker_selected_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
 layout test_design_checkbox
@@ -4099,6 +4139,8 @@ string about_app
 string about_title
 string accept
 string add_answer
+string add_task
+string add_task_title
 string app_name
 string appbar_scrolling_view_behavior
 string arabic
@@ -4107,6 +4149,7 @@ string bottomsheet_action_expand_halfway
 string call
 string call_grand
 string camera
+string cancel
 string certificates
 string change_confirm_password
 string change_header
@@ -4158,7 +4201,10 @@ string contact_title
 string create_gift
 string create_group
 string define_roundedimageview
+string delete_body
+string delete_title
 string design_program
+string done
 string drop_off_skip
 string edit_profile
 string email
@@ -4177,6 +4223,8 @@ string forget_header
 string forget_header1
 string forget_remember
 string gallery
+string gift_body_deleted_successfully
+string gift_deleted_successfully
 string gift_description
 string gift_image
 string gift_name
@@ -4293,6 +4341,7 @@ string name_hint
 string navigation_drawer_close
 string navigation_drawer_open
 string next
+string no_image
 string old_password
 string password
 string password_hint
@@ -4305,6 +4354,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string phone
 string please_select_another_file
+string points_number
 string privacy
 string register
 string register_header
@@ -4312,6 +4362,8 @@ string register_header1
 string register_name
 string register_phone
 string reject
+string remove_group
+string remove_task
 string requests
 string save
 string search_home_hint
@@ -4319,6 +4371,10 @@ string search_menu_title
 string search_student_hint
 string select_file
 string select_image_from
+string select_max_count
+string select_max_count_warning
+string select_min_count
+string selected
 string send
 string send_answer
 string shop
@@ -4330,21 +4386,31 @@ string student
 string students
 string success_body
 string success_title
+string tab_select
 string take_chance
+string task_added_successfully
 string task_answer
 string task_answer_hint
+string task_body_added_successfully
+string task_body_deleted_successfully
+string task_deleted_successfully
+string task_desc
 string tasks
 string tasks_body
 string teacher
+string tedbottompicker_title
 string terms
 string toast_message
 string upload_images
 string upload_images_hint
+string upload_task_images_hint
+string upload_task_video_hint
 string upload_video
 string upload_video_hint
 string verify
 string verify_phone
 string whats
+string yes
 string your_point1
 string your_point2
 style AlertDialog_AppCompat
@@ -5232,6 +5298,8 @@ styleable SwitchCompat android_textOn android_textOff android_thumb showText spl
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text
 styleable TabLayout tabBackground tabContentStart tabGravity tabIconTint tabIconTintMode tabIndicator tabIndicatorAnimationDuration tabIndicatorAnimationMode tabIndicatorColor tabIndicatorFullWidth tabIndicatorGravity tabIndicatorHeight tabInlineLabel tabMaxWidth tabMinWidth tabMode tabPadding tabPaddingBottom tabPaddingEnd tabPaddingStart tabPaddingTop tabRippleColor tabSelectedTextColor tabTextAppearance tabTextColor tabUnboundedRipple
+styleable TedBottomPickerImageView fit_mode foreground
+styleable TedBottomPickerSquareView matchHeightToWidth matchWidthToHeight
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily android_textFontWeight fontFamily fontVariationSettings textAllCaps textLocale
 styleable TextEffects android_textSize android_typeface android_textStyle android_text android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily borderRound borderRoundPercent textFillColor textOutlineColor textOutlineThickness
 styleable TextInputEditText textInputLayoutFocusedRectEnabled
@@ -5248,6 +5316,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

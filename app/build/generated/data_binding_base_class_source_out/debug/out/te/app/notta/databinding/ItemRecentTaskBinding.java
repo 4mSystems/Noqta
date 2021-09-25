@@ -17,7 +17,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel;
 
 public abstract class ItemRecentTaskBinding extends ViewDataBinding {
   @NonNull
@@ -25,6 +25,9 @@ public abstract class ItemRecentTaskBinding extends ViewDataBinding {
 
   @NonNull
   public final Barrier br4;
+
+  @NonNull
+  public final MaterialButton btnRemove;
 
   @NonNull
   public final MaterialButton btnTech;
@@ -39,24 +42,26 @@ public abstract class ItemRecentTaskBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvDetails;
 
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemGroupTasksViewModel mViewModel;
 
   protected ItemRecentTaskBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialCardView MaterialCardView, Barrier br4, MaterialButton btnTech,
-      MaterialButton btnTechType, CustomTextViewRegular tvDate, CustomTextViewMedium tvDetails) {
+      MaterialCardView MaterialCardView, Barrier br4, MaterialButton btnRemove,
+      MaterialButton btnTech, MaterialButton btnTechType, CustomTextViewRegular tvDate,
+      CustomTextViewMedium tvDetails) {
     super(_bindingComponent, _root, _localFieldCount);
     this.MaterialCardView = MaterialCardView;
     this.br4 = br4;
+    this.btnRemove = btnRemove;
     this.btnTech = btnTech;
     this.btnTechType = btnTechType;
     this.tvDate = tvDate;
     this.tvDetails = tvDetails;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemGroupTasksViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemGroupTasksViewModel getViewModel() {
     return mViewModel;
   }
 

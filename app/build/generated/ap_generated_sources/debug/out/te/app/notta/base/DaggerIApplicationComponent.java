@@ -47,6 +47,8 @@ import te.app.notta.pages.home.GroupDetailsFragment;
 import te.app.notta.pages.home.GroupDetailsFragment_MembersInjector;
 import te.app.notta.pages.home.GroupMembersFragment;
 import te.app.notta.pages.home.GroupMembersFragment_MembersInjector;
+import te.app.notta.pages.home.GroupStudentFragment;
+import te.app.notta.pages.home.GroupStudentFragment_MembersInjector;
 import te.app.notta.pages.home.HomeFragment;
 import te.app.notta.pages.home.HomeFragment_MembersInjector;
 import te.app.notta.pages.home.MyGroupsFragment;
@@ -55,6 +57,9 @@ import te.app.notta.pages.home.PointsFragment;
 import te.app.notta.pages.home.PointsFragment_MembersInjector;
 import te.app.notta.pages.home.TasksFragment;
 import te.app.notta.pages.home.TasksFragment_MembersInjector;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel_Factory;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel_MembersInjector;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.pages.home.viewModels.HomeViewModel_Factory;
 import te.app.notta.pages.home.viewModels.HomeViewModel_MembersInjector;
@@ -85,6 +90,8 @@ import te.app.notta.pages.teacher.AddGiftFragment;
 import te.app.notta.pages.teacher.AddGiftFragment_MembersInjector;
 import te.app.notta.pages.teacher.AddGroupFragment;
 import te.app.notta.pages.teacher.AddGroupFragment_MembersInjector;
+import te.app.notta.pages.teacher.AddTaskFragment;
+import te.app.notta.pages.teacher.AddTaskFragment_MembersInjector;
 import te.app.notta.pages.teacher.InviteStudentsToGroupFragment;
 import te.app.notta.pages.teacher.InviteStudentsToGroupFragment_MembersInjector;
 import te.app.notta.pages.teacher.StudentRequestsFragment;
@@ -92,6 +99,9 @@ import te.app.notta.pages.teacher.StudentRequestsFragment_MembersInjector;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel_Factory;
 import te.app.notta.pages.teacher.viewModels.AddGroupViewModel_MembersInjector;
+import te.app.notta.pages.teacher.viewModels.AddTaskViewModel;
+import te.app.notta.pages.teacher.viewModels.AddTaskViewModel_Factory;
+import te.app.notta.pages.teacher.viewModels.AddTaskViewModel_MembersInjector;
 import te.app.notta.repository.AuthRepository;
 import te.app.notta.repository.AuthRepository_Factory;
 import te.app.notta.repository.GroupRepository;
@@ -152,7 +162,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private PointsViewModel pointsViewModel() {
-    return injectPointsViewModel(PointsViewModel_Factory.newInstance(authRepositoryProvider.get()));
+    return injectPointsViewModel(PointsViewModel_Factory.newInstance(groupRepositoryProvider.get()));
   }
 
   private SettingsViewModel settingsViewModel() {
@@ -165,6 +175,14 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AddGroupViewModel addGroupViewModel() {
     return injectAddGroupViewModel(AddGroupViewModel_Factory.newInstance(groupRepositoryProvider.get()));
+  }
+
+  private GroupDetailsViewModel groupDetailsViewModel() {
+    return injectGroupDetailsViewModel(GroupDetailsViewModel_Factory.newInstance(groupRepositoryProvider.get()));
+  }
+
+  private AddTaskViewModel addTaskViewModel() {
+    return injectAddTaskViewModel(AddTaskViewModel_Factory.newInstance(groupRepositoryProvider.get()));
   }
 
   @SuppressWarnings("unchecked")
@@ -304,6 +322,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectInviteStudentsToGroupFragment(inviteStudentsToGroupFragment);
   }
 
+  @Override
+  public void inject(AddTaskFragment addTaskFragment) {
+    injectAddTaskFragment(addTaskFragment);
+  }
+
+  @Override
+  public void inject(GroupStudentFragment groupStudentFragment) {
+    injectGroupStudentFragment(groupStudentFragment);
+  }
+
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
     return instance;
@@ -390,7 +418,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private PointsViewModel injectPointsViewModel(PointsViewModel instance) {
-    PointsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    PointsViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
     return instance;
   }
 
@@ -460,7 +488,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddGiftFragment injectAddGiftFragment(AddGiftFragment instance) {
-    AddGiftFragment_MembersInjector.injectViewModel(instance, addGroupViewModel());
+    AddGiftFragment_MembersInjector.injectViewModel(instance, pointsViewModel());
     return instance;
   }
 
@@ -474,14 +502,34 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private GroupDetailsViewModel injectGroupDetailsViewModel(GroupDetailsViewModel instance) {
+    GroupDetailsViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
+    return instance;
+  }
+
   private GroupDetailsFragment injectGroupDetailsFragment(GroupDetailsFragment instance) {
-    GroupDetailsFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    GroupDetailsFragment_MembersInjector.injectViewModel(instance, groupDetailsViewModel());
     return instance;
   }
 
   private InviteStudentsToGroupFragment injectInviteStudentsToGroupFragment(
       InviteStudentsToGroupFragment instance) {
     InviteStudentsToGroupFragment_MembersInjector.injectViewModel(instance, addGroupViewModel());
+    return instance;
+  }
+
+  private AddTaskViewModel injectAddTaskViewModel(AddTaskViewModel instance) {
+    AddTaskViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
+    return instance;
+  }
+
+  private AddTaskFragment injectAddTaskFragment(AddTaskFragment instance) {
+    AddTaskFragment_MembersInjector.injectViewModel(instance, addTaskViewModel());
+    return instance;
+  }
+
+  private GroupStudentFragment injectGroupStudentFragment(GroupStudentFragment instance) {
+    GroupStudentFragment_MembersInjector.injectViewModel(instance, groupDetailsViewModel());
     return instance;
   }
 

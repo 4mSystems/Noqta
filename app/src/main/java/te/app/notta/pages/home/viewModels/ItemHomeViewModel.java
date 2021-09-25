@@ -17,5 +17,7 @@ public class ItemHomeViewModel extends BaseViewModel {
         return groupItem;
     }
 
-
+    public void itemAction(String action) {
+        getLiveData().setValue(action);
+    }
 }

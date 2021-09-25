@@ -4,6 +4,10 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="te.app.notta.utils.Constants" />
+
         <variable
             name="viewModel"
             type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
@@ -14,6 +18,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="2dp"
+        android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,11 +31,11 @@
                 android:layout_height="@dimen/dp65h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
-                app:riv_corner_radius_bottom_right="@dimen/dp4h"
-                app:riv_corner_radius_bottom_left="@dimen/dp4h"
                 app:imageUrl="@{viewModel.groupItem.teacher.image}"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius_bottom_left="@dimen/dp4h"
+                app:riv_corner_radius_bottom_right="@dimen/dp4h" />
 
             <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_group_name"
@@ -100,7 +105,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_students"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="@{viewModel.groupItem.studentsCount.concat(@string/students)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
@@ -110,7 +115,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_groups"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="@{viewModel.groupItem.tasksCount.concat(@string/tasks)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
@@ -120,7 +125,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_requests"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="@{viewModel.groupItem.requestsCount.concat(@string/requests)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
@@ -130,26 +135,40 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_join"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="@string/join"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp8"
+                android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id?View.VISIBLE:View.GONE}"
                 app:backgroundTint="@color/colorPrimaryDark"
                 app:icon="@drawable/ic_request_waiting"
+                app:iconGravity="textTop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewModel.itemAction(Constants.ADD_TASK)}"
+                android:text="@string/add_task_title"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp8"
+                android:visibility="@{viewModel.groupItem.teacher.id==viewModel.userData.id?View.VISIBLE:View.GONE}"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:icon="@drawable/ic_add_task"
                 app:iconGravity="textTop" />
 
             <androidx.constraintlayout.helper.widget.Flow
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp8w"
-                android:layout_marginTop="@dimen/dp8h"
-                android:layout_marginEnd="@dimen/dp8w"
-                app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join"
+                android:layout_margin="@dimen/dp8w"
+                app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join,btn_task"
                 app:flow_horizontalGap="@dimen/dp6w"
                 app:flow_horizontalStyle="packed"
                 app:flow_verticalGap="@dimen/dp2w"
                 app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/br1" />

@@ -19,9 +19,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.skip.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback4 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -165,8 +165,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback4);
-            this.skip.setOnClickListener(mCallback3);
+            this.appCompatButtonNext.setOnClickListener(mCallback6);
+            this.skip.setOnClickListener(mCallback5);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

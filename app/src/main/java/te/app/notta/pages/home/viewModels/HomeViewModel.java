@@ -1,5 +1,6 @@
 package te.app.notta.pages.home.viewModels;
 
+import android.text.TextUtils;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import javax.inject.Inject;
 
 import te.app.notta.BR;
+import te.app.notta.R;
 import te.app.notta.base.BaseViewModel;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.adapters.GroupsAdapter;
 import te.app.notta.pages.home.models.HomeData;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.notta.repository.GroupRepository;
+import te.app.notta.utils.Constants;
 
 
 public class HomeViewModel extends BaseViewModel {
@@ -28,6 +31,7 @@ public class HomeViewModel extends BaseViewModel {
     GroupRepository repository;
     HomeData homeData;
     GroupsAdapter groupsAdapter;
+    public String searchText = "";
 
     @Inject
     public HomeViewModel(GroupRepository repository) {
@@ -37,7 +41,7 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void home(int page, boolean showProgress) {
-        compositeDisposable.add(repository.getHome(page, showProgress));
+        compositeDisposable.add(repository.getHome(page, showProgress, searchText));
     }
 
     @Bindable
@@ -46,14 +50,32 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setHomeData(HomeData homeData) {
-        if (getGroupsAdapter().getGroupItemList().size() > 0) {
-            getGroupsAdapter().loadMore(homeData.getGroupItemList());
+        if (!TextUtils.isEmpty(searchText)) { // if search required
+            if (homeData.getCurrentPage() > 1) {
+                getGroupsAdapter().loadMore(homeData.getGroupItemList());
+            } else {
+                getGroupsAdapter().update(homeData.getGroupItemList());
+                notifyChange(BR.inviteStudentsAdapter);
+            }
         } else {
-            getGroupsAdapter().update(homeData.getGroupItemList());
-            notifyChange(BR.groupsAdapter);
+            if (getGroupsAdapter().getGroupItemList().size() > 0) {
+                getGroupsAdapter().loadMore(homeData.getGroupItemList());
+            } else {
+                getGroupsAdapter().update(homeData.getGroupItemList());
+                notifyChange(BR.groupsAdapter);
+            }
         }
+        searchProgressVisible.set(false);
         notifyChange(BR.homeData);
         this.homeData = homeData;
+    }
+
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        if (!TextUtils.isEmpty(s)) {
+            searchText = s.toString();
+            home(1, false);
+            searchProgressVisible.set(true);
+        }
     }
 
     @Bindable
@@ -77,22 +99,23 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public boolean onNavigationClick(@NonNull MenuItem item) {
-//        if (item.getItemId() == R.id.menuHome) {
-//            liveData.setValue(new Mutable(Constants.MENU_HOME));
-//            return true;
-//        } else if (item.getItemId() == R.id.menuFavorites) {
-//            liveData.setValue(new Mutable(Constants.MENU_FAVORITE));
-//            return true;
-//        } else if (item.getItemId() == R.id.menuAccount) {
-//            liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
-//            return true;
-//        } else if (item.getItemId() == R.id.menuConversations) {
-//            liveData.setValue(new Mutable(Constants.MENU_CONVERSATIONS));
-//            return true;
-//        } else if (item.getItemId() == R.id.menuAdd) {
-//            liveData.setValue(new Mutable(Constants.MENU_ADD_AD));
-//            return true;
-//        } else
+        if (item.getItemId() == R.id.menuHome) {
+            liveData.setValue(new Mutable(Constants.MENU_HOME));
+            return true;
+        } else if (item.getItemId() == R.id.menuTasks) {
+            if (userData.getType().equals("1"))
+                liveData.setValue(new Mutable(Constants.MENU_TASKS));
+            return true;
+        } else if (item.getItemId() == R.id.menuAdd) {
+            liveData.setValue(new Mutable(Constants.MENU_GIFTS));
+            return true;
+        } else if (item.getItemId() == R.id.menuAccount) {
+            liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
+            return true;
+        } else if (item.getItemId() == R.id.menuMore) {
+            liveData.setValue(new Mutable(Constants.MORE));
+            return true;
+        }
         return false;
     }
 

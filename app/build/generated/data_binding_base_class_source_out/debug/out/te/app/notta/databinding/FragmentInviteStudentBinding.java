@@ -34,24 +34,24 @@ public abstract class FragmentInviteStudentBinding extends ViewDataBinding {
   public final CircularProgressIndicator progress;
 
   @NonNull
-  public final CustomTextViewMedium rcFilter;
+  public final RecyclerView rcStudents;
 
   @NonNull
-  public final RecyclerView rcStudents;
+  public final CustomTextViewMedium tvHeader;
 
   @Bindable
   protected AddGroupViewModel mViewModel;
 
   protected FragmentInviteStudentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       MaterialButton btnClose, AppCompatImageView dialogHeader, TextInputEditText inputSearch,
-      CircularProgressIndicator progress, CustomTextViewMedium rcFilter, RecyclerView rcStudents) {
+      CircularProgressIndicator progress, RecyclerView rcStudents, CustomTextViewMedium tvHeader) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnClose = btnClose;
     this.dialogHeader = dialogHeader;
     this.inputSearch = inputSearch;
     this.progress = progress;
-    this.rcFilter = rcFilter;
     this.rcStudents = rcStudents;
+    this.tvHeader = tvHeader;
   }
 
   public abstract void setViewModel(@Nullable AddGroupViewModel viewModel);

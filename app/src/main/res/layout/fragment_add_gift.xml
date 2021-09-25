@@ -6,9 +6,15 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.notta.utils.Constants" />
+
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.teacher.viewModels.AddGroupViewModel" />
+            type="te.app.notta.pages.home.viewModels.PointsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -78,6 +84,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
+                app:error="@{viewmodel.request.nameError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
+                    android:text="@={viewmodel.request.name}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -105,6 +113,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
+                app:error="@{viewmodel.request.descError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +122,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:text="@={viewmodel.request.description}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -131,6 +141,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
+                app:error="@{viewmodel.request.imageError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,6 +153,8 @@
                     android:drawableEnd="@drawable/ic_upload"
                     android:focusable="false"
                     android:inputType="text"
+                    android:onClick="@{()-> viewmodel.action(Constants.IMAGE)}"
+                    android:text="@={viewmodel.request.image}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -159,6 +172,7 @@
                 app:boxCornerRadiusBottomStart="@dimen/dp27h"
                 app:boxCornerRadiusTopEnd="@dimen/dp27h"
                 app:boxCornerRadiusTopStart="@dimen/dp27h"
+                app:error="@{viewmodel.request.pointsError}"
                 app:helperTextTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +181,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
+                    android:onTextChanged="@{viewmodel.onPointsTextChanged}"
+                    android:text="@={viewmodel.request.points}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -181,21 +197,39 @@
                 app:layout_constraintBottom_toBottomOf="@id/input_points"
                 app:layout_constraintEnd_toEndOf="@id/input_points"
                 app:layout_constraintTop_toTopOf="@id/input_points"
-                app:type="4" />
+                app:type="ADD_ONE"
+                app:value="@{viewmodel.request.points}" />
 
-            <com.google.android.material.button.MaterialButton
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonNext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
-                android:text="@string/create_gift"
+                android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
+                android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+                android:onClick="@{()-> viewmodel.createGift()}"
+                android:text="@string/create_group"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
-                app:backgroundTint="@color/colorAccent"
-                app:cornerRadius="@dimen/dp24h"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/input_points" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+                app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

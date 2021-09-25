@@ -15,7 +15,7 @@ public class SuccessSheetBindingImpl extends SuccessSheetBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.dialog_header, 1);
-        sViewsWithIds.put(R.id.rc_filter, 2);
+        sViewsWithIds.put(R.id.tv_header, 2);
         sViewsWithIds.put(R.id.tv_desc, 3);
         sViewsWithIds.put(R.id.btn_close, 4);
     }
@@ -34,8 +34,8 @@ public class SuccessSheetBindingImpl extends SuccessSheetBinding  {
         super(bindingComponent, root, 0
             , (com.google.android.material.button.MaterialButton) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

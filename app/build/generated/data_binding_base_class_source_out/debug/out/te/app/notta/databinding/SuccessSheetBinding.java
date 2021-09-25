@@ -24,19 +24,19 @@ public abstract class SuccessSheetBinding extends ViewDataBinding {
   public final AppCompatImageView dialogHeader;
 
   @NonNull
-  public final CustomTextViewMedium rcFilter;
-
-  @NonNull
   public final CustomTextViewRegular tvDesc;
 
+  @NonNull
+  public final CustomTextViewMedium tvHeader;
+
   protected SuccessSheetBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton btnClose, AppCompatImageView dialogHeader, CustomTextViewMedium rcFilter,
-      CustomTextViewRegular tvDesc) {
+      MaterialButton btnClose, AppCompatImageView dialogHeader, CustomTextViewRegular tvDesc,
+      CustomTextViewMedium tvHeader) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnClose = btnClose;
     this.dialogHeader = dialogHeader;
-    this.rcFilter = rcFilter;
     this.tvDesc = tvDesc;
+    this.tvHeader = tvHeader;
   }
 
   @NonNull

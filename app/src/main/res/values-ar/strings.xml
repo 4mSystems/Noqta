@@ -146,4 +146,25 @@
     <string name="requests">\nRequest</string>
     <string name="invite_student">Invite students to your group</string>
     <string name="invite">Invite</string>
+    <string name="add_task">Add Tasks</string>
+    <string name="task_desc">Task Description</string>
+    <string name="points_number">Number of Points</string>
+    <string name="upload_task_images_hint">Please Upload Task images to be shown to your students Group</string>
+    <string name="upload_task_video_hint">Please Upload Task Videos to be shown to your students Group</string>
+    <string name="add_task_title">Add Task</string>
+    <string name="selected">Done</string>
+    <string name="tab_select">Tab to select images</string>
+    <string name="select_max_count_warning">Max selection 5</string>
+    <string name="task_added_successfully">You Created Task Successfully</string>
+    <string name="task_body_added_successfully">The Task will be shown automatically to all Students in the Selected Group</string>
+    <string name="remove_group">Remove group</string>
+    <string name="remove_task">Remove Task</string>
+    <string name="delete_title">Are you sure want to Remove Group ?</string>
+    <string name="delete_body">You will Delete Group and all your Students will notify with this</string>
+    <string name="yes">Yes</string>
+    <string name="task_deleted_successfully">Are you want to delete this task ?</string>
+    <string name="task_body_deleted_successfully">You will Delete Task and all your Students will notify with this</string>
+    <string name="gift_deleted_successfully">Are you sure delete Gift ?</string>
+    <string name="gift_body_deleted_successfully">You will delete this gift from your gifts and wont be shown to the groups students</string>
+    <string name="cancel">Cancel</string>
 </resources>

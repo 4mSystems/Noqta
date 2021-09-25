@@ -51,7 +51,7 @@ public class BaseFragment extends Fragment {
         }
     }
 
-    public ParentActivity getActivityBase() {
+    public ParentActivity getParentActivity() {
         return ((ParentActivity) context);
     }
 
@@ -107,6 +107,7 @@ public class BaseFragment extends Fragment {
         this.context = context;
 
     }
+
     public void launchActivityResult(int request, int resultCode, Intent result) {
         Log.e(TAG, "launchActivityResult: " + request);
     }

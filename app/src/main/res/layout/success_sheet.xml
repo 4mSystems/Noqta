@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <te.app.notta.customViews.views.CustomTextViewMedium
-            android:id="@+id/rc_filter"
+            android:id="@+id/tv_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp14h"
@@ -45,7 +45,7 @@
             android:textColor="@color/medium_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rc_filter" />
+            app:layout_constraintTop_toBottomOf="@id/tv_header" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"

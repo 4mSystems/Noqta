@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemHomeBindingImpl extends ItemHomeBinding  {
+public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,27 +14,31 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.br1, 9);
-        sViewsWithIds.put(R.id.btn_join, 10);
+        sViewsWithIds.put(R.id.br1, 11);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private ItemHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[9]
+            , (androidx.constraintlayout.widget.Barrier) bindings[11]
             , (com.google.android.material.button.MaterialButton) bindings[7]
-            , (com.google.android.material.button.MaterialButton) bindings[10]
+            , (com.google.android.material.button.MaterialButton) bindings[9]
             , (com.google.android.material.button.MaterialButton) bindings[8]
             , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[10]
             , (com.google.android.material.button.MaterialButton) bindings[5]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[1]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
@@ -42,8 +46,10 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[4]
             );
         this.btnGroups.setTag(null);
+        this.btnJoin.setTag(null);
         this.btnRequests.setTag(null);
         this.btnStudents.setTag(null);
+        this.btnTask.setTag(null);
         this.btnTechType.setTag(null);
         this.icUser.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
@@ -53,6 +59,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
         this.tvUserWork.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -127,20 +135,27 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewModelUserDataId = 0;
         te.app.notta.pages.auth.models.UserData viewModelGroupItemTeacher = null;
+        int viewModelGroupItemTeacherId = 0;
         java.lang.String viewModelGroupItemDescription = null;
         te.app.notta.pages.home.models.GroupItem viewModelGroupItem = null;
         java.lang.String viewModelGroupItemStudentsCountConcatBtnStudentsAndroidStringStudents = null;
+        boolean viewModelGroupItemTeacherIdViewModelUserDataId = false;
         java.lang.String viewModelGroupItemStudentsCount = null;
         java.lang.String viewModelGroupItemRequestsCountConcatBtnRequestsAndroidStringRequests = null;
+        int viewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE = 0;
         java.lang.String viewModelGroupItemName = null;
         java.lang.String viewModelGroupItemTasksCount = null;
         java.lang.String viewModelGroupItemTeacherSpecialistName = null;
+        int ViewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE1 = 0;
         java.lang.String viewModelGroupItemTeacherName = null;
+        te.app.notta.pages.auth.models.UserData viewModelUserData = null;
         java.lang.String viewModelGroupItemTeacherImage = null;
         java.lang.String viewModelGroupItemTasksCountConcatBtnGroupsAndroidStringTasks = null;
         java.lang.String viewModelGroupItemRequestsCount = null;
         te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+        boolean ViewModelGroupItemTeacherIdViewModelUserDataId1 = false;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -149,6 +164,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
                 if (viewModel != null) {
                     // read viewModel.groupItem
                     viewModelGroupItem = viewModel.getGroupItem();
+                    // read viewModel.userData
+                    viewModelUserData = viewModel.userData;
                 }
 
 
@@ -166,9 +183,15 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
                     // read viewModel.groupItem.requestsCount
                     viewModelGroupItemRequestsCount = viewModelGroupItem.getRequestsCount();
                 }
+                if (viewModelUserData != null) {
+                    // read viewModel.userData.id
+                    viewModelUserDataId = viewModelUserData.getId();
+                }
 
 
                 if (viewModelGroupItemTeacher != null) {
+                    // read viewModel.groupItem.teacher.id
+                    viewModelGroupItemTeacherId = viewModelGroupItemTeacher.getId();
                     // read viewModel.groupItem.teacher.specialistName
                     viewModelGroupItemTeacherSpecialistName = viewModelGroupItemTeacher.getSpecialistName();
                     // read viewModel.groupItem.teacher.name
@@ -188,29 +211,111 @@ public class ItemHomeBindingImpl extends ItemHomeBinding  {
                     // read viewModel.groupItem.requestsCount.concat(@android:string/requests)
                     viewModelGroupItemRequestsCountConcatBtnRequestsAndroidStringRequests = viewModelGroupItemRequestsCount.concat(btnRequests.getResources().getString(R.string.requests));
                 }
+
+
+                // read viewModel.groupItem.teacher.id == viewModel.userData.id
+                viewModelGroupItemTeacherIdViewModelUserDataId = (viewModelGroupItemTeacherId) == (viewModelUserDataId);
+                // read viewModel.groupItem.teacher.id != viewModel.userData.id
+                ViewModelGroupItemTeacherIdViewModelUserDataId1 = (viewModelGroupItemTeacherId) != (viewModelUserDataId);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewModelGroupItemTeacherIdViewModelUserDataId) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(ViewModelGroupItemTeacherIdViewModelUserDataId1) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
+                ViewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE1 = ((viewModelGroupItemTeacherIdViewModelUserDataId) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
+                viewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE = ((ViewModelGroupItemTeacherIdViewModelUserDataId1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnGroups, viewModelGroupItemTasksCountConcatBtnGroupsAndroidStringTasks);
+            this.btnJoin.setVisibility(viewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnRequests, viewModelGroupItemRequestsCountConcatBtnRequestsAndroidStringRequests);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnStudents, viewModelGroupItemStudentsCountConcatBtnStudentsAndroidStringStudents);
+            this.btnTask.setVisibility(ViewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE1);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnTechType, viewModelGroupItemTeacherSpecialistName);
             te.app.notta.base.ApplicationBinding.loadImage(this.icUser, viewModelGroupItemTeacherImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupName, viewModelGroupItemName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserName, viewModelGroupItemTeacherName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelGroupItemDescription);
         }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.btnTask.setOnClickListener(mCallback8);
+            this.mboundView0.setOnClickListener(mCallback7);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.ADD_TASK);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.GROUP_DETAILS);
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.groupItem
         flag 2 (0x3L): null
+        flag 3 (0x4L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

@@ -20,6 +20,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,8 +30,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
+import gun0912.tedbottompicker.TedRxBottomPicker;
 import te.app.notta.base.MyApplication;
 import te.app.notta.connection.FileObject;
 import te.app.notta.utils.Constants;
@@ -103,17 +106,6 @@ public class FileOperations {
         return null;
     }
 
-
-    /**
-     * Get the value of the data column for this Uri. This is useful for
-     * MediaStore Uris, and other file-based ContentProviders.
-     *
-     * @param context       The context.
-     * @param uri           The Uri to query.
-     * @param selection     (Optional) Filter used in the query.
-     * @param selectionArgs (Optional) Selection arguments used in the query.
-     * @return The value of the _data column, which is typically a file path.
-     */
     private static String getDataColumn(Context context, Uri uri, String selection,
                                         String[] selectionArgs) {
 
@@ -137,27 +129,14 @@ public class FileOperations {
         return null;
     }
 
-
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is ExternalStorageProvider.
-     */
     private static boolean isExternalStorageDocument(Uri uri) {
         return "com.android.externalstorage.documents".equals(uri.getAuthority());
     }
 
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is DownloadsProvider.
-     */
     private static boolean isDownloadsDocument(Uri uri) {
         return "com.android.providers.downloads.documents".equals(uri.getAuthority());
     }
 
-    /**
-     * @param uri The Uri to check.
-     * @return Whether the Uri authority is MediaProvider.
-     */
     private static boolean isMediaDocument(Uri uri) {
         return "com.android.providers.media.documents".equals(uri.getAuthority());
     }
@@ -287,6 +266,13 @@ public class FileOperations {
         return volleyFileObject;
     }
 
+    public static FileObject getFileObject(Context context, Uri dataUrl, String paramName, int fileType) {
+        String filePath = getPath(context, dataUrl);
+        FileObject volleyFileObject = new FileObject(paramName, filePath, fileType);
+        volleyFileObject.setUri(dataUrl);
+        return volleyFileObject;
+    }
+
 
     public static void pickImage(Context context, int request) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
@@ -339,4 +325,18 @@ public class FileOperations {
 
     }
 
+    @SuppressLint("CheckResult")
+    public static void PickMultImages(Context context, int request, List<Uri> selectedUriList) {
+        TedRxBottomPicker.with((FragmentActivity) context)
+                //.setPeekHeight(getResources().getDisplayMetrics().heightPixels/2)
+                .setPeekHeight(1600)
+                .showTitle(false)
+                .setCompleteButtonText("Done")
+                .setEmptySelectionText("No Select")
+                .setSelectedUriList(selectedUriList)
+                .showMultiImage()
+                .subscribe(uris -> {
+                    // here is selected image uri list
+                }, Throwable::printStackTrace);
+    }
 }

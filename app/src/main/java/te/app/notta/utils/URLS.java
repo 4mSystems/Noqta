@@ -5,26 +5,26 @@ public class URLS {
     // post
     public final static String SPECIALIST = "teacher/get-specialists";
     public final static String ADD_GROUP = "teacher/create-group";
-    public final static String HOME = "teacher/get-my-groups";
+    public final static String HOME = "teacher/get-my-groups?search_key=";
     public final static String INVITE_STUDENTS = "teacher/search-students?search_key=";
     public final static String SEND_INVITATIONS = "teacher/invite-students";
-    public final static String DELETE_POST = "v1/post/";
-    public final static String DELETE_QUESTIONED_POST = "v1/question_request?post_id=";
+    public final static String ADD_TASK = "teacher/create-task";
+    public final static String GROUP_DETAILS = "teacher/group-details?group_id=";
 
-    public final static String SERVICES = "services";
+    public final static String DELETE_GROUP = "teacher/remove-group";
     public final static String LOGIN_SOCIAL = "v1/social_register";
     public final static String LOGIN_PASSWORD = "user/login";
     public final static String REGISTER = "user/register";
-    public final static String COUNTRIES = "v1/countries";
-    public final static String CITIES = "v1/cities?governorate_id=";
+    public final static String DELETE_TASK = "teacher/remove-task";
+    public final static String POINTS = "teacher/get-my-gifts";
     public final static String BOARD = "app/app-explanation";
     public final static String CONFIRM_CODE = "user/otp-check";
     public final static String UPDATE_PROFILE = "v1/provider/profile";
     public static final String FORGET_PASSWORD = "user/verify-email";
     public static final String CHANGE_PASSWORD = "v1/provider/change_password";
-    public final static String GET_CONTACT = "v1/contact_us";
-    public final static String SEARCH_POSTS = "v1/search?type=";
-    public final static String CHANGE_STATUS = "v1/provider/order/update_status";
+    public final static String ADD_GIFT = "teacher/create-gift";
+    public final static String DELETE_GIFT = "teacher/remove-gift";
+    public final static String GROUP_STUDENTS = "teacher/get-group-students?group_id=";
     public final static String REJECT_ORDER = "v1/provider/order/reject";
     public final static String MY_CURRENT_ORDERS = "v1/provider/orders/current?page=";
     public final static String MY_LAST_ORDERS = "v1/provider/orders/latest?page=";

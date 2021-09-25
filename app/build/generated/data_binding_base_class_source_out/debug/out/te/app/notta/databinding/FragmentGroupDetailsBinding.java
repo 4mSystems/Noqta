@@ -21,7 +21,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.auth.register.RegisterViewModel;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
 
 public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
   @NonNull
@@ -40,13 +40,13 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
   public final MaterialButton btnJoin;
 
   @NonNull
+  public final MaterialButton btnRemove;
+
+  @NonNull
   public final MaterialButton btnRequests;
 
   @NonNull
   public final MaterialButton btnStudents;
-
-  @NonNull
-  public final MaterialButton btnTech;
 
   @NonNull
   public final MaterialButton btnTechType;
@@ -109,12 +109,12 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
   public final View vLine3;
 
   @Bindable
-  protected RegisterViewModel mViewmodel;
+  protected GroupDetailsViewModel mViewmodel;
 
   protected FragmentGroupDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton back, AppCompatImageView boardHeader, Barrier br3,
-      MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRequests,
-      MaterialButton btnStudents, MaterialButton btnTech, MaterialButton btnTechType, Flow flow,
+      MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRemove,
+      MaterialButton btnRequests, MaterialButton btnStudents, MaterialButton btnTechType, Flow flow,
       Flow flow1, RoundedImageView icTeacher, RecyclerView rcMembers, CustomTextViewRegular tvDate,
       CustomTextViewMedium tvGroupDesc, CustomTextViewRegular tvGroupDescValue,
       CustomTextViewMedium tvInfo, CustomTextViewRegular tvLocation, CustomTextViewMedium tvMembers,
@@ -127,9 +127,9 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
     this.br3 = br3;
     this.btnGroups = btnGroups;
     this.btnJoin = btnJoin;
+    this.btnRemove = btnRemove;
     this.btnRequests = btnRequests;
     this.btnStudents = btnStudents;
-    this.btnTech = btnTech;
     this.btnTechType = btnTechType;
     this.flow = flow;
     this.flow1 = flow1;
@@ -152,10 +152,10 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
     this.vLine3 = vLine3;
   }
 
-  public abstract void setViewmodel(@Nullable RegisterViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable GroupDetailsViewModel viewmodel);
 
   @Nullable
-  public RegisterViewModel getViewmodel() {
+  public GroupDetailsViewModel getViewmodel() {
     return mViewmodel;
   }
 

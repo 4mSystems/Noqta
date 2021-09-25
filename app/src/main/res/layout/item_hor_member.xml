@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 
@@ -21,6 +21,7 @@
             android:layout_margin="@dimen/dp4h"
             android:scaleType="centerCrop"
             android:src="@drawable/splash"
+            app:imageUrl="@{viewModel.studentsItem.studentImage}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +33,12 @@
             android:layout_marginTop="@dimen/dp50h"
             android:minWidth="0dp"
             android:minHeight="0dp"
+            android:text="@{viewModel.studentsItem.studentPoints}"
+            android:textColor="@color/colordark"
+            android:textSize="@dimen/sp5"
             app:backgroundTint="@color/white"
+            app:icon="@drawable/ic_icon_feather_check_circle"
+            app:iconGravity="textTop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

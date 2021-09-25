@@ -2,8 +2,9 @@ package te.app.notta.activity;
 
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import javax.inject.Inject;
 
@@ -14,8 +15,14 @@ import te.app.notta.base.ParentActivity;
 import te.app.notta.customViews.actionbar.HomeActionBarView;
 import te.app.notta.customViews.views.NavigationDrawerView;
 import te.app.notta.databinding.ActivityMainBinding;
+import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.HomeFragment;
+import te.app.notta.pages.home.PointsFragment;
+import te.app.notta.pages.home.TasksFragment;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
+import te.app.notta.pages.settings.MoreFragment;
+import te.app.notta.pages.settings.ProfileFragment;
+import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
@@ -23,7 +30,6 @@ public class MainActivity extends ParentActivity {
     @Inject
     HomeViewModel viewModel;
     HomeActionBarView homeActionBarView;
-    MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
     public NavigationDrawerView navigationDrawerView;
 
     @Override
@@ -43,7 +49,27 @@ public class MainActivity extends ParentActivity {
     }
 
     private void setEvents() {
-
+        viewModel.liveData.observe(this, (Observer<Object>) o -> {
+            Mutable mutable = (Mutable) o;
+            handleActions(mutable);
+            switch (((Mutable) o).message) {
+                case Constants.MENU_HOME:
+                    MovementHelper.replaceFragment(this, new HomeFragment(), "");
+                    break;
+                case Constants.MENU_TASKS:
+                    MovementHelper.replaceFragment(this, new TasksFragment(), "");
+                    break;
+                case Constants.MENU_GIFTS:
+                    MovementHelper.replaceFragment(this, new PointsFragment(), "");
+                    break;
+                case Constants.MENU_ACCOUNT:
+                    MovementHelper.replaceFragment(this, new ProfileFragment(), "");
+                    break;
+                case Constants.MORE:
+                    MovementHelper.replaceFragment(this, new MoreFragment(), "");
+                    break;
+            }
+        });
     }
 
 

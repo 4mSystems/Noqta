@@ -6,6 +6,10 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="te.app.notta.utils.Constants" />
+
         <variable
             name="viewmodel"
             type="te.app.notta.pages.home.viewModels.PointsViewModel" />
@@ -34,7 +38,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp25h"
-                android:text="@string/shop"
+                android:text="@{viewmodel.userData.type.equals(`2`)?@string/my_gifts:@string/shop}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
@@ -47,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
+                android:visibility="@{viewmodel.userData.type.equals(`1`)?View.VISIBLE:View.GONE,default=gone}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -111,10 +116,13 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp12h"
-                app:layout_constraintEnd_toEndOf="@id/card_points"
-                app:layout_constraintStart_toStartOf="@id/card_points"
+                android:layout_margin="@dimen/dp12h"
+                app:adapter="@{viewmodel.pointsAdapter}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/card_points"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}"
                 tools:listitem="@layout/item_points" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -124,6 +132,7 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/dp16h"
             android:contentDescription="@string/app_name"
+            android:onClick="@{()-> viewmodel.action(Constants.ADD_GIFT)}"
             app:backgroundTint="@color/colorAccent"
             app:borderWidth="2dp"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"

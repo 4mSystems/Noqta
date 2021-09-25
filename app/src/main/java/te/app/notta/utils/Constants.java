@@ -7,27 +7,22 @@ public class Constants {
     public static final String ADD_GROUP = "ADD_GROUP";
     public static final String ADD_ONE = "ADD_ONE";
     public final static String ADD_TWO = "ADD_TWO";
-    public final static int COMMERCIAL_REQUEST = 6001;
+    public final static int ADD_GIFT_REQUEST = 6001;
     public final static int TAX_REQUEST = 6002;
     public final static int IDENTITY_REQUEST = 6003;
     public final static int PASSPORT_REQUEST = 6004;
     public static final String STUDENT = "STUDENT";
     public static final String SEND_INVITATIONS = "SEND_INVITATIONS";
-
-    public final static int LOCATION_STARTED = 1;
-    public final static int STOP_LOCATION = 2;
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
-    public final static String DELETE = "DELETE";
-
-    public final static String PACKAGES = "PACKAGES";
+    public final static String ADD_TASK = "ADD_TASK";
+    public final static String GROUP_DETAILS = "GROUP_DETAILS";
     public final static String EMAIL = "email";
     public final static String FIELD = "FIELD";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
-    public static final String GET_CONTACT = "GET_CONTACT";
-    public static final int CURRENT = 0;
-    public static final int LAST = 1;
-    public static final String BACK = "BACK";
+    public static final String DELETE_GROUP = "DELETE_GROUP";
+    public static final String DELETE_TASK = "DELETE_TASK";
+    public static final String ADD_GIFT = "ADD_GIFT";
 
     public final static String UPDATE_PROFILE = "update_profile";
 
@@ -38,7 +33,7 @@ public class Constants {
     public final static String BACKGROUND_API = "BACKGROUND_API";
 
     public final static String LOGOUT = "logout";
-    public final static String NATIONAL_ID_PHOTO = "national_id_photo";
+    public final static String DELETE_GIFT = "DELETE_GIFT";
 
     public final static String SHOW_LOGOUT_WARNING = "SHOW_LOGOUT_WARNING";
     public final static String PASSPORT_PHOTO = "passport_photo";
@@ -116,7 +111,7 @@ public class Constants {
     public static final String LOGIN = "login";
     public static final String LAT = "LAT";
     public static final String LNG = "LNG";
-    public static final String DIALOG_CLOSE = "DIALOG_CLOSE";
+    public static final String DIALOG_SHOW = "DIALOG_SHOW";
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String WARNING = "WARNING";
     public static final String Add_ANSWER = "Add_ANSWER";
@@ -159,9 +154,9 @@ public class Constants {
     public static final String APP_MONEY = "APP_MONEY";
     public static final String SUBSCRIPTION = "SUBSCRIPTION";
     public static final String MENU_HOME = "menu_home";
-    public static final String MENU_FOLLOWERS = "menu_categories";
+    public static final String MENU_TASKS = "MENU_TASKS";
     public static final String NEXT = "next";
-    public static final String PREVIOUS = "PREVIOUS";
+    public static final String MENU_GIFTS = "MENU_GIFTS";
     public static final String START_APP = "START_APP";
     public static final String BOARD = "board";
     public static final String MENu = "menu";

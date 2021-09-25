@@ -13,14 +13,14 @@ import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemHorMemberBinding extends ViewDataBinding {
   @NonNull
   public final RoundedImageView tvMember;
 
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemGroupStudentViewModel mViewModel;
 
   protected ItemHorMemberBinding(Object _bindingComponent, View _root, int _localFieldCount,
       RoundedImageView tvMember) {
@@ -28,10 +28,10 @@ public abstract class ItemHorMemberBinding extends ViewDataBinding {
     this.tvMember = tvMember;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemGroupStudentViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemGroupStudentViewModel getViewModel() {
     return mViewModel;
   }
 

@@ -6,11 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
@@ -18,9 +20,12 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.IncrementalView;
-import te.app.notta.pages.teacher.viewModels.AddGroupViewModel;
+import te.app.notta.pages.home.viewModels.PointsViewModel;
 
 public abstract class FragmentAddGiftBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton appCompatButtonNext;
+
   @NonNull
   public final TextInputEditText auto;
 
@@ -49,17 +54,22 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
   public final TextInputLayout inputPoints;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final CustomTextViewMedium tvProfileTitle;
 
   @Bindable
-  protected AddGroupViewModel mViewmodel;
+  protected PointsViewModel mViewmodel;
 
   protected FragmentAddGiftBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText auto, FloatingActionButton back, AppCompatImageView boardHeader,
-      AppCompatImageView icLogo, IncrementalView incrementalViewStudentCount,
-      TextInputLayout inputGiftImage, TextInputLayout inputGiftName, TextInputLayout inputGroupDesc,
-      TextInputLayout inputPoints, CustomTextViewMedium tvProfileTitle) {
+      AppCompatButton appCompatButtonNext, TextInputEditText auto, FloatingActionButton back,
+      AppCompatImageView boardHeader, AppCompatImageView icLogo,
+      IncrementalView incrementalViewStudentCount, TextInputLayout inputGiftImage,
+      TextInputLayout inputGiftName, TextInputLayout inputGroupDesc, TextInputLayout inputPoints,
+      CircularProgressIndicator progress, CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appCompatButtonNext = appCompatButtonNext;
     this.auto = auto;
     this.back = back;
     this.boardHeader = boardHeader;
@@ -69,13 +79,14 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
     this.inputGiftName = inputGiftName;
     this.inputGroupDesc = inputGroupDesc;
     this.inputPoints = inputPoints;
+    this.progress = progress;
     this.tvProfileTitle = tvProfileTitle;
   }
 
-  public abstract void setViewmodel(@Nullable AddGroupViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable PointsViewModel viewmodel);
 
   @Nullable
-  public AddGroupViewModel getViewmodel() {
+  public PointsViewModel getViewmodel() {
     return mViewmodel;
   }
 

@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -17,16 +15,19 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemHomeBinding;
+import te.app.notta.pages.home.GroupDetailsFragment;
 import te.app.notta.pages.home.models.GroupItem;
 import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.teacher.AddTaskFragment;
+import te.app.notta.utils.Constants;
+import te.app.notta.utils.helper.MovementHelper;
 
 public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder> {
     List<GroupItem> groupItemList;
     Context context;
-    public int lastSelected = -1;
-    public MutableLiveData<Object> actionLiveData = new MutableLiveData<>();
 
     public GroupsAdapter() {
         this.groupItemList = new ArrayList<>();
@@ -51,18 +52,19 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         GroupItem item = groupItemList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(item);
-//        itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
+        itemMenuViewModel.getLiveData().observeForever(o -> {
 //            lastSelected = position;
-//            if (o.equals(Constants.EDIT)) {
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.edit_client), AddClientFragment.class.getName(), null);
-//            } else if (o.equals(Constants.CLIENT_PROFILE)) {
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.client_profile), ClientProfileFragment.class.getName(), null);
-//            } else if (o.equals(Constants.CLIENT_ATTACHMENTS)) {
+            if (o.equals(Constants.ADD_TASK)) {
+                MovementHelper.startActivityWithBundle(context, new PassingObject(item.getId()), null, AddTaskFragment.class.getName(), null);
+            } else if (o.equals(Constants.GROUP_DETAILS)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), item.getName()), null, GroupDetailsFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
+            }
+//            else if (o.equals(Constants.CLIENT_ATTACHMENTS)) {
 //                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getClientId(), Constants.CLIENT_ATTACHMENTS), ResourceManager.getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
 //            } else if (o.equals(Constants.DELETE)) {
 //                actionLiveData.setValue(o);
 //            }
-//        });
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 

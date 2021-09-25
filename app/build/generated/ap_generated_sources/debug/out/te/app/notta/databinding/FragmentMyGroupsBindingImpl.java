@@ -24,7 +24,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
     private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback32;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,7 +117,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback27);
+            this.mboundView1.setOnClickListener(mCallback32);
         }
     }
     // Listener Stub Implementations

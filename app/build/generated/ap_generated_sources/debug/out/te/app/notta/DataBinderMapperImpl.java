@@ -17,10 +17,12 @@ import java.util.HashMap;
 import java.util.List;
 import te.app.notta.databinding.ActivityBaseBindingImpl;
 import te.app.notta.databinding.ActivityMainBindingImpl;
+import te.app.notta.databinding.DeleteSheetBindingImpl;
 import te.app.notta.databinding.FragmentAboutBindingImpl;
 import te.app.notta.databinding.FragmentAddAnswerBindingImpl;
 import te.app.notta.databinding.FragmentAddGiftBindingImpl;
 import te.app.notta.databinding.FragmentAddGroupBindingImpl;
+import te.app.notta.databinding.FragmentAddTaskBindingImpl;
 import te.app.notta.databinding.FragmentChangePasswordBindingImpl;
 import te.app.notta.databinding.FragmentConfirmCodeBindingImpl;
 import te.app.notta.databinding.FragmentContactBindingImpl;
@@ -28,6 +30,7 @@ import te.app.notta.databinding.FragmentEditProfileBindingImpl;
 import te.app.notta.databinding.FragmentForgetPasswordBindingImpl;
 import te.app.notta.databinding.FragmentGroupDetailsBindingImpl;
 import te.app.notta.databinding.FragmentGroupMembersBindingImpl;
+import te.app.notta.databinding.FragmentGroupStudentsBindingImpl;
 import te.app.notta.databinding.FragmentHomeBindingImpl;
 import te.app.notta.databinding.FragmentInviteStudentBindingImpl;
 import te.app.notta.databinding.FragmentLangBindingImpl;
@@ -61,91 +64,99 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final int LAYOUT_FRAGMENTABOUT = 3;
+  private static final int LAYOUT_DELETESHEET = 3;
 
-  private static final int LAYOUT_FRAGMENTADDANSWER = 4;
+  private static final int LAYOUT_FRAGMENTABOUT = 4;
 
-  private static final int LAYOUT_FRAGMENTADDGIFT = 5;
+  private static final int LAYOUT_FRAGMENTADDANSWER = 5;
 
-  private static final int LAYOUT_FRAGMENTADDGROUP = 6;
+  private static final int LAYOUT_FRAGMENTADDGIFT = 6;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 7;
+  private static final int LAYOUT_FRAGMENTADDGROUP = 7;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 8;
+  private static final int LAYOUT_FRAGMENTADDTASK = 8;
 
-  private static final int LAYOUT_FRAGMENTCONTACT = 9;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 9;
 
-  private static final int LAYOUT_FRAGMENTEDITPROFILE = 10;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 10;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 11;
+  private static final int LAYOUT_FRAGMENTCONTACT = 11;
 
-  private static final int LAYOUT_FRAGMENTGROUPDETAILS = 12;
+  private static final int LAYOUT_FRAGMENTEDITPROFILE = 12;
 
-  private static final int LAYOUT_FRAGMENTGROUPMEMBERS = 13;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 13;
 
-  private static final int LAYOUT_FRAGMENTHOME = 14;
+  private static final int LAYOUT_FRAGMENTGROUPDETAILS = 14;
 
-  private static final int LAYOUT_FRAGMENTINVITESTUDENT = 15;
+  private static final int LAYOUT_FRAGMENTGROUPMEMBERS = 15;
 
-  private static final int LAYOUT_FRAGMENTLANG = 16;
+  private static final int LAYOUT_FRAGMENTGROUPSTUDENTS = 16;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 17;
+  private static final int LAYOUT_FRAGMENTHOME = 17;
 
-  private static final int LAYOUT_FRAGMENTMORE = 18;
+  private static final int LAYOUT_FRAGMENTINVITESTUDENT = 18;
 
-  private static final int LAYOUT_FRAGMENTMYGROUPS = 19;
+  private static final int LAYOUT_FRAGMENTLANG = 19;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 20;
+  private static final int LAYOUT_FRAGMENTLOGIN = 20;
 
-  private static final int LAYOUT_FRAGMENTPOINTS = 21;
+  private static final int LAYOUT_FRAGMENTMORE = 21;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 22;
+  private static final int LAYOUT_FRAGMENTMYGROUPS = 22;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 23;
+  private static final int LAYOUT_FRAGMENTONBOARD = 23;
 
-  private static final int LAYOUT_FRAGMENTREQUESTS = 24;
+  private static final int LAYOUT_FRAGMENTPOINTS = 24;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 25;
+  private static final int LAYOUT_FRAGMENTPROFILE = 25;
 
-  private static final int LAYOUT_FRAGMENTTASKS = 26;
+  private static final int LAYOUT_FRAGMENTREGISTER = 26;
 
-  private static final int LAYOUT_ITEMHOME = 27;
+  private static final int LAYOUT_FRAGMENTREQUESTS = 27;
 
-  private static final int LAYOUT_ITEMHORMEMBER = 28;
+  private static final int LAYOUT_FRAGMENTSPLASH = 28;
 
-  private static final int LAYOUT_ITEMMEMBER = 29;
+  private static final int LAYOUT_FRAGMENTTASKS = 29;
 
-  private static final int LAYOUT_ITEMMORE = 30;
+  private static final int LAYOUT_ITEMHOME = 30;
 
-  private static final int LAYOUT_ITEMPOINTS = 31;
+  private static final int LAYOUT_ITEMHORMEMBER = 31;
 
-  private static final int LAYOUT_ITEMPROFILE = 32;
+  private static final int LAYOUT_ITEMMEMBER = 32;
 
-  private static final int LAYOUT_ITEMRECENTTASK = 33;
+  private static final int LAYOUT_ITEMMORE = 33;
 
-  private static final int LAYOUT_ITEMSTUDENTINVITE = 34;
+  private static final int LAYOUT_ITEMPOINTS = 34;
 
-  private static final int LAYOUT_ITEMSTUDENTREQUEST = 35;
+  private static final int LAYOUT_ITEMPROFILE = 35;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 36;
+  private static final int LAYOUT_ITEMRECENTTASK = 36;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 37;
+  private static final int LAYOUT_ITEMSTUDENTINVITE = 37;
 
-  private static final int LAYOUT_LAYOUTGRAND = 38;
+  private static final int LAYOUT_ITEMSTUDENTREQUEST = 38;
 
-  private static final int LAYOUT_MENU = 39;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 39;
 
-  private static final int LAYOUT_SUCCESSSHEET = 40;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 40;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(40);
+  private static final int LAYOUT_LAYOUTGRAND = 41;
+
+  private static final int LAYOUT_MENU = 42;
+
+  private static final int LAYOUT_SUCCESSSHEET = 43;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(43);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.delete_sheet, LAYOUT_DELETESHEET);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_answer, LAYOUT_FRAGMENTADDANSWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_gift, LAYOUT_FRAGMENTADDGIFT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_group, LAYOUT_FRAGMENTADDGROUP);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_add_task, LAYOUT_FRAGMENTADDTASK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_change_password, LAYOUT_FRAGMENTCHANGEPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_contact, LAYOUT_FRAGMENTCONTACT);
@@ -153,6 +164,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_group_details, LAYOUT_FRAGMENTGROUPDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_group_members, LAYOUT_FRAGMENTGROUPMEMBERS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_group_students, LAYOUT_FRAGMENTGROUPSTUDENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_invite_student, LAYOUT_FRAGMENTINVITESTUDENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_lang, LAYOUT_FRAGMENTLANG);
@@ -203,6 +215,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
         }
+        case  LAYOUT_DELETESHEET: {
+          if ("layout/delete_sheet_0".equals(tag)) {
+            return new DeleteSheetBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for delete_sheet is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTABOUT: {
           if ("layout/fragment_about_0".equals(tag)) {
             return new FragmentAboutBindingImpl(component, view);
@@ -226,6 +244,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentAddGroupBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_add_group is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTADDTASK: {
+          if ("layout/fragment_add_task_0".equals(tag)) {
+            return new FragmentAddTaskBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_task is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
           if ("layout/fragment_change_password_0".equals(tag)) {
@@ -268,6 +292,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentGroupMembersBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_group_members is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTGROUPSTUDENTS: {
+          if ("layout/fragment_group_students_0".equals(tag)) {
+            return new FragmentGroupStudentsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_group_students is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTHOME: {
           if ("layout/fragment_home_0".equals(tag)) {
@@ -476,39 +506,49 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(17);
+    static final SparseArray<String> sKeys = new SparseArray<String>(25);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "baseViewModel");
-      sKeys.put(2, "groupItem");
-      sKeys.put(3, "groupRequest");
-      sKeys.put(4, "groupsAdapter");
-      sKeys.put(5, "homeData");
-      sKeys.put(6, "inviteStudentsAdapter");
-      sKeys.put(7, "menuViewModel");
-      sKeys.put(8, "message");
-      sKeys.put(9, "onBoardAdapter");
-      sKeys.put(10, "onBoardViewModels");
-      sKeys.put(11, "passingObject");
-      sKeys.put(12, "request");
-      sKeys.put(13, "student");
-      sKeys.put(14, "studentMainData");
-      sKeys.put(15, "viewModel");
-      sKeys.put(16, "viewmodel");
+      sKeys.put(1, "addTaskRequest");
+      sKeys.put(2, "baseViewModel");
+      sKeys.put(3, "groupDetails");
+      sKeys.put(4, "groupDetailsStudentsAdapter");
+      sKeys.put(5, "groupItem");
+      sKeys.put(6, "groupRequest");
+      sKeys.put(7, "groupsAdapter");
+      sKeys.put(8, "homeData");
+      sKeys.put(9, "inviteStudentsAdapter");
+      sKeys.put(10, "menuViewModel");
+      sKeys.put(11, "message");
+      sKeys.put(12, "onBoardAdapter");
+      sKeys.put(13, "onBoardViewModels");
+      sKeys.put(14, "passingObject");
+      sKeys.put(15, "pointsAdapter");
+      sKeys.put(16, "pointsData");
+      sKeys.put(17, "request");
+      sKeys.put(18, "student");
+      sKeys.put(19, "studentMainData");
+      sKeys.put(20, "studentsItem");
+      sKeys.put(21, "tasksAdapter");
+      sKeys.put(22, "tasksItem");
+      sKeys.put(23, "viewModel");
+      sKeys.put(24, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(40);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(43);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.notta.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", te.app.notta.R.layout.activity_main);
+      sKeys.put("layout/delete_sheet_0", te.app.notta.R.layout.delete_sheet);
       sKeys.put("layout/fragment_about_0", te.app.notta.R.layout.fragment_about);
       sKeys.put("layout/fragment_add_answer_0", te.app.notta.R.layout.fragment_add_answer);
       sKeys.put("layout/fragment_add_gift_0", te.app.notta.R.layout.fragment_add_gift);
       sKeys.put("layout/fragment_add_group_0", te.app.notta.R.layout.fragment_add_group);
+      sKeys.put("layout/fragment_add_task_0", te.app.notta.R.layout.fragment_add_task);
       sKeys.put("layout/fragment_change_password_0", te.app.notta.R.layout.fragment_change_password);
       sKeys.put("layout/fragment_confirm_code_0", te.app.notta.R.layout.fragment_confirm_code);
       sKeys.put("layout/fragment_contact_0", te.app.notta.R.layout.fragment_contact);
@@ -516,6 +556,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_forget_password_0", te.app.notta.R.layout.fragment_forget_password);
       sKeys.put("layout/fragment_group_details_0", te.app.notta.R.layout.fragment_group_details);
       sKeys.put("layout/fragment_group_members_0", te.app.notta.R.layout.fragment_group_members);
+      sKeys.put("layout/fragment_group_students_0", te.app.notta.R.layout.fragment_group_students);
       sKeys.put("layout/fragment_home_0", te.app.notta.R.layout.fragment_home);
       sKeys.put("layout/fragment_invite_student_0", te.app.notta.R.layout.fragment_invite_student);
       sKeys.put("layout/fragment_lang_0", te.app.notta.R.layout.fragment_lang);

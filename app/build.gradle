@@ -112,4 +112,6 @@ dependencies {
 //Rounded ImageView
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.chrisbanes:PhotoView:2.2.0'
+    //multi image
+    implementation 'gun0912.ted:tedbottompicker:2.0.1'
 }

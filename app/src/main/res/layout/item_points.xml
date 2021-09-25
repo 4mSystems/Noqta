@@ -4,9 +4,13 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="te.app.notta.utils.Constants" />
+
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.ItemPointsViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -27,6 +31,7 @@
                 android:layout_margin="@dimen/dp4h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
+                app:imageUrl="@{viewModel.pointsData.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:riv_corner_radius="@dimen/dp10h" />
@@ -38,7 +43,7 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp4w"
-                android:text="New car model 2021"
+                android:text="@{viewModel.pointsData.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
@@ -51,7 +56,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp8w"
+                android:onClick="@{()->viewModel.itemAction(Constants.DELETE_GIFT)}"
                 android:src="@drawable/ic_close"
+                android:visibility="@{viewModel.userData.type.equals(`2`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/ic_user" />
 
@@ -62,7 +69,7 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp4w"
-                android:text="Just a guy who loves programming. I love to build Awesome Programs and Games"
+                android:text="@{viewModel.pointsData.description}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
@@ -75,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
+                app:barrierMargin="@dimen/dp6h"
                 app:constraint_referenced_ids="ic_user,tv_desc_point" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -86,6 +94,7 @@
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
+                android:visibility="@{viewModel.userData.type.equals(`1`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintTop_toBottomOf="@id/br2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

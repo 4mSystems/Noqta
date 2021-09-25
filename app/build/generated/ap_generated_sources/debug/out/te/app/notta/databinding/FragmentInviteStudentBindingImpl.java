@@ -14,16 +14,16 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.rc_filter, 6);
+        sViewsWithIds.put(R.id.tv_header, 6);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback32;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback42;
     // values
     // listeners
     private OnTextChangedImpl mViewModelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -38,8 +38,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[6]
             , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[6]
             );
         this.btnClose.setTag(null);
         this.dialogHeader.setTag(null);
@@ -50,8 +50,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         this.rcStudents.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback32 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback43 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -192,8 +192,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnClose.setOnClickListener(mCallback32);
-            this.dialogHeader.setOnClickListener(mCallback31);
+            this.btnClose.setOnClickListener(mCallback43);
+            this.dialogHeader.setOnClickListener(mCallback42);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1

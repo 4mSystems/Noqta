@@ -14,55 +14,56 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 4);
-        sViewsWithIds.put(R.id.tv_home_desc, 5);
-        sViewsWithIds.put(R.id.ic_home_notification, 6);
-        sViewsWithIds.put(R.id.search_input, 7);
-        sViewsWithIds.put(R.id.tv_home_body, 8);
+        sViewsWithIds.put(R.id.board_header, 6);
+        sViewsWithIds.put(R.id.tv_home_desc, 7);
+        sViewsWithIds.put(R.id.ic_home_notification, 8);
+        sViewsWithIds.put(R.id.tv_home_body, 9);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView2;
-    @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
+    private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+        super(bindingComponent, root, 2
             , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[7]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[8]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[5]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[7]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[1]
             );
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
-        this.mboundView2.setTag(null);
-        this.mboundView3 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3];
-        this.mboundView3.setTag(null);
+        this.mboundView5 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5];
+        this.mboundView5.setTag(null);
+        this.progress.setTag(null);
+        this.rcGroups.setTag(null);
+        this.searchInput.setTag(null);
         this.tvHomeUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -90,10 +91,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     }
 
     public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.HomeViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
+        updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -103,20 +104,31 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewmodelSearchProgressVisible((androidx.databinding.ObservableBoolean) object, fieldId);
+            case 1 :
                 return onChangeViewmodel((te.app.notta.pages.home.viewModels.HomeViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.HomeViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelSearchProgressVisible(androidx.databinding.ObservableBoolean ViewmodelSearchProgressVisible, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.groupsAdapter) {
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.HomeViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.groupsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -130,25 +142,59 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewmodelUserDataName = null;
         te.app.notta.pages.home.adapters.GroupsAdapter viewmodelGroupsAdapter = null;
-        te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
         java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangStringConcatJavaLangString = null;
-        java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName = null;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangString = null;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        java.lang.String viewmodelUserDataName = null;
+        te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
+        boolean viewmodelSearchProgressVisibleGet = false;
+        java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName = null;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.notta.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-
-                if (viewmodel != null) {
-                    // read viewmodel.groupsAdapter
-                    viewmodelGroupsAdapter = viewmodel.getGroupsAdapter();
-                }
-            if ((dirtyFlags & 0x5L) != 0) {
+            if ((dirtyFlags & 0xeL) != 0) {
 
                     if (viewmodel != null) {
+                        // read viewmodel.groupsAdapter
+                        viewmodelGroupsAdapter = viewmodel.getGroupsAdapter();
+                    }
+            }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.searchProgressVisible;
+                    }
+                    updateRegistration(0, viewmodelSearchProgressVisible);
+
+
+                    if (viewmodelSearchProgressVisible != null) {
+                        // read viewmodel.searchProgressVisible.get()
+                        viewmodelSearchProgressVisibleGet = viewmodelSearchProgressVisible.get();
+                    }
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelSearchProgressVisibleGet) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
+
+
+                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
                         // read viewmodel.userData
                         viewmodelUserData = viewmodel.userData;
                     }
@@ -177,23 +223,40 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView2, viewmodelGroupsAdapter, "1", "1");
+            this.mboundView5.setOnClickListener(mCallback20);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback16);
+            this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcGroups, viewmodelGroupsAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0xaL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, (androidx.databinding.InverseBindingListener)null);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeUsername, tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangStringConcatJavaLangString);
         }
     }
     // Listener Stub Implementations
+    public static class OnTextChangedImpl implements androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged{
+        private te.app.notta.pages.home.viewModels.HomeViewModel value;
+        public OnTextChangedImpl setValue(te.app.notta.pages.home.viewModels.HomeViewModel value) {
+            this.value = value;
+            return value == null ? null : this;
+        }
+        @Override
+        public void onTextChanged(java.lang.CharSequence arg0, int arg1, int arg2, int arg3) {
+            this.value.onTextChanged(arg0, arg1, arg2, arg3); 
+        }
+    }
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         // localize variables for thread safety
@@ -216,9 +279,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.groupsAdapter
-        flag 2 (0x3L): null
+        flag 0 (0x1L): viewmodel.searchProgressVisible
+        flag 1 (0x2L): viewmodel
+        flag 2 (0x3L): viewmodel.groupsAdapter
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

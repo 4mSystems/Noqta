@@ -36,6 +36,9 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   public final MaterialButton btnStudents;
 
   @NonNull
+  public final MaterialButton btnTask;
+
+  @NonNull
   public final MaterialButton btnTechType;
 
   @NonNull
@@ -55,8 +58,8 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
 
   protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br1,
       MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRequests,
-      MaterialButton btnStudents, MaterialButton btnTechType, RoundedImageView icUser,
-      CustomTextViewMedium tvGroupName, CustomTextViewMedium tvUserName,
+      MaterialButton btnStudents, MaterialButton btnTask, MaterialButton btnTechType,
+      RoundedImageView icUser, CustomTextViewMedium tvGroupName, CustomTextViewMedium tvUserName,
       CustomTextViewRegular tvUserWork) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br1 = br1;
@@ -64,6 +67,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
     this.btnJoin = btnJoin;
     this.btnRequests = btnRequests;
     this.btnStudents = btnStudents;
+    this.btnTask = btnTask;
     this.btnTechType = btnTechType;
     this.icUser = icUser;
     this.tvGroupName = tvGroupName;
