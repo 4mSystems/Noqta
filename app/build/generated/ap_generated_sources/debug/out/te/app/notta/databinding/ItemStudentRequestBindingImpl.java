@@ -14,9 +14,6 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_member, 1);
-        sViewsWithIds.put(R.id.tv_teacher_name, 2);
-        sViewsWithIds.put(R.id.tv_user_work, 3);
         sViewsWithIds.put(R.id.user_reject, 4);
         sViewsWithIds.put(R.id.user_accept, 5);
         sViewsWithIds.put(R.id.br5, 6);
@@ -43,6 +40,9 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.tvMember.setTag(null);
+        this.tvTeacherName.setTag(null);
+        this.tvUserWork.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -51,7 +51,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -70,7 +70,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemHomeViewModel) variable);
+            setViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) variable);
         }
         else {
             variableSet = false;
@@ -78,22 +78,34 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemHomeViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel) {
+        updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewModel);
+        super.requestRebind();
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemHomeViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemHomeViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.studentsItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -107,7 +119,39 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewModelStudentsItemStudentName = null;
+        java.lang.String viewModelStudentsItemStudentPoints = null;
+        te.app.notta.pages.home.models.details.StudentsItem viewModelStudentsItem = null;
+        te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+        java.lang.String viewModelStudentsItemStudentImage = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewModel != null) {
+                    // read viewModel.studentsItem
+                    viewModelStudentsItem = viewModel.getStudentsItem();
+                }
+
+
+                if (viewModelStudentsItem != null) {
+                    // read viewModel.studentsItem.studentName
+                    viewModelStudentsItemStudentName = viewModelStudentsItem.getStudentName();
+                    // read viewModel.studentsItem.studentPoints
+                    viewModelStudentsItemStudentPoints = viewModelStudentsItem.getStudentPoints();
+                    // read viewModel.studentsItem.studentImage
+                    viewModelStudentsItemStudentImage = viewModelStudentsItem.getStudentImage();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.notta.base.ApplicationBinding.loadImage(this.tvMember, viewModelStudentsItemStudentImage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvTeacherName, viewModelStudentsItemStudentName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelStudentsItemStudentPoints);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -115,7 +159,8 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewModel.studentsItem
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

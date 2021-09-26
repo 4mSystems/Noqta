@@ -42,6 +42,10 @@ public class GroupDetailsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getGroupStudents(getPassingObject().getId(), page, showProgress));
     }
 
+    public void groupStudentsRequests(int page, boolean showProgress) {
+        compositeDisposable.add(repository.getGroupStudentsRequests(getPassingObject().getId(), page, showProgress));
+    }
+
     public void deleteGroup() {
         compositeDisposable.add(repository.deleteGroup(getPassingObject().getId()));
     }

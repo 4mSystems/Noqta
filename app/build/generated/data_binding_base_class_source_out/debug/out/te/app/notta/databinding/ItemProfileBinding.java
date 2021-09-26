@@ -14,7 +14,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.settings.viewModels.ItemProfileViewModel;
 
 public abstract class ItemProfileBinding extends ViewDataBinding {
   @NonNull
@@ -24,7 +24,7 @@ public abstract class ItemProfileBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvGroupName;
 
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemProfileViewModel mViewModel;
 
   protected ItemProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView icUser, CustomTextViewMedium tvGroupName) {
@@ -33,10 +33,10 @@ public abstract class ItemProfileBinding extends ViewDataBinding {
     this.tvGroupName = tvGroupName;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemProfileViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemProfileViewModel getViewModel() {
     return mViewModel;
   }
 

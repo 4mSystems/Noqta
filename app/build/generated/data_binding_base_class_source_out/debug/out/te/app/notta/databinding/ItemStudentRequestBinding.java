@@ -17,7 +17,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemStudentRequestBinding extends ViewDataBinding {
   @NonNull
@@ -39,7 +39,7 @@ public abstract class ItemStudentRequestBinding extends ViewDataBinding {
   public final MaterialButton userReject;
 
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemGroupStudentViewModel mViewModel;
 
   protected ItemStudentRequestBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Barrier br5, RoundedImageView tvMember, CustomTextViewMedium tvTeacherName,
@@ -53,10 +53,10 @@ public abstract class ItemStudentRequestBinding extends ViewDataBinding {
     this.userReject = userReject;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemGroupStudentViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemGroupStudentViewModel getViewModel() {
     return mViewModel;
   }
 

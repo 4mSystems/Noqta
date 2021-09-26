@@ -24,7 +24,7 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     private final te.app.notta.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback41;
+    private final android.view.View.OnClickListener mCallback44;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,7 +53,7 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         this.tvDetails.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback41 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback44 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -203,7 +203,7 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnRemove.setOnClickListener(mCallback41);
+            this.btnRemove.setOnClickListener(mCallback44);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

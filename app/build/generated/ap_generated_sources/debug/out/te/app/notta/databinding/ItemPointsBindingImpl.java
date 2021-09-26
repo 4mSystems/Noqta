@@ -23,7 +23,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     private final androidx.appcompat.widget.AppCompatButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -202,7 +202,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icDelete.setOnClickListener(mCallback21);
+            this.icDelete.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

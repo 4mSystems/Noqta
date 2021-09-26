@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -13,9 +14,12 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.settings.viewModels.ItemProfileViewModel;
 
 public abstract class ItemMoreBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatImageView icon;
+
   @NonNull
   public final CustomTextViewMedium tvSettingItem;
 
@@ -23,19 +27,20 @@ public abstract class ItemMoreBinding extends ViewDataBinding {
   public final View vLine;
 
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemProfileViewModel mViewModel;
 
   protected ItemMoreBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium tvSettingItem, View vLine) {
+      AppCompatImageView icon, CustomTextViewMedium tvSettingItem, View vLine) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.icon = icon;
     this.tvSettingItem = tvSettingItem;
     this.vLine = vLine;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemProfileViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemProfileViewModel getViewModel() {
     return mViewModel;
   }
 

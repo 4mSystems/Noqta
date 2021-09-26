@@ -14,33 +14,37 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 1);
-        sViewsWithIds.put(R.id.member_profile, 2);
-        sViewsWithIds.put(R.id.tv_user_name, 3);
-        sViewsWithIds.put(R.id.tv_email, 4);
-        sViewsWithIds.put(R.id.logout, 5);
+        sViewsWithIds.put(R.id.board_header, 5);
+        sViewsWithIds.put(R.id.logout, 6);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView4;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (com.google.android.material.button.MaterialButton) bindings[5]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[2]
-            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
+            , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView4 = (androidx.recyclerview.widget.RecyclerView) bindings[4];
+        this.mboundView4.setTag(null);
+        this.memberProfile.setTag(null);
+        this.tvEmail.setTag(null);
+        this.tvUserName.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -49,7 +53,7 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -77,7 +81,13 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.notta.pages.settings.viewModels.SettingsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -95,6 +105,12 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.profileAdaptersAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -105,7 +121,52 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelUserDataName = null;
+        te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
+        java.lang.String viewmodelUserDataImage = null;
+        te.app.notta.pages.settings.adapters.ProfileAdaptersAdapter viewmodelProfileAdaptersAdapter = null;
+        te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+        java.lang.String viewmodelUserDataEmail = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.userData
+                        viewmodelUserData = viewmodel.userData;
+                    }
+
+
+                    if (viewmodelUserData != null) {
+                        // read viewmodel.userData.name
+                        viewmodelUserDataName = viewmodelUserData.getName();
+                        // read viewmodel.userData.image
+                        viewmodelUserDataImage = viewmodelUserData.getImage();
+                        // read viewmodel.userData.email
+                        viewmodelUserDataEmail = viewmodelUserData.getEmail();
+                    }
+            }
+
+                if (viewmodel != null) {
+                    // read viewmodel.profileAdaptersAdapter
+                    viewmodelProfileAdaptersAdapter = viewmodel.getProfileAdaptersAdapter();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView4, viewmodelProfileAdaptersAdapter, "2", "1");
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            te.app.notta.base.ApplicationBinding.loadImage(this.memberProfile, viewmodelUserDataImage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvEmail, viewmodelUserDataEmail);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserName, viewmodelUserDataName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -113,7 +174,8 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.profileAdaptersAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

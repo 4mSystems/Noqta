@@ -35,7 +35,7 @@ public class Constants {
     public final static String LOGOUT = "logout";
     public final static String DELETE_GIFT = "DELETE_GIFT";
 
-    public final static String SHOW_LOGOUT_WARNING = "SHOW_LOGOUT_WARNING";
+    public final static String STUDENT_REQUESTS = "STUDENT_REQUESTS";
     public final static String PASSPORT_PHOTO = "passport_photo";
     public final static String NEW_POST = "NEW_POST";
 

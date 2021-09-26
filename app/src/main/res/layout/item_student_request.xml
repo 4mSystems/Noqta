@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 
@@ -21,6 +21,7 @@
             android:layout_margin="@dimen/dp4h"
             android:scaleType="centerCrop"
             android:src="@drawable/splash"
+            app:imageUrl="@{viewModel.studentsItem.studentImage}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:riv_corner_radius="@dimen/dp8h" />
@@ -33,7 +34,7 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp8h"
             android:layout_marginEnd="@dimen/dp12w"
-            android:text="Mostafa Elnagar"
+            android:text="@{viewModel.studentsItem.studentName}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +50,7 @@
             android:layout_marginEnd="@dimen/dp12w"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="Senior Software Developer"
+            android:text="@{viewModel.studentsItem.studentPoints}"
             android:textAlignment="viewStart"
             android:textColor="@color/medium_color"
             android:textSize="@dimen/sp10"
@@ -88,11 +89,11 @@
             app:layout_constraintTop_toBottomOf="@id/tv_user_work" />
 
         <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/br5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            android:id="@+id/br5"
-            app:constraint_referenced_ids="tv_member,user_accept,user_reject"/>
+            app:constraint_referenced_ids="tv_member,user_accept,user_reject" />
 
         <View
             android:layout_width="match_parent"

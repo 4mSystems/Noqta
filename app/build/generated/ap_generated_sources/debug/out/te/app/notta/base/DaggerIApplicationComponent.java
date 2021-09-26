@@ -492,18 +492,18 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private GroupDetailsViewModel injectGroupDetailsViewModel(GroupDetailsViewModel instance) {
+    GroupDetailsViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
+    return instance;
+  }
+
   private StudentRequestsFragment injectStudentRequestsFragment(StudentRequestsFragment instance) {
-    StudentRequestsFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    StudentRequestsFragment_MembersInjector.injectViewModel(instance, groupDetailsViewModel());
     return instance;
   }
 
   private LangFragment injectLangFragment(LangFragment instance) {
     LangFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
-    return instance;
-  }
-
-  private GroupDetailsViewModel injectGroupDetailsViewModel(GroupDetailsViewModel instance) {
-    GroupDetailsViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
     return instance;
   }
 

@@ -14,21 +14,16 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.img_login_header, 2);
-        sViewsWithIds.put(R.id.tv_about_title, 3);
-        sViewsWithIds.put(R.id.login_container, 4);
-        sViewsWithIds.put(R.id.ic_logo, 5);
-        sViewsWithIds.put(R.id.about_sub_title, 6);
-        sViewsWithIds.put(R.id.about_body, 7);
+        sViewsWithIds.put(R.id.img_login_header, 5);
+        sViewsWithIds.put(R.id.login_container, 6);
+        sViewsWithIds.put(R.id.ic_logo, 7);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
-    @NonNull
-    private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback23;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -38,27 +33,30 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
     }
     private FragmentAboutBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[7]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[6]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.cardview.widget.CardView) bindings[4]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[4]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
+            , (androidx.cardview.widget.CardView) bindings[6]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[1]
             );
+        this.aboutBody.setTag(null);
+        this.aboutSubTitle.setTag(null);
+        this.back.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (androidx.appcompat.widget.AppCompatImageView) bindings[1];
-        this.mboundView1.setTag(null);
+        this.tvProfileTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -110,6 +108,18 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
             }
             return true;
         }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.aboutData) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -120,12 +130,81 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.notta.PassingObject viewmodelPassingObject = null;
+        te.app.notta.pages.settings.models.AboutData viewmodelAboutData = null;
+        int viewmodelPassingObjectId = 0;
+        java.lang.String viewmodelPassingObjectIdInt1AboutSubTitleAndroidStringAboutTitleAboutSubTitleAndroidStringTerms = null;
+        java.lang.String viewmodelPassingObjectIdInt1TvProfileTitleAndroidStringAboutTitleTvProfileTitleAndroidStringTerms = null;
+        boolean viewmodelPassingObjectIdInt1 = false;
+        java.lang.String viewmodelAboutDataBody = null;
         te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0xfL) != 0) {
+
+
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.passingObject
+                        viewmodelPassingObject = viewmodel.getPassingObject();
+                    }
+
+
+                    if (viewmodelPassingObject != null) {
+                        // read viewmodel.passingObject.id
+                        viewmodelPassingObjectId = viewmodelPassingObject.getId();
+                    }
+
+
+                    // read viewmodel.passingObject.id == 1
+                    viewmodelPassingObjectIdInt1 = (viewmodelPassingObjectId) == (1);
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelPassingObjectIdInt1) {
+                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
+                    viewmodelPassingObjectIdInt1AboutSubTitleAndroidStringAboutTitleAboutSubTitleAndroidStringTerms = ((viewmodelPassingObjectIdInt1) ? (aboutSubTitle.getResources().getString(R.string.about_title)) : (aboutSubTitle.getResources().getString(R.string.terms)));
+                    // read viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
+                    viewmodelPassingObjectIdInt1TvProfileTitleAndroidStringAboutTitleTvProfileTitleAndroidStringTerms = ((viewmodelPassingObjectIdInt1) ? (tvProfileTitle.getResources().getString(R.string.about_title)) : (tvProfileTitle.getResources().getString(R.string.terms)));
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.aboutData
+                        viewmodelAboutData = viewmodel.getAboutData();
+                    }
+
+
+                    if (viewmodelAboutData != null) {
+                        // read viewmodel.aboutData.body
+                        viewmodelAboutDataBody = viewmodelAboutData.getBody();
+                    }
+            }
+        }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback22);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.aboutBody, viewmodelAboutDataBody);
+        }
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.aboutSubTitle, viewmodelPassingObjectIdInt1AboutSubTitleAndroidStringAboutTitleAboutSubTitleAndroidStringTerms);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvProfileTitle, viewmodelPassingObjectIdInt1TvProfileTitleAndroidStringAboutTitleTvProfileTitleAndroidStringTerms);
+        }
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            this.back.setOnClickListener(mCallback23);
         }
     }
     // Listener Stub Implementations
@@ -151,7 +230,13 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.passingObject
+        flag 2 (0x3L): viewmodel.aboutData
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
+        flag 5 (0x6L): viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
+        flag 6 (0x7L): viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
+        flag 7 (0x8L): viewmodel.passingObject.id == 1 ? @android:string/about_title : @android:string/terms
     flag mapping end*/
     //end
 }

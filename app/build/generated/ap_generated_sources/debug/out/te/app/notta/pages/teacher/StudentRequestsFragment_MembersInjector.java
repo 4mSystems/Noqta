@@ -4,21 +4,22 @@ package te.app.notta.pages.teacher;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.notta.pages.home.viewModels.HomeViewModel;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class StudentRequestsFragment_MembersInjector implements MembersInjector<StudentRequestsFragment> {
-  private final Provider<HomeViewModel> viewModelProvider;
+  private final Provider<GroupDetailsViewModel> viewModelProvider;
 
-  public StudentRequestsFragment_MembersInjector(Provider<HomeViewModel> viewModelProvider) {
+  public StudentRequestsFragment_MembersInjector(
+      Provider<GroupDetailsViewModel> viewModelProvider) {
     this.viewModelProvider = viewModelProvider;
   }
 
   public static MembersInjector<StudentRequestsFragment> create(
-      Provider<HomeViewModel> viewModelProvider) {
+      Provider<GroupDetailsViewModel> viewModelProvider) {
     return new StudentRequestsFragment_MembersInjector(viewModelProvider);
   }
 
@@ -28,7 +29,8 @@ public final class StudentRequestsFragment_MembersInjector implements MembersInj
   }
 
   @InjectedFieldSignature("te.app.notta.pages.teacher.StudentRequestsFragment.viewModel")
-  public static void injectViewModel(StudentRequestsFragment instance, HomeViewModel viewModel) {
+  public static void injectViewModel(StudentRequestsFragment instance,
+      GroupDetailsViewModel viewModel) {
     instance.viewModel = viewModel;
   }
 }

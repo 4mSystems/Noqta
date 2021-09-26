@@ -14,9 +14,8 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 2);
-        sViewsWithIds.put(R.id.tv_profile_title, 3);
-        sViewsWithIds.put(R.id.rc_members, 4);
+        sViewsWithIds.put(R.id.board_header, 3);
+        sViewsWithIds.put(R.id.tv_profile_title, 4);
     }
     // views
     @NonNull
@@ -34,13 +33,14 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     private FragmentRequestsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[1]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[2]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[4]
             );
         this.back.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.rcMembers.setTag(null);
         setRootTag(root);
         // listeners
         mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 1);
@@ -50,7 +50,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -69,7 +69,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((te.app.notta.pages.home.viewModels.HomeViewModel) variable);
+            setViewmodel((te.app.notta.pages.home.viewModels.GroupDetailsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -77,7 +77,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.HomeViewModel Viewmodel) {
+    public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.GroupDetailsViewModel Viewmodel) {
         updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -91,14 +91,20 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((te.app.notta.pages.home.viewModels.HomeViewModel) object, fieldId);
+                return onChangeViewmodel((te.app.notta.pages.home.viewModels.GroupDetailsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.HomeViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.GroupDetailsViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.groupDetailsStudentsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -112,12 +118,28 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.notta.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter viewmodelGroupDetailsStudentsAdapter = null;
+        te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.groupDetailsStudentsAdapter
+                    viewmodelGroupDetailsStudentsAdapter = viewmodel.getGroupDetailsStudentsAdapter();
+                }
+        }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.back.setOnClickListener(mCallback9);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcMembers, viewmodelGroupDetailsStudentsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -127,7 +149,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
         // viewmodel != null
         boolean viewmodelJavaLangObjectNull = false;
         // viewmodel
-        te.app.notta.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
 
 
 
@@ -143,7 +165,8 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.groupDetailsStudentsAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

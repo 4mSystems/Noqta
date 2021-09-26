@@ -16,7 +16,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.HomeViewModel;
+import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
 
 public abstract class FragmentRequestsBinding extends ViewDataBinding {
   @NonNull
@@ -32,7 +32,7 @@ public abstract class FragmentRequestsBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvProfileTitle;
 
   @Bindable
-  protected HomeViewModel mViewmodel;
+  protected GroupDetailsViewModel mViewmodel;
 
   protected FragmentRequestsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton back, AppCompatImageView boardHeader, RecyclerView rcMembers,
@@ -44,10 +44,10 @@ public abstract class FragmentRequestsBinding extends ViewDataBinding {
     this.tvProfileTitle = tvProfileTitle;
   }
 
-  public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable GroupDetailsViewModel viewmodel);
 
   @Nullable
-  public HomeViewModel getViewmodel() {
+  public GroupDetailsViewModel getViewmodel() {
     return mViewmodel;
   }
 

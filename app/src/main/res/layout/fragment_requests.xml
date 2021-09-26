@@ -14,7 +14,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.HomeViewModel" />
+            type="te.app.notta.pages.home.viewModels.GroupDetailsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -43,7 +43,7 @@
                 android:layout_marginTop="@dimen/dp6h"
                 android:text="@string/group_student"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
+                android:contentDescription="@string/app_name"
                 android:onClick="@{()->viewmodel.goBack(context)}"
                 android:src="@drawable/ic_back"
                 app:backgroundTint="@color/white"
@@ -67,11 +68,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp8h"
+                app:adapter="@{viewmodel.groupDetailsStudentsAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/board_header"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}"
                 tools:listitem="@layout/item_student_request" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

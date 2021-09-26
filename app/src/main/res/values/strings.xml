@@ -59,7 +59,7 @@
     <string name="change_password">Change password</string>
     <string name="forget_header1">Forget password</string>
     <string name="privacy">Provcay</string>
-    <string name="terms">terms</string>
+    <string name="terms">Terms And Conditions</string>
     <string name="have_not_account">Don’t have an account? </string>
     <string name="have_not_account_bold">Sign up</string>
     <string name="drop_off_skip">Skip</string>
@@ -69,10 +69,10 @@
     <string name="register_header1">Sign up With <font fgcolor='#FBB32A'>Noqta </font> App</string>
     <string name="student">Student</string>
     <string name="teacher">Teacher</string>
-    <string name="certificates">Teatching Certificate</string>
+    <string name="certificates">Teaching Certificate</string>
     <string name="verify_phone">Phone Verification</string>
     <string name="verify">Verify</string>
-    <string name="forget_body">Please enter your email address. You will recive a link to create a new password via email.</string>
+    <string name="forget_body">Please enter your email address. You will receive a link to create a new password via email.</string>
     <string name="save">Save</string>
     <string name="home_title">Choose your Group and Join Now !</string>
     <string name="search_home_hint">Search Group Name or teacher name ?</string>
@@ -89,7 +89,7 @@
     <string name="my_points">My <font fgcolor='#FBB32A'>points</font></string>
     <string name="my_gifts">My <font fgcolor='#FBB32A'>gifts</font></string>
     <string name="about_title">About Noqta</string>
-    <string name="about_app">About Noqta</string>
+    <string name="about_app">About <font fgcolor='#FBB32A'>Noqta </font></string>
     <string name="contact_title">Contact us</string>
     <string name="message_hint">Message</string>
     <string name="group_desc"><font fgcolor='#FBB32A'>About </font> Group</string>
@@ -165,5 +165,7 @@
     <string name="gift_deleted_successfully">Are you sure delete Gift ?</string>
     <string name="gift_body_deleted_successfully">You will delete this gift from your gifts and wont be shown to the groups students</string>
     <string name="cancel">Cancel</string>
+    <string name="rate_app">Rate App</string>
+    <string name="share_app">Share App</string>
 
 </resources>

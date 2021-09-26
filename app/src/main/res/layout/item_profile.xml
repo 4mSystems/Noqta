@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.notta.pages.settings.viewModels.ItemProfileViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -28,6 +28,7 @@
                 android:layout_margin="@dimen/dp8h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profile"
+                app:imageUrl="@{viewModel.profileItem.icon}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +39,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="@string/edit_profile"
+                android:text="@{viewModel.profileItem.name}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"

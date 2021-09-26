@@ -31,11 +31,11 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback48;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback49;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -193,10 +193,10 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback44 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback45 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback46 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback47 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback48 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback49 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -536,11 +536,11 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback47);
+            this.appCompatButtonNext.setOnClickListener(mCallback50);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback44);
-            this.icCloudUpload.setOnClickListener(mCallback45);
-            this.icCloudUploadVideo.setOnClickListener(mCallback46);
+            this.back.setOnClickListener(mCallback47);
+            this.icCloudUpload.setOnClickListener(mCallback48);
+            this.icCloudUploadVideo.setOnClickListener(mCallback49);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x98L) != 0) {
@@ -592,23 +592,6 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createTask();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -624,6 +607,23 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createTask();
                 }
                 break;
             }

@@ -13,9 +13,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_user, 1);
-        sViewsWithIds.put(R.id.tv_group_name, 2);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -33,8 +31,10 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
             );
+        this.icUser.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -43,7 +43,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -62,7 +62,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemHomeViewModel) variable);
+            setViewModel((te.app.notta.pages.settings.viewModels.ItemProfileViewModel) variable);
         }
         else {
             variableSet = false;
@@ -70,22 +70,34 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemHomeViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.settings.viewModels.ItemProfileViewModel ViewModel) {
+        updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewModel);
+        super.requestRebind();
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemHomeViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.settings.viewModels.ItemProfileViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemHomeViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.settings.viewModels.ItemProfileViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.profileItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -99,7 +111,35 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewModelProfileItemName = null;
+        int viewModelProfileItemIcon = 0;
+        te.app.notta.pages.settings.viewModels.ItemProfileViewModel viewModel = mViewModel;
+        te.app.notta.pages.settings.models.ProfileItem viewModelProfileItem = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (viewModel != null) {
+                    // read viewModel.profileItem
+                    viewModelProfileItem = viewModel.getProfileItem();
+                }
+
+
+                if (viewModelProfileItem != null) {
+                    // read viewModel.profileItem.name
+                    viewModelProfileItemName = viewModelProfileItem.getName();
+                    // read viewModel.profileItem.icon
+                    viewModelProfileItemIcon = viewModelProfileItem.getIcon();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.notta.base.ApplicationBinding.loadImage(this.icUser, viewModelProfileItemIcon);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupName, viewModelProfileItemName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -107,7 +147,8 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewModel.profileItem
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

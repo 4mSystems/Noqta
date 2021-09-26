@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -45,6 +46,9 @@ public abstract class FragmentContactBinding extends ViewDataBinding {
   public final CardView loginContainer;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final CustomTextViewMedium tvAboutTitle;
 
   @Bindable
@@ -55,7 +59,7 @@ public abstract class FragmentContactBinding extends ViewDataBinding {
       AppCompatImageView imgLoginHeader, TextInputLayout inputContactMessage,
       TextInputLayout inputName, TextInputLayout inputRegisterEmail,
       TextInputLayout inputRegisterPhone, CardView loginContainer,
-      CustomTextViewMedium tvAboutTitle) {
+      CircularProgressIndicator progress, CustomTextViewMedium tvAboutTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.icLogo = icLogo;
@@ -65,6 +69,7 @@ public abstract class FragmentContactBinding extends ViewDataBinding {
     this.inputRegisterEmail = inputRegisterEmail;
     this.inputRegisterPhone = inputRegisterPhone;
     this.loginContainer = loginContainer;
+    this.progress = progress;
     this.tvAboutTitle = tvAboutTitle;
   }
 

@@ -17,8 +17,10 @@ import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.FragmentContactBinding;
 import te.app.notta.model.base.Mutable;
+import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.auth.login.LoginFragment;
 import te.app.notta.pages.settings.viewModels.SettingsViewModel;
+import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
 public class ContactUsFragment extends BaseFragment {
@@ -40,15 +42,11 @@ public class ContactUsFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.HOME)) {
-//                        MovementHelper.startActivityMain(requireActivity());
-//            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
-//                } else {
-            MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
-//                }
-//            }
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
+            if (((Mutable) o).message.equals(Constants.CONTACT)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                finishActivity();
+            }
         });
     }
 

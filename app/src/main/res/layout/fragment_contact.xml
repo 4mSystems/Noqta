@@ -10,6 +10,8 @@
 
         <import type="android.text.TextUtils" />
 
+        <import type="te.app.notta.utils.Constants" />
+
         <variable
             name="viewmodel"
             type="te.app.notta.pages.settings.viewModels.SettingsViewModel" />
@@ -157,7 +159,7 @@
                         app:boxCornerRadiusBottomStart="@dimen/dp27h"
                         app:boxCornerRadiusTopEnd="@dimen/dp27h"
                         app:boxCornerRadiusTopStart="@dimen/dp27h"
-                        app:error="@{viewmodel.contactUsRequest.emailError}"
+                        app:error="@{viewmodel.contactUsRequest.phoneError}"
                         app:helperTextTextColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +169,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="phone"
-                            android:text="@={viewmodel.contactUsRequest.email}"
+                            android:text="@={viewmodel.contactUsRequest.phone}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark"
                             android:textColorHint="@color/overlayBackground" />
@@ -213,6 +215,7 @@
                         android:layout_marginEnd="@dimen/dp12w"
                         android:layout_marginBottom="@dimen/dp14h"
                         android:background="@drawable/corner_view_gradient"
+                        android:onClick="@{()->viewmodel.sendContact()}"
                         android:text="@string/send"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/white"
@@ -221,6 +224,18 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/input_contact_message" />
 
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progress"
+                        style="Widget.MaterialComponents.LinearProgressIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+                        app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                        app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+                        app:trackColor="@color/white"
+                        app:trackThickness="@dimen/dp4h" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.core.widget.NestedScrollView>
         </androidx.cardview.widget.CardView>

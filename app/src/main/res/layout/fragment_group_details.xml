@@ -249,6 +249,7 @@
                     android:layout_height="0dp"
                     android:text="@{viewmodel.groupDetails.requestsCount.concat(@string/requests)}"
                     android:textAllCaps="false"
+                    android:onClick="@{()->viewmodel.action(Constants.STUDENT_REQUESTS)}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp7"
                     app:backgroundTint="@color/colorAccent" />

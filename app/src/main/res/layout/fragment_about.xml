@@ -28,26 +28,30 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <te.app.notta.customViews.views.CustomTextViewMedium
-            android:id="@+id/tv_about_title"
+            android:id="@+id/tv_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp18h"
-            android:text="@string/about_title"
+            android:layout_marginTop="@dimen/dp6h"
+            android:text="@{viewmodel.passingObject.id==1?@string/about_title:@string/terms}"
             android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/back" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp8h"
+            android:layout_margin="@dimen/dp8h"
+            android:contentDescription="@string/app_name"
             android:onClick="@{()->viewmodel.goBack(context)}"
             android:src="@drawable/ic_back"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_about_title" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/login_container"
@@ -61,7 +65,7 @@
             app:cardElevation="3dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_about_title">
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_title">
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -88,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp14w"
                         android:layout_marginTop="@dimen/dp15h"
-                        android:text="@string/about_app"
+                        android:text="@{viewmodel.passingObject.id==1?@string/about_title:@string/terms}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +106,7 @@
                         android:layout_marginTop="@dimen/dp15h"
                         android:layout_marginEnd="@dimen/dp8w"
                         android:layout_marginBottom="@dimen/dp8h"
-                        android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos"
+                        android:text="@{viewmodel.aboutData.body}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/medium_color"
                         app:layout_constraintEnd_toEndOf="parent"

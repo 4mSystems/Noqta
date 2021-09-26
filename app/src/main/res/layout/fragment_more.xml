@@ -59,8 +59,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp15h"
+                    app:adapter="@{viewmodel.moreAdapter}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}"
                     tools:listitem="@layout/item_more" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

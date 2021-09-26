@@ -114,4 +114,10 @@ public class GroupRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GROUP_STUDENTS + groupId + "&page=" + page, new Object(), GroupStudentsResponse.class,
                 Constants.STUDENT, showProgress);
     }
+
+    public Disposable getGroupStudentsRequests(int groupId, int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GROUP_STUDENTS_REQUESTS + groupId + "&page=" + page, new Object(), GroupStudentsResponse.class,
+                Constants.STUDENT, showProgress);
+    }
+
 }

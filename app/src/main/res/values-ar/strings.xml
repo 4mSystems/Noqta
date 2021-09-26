@@ -167,4 +167,6 @@
     <string name="gift_deleted_successfully">Are you sure delete Gift ?</string>
     <string name="gift_body_deleted_successfully">You will delete this gift from your gifts and wont be shown to the groups students</string>
     <string name="cancel">Cancel</string>
+    <string name="rate_app">Rate App</string>
+    <string name="share_app">Share App</string>
 </resources>

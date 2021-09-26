@@ -26,6 +26,7 @@ import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.models.details.GroupDetailsResponse;
 import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
 import te.app.notta.pages.teacher.AddTaskFragment;
+import te.app.notta.pages.teacher.StudentRequestsFragment;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
@@ -60,6 +61,8 @@ public class GroupDetailsFragment extends BaseFragment {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, AddTaskFragment.class.getName(), null);
             }else if (mutable.message.equals(Constants.STUDENT)) {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, GroupStudentFragment.class.getName(), null);
+            } else if (mutable.message.equals(Constants.STUDENT_REQUESTS)) {
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, StudentRequestsFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.DIALOG_SHOW)) {
                 showDeleteDialog(Constants.DELETE_GROUP);
             } else if (mutable.message.equals(Constants.DELETE_GROUP)) {

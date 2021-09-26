@@ -25,7 +25,7 @@ public class URLS {
     public final static String ADD_GIFT = "teacher/create-gift";
     public final static String DELETE_GIFT = "teacher/remove-gift";
     public final static String GROUP_STUDENTS = "teacher/get-group-students?group_id=";
-    public final static String REJECT_ORDER = "v1/provider/order/reject";
+    public final static String GROUP_STUDENTS_REQUESTS = "teacher/get-my-requests";
     public final static String MY_CURRENT_ORDERS = "v1/provider/orders/current?page=";
     public final static String MY_LAST_ORDERS = "v1/provider/orders/latest?page=";
     public final static String HIDE_POST = "v1/hide/post";
@@ -35,7 +35,7 @@ public class URLS {
     public static final String GET_SERVICES = "v1/provider/main_services";
     public final static String CREATE_LIVE = "v1/live_stream";
     public final static String LIVE_DETAILS = "v1/live_stream/details/";
-    public static final String CONTACT_US = "v1/contact_us";
+    public static final String CONTACT_US = " app/complains-suggestions";
     public static final String NOTIFICATIONS = "v1/provider/notifications?page=";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String USER_PROFILE = "v1/provider/profile";
@@ -44,8 +44,8 @@ public class URLS {
     public static final String REPORT_REASONS = "v1/report_reasons";
     public static final String CHANGE_PROFILE_PASSWORD = "v1/provider/profile/password";
     public static final String BAN_USER = "v1/profile/ban";
-    public static final String ABOUT = "v1/about_us";
-    public static final String TERMS = "v1/terms_condition";
+    public static final String ABOUT = "app/about-us";
+    public static final String TERMS = "app/terms-conditions";
     public final static String REPORT_USER = "v1/profile/report";
     public final static String SEE_FIRST = "v1/follow/see_first";
 

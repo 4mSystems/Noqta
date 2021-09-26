@@ -4356,6 +4356,7 @@ string phone
 string please_select_another_file
 string points_number
 string privacy
+string rate_app
 string register
 string register_header
 string register_header1
@@ -4377,6 +4378,7 @@ string select_min_count
 string selected
 string send
 string send_answer
+string share_app
 string shop
 string show_all
 string specialist

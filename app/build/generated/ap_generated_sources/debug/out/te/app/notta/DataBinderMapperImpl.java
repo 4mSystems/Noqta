@@ -506,34 +506,38 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(25);
+    static final SparseArray<String> sKeys = new SparseArray<String>(29);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "addTaskRequest");
-      sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "groupDetails");
-      sKeys.put(4, "groupDetailsStudentsAdapter");
-      sKeys.put(5, "groupItem");
-      sKeys.put(6, "groupRequest");
-      sKeys.put(7, "groupsAdapter");
-      sKeys.put(8, "homeData");
-      sKeys.put(9, "inviteStudentsAdapter");
-      sKeys.put(10, "menuViewModel");
-      sKeys.put(11, "message");
-      sKeys.put(12, "onBoardAdapter");
-      sKeys.put(13, "onBoardViewModels");
-      sKeys.put(14, "passingObject");
-      sKeys.put(15, "pointsAdapter");
-      sKeys.put(16, "pointsData");
-      sKeys.put(17, "request");
-      sKeys.put(18, "student");
-      sKeys.put(19, "studentMainData");
-      sKeys.put(20, "studentsItem");
-      sKeys.put(21, "tasksAdapter");
-      sKeys.put(22, "tasksItem");
-      sKeys.put(23, "viewModel");
-      sKeys.put(24, "viewmodel");
+      sKeys.put(1, "aboutData");
+      sKeys.put(2, "addTaskRequest");
+      sKeys.put(3, "baseViewModel");
+      sKeys.put(4, "groupDetails");
+      sKeys.put(5, "groupDetailsStudentsAdapter");
+      sKeys.put(6, "groupItem");
+      sKeys.put(7, "groupRequest");
+      sKeys.put(8, "groupsAdapter");
+      sKeys.put(9, "homeData");
+      sKeys.put(10, "inviteStudentsAdapter");
+      sKeys.put(11, "menuViewModel");
+      sKeys.put(12, "message");
+      sKeys.put(13, "moreAdapter");
+      sKeys.put(14, "onBoardAdapter");
+      sKeys.put(15, "onBoardViewModels");
+      sKeys.put(16, "passingObject");
+      sKeys.put(17, "pointsAdapter");
+      sKeys.put(18, "pointsData");
+      sKeys.put(19, "profileAdaptersAdapter");
+      sKeys.put(20, "profileItem");
+      sKeys.put(21, "request");
+      sKeys.put(22, "student");
+      sKeys.put(23, "studentMainData");
+      sKeys.put(24, "studentsItem");
+      sKeys.put(25, "tasksAdapter");
+      sKeys.put(26, "tasksItem");
+      sKeys.put(27, "viewModel");
+      sKeys.put(28, "viewmodel");
     }
   }
 

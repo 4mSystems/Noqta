@@ -9,17 +9,20 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import javax.inject.Inject;
 
+import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.base.BaseFragment;
 import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.FragmentAboutBinding;
 import te.app.notta.model.base.Mutable;
-import te.app.notta.pages.auth.login.LoginFragment;
+import te.app.notta.pages.settings.models.AboutResponse;
 import te.app.notta.pages.settings.viewModels.SettingsViewModel;
-import te.app.notta.utils.helper.MovementHelper;
+import te.app.notta.utils.Constants;
 
 public class AboutFragment extends BaseFragment {
     FragmentAboutBinding moreBinding;
@@ -32,6 +35,12 @@ public class AboutFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         moreBinding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.getAboutOrTerms();
+        }
         setEvent();
         return moreBinding.getRoot();
     }
@@ -40,22 +49,16 @@ public class AboutFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.HOME)) {
-//                        MovementHelper.startActivityMain(requireActivity());
-//            } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                    MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
-//                } else {
-            MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
-//                }
-//            }
+            if (((Mutable) o).message.equals(Constants.ABOUT)) {
+                viewModel.setAboutData(((AboutResponse) mutable.object).getData());
+            }
         });
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        viewModel.repository.setLiveData(viewModel.liveData);
+        viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 
 }

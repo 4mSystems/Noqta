@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -25,6 +26,9 @@ public abstract class FragmentAboutBinding extends ViewDataBinding {
   public final CustomTextViewMedium aboutSubTitle;
 
   @NonNull
+  public final FloatingActionButton back;
+
+  @NonNull
   public final AppCompatImageView icLogo;
 
   @NonNull
@@ -34,22 +38,23 @@ public abstract class FragmentAboutBinding extends ViewDataBinding {
   public final CardView loginContainer;
 
   @NonNull
-  public final CustomTextViewMedium tvAboutTitle;
+  public final CustomTextViewMedium tvProfileTitle;
 
   @Bindable
   protected SettingsViewModel mViewmodel;
 
   protected FragmentAboutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium aboutBody, CustomTextViewMedium aboutSubTitle, AppCompatImageView icLogo,
-      AppCompatImageView imgLoginHeader, CardView loginContainer,
-      CustomTextViewMedium tvAboutTitle) {
+      CustomTextViewMedium aboutBody, CustomTextViewMedium aboutSubTitle, FloatingActionButton back,
+      AppCompatImageView icLogo, AppCompatImageView imgLoginHeader, CardView loginContainer,
+      CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.aboutBody = aboutBody;
     this.aboutSubTitle = aboutSubTitle;
+    this.back = back;
     this.icLogo = icLogo;
     this.imgLoginHeader = imgLoginHeader;
     this.loginContainer = loginContainer;
-    this.tvAboutTitle = tvAboutTitle;
+    this.tvProfileTitle = tvProfileTitle;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);

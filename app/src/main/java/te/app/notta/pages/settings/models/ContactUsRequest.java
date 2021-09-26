@@ -8,8 +8,6 @@ import te.app.notta.utils.Constants;
 import te.app.notta.utils.validation.Validate;
 
 public class ContactUsRequest {
-    @SerializedName("type")
-    private int type;
     @SerializedName("name")
     private String name;
     @SerializedName("email")
@@ -31,19 +29,14 @@ public class ContactUsRequest {
         } else if (!Validate.isValid(email, Constants.EMAIL)) {
             emailError.set(Validate.error);
             valid = false;
+        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+            phoneError.set(Validate.error);
+            valid = false;
         } else if (!Validate.isValid(message, Constants.FIELD)) {
             noteError.set(Validate.error);
             valid = false;
         }
         return valid;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
     }
 
     public String getName() {

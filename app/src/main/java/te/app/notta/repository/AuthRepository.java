@@ -20,6 +20,8 @@ import te.app.notta.pages.auth.models.RegisterRequest;
 import te.app.notta.pages.auth.models.SpecialistResponse;
 import te.app.notta.pages.auth.models.UsersResponse;
 import te.app.notta.pages.onBoard.models.BoardResponse;
+import te.app.notta.pages.settings.models.AboutResponse;
+import te.app.notta.pages.settings.models.ContactUsRequest;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -104,4 +106,13 @@ public class AuthRepository extends BaseRepository {
                 Constants.SPECIALIST, true);
     }
 
+    public Disposable getAboutOrTerms(int type) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, type == 1 ? URLS.ABOUT : URLS.TERMS, new Object(), AboutResponse.class,
+                Constants.ABOUT, true);
+    }
+
+    public Disposable sendContact(ContactUsRequest contactUsRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONTACT_US, contactUsRequest, StatusMessage.class,
+                Constants.CONTACT, false);
+    }
 }
