@@ -29,11 +29,11 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback48;
     @Nullable
-    private final android.view.View.OnClickListener mCallback41;
+    private final android.view.View.OnClickListener mCallback49;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -224,9 +224,9 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback42 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback41 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback48 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback49 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -557,11 +557,11 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback43);
+            this.appCompatButtonNext.setOnClickListener(mCallback50);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback41);
+            this.back.setOnClickListener(mCallback48);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
-            this.mboundView7.setOnClickListener(mCallback42);
+            this.mboundView7.setOnClickListener(mCallback49);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xb0L) != 0) {
@@ -631,6 +631,24 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 }
                 break;
             }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -647,24 +665,6 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
 
 
                     viewmodel.action(te.app.notta.utils.Constants.IMAGE);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }

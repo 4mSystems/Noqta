@@ -1,93 +1,100 @@
 package te.app.notta.pages.home.models.details;
 
 import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
 
 import te.app.notta.pages.auth.models.UserData;
 
 public class GroupDetails {
 
-	@SerializedName("requests_count")
-	private String requestsCount;
+    @SerializedName("requests_count")
+    private String requestsCount;
 
-	@SerializedName("teacher")
-	private UserData teacher;
+    @SerializedName("teacher")
+    private UserData teacher;
 
-	@SerializedName("teacher_id")
-	private String teacherId;
+    @SerializedName("teacher_id")
+    private String teacherId;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("about")
-	private String about;
+    @SerializedName("about")
+    private String about;
 
-	@SerializedName("students_count")
-	private String studentsCount;
+    @SerializedName("students_count")
+    private String studentsCount;
 
-	@SerializedName("description")
-	private String description;
+    @SerializedName("description")
+    private String description;
 
-	@SerializedName("created_at")
-	private String createdAt;
+    @SerializedName("created_at")
+    private String createdAt;
 
-	@SerializedName("students")
-	private List<StudentsItem> students;
+    @SerializedName("students")
+    private List<StudentsItem> students;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
+    @SerializedName("member")
+    private int member;
 
-	@SerializedName("tasks_count")
-	private String tasksCount;
+    @SerializedName("tasks_count")
+    private String tasksCount;
 
-	@SerializedName("tasks")
-	private List<TasksItem> tasks;
+    @SerializedName("tasks")
+    private List<TasksItem> tasks;
 
-	public String getRequestsCount(){
-		return requestsCount;
-	}
+    public String getRequestsCount() {
+        return requestsCount;
+    }
 
-	public UserData getTeacher(){
-		return teacher;
-	}
+    public UserData getTeacher() {
+        return teacher;
+    }
 
-	public String getTeacherId(){
-		return teacherId;
-	}
+    public String getTeacherId() {
+        return teacherId;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getAbout(){
-		return about;
-	}
+    public String getAbout() {
+        return about;
+    }
 
-	public String getStudentsCount(){
-		return studentsCount;
-	}
+    public String getStudentsCount() {
+        return studentsCount;
+    }
 
-	public String getDescription(){
-		return description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getCreatedAt(){
-		return createdAt;
-	}
+    public String getCreatedAt() {
+        return createdAt;
+    }
 
-	public List<StudentsItem> getStudents(){
-		return students;
-	}
+    public List<StudentsItem> getStudents() {
+        return students;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getTasksCount(){
-		return tasksCount;
-	}
+    public String getTasksCount() {
+        return tasksCount;
+    }
 
-	public List<TasksItem> getTasks(){
-		return tasks;
-	}
+    public List<TasksItem> getTasks() {
+        return tasks;
+    }
+
+    public int getMember() {
+        return member;
+    }
 }

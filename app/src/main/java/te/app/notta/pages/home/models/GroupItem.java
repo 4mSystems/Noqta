@@ -20,6 +20,7 @@ public class GroupItem {
 
     @SerializedName("id")
     private int id;
+    private boolean isJoinSent;
 
     @SerializedName("tasks_count")
     private String tasksCount;
@@ -52,5 +53,13 @@ public class GroupItem {
 
     public UserData getTeacher() {
         return teacher;
+    }
+
+    public boolean isJoinSent() {
+        return isJoinSent;
+    }
+
+    public void setJoinSent(boolean joinSent) {
+        isJoinSent = joinSent;
     }
 }

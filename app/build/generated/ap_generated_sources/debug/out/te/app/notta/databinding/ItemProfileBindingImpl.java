@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemProfileBindingImpl extends ItemProfileBinding  {
+public class ItemProfileBindingImpl extends ItemProfileBinding implements te.app.notta.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -19,6 +19,8 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,6 +39,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback61 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,9 +143,30 @@ public class ItemProfileBindingImpl extends ItemProfileBinding  {
             te.app.notta.base.ApplicationBinding.loadImage(this.icUser, viewModelProfileItemIcon);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupName, viewModelProfileItemName);
         }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView0.setOnClickListener(mCallback61);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewModel
+        te.app.notta.pages.settings.viewModels.ItemProfileViewModel viewModel = mViewModel;
+        // viewModel != null
+        boolean viewModelJavaLangObjectNull = false;
+
+
+
+        viewModelJavaLangObjectNull = (viewModel) != (null);
+        if (viewModelJavaLangObjectNull) {
+
+
+            viewModel.itemAction();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

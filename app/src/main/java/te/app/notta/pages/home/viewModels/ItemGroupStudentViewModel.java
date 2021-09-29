@@ -18,4 +18,7 @@ public class ItemGroupStudentViewModel extends BaseViewModel {
         return studentsItem;
     }
 
+    public void itemAction(String action) {
+        getLiveData().setValue(action);
+    }
 }

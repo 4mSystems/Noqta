@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="te.app.moon.views.fragments.SplashFragment">
-
     <data>
-
         <variable
             name="viewmodel"
             type="te.app.notta.pages.settings.viewModels.SettingsViewModel" />
@@ -37,6 +35,7 @@
                 android:src="@drawable/splash"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
+                android:onClick="@{()->viewmodel.profile()}"
                 app:imageUrl="@{viewmodel.userData.image}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +46,7 @@
                 android:layout_height="@dimen/dp21h"
                 android:layout_marginEnd="@dimen/dp4w"
                 android:src="@drawable/ic_edit_profile"
+                android:onClick="@{()->viewmodel.profile()}"
                 app:layout_constraintBottom_toBottomOf="@id/member_profile"
                 app:layout_constraintEnd_toEndOf="@id/member_profile" />
 
@@ -81,6 +81,7 @@
                 android:layout_marginTop="@dimen/dp6h"
                 android:text="@string/logout"
                 android:textAllCaps="false"
+                android:onClick="@{()->viewmodel.logout()}"
                 app:backgroundTint="@color/colorAccent"
                 app:cornerRadius="@dimen/dp15h"
                 app:layout_constraintEnd_toEndOf="parent"

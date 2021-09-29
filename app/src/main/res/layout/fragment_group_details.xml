@@ -247,9 +247,9 @@
                     android:id="@+id/btn_requests"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:onClick="@{()->viewmodel.action(Constants.STUDENT_REQUESTS)}"
                     android:text="@{viewmodel.groupDetails.requestsCount.concat(@string/requests)}"
                     android:textAllCaps="false"
-                    android:onClick="@{()->viewmodel.action(Constants.STUDENT_REQUESTS)}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp7"
                     app:backgroundTint="@color/colorAccent" />
@@ -262,7 +262,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp7"
-                    android:visibility="@{viewmodel.groupDetails.teacher.id!=viewmodel.userData.id?View.VISIBLE:View.GONE}"
+                    android:visibility="@{viewmodel.groupDetails.member==1?View.VISIBLE:viewmodel.groupDetails.teacher.id==viewmodel.userData.id?View.GONE:View.INVISIBLE}"
                     app:backgroundTint="@color/red"
                     app:icon="@drawable/ic_exit"
                     app:iconGravity="textTop" />
@@ -351,6 +351,7 @@
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/dp12h"
                     android:background="@color/line_color"
+                    android:visibility="@{viewmodel.groupDetails.teacher.id==viewmodel.userData.id ||viewmodel.groupDetails.member==1?View.VISIBLE:View.GONE}"
                     app:layout_constraintTop_toBottomOf="@id/rc_members" />
 
                 <te.app.notta.customViews.views.CustomTextViewMedium
@@ -362,6 +363,7 @@
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"
+                    android:visibility="@{viewmodel.groupDetails.teacher.id==viewmodel.userData.id ||viewmodel.groupDetails.member==1?View.VISIBLE:View.GONE}"
                     app:layout_constraintStart_toStartOf="@id/ic_teacher"
                     app:layout_constraintTop_toBottomOf="@+id/v_line3" />
 
@@ -369,6 +371,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp8h"
+                    android:visibility="@{viewmodel.groupDetails.teacher.id==viewmodel.userData.id ||viewmodel.groupDetails.member==1?View.VISIBLE:View.GONE}"
                     app:adapter="@{viewmodel.tasksAdapter}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/ic_teacher"
@@ -386,6 +389,7 @@
             android:layout_margin="@dimen/dp8h"
             android:contentDescription="@string/app_name"
             android:onClick="@{()-> viewmodel.action(Constants.ADD_TASK)}"
+            android:visibility="@{viewmodel.groupDetails.teacher.id==viewmodel.userData.id ?View.VISIBLE:View.GONE}"
             app:backgroundTint="@color/colorAccent"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:layout_constraintBottom_toBottomOf="parent"

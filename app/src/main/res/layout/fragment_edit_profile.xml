@@ -63,7 +63,9 @@
                 android:layout_width="@dimen/dp70w"
                 android:layout_height="@dimen/dp70h"
                 android:layout_marginTop="@dimen/dp25h"
+                android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
                 android:src="@drawable/splash"
+                app:imageUrl="@{viewmodel.userData.image}"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,6 +76,7 @@
                 android:layout_width="@dimen/dp21w"
                 android:layout_height="@dimen/dp21h"
                 android:layout_marginEnd="@dimen/dp4w"
+                android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
                 android:src="@drawable/ic_edit_profile"
                 app:layout_constraintBottom_toBottomOf="@id/member_profile"
                 app:layout_constraintEnd_toEndOf="@id/member_profile" />
@@ -160,6 +163,7 @@
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:inputType="textPassword"
+                    android:onClick="@{()->viewmodel.action(Constants.CHANGE_PASSWORD)}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -174,8 +178,8 @@
                 android:layout_marginBottom="@dimen/dp20h"
                 android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
                 android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
-                android:onClick="@{()-> viewmodel.register()}"
-                android:text="@string/edit_profile"
+                android:onClick="@{()-> viewmodel.updateProfile()}"
+                android:text="@string/edit_profile_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"

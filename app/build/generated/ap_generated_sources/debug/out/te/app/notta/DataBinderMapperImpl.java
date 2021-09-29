@@ -506,7 +506,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(29);
+    static final SparseArray<String> sKeys = new SparseArray<String>(30);
 
     static {
       sKeys.put(0, "_all");
@@ -534,10 +534,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(22, "student");
       sKeys.put(23, "studentMainData");
       sKeys.put(24, "studentsItem");
-      sKeys.put(25, "tasksAdapter");
-      sKeys.put(26, "tasksItem");
-      sKeys.put(27, "viewModel");
-      sKeys.put(28, "viewmodel");
+      sKeys.put(25, "studentsRequestsAdapter");
+      sKeys.put(26, "tasksAdapter");
+      sKeys.put(27, "tasksItem");
+      sKeys.put(28, "viewModel");
+      sKeys.put(29, "viewmodel");
     }
   }
 

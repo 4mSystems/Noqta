@@ -37,6 +37,11 @@ public class RegisterViewModel extends BaseViewModel {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
+        if (userData != null) {
+            getRequest().setName(userData.getName());
+            getRequest().setEmail(userData.getEmail());
+            getRequest().setType(userData.getType());
+        }
     }
 
     public void register() {
@@ -47,6 +52,13 @@ public class RegisterViewModel extends BaseViewModel {
                 compositeDisposable.add(repository.register(request, getFileObject()));
             } else
                 liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.password_not_match)));
+        }
+    }
+
+    public void updateProfile() {
+        if (getRequest().isUpdateValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
+            compositeDisposable.add(repository.updateProfile(request, getFileObject()));
         }
     }
 

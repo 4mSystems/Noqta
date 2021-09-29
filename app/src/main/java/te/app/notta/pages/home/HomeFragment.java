@@ -23,6 +23,7 @@ import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.FragmentHomeBinding;
 import te.app.notta.model.base.Mutable;
+import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.home.models.HomeResponse;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.pages.teacher.AddGroupFragment;
@@ -49,12 +50,20 @@ public class HomeFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.HOME)) {
-                viewModel.setHomeData(((HomeResponse) mutable.object).getData());
-            } else if (((Mutable) o).message.equals(Constants.ADD_GROUP)) {
-                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), null, AddGroupFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
+            switch (((Mutable) o).message) {
+                case Constants.HOME:
+                    viewModel.setHomeData(((HomeResponse) mutable.object).getData());
+                    break;
+                case Constants.ADD_GROUP:
+                    MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), null, AddGroupFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
+                    break;
+                case Constants.JOIN_REQUEST:
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    viewModel.getGroupsAdapter().updateItemJoinRequest();
+                    break;
             }
         });
+        viewModel.getGroupsAdapter().liveData.observeForever(groupId -> viewModel.studentJoinRequest(groupId));
         fragmentSplashBinding.rcGroups.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {

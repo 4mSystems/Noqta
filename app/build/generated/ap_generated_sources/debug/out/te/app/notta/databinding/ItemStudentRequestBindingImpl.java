@@ -120,7 +120,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
             mDirtyFlags = 0;
         }
         java.lang.String viewModelStudentsItemStudentName = null;
-        java.lang.String viewModelStudentsItemStudentPoints = null;
+        java.lang.String viewModelStudentsItemGroupId = null;
         te.app.notta.pages.home.models.details.StudentsItem viewModelStudentsItem = null;
         te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
         java.lang.String viewModelStudentsItemStudentImage = null;
@@ -138,8 +138,8 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
                 if (viewModelStudentsItem != null) {
                     // read viewModel.studentsItem.studentName
                     viewModelStudentsItemStudentName = viewModelStudentsItem.getStudentName();
-                    // read viewModel.studentsItem.studentPoints
-                    viewModelStudentsItemStudentPoints = viewModelStudentsItem.getStudentPoints();
+                    // read viewModel.studentsItem.groupId
+                    viewModelStudentsItemGroupId = viewModelStudentsItem.getGroupId();
                     // read viewModel.studentsItem.studentImage
                     viewModelStudentsItemStudentImage = viewModelStudentsItem.getStudentImage();
                 }
@@ -150,7 +150,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
 
             te.app.notta.base.ApplicationBinding.loadImage(this.tvMember, viewModelStudentsItemStudentImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvTeacherName, viewModelStudentsItemStudentName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelStudentsItemStudentPoints);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelStudentsItemGroupId);
         }
     }
     // Listener Stub Implementations

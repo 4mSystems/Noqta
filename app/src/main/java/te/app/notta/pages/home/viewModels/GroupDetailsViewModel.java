@@ -11,6 +11,7 @@ import te.app.notta.BR;
 import te.app.notta.base.BaseViewModel;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter;
+import te.app.notta.pages.home.adapters.GroupStudentsRequestsAdapter;
 import te.app.notta.pages.home.adapters.GroupTasksAdapter;
 import te.app.notta.pages.home.models.details.GroupDetails;
 import te.app.notta.pages.home.models.groupStudents.GroupStudentsMain;
@@ -24,6 +25,7 @@ public class GroupDetailsViewModel extends BaseViewModel {
     GroupRepository repository;
     GroupDetails groupDetails;
     GroupDetailsStudentsAdapter groupDetailsStudentsAdapter;
+    GroupStudentsRequestsAdapter studentsRequestsAdapter;
     GroupTasksAdapter tasksAdapter;
     GroupStudentsMain studentMainData;
 
@@ -81,6 +83,12 @@ public class GroupDetailsViewModel extends BaseViewModel {
             getGroupDetailsStudentsAdapter().update(studentMainData.getStudentsItemList());
             notifyChange(BR.inviteStudentsAdapter);
         }
+        if (getStudentsRequestsAdapter().getStudentsItemList().size() > 0) {
+            getStudentsRequestsAdapter().loadMore(studentMainData.getStudentsItemList());
+        } else {
+            getStudentsRequestsAdapter().update(studentMainData.getStudentsItemList());
+            notifyChange(BR.studentsRequestsAdapter);
+        }
         searchProgressVisible.set(false);
         this.studentMainData = studentMainData;
     }
@@ -88,6 +96,11 @@ public class GroupDetailsViewModel extends BaseViewModel {
     @Bindable
     public GroupDetailsStudentsAdapter getGroupDetailsStudentsAdapter() {
         return this.groupDetailsStudentsAdapter == null ? this.groupDetailsStudentsAdapter = new GroupDetailsStudentsAdapter() : this.groupDetailsStudentsAdapter;
+    }
+
+    @Bindable
+    public GroupStudentsRequestsAdapter getStudentsRequestsAdapter() {
+        return this.studentsRequestsAdapter == null ? this.studentsRequestsAdapter = new GroupStudentsRequestsAdapter() : this.studentsRequestsAdapter;
     }
 
     @Bindable

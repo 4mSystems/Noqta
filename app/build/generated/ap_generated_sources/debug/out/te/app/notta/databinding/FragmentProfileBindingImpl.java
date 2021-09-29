@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
+public class FragmentProfileBindingImpl extends FragmentProfileBinding implements te.app.notta.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,39 +14,52 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 5);
-        sViewsWithIds.put(R.id.logout, 6);
+        sViewsWithIds.put(R.id.board_header, 7);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView4;
+    private final androidx.appcompat.widget.AppCompatImageView mboundView2;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView6;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback12;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback13;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private FragmentProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (com.google.android.material.button.MaterialButton) bindings[5]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
             );
+        this.logout.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView4 = (androidx.recyclerview.widget.RecyclerView) bindings[4];
-        this.mboundView4.setTag(null);
+        this.mboundView2 = (androidx.appcompat.widget.AppCompatImageView) bindings[2];
+        this.mboundView2.setTag(null);
+        this.mboundView6 = (androidx.recyclerview.widget.RecyclerView) bindings[6];
+        this.mboundView6.setTag(null);
         this.memberProfile.setTag(null);
         this.tvEmail.setTag(null);
         this.tvUserName.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback12 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -155,10 +168,17 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.logout.setOnClickListener(mCallback13);
+            this.mboundView2.setOnClickListener(mCallback12);
+            this.memberProfile.setOnClickListener(mCallback11);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView4, viewmodelProfileAdaptersAdapter, "2", "1");
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView6, viewmodelProfileAdaptersAdapter, "2", "1");
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -170,6 +190,61 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.profile();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.logout();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.profile();
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

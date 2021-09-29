@@ -4,12 +4,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_cloud_upload.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_board_home.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_board_home.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/anim_jump_fast.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/anim/jump_fast.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_board_home.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_board_home.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_member.xml.flat",

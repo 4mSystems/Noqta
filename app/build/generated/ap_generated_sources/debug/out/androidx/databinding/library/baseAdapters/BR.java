@@ -51,11 +51,13 @@ public class BR {
 
   public static final int studentsItem = 24;
 
-  public static final int tasksAdapter = 25;
+  public static final int studentsRequestsAdapter = 25;
 
-  public static final int tasksItem = 26;
+  public static final int tasksAdapter = 26;
 
-  public static final int viewModel = 27;
+  public static final int tasksItem = 27;
 
-  public static final int viewmodel = 28;
+  public static final int viewModel = 28;
+
+  public static final int viewmodel = 29;
 }

@@ -22,7 +22,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback10;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
         this.rcMembers.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -102,7 +102,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
             }
             return true;
         }
-        else if (fieldId == BR.groupDetailsStudentsAdapter) {
+        else if (fieldId == BR.studentsRequestsAdapter) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -118,7 +118,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter viewmodelGroupDetailsStudentsAdapter = null;
+        te.app.notta.pages.home.adapters.GroupStudentsRequestsAdapter viewmodelStudentsRequestsAdapter = null;
         te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -126,20 +126,20 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.groupDetailsStudentsAdapter
-                    viewmodelGroupDetailsStudentsAdapter = viewmodel.getGroupDetailsStudentsAdapter();
+                    // read viewmodel.studentsRequestsAdapter
+                    viewmodelStudentsRequestsAdapter = viewmodel.getStudentsRequestsAdapter();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback9);
+            this.back.setOnClickListener(mCallback10);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcMembers, viewmodelGroupDetailsStudentsAdapter, "1", "1");
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcMembers, viewmodelStudentsRequestsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -165,7 +165,7 @@ public class FragmentRequestsBindingImpl extends FragmentRequestsBinding impleme
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.groupDetailsStudentsAdapter
+        flag 1 (0x2L): viewmodel.studentsRequestsAdapter
         flag 2 (0x3L): null
     flag mapping end*/
     //end

@@ -73,14 +73,6 @@ public class RegisterRequest {
         } else if (!Validate.isValid(email, Constants.EMAIL)) {
             emailError.set(Validate.error);
             valid = false;
-        } else if (type.equals("1")) {
-            if (!Validate.isValid(special, Constants.FIELD)) {
-                specialError.set(Validate.error);
-                valid = false;
-            }
-        } else if (!Validate.isValid(phone, Constants.FIELD)) {
-            phoneError.set(Validate.error);
-            valid = false;
         }
         return valid;
     }

@@ -36,7 +36,7 @@ public class Constants {
     public final static String DELETE_GIFT = "DELETE_GIFT";
 
     public final static String STUDENT_REQUESTS = "STUDENT_REQUESTS";
-    public final static String PASSPORT_PHOTO = "passport_photo";
+    public final static String JOIN_REQUEST = "JOIN_REQUEST";
     public final static String NEW_POST = "NEW_POST";
 
     public final static String ERROR_TOAST = "error_toast";
@@ -49,7 +49,7 @@ public class Constants {
     public final static String RESPONSE_URL_CHANGED = "changed";
 
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String ORDER_DETAILS = "ORDER_DETAILS";
+    public final static String ACCEPT = "ACCEPT";
 
 
     public final static String LANGUAGE = "language";
@@ -59,7 +59,7 @@ public class Constants {
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
-    public static final String POST_REACTS = "POST_REACTS";
+    public static final String REJECT = "REJECT";
     public static final String PLAY_VIDEO = "PLAY_VIDEO";
     public static final String HIDE_POST = "HIDE_POST";
     public static final String REJECT_ORDER = "REJECT_ORDER";

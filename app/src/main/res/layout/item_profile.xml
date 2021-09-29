@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp6h"
+        android:onClick="@{()->viewModel.itemAction()}"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">

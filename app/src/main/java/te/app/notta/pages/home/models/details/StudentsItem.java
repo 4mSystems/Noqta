@@ -2,54 +2,61 @@ package te.app.notta.pages.home.models.details;
 
 import com.google.gson.annotations.SerializedName;
 
-public class StudentsItem{
+public class StudentsItem {
 
-	@SerializedName("student_name")
-	private String studentName;
+    @SerializedName("student_name")
+    private String studentName;
 
-	@SerializedName("group_id")
-	private String groupId;
+    @SerializedName("group_id")
+    private String groupId;
 
-	@SerializedName("student_id")
-	private String studentId;
+    @SerializedName("student_id")
+    private String studentId;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("student_points")
-	private String studentPoints;
+    @SerializedName("student_points")
+    private String studentPoints;
 
-	@SerializedName("student_image")
-	private String studentImage;
+    @SerializedName("student_image")
+    private String studentImage;
 
-	@SerializedName("accept")
-	private String accept;
+    @SerializedName("accept")
+    private String accept;
 
-	public String getStudentName(){
-		return studentName;
-	}
+    @SerializedName("group_name")
+    private String group_name;
 
-	public String getGroupId(){
-		return groupId;
-	}
+    public String getStudentName() {
+        return studentName;
+    }
 
-	public String getStudentId(){
-		return studentId;
-	}
+    public String getGroupId() {
+        return groupId;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getStudentId() {
+        return studentId;
+    }
 
-	public String getStudentPoints(){
-		return studentPoints;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getStudentImage(){
-		return studentImage;
-	}
+    public String getStudentPoints() {
+        return studentPoints;
+    }
 
-	public String getAccept(){
-		return accept;
-	}
+    public String getStudentImage() {
+        return studentImage;
+    }
+
+    public String getAccept() {
+        return accept;
+    }
+
+    public String getGroup_name() {
+        return group_name;
+    }
 }

@@ -59,10 +59,12 @@ public class GroupDetailsFragment extends BaseFragment {
                 viewModel.setGroupDetails(((GroupDetailsResponse) mutable.object).getGroupDetails());
             } else if (mutable.message.equals(Constants.ADD_TASK)) {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, AddTaskFragment.class.getName(), null);
-            }else if (mutable.message.equals(Constants.STUDENT)) {
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, GroupStudentFragment.class.getName(), null);
+            } else if (mutable.message.equals(Constants.STUDENT)) {
+                if (viewModel.userData.getType().equals("2"))
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, GroupStudentFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.STUDENT_REQUESTS)) {
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, StudentRequestsFragment.class.getName(), null);
+                if (viewModel.userData.getType().equals("2"))
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, StudentRequestsFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.DIALOG_SHOW)) {
                 showDeleteDialog(Constants.DELETE_GROUP);
             } else if (mutable.message.equals(Constants.DELETE_GROUP)) {

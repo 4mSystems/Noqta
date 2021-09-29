@@ -28,9 +28,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -96,8 +96,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback16 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -293,8 +293,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback17);
-            this.back.setOnClickListener(mCallback16);
+            this.appCompatButtonNext.setOnClickListener(mCallback24);
+            this.back.setOnClickListener(mCallback23);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x5L) != 0) {
@@ -307,23 +307,6 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendCode();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -339,6 +322,23 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendCode();
                 }
                 break;
             }

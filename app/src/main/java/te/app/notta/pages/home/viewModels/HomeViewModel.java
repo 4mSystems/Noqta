@@ -44,6 +44,10 @@ public class HomeViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getHome(page, showProgress, searchText));
     }
 
+    public void studentJoinRequest(int groupId) {
+        compositeDisposable.add(repository.studentJoinRequest(groupId));
+    }
+
     @Bindable
     public HomeData getHomeData() {
         return this.homeData == null ? this.homeData = new HomeData() : this.homeData;

@@ -60,6 +60,12 @@ public class StudentRequestsFragment extends BaseFragment {
                 viewModel.setStudentMainData(((GroupStudentsResponse) mutable.object).getData());
             }
         });
+        viewModel.getStudentsRequestsAdapter().liveData.observeForever(new Observer<PassingObject>() {
+            @Override
+            public void onChanged(PassingObject passingObject) {
+                //TODO REQUEST STATUS
+            }
+        });
         requestsBinding.rcMembers.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {

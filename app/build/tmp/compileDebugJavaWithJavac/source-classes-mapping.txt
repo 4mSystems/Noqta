@@ -168,6 +168,9 @@ te/app/notta/pages/home/viewModels/GroupDetailsViewModel.java
  te.app.notta.pages.home.viewModels.GroupDetailsViewModel
 te/app/notta/pages/auth/register/RegisterViewModel.java
  te.app.notta.pages.auth.register.RegisterViewModel
+te/app/notta/pages/home/adapters/GroupStudentsRequestsAdapter.java
+ te.app.notta.pages.home.adapters.GroupStudentsRequestsAdapter
+ te.app.notta.pages.home.adapters.GroupStudentsRequestsAdapter$ViewHolder
 te/app/notta/base/BaseViewModel.java
  te.app.notta.base.BaseViewModel
 te/app/notta/utils/timer/TimePickerFragment.java

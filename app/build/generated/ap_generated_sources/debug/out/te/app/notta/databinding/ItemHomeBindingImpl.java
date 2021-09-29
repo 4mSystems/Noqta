@@ -23,6 +23,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
     @Nullable
+    private final android.view.View.OnClickListener mCallback9;
+    @Nullable
     private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
@@ -60,6 +62,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         setRootTag(root);
         // listeners
         mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
@@ -144,6 +147,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         boolean viewModelGroupItemTeacherIdViewModelUserDataId = false;
         java.lang.String viewModelGroupItemStudentsCount = null;
         java.lang.String viewModelGroupItemRequestsCountConcatBtnRequestsAndroidStringRequests = null;
+        boolean viewModelGroupItemJoinSent = false;
+        android.graphics.drawable.Drawable viewModelGroupItemJoinSentBtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus = null;
         int viewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE = 0;
         java.lang.String viewModelGroupItemName = null;
         java.lang.String viewModelGroupItemTasksCount = null;
@@ -176,6 +181,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
                     viewModelGroupItemDescription = viewModelGroupItem.getDescription();
                     // read viewModel.groupItem.studentsCount
                     viewModelGroupItemStudentsCount = viewModelGroupItem.getStudentsCount();
+                    // read viewModel.groupItem.joinSent
+                    viewModelGroupItemJoinSent = viewModelGroupItem.isJoinSent();
                     // read viewModel.groupItem.name
                     viewModelGroupItemName = viewModelGroupItem.getName();
                     // read viewModel.groupItem.tasksCount
@@ -183,6 +190,14 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
                     // read viewModel.groupItem.requestsCount
                     viewModelGroupItemRequestsCount = viewModelGroupItem.getRequestsCount();
                 }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewModelGroupItemJoinSent) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
                 if (viewModelUserData != null) {
                     // read viewModel.userData.id
                     viewModelUserDataId = viewModelUserData.getId();
@@ -203,6 +218,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
                     // read viewModel.groupItem.studentsCount.concat(@android:string/students)
                     viewModelGroupItemStudentsCountConcatBtnStudentsAndroidStringStudents = viewModelGroupItemStudentsCount.concat(btnStudents.getResources().getString(R.string.students));
                 }
+                // read viewModel.groupItem.joinSent ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+                viewModelGroupItemJoinSentBtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus = ((viewModelGroupItemJoinSent) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnJoin.getContext(), R.drawable.ic_request_waiting)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnJoin.getContext(), R.drawable.ic_icon_awesome_user_plus)));
                 if (viewModelGroupItemTasksCount != null) {
                     // read viewModel.groupItem.tasksCount.concat(@android:string/tasks)
                     viewModelGroupItemTasksCountConcatBtnGroupsAndroidStringTasks = viewModelGroupItemTasksCount.concat(btnGroups.getResources().getString(R.string.tasks));
@@ -219,18 +236,18 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
                 ViewModelGroupItemTeacherIdViewModelUserDataId1 = (viewModelGroupItemTeacherId) != (viewModelUserDataId);
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelGroupItemTeacherIdViewModelUserDataId) {
-                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x100L;
                 }
                 else {
-                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x80L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
                 if(ViewModelGroupItemTeacherIdViewModelUserDataId1) {
-                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x40L;
                 }
                 else {
-                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x20L;
                 }
             }
 
@@ -246,6 +263,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnGroups, viewModelGroupItemTasksCountConcatBtnGroupsAndroidStringTasks);
             this.btnJoin.setVisibility(viewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE);
+            this.btnJoin.setIcon(viewModelGroupItemJoinSentBtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnRequests, viewModelGroupItemRequestsCountConcatBtnRequestsAndroidStringRequests);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnStudents, viewModelGroupItemStudentsCountConcatBtnStudentsAndroidStringStudents);
             this.btnTask.setVisibility(ViewModelGroupItemTeacherIdViewModelUserDataIdViewVISIBLEViewGONE1);
@@ -258,7 +276,8 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnTask.setOnClickListener(mCallback8);
+            this.btnJoin.setOnClickListener(mCallback8);
+            this.btnTask.setOnClickListener(mCallback9);
             this.mboundView0.setOnClickListener(mCallback7);
         }
     }
@@ -267,6 +286,25 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
             case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.JOIN_REQUEST);
+                }
+                break;
+            }
+            case 3: {
                 // localize variables for thread safety
                 // viewModel
                 te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
@@ -312,10 +350,12 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.groupItem
         flag 2 (0x3L): null
-        flag 3 (0x4L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): viewModel.groupItem.joinSent ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+        flag 4 (0x5L): viewModel.groupItem.joinSent ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+        flag 5 (0x6L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewModel.groupItem.teacher.id != viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewModel.groupItem.teacher.id == viewModel.userData.id ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

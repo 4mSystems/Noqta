@@ -35,17 +35,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final androidx.appcompat.widget.AppCompatEditText mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback35;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback36;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback31;
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback33;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback34;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -321,12 +321,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.specialist.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback28 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback25 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback29 = new te.app.notta.generated.callback.OnClickListener(this, 6);
-        mCallback26 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback36 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback32 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback31 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback33 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback34 = new te.app.notta.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -732,17 +732,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback27);
+            this.appCompatButtonNext.setOnClickListener(mCallback34);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.loginNoAccount.setOnClickListener(mCallback28);
-            this.loginNoAccountBold.setOnClickListener(mCallback29);
-            this.mboundView1.setOnClickListener(mCallback24);
+            this.loginNoAccount.setOnClickListener(mCallback35);
+            this.loginNoAccountBold.setOnClickListener(mCallback36);
+            this.mboundView1.setOnClickListener(mCallback31);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView11, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView11androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView13, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView13androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
-            this.mboundView7.setOnClickListener(mCallback25);
+            this.mboundView7.setOnClickListener(mCallback32);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
-            this.specialist.setOnClickListener(mCallback26);
+            this.specialist.setOnClickListener(mCallback33);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.specialist, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, specialistandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x2c0L) != 0) {
@@ -792,23 +792,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.register();
-                }
-                break;
-            }
             case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -827,7 +810,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 }
                 break;
             }
-            case 1: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -864,7 +847,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 }
                 break;
             }
-            case 6: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -898,6 +881,23 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
                     viewmodel.action(te.app.notta.utils.Constants.POP);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
                 }
                 break;
             }

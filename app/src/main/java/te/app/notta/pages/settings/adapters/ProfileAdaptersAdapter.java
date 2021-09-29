@@ -18,6 +18,7 @@ import java.util.List;
 import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemProfileBinding;
+import te.app.notta.pages.auth.register.EditProfileFragment;
 import te.app.notta.pages.home.GroupDetailsFragment;
 import te.app.notta.pages.settings.models.ProfileItem;
 import te.app.notta.pages.settings.viewModels.ItemProfileViewModel;
@@ -31,10 +32,6 @@ public class ProfileAdaptersAdapter extends RecyclerView.Adapter<ProfileAdapters
 
     public ProfileAdaptersAdapter() {
         this.profileItemList = new ArrayList<>();
-    }
-
-    public List<ProfileItem> getProfileItemList() {
-        return profileItemList;
     }
 
 
@@ -54,8 +51,8 @@ public class ProfileAdaptersAdapter extends RecyclerView.Adapter<ProfileAdapters
         ItemProfileViewModel itemMenuViewModel = new ItemProfileViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
 //            lastSelected = position;
-            if (o.equals(Constants.ADD_TASK)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(item.getId()), null, AddTaskFragment.class.getName(), null);
+            if (item.getId() == 1) {
+                MovementHelper.startActivity(context, EditProfileFragment.class.getName(), null, null);
             } else if (o.equals(Constants.GROUP_DETAILS)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), item.getName()), null, GroupDetailsFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
             }

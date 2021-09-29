@@ -74,7 +74,7 @@ public class AuthRepository extends BaseRepository {
     }
 
 
-    public Disposable updateProfile(RegisterRequest request, ArrayList<FileObject> fileObjects) {
+    public Disposable updateProfile(RegisterRequest request, List<FileObject> fileObjects) {
         if (fileObjects == null) {
             return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_PROFILE, request, UsersResponse.class,
                     Constants.UPDATE_PROFILE, false);

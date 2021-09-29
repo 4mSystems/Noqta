@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,6 +29,8 @@ import te.app.notta.utils.helper.MovementHelper;
 public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder> {
     List<GroupItem> groupItemList;
     Context context;
+    public int lastSelected = -1;
+    public MutableLiveData<Integer> liveData = new MutableLiveData<>();
 
     public GroupsAdapter() {
         this.groupItemList = new ArrayList<>();
@@ -53,17 +56,14 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
         GroupItem item = groupItemList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
-//            lastSelected = position;
+            lastSelected = position;
             if (o.equals(Constants.ADD_TASK)) {
                 MovementHelper.startActivityWithBundle(context, new PassingObject(item.getId()), null, AddTaskFragment.class.getName(), null);
             } else if (o.equals(Constants.GROUP_DETAILS)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), item.getName()), null, GroupDetailsFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
+            } else if (o.equals(Constants.JOIN_REQUEST)) {
+                liveData.setValue(item.getId());
             }
-//            else if (o.equals(Constants.CLIENT_ATTACHMENTS)) {
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getClientId(), Constants.CLIENT_ATTACHMENTS), ResourceManager.getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
-//            } else if (o.equals(Constants.DELETE)) {
-//                actionLiveData.setValue(o);
-//            }
         });
         holder.setViewModel(itemMenuViewModel);
     }
@@ -79,6 +79,11 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
         int start = groupItemList.size();
         groupItemList.addAll(dataList);
         notifyItemRangeInserted(start, dataList.size());
+    }
+
+    public void updateItemJoinRequest() {
+        getGroupItemList().get(lastSelected).setJoinSent(!getGroupItemList().get(lastSelected).isJoinSent());
+        notifyItemChanged(lastSelected);
     }
 
     @Override

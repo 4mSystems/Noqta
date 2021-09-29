@@ -99,6 +99,14 @@ public class SettingsViewModel extends BaseViewModel {
         this.aboutData = aboutData;
     }
 
+    public void logout() {
+        liveData.setValue(new Mutable(Constants.LOGOUT));
+    }
+
+    public void profile() {
+        liveData.setValue(new Mutable(Constants.EDIT_PROFILE));
+    }
+
     public ContactUsRequest getContactUsRequest() {
         return this.contactUsRequest == null ? this.contactUsRequest = new ContactUsRequest() : this.contactUsRequest;
     }

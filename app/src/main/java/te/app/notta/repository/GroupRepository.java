@@ -7,6 +7,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import te.app.notta.base.MyApplication;
 import te.app.notta.connection.ConnectionHelper;
 import te.app.notta.connection.FileObject;
 import te.app.notta.model.MainRequest;
@@ -25,6 +26,7 @@ import te.app.notta.pages.teacher.models.inviteStudents.StudentsResponse;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.URLS;
 import io.reactivex.disposables.Disposable;
+import te.app.notta.utils.session.UserHelper;
 
 @Singleton
 public class GroupRepository extends BaseRepository {
@@ -45,7 +47,8 @@ public class GroupRepository extends BaseRepository {
     }
 
     public Disposable getHome(int page, boolean showProgress, String searchText) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME + searchText + "&page=" + page, new Object(), HomeResponse.class,
+        String url = UserHelper.getInstance(MyApplication.getInstance()).getUserData().getType().equals("2") ? URLS.HOME : URLS.HOME_STUDENT;
+        return connectionHelper.requestApi(Constants.GET_REQUEST, url + searchText + "&page=" + page, new Object(), HomeResponse.class,
                 Constants.HOME, showProgress);
     }
 
@@ -120,4 +123,11 @@ public class GroupRepository extends BaseRepository {
                 Constants.STUDENT, showProgress);
     }
 
+    //Student
+    public Disposable studentJoinRequest(int groupId) {
+        MainRequest request = new MainRequest();
+        request.setGroupId(String.valueOf(groupId));
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_JOIN_REQUEST, request, GroupStudentsResponse.class,
+                Constants.JOIN_REQUEST, true);
+    }
 }

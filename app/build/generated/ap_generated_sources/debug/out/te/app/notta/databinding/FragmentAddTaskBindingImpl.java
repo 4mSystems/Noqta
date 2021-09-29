@@ -29,13 +29,13 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback57;
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback54;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -193,10 +193,10 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback48 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback49 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback55 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback56 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback57 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback54 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -536,11 +536,11 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback50);
+            this.appCompatButtonNext.setOnClickListener(mCallback57);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback47);
-            this.icCloudUpload.setOnClickListener(mCallback48);
-            this.icCloudUploadVideo.setOnClickListener(mCallback49);
+            this.back.setOnClickListener(mCallback54);
+            this.icCloudUpload.setOnClickListener(mCallback55);
+            this.icCloudUploadVideo.setOnClickListener(mCallback56);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x98L) != 0) {
@@ -592,41 +592,6 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createTask();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -662,6 +627,41 @@ public class FragmentAddTaskBindingImpl extends FragmentAddTaskBinding implement
 
 
                     viewmodel.action(te.app.notta.utils.Constants.PLAY_VIDEO);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createTask();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.teacher.viewModels.AddTaskViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }
