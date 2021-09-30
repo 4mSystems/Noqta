@@ -20,9 +20,12 @@ import te.app.notta.R;
 import te.app.notta.databinding.ItemProfileBinding;
 import te.app.notta.pages.auth.register.EditProfileFragment;
 import te.app.notta.pages.home.GroupDetailsFragment;
+import te.app.notta.pages.home.PointsFragment;
+import te.app.notta.pages.myGroups.MyGroupsFragment;
 import te.app.notta.pages.settings.models.ProfileItem;
 import te.app.notta.pages.settings.viewModels.ItemProfileViewModel;
 import te.app.notta.pages.teacher.AddTaskFragment;
+import te.app.notta.pages.teacher.StudentRequestsFragment;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
@@ -51,16 +54,8 @@ public class ProfileAdaptersAdapter extends RecyclerView.Adapter<ProfileAdapters
         ItemProfileViewModel itemMenuViewModel = new ItemProfileViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
 //            lastSelected = position;
-            if (item.getId() == 1) {
-                MovementHelper.startActivity(context, EditProfileFragment.class.getName(), null, null);
-            } else if (o.equals(Constants.GROUP_DETAILS)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), item.getName()), null, GroupDetailsFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
-            }
-//            else if (o.equals(Constants.CLIENT_ATTACHMENTS)) {
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getClientId(), Constants.CLIENT_ATTACHMENTS), ResourceManager.getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
-//            } else if (o.equals(Constants.DELETE)) {
-//                actionLiveData.setValue(o);
-//            }
+                MovementHelper.startActivity(context, item.getFragment(), null, null);
+
         });
         holder.setViewModel(itemMenuViewModel);
     }

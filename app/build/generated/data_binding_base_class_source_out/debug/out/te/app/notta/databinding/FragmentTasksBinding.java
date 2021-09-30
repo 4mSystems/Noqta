@@ -10,6 +10,8 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -23,6 +25,12 @@ public abstract class FragmentTasksBinding extends ViewDataBinding {
 
   @NonNull
   public final AppCompatImageView icHomeNotification;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcGroups;
 
   @NonNull
   public final TextInputEditText searchInput;
@@ -41,11 +49,14 @@ public abstract class FragmentTasksBinding extends ViewDataBinding {
 
   protected FragmentTasksBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView boardHeader, AppCompatImageView icHomeNotification,
-      TextInputEditText searchInput, CustomTextViewMedium tvHomeBody,
-      CustomTextViewMedium tvHomeDesc, CustomTextViewMedium tvHomeUsername) {
+      CircularProgressIndicator progress, RecyclerView rcGroups, TextInputEditText searchInput,
+      CustomTextViewMedium tvHomeBody, CustomTextViewMedium tvHomeDesc,
+      CustomTextViewMedium tvHomeUsername) {
     super(_bindingComponent, _root, _localFieldCount);
     this.boardHeader = boardHeader;
     this.icHomeNotification = icHomeNotification;
+    this.progress = progress;
+    this.rcGroups = rcGroups;
     this.searchInput = searchInput;
     this.tvHomeBody = tvHomeBody;
     this.tvHomeDesc = tvHomeDesc;

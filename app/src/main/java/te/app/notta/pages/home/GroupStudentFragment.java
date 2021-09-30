@@ -54,6 +54,7 @@ public class GroupStudentFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.STUDENT)) {
+                viewModel.isStudentGroup = true;
                 viewModel.setStudentMainData(((GroupStudentsResponse) mutable.object).getData());
             }
         });

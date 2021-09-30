@@ -73,6 +73,7 @@
             android:layout_marginEnd="@dimen/dp4w"
             android:minWidth="0dp"
             android:minHeight="0dp"
+            android:onClick="@{()->viewModel.itemAction(Constants.Add_ANSWER)}"
             android:text="@string/finish"
             android:textAllCaps="false"
             android:textColor="@color/white"

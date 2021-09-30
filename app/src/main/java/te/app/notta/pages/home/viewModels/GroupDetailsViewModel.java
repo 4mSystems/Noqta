@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.notta.BR;
+import te.app.notta.PassingObject;
 import te.app.notta.base.BaseViewModel;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter;
@@ -28,6 +29,7 @@ public class GroupDetailsViewModel extends BaseViewModel {
     GroupStudentsRequestsAdapter studentsRequestsAdapter;
     GroupTasksAdapter tasksAdapter;
     GroupStudentsMain studentMainData;
+    public boolean isStudentGroup = false; // to determine which adapter to load
 
     @Inject
     public GroupDetailsViewModel(GroupRepository repository) {
@@ -45,7 +47,7 @@ public class GroupDetailsViewModel extends BaseViewModel {
     }
 
     public void groupStudentsRequests(int page, boolean showProgress) {
-        compositeDisposable.add(repository.getGroupStudentsRequests(getPassingObject().getId(), page, showProgress));
+        compositeDisposable.add(repository.getGroupStudentsRequests(getPassingObject() != null ? String.valueOf(getPassingObject().getId()):"", page, showProgress));
     }
 
     public void deleteGroup() {
@@ -56,13 +58,17 @@ public class GroupDetailsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.deleteTask(getTasksAdapter().selectedId));
     }
 
+    public void changeStudentRequestStatus(PassingObject passingObject) {
+        compositeDisposable.add(repository.changeStudentRequestStatus(passingObject));
+    }
+
     @Bindable
     public GroupDetails getGroupDetails() {
         return this.groupDetails == null ? this.groupDetails = new GroupDetails() : this.groupDetails;
     }
 
     public void setGroupDetails(GroupDetails groupDetails) {
-        getGroupDetailsStudentsAdapter().update(groupDetails.getStudents());
+        getGroupDetailsStudentsAdapter().update(groupDetails.getStudents(), isStudentGroup);
         getTasksAdapter().update(groupDetails.getTasks(), groupDetails.getTeacher().getId());
         notifyChange(BR.tasksAdapter);
         notifyChange(BR.groupDetailsStudentsAdapter);
@@ -77,17 +83,20 @@ public class GroupDetailsViewModel extends BaseViewModel {
 
     @Bindable
     public void setStudentMainData(GroupStudentsMain studentMainData) {
-        if (getGroupDetailsStudentsAdapter().getStudentsItemList().size() > 0) {
-            getGroupDetailsStudentsAdapter().loadMore(studentMainData.getStudentsItemList());
+        if (isStudentGroup) {
+            if (getGroupDetailsStudentsAdapter().getStudentsItemList().size() > 0) {
+                getGroupDetailsStudentsAdapter().loadMore(studentMainData.getStudentsItemList());
+            } else {
+                getGroupDetailsStudentsAdapter().update(studentMainData.getStudentsItemList(), !isStudentGroup);
+                notifyChange(BR.groupDetailsStudentsAdapter);
+            }
         } else {
-            getGroupDetailsStudentsAdapter().update(studentMainData.getStudentsItemList());
-            notifyChange(BR.inviteStudentsAdapter);
-        }
-        if (getStudentsRequestsAdapter().getStudentsItemList().size() > 0) {
-            getStudentsRequestsAdapter().loadMore(studentMainData.getStudentsItemList());
-        } else {
-            getStudentsRequestsAdapter().update(studentMainData.getStudentsItemList());
-            notifyChange(BR.studentsRequestsAdapter);
+            if (getStudentsRequestsAdapter().getStudentsItemList().size() > 0) {
+                getStudentsRequestsAdapter().loadMore(studentMainData.getStudentsItemList());
+            } else {
+                getStudentsRequestsAdapter().update(studentMainData.getStudentsItemList());
+                notifyChange(BR.studentsRequestsAdapter);
+            }
         }
         searchProgressVisible.set(false);
         this.studentMainData = studentMainData;

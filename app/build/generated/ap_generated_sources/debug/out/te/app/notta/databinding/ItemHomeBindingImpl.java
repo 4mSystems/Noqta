@@ -21,11 +21,11 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback11;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback10;
     @Nullable
     private final android.view.View.OnClickListener mCallback9;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,9 +61,9 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         this.tvUserWork.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -276,34 +276,15 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnJoin.setOnClickListener(mCallback8);
-            this.btnTask.setOnClickListener(mCallback9);
-            this.mboundView0.setOnClickListener(mCallback7);
+            this.btnJoin.setOnClickListener(mCallback10);
+            this.btnTask.setOnClickListener(mCallback11);
+            this.mboundView0.setOnClickListener(mCallback9);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.itemAction(te.app.notta.utils.Constants.JOIN_REQUEST);
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewModel
@@ -320,6 +301,25 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
 
 
                     viewModel.itemAction(te.app.notta.utils.Constants.ADD_TASK);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.JOIN_REQUEST);
                 }
                 break;
             }

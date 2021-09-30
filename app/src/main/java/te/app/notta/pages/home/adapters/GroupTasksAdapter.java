@@ -17,12 +17,15 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemRecentTaskBinding;
+import te.app.notta.pages.addAnswer.AddAnswerFragment;
 import te.app.notta.pages.home.models.details.StudentsItem;
 import te.app.notta.pages.home.models.details.TasksItem;
 import te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel;
 import te.app.notta.utils.Constants;
+import te.app.notta.utils.helper.MovementHelper;
 
 public class GroupTasksAdapter extends RecyclerView.Adapter<GroupTasksAdapter.ViewHolder> {
     List<TasksItem> tasksItemList;
@@ -60,6 +63,8 @@ public class GroupTasksAdapter extends RecyclerView.Adapter<GroupTasksAdapter.Vi
             lastPosition = position;
             if (o.equals(Constants.DELETE_TASK))
                 liveData.setValue(item.getId());
+            else if (o.equals(Constants.Add_ANSWER))
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId()), null, AddAnswerFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
         });
         holder.setViewModel(itemMenuViewModel);
     }

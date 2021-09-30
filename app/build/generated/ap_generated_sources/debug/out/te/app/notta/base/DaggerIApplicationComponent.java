@@ -51,8 +51,6 @@ import te.app.notta.pages.home.GroupStudentFragment;
 import te.app.notta.pages.home.GroupStudentFragment_MembersInjector;
 import te.app.notta.pages.home.HomeFragment;
 import te.app.notta.pages.home.HomeFragment_MembersInjector;
-import te.app.notta.pages.home.MyGroupsFragment;
-import te.app.notta.pages.home.MyGroupsFragment_MembersInjector;
 import te.app.notta.pages.home.PointsFragment;
 import te.app.notta.pages.home.PointsFragment_MembersInjector;
 import te.app.notta.pages.home.TasksFragment;
@@ -66,6 +64,11 @@ import te.app.notta.pages.home.viewModels.HomeViewModel_MembersInjector;
 import te.app.notta.pages.home.viewModels.PointsViewModel;
 import te.app.notta.pages.home.viewModels.PointsViewModel_Factory;
 import te.app.notta.pages.home.viewModels.PointsViewModel_MembersInjector;
+import te.app.notta.pages.myGroups.MyGroupsFragment;
+import te.app.notta.pages.myGroups.MyGroupsFragment_MembersInjector;
+import te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel;
+import te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel_Factory;
+import te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel_MembersInjector;
 import te.app.notta.pages.onBoard.OnBoardFragment;
 import te.app.notta.pages.onBoard.OnBoardFragment_MembersInjector;
 import te.app.notta.pages.settings.AboutFragment;
@@ -167,6 +170,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private SettingsViewModel settingsViewModel() {
     return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
+  private MyGroupsViewModel myGroupsViewModel() {
+    return injectMyGroupsViewModel(MyGroupsViewModel_Factory.newInstance(groupRepositoryProvider.get()));
   }
 
   private AddAnswerViewModel addAnswerViewModel() {
@@ -442,8 +449,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private MyGroupsViewModel injectMyGroupsViewModel(MyGroupsViewModel instance) {
+    MyGroupsViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
+    return instance;
+  }
+
   private MyGroupsFragment injectMyGroupsFragment(MyGroupsFragment instance) {
-    MyGroupsFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    MyGroupsFragment_MembersInjector.injectViewModel(instance, myGroupsViewModel());
     return instance;
   }
 

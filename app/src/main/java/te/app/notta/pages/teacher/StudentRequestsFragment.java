@@ -2,6 +2,7 @@ package te.app.notta.pages.teacher;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,12 +25,10 @@ import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.FragmentRequestsBinding;
 import te.app.notta.model.base.Mutable;
-import te.app.notta.pages.auth.login.LoginFragment;
+import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.home.models.groupStudents.GroupStudentsResponse;
 import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
-import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.utils.Constants;
-import te.app.notta.utils.helper.MovementHelper;
 
 public class StudentRequestsFragment extends BaseFragment {
     FragmentRequestsBinding requestsBinding;
@@ -46,8 +45,8 @@ public class StudentRequestsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.groupStudentsRequests(1, true);
         }
+        viewModel.groupStudentsRequests(1, true);
         setEvent();
         return requestsBinding.getRoot();
     }
@@ -58,13 +57,13 @@ public class StudentRequestsFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.STUDENT)) {
                 viewModel.setStudentMainData(((GroupStudentsResponse) mutable.object).getData());
+            } else if (((Mutable) o).message.equals(Constants.JOIN_REQUEST)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getStudentsRequestsAdapter().removeItem();
             }
         });
-        viewModel.getStudentsRequestsAdapter().liveData.observeForever(new Observer<PassingObject>() {
-            @Override
-            public void onChanged(PassingObject passingObject) {
-                //TODO REQUEST STATUS
-            }
+        viewModel.getStudentsRequestsAdapter().liveData.observeForever(passingObject -> {
+            viewModel.changeStudentRequestStatus(passingObject);
         });
         requestsBinding.rcMembers.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override

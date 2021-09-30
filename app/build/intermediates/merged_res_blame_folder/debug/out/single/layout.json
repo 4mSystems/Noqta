@@ -144,6 +144,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_home.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_my_group.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_my_group.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_home.xml"
     },

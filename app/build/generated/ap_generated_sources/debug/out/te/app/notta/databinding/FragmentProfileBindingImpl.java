@@ -25,11 +25,11 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     private final androidx.recyclerview.widget.RecyclerView mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback14;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback13;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,9 +57,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         this.tvUserName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -171,9 +171,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.logout.setOnClickListener(mCallback13);
-            this.mboundView2.setOnClickListener(mCallback12);
-            this.memberProfile.setOnClickListener(mCallback11);
+            this.logout.setOnClickListener(mCallback15);
+            this.mboundView2.setOnClickListener(mCallback14);
+            this.memberProfile.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

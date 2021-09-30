@@ -21,26 +21,39 @@
             android:layout_margin="@dimen/dp4h"
             android:scaleType="centerCrop"
             android:src="@drawable/splash"
-            app:imageUrl="@{viewModel.studentsItem.studentImage}"
+            app:imageFullUrl="@{viewModel.studentsItem.studentImage}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:riv_corner_radius="@dimen/dp8h" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="@dimen/dp27w"
-            android:layout_height="@dimen/dp27h"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp50h"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
-            android:text="@{viewModel.studentsItem.studentPoints}"
-            android:textColor="@color/colordark"
-            android:textSize="@dimen/sp5"
-            app:backgroundTint="@color/white"
-            app:icon="@drawable/ic_icon_feather_check_circle"
-            app:iconGravity="textTop"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:layout_marginBottom="@dimen/dp6h"
+            android:src="@drawable/ic_rectangle_students"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.notta.customViews.views.CustomTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_icon_feather_check_circle"
+            android:text="@{viewModel.studentsItem.studentPoints}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp5"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/btn"
+            app:layout_constraintEnd_toEndOf="@id/btn"
+            app:layout_constraintStart_toStartOf="@id/btn"
+            app:layout_constraintTop_toTopOf="@id/btn" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

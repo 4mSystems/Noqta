@@ -3123,6 +3123,7 @@ drawable ic_kuwait
 drawable ic_lang
 drawable ic_logo
 drawable ic_logo_colored
+drawable ic_menu_gift
 drawable ic_menu_task
 drawable ic_more
 drawable ic_mtrl_checked_circle
@@ -3134,6 +3135,7 @@ drawable ic_password
 drawable ic_points
 drawable ic_profile
 drawable ic_rate
+drawable ic_rectangle_students
 drawable ic_remove
 drawable ic_request_waiting
 drawable ic_requets
@@ -3309,6 +3311,7 @@ id br2
 id br3
 id br4
 id br5
+id btn
 id btn_change
 id btn_close
 id btn_done
@@ -3839,7 +3842,6 @@ id tv_login_title
 id tv_login_title1
 id tv_member
 id tv_members
-id tv_my_groups
 id tv_profile_title
 id tv_setting_item
 id tv_show_all
@@ -3858,7 +3860,6 @@ id unlabeled
 id up
 id useLogo
 id user_accept
-id user_btn
 id user_reject
 id v_line
 id v_line1
@@ -4007,6 +4008,7 @@ layout item_home
 layout item_hor_member
 layout item_member
 layout item_more
+layout item_my_group
 layout item_points
 layout item_profile
 layout item_recent_task
@@ -4108,6 +4110,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw notify_default
+string Kuwait
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

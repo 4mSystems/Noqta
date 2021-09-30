@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -17,14 +18,18 @@ import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemHorMemberBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatImageView btn;
+
+  @NonNull
   public final RoundedImageView tvMember;
 
   @Bindable
   protected ItemGroupStudentViewModel mViewModel;
 
   protected ItemHorMemberBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RoundedImageView tvMember) {
+      AppCompatImageView btn, RoundedImageView tvMember) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btn = btn;
     this.tvMember = tvMember;
   }
 

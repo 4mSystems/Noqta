@@ -24,7 +24,9 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     private final te.app.notta.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback57;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback56;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,7 +55,8 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         this.tvDetails.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback51 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback57 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback56 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -203,7 +206,8 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnRemove.setOnClickListener(mCallback51);
+            this.btnRemove.setOnClickListener(mCallback57);
+            this.btnTechType.setOnClickListener(mCallback56);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -219,21 +223,45 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewModel
-        te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
-        // viewModel != null
-        boolean viewModelJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
 
 
 
-        viewModelJavaLangObjectNull = (viewModel) != (null);
-        if (viewModelJavaLangObjectNull) {
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
 
 
 
 
-            viewModel.itemAction(te.app.notta.utils.Constants.DELETE_TASK);
+                    viewModel.itemAction(te.app.notta.utils.Constants.DELETE_TASK);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.Add_ANSWER);
+                }
+                break;
+            }
         }
     }
     // dirty flag

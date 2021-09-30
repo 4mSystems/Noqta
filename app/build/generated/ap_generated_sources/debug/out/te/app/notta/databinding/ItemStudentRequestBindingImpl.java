@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
+public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding implements te.app.notta.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,14 +14,16 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.user_reject, 4);
-        sViewsWithIds.put(R.id.user_accept, 5);
         sViewsWithIds.put(R.id.br5, 6);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback8;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,8 +45,12 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
         this.tvMember.setTag(null);
         this.tvTeacherName.setTag(null);
         this.tvUserWork.setTag(null);
+        this.userAccept.setTag(null);
+        this.userReject.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -120,10 +126,10 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
             mDirtyFlags = 0;
         }
         java.lang.String viewModelStudentsItemStudentName = null;
-        java.lang.String viewModelStudentsItemGroupId = null;
         te.app.notta.pages.home.models.details.StudentsItem viewModelStudentsItem = null;
         te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
         java.lang.String viewModelStudentsItemStudentImage = null;
+        java.lang.String viewModelStudentsItemGroupName = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -138,10 +144,10 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
                 if (viewModelStudentsItem != null) {
                     // read viewModel.studentsItem.studentName
                     viewModelStudentsItemStudentName = viewModelStudentsItem.getStudentName();
-                    // read viewModel.studentsItem.groupId
-                    viewModelStudentsItemGroupId = viewModelStudentsItem.getGroupId();
                     // read viewModel.studentsItem.studentImage
                     viewModelStudentsItemStudentImage = viewModelStudentsItem.getStudentImage();
+                    // read viewModel.studentsItem.group_name
+                    viewModelStudentsItemGroupName = viewModelStudentsItem.getGroup_name();
                 }
         }
         // batch finished
@@ -150,11 +156,59 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding  {
 
             te.app.notta.base.ApplicationBinding.loadImage(this.tvMember, viewModelStudentsItemStudentImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvTeacherName, viewModelStudentsItemStudentName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelStudentsItemGroupId);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserWork, viewModelStudentsItemGroupName);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.userAccept.setOnClickListener(mCallback8);
+            this.userReject.setOnClickListener(mCallback7);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.REJECT);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.ACCEPT);
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

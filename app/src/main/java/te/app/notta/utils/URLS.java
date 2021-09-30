@@ -26,7 +26,7 @@ public class URLS {
     public final static String GROUP_STUDENTS = "teacher/get-group-students?group_id=";
     public final static String GROUP_STUDENTS_REQUESTS = "teacher/get-my-requests?group_id=";
     public final static String SEND_JOIN_REQUEST = "student/join-group";
-    public final static String MY_LAST_ORDERS = "v1/provider/orders/latest?page=";
+    public final static String CHANGE_STUDENT_REQUEST_STATUS = "teacher/request-change-status";
     public final static String HIDE_POST = "v1/hide/post";
     public final static String SHARE_POST = "v1/share/post?page=";
     public final static String POST_DETAILS = "v1/provider/order/";

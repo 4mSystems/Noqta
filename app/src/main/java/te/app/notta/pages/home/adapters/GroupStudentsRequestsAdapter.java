@@ -2,6 +2,7 @@ package te.app.notta.pages.home.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -53,12 +53,11 @@ public class GroupStudentsRequestsAdapter extends RecyclerView.Adapter<GroupStud
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         StudentsItem item = studentsItemList.get(position);
         ItemGroupStudentViewModel itemMenuViewModel = new ItemGroupStudentViewModel(item);
-        itemMenuViewModel.getLiveData().observeForever(new Observer<Object>() {
-            @Override
-            public void onChanged(Object o) {
-                if (o.equals(Constants.ACCEPT) || o.equals(Constants.REJECT)) {
-                    liveData.setValue(new PassingObject(item.getId(), String.valueOf(o)));
-                }
+        itemMenuViewModel.getLiveData().observeForever(o -> {
+            lastSelected = position;
+            if (o.equals(Constants.ACCEPT) || o.equals(Constants.REJECT)) {
+                Log.e("onBindViewHolder", "onBindViewHolder: " + item.getStudentId());
+                liveData.setValue(new PassingObject(item.getGroupId(), item.getStudentId(), String.valueOf(o)));
             }
         });
         holder.setViewModel(itemMenuViewModel);
@@ -75,6 +74,11 @@ public class GroupStudentsRequestsAdapter extends RecyclerView.Adapter<GroupStud
         int start = studentsItemList.size();
         studentsItemList.addAll(dataList);
         notifyItemRangeInserted(start, dataList.size());
+    }
+
+    public void removeItem() {
+        getStudentsItemList().remove(lastSelected);
+        notifyDataSetChanged();
     }
 
     @Override

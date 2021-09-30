@@ -14,26 +14,28 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.br2, 6);
+        sViewsWithIds.put(R.id.br2, 7);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView5;
+    private final android.view.View mboundView5;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback34;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemPointsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private ItemPointsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[6]
+            , (androidx.constraintlayout.widget.Barrier) bindings[7]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[1]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[4]
@@ -43,13 +45,15 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         this.icUser.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView5 = (androidx.appcompat.widget.AppCompatButton) bindings[5];
+        this.mboundView5 = (android.view.View) bindings[5];
         this.mboundView5.setTag(null);
+        this.mboundView6 = (androidx.appcompat.widget.AppCompatButton) bindings[6];
+        this.mboundView6.setTag(null);
         this.tvDescPoint.setTag(null);
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback29 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback34 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -202,13 +206,14 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icDelete.setOnClickListener(mCallback29);
+            this.icDelete.setOnClickListener(mCallback34);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
             this.icDelete.setVisibility(viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
-            this.mboundView5.setVisibility(viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE);
+            this.mboundView5.setVisibility(viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
+            this.mboundView6.setVisibility(viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

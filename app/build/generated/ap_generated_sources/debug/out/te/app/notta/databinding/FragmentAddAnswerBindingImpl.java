@@ -44,7 +44,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
     private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback52;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -83,7 +83,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback52 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -157,7 +157,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback47);
+            this.mboundView1.setOnClickListener(mCallback52);
         }
     }
     // Listener Stub Implementations

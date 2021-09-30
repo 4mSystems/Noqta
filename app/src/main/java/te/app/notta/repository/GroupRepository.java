@@ -1,5 +1,7 @@
 package te.app.notta.repository;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import te.app.notta.PassingObject;
 import te.app.notta.base.MyApplication;
 import te.app.notta.connection.ConnectionHelper;
 import te.app.notta.connection.FileObject;
@@ -118,9 +121,18 @@ public class GroupRepository extends BaseRepository {
                 Constants.STUDENT, showProgress);
     }
 
-    public Disposable getGroupStudentsRequests(int groupId, int page, boolean showProgress) {
+    public Disposable getGroupStudentsRequests(String groupId, int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GROUP_STUDENTS_REQUESTS + groupId + "&page=" + page, new Object(), GroupStudentsResponse.class,
                 Constants.STUDENT, showProgress);
+    }
+
+    public Disposable changeStudentRequestStatus(PassingObject passingObject) {
+        MainRequest request = new MainRequest();
+        request.setGroupId(String.valueOf(passingObject.getId()));
+        request.setStudentId(passingObject.getObject());
+        request.setAccept(passingObject.getObject2().equals(Constants.ACCEPT) ? "1" : "2");
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_STUDENT_REQUEST_STATUS, request, StatusMessage.class,
+                Constants.JOIN_REQUEST, true);
     }
 
     //Student
@@ -130,4 +142,5 @@ public class GroupRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_JOIN_REQUEST, request, GroupStudentsResponse.class,
                 Constants.JOIN_REQUEST, true);
     }
+
 }

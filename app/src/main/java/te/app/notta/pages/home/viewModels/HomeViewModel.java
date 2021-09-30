@@ -107,8 +107,7 @@ public class HomeViewModel extends BaseViewModel {
             liveData.setValue(new Mutable(Constants.MENU_HOME));
             return true;
         } else if (item.getItemId() == R.id.menuTasks) {
-            if (userData.getType().equals("1"))
-                liveData.setValue(new Mutable(Constants.MENU_TASKS));
+            liveData.setValue(new Mutable(Constants.MENU_TASKS));
             return true;
         } else if (item.getItemId() == R.id.menuAdd) {
             liveData.setValue(new Mutable(Constants.MENU_GIFTS));

@@ -26,7 +26,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -56,7 +56,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.tvHomeUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback28 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback33 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -142,6 +142,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelUserDataType = null;
         te.app.notta.pages.home.adapters.GroupsAdapter viewmodelGroupsAdapter = null;
         java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangStringConcatJavaLangString = null;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
@@ -151,6 +152,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
         boolean viewmodelSearchProgressVisibleGet = false;
         java.lang.String tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName = null;
+        int viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = 0;
+        boolean viewmodelUserDataTypeEqualsJavaLangString2 = false;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.notta.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
@@ -179,10 +182,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                     else {
-                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
                     }
                 }
 
@@ -201,15 +204,31 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     if (viewmodelUserData != null) {
+                        // read viewmodel.userData.type
+                        viewmodelUserDataType = viewmodelUserData.getType();
                         // read viewmodel.userData.name
                         viewmodelUserDataName = viewmodelUserData.getName();
                     }
 
 
+                    if (viewmodelUserDataType != null) {
+                        // read viewmodel.userData.type.equals("2")
+                        viewmodelUserDataTypeEqualsJavaLangString2 = viewmodelUserDataType.equals("2");
+                    }
+                if((dirtyFlags & 0xaL) != 0) {
+                    if(viewmodelUserDataTypeEqualsJavaLangString2) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
                     // read @android:string/hi.concat(" ").concat(viewmodel.userData.name)
                     tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName = tvHomeUsername.getResources().getString(R.string.hi).concat(" ").concat(viewmodelUserDataName);
 
 
+                    // read viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+                    viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = ((viewmodelUserDataTypeEqualsJavaLangString2) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                     if (tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName != null) {
                         // read @android:string/hi.concat(" ").concat(viewmodel.userData.name).concat(" ")
                         tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangString = tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataName.concat(" ");
@@ -226,7 +245,14 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback28);
+            this.mboundView5.setOnClickListener(mCallback33);
+        }
+        if ((dirtyFlags & 0xaL) != 0) {
+            // api target 1
+
+            this.mboundView5.setVisibility(viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeUsername, tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangStringConcatJavaLangString);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -237,12 +263,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             // api target 1
 
             te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcGroups, viewmodelGroupsAdapter, "1", "1");
-        }
-        if ((dirtyFlags & 0xaL) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchInput, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeUsername, tvHomeUsernameAndroidStringHiConcatJavaLangStringConcatViewmodelUserDataNameConcatJavaLangStringConcatJavaLangString);
         }
     }
     // Listener Stub Implementations
@@ -283,8 +303,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         flag 1 (0x2L): viewmodel
         flag 2 (0x3L): viewmodel.groupsAdapter
         flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

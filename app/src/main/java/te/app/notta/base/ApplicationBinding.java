@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +25,7 @@ public class ApplicationBinding {
             Glide
                     .with(imageView.getContext())
                     .load((String) image)
-                    .placeholder(R.mipmap.ic_launcher_round)
+                    .placeholder(R.drawable.splash)
                     .into(imageView);
         } else if (image instanceof Integer) {
             Log.e(TAG, "loadImage: " + image);
@@ -39,10 +40,10 @@ public class ApplicationBinding {
         }
     }
 
-    @BindingAdapter("imageCommentUrl")
-    public static void loadCommentImage(ImageView imageView, Object image) {
+    @BindingAdapter("imageFullUrl")
+    public static void loadFullImage(ImageView imageView, Object image) {
         if (image instanceof String) {
-            Glide.with(imageView.getContext()).load((String) image).placeholder(R.mipmap.ic_launcher_round).into(imageView);
+            Glide.with(imageView.getContext()).load((String) image).placeholder(R.drawable.splash).into(imageView);
             imageView.setOnClickListener(v -> new PhotoFullPopupWindow(imageView.getContext(), R.layout.popup_photo_full, imageView, (String) image, null));
         }
     }

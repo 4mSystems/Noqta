@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="te.app.moon.views.fragments.SplashFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <import type="te.app.notta.utils.Constants" />
+
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.HomeViewModel" />
+            type="te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,35 +28,61 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp8h"
-            android:onClick="@{()->viewmodel.goBack(context)}"
-            android:src="@drawable/ic_back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_my_groups" />
-
         <te.app.notta.customViews.views.CustomTextViewMedium
-            android:id="@+id/tv_my_groups"
+            android:id="@+id/tv_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp25h"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="@string/my_groups"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:contentDescription="@string/app_name"
+            android:onClick="@{()->viewmodel.goBack(context)}"
+            android:src="@drawable/ic_back"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_groups"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_margin="@dimen/dp12w"
+            app:adapter="@{viewmodel.groupsAdapter}"
+            app:layout_constraintBottom_toTopOf="@id/progress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/board_header"
-            tools:listitem="@layout/item_home" />
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:listitem="@layout/item_my_group" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

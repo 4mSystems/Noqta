@@ -144,6 +144,7 @@
             android:contentDescription="@string/app_name"
             android:onClick="@{()-> viewmodel.action(Constants.ADD_GROUP)}"
             app:backgroundTint="@color/colorAccent"
+            android:visibility="@{viewmodel.userData.type.equals(`2`)?View.VISIBLE:View.GONE}"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

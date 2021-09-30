@@ -4,12 +4,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_cloud_upload.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/anim_jump_fast.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/anim/jump_fast.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_board_home.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_board_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/anim_jump_fast.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/anim/jump_fast.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_member.xml.flat",
@@ -80,6 +80,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_delete.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_my_group.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_my_group.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_add.xml"
     },
@@ -106,6 +110,10 @@
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_check_white.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_check_white.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_rectangle_students.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_rectangle_students.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_lang.xml.flat",
@@ -518,6 +526,10 @@
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_onboard_slider_item.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/onboard_slider_item.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_menu_gift.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_menu_gift.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_icon_ionic_md_time.xml.flat",

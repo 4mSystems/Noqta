@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -27,6 +28,9 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
 
   @NonNull
   public final TextInputEditText auto;
+
+  @NonNull
+  public final FloatingActionButton back;
 
   @NonNull
   public final AppCompatImageView boardHeader;
@@ -53,13 +57,14 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
   protected RegisterViewModel mViewmodel;
 
   protected FragmentEditProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, TextInputEditText auto, AppCompatImageView boardHeader,
-      TextInputLayout inputEmail, TextInputLayout inputName, TextInputLayout inputPassword,
-      CircleImageView memberProfile, CircularProgressIndicator progress,
-      CustomTextViewMedium tvProfileTitle) {
+      AppCompatButton appCompatButtonNext, TextInputEditText auto, FloatingActionButton back,
+      AppCompatImageView boardHeader, TextInputLayout inputEmail, TextInputLayout inputName,
+      TextInputLayout inputPassword, CircleImageView memberProfile,
+      CircularProgressIndicator progress, CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.auto = auto;
+    this.back = back;
     this.boardHeader = boardHeader;
     this.inputEmail = inputEmail;
     this.inputName = inputName;

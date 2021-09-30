@@ -8,7 +8,7 @@ public class StudentsItem {
     private String studentName;
 
     @SerializedName("group_id")
-    private String groupId;
+    private int groupId;
 
     @SerializedName("student_id")
     private String studentId;
@@ -32,7 +32,7 @@ public class StudentsItem {
         return studentName;
     }
 
-    public String getGroupId() {
+    public int getGroupId() {
         return groupId;
     }
 

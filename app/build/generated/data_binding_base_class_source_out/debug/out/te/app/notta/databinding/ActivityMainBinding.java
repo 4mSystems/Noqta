@@ -8,11 +8,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -21,7 +21,7 @@ import te.app.notta.pages.home.viewModels.HomeViewModel;
 
 public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
-  public final FloatingActionButton fab;
+  public final AppCompatImageView fab;
 
   @NonNull
   public final FrameLayout flHomeContainer;
@@ -39,7 +39,7 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   protected HomeViewModel mViewModel;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FloatingActionButton fab, FrameLayout flHomeContainer,
+      AppCompatImageView fab, FrameLayout flHomeContainer,
       CustomBottomNavigationView homeNavigationMenu, LinearLayout llBaseActionBarContainer,
       ConstraintLayout llBaseContainer) {
     super(_bindingComponent, _root, _localFieldCount);

@@ -30,7 +30,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[4]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
             , (android.widget.FrameLayout) bindings[3]
             , (te.app.notta.customViews.views.CustomBottomNavigationView) bindings[1]
             , (android.widget.LinearLayout) bindings[2]

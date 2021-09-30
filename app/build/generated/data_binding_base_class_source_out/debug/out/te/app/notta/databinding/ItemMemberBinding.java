@@ -6,19 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.button.MaterialButton;
 import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
+import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemMemberBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatImageView btn;
+
   @NonNull
   public final RoundedImageView tvMember;
 
@@ -28,26 +31,23 @@ public abstract class ItemMemberBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewRegular tvUserWork;
 
-  @NonNull
-  public final MaterialButton userBtn;
-
   @Bindable
-  protected ItemHomeViewModel mViewModel;
+  protected ItemGroupStudentViewModel mViewModel;
 
   protected ItemMemberBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RoundedImageView tvMember, CustomTextViewMedium tvTeacherName,
-      CustomTextViewRegular tvUserWork, MaterialButton userBtn) {
+      AppCompatImageView btn, RoundedImageView tvMember, CustomTextViewMedium tvTeacherName,
+      CustomTextViewRegular tvUserWork) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btn = btn;
     this.tvMember = tvMember;
     this.tvTeacherName = tvTeacherName;
     this.tvUserWork = tvUserWork;
-    this.userBtn = userBtn;
   }
 
-  public abstract void setViewModel(@Nullable ItemHomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable ItemGroupStudentViewModel viewModel);
 
   @Nullable
-  public ItemHomeViewModel getViewModel() {
+  public ItemGroupStudentViewModel getViewModel() {
     return mViewModel;
   }
 

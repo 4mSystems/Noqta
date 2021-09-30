@@ -40,21 +40,28 @@
                 android:id="@+id/tv_profile_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="@string/edit_profile"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@id/back"
+                app:layout_constraintTop_toTopOf="@id/back" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
+                android:contentDescription="@string/app_name"
                 android:onClick="@{()->viewmodel.goBack(context)}"
                 android:src="@drawable/ic_back"
+                app:backgroundTint="@color/white"
+                app:fabSize="mini"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

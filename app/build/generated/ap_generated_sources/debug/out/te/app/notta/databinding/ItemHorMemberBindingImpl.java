@@ -13,28 +13,30 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.btn, 3);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final com.google.android.material.button.MaterialButton mboundView2;
+    private final te.app.notta.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemHorMemberBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ItemHorMemberBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (com.google.android.material.button.MaterialButton) bindings[2];
+        this.mboundView2 = (te.app.notta.customViews.views.CustomTextViewRegular) bindings[2];
         this.mboundView2.setTag(null);
         this.tvMember.setTag(null);
         setRootTag(root);
@@ -140,7 +142,7 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewModelStudentsItemStudentPoints);
-            te.app.notta.base.ApplicationBinding.loadImage(this.tvMember, viewModelStudentsItemStudentImage);
+            te.app.notta.base.ApplicationBinding.loadFullImage(this.tvMember, viewModelStudentsItemStudentImage);
         }
     }
     // Listener Stub Implementations

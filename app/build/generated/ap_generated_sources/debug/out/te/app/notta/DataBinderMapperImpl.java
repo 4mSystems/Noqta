@@ -48,6 +48,7 @@ import te.app.notta.databinding.ItemHomeBindingImpl;
 import te.app.notta.databinding.ItemHorMemberBindingImpl;
 import te.app.notta.databinding.ItemMemberBindingImpl;
 import te.app.notta.databinding.ItemMoreBindingImpl;
+import te.app.notta.databinding.ItemMyGroupBindingImpl;
 import te.app.notta.databinding.ItemPointsBindingImpl;
 import te.app.notta.databinding.ItemProfileBindingImpl;
 import te.app.notta.databinding.ItemRecentTaskBindingImpl;
@@ -126,27 +127,29 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMMORE = 33;
 
-  private static final int LAYOUT_ITEMPOINTS = 34;
+  private static final int LAYOUT_ITEMMYGROUP = 34;
 
-  private static final int LAYOUT_ITEMPROFILE = 35;
+  private static final int LAYOUT_ITEMPOINTS = 35;
 
-  private static final int LAYOUT_ITEMRECENTTASK = 36;
+  private static final int LAYOUT_ITEMPROFILE = 36;
 
-  private static final int LAYOUT_ITEMSTUDENTINVITE = 37;
+  private static final int LAYOUT_ITEMRECENTTASK = 37;
 
-  private static final int LAYOUT_ITEMSTUDENTREQUEST = 38;
+  private static final int LAYOUT_ITEMSTUDENTINVITE = 38;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 39;
+  private static final int LAYOUT_ITEMSTUDENTREQUEST = 39;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 40;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 40;
 
-  private static final int LAYOUT_LAYOUTGRAND = 41;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 41;
 
-  private static final int LAYOUT_MENU = 42;
+  private static final int LAYOUT_LAYOUTGRAND = 42;
 
-  private static final int LAYOUT_SUCCESSSHEET = 43;
+  private static final int LAYOUT_MENU = 43;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(43);
+  private static final int LAYOUT_SUCCESSSHEET = 44;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(44);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -182,6 +185,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_hor_member, LAYOUT_ITEMHORMEMBER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_member, LAYOUT_ITEMMEMBER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_more, LAYOUT_ITEMMORE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_my_group, LAYOUT_ITEMMYGROUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_points, LAYOUT_ITEMPOINTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_profile, LAYOUT_ITEMPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_recent_task, LAYOUT_ITEMRECENTTASK);
@@ -401,6 +405,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_more is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMMYGROUP: {
+          if ("layout/item_my_group_0".equals(tag)) {
+            return new ItemMyGroupBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_my_group is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMPOINTS: {
           if ("layout/item_points_0".equals(tag)) {
             return new ItemPointsBindingImpl(component, view);
@@ -543,7 +553,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(43);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(44);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.notta.R.layout.activity_base);
@@ -579,6 +589,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_hor_member_0", te.app.notta.R.layout.item_hor_member);
       sKeys.put("layout/item_member_0", te.app.notta.R.layout.item_member);
       sKeys.put("layout/item_more_0", te.app.notta.R.layout.item_more);
+      sKeys.put("layout/item_my_group_0", te.app.notta.R.layout.item_my_group);
       sKeys.put("layout/item_points_0", te.app.notta.R.layout.item_points);
       sKeys.put("layout/item_profile_0", te.app.notta.R.layout.item_profile);
       sKeys.put("layout/item_recent_task_0", te.app.notta.R.layout.item_recent_task);

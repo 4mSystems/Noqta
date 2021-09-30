@@ -1,5 +1,6 @@
 package te.app.notta.pages.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,12 +57,12 @@ public class GroupDetailsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.GROUP_DETAILS)) {
+                viewModel.isStudentGroup = true;
                 viewModel.setGroupDetails(((GroupDetailsResponse) mutable.object).getGroupDetails());
             } else if (mutable.message.equals(Constants.ADD_TASK)) {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, AddTaskFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.STUDENT)) {
-                if (viewModel.userData.getType().equals("2"))
-                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, GroupStudentFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, GroupStudentFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.STUDENT_REQUESTS)) {
                 if (viewModel.userData.getType().equals("2"))
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, StudentRequestsFragment.class.getName(), null);
@@ -103,4 +104,11 @@ public class GroupDetailsFragment extends BaseFragment {
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 
+    @Override
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        super.launchActivityResult(request, resultCode, result);
+        if (result != null) {
+            viewModel.getGroupDetails();
+        }
+    }
 }

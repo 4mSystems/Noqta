@@ -10,33 +10,49 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.HomeViewModel;
+import te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel;
 
 public abstract class FragmentMyGroupsBinding extends ViewDataBinding {
+  @NonNull
+  public final FloatingActionButton back;
+
   @NonNull
   public final AppCompatImageView boardHeader;
 
   @NonNull
-  public final CustomTextViewMedium tvMyGroups;
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcGroups;
+
+  @NonNull
+  public final CustomTextViewMedium tvProfileTitle;
 
   @Bindable
-  protected HomeViewModel mViewmodel;
+  protected MyGroupsViewModel mViewmodel;
 
   protected FragmentMyGroupsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView boardHeader, CustomTextViewMedium tvMyGroups) {
+      FloatingActionButton back, AppCompatImageView boardHeader, CircularProgressIndicator progress,
+      RecyclerView rcGroups, CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.back = back;
     this.boardHeader = boardHeader;
-    this.tvMyGroups = tvMyGroups;
+    this.progress = progress;
+    this.rcGroups = rcGroups;
+    this.tvProfileTitle = tvProfileTitle;
   }
 
-  public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable MyGroupsViewModel viewmodel);
 
   @Nullable
-  public HomeViewModel getViewmodel() {
+  public MyGroupsViewModel getViewmodel() {
     return mViewmodel;
   }
 
