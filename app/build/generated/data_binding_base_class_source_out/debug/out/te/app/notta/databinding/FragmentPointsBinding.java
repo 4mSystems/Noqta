@@ -11,11 +11,12 @@ import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.PointsViewModel;
+import te.app.notta.pages.points.viewModels.PointsViewModel;
 
 public abstract class FragmentPointsBinding extends ViewDataBinding {
   @NonNull
@@ -26,6 +27,9 @@ public abstract class FragmentPointsBinding extends ViewDataBinding {
 
   @NonNull
   public final AppCompatImageView icGifts;
+
+  @NonNull
+  public final RecyclerView rcPoints;
 
   @NonNull
   public final CustomTextViewMedium tvHomeUsername;
@@ -44,12 +48,13 @@ public abstract class FragmentPointsBinding extends ViewDataBinding {
 
   protected FragmentPointsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView boardHeader, CardView cardPoints, AppCompatImageView icGifts,
-      CustomTextViewMedium tvHomeUsername, CustomTextViewMedium tvYourPoint1,
+      RecyclerView rcPoints, CustomTextViewMedium tvHomeUsername, CustomTextViewMedium tvYourPoint1,
       CustomTextViewMedium tvYourPoint2, CustomTextViewMedium tvYourPoint3) {
     super(_bindingComponent, _root, _localFieldCount);
     this.boardHeader = boardHeader;
     this.cardPoints = cardPoints;
     this.icGifts = icGifts;
+    this.rcPoints = rcPoints;
     this.tvHomeUsername = tvHomeUsername;
     this.tvYourPoint1 = tvYourPoint1;
     this.tvYourPoint2 = tvYourPoint2;

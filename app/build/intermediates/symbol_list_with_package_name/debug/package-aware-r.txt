@@ -3280,6 +3280,7 @@ id allStates
 id always
 id animateToEnd
 id animateToStart
+id answer_task
 id antiClockwise
 id anticipate
 id appCompatButtonNext
@@ -3317,6 +3318,7 @@ id btn_close
 id btn_done
 id btn_groups
 id btn_join
+id btn_leave
 id btn_phone
 id btn_remove
 id btn_requests
@@ -3459,14 +3461,10 @@ id ic_cloud_upload_video
 id ic_delete
 id ic_en
 id ic_en_check
-id ic_fifth
-id ic_fourth
 id ic_gifts
 id ic_home_notification
 id ic_logo
-id ic_second
 id ic_teacher
-id ic_third
 id ic_user
 id ic_verify
 id icon
@@ -3659,7 +3657,9 @@ id ratio
 id rc_gallery
 id rc_groups
 id rc_members
+id rc_points
 id rc_students
+id rc_task_media
 id rectangle
 id rectangles
 id repeat
@@ -3854,6 +3854,7 @@ id tv_video
 id tv_your_point1
 id tv_your_point2
 id tv_your_point3
+id tv_your_point4
 id unchecked
 id uniform
 id unlabeled
@@ -3996,6 +3997,7 @@ layout fragment_lang
 layout fragment_login
 layout fragment_more
 layout fragment_my_groups
+layout fragment_my_points
 layout fragment_onboard
 layout fragment_points
 layout fragment_profile
@@ -4014,6 +4016,7 @@ layout item_profile
 layout item_recent_task
 layout item_student_invite
 layout item_student_request
+layout item_task_media
 layout layout_action_bar_back
 layout layout_action_bar_home
 layout layout_grand
@@ -4144,6 +4147,7 @@ string accept
 string add_answer
 string add_task
 string add_task_title
+string answer_task
 string app_name
 string appbar_scrolling_view_behavior
 string arabic
@@ -4214,6 +4218,7 @@ string edit_profile_title
 string email
 string email_hint
 string english
+string enough_points_warning
 string error_icon_content_description
 string exchange
 string exposed_dropdown_menu_content_description
@@ -4260,6 +4265,8 @@ string invite_student
 string item_view_role_description
 string join
 string leave
+string leave_group_body_successfully
+string leave_group_successfully
 string library_roundedimageview_author
 string library_roundedimageview_authorWebsite
 string library_roundedimageview_isOpenSource
@@ -4340,6 +4347,8 @@ string mtrl_picker_toggle_to_year_selection
 string my_gifts
 string my_groups
 string my_points
+string my_points_question
+string my_points_question_desc
 string my_requests
 string name_hint
 string navigation_drawer_close

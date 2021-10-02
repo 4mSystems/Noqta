@@ -20,7 +20,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.IncrementalView;
-import te.app.notta.pages.home.viewModels.PointsViewModel;
+import te.app.notta.pages.points.viewModels.PointsViewModel;
 
 public abstract class FragmentAddGiftBinding extends ViewDataBinding {
   @NonNull

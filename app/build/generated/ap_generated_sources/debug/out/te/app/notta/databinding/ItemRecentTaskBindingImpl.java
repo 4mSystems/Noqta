@@ -24,9 +24,9 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     private final te.app.notta.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback64;
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback63;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,8 +55,8 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         this.tvDetails.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback57 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback56 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback64 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback63 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,15 +134,18 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         int viewModelUserDataId = 0;
         java.lang.String stringValueOfViewModelTasksItemId = null;
         te.app.notta.pages.home.models.details.TasksItem viewModelTasksItem = null;
+        int viewModelTasksItemAnswered = 0;
         boolean viewModelTasksItemTechIdViewModelUserDataId = false;
         java.lang.String viewModelTasksItemDescription = null;
         int viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE = 0;
         boolean ViewModelTasksItemTechIdViewModelUserDataId1 = false;
         java.lang.String viewModelTasksItemCreatedAt = null;
         int viewModelTasksItemTechId = 0;
+        boolean viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse = false;
         te.app.notta.pages.auth.models.UserData viewModelUserData = null;
+        int viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = 0;
+        boolean viewModelTasksItemAnsweredInt0 = false;
         te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
-        int ViewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE1 = 0;
         int viewModelTasksItemId = 0;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -199,22 +202,51 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
 
                 // read viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
                 viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE = ((viewModelTasksItemTechIdViewModelUserDataId) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
-                // read viewModel.tasksItem.tech_id != viewModel.userData.id ? View.VISIBLE : View.GONE
-                ViewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE1 = ((ViewModelTasksItemTechIdViewModelUserDataId1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+
+        if ((dirtyFlags & 0x40L) != 0) {
+
+                if (viewModelTasksItem != null) {
+                    // read viewModel.tasksItem.answered
+                    viewModelTasksItemAnswered = viewModelTasksItem.getAnswered();
+                }
+
+
+                // read viewModel.tasksItem.answered == 0
+                viewModelTasksItemAnsweredInt0 = (viewModelTasksItemAnswered) == (0);
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
+                viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse = ((ViewModelTasksItemTechIdViewModelUserDataId1) ? (viewModelTasksItemAnsweredInt0) : (false));
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+
+
+                // read viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+                viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = ((viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnRemove.setOnClickListener(mCallback57);
-            this.btnTechType.setOnClickListener(mCallback56);
+            this.btnRemove.setOnClickListener(mCallback64);
+            this.btnTechType.setOnClickListener(mCallback63);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
             this.btnRemove.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE);
-            this.btnTech.setVisibility(ViewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE1);
-            this.btnTechType.setVisibility(ViewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE1);
+            this.btnTech.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
+            this.btnTechType.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, stringValueOfViewModelTasksItemId);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDate, viewModelTasksItemCreatedAt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDetails, viewModelTasksItemDescription);
@@ -272,8 +304,10 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         flag 2 (0x3L): null
         flag 3 (0x4L): viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
         flag 4 (0x5L): viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewModel.tasksItem.tech_id != viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewModel.tasksItem.tech_id != viewModel.userData.id ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
+        flag 6 (0x7L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
+        flag 7 (0x8L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

@@ -21,6 +21,9 @@ import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
 
 public abstract class ItemHomeBinding extends ViewDataBinding {
   @NonNull
+  public final MaterialButton answerTask;
+
+  @NonNull
   public final Barrier br1;
 
   @NonNull
@@ -56,12 +59,13 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   @Bindable
   protected ItemHomeViewModel mViewModel;
 
-  protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br1,
-      MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRequests,
-      MaterialButton btnStudents, MaterialButton btnTask, MaterialButton btnTechType,
-      RoundedImageView icUser, CustomTextViewMedium tvGroupName, CustomTextViewMedium tvUserName,
-      CustomTextViewRegular tvUserWork) {
+  protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      MaterialButton answerTask, Barrier br1, MaterialButton btnGroups, MaterialButton btnJoin,
+      MaterialButton btnRequests, MaterialButton btnStudents, MaterialButton btnTask,
+      MaterialButton btnTechType, RoundedImageView icUser, CustomTextViewMedium tvGroupName,
+      CustomTextViewMedium tvUserName, CustomTextViewRegular tvUserWork) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.answerTask = answerTask;
     this.br1 = br1;
     this.btnGroups = btnGroups;
     this.btnJoin = btnJoin;

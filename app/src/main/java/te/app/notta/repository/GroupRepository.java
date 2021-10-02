@@ -1,7 +1,5 @@
 package te.app.notta.repository;
 
-import android.util.Log;
-
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
@@ -16,9 +14,12 @@ import te.app.notta.connection.FileObject;
 import te.app.notta.model.MainRequest;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.model.base.StatusMessage;
+import te.app.notta.pages.addAnswer.models.AddAnswerRequest;
+import te.app.notta.pages.addAnswer.models.TaskDetailsResponse;
 import te.app.notta.pages.home.models.details.GroupDetailsResponse;
 import te.app.notta.pages.home.models.groupStudents.GroupStudentsResponse;
-import te.app.notta.pages.home.models.points.PointsResponse;
+import te.app.notta.pages.points.models.PointsResponse;
+import te.app.notta.pages.points.models.students.StudentPointsResponse;
 import te.app.notta.pages.teacher.models.AddGiftRequest;
 import te.app.notta.pages.teacher.models.AddGroupRequest;
 import te.app.notta.pages.home.models.HomeResponse;
@@ -52,6 +53,11 @@ public class GroupRepository extends BaseRepository {
     public Disposable getHome(int page, boolean showProgress, String searchText) {
         String url = UserHelper.getInstance(MyApplication.getInstance()).getUserData().getType().equals("2") ? URLS.HOME : URLS.HOME_STUDENT;
         return connectionHelper.requestApi(Constants.GET_REQUEST, url + searchText + "&page=" + page, new Object(), HomeResponse.class,
+                Constants.HOME, showProgress);
+    }
+
+    public Disposable studentTasks(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.STUDENT_TASKS + page, new Object(), HomeResponse.class,
                 Constants.HOME, showProgress);
     }
 
@@ -99,10 +105,11 @@ public class GroupRepository extends BaseRepository {
                 Constants.DELETE_TASK, true);
     }
 
-    public Disposable getPoints() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POINTS, new Object(), PointsResponse.class,
-                Constants.MENU_GIFTS, true);
+    public Disposable getPoints(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POINTS + page, new Object(), PointsResponse.class,
+                Constants.MENU_GIFTS, showProgress);
     }
+
 
     public Disposable createPoints(AddGiftRequest request, List<FileObject> objectList) {
         return connectionHelper.requestApi(URLS.ADD_GIFT, request, objectList, StatusMessage.class,
@@ -143,4 +150,37 @@ public class GroupRepository extends BaseRepository {
                 Constants.JOIN_REQUEST, true);
     }
 
+    public Disposable taskDetails(int taskId, String studentId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.TASK_DETAILS + studentId + "&task_id=" + taskId, new Object(), TaskDetailsResponse.class,
+                Constants.TASK_DETAILS, true);
+    }
+
+    public Disposable answerTask(AddAnswerRequest addAnswerRequest, List<FileObject> objectList) {
+        return connectionHelper.requestApi(URLS.ADD_ANSWER, addAnswerRequest, objectList, StatusMessage.class,
+                Constants.Add_ANSWER, false);
+    }
+
+    public Disposable getAvalStudentPoints(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.STUDENT_POINTS + page, new Object(), StudentPointsResponse.class,
+                Constants.STUDENT_GIFTS, showProgress);
+    }
+
+    public Disposable movePointsToStore() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MOVE_POINTS, new Object(), StatusMessage.class,
+                Constants.MOVE_POINTS, false);
+    }
+
+    public Disposable getGift(int giftId) {
+        MainRequest request = new MainRequest();
+        request.setGiftId(String.valueOf(giftId));
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.GET_GIFT, request, StatusMessage.class,
+                Constants.GET_GIFT, true);
+    }
+
+    public Disposable leaveGroup(int groupId) {
+        MainRequest request = new MainRequest();
+        request.setGroupId(String.valueOf(groupId));
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LEAVE_GROUP, request, StatusMessage.class,
+                Constants.LEAVE_GROUP, true);
+    }
 }

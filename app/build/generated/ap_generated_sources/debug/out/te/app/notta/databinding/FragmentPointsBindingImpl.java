@@ -14,19 +14,16 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 5);
-        sViewsWithIds.put(R.id.ic_gifts, 6);
-        sViewsWithIds.put(R.id.tv_your_point1, 7);
-        sViewsWithIds.put(R.id.tv_your_point2, 8);
+        sViewsWithIds.put(R.id.board_header, 6);
+        sViewsWithIds.put(R.id.ic_gifts, 7);
+        sViewsWithIds.put(R.id.tv_your_point1, 8);
         sViewsWithIds.put(R.id.tv_your_point3, 9);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView3;
-    @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView4;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
@@ -39,22 +36,23 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     }
     private FragmentPointsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (androidx.cardview.widget.CardView) bindings[2]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
+            , (androidx.cardview.widget.CardView) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[7]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[9]
             );
         this.cardPoints.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
-        this.mboundView3.setTag(null);
-        this.mboundView4 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[4];
-        this.mboundView4.setTag(null);
+        this.mboundView5 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5];
+        this.mboundView5.setTag(null);
+        this.rcPoints.setTag(null);
         this.tvHomeUsername.setTag(null);
+        this.tvYourPoint2.setTag(null);
         setRootTag(root);
         // listeners
         mCallback3 = new te.app.notta.generated.callback.OnClickListener(this, 1);
@@ -64,7 +62,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -83,7 +81,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((te.app.notta.pages.home.viewModels.PointsViewModel) variable);
+            setViewmodel((te.app.notta.pages.points.viewModels.PointsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -91,7 +89,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.PointsViewModel Viewmodel) {
+    public void setViewmodel(@Nullable te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel) {
         updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -105,20 +103,26 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((te.app.notta.pages.home.viewModels.PointsViewModel) object, fieldId);
+                return onChangeViewmodel((te.app.notta.pages.points.viewModels.PointsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.PointsViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.pointsAdapter) {
+        else if (fieldId == BR.studentMainPoints) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.pointsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -135,16 +139,19 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
         java.lang.String viewmodelUserDataType = null;
         int viewmodelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE = 0;
         te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
+        int viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = 0;
         boolean viewmodelUserDataTypeEqualsJavaLangString2 = false;
-        te.app.notta.pages.home.adapters.PointsAdapter viewmodelPointsAdapter = null;
+        te.app.notta.pages.points.adapters.PointsAdapter viewmodelPointsAdapter = null;
+        te.app.notta.pages.points.models.students.StudentMainPoints viewmodelStudentMainPoints = null;
+        java.lang.String viewmodelStudentMainPointsPointsInStore = null;
         boolean viewmodelUserDataTypeEqualsJavaLangString1 = false;
         java.lang.String viewmodelUserDataTypeEqualsJavaLangString2TvHomeUsernameAndroidStringMyGiftsTvHomeUsernameAndroidStringShop = null;
-        te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0x5L) != 0) {
+            if ((dirtyFlags & 0x9L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.userData
@@ -164,51 +171,76 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
                         // read viewmodel.userData.type.equals("1")
                         viewmodelUserDataTypeEqualsJavaLangString1 = viewmodelUserDataType.equals("1");
                     }
-                if((dirtyFlags & 0x5L) != 0) {
+                if((dirtyFlags & 0x9L) != 0) {
                     if(viewmodelUserDataTypeEqualsJavaLangString2) {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x200L;
                     }
                     else {
+                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x100L;
+                    }
+                }
+                if((dirtyFlags & 0x9L) != 0) {
+                    if(viewmodelUserDataTypeEqualsJavaLangString1) {
                             dirtyFlags |= 0x20L;
                     }
-                }
-                if((dirtyFlags & 0x5L) != 0) {
-                    if(viewmodelUserDataTypeEqualsJavaLangString1) {
+                    else {
                             dirtyFlags |= 0x10L;
                     }
-                    else {
-                            dirtyFlags |= 0x8L;
-                    }
                 }
 
 
+                    // read viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+                    viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = ((viewmodelUserDataTypeEqualsJavaLangString2) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                     // read viewmodel.userData.type.equals("2") ? @android:string/my_gifts : @android:string/shop
                     viewmodelUserDataTypeEqualsJavaLangString2TvHomeUsernameAndroidStringMyGiftsTvHomeUsernameAndroidStringShop = ((viewmodelUserDataTypeEqualsJavaLangString2) ? (tvHomeUsername.getResources().getString(R.string.my_gifts)) : (tvHomeUsername.getResources().getString(R.string.shop)));
                     // read viewmodel.userData.type.equals("1") ? View.VISIBLE : View.GONE
                     viewmodelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE = ((viewmodelUserDataTypeEqualsJavaLangString1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0xdL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.pointsAdapter
-                    viewmodelPointsAdapter = viewmodel.getPointsAdapter();
-                }
+                    if (viewmodel != null) {
+                        // read viewmodel.pointsAdapter
+                        viewmodelPointsAdapter = viewmodel.getPointsAdapter();
+                    }
+            }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.studentMainPoints
+                        viewmodelStudentMainPoints = viewmodel.getStudentMainPoints();
+                    }
+
+
+                    if (viewmodelStudentMainPoints != null) {
+                        // read viewmodel.studentMainPoints.pointsInStore
+                        viewmodelStudentMainPointsPointsInStore = viewmodelStudentMainPoints.getPointsInStore();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0x9L) != 0) {
             // api target 1
 
             this.cardPoints.setVisibility(viewmodelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE);
+            this.mboundView5.setVisibility(viewmodelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeUsername, viewmodelUserDataTypeEqualsJavaLangString2TvHomeUsernameAndroidStringMyGiftsTvHomeUsernameAndroidStringShop);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView3, viewmodelPointsAdapter, "1", "1");
+            this.mboundView5.setOnClickListener(mCallback3);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            this.mboundView4.setOnClickListener(mCallback3);
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.rcPoints, viewmodelPointsAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvYourPoint2, viewmodelStudentMainPointsPointsInStore);
         }
     }
     // Listener Stub Implementations
@@ -218,7 +250,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
         // viewmodel != null
         boolean viewmodelJavaLangObjectNull = false;
         // viewmodel
-        te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
 
 
@@ -235,12 +267,15 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.pointsAdapter
-        flag 2 (0x3L): null
-        flag 3 (0x4L): viewmodel.userData.type.equals("1") ? View.VISIBLE : View.GONE
+        flag 1 (0x2L): viewmodel.studentMainPoints
+        flag 2 (0x3L): viewmodel.pointsAdapter
+        flag 3 (0x4L): null
         flag 4 (0x5L): viewmodel.userData.type.equals("1") ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.userData.type.equals("2") ? @android:string/my_gifts : @android:string/shop
-        flag 6 (0x7L): viewmodel.userData.type.equals("2") ? @android:string/my_gifts : @android:string/shop
+        flag 5 (0x6L): viewmodel.userData.type.equals("1") ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.userData.type.equals("2") ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewmodel.userData.type.equals("2") ? @android:string/my_gifts : @android:string/shop
+        flag 9 (0xaL): viewmodel.userData.type.equals("2") ? @android:string/my_gifts : @android:string/shop
     flag mapping end*/
     //end
 }

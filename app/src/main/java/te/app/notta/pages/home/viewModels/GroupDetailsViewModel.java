@@ -47,7 +47,7 @@ public class GroupDetailsViewModel extends BaseViewModel {
     }
 
     public void groupStudentsRequests(int page, boolean showProgress) {
-        compositeDisposable.add(repository.getGroupStudentsRequests(getPassingObject() != null ? String.valueOf(getPassingObject().getId()):"", page, showProgress));
+        compositeDisposable.add(repository.getGroupStudentsRequests(getPassingObject() != null ? String.valueOf(getPassingObject().getId()) : "", page, showProgress));
     }
 
     public void deleteGroup() {
@@ -56,6 +56,15 @@ public class GroupDetailsViewModel extends BaseViewModel {
 
     public void deleteTask() {
         compositeDisposable.add(repository.deleteTask(getTasksAdapter().selectedId));
+    }
+
+    public void leaveGroup() {
+        if (getGroupDetails().isJoinSent() != 1)
+            compositeDisposable.add(repository.leaveGroup(getPassingObject().getId()));
+    }
+
+    public void studentJoinRequest() {
+        compositeDisposable.add(repository.studentJoinRequest(getPassingObject().getId()));
     }
 
     public void changeStudentRequestStatus(PassingObject passingObject) {

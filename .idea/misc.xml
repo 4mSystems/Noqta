@@ -102,7 +102,7 @@
         <entry key="app/src/main/res/layout/change_dialog.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/delete_sheet.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.19638157894736843" />
-        <entry key="app/src/main/res/layout/fragment_add_answer.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_add_answer.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_add_gift.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_add_group.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_add_task.xml" value="0.19638157894736843" />
@@ -111,7 +111,7 @@
         <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_group_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_group_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_group_members.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_group_students.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -120,6 +120,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_more.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_my_groups.xml" value="0.19638157894736843" />
+        <entry key="app/src/main/res/layout/fragment_my_points.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_onboard.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_points.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
@@ -130,7 +131,7 @@
         <entry key="app/src/main/res/layout/fragment_tasks.xml" value="0.33" />
         <entry key="app/src/main/res/layout/incremental_view.xml" value="0.33" />
         <entry key="app/src/main/res/layout/invite_student_sheet.xml" value="0.19638157894736843" />
-        <entry key="app/src/main/res/layout/item_home.xml" value="0.17333333333333334" />
+        <entry key="app/src/main/res/layout/item_home.xml" value="0.18" />
         <entry key="app/src/main/res/layout/item_hor_member.xml" value="0.9" />
         <entry key="app/src/main/res/layout/item_member.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_more.xml" value="0.33" />
@@ -141,6 +142,7 @@
         <entry key="app/src/main/res/layout/item_requet.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/item_student_invite.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/item_student_request.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_task_media.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_action_bar_home.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/menu.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/option_dialog.xml" value="0.10230263157894737" />

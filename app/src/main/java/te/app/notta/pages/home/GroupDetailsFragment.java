@@ -24,6 +24,7 @@ import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.DeleteSheetBinding;
 import te.app.notta.databinding.FragmentGroupDetailsBinding;
 import te.app.notta.model.base.Mutable;
+import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.home.models.details.GroupDetailsResponse;
 import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
 import te.app.notta.pages.teacher.AddTaskFragment;
@@ -68,12 +69,20 @@ public class GroupDetailsFragment extends BaseFragment {
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getGroupDetails().getId()), null, StudentRequestsFragment.class.getName(), null);
             } else if (mutable.message.equals(Constants.DIALOG_SHOW)) {
                 showDeleteDialog(Constants.DELETE_GROUP);
+            } else if (mutable.message.equals(Constants.DIALOG_SHOW_LEAVE)) {
+                showDeleteDialog(Constants.DIALOG_SHOW_LEAVE);
             } else if (mutable.message.equals(Constants.DELETE_GROUP)) {
+                MovementHelper.finishWithResult(new PassingObject(), requireActivity(), Constants.ADD_GROUP_REQUEST);
+            } else if (mutable.message.equals(Constants.LEAVE_GROUP)) {
                 MovementHelper.finishWithResult(new PassingObject(), requireActivity(), Constants.ADD_GROUP_REQUEST);
             } else if (mutable.message.equals(Constants.DELETE_TASK)) {
                 viewModel.getTasksAdapter().getTasksItemList().remove(viewModel.getTasksAdapter().lastPosition);
                 viewModel.getTasksAdapter().notifyDataSetChanged();
                 viewModel.notifyChange(BR.tasksAdapter);
+            } else if (mutable.message.equals(Constants.JOIN_REQUEST)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getGroupDetails().setJoinSent(1);
+                viewModel.notifyChange(BR.groupDetails);
             }
         });
         viewModel.getTasksAdapter().liveData.observeForever(o -> showDeleteDialog(Constants.DELETE_TASK));
@@ -86,11 +95,16 @@ public class GroupDetailsFragment extends BaseFragment {
         if (o.equals(Constants.DELETE_TASK)) {
             sortBinding.tvHeader.setText(getString(R.string.task_deleted_successfully));
             sortBinding.tvDesc.setText(getString(R.string.task_body_deleted_successfully));
+        } else if (o.equals(Constants.DIALOG_SHOW_LEAVE)) {
+            sortBinding.tvHeader.setText(getString(R.string.leave_group_successfully));
+            sortBinding.tvDesc.setText(getString(R.string.leave_group_body_successfully));
         }
         sortBinding.btnClose.setOnClickListener(v -> sheetDialog.dismiss());
         sortBinding.btnYes.setOnClickListener(v -> {
             if (o.equals(Constants.DELETE_GROUP))
                 viewModel.deleteGroup();
+            else if (o.equals(Constants.DIALOG_SHOW_LEAVE))
+                viewModel.leaveGroup();
             else
                 viewModel.deleteTask();
             sheetDialog.dismiss();
@@ -108,7 +122,7 @@ public class GroupDetailsFragment extends BaseFragment {
     public void launchActivityResult(int request, int resultCode, Intent result) {
         super.launchActivityResult(request, resultCode, result);
         if (result != null) {
-            viewModel.getGroupDetails();
+            viewModel.groupDetails();
         }
     }
 }

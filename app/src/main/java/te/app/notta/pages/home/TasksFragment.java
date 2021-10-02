@@ -43,6 +43,8 @@ public class TasksFragment extends BaseFragment {
         tasksBinding.setViewmodel(viewModel);
         if (viewModel.userData.getType().equals("2"))
             viewModel.home(1, true);
+        else
+            viewModel.studentTasks(1, true);
         setEvent();
         return tasksBinding.getRoot();
     }

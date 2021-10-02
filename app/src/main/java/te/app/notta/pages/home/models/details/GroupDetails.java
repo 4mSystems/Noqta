@@ -45,6 +45,16 @@ public class GroupDetails {
 
     @SerializedName("tasks")
     private List<TasksItem> tasks;
+    @SerializedName("join_request")
+    private int isJoinSent;
+
+    public int isJoinSent() {
+        return isJoinSent;
+    }
+
+    public void setJoinSent(int joinSent) {
+        isJoinSent = joinSent;
+    }
 
     public String getRequestsCount() {
         return requestsCount;

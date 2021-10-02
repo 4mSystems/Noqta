@@ -33,9 +33,9 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback24;
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback25;
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
     private final android.view.View.OnClickListener mCallback22;
     // values
@@ -149,11 +149,11 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback25 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -431,13 +431,13 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback24);
+            this.appCompatButtonNext.setOnClickListener(mCallback25);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback20);
-            this.mboundView3.setOnClickListener(mCallback22);
+            this.back.setOnClickListener(mCallback21);
+            this.mboundView3.setOnClickListener(mCallback23);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
-            this.mboundView8.setOnClickListener(mCallback23);
-            this.memberProfile.setOnClickListener(mCallback21);
+            this.mboundView8.setOnClickListener(mCallback24);
+            this.memberProfile.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -465,6 +465,25 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.IMAGE);
+                }
+                break;
+            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -501,25 +520,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.IMAGE);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -538,7 +538,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
                 }
                 break;
             }
-            case 3: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

@@ -4,7 +4,7 @@ package te.app.notta.pages.teacher;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
-import te.app.notta.pages.home.viewModels.PointsViewModel;
+import te.app.notta.pages.points.viewModels.PointsViewModel;
 
 @SuppressWarnings({
     "unchecked",

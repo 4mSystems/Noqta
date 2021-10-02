@@ -8,9 +8,6 @@ public class Constants {
     public static final String ADD_ONE = "ADD_ONE";
     public final static String ADD_TWO = "ADD_TWO";
     public final static int ADD_GIFT_REQUEST = 6001;
-    public final static int TAX_REQUEST = 6002;
-    public final static int IDENTITY_REQUEST = 6003;
-    public final static int PASSPORT_REQUEST = 6004;
     public static final String STUDENT = "STUDENT";
     public static final String SEND_INVITATIONS = "SEND_INVITATIONS";
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
@@ -37,7 +34,7 @@ public class Constants {
 
     public final static String STUDENT_REQUESTS = "STUDENT_REQUESTS";
     public final static String JOIN_REQUEST = "JOIN_REQUEST";
-    public final static String NEW_POST = "NEW_POST";
+    public final static String TASK_DETAILS = "TASK_DETAILS";
 
     public final static String ERROR_TOAST = "error_toast";
 
@@ -55,17 +52,16 @@ public class Constants {
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "en";
     public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
-    public static final int LOCATION_REQUEST = 6005;
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
     public static final String REJECT = "REJECT";
     public static final String PLAY_VIDEO = "PLAY_VIDEO";
-    public static final String HIDE_POST = "HIDE_POST";
-    public static final String REJECT_ORDER = "REJECT_ORDER";
-    public static final String CHANGE_ORDER_STATUS = "CHANGE_ORDER_STATUS";
-    public static final String DELETE_COMMENT = "DELETE_COMMENT";
-    public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
+    public static final String STUDENT_GIFTS = "STUDENT_GIFTS";
+    public static final String MOVE_POINTS = "MOVE_POINTS";
+    public static final String DIALOG_SHOW_LEAVE = "DIALOG_SHOW_LEAVE";
+    public static final String LEAVE_GROUP = "LEAVE_GROUP";
+    public static final String GET_GIFT = "GET_GIFT";
     public static final String SHARE_BAR = "SHARE_BAR";
     public static final String PROFILE = "PROFILE";
 

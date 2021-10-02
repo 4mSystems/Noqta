@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemPointsViewModel" />
+            type="te.app.notta.pages.points.viewModels.ItemPointsViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -96,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp12h"
                 android:background="@color/colorAccent"
+                android:onClick="@{()->viewModel.itemAction(Constants.GET_GIFT)}"
                 android:text="@string/exchange"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

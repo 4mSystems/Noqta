@@ -12,7 +12,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.PointsViewModel" />
+            type="te.app.notta.pages.points.viewModels.PointsViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
-                android:visibility="@{viewmodel.userData.type.equals(`1`)?View.VISIBLE:View.GONE,default=gone}"
+                android:visibility="@{viewmodel.userData.type.equals(`1`)?View.VISIBLE:View.GONE}"
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +85,7 @@
                         android:id="@+id/tv_your_point2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="250"
+                        android:text="@{viewmodel.studentMainPoints.pointsInStore}"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent" />
@@ -115,6 +115,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="0dp"
+                android:id="@+id/rc_points"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
                 app:adapter="@{viewmodel.pointsAdapter}"
@@ -133,6 +134,7 @@
             android:layout_margin="@dimen/dp16h"
             android:contentDescription="@string/app_name"
             android:onClick="@{()-> viewmodel.action(Constants.ADD_GIFT)}"
+            android:visibility="@{viewmodel.userData.type.equals(`2`)?View.VISIBLE:View.GONE}"
             app:backgroundTint="@color/colorAccent"
             app:borderWidth="2dp"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"

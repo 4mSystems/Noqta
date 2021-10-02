@@ -37,6 +37,7 @@ import te.app.notta.databinding.FragmentLangBindingImpl;
 import te.app.notta.databinding.FragmentLoginBindingImpl;
 import te.app.notta.databinding.FragmentMoreBindingImpl;
 import te.app.notta.databinding.FragmentMyGroupsBindingImpl;
+import te.app.notta.databinding.FragmentMyPointsBindingImpl;
 import te.app.notta.databinding.FragmentOnboardBindingImpl;
 import te.app.notta.databinding.FragmentPointsBindingImpl;
 import te.app.notta.databinding.FragmentProfileBindingImpl;
@@ -54,6 +55,7 @@ import te.app.notta.databinding.ItemProfileBindingImpl;
 import te.app.notta.databinding.ItemRecentTaskBindingImpl;
 import te.app.notta.databinding.ItemStudentInviteBindingImpl;
 import te.app.notta.databinding.ItemStudentRequestBindingImpl;
+import te.app.notta.databinding.ItemTaskMediaBindingImpl;
 import te.app.notta.databinding.LayoutActionBarBackBindingImpl;
 import te.app.notta.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.notta.databinding.LayoutGrandBindingImpl;
@@ -105,51 +107,55 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTMYGROUPS = 22;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 23;
+  private static final int LAYOUT_FRAGMENTMYPOINTS = 23;
 
-  private static final int LAYOUT_FRAGMENTPOINTS = 24;
+  private static final int LAYOUT_FRAGMENTONBOARD = 24;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 25;
+  private static final int LAYOUT_FRAGMENTPOINTS = 25;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 26;
+  private static final int LAYOUT_FRAGMENTPROFILE = 26;
 
-  private static final int LAYOUT_FRAGMENTREQUESTS = 27;
+  private static final int LAYOUT_FRAGMENTREGISTER = 27;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 28;
+  private static final int LAYOUT_FRAGMENTREQUESTS = 28;
 
-  private static final int LAYOUT_FRAGMENTTASKS = 29;
+  private static final int LAYOUT_FRAGMENTSPLASH = 29;
 
-  private static final int LAYOUT_ITEMHOME = 30;
+  private static final int LAYOUT_FRAGMENTTASKS = 30;
 
-  private static final int LAYOUT_ITEMHORMEMBER = 31;
+  private static final int LAYOUT_ITEMHOME = 31;
 
-  private static final int LAYOUT_ITEMMEMBER = 32;
+  private static final int LAYOUT_ITEMHORMEMBER = 32;
 
-  private static final int LAYOUT_ITEMMORE = 33;
+  private static final int LAYOUT_ITEMMEMBER = 33;
 
-  private static final int LAYOUT_ITEMMYGROUP = 34;
+  private static final int LAYOUT_ITEMMORE = 34;
 
-  private static final int LAYOUT_ITEMPOINTS = 35;
+  private static final int LAYOUT_ITEMMYGROUP = 35;
 
-  private static final int LAYOUT_ITEMPROFILE = 36;
+  private static final int LAYOUT_ITEMPOINTS = 36;
 
-  private static final int LAYOUT_ITEMRECENTTASK = 37;
+  private static final int LAYOUT_ITEMPROFILE = 37;
 
-  private static final int LAYOUT_ITEMSTUDENTINVITE = 38;
+  private static final int LAYOUT_ITEMRECENTTASK = 38;
 
-  private static final int LAYOUT_ITEMSTUDENTREQUEST = 39;
+  private static final int LAYOUT_ITEMSTUDENTINVITE = 39;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 40;
+  private static final int LAYOUT_ITEMSTUDENTREQUEST = 40;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 41;
+  private static final int LAYOUT_ITEMTASKMEDIA = 41;
 
-  private static final int LAYOUT_LAYOUTGRAND = 42;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 42;
 
-  private static final int LAYOUT_MENU = 43;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 43;
 
-  private static final int LAYOUT_SUCCESSSHEET = 44;
+  private static final int LAYOUT_LAYOUTGRAND = 44;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(44);
+  private static final int LAYOUT_MENU = 45;
+
+  private static final int LAYOUT_SUCCESSSHEET = 46;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(46);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -174,6 +180,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_more, LAYOUT_FRAGMENTMORE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_my_groups, LAYOUT_FRAGMENTMYGROUPS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_my_points, LAYOUT_FRAGMENTMYPOINTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_onboard, LAYOUT_FRAGMENTONBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_points, LAYOUT_FRAGMENTPOINTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
@@ -191,6 +198,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_recent_task, LAYOUT_ITEMRECENTTASK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_student_invite, LAYOUT_ITEMSTUDENTINVITE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_student_request, LAYOUT_ITEMSTUDENTREQUEST);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.item_task_media, LAYOUT_ITEMTASKMEDIA);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.notta.R.layout.layout_grand, LAYOUT_LAYOUTGRAND);
@@ -339,6 +347,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_my_groups is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTMYPOINTS: {
+          if ("layout/fragment_my_points_0".equals(tag)) {
+            return new FragmentMyPointsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_my_points is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTONBOARD: {
           if ("layout/fragment_onboard_0".equals(tag)) {
             return new FragmentOnboardBindingImpl(component, view);
@@ -441,6 +455,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_student_request is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMTASKMEDIA: {
+          if ("layout/item_task_media_0".equals(tag)) {
+            return new ItemTaskMediaBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_task_media is invalid. Received: " + tag);
+        }
         case  LAYOUT_LAYOUTACTIONBARBACK: {
           if ("layout/layout_action_bar_back_0".equals(tag)) {
             return new LayoutActionBarBackBindingImpl(component, view);
@@ -516,44 +536,50 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(30);
+    static final SparseArray<String> sKeys = new SparseArray<String>(36);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
-      sKeys.put(2, "addTaskRequest");
-      sKeys.put(3, "baseViewModel");
-      sKeys.put(4, "groupDetails");
-      sKeys.put(5, "groupDetailsStudentsAdapter");
-      sKeys.put(6, "groupItem");
-      sKeys.put(7, "groupRequest");
-      sKeys.put(8, "groupsAdapter");
-      sKeys.put(9, "homeData");
-      sKeys.put(10, "inviteStudentsAdapter");
-      sKeys.put(11, "menuViewModel");
-      sKeys.put(12, "message");
-      sKeys.put(13, "moreAdapter");
-      sKeys.put(14, "onBoardAdapter");
-      sKeys.put(15, "onBoardViewModels");
-      sKeys.put(16, "passingObject");
-      sKeys.put(17, "pointsAdapter");
-      sKeys.put(18, "pointsData");
-      sKeys.put(19, "profileAdaptersAdapter");
-      sKeys.put(20, "profileItem");
-      sKeys.put(21, "request");
-      sKeys.put(22, "student");
-      sKeys.put(23, "studentMainData");
-      sKeys.put(24, "studentsItem");
-      sKeys.put(25, "studentsRequestsAdapter");
-      sKeys.put(26, "tasksAdapter");
-      sKeys.put(27, "tasksItem");
-      sKeys.put(28, "viewModel");
-      sKeys.put(29, "viewmodel");
+      sKeys.put(2, "addAnswerRequest");
+      sKeys.put(3, "addTaskRequest");
+      sKeys.put(4, "baseViewModel");
+      sKeys.put(5, "groupDetails");
+      sKeys.put(6, "groupDetailsStudentsAdapter");
+      sKeys.put(7, "groupItem");
+      sKeys.put(8, "groupRequest");
+      sKeys.put(9, "groupsAdapter");
+      sKeys.put(10, "homeData");
+      sKeys.put(11, "inviteStudentsAdapter");
+      sKeys.put(12, "menuViewModel");
+      sKeys.put(13, "message");
+      sKeys.put(14, "moreAdapter");
+      sKeys.put(15, "onBoardAdapter");
+      sKeys.put(16, "onBoardViewModels");
+      sKeys.put(17, "passingObject");
+      sKeys.put(18, "pointsAdapter");
+      sKeys.put(19, "pointsData");
+      sKeys.put(20, "profileAdaptersAdapter");
+      sKeys.put(21, "profileItem");
+      sKeys.put(22, "request");
+      sKeys.put(23, "student");
+      sKeys.put(24, "studentMainData");
+      sKeys.put(25, "studentMainPoints");
+      sKeys.put(26, "studentsItem");
+      sKeys.put(27, "studentsRequestsAdapter");
+      sKeys.put(28, "taskDetailsData");
+      sKeys.put(29, "taskFilesItem");
+      sKeys.put(30, "taskMediaAdapter");
+      sKeys.put(31, "tasksAdapter");
+      sKeys.put(32, "tasksItem");
+      sKeys.put(33, "teacherPointsMain");
+      sKeys.put(34, "viewModel");
+      sKeys.put(35, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(44);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(46);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.notta.R.layout.activity_base);
@@ -578,6 +604,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_login_0", te.app.notta.R.layout.fragment_login);
       sKeys.put("layout/fragment_more_0", te.app.notta.R.layout.fragment_more);
       sKeys.put("layout/fragment_my_groups_0", te.app.notta.R.layout.fragment_my_groups);
+      sKeys.put("layout/fragment_my_points_0", te.app.notta.R.layout.fragment_my_points);
       sKeys.put("layout/fragment_onboard_0", te.app.notta.R.layout.fragment_onboard);
       sKeys.put("layout/fragment_points_0", te.app.notta.R.layout.fragment_points);
       sKeys.put("layout/fragment_profile_0", te.app.notta.R.layout.fragment_profile);
@@ -595,6 +622,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_recent_task_0", te.app.notta.R.layout.item_recent_task);
       sKeys.put("layout/item_student_invite_0", te.app.notta.R.layout.item_student_invite);
       sKeys.put("layout/item_student_request_0", te.app.notta.R.layout.item_student_request);
+      sKeys.put("layout/item_task_media_0", te.app.notta.R.layout.item_task_media);
       sKeys.put("layout/layout_action_bar_back_0", te.app.notta.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", te.app.notta.R.layout.layout_action_bar_home);
       sKeys.put("layout/layout_grand_0", te.app.notta.R.layout.layout_grand);

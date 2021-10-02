@@ -15,18 +15,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemProfileBinding;
-import te.app.notta.pages.auth.register.EditProfileFragment;
-import te.app.notta.pages.home.GroupDetailsFragment;
-import te.app.notta.pages.home.PointsFragment;
-import te.app.notta.pages.myGroups.MyGroupsFragment;
 import te.app.notta.pages.settings.models.ProfileItem;
 import te.app.notta.pages.settings.viewModels.ItemProfileViewModel;
-import te.app.notta.pages.teacher.AddTaskFragment;
-import te.app.notta.pages.teacher.StudentRequestsFragment;
-import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 
 public class ProfileAdaptersAdapter extends RecyclerView.Adapter<ProfileAdaptersAdapter.ViewHolder> {
@@ -52,11 +44,7 @@ public class ProfileAdaptersAdapter extends RecyclerView.Adapter<ProfileAdapters
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         ProfileItem item = profileItemList.get(position);
         ItemProfileViewModel itemMenuViewModel = new ItemProfileViewModel(item);
-        itemMenuViewModel.getLiveData().observeForever(o -> {
-//            lastSelected = position;
-                MovementHelper.startActivity(context, item.getFragment(), null, null);
-
-        });
+        itemMenuViewModel.getLiveData().observeForever(o -> MovementHelper.startActivity(context, item.getFragment(), null, null));
         holder.setViewModel(itemMenuViewModel);
     }
 

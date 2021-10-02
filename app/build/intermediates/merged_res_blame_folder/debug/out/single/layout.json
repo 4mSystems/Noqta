@@ -112,6 +112,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_requests.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_task_media.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_task_media.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_points.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_points.xml"
     },
@@ -126,6 +130,10 @@
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_profile.xml",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_points.xml",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_my_points.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_details.xml",

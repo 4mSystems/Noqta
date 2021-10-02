@@ -20,7 +20,9 @@ public class GroupItem {
 
     @SerializedName("id")
     private int id;
-    private boolean isJoinSent;
+    @SerializedName("join_request")
+    private int isJoinSent;
+    private boolean studentTask;
 
     @SerializedName("tasks_count")
     private String tasksCount;
@@ -55,11 +57,19 @@ public class GroupItem {
         return teacher;
     }
 
-    public boolean isJoinSent() {
+    public int isJoinSent() {
         return isJoinSent;
     }
 
-    public void setJoinSent(boolean joinSent) {
+    public void setJoinSent(int joinSent) {
         isJoinSent = joinSent;
+    }
+
+    public boolean isStudentTask() {
+        return studentTask;
+    }
+
+    public void setStudentTask(boolean studentTask) {
+        this.studentTask = studentTask;
     }
 }

@@ -6,6 +6,12 @@
 
     <data>
 
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.notta.utils.Constants" />
+
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel" />
@@ -33,21 +39,28 @@
                 android:id="@+id/tv_profile_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="@string/add_answer"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@id/back"
+                app:layout_constraintTop_toTopOf="@id/back" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
+                android:contentDescription="@string/app_name"
                 android:onClick="@{()->viewmodel.goBack(context)}"
                 android:src="@drawable/ic_back"
+                app:backgroundTint="@color/white"
+                app:fabSize="mini"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +92,7 @@
                     android:layout_height="@dimen/dp20h"
                     android:layout_margin="@dimen/dp10h"
                     android:gravity="center"
-                    android:text="01"
+                    android:text="@{String.valueOf(viewmodel.taskDetailsData.id)}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/black" />
             </com.google.android.material.card.MaterialCardView>
@@ -90,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp8h"
-                android:text="Jun 15"
+                android:text="@{viewmodel.taskDetailsData.createdAt}"
                 android:textColor="@color/medium_color"
                 android:textSize="@dimen/sp10"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +117,7 @@
                 android:layout_marginEnd="@dimen/dp8w"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:text="Take a Picture with the last phyisc lessons in home"
+                android:text="@{viewmodel.taskDetailsData.description}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -125,48 +138,25 @@
                 android:layout_margin="@dimen/dp10h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
+                android:visibility="@{viewmodel.taskMediaAdapter.itemCount>0?View.INVISIBLE:View.GONE}"
+                app:imageFullUrl="@{viewmodel.taskMediaAdapter.itemCount>0?viewmodel.taskMediaAdapter.filesItemList.get(0).file:``}"
                 app:layout_constraintStart_toStartOf="@id/tv_tasks"
                 app:layout_constraintTop_toBottomOf="@id/br4" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_second"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp50h"
-                android:scaleType="centerCrop"
-                android:src="@drawable/splash" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_third"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp50h"
-                android:scaleType="centerCrop"
-                android:src="@drawable/splash" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_fourth"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp50h"
-                android:scaleType="centerCrop"
-                android:src="@drawable/splash" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_fifth"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp50h"
-                android:scaleType="centerCrop"
-                android:src="@drawable/splash" />
-
-            <androidx.constraintlayout.helper.widget.Flow
-                android:id="@+id/flow"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_task_media"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp2h"
-                app:constraint_referenced_ids="ic_second,ic_third,ic_fourth,ic_fifth"
-                app:flow_horizontalGap="4dp"
-                app:flow_horizontalStyle="packed"
-                app:layout_constraintEnd_toEndOf="@id/main_image"
-                app:layout_constraintStart_toStartOf="@id/main_image"
-                app:layout_constraintTop_toBottomOf="@id/main_image" />
+                android:orientation="horizontal"
+                app:adapter="@{viewmodel.taskMediaAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_tasks"
+                app:layout_constraintTop_toBottomOf="@id/main_image"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_task_media" />
 
             <View
                 android:id="@+id/v_line4"
@@ -174,7 +164,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp12h"
                 android:background="@color/line_color"
-                app:layout_constraintTop_toBottomOf="@id/flow" />
+                app:layout_constraintTop_toBottomOf="@id/rc_task_media" />
 
             <te.app.notta.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_answer"
@@ -209,6 +199,7 @@
                     android:layout_height="@dimen/dp90h"
                     android:gravity="top"
                     android:inputType="textMultiLine"
+                    android:text="@={viewmodel.addAnswerRequest.answerText}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
@@ -243,6 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp25h"
+                    android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
                     android:src="@drawable/ic_cloud_upload"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -310,19 +302,34 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_cloud_upload_video" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonNext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
+                android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
+                android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+                android:onClick="@{()-> viewmodel.answerTask()}"
                 android:text="@string/send_answer"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
-                app:backgroundTint="@color/colorAccent"
-                app:cornerRadius="@dimen/dp24h"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/video_container" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+                app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+                app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

@@ -6,14 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.constraintlayout.helper.widget.Flow;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -27,31 +30,22 @@ public abstract class FragmentAddAnswerBinding extends ViewDataBinding {
   public final MaterialCardView MaterialCardView;
 
   @NonNull
+  public final AppCompatButton appCompatButtonNext;
+
+  @NonNull
+  public final FloatingActionButton back;
+
+  @NonNull
   public final AppCompatImageView boardHeader;
 
   @NonNull
   public final Barrier br4;
 
   @NonNull
-  public final Flow flow;
-
-  @NonNull
   public final AppCompatImageView icCloudUpload;
 
   @NonNull
   public final AppCompatImageView icCloudUploadVideo;
-
-  @NonNull
-  public final AppCompatImageView icFifth;
-
-  @NonNull
-  public final AppCompatImageView icFourth;
-
-  @NonNull
-  public final AppCompatImageView icSecond;
-
-  @NonNull
-  public final AppCompatImageView icThird;
 
   @NonNull
   public final ConstraintLayout imagesContainer;
@@ -61,6 +55,12 @@ public abstract class FragmentAddAnswerBinding extends ViewDataBinding {
 
   @NonNull
   public final AppCompatImageView mainImage;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcTaskMedia;
 
   @NonNull
   public final CustomTextViewMedium tvAnswer;
@@ -93,28 +93,27 @@ public abstract class FragmentAddAnswerBinding extends ViewDataBinding {
   protected AddAnswerViewModel mViewmodel;
 
   protected FragmentAddAnswerBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialCardView MaterialCardView, AppCompatImageView boardHeader, Barrier br4, Flow flow,
+      MaterialCardView MaterialCardView, AppCompatButton appCompatButtonNext,
+      FloatingActionButton back, AppCompatImageView boardHeader, Barrier br4,
       AppCompatImageView icCloudUpload, AppCompatImageView icCloudUploadVideo,
-      AppCompatImageView icFifth, AppCompatImageView icFourth, AppCompatImageView icSecond,
-      AppCompatImageView icThird, ConstraintLayout imagesContainer, TextInputLayout inputAnswer,
-      AppCompatImageView mainImage, CustomTextViewMedium tvAnswer, CustomTextViewRegular tvDate,
-      CustomTextViewMedium tvDetails, CustomTextViewMedium tvImages,
+      ConstraintLayout imagesContainer, TextInputLayout inputAnswer, AppCompatImageView mainImage,
+      CircularProgressIndicator progress, RecyclerView rcTaskMedia, CustomTextViewMedium tvAnswer,
+      CustomTextViewRegular tvDate, CustomTextViewMedium tvDetails, CustomTextViewMedium tvImages,
       CustomTextViewMedium tvProfileTitle, CustomTextViewMedium tvTasks,
       CustomTextViewMedium tvVideo, View vLine4, ConstraintLayout videoContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.MaterialCardView = MaterialCardView;
+    this.appCompatButtonNext = appCompatButtonNext;
+    this.back = back;
     this.boardHeader = boardHeader;
     this.br4 = br4;
-    this.flow = flow;
     this.icCloudUpload = icCloudUpload;
     this.icCloudUploadVideo = icCloudUploadVideo;
-    this.icFifth = icFifth;
-    this.icFourth = icFourth;
-    this.icSecond = icSecond;
-    this.icThird = icThird;
     this.imagesContainer = imagesContainer;
     this.inputAnswer = inputAnswer;
     this.mainImage = mainImage;
+    this.progress = progress;
+    this.rcTaskMedia = rcTaskMedia;
     this.tvAnswer = tvAnswer;
     this.tvDate = tvDate;
     this.tvDetails = tvDetails;

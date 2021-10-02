@@ -29,11 +29,11 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback55;
+    private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -52,7 +52,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             // viewmodel.request
             te.app.notta.pages.teacher.models.AddGiftRequest viewmodelRequest = null;
             // viewmodel
-            te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+            te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
             boolean viewmodelRequestJavaLangObjectNull = false;
 
@@ -87,7 +87,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             // viewmodel.request
             te.app.notta.pages.teacher.models.AddGiftRequest viewmodelRequest = null;
             // viewmodel
-            te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+            te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
             // viewmodel.request.description
             java.lang.String viewmodelRequestDescription = null;
             // viewmodel.request != null
@@ -126,7 +126,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             // viewmodel.request.image
             java.lang.String viewmodelRequestImage = null;
             // viewmodel
-            te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+            te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
             boolean viewmodelRequestJavaLangObjectNull = false;
 
@@ -163,7 +163,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             // viewmodel.request.points
             java.lang.String viewmodelRequestPoints = null;
             // viewmodel
-            te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+            te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
             boolean viewmodelRequestJavaLangObjectNull = false;
 
@@ -224,9 +224,9 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback54 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback59 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback60 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback61 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -252,7 +252,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((te.app.notta.pages.home.viewModels.PointsViewModel) variable);
+            setViewmodel((te.app.notta.pages.points.viewModels.PointsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -260,7 +260,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.PointsViewModel Viewmodel) {
+    public void setViewmodel(@Nullable te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel) {
         updateRegistration(4, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -282,7 +282,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             case 3 :
                 return onChangeViewmodelRequestNameError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 4 :
-                return onChangeViewmodel((te.app.notta.pages.home.viewModels.PointsViewModel) object, fieldId);
+                return onChangeViewmodel((te.app.notta.pages.points.viewModels.PointsViewModel) object, fieldId);
         }
         return false;
     }
@@ -322,7 +322,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.PointsViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
@@ -374,7 +374,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelRequestPointsErrorGet = null;
-        te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
         if ((dirtyFlags & 0xffL) != 0) {
@@ -557,11 +557,11 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback55);
+            this.appCompatButtonNext.setOnClickListener(mCallback61);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback53);
+            this.back.setOnClickListener(mCallback59);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
-            this.mboundView7.setOnClickListener(mCallback54);
+            this.mboundView7.setOnClickListener(mCallback60);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xb0L) != 0) {
@@ -601,8 +601,8 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     }
     // Listener Stub Implementations
     public static class OnTextChangedImpl implements androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged{
-        private te.app.notta.pages.home.viewModels.PointsViewModel value;
-        public OnTextChangedImpl setValue(te.app.notta.pages.home.viewModels.PointsViewModel value) {
+        private te.app.notta.pages.points.viewModels.PointsViewModel value;
+        public OnTextChangedImpl setValue(te.app.notta.pages.points.viewModels.PointsViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -614,12 +614,12 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
                 // viewmodel
-                te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+                te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
 
 
@@ -627,7 +627,8 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createGift();
+
+                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }
@@ -636,7 +637,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
                 // viewmodel
-                te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+                te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
 
 
@@ -650,12 +651,12 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 }
                 break;
             }
-            case 1: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
                 // viewmodel
-                te.app.notta.pages.home.viewModels.PointsViewModel viewmodel = mViewmodel;
+                te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
 
 
@@ -663,8 +664,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-                    viewmodel.goBack(getRoot().getContext());
+                    viewmodel.createGift();
                 }
                 break;
             }

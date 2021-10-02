@@ -14,28 +14,28 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 20);
-        sViewsWithIds.put(R.id.tv_location, 21);
-        sViewsWithIds.put(R.id.flow, 22);
-        sViewsWithIds.put(R.id.br3, 23);
-        sViewsWithIds.put(R.id.v_line, 24);
-        sViewsWithIds.put(R.id.tv_group_desc, 25);
-        sViewsWithIds.put(R.id.v_line1, 26);
-        sViewsWithIds.put(R.id.tv_info, 27);
-        sViewsWithIds.put(R.id.flow1, 28);
-        sViewsWithIds.put(R.id.v_line2, 29);
-        sViewsWithIds.put(R.id.tv_members, 30);
+        sViewsWithIds.put(R.id.board_header, 21);
+        sViewsWithIds.put(R.id.tv_location, 22);
+        sViewsWithIds.put(R.id.flow, 23);
+        sViewsWithIds.put(R.id.br3, 24);
+        sViewsWithIds.put(R.id.v_line, 25);
+        sViewsWithIds.put(R.id.tv_group_desc, 26);
+        sViewsWithIds.put(R.id.v_line1, 27);
+        sViewsWithIds.put(R.id.tv_info, 28);
+        sViewsWithIds.put(R.id.flow1, 29);
+        sViewsWithIds.put(R.id.v_line2, 30);
+        sViewsWithIds.put(R.id.tv_members, 31);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView18;
+    private final androidx.recyclerview.widget.RecyclerView mboundView19;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView19;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView20;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
     private final android.view.View.OnClickListener mCallback50;
     @Nullable
@@ -45,48 +45,54 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
     @Nullable
     private final android.view.View.OnClickListener mCallback49;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback52;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback54;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentGroupDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 31, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 32, sIncludes, sViewsWithIds));
     }
     private FragmentGroupDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[20]
-            , (androidx.constraintlayout.widget.Barrier) bindings[23]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[21]
+            , (androidx.constraintlayout.widget.Barrier) bindings[24]
             , (com.google.android.material.button.MaterialButton) bindings[10]
             , (com.google.android.material.button.MaterialButton) bindings[12]
             , (com.google.android.material.button.MaterialButton) bindings[13]
+            , (com.google.android.material.button.MaterialButton) bindings[14]
             , (com.google.android.material.button.MaterialButton) bindings[11]
             , (com.google.android.material.button.MaterialButton) bindings[9]
             , (com.google.android.material.button.MaterialButton) bindings[6]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[22]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[28]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[23]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[29]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[15]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[16]
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[7]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[25]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[26]
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[8]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[27]
-            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[21]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[30]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[28]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[22]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[31]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[14]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[17]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[15]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[18]
             , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[4]
             , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[5]
-            , (android.view.View) bindings[24]
-            , (android.view.View) bindings[26]
-            , (android.view.View) bindings[29]
-            , (android.view.View) bindings[16]
+            , (android.view.View) bindings[25]
+            , (android.view.View) bindings[27]
+            , (android.view.View) bindings[30]
+            , (android.view.View) bindings[17]
             );
         this.back.setTag(null);
         this.btnGroups.setTag(null);
         this.btnJoin.setTag(null);
+        this.btnLeave.setTag(null);
         this.btnRemove.setTag(null);
         this.btnRequests.setTag(null);
         this.btnStudents.setTag(null);
@@ -94,10 +100,10 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         this.icTeacher.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView18 = (androidx.recyclerview.widget.RecyclerView) bindings[18];
-        this.mboundView18.setTag(null);
-        this.mboundView19 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[19];
+        this.mboundView19 = (androidx.recyclerview.widget.RecyclerView) bindings[19];
         this.mboundView19.setTag(null);
+        this.mboundView20 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[20];
+        this.mboundView20.setTag(null);
         this.rcMembers.setTag(null);
         this.tvDate.setTag(null);
         this.tvGroupDescValue.setTag(null);
@@ -109,12 +115,14 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         this.vLine3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback48 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback51 = new te.app.notta.generated.callback.OnClickListener(this, 6);
-        mCallback49 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback46 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback55 = new te.app.notta.generated.callback.OnClickListener(this, 8);
+        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback48 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback49 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback52 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback54 = new te.app.notta.generated.callback.OnClickListener(this, 7);
+        mCallback53 = new te.app.notta.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
@@ -212,8 +220,11 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         te.app.notta.PassingObject viewmodelPassingObject = null;
         java.lang.String viewmodelGroupDetailsDescription = null;
         int viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE = 0;
+        boolean viewmodelGroupDetailsMemberInt0 = false;
+        boolean viewmodelGroupDetailsJoinSentInt1 = false;
         te.app.notta.pages.home.models.details.GroupDetails viewmodelGroupDetails = null;
         int viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1ViewVISIBLEViewGONE = 0;
+        android.graphics.drawable.Drawable viewmodelGroupDetailsJoinSentInt1BtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus = null;
         java.lang.String viewmodelGroupDetailsTeacherSpecialistName = null;
         java.lang.String viewmodelGroupDetailsStudentsCountConcatBtnStudentsAndroidStringStudents = null;
         java.lang.String viewmodelPassingObjectObject = null;
@@ -222,6 +233,8 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         int viewmodelGroupDetailsMember = 0;
         te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter viewmodelGroupDetailsStudentsAdapter = null;
         java.lang.String viewmodelGroupDetailsTeacherName = null;
+        boolean viewmodelGroupDetailsTeacherIdViewmodelUserDataId = false;
+        int viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelGroupDetailsTasksCountConcatBtnGroupsAndroidStringTasks = null;
         java.lang.String viewmodelGroupDetailsTeacherImage = null;
         boolean viewmodelGroupDetailsMemberInt1 = false;
@@ -230,8 +243,10 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         te.app.notta.pages.auth.models.UserData viewmodelGroupDetailsTeacher = null;
         java.lang.String viewmodelGroupDetailsRequestsCount = null;
         int viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE = 0;
+        int viewmodelGroupDetailsJoinSent = 0;
         int viewmodelGroupDetailsMemberInt1ViewVISIBLEViewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE = 0;
-        boolean viewmodelGroupDetailsTeacherIdViewmodelUserDataId = false;
+        boolean viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalse = false;
+        boolean ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1 = false;
         te.app.notta.pages.auth.models.UserData viewmodelUserData = null;
         int viewmodelUserDataId = 0;
         boolean viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1 = false;
@@ -285,6 +300,8 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
                         viewmodelGroupDetailsTeacher = viewmodelGroupDetails.getTeacher();
                         // read viewmodel.groupDetails.requestsCount
                         viewmodelGroupDetailsRequestsCount = viewmodelGroupDetails.getRequestsCount();
+                        // read viewmodel.groupDetails.joinSent
+                        viewmodelGroupDetailsJoinSent = viewmodelGroupDetails.isJoinSent();
                     }
                     if (viewmodelUserData != null) {
                         // read viewmodel.userData.id
@@ -298,12 +315,22 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
                     }
                     // read viewmodel.groupDetails.member == 1
                     viewmodelGroupDetailsMemberInt1 = (viewmodelGroupDetailsMember) == (1);
+                    // read viewmodel.groupDetails.joinSent == 1
+                    viewmodelGroupDetailsJoinSentInt1 = (viewmodelGroupDetailsJoinSent) == (1);
                 if((dirtyFlags & 0x25L) != 0) {
                     if(viewmodelGroupDetailsMemberInt1) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x20000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x10000L;
+                    }
+                }
+                if((dirtyFlags & 0x25L) != 0) {
+                    if(viewmodelGroupDetailsJoinSentInt1) {
+                            dirtyFlags |= 0x800L;
+                    }
+                    else {
+                            dirtyFlags |= 0x400L;
                     }
                 }
                     if (viewmodelGroupDetailsStudentsCount != null) {
@@ -326,10 +353,22 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
                     }
 
 
+                    // read viewmodel.groupDetails.joinSent == 1 ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+                    viewmodelGroupDetailsJoinSentInt1BtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus = ((viewmodelGroupDetailsJoinSentInt1) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnJoin.getContext(), R.drawable.ic_request_waiting)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnJoin.getContext(), R.drawable.ic_icon_awesome_user_plus)));
+                    // read viewmodel.groupDetails.teacher.id != viewmodel.userData.id
+                    viewmodelGroupDetailsTeacherIdViewmodelUserDataId = (viewmodelGroupDetailsTeacherId) != (viewmodelUserDataId);
                     // read viewmodel.groupDetails.teacher.id == viewmodel.userData.id
-                    viewmodelGroupDetailsTeacherIdViewmodelUserDataId = (viewmodelGroupDetailsTeacherId) == (viewmodelUserDataId);
-                if((dirtyFlags & 0x1000L) != 0) {
+                    ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1 = (viewmodelGroupDetailsTeacherId) == (viewmodelUserDataId);
+                if((dirtyFlags & 0x25L) != 0) {
                     if(viewmodelGroupDetailsTeacherIdViewmodelUserDataId) {
+                            dirtyFlags |= 0x80000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40000L;
+                    }
+                }
+                if((dirtyFlags & 0x10000L) != 0) {
+                    if(ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1) {
                             dirtyFlags |= 0x80L;
                     }
                     else {
@@ -337,19 +376,19 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
                     }
                 }
                 if((dirtyFlags & 0x25L) != 0) {
-                    if(viewmodelGroupDetailsTeacherIdViewmodelUserDataId) {
-                            dirtyFlags |= 0x800L;
+                    if(ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1) {
                             dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x200000L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
                             dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x100000L;
                     }
                 }
 
 
                     // read viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.VISIBLE : View.GONE
-                    viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE = ((viewmodelGroupDetailsTeacherIdViewmodelUserDataId) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE = ((ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0x29L) != 0) {
 
@@ -361,15 +400,20 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         }
         // batch finished
 
-        if ((dirtyFlags & 0x1000L) != 0) {
+        if ((dirtyFlags & 0x10000L) != 0) {
 
                 // read viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
-                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE = ((viewmodelGroupDetailsTeacherIdViewmodelUserDataId) ? (android.view.View.GONE) : (android.view.View.INVISIBLE));
+                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE = ((ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1) ? (android.view.View.GONE) : (android.view.View.INVISIBLE));
+        }
+        if ((dirtyFlags & 0x80000L) != 0) {
+
+                // read viewmodel.groupDetails.member == 0
+                viewmodelGroupDetailsMemberInt0 = (viewmodelGroupDetailsMember) == (0);
         }
         if ((dirtyFlags & 0x25L) != 0) {
 
                 // read viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1
-                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1 = ((viewmodelGroupDetailsTeacherIdViewmodelUserDataId) ? (true) : (viewmodelGroupDetailsMemberInt1));
+                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1 = ((ViewmodelGroupDetailsTeacherIdViewmodelUserDataId1) ? (true) : (viewmodelGroupDetailsMemberInt1));
             if((dirtyFlags & 0x25L) != 0) {
                 if(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1) {
                         dirtyFlags |= 0x200L;
@@ -388,30 +432,48 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
                 // read viewmodel.groupDetails.member == 1 ? View.VISIBLE : viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
                 viewmodelGroupDetailsMemberInt1ViewVISIBLEViewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE = ((viewmodelGroupDetailsMemberInt1) ? (android.view.View.VISIBLE) : (viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE));
+                // read viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false
+                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalse = ((viewmodelGroupDetailsTeacherIdViewmodelUserDataId) ? (viewmodelGroupDetailsMemberInt0) : (false));
+            if((dirtyFlags & 0x25L) != 0) {
+                if(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalse) {
+                        dirtyFlags |= 0x2000L;
+                }
+                else {
+                        dirtyFlags |= 0x1000L;
+                }
+            }
+
+
+                // read viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false ? View.VISIBLE : View.GONE
+                viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalseViewVISIBLEViewGONE = ((viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback46);
-            this.btnRemove.setOnClickListener(mCallback49);
-            this.btnRequests.setOnClickListener(mCallback48);
-            this.btnStudents.setOnClickListener(mCallback47);
-            this.mboundView19.setOnClickListener(mCallback51);
-            this.tvShowAll.setOnClickListener(mCallback50);
+            this.back.setOnClickListener(mCallback48);
+            this.btnJoin.setOnClickListener(mCallback51);
+            this.btnLeave.setOnClickListener(mCallback52);
+            this.btnRemove.setOnClickListener(mCallback53);
+            this.btnRequests.setOnClickListener(mCallback50);
+            this.btnStudents.setOnClickListener(mCallback49);
+            this.mboundView20.setOnClickListener(mCallback55);
+            this.tvShowAll.setOnClickListener(mCallback54);
         }
         if ((dirtyFlags & 0x25L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnGroups, viewmodelGroupDetailsTasksCountConcatBtnGroupsAndroidStringTasks);
-            this.btnJoin.setVisibility(viewmodelGroupDetailsMemberInt1ViewVISIBLEViewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE);
+            this.btnJoin.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewmodelGroupDetailsMemberInt0BooleanFalseViewVISIBLEViewGONE);
+            this.btnJoin.setIcon(viewmodelGroupDetailsJoinSentInt1BtnJoinAndroidDrawableIcRequestWaitingBtnJoinAndroidDrawableIcIconAwesomeUserPlus);
+            this.btnLeave.setVisibility(viewmodelGroupDetailsMemberInt1ViewVISIBLEViewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewGONEViewINVISIBLE);
             this.btnRemove.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnRequests, viewmodelGroupDetailsRequestsCountConcatBtnRequestsAndroidStringRequests);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnStudents, viewmodelGroupDetailsStudentsCountConcatBtnStudentsAndroidStringStudents);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnTechType, viewmodelGroupDetailsTeacherSpecialistName);
             te.app.notta.base.ApplicationBinding.loadFullImage(this.icTeacher, viewmodelGroupDetailsTeacherImage);
-            this.mboundView18.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1ViewVISIBLEViewGONE);
-            this.mboundView19.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE);
+            this.mboundView19.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1ViewVISIBLEViewGONE);
+            this.mboundView20.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDate, viewmodelGroupDetailsCreatedAt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupDescValue, viewmodelGroupDetailsDescription);
             this.tvTasks.setVisibility(viewmodelGroupDetailsTeacherIdViewmodelUserDataIdBooleanTrueViewmodelGroupDetailsMemberInt1ViewVISIBLEViewGONE);
@@ -422,7 +484,7 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
 
-            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView18, viewmodelTasksAdapter, "1", "1");
+            te.app.notta.base.ApplicationBinding.getItemsV2Binding(this.mboundView19, viewmodelTasksAdapter, "1", "1");
         }
         if ((dirtyFlags & 0x29L) != 0) {
             // api target 1
@@ -439,6 +501,79 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 8: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.ADD_TASK);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.STUDENT_REQUESTS);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.studentJoinRequest();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -473,11 +608,11 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
 
 
-                    viewmodel.action(te.app.notta.utils.Constants.STUDENT);
+                    viewmodel.action(te.app.notta.utils.Constants.DIALOG_SHOW_LEAVE);
                 }
                 break;
             }
-            case 3: {
+            case 7: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -492,7 +627,7 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
 
 
-                    viewmodel.action(te.app.notta.utils.Constants.STUDENT_REQUESTS);
+                    viewmodel.action(te.app.notta.utils.Constants.STUDENT);
                 }
                 break;
             }
@@ -511,44 +646,7 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
 
 
-                    viewmodel.action(te.app.notta.utils.Constants.ADD_TASK);
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
                     viewmodel.action(te.app.notta.utils.Constants.DIALOG_SHOW);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }
@@ -567,12 +665,18 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         flag 7 (0x8L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
         flag 8 (0x9L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1 ? View.VISIBLE : View.GONE
         flag 9 (0xaL): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1 ? View.VISIBLE : View.GONE
-        flag 10 (0xbL): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.VISIBLE : View.GONE
-        flag 11 (0xcL): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.VISIBLE : View.GONE
-        flag 12 (0xdL): viewmodel.groupDetails.member == 1 ? View.VISIBLE : viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
-        flag 13 (0xeL): viewmodel.groupDetails.member == 1 ? View.VISIBLE : viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
-        flag 14 (0xfL): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1
-        flag 15 (0x10L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1
+        flag 10 (0xbL): viewmodel.groupDetails.joinSent == 1 ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+        flag 11 (0xcL): viewmodel.groupDetails.joinSent == 1 ? @android:drawable/ic_request_waiting : @android:drawable/ic_icon_awesome_user_plus
+        flag 12 (0xdL): viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.VISIBLE : View.GONE
+        flag 16 (0x11L): viewmodel.groupDetails.member == 1 ? View.VISIBLE : viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
+        flag 17 (0x12L): viewmodel.groupDetails.member == 1 ? View.VISIBLE : viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? View.GONE : View.INVISIBLE
+        flag 18 (0x13L): viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false
+        flag 19 (0x14L): viewmodel.groupDetails.teacher.id != viewmodel.userData.id ? viewmodel.groupDetails.member == 0 : false
+        flag 20 (0x15L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1
+        flag 21 (0x16L): viewmodel.groupDetails.teacher.id == viewmodel.userData.id ? true : viewmodel.groupDetails.member == 1
     flag mapping end*/
     //end
 }

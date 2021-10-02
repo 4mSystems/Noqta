@@ -21,7 +21,7 @@ public class ItemMoreBindingImpl extends ItemMoreBinding implements te.app.notta
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemMoreBindingImpl extends ItemMoreBinding implements te.app.notta
         this.tvSettingItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback31 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -148,7 +148,7 @@ public class ItemMoreBindingImpl extends ItemMoreBinding implements te.app.notta
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback30);
+            this.mboundView0.setOnClickListener(mCallback31);
         }
     }
     // Listener Stub Implementations

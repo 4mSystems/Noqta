@@ -171,4 +171,10 @@
     <string name="share_app">Share App</string>
     <string name="edit_profile_title">Edit profile</string>
     <string name="Kuwait">الكويت</string>
+    <string name="answer_task">Answer Task</string>
+    <string name="my_points_question">Are you sure want to Exchange ?</string>
+    <string name="my_points_question_desc">you will exchange the points , it will be moved to the points in your Store</string>
+    <string name="leave_group_successfully">Are you sure want to leav Group ?</string>
+    <string name="leave_group_body_successfully">You will leave Group and all your points that you gain from Tasks Will Deleted</string>
+    <string name="enough_points_warning">Sorry, you don\'t have enough points</string>
 </resources>

@@ -14,7 +14,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.PointsViewModel" />
+            type="te.app.notta.pages.points.viewModels.PointsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView

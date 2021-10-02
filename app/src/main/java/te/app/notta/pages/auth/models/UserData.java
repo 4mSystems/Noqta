@@ -51,6 +51,10 @@ public class UserData {
         return points;
     }
 
+    public void setPoints(String points) {
+        this.points = points;
+    }
+
     public String getToken() {
         return token;
     }

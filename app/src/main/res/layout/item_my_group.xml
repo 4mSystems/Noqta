@@ -16,9 +16,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="2dp"
-        android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,14 +136,14 @@
                 android:id="@+id/btn_join"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.itemAction(Constants.JOIN_REQUEST)}"
                 android:text="@string/join"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp8"
-                android:onClick="@{()->viewModel.itemAction(Constants.JOIN_REQUEST)}"
                 android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id?View.VISIBLE:View.GONE}"
                 app:backgroundTint="@color/colorPrimaryDark"
-                app:icon="@{viewModel.groupItem.joinSent?@drawable/ic_request_waiting:@drawable/ic_icon_awesome_user_plus}"
+                app:icon="@{viewModel.groupItem.joinSent==1?@drawable/ic_request_waiting:@drawable/ic_icon_awesome_user_plus}"
                 app:iconGravity="textTop" />
 
             <com.google.android.material.button.MaterialButton

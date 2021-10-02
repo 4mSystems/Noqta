@@ -16,7 +16,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
-import te.app.notta.pages.home.viewModels.ItemPointsViewModel;
+import te.app.notta.pages.points.viewModels.ItemPointsViewModel;
 
 public abstract class ItemPointsBinding extends ViewDataBinding {
   @NonNull

@@ -304,6 +304,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_close.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_my_points.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_my_points.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_forget.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_forget.xml"
     },
@@ -606,6 +610,10 @@
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_whats.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/whats.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_task_media.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_task_media.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_user.xml.flat",

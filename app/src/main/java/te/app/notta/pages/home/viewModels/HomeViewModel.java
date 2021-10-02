@@ -44,6 +44,11 @@ public class HomeViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getHome(page, showProgress, searchText));
     }
 
+    public void studentTasks(int page, boolean showProgress) {
+        getGroupsAdapter().studentTask = true; // for just enable answer task btn
+        compositeDisposable.add(repository.studentTasks(page, showProgress));
+    }
+
     public void studentJoinRequest(int groupId) {
         compositeDisposable.add(repository.studentJoinRequest(groupId));
     }

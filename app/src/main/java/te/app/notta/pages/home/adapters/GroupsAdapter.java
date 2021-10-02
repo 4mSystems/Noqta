@@ -30,6 +30,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
     List<GroupItem> groupItemList;
     Context context;
     public int lastSelected = -1;
+    public boolean studentTask = false;
     public MutableLiveData<Integer> liveData = new MutableLiveData<>();
 
     public GroupsAdapter() {
@@ -54,6 +55,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         GroupItem item = groupItemList.get(position);
+        item.setStudentTask(studentTask);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
             lastSelected = position;
@@ -82,7 +84,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.ViewHolder
     }
 
     public void updateItemJoinRequest() {
-        getGroupItemList().get(lastSelected).setJoinSent(!getGroupItemList().get(lastSelected).isJoinSent());
+        getGroupItemList().get(lastSelected).setJoinSent(1);
         notifyItemChanged(lastSelected);
     }
 

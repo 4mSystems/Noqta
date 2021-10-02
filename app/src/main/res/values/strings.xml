@@ -103,7 +103,7 @@
     <string name="add_answer">Answer Task</string>
     <string name="task_answer"><font fgcolor='#FBB32A'>Task </font>Answer</string>
     <string name="task_answer_hint">Text Answer</string>
-    <string name="upload_images"><font fgcolor='#FBB32A'>Upload Images</font></string>
+    <string name="upload_images"><font fgcolor='#FBB32A'>Upload </font> Images</string>
     <string name="upload_images_hint">Please Upload answer images that the task required and shown by the teacher</string>
     <string name="upload_video"><font fgcolor='#FBB32A'>Upload </font>Video</string>
     <string name="upload_video_hint">Please Upload answer video that the task required and shown by the teacher</string>
@@ -169,5 +169,11 @@
     <string name="share_app">Share App</string>
     <string name="edit_profile_title">Edit profile</string>
     <string name="Kuwait">Kuwait</string>
+    <string name="answer_task">Answer Task</string>
+    <string name="my_points_question">Are you sure want to Exchange ?</string>
+    <string name="my_points_question_desc">you will exchange the points , it will be moved to the points in your Store</string>
+    <string name="leave_group_successfully">Are you sure want to leave Group ?</string>
+    <string name="leave_group_body_successfully">You will leave Group and all your points that you gain from Tasks Will Deleted</string>
+    <string name="enough_points_warning">Sorry, you don\'t have enough points</string>
 
 </resources>

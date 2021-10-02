@@ -40,6 +40,9 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
   public final MaterialButton btnJoin;
 
   @NonNull
+  public final MaterialButton btnLeave;
+
+  @NonNull
   public final MaterialButton btnRemove;
 
   @NonNull
@@ -113,11 +116,12 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
 
   protected FragmentGroupDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton back, AppCompatImageView boardHeader, Barrier br3,
-      MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnRemove,
-      MaterialButton btnRequests, MaterialButton btnStudents, MaterialButton btnTechType, Flow flow,
-      Flow flow1, RoundedImageView icTeacher, RecyclerView rcMembers, CustomTextViewRegular tvDate,
-      CustomTextViewMedium tvGroupDesc, CustomTextViewRegular tvGroupDescValue,
-      CustomTextViewMedium tvInfo, CustomTextViewRegular tvLocation, CustomTextViewMedium tvMembers,
+      MaterialButton btnGroups, MaterialButton btnJoin, MaterialButton btnLeave,
+      MaterialButton btnRemove, MaterialButton btnRequests, MaterialButton btnStudents,
+      MaterialButton btnTechType, Flow flow, Flow flow1, RoundedImageView icTeacher,
+      RecyclerView rcMembers, CustomTextViewRegular tvDate, CustomTextViewMedium tvGroupDesc,
+      CustomTextViewRegular tvGroupDescValue, CustomTextViewMedium tvInfo,
+      CustomTextViewRegular tvLocation, CustomTextViewMedium tvMembers,
       CustomTextViewMedium tvProfileTitle, CustomTextViewMedium tvShowAll,
       CustomTextViewMedium tvTasks, CustomTextViewMedium tvTeacherName,
       CustomTextViewRegular tvUserWork, View vLine, View vLine1, View vLine2, View vLine3) {
@@ -127,6 +131,7 @@ public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
     this.br3 = br3;
     this.btnGroups = btnGroups;
     this.btnJoin = btnJoin;
+    this.btnLeave = btnLeave;
     this.btnRemove = btnRemove;
     this.btnRequests = btnRequests;
     this.btnStudents = btnStudents;

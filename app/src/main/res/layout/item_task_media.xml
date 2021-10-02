@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="te.app.notta.pages.addAnswer.viewModels.ItemTaskMediaViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_user"
+        android:layout_width="@dimen/dp70w"
+        android:layout_height="@dimen/dp50h"
+        android:layout_marginEnd="@dimen/dp2h"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash"
+        app:imageFullUrl="@{viewModel.taskFilesItem.file}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</layout>

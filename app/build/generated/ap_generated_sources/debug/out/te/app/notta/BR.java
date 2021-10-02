@@ -5,59 +5,71 @@ public class BR {
 
   public static final int aboutData = 1;
 
-  public static final int addTaskRequest = 2;
+  public static final int addAnswerRequest = 2;
 
-  public static final int baseViewModel = 3;
+  public static final int addTaskRequest = 3;
 
-  public static final int groupDetails = 4;
+  public static final int baseViewModel = 4;
 
-  public static final int groupDetailsStudentsAdapter = 5;
+  public static final int groupDetails = 5;
 
-  public static final int groupItem = 6;
+  public static final int groupDetailsStudentsAdapter = 6;
 
-  public static final int groupRequest = 7;
+  public static final int groupItem = 7;
 
-  public static final int groupsAdapter = 8;
+  public static final int groupRequest = 8;
 
-  public static final int homeData = 9;
+  public static final int groupsAdapter = 9;
 
-  public static final int inviteStudentsAdapter = 10;
+  public static final int homeData = 10;
 
-  public static final int menuViewModel = 11;
+  public static final int inviteStudentsAdapter = 11;
 
-  public static final int message = 12;
+  public static final int menuViewModel = 12;
 
-  public static final int moreAdapter = 13;
+  public static final int message = 13;
 
-  public static final int onBoardAdapter = 14;
+  public static final int moreAdapter = 14;
 
-  public static final int onBoardViewModels = 15;
+  public static final int onBoardAdapter = 15;
 
-  public static final int passingObject = 16;
+  public static final int onBoardViewModels = 16;
 
-  public static final int pointsAdapter = 17;
+  public static final int passingObject = 17;
 
-  public static final int pointsData = 18;
+  public static final int pointsAdapter = 18;
 
-  public static final int profileAdaptersAdapter = 19;
+  public static final int pointsData = 19;
 
-  public static final int profileItem = 20;
+  public static final int profileAdaptersAdapter = 20;
 
-  public static final int request = 21;
+  public static final int profileItem = 21;
 
-  public static final int student = 22;
+  public static final int request = 22;
 
-  public static final int studentMainData = 23;
+  public static final int student = 23;
 
-  public static final int studentsItem = 24;
+  public static final int studentMainData = 24;
 
-  public static final int studentsRequestsAdapter = 25;
+  public static final int studentMainPoints = 25;
 
-  public static final int tasksAdapter = 26;
+  public static final int studentsItem = 26;
 
-  public static final int tasksItem = 27;
+  public static final int studentsRequestsAdapter = 27;
 
-  public static final int viewModel = 28;
+  public static final int taskDetailsData = 28;
 
-  public static final int viewmodel = 29;
+  public static final int taskFilesItem = 29;
+
+  public static final int taskMediaAdapter = 30;
+
+  public static final int tasksAdapter = 31;
+
+  public static final int tasksItem = 32;
+
+  public static final int teacherPointsMain = 33;
+
+  public static final int viewModel = 34;
+
+  public static final int viewmodel = 35;
 }

@@ -15,6 +15,9 @@ public class TasksItem {
 
     @SerializedName("id")
     private int id;
+    @SerializedName("answered")
+    private int answered;
+
     private int tech_id;
 
     public String getGroupId() {
@@ -39,5 +42,9 @@ public class TasksItem {
 
     public void setTech_id(int tech_id) {
         this.tech_id = tech_id;
+    }
+
+    public int getAnswered() {
+        return answered;
     }
 }

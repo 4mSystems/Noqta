@@ -17,7 +17,7 @@ import te.app.notta.customViews.views.NavigationDrawerView;
 import te.app.notta.databinding.ActivityMainBinding;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.home.HomeFragment;
-import te.app.notta.pages.home.PointsFragment;
+import te.app.notta.pages.points.PointsFragment;
 import te.app.notta.pages.home.TasksFragment;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.pages.settings.MoreFragment;

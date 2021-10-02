@@ -21,7 +21,7 @@ import te.app.notta.base.MyApplication;
 import te.app.notta.connection.FileObject;
 import te.app.notta.databinding.FragmentAddGiftBinding;
 import te.app.notta.model.base.Mutable;
-import te.app.notta.pages.home.viewModels.PointsViewModel;
+import te.app.notta.pages.points.viewModels.PointsViewModel;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.LauncherHelper;
 import te.app.notta.utils.helper.MovementHelper;

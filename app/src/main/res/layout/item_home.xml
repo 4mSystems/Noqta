@@ -16,9 +16,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
         app:cardCornerRadius="@dimen/dp8h"
         app:cardElevation="2dp"
-        android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,14 +136,14 @@
                 android:id="@+id/btn_join"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->viewModel.itemAction(Constants.JOIN_REQUEST)}"
                 android:text="@string/join"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp8"
-                android:onClick="@{()->viewModel.itemAction(Constants.JOIN_REQUEST)}"
-                android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id?View.VISIBLE:View.GONE}"
+                android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id &amp;&amp;viewModel.groupItem.studentTask==false?View.VISIBLE:View.GONE}"
                 app:backgroundTint="@color/colorPrimaryDark"
-                app:icon="@{viewModel.groupItem.joinSent?@drawable/ic_request_waiting:@drawable/ic_icon_awesome_user_plus}"
+                app:icon="@{viewModel.groupItem.joinSent==1?@drawable/ic_request_waiting:@drawable/ic_icon_awesome_user_plus}"
                 app:iconGravity="textTop" />
 
             <com.google.android.material.button.MaterialButton
@@ -160,11 +160,25 @@
                 app:icon="@drawable/ic_add_task"
                 app:iconGravity="textTop" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/answer_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewModel.itemAction(Constants.GROUP_DETAILS)}"
+                android:text="@string/answer_task"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp8"
+                android:visibility="@{viewModel.groupItem.studentTask==true?View.VISIBLE:View.GONE,default=gone}"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:icon="@drawable/ic_icon_awesome_check_double"
+                app:iconGravity="textTop" />
+
             <androidx.constraintlayout.helper.widget.Flow
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8w"
-                app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join,btn_task"
+                app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join,btn_task,answer_task"
                 app:flow_horizontalGap="@dimen/dp6w"
                 app:flow_horizontalStyle="packed"
                 app:flow_verticalGap="@dimen/dp2w"

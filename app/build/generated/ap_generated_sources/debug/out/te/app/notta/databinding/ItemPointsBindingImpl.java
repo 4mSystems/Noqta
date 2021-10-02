@@ -25,7 +25,9 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     private final androidx.appcompat.widget.AppCompatButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback34;
+    private final android.view.View.OnClickListener mCallback35;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback36;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,7 +55,8 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback34 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback36 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -79,7 +82,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemPointsViewModel) variable);
+            setViewModel((te.app.notta.pages.points.viewModels.ItemPointsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -87,7 +90,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemPointsViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.points.viewModels.ItemPointsViewModel ViewModel) {
         updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
         synchronized(this) {
@@ -101,11 +104,11 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemPointsViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.points.viewModels.ItemPointsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemPointsViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.points.viewModels.ItemPointsViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -131,14 +134,14 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         java.lang.String viewModelUserDataType = null;
         int viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = 0;
         java.lang.String viewModelPointsDataImage = null;
-        te.app.notta.pages.home.models.points.PointsData viewModelPointsData = null;
+        java.lang.String viewModelPointsDataName = null;
+        te.app.notta.pages.points.models.PointsData viewModelPointsData = null;
         boolean viewModelUserDataTypeEqualsJavaLangString2 = false;
         te.app.notta.pages.auth.models.UserData viewModelUserData = null;
         java.lang.String viewModelPointsDataDescription = null;
         int viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE = 0;
         boolean viewModelUserDataTypeEqualsJavaLangString1 = false;
-        te.app.notta.pages.home.viewModels.ItemPointsViewModel viewModel = mViewModel;
-        java.lang.String viewModelPointsDataName = null;
+        te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -153,10 +156,10 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
                 if (viewModelPointsData != null) {
                     // read viewModel.pointsData.image
                     viewModelPointsDataImage = viewModelPointsData.getImage();
-                    // read viewModel.pointsData.description
-                    viewModelPointsDataDescription = viewModelPointsData.getDescription();
                     // read viewModel.pointsData.name
                     viewModelPointsDataName = viewModelPointsData.getName();
+                    // read viewModel.pointsData.description
+                    viewModelPointsDataDescription = viewModelPointsData.getDescription();
                 }
             if ((dirtyFlags & 0x5L) != 0) {
 
@@ -206,7 +209,8 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icDelete.setOnClickListener(mCallback34);
+            this.icDelete.setOnClickListener(mCallback35);
+            this.mboundView6.setOnClickListener(mCallback36);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -226,21 +230,45 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewModel
-        te.app.notta.pages.home.viewModels.ItemPointsViewModel viewModel = mViewModel;
-        // viewModel != null
-        boolean viewModelJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
 
 
 
-        viewModelJavaLangObjectNull = (viewModel) != (null);
-        if (viewModelJavaLangObjectNull) {
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
 
 
 
 
-            viewModel.itemAction(te.app.notta.utils.Constants.DELETE_GIFT);
+                    viewModel.itemAction(te.app.notta.utils.Constants.DELETE_GIFT);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.GET_GIFT);
+                }
+                break;
+            }
         }
     }
     // dirty flag

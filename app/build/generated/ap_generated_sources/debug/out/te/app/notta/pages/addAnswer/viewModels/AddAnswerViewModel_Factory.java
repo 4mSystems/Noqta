@@ -3,19 +3,19 @@ package te.app.notta.pages.addAnswer.viewModels;
 
 import dagger.internal.Factory;
 import javax.inject.Provider;
-import te.app.notta.repository.AuthRepository;
+import te.app.notta.repository.GroupRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class AddAnswerViewModel_Factory implements Factory<AddAnswerViewModel> {
-  private final Provider<AuthRepository> repositoryProvider;
+  private final Provider<GroupRepository> repositoryProvider;
 
-  private final Provider<AuthRepository> repositoryProvider2;
+  private final Provider<GroupRepository> repositoryProvider2;
 
-  public AddAnswerViewModel_Factory(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public AddAnswerViewModel_Factory(Provider<GroupRepository> repositoryProvider,
+      Provider<GroupRepository> repositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
   }
@@ -27,12 +27,12 @@ public final class AddAnswerViewModel_Factory implements Factory<AddAnswerViewMo
     return instance;
   }
 
-  public static AddAnswerViewModel_Factory create(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+  public static AddAnswerViewModel_Factory create(Provider<GroupRepository> repositoryProvider,
+      Provider<GroupRepository> repositoryProvider2) {
     return new AddAnswerViewModel_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static AddAnswerViewModel newInstance(AuthRepository repository) {
+  public static AddAnswerViewModel newInstance(GroupRepository repository) {
     return new AddAnswerViewModel(repository);
   }
 }

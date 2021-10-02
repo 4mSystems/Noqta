@@ -13,7 +13,8 @@ import te.app.notta.R;
 import te.app.notta.base.BaseViewModel;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.pages.auth.register.EditProfileFragment;
-import te.app.notta.pages.home.PointsFragment;
+import te.app.notta.pages.points.MyPointsFragment;
+import te.app.notta.pages.points.PointsFragment;
 import te.app.notta.pages.myGroups.MyGroupsFragment;
 import te.app.notta.pages.settings.AboutFragment;
 import te.app.notta.pages.settings.ContactUsFragment;
@@ -61,7 +62,10 @@ public class SettingsViewModel extends BaseViewModel {
         List<ProfileItem> profileItems = new ArrayList<>();
         profileItems.add(new ProfileItem(1, getString(R.string.edit_profile), R.drawable.ic_profile, EditProfileFragment.class.getName()));
         profileItems.add(new ProfileItem(2, getString(R.string.my_groups), R.drawable.ic_groups, MyGroupsFragment.class.getName()));
-        profileItems.add(new ProfileItem(3, getString(R.string.my_requests), R.drawable.ic_requets, StudentRequestsFragment.class.getName()));
+        if (userData.getType().equals("1"))
+            profileItems.add(new ProfileItem(5, getString(R.string.my_points), R.drawable.ic_points, MyPointsFragment.class.getName()));
+        else
+            profileItems.add(new ProfileItem(3, getString(R.string.my_requests), R.drawable.ic_requets, StudentRequestsFragment.class.getName()));
         profileItems.add(new ProfileItem(4, getString(R.string.my_gifts), R.drawable.ic_gift, PointsFragment.class.getName()));
         getProfileAdaptersAdapter().update(profileItems);
         notifyChange(BR.profileAdaptersAdapter);
