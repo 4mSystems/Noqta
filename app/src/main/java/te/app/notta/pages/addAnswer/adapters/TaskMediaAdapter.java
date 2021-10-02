@@ -2,6 +2,7 @@ package te.app.notta.pages.addAnswer.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import te.app.notta.R;
+import te.app.notta.activity.ExoPlayerActivity;
+import te.app.notta.base.MyApplication;
 import te.app.notta.databinding.ItemTaskMediaBinding;
 import te.app.notta.pages.addAnswer.models.TaskFilesItem;
 import te.app.notta.pages.addAnswer.viewModels.ItemTaskMediaViewModel;
+import te.app.notta.utils.helper.MovementHelper;
 
 public class TaskMediaAdapter extends RecyclerView.Adapter<TaskMediaAdapter.ViewHolder> {
     List<TaskFilesItem> filesItemList;
@@ -50,7 +54,9 @@ public class TaskMediaAdapter extends RecyclerView.Adapter<TaskMediaAdapter.View
         TaskFilesItem item = filesItemList.get(position);
         ItemTaskMediaViewModel itemMenuViewModel = new ItemTaskMediaViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
-            liveData.setValue(item.getFile());
+            Intent mIntent = ExoPlayerActivity.getStartIntent(MyApplication.getInstance(), item.getFile());
+            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            MyApplication.getInstance().startActivity(mIntent);
         });
         holder.setViewModel(itemMenuViewModel);
     }

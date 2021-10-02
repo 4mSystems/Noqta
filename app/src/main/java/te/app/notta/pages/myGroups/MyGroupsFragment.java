@@ -12,8 +12,12 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import javax.inject.Inject;
+
+import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.base.BaseFragment;
 import te.app.notta.base.IApplicationComponent;
@@ -36,7 +40,10 @@ public class MyGroupsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         fragmentSplashBinding.setViewmodel(viewModel);
-        viewModel.home(1, true);
+        if (viewModel.userData.getType().equals("2"))
+            viewModel.home(1, true);
+        else
+            viewModel.studentTasks(1, true);
         setEvent();
         return fragmentSplashBinding.getRoot();
     }
@@ -50,8 +57,10 @@ public class MyGroupsFragment extends BaseFragment {
                     viewModel.setHomeData(((HomeResponse) mutable.object).getData());
                     break;
                 case Constants.DELETE_GROUP:
+                case Constants.LEAVE_GROUP:
                     viewModel.getGroupsAdapter().removeItem();
                     break;
+
             }
         });
         viewModel.getGroupsAdapter().liveData.observeForever(this::showDeleteDialog);
@@ -75,13 +84,20 @@ public class MyGroupsFragment extends BaseFragment {
         });
     }
 
-    private void showDeleteDialog(int groupId) {
+    private void showDeleteDialog(PassingObject passingObject) {
         DeleteSheetBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(requireActivity()), R.layout.delete_sheet, null, false);
         BottomSheetDialog sheetDialog = new BottomSheetDialog(requireActivity(), R.style.BottomSheetDialogStyle);
         sheetDialog.setContentView(sortBinding.getRoot());
+        if (passingObject.getObject().equals(Constants.DIALOG_SHOW_LEAVE)) {
+            sortBinding.tvHeader.setText(getString(R.string.leave_group_successfully));
+            sortBinding.tvDesc.setText(getString(R.string.leave_group_body_successfully));
+        }
         sortBinding.btnClose.setOnClickListener(v -> sheetDialog.dismiss());
         sortBinding.btnYes.setOnClickListener(v -> {
-            viewModel.removeGroup(groupId);
+            if (passingObject.getObject().equals(Constants.DELETE_GROUP))
+                viewModel.removeGroup(passingObject.getId());
+            else
+                viewModel.leaveGroup(passingObject.getId());
             sheetDialog.dismiss();
         });
         sheetDialog.show();

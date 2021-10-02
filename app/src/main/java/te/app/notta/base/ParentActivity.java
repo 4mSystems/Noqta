@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import es.dmoral.toasty.Toasty;
 import te.app.notta.R;
@@ -63,13 +64,13 @@ public class ParentActivity extends AppCompatActivity implements
     }
 
     protected void initializeToken() {
-//        FirebaseMessaging.getInstance().getToken()
-//                .addOnCompleteListener(task -> {
-//                    if (!task.isSuccessful()) {
-//                        return;
-//                    }
-//                    UserHelper.getInstance(MyApplication.getInstance()).addToken(task.getResult());
-//                });
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        return;
+                    }
+                    UserHelper.getInstance(MyApplication.getInstance()).addToken(task.getResult());
+                });
     }
 
     @Override

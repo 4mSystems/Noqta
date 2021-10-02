@@ -7,9 +7,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecb2b4b96e45ff5b3c22be3bdc9b54d4/jetified-play-services-cloud-messaging-16.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4f57a180d3e5a84e1f37110ea7fce50/jetified-play-services-cloud-messaging-16.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ed50206885ed2c27cceeda8465cf661/jetified-play-services-cloud-messaging-16.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f15995d1b4182fd454749d69adc8ffad/jetified-play-services-cloud-messaging-16.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f15995d1b4182fd454749d69adc8ffad/jetified-play-services-cloud-messaging-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f15995d1b4182fd454749d69adc8ffad/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ed50206885ed2c27cceeda8465cf661/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ed50206885ed2c27cceeda8465cf661/jetified-play-services-cloud-messaging-16.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-cloud-messaging/16.0.0/66bcaa7ea2458690135561b6053cc71210dbd9dd/play-services-cloud-messaging-16.0.0-javadoc.jar!/" />

@@ -5,18 +5,21 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemMyGroupBinding;
-import te.app.notta.pages.home.GroupDetailsFragment;
+import te.app.notta.pages.groupDetails.GroupDetailsFragment;
 import te.app.notta.pages.home.models.GroupItem;
 import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
 import te.app.notta.utils.Constants;
@@ -26,7 +29,7 @@ public class MyGroupsAdapter extends RecyclerView.Adapter<MyGroupsAdapter.ViewHo
     List<GroupItem> groupItemList;
     Context context;
     public int lastSelected = -1;
-    public MutableLiveData<Integer> liveData = new MutableLiveData<>();
+    public MutableLiveData<PassingObject> liveData = new MutableLiveData<>();
 
     public MyGroupsAdapter() {
         this.groupItemList = new ArrayList<>();
@@ -53,9 +56,9 @@ public class MyGroupsAdapter extends RecyclerView.Adapter<MyGroupsAdapter.ViewHo
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(item);
         itemMenuViewModel.getLiveData().observeForever(o -> {
             lastSelected = position;
-            if (o.equals(Constants.DELETE_GROUP)) {
-                liveData.setValue(item.getId());
-            }else if (o.equals(Constants.GROUP_DETAILS)) {
+            if (o.equals(Constants.DELETE_GROUP) || o.equals(Constants.DIALOG_SHOW_LEAVE)) {
+                liveData.setValue(new PassingObject(item.getId(), String.valueOf(o)));
+            } else if (o.equals(Constants.GROUP_DETAILS)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), item.getName()), null, GroupDetailsFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
             }
         });
@@ -66,7 +69,6 @@ public class MyGroupsAdapter extends RecyclerView.Adapter<MyGroupsAdapter.ViewHo
     public void update(List<GroupItem> dataList) {
         this.groupItemList.clear();
         groupItemList.addAll(dataList);
-        notifyDataSetChanged();
     }
 
     public void loadMore(@NotNull List<GroupItem> dataList) {

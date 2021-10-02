@@ -14,7 +14,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
-import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
+import te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemHorMemberBinding extends ViewDataBinding {
   @NonNull

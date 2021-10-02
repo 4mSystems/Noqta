@@ -18,6 +18,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
+import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -54,7 +55,7 @@ public abstract class FragmentAddAnswerBinding extends ViewDataBinding {
   public final TextInputLayout inputAnswer;
 
   @NonNull
-  public final AppCompatImageView mainImage;
+  public final RoundedImageView mainImage;
 
   @NonNull
   public final CircularProgressIndicator progress;
@@ -96,7 +97,7 @@ public abstract class FragmentAddAnswerBinding extends ViewDataBinding {
       MaterialCardView MaterialCardView, AppCompatButton appCompatButtonNext,
       FloatingActionButton back, AppCompatImageView boardHeader, Barrier br4,
       AppCompatImageView icCloudUpload, AppCompatImageView icCloudUploadVideo,
-      ConstraintLayout imagesContainer, TextInputLayout inputAnswer, AppCompatImageView mainImage,
+      ConstraintLayout imagesContainer, TextInputLayout inputAnswer, RoundedImageView mainImage,
       CircularProgressIndicator progress, RecyclerView rcTaskMedia, CustomTextViewMedium tvAnswer,
       CustomTextViewRegular tvDate, CustomTextViewMedium tvDetails, CustomTextViewMedium tvImages,
       CustomTextViewMedium tvProfileTitle, CustomTextViewMedium tvTasks,

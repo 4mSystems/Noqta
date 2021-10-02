@@ -4,9 +4,13 @@
 
     <data>
 
+        <import type="te.app.notta.utils.Constants" />
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel" />
+            type="te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 
@@ -34,9 +38,7 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp40h"
             android:layout_marginEnd="@dimen/dp12w"
-            android:layout_marginBottom="@dimen/dp6h"
             android:src="@drawable/ic_rectangle_students"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/tv_member"
             app:layout_constraintStart_toStartOf="@+id/tv_member"
             app:layout_constraintTop_toTopOf="@+id/tv_member" />
@@ -46,9 +48,9 @@
             android:layout_height="wrap_content"
             android:drawableBottom="@drawable/ic_icon_feather_check_circle"
             android:text="@{viewModel.studentsItem.studentPoints}"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/sp5"
-            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@id/btn"
             app:layout_constraintEnd_toEndOf="@id/btn"
             app:layout_constraintStart_toStartOf="@id/btn"
@@ -62,9 +64,9 @@
             android:layout_marginTop="@dimen/dp8h"
             android:layout_marginEnd="@dimen/dp12w"
             android:text="@{viewModel.studentsItem.studentName}"
+            android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
-            android:textAlignment="viewStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_member"
             app:layout_constraintTop_toTopOf="@id/tv_member" />
@@ -86,11 +88,34 @@
             app:layout_constraintStart_toEndOf="@+id/tv_member"
             app:layout_constraintTop_toBottomOf="@+id/tv_teacher_name" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_show_answers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginTop="@dimen/dp2h"
+            android:onClick="@{()-> viewModel.itemAction(Constants.SHOW_ANSWERS)}"
+            android:text="@string/show_answers"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:visibility="@{viewModel.userData.type.equals(`2`)?View.VISIBLE:View.GONE,default=gone}"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintStart_toEndOf="@id/tv_member"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_work" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/br6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="btn,btn_show_answers" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/dp10h"
             android:background="@color/line_color"
-            app:layout_constraintTop_toBottomOf="@id/btn" />
+            app:layout_constraintTop_toBottomOf="@id/br6" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -44,19 +44,32 @@ public class AddAnswerViewModel extends BaseViewModel {
     }
 
     public void taskDetails() {
-        compositeDisposable.add(repository.taskDetails(getPassingObject().getId(), getPassingObject().getObject()));
+        compositeDisposable.add(repository.taskDetails(getPassingObject().getId(), getPassingObject().getObject2()));
     }
 
     public void answerTask() {
         getAddAnswerRequest().setTaskId(String.valueOf(getPassingObject().getId()));
-        if (selectedUri.size() > 0) {
-            for (int i = 0; i < getSelectedUri().size(); i++) {
-                objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), Constants.FILE, Constants.FILE_TYPE_IMAGE));
+        getAddAnswerRequest().setStudentId(String.valueOf(getPassingObject().getObject2()));
+        getAddAnswerRequest().setPoints(getTaskDetailsData().getPoints());
+        if (getPassingObject().getObject().equals(Constants.Add_ANSWER)) {
+            if (selectedUri.size() > 0) {
+                for (int i = 0; i < getSelectedUri().size(); i++) {
+                    objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), "file[" + i + "]", Constants.FILE_TYPE_IMAGE));
+                }
             }
+            if (objectList.size() > 0 || !TextUtils.isEmpty(getAddAnswerRequest().getAnswerText())) {
+                setMessage(Constants.SHOW_PROGRESS);
+                compositeDisposable.add(repository.answerTask(getAddAnswerRequest(), objectList));
+            }
+        } else {
+            liveData.setValue(new Mutable(Constants.DIALOG_SHOW));
         }
-        if (objectList.size() > 0 || !TextUtils.isEmpty(getAddAnswerRequest().getAnswerText())) {
+    }
+
+    public void sendPoints() {
+        if (getAddAnswerRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
-            compositeDisposable.add(repository.answerTask(getAddAnswerRequest(), objectList));
+            compositeDisposable.add(repository.givePoints(getAddAnswerRequest()));
         }
     }
 
@@ -67,10 +80,23 @@ public class AddAnswerViewModel extends BaseViewModel {
 
     @Bindable
     public void setTaskDetailsData(TaskDetailsData taskDetailsData) {
-        taskMediaAdapter.update(taskDetailsData.getTaskFiles());
+        if (getPassingObject().getObject().equals(Constants.SHOW_ANSWERS)) {
+            getAddAnswerRequest().setPoints(taskDetailsData.getPoints());
+            getAddAnswerRequest().setAnswerText(taskDetailsData.getTaskAnswer().getAnswerText());
+            taskMediaAdapter.update(taskDetailsData.getTaskAnswer().getTaskAnswerFiles());
+            notifyChange(BR.addAnswerRequest);
+        } else
+            taskMediaAdapter.update(taskDetailsData.getTaskFiles());
         notifyChange(BR.taskMediaAdapter);
         notifyChange(BR.taskDetailsData);
         this.taskDetailsData = taskDetailsData;
+    }
+
+    public void onPointsTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(s)) {
+            addAnswerRequest.setPoints("1");
+        }
+        notifyChange(BR.addAnswerRequest);
     }
 
     @Bindable

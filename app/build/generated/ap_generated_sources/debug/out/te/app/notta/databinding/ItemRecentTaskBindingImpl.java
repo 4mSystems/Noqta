@@ -24,9 +24,11 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     private final te.app.notta.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback64;
+    private final android.view.View.OnClickListener mCallback25;
     @Nullable
-    private final android.view.View.OnClickListener mCallback63;
+    private final android.view.View.OnClickListener mCallback23;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,8 +57,9 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         this.tvDetails.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback64 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback63 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback25 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -82,7 +85,7 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel) variable);
+            setViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel) variable);
         }
         else {
             variableSet = false;
@@ -90,7 +93,7 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel ViewModel) {
         updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
         synchronized(this) {
@@ -104,11 +107,11 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -133,19 +136,22 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         }
         int viewModelUserDataId = 0;
         java.lang.String stringValueOfViewModelTasksItemId = null;
-        te.app.notta.pages.home.models.details.TasksItem viewModelTasksItem = null;
+        boolean viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse = false;
+        boolean viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalse = false;
+        te.app.notta.pages.groupDetails.models.details.TasksItem viewModelTasksItem = null;
         int viewModelTasksItemAnswered = 0;
         boolean viewModelTasksItemTechIdViewModelUserDataId = false;
+        int viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewModelTasksItemDescription = null;
-        int viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE = 0;
+        int viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = 0;
         boolean ViewModelTasksItemTechIdViewModelUserDataId1 = false;
         java.lang.String viewModelTasksItemCreatedAt = null;
         int viewModelTasksItemTechId = 0;
-        boolean viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse = false;
         te.app.notta.pages.auth.models.UserData viewModelUserData = null;
-        int viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = 0;
+        boolean viewModelTasksItemTechIdInt0 = false;
         boolean viewModelTasksItemAnsweredInt0 = false;
-        te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+        te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+        boolean ViewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse1 = false;
         int viewModelTasksItemId = 0;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -155,8 +161,6 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
                 if (viewModel != null) {
                     // read viewModel.tasksItem
                     viewModelTasksItem = viewModel.getTasksItem();
-                    // read viewModel.userData
-                    viewModelUserData = viewModel.userData;
                 }
 
 
@@ -170,38 +174,76 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
                     // read viewModel.tasksItem.id
                     viewModelTasksItemId = viewModelTasksItem.getId();
                 }
+
+
+                // read viewModel.tasksItem.tech_id != 0
+                viewModelTasksItemTechIdInt0 = (viewModelTasksItemTechId) != (0);
+                // read String.valueOf(viewModel.tasksItem.id)
+                stringValueOfViewModelTasksItemId = java.lang.String.valueOf(viewModelTasksItemId);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewModelTasksItemTechIdInt0) {
+                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x800L;
+                }
+            }
+        }
+        // batch finished
+
+        if ((dirtyFlags & 0x1010L) != 0) {
+
+                if (viewModel != null) {
+                    // read viewModel.userData
+                    viewModelUserData = viewModel.userData;
+                }
+
+
                 if (viewModelUserData != null) {
                     // read viewModel.userData.id
                     viewModelUserDataId = viewModelUserData.getId();
                 }
 
+            if ((dirtyFlags & 0x1000L) != 0) {
 
-                // read String.valueOf(viewModel.tasksItem.id)
-                stringValueOfViewModelTasksItemId = java.lang.String.valueOf(viewModelTasksItemId);
-                // read viewModel.tasksItem.tech_id == viewModel.userData.id
-                viewModelTasksItemTechIdViewModelUserDataId = (viewModelTasksItemTechId) == (viewModelUserDataId);
-                // read viewModel.tasksItem.tech_id != viewModel.userData.id
-                ViewModelTasksItemTechIdViewModelUserDataId1 = (viewModelTasksItemTechId) != (viewModelUserDataId);
-            if((dirtyFlags & 0x7L) != 0) {
-                if(viewModelTasksItemTechIdViewModelUserDataId) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
+                    // read viewModel.tasksItem.tech_id == viewModel.userData.id
+                    viewModelTasksItemTechIdViewModelUserDataId = (viewModelTasksItemTechId) == (viewModelUserDataId);
             }
+            if ((dirtyFlags & 0x10L) != 0) {
+
+                    // read viewModel.tasksItem.tech_id != viewModel.userData.id
+                    ViewModelTasksItemTechIdViewModelUserDataId1 = (viewModelTasksItemTechId) != (viewModelUserDataId);
+            }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false
+                viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse = ((viewModelTasksItemTechIdInt0) ? (ViewModelTasksItemTechIdViewModelUserDataId1) : (false));
+                // read viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false
+                ViewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse1 = ((viewModelTasksItemTechIdInt0) ? (viewModelTasksItemTechIdViewModelUserDataId) : (false));
             if((dirtyFlags & 0x7L) != 0) {
-                if(ViewModelTasksItemTechIdViewModelUserDataId1) {
+                if(viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse) {
                         dirtyFlags |= 0x40L;
                 }
                 else {
                         dirtyFlags |= 0x20L;
                 }
             }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(ViewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse1) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
 
 
-                // read viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
-                viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE = ((viewModelTasksItemTechIdViewModelUserDataId) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false ? View.VISIBLE : View.GONE
+                viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewVISIBLEViewGONE = ((ViewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
 
@@ -219,34 +261,35 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
 
         if ((dirtyFlags & 0x7L) != 0) {
 
-                // read viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
-                viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse = ((ViewModelTasksItemTechIdViewModelUserDataId1) ? (viewModelTasksItemAnsweredInt0) : (false));
+                // read viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false
+                viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalse = ((viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalse) ? (viewModelTasksItemAnsweredInt0) : (false));
             if((dirtyFlags & 0x7L) != 0) {
-                if(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse) {
-                        dirtyFlags |= 0x100L;
+                if(viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalse) {
+                        dirtyFlags |= 0x400L;
                 }
                 else {
-                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x200L;
                 }
             }
 
 
-                // read viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
-                viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = ((viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+                viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE = ((viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnRemove.setOnClickListener(mCallback64);
-            this.btnTechType.setOnClickListener(mCallback63);
+            this.btnRemove.setOnClickListener(mCallback25);
+            this.btnTechType.setOnClickListener(mCallback24);
+            this.mboundView0.setOnClickListener(mCallback23);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            this.btnRemove.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewVISIBLEViewGONE);
-            this.btnTech.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
-            this.btnTechType.setVisibility(viewModelTasksItemTechIdViewModelUserDataIdViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
+            this.btnRemove.setVisibility(viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewVISIBLEViewGONE);
+            this.btnTech.setVisibility(viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
+            this.btnTechType.setVisibility(viewModelTasksItemTechIdInt0ViewModelTasksItemTechIdViewModelUserDataIdBooleanFalseViewModelTasksItemAnsweredInt0BooleanFalseViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, stringValueOfViewModelTasksItemId);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDate, viewModelTasksItemCreatedAt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDetails, viewModelTasksItemDescription);
@@ -256,10 +299,10 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 3: {
                 // localize variables for thread safety
                 // viewModel
-                te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+                te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
                 // viewModel != null
                 boolean viewModelJavaLangObjectNull = false;
 
@@ -278,7 +321,26 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
             case 1: {
                 // localize variables for thread safety
                 // viewModel
-                te.app.notta.pages.home.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+                te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.SHOW_ANSWERS);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel viewModel = mViewModel;
                 // viewModel != null
                 boolean viewModelJavaLangObjectNull = false;
 
@@ -302,12 +364,16 @@ public class ItemRecentTaskBindingImpl extends ItemRecentTaskBinding implements 
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.tasksItem
         flag 2 (0x3L): null
-        flag 3 (0x4L): viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewModel.tasksItem.tech_id == viewModel.userData.id ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
-        flag 6 (0x7L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false
-        flag 7 (0x8L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): viewModel.tasksItem.tech_id != viewModel.userData.id ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false
+        flag 4 (0x5L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false
+        flag 5 (0x6L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false
+        flag 6 (0x7L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false
+        flag 7 (0x8L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id != viewModel.userData.id : false ? viewModel.tasksItem.answered == 0 : false ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false
+        flag 12 (0xdL): viewModel.tasksItem.tech_id != 0 ? viewModel.tasksItem.tech_id == viewModel.userData.id : false
     flag mapping end*/
     //end
 }

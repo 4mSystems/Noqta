@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -17,13 +17,13 @@ import te.app.notta.pages.addAnswer.viewModels.ItemTaskMediaViewModel;
 
 public abstract class ItemTaskMediaBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView icUser;
+  public final RoundedImageView icUser;
 
   @Bindable
   protected ItemTaskMediaViewModel mViewModel;
 
   protected ItemTaskMediaBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView icUser) {
+      RoundedImageView icUser) {
     super(_bindingComponent, _root, _localFieldCount);
     this.icUser = icUser;
   }

@@ -47,29 +47,33 @@ public class BR {
 
   public static final int request = 22;
 
-  public static final int student = 23;
+  public static final int selectedUri = 23;
 
-  public static final int studentMainData = 24;
+  public static final int student = 24;
 
-  public static final int studentMainPoints = 25;
+  public static final int studentMainData = 25;
 
-  public static final int studentsItem = 26;
+  public static final int studentMainPoints = 26;
 
-  public static final int studentsRequestsAdapter = 27;
+  public static final int studentTasksMain = 27;
 
-  public static final int taskDetailsData = 28;
+  public static final int studentsItem = 28;
 
-  public static final int taskFilesItem = 29;
+  public static final int studentsRequestsAdapter = 29;
 
-  public static final int taskMediaAdapter = 30;
+  public static final int taskDetailsData = 30;
 
-  public static final int tasksAdapter = 31;
+  public static final int taskFilesItem = 31;
 
-  public static final int tasksItem = 32;
+  public static final int taskMediaAdapter = 32;
 
-  public static final int teacherPointsMain = 33;
+  public static final int tasksAdapter = 33;
 
-  public static final int viewModel = 34;
+  public static final int tasksItem = 34;
 
-  public static final int viewmodel = 35;
+  public static final int teacherPointsMain = 35;
+
+  public static final int viewModel = 36;
+
+  public static final int viewmodel = 37;
 }

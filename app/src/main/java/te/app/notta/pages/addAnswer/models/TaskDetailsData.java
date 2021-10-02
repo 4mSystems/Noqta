@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class TaskDetailsData {
 
-	@SerializedName("task_answers")
-	private List<TaskAnswersItem> taskAnswers;
+	@SerializedName("task_answer")
+	private TaskAnswersItem taskAnswer;
 
 	@SerializedName("description")
 	private String description;
@@ -23,8 +23,8 @@ public class TaskDetailsData {
 	@SerializedName("task_files")
 	private List<TaskFilesItem> taskFiles;
 
-	public List<TaskAnswersItem> getTaskAnswers(){
-		return taskAnswers;
+	public TaskAnswersItem getTaskAnswer(){
+		return taskAnswer;
 	}
 
 	public String getDescription(){

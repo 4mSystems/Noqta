@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "700751799394",
+    "project_id": "noqta-e7608",
+    "storage_bucket": "noqta-e7608.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700751799394:android:9884d9434e15db56845d3b",
+        "android_client_info": {
+          "package_name": "te.app.notta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700751799394-bf9scg3dlahlav66es1v0svmbmtb179m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVFRvHYzkMZc3V6SJhrBrANOsMpeqHLlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700751799394-bf9scg3dlahlav66es1v0svmbmtb179m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

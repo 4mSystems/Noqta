@@ -21,7 +21,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
+import te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel;
 
 public abstract class FragmentGroupDetailsBinding extends ViewDataBinding {
   @NonNull

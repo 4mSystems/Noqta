@@ -26,7 +26,7 @@ public class FragmentMyPointsBindingImpl extends FragmentMyPointsBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,7 +55,7 @@ public class FragmentMyPointsBindingImpl extends FragmentMyPointsBinding impleme
         this.tvYourPoint2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback62 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -294,7 +294,7 @@ public class FragmentMyPointsBindingImpl extends FragmentMyPointsBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback62);
+            this.appCompatButtonNext.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

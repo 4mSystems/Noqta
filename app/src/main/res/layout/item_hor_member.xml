@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel" />
+            type="te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 

@@ -43,19 +43,21 @@ import te.app.notta.pages.auth.register.RegisterFragment_MembersInjector;
 import te.app.notta.pages.auth.register.RegisterViewModel;
 import te.app.notta.pages.auth.register.RegisterViewModel_Factory;
 import te.app.notta.pages.auth.register.RegisterViewModel_MembersInjector;
-import te.app.notta.pages.home.GroupDetailsFragment;
-import te.app.notta.pages.home.GroupDetailsFragment_MembersInjector;
-import te.app.notta.pages.home.GroupMembersFragment;
-import te.app.notta.pages.home.GroupMembersFragment_MembersInjector;
-import te.app.notta.pages.home.GroupStudentFragment;
-import te.app.notta.pages.home.GroupStudentFragment_MembersInjector;
+import te.app.notta.pages.groupDetails.GroupDetailsFragment;
+import te.app.notta.pages.groupDetails.GroupDetailsFragment_MembersInjector;
+import te.app.notta.pages.groupDetails.GroupMembersFragment;
+import te.app.notta.pages.groupDetails.GroupMembersFragment_MembersInjector;
+import te.app.notta.pages.groupDetails.GroupStudentFragment;
+import te.app.notta.pages.groupDetails.GroupStudentFragment_MembersInjector;
+import te.app.notta.pages.groupDetails.StudentTasksFragment;
+import te.app.notta.pages.groupDetails.StudentTasksFragment_MembersInjector;
+import te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel;
+import te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel_Factory;
+import te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel_MembersInjector;
 import te.app.notta.pages.home.HomeFragment;
 import te.app.notta.pages.home.HomeFragment_MembersInjector;
 import te.app.notta.pages.home.TasksFragment;
 import te.app.notta.pages.home.TasksFragment_MembersInjector;
-import te.app.notta.pages.home.viewModels.GroupDetailsViewModel;
-import te.app.notta.pages.home.viewModels.GroupDetailsViewModel_Factory;
-import te.app.notta.pages.home.viewModels.GroupDetailsViewModel_MembersInjector;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
 import te.app.notta.pages.home.viewModels.HomeViewModel_Factory;
 import te.app.notta.pages.home.viewModels.HomeViewModel_MembersInjector;
@@ -346,6 +348,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectMyPointsFragment(myPointsFragment);
   }
 
+  @Override
+  public void inject(StudentTasksFragment studentTasksFragment) {
+    injectStudentTasksFragment(studentTasksFragment);
+  }
+
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectRepository(instance, groupRepositoryProvider.get());
     return instance;
@@ -554,6 +561,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MyPointsFragment injectMyPointsFragment(MyPointsFragment instance) {
     MyPointsFragment_MembersInjector.injectViewModel(instance, pointsViewModel());
+    return instance;
+  }
+
+  private StudentTasksFragment injectStudentTasksFragment(StudentTasksFragment instance) {
+    StudentTasksFragment_MembersInjector.injectViewModel(instance, groupDetailsViewModel());
     return instance;
   }
 

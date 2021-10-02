@@ -7,20 +7,28 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.button.MaterialButton;
 import com.makeramen.roundedimageview.RoundedImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
+import te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemMemberBinding extends ViewDataBinding {
   @NonNull
+  public final Barrier br6;
+
+  @NonNull
   public final AppCompatImageView btn;
+
+  @NonNull
+  public final MaterialButton btnShowAnswers;
 
   @NonNull
   public final RoundedImageView tvMember;
@@ -35,10 +43,12 @@ public abstract class ItemMemberBinding extends ViewDataBinding {
   protected ItemGroupStudentViewModel mViewModel;
 
   protected ItemMemberBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView btn, RoundedImageView tvMember, CustomTextViewMedium tvTeacherName,
-      CustomTextViewRegular tvUserWork) {
+      Barrier br6, AppCompatImageView btn, MaterialButton btnShowAnswers, RoundedImageView tvMember,
+      CustomTextViewMedium tvTeacherName, CustomTextViewRegular tvUserWork) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.br6 = br6;
     this.btn = btn;
+    this.btnShowAnswers = btnShowAnswers;
     this.tvMember = tvMember;
     this.tvTeacherName = tvTeacherName;
     this.tvUserWork = tvUserWork;

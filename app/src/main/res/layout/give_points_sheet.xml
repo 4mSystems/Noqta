@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.notta.utils.Constants" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h">
+
+        <te.app.notta.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:text="@{@string/give_points_to.concat(` `).concat(viewModel.taskDetailsData.taskAnswer.studentName)}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.notta.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:text="@{@string/points_body1.concat(` `).concat(viewModel.taskDetailsData.taskAnswer.studentName).concat(@string/points_body2)}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_points"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp14w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:layout_marginEnd="@dimen/dp15w"
+            android:hint="@string/points_number"
+            app:boxCornerRadiusBottomEnd="@dimen/dp27h"
+            app:boxCornerRadiusBottomStart="@dimen/dp27h"
+            app:boxCornerRadiusTopEnd="@dimen/dp27h"
+            app:boxCornerRadiusTopStart="@dimen/dp27h"
+            app:error="@{viewModel.addAnswerRequest.pointsError}"
+            app:helperTextTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noOfStudents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:onTextChanged="@{viewModel.onPointsTextChanged}"
+                android:text="@={viewModel.addAnswerRequest.points}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <te.app.notta.customViews.views.IncrementalView
+            android:id="@+id/incrementalViewStudentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp6w"
+            app:layout_constraintBottom_toBottomOf="@id/input_points"
+            app:layout_constraintEnd_toEndOf="@id/input_points"
+            app:layout_constraintTop_toTopOf="@id/input_points"
+            app:type="ADD_ONE"
+            app:value="@{viewModel.addAnswerRequest.points}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:padding="@dimen/dp10h"
+            android:text="@string/send"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:backgroundTint="@color/colorAccent"
+            app:cornerRadius="@dimen/dp16h"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_points" />
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="@{!TextUtils.isEmpty(viewModel.message)&amp;&amp;viewModel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/btn_close"
+            app:layout_constraintStart_toStartOf="@id/btn_close"
+            app:layout_constraintTop_toTopOf="@id/btn_close"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

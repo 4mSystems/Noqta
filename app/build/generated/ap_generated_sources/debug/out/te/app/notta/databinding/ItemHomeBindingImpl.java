@@ -21,13 +21,13 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback36;
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback37;
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback38;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -65,10 +65,10 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         this.tvUserWork.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback11 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback12 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback9 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback10 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback39 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback36 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback37 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback38 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -311,10 +311,10 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.answerTask.setOnClickListener(mCallback12);
-            this.btnJoin.setOnClickListener(mCallback10);
-            this.btnTask.setOnClickListener(mCallback11);
-            this.mboundView0.setOnClickListener(mCallback9);
+            this.answerTask.setOnClickListener(mCallback39);
+            this.btnJoin.setOnClickListener(mCallback37);
+            this.btnTask.setOnClickListener(mCallback38);
+            this.mboundView0.setOnClickListener(mCallback36);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -337,25 +337,6 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.itemAction(te.app.notta.utils.Constants.ADD_TASK);
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewModel
@@ -410,6 +391,25 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.notta
 
 
                     viewModel.itemAction(te.app.notta.utils.Constants.JOIN_REQUEST);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.ADD_TASK);
                 }
                 break;
             }

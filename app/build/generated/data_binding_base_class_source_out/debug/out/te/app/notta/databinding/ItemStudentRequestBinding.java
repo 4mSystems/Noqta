@@ -17,7 +17,7 @@ import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.customViews.views.CustomTextViewRegular;
-import te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel;
+import te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel;
 
 public abstract class ItemStudentRequestBinding extends ViewDataBinding {
   @NonNull

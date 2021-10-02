@@ -4,12 +4,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_cloud_upload.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_board_home.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_board_home.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/anim_jump_fast.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/anim/jump_fast.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_board_home.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_board_home.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_member.xml.flat",
@@ -56,12 +56,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/menu.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_logo.png.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-mdpi/ic_logo.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_loader_animation.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/loader_animation.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_logo.png.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-mdpi/ic_logo.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_terms.xml.flat",
@@ -108,12 +108,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/delete_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_check_white.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_check_white.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_rectangle_students.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_rectangle_students.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_check_white.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_check_white.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_lang.xml.flat",
@@ -144,12 +144,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/success_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_edit_profile.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_edit_profile.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_edit_profile.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_edit_profile.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -168,24 +168,24 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_splash.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_contact.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_contact.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_contact.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_contact.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_register.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_register.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_register.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_register.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/color_text_input_layout_stroke_color_medium.xml.flat",
@@ -208,12 +208,16 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_back.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_main.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_points.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/item_points.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_popup_photo_full.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/popup_photo_full.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_confirm_code.xml.flat",
@@ -224,16 +228,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_lang.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_popup_photo_full.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/popup_photo_full.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_back.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_back.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_layout_action_bar_home.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/layout_action_bar_home.xml"
-    },
-    {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_back.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_back.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_gift.xml.flat",
@@ -268,16 +268,16 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-mdpi/ic_cloud_upload.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_united_states.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_united_states.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_add_answer.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_add_answer.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_icon_material_location_on.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_icon_material_location_on.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_united_states.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_united_states.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_board_home.png.flat",
@@ -392,16 +392,20 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_add_gift.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-mdpi_board_header_small.png.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-mdpi/board_header_small.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_logo.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xhdpi/ic_logo.png"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-mdpi_board_header_small.png.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-mdpi/board_header_small.png"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_grand_exit.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/grand_exit.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_give_points_sheet.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/give_points_sheet.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_board_home.png.flat",
@@ -432,20 +436,20 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_forget_password.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_tab_bg_normal_blue.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/tab_bg_normal_blue.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_board_header.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xxxhdpi/board_header.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_email.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_email.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_tab_bg_normal_blue.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/tab_bg_normal_blue.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_warning.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-hdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_email.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_email.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_warning.png.flat",
@@ -480,6 +484,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_warning.png.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_warning.png"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_my_groups.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_my_groups.xml"
     },
@@ -488,24 +496,24 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/badge_bg_with_shadow.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_warning.png.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_warning.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_cloud_upload.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_cloud_upload.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxhdpi_splash.png.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xxhdpi/splash.png"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_play.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_play.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_home.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xhdpi_board_header.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xhdpi/board_header.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_home.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxhdpi_splash.png.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xxhdpi/splash.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxhdpi_board_header_small.png.flat",
@@ -552,12 +560,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xxhdpi/ic_logo.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_about.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_about.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_group_students.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_group_students.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_about.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_about.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_profile.xml.flat",
@@ -628,12 +636,12 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_next.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_icon_awesome_check_double.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_icon_awesome_check_double.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_kuwait.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_kuwait.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_icon_awesome_check_double.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_icon_awesome_check_double.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_remove.xml.flat",
@@ -664,16 +672,16 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_group_details.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_group_details.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_onboard.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_onboard.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_request_waiting.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_request_waiting.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_onboard.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_onboard.xml"
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_group_details.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_group_details.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/color_text_input_layout_stroke_color.xml.flat",
@@ -692,24 +700,24 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-xxxhdpi/ic_logo_colored.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_warning.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_success.xml.flat",
-        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_success.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_warning.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_warning.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_ic_success.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable/ic_success.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable_corner_view_gray_border.xml.flat",
@@ -732,6 +740,10 @@
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/color/navigation_selection.xml"
     },
     {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_activity_exo_player.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/activity_exo_player.xml"
+    },
+    {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_add_task.xml.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_add_task.xml"
     },
@@ -742,6 +754,10 @@
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/drawable-hdpi_splash.png.flat",
         "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/drawable-hdpi/splash.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_fragment_student_tasks.xml.flat",
+        "source": "/home/elnagar/StudioProjects/aberprovider/app/src/main/res/layout/fragment_student_tasks.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/res/merged/debug/layout_item_profile.xml.flat",

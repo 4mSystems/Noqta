@@ -28,6 +28,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
     }
 
     public void submit() {
+        request.setType(userData.getType());
         if (userData == null) {
             if (request.isPasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
@@ -40,7 +41,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
             if (request.isUpdatePasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
                     setMessage(Constants.SHOW_PROGRESS);
-                    compositeDisposable.add(repository.changeProfilePassword(getRequest()));
+                    compositeDisposable.add(repository.changePassword(getRequest()));
                 } else
                     liveData.setValue(new Mutable(Constants.NOT_MATCH_PASSWORD));
             }

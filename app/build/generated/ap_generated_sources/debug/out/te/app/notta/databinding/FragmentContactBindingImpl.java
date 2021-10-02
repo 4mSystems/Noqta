@@ -34,9 +34,9 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final androidx.appcompat.widget.AppCompatEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback72;
+    private final android.view.View.OnClickListener mCallback82;
     @Nullable
-    private final android.view.View.OnClickListener mCallback73;
+    private final android.view.View.OnClickListener mCallback81;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -225,8 +225,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback72 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback73 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback82 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback81 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -501,8 +501,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback73);
-            this.mboundView1.setOnClickListener(mCallback72);
+            this.appCompatButtonNext.setOnClickListener(mCallback82);
+            this.mboundView1.setOnClickListener(mCallback81);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
@@ -546,6 +546,23 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendContact();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -561,23 +578,6 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendContact();
                 }
                 break;
             }

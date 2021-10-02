@@ -13,17 +13,21 @@ import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
 import javax.inject.Inject;
 
 import gun0912.tedbottompicker.TedBottomPicker;
+import te.app.notta.BR;
 import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.base.BaseFragment;
 import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
+import te.app.notta.base.ParentActivity;
 import te.app.notta.databinding.FragmentAddAnswerBinding;
+import te.app.notta.databinding.GivePointsSheetBinding;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.addAnswer.models.TaskDetailsResponse;
@@ -68,8 +72,25 @@ public class AddAnswerFragment extends BaseFragment {
                     toastMessage(((StatusMessage) mutable.object).mMessage);
                     MovementHelper.finishWithResult(new PassingObject(), requireActivity(), Constants.ADD_GROUP_REQUEST);
                     break;
+                case Constants.DIALOG_SHOW:
+                    GivePointsSheetBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(requireActivity()), R.layout.give_points_sheet, null, false);
+                    BottomSheetDialog sheetDialog = new BottomSheetDialog(requireActivity(), R.style.BottomSheetDialogStyle);
+                    sheetDialog.setContentView(sortBinding.getRoot());
+                    sortBinding.setViewModel(viewModel);
+                    sortBinding.btnClose.setOnClickListener(v -> {
+                        sheetDialog.dismiss();
+                        viewModel.sendPoints();
+                    });
+                    sheetDialog.show();
+                    break;
             }
         });
+        ((ParentActivity) requireActivity()).mutableLiveData.observeForever(mutable -> {
+            if (mutable.message.equals(Constants.ADD_ONE))
+                viewModel.getAddAnswerRequest().setPoints((String) mutable.object);
+            viewModel.notifyChange(BR.addAnswerRequest);
+        });
+
     }
 
     @SuppressLint("CheckResult")
@@ -81,7 +102,6 @@ public class AddAnswerFragment extends BaseFragment {
                     .showTitle(false)
                     .setSpacing(4)
                     .setSelectMaxCount(5)
-                    .setSelectMinCount(1)
                     .setSelectMaxCountErrorText(R.string.select_max_count_warning)
                     .setCompleteButtonText(getString(R.string.selected))
                     .setEmptySelectionText(getString(R.string.tab_select))

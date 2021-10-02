@@ -23,7 +23,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
     @Nullable
     private final android.view.View.OnClickListener mCallback7;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,8 +49,8 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
         this.userReject.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback8 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback6 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -76,7 +76,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) variable);
+            setViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel) variable);
         }
         else {
             variableSet = false;
@@ -84,7 +84,7 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel ViewModel) {
         updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
         synchronized(this) {
@@ -98,11 +98,11 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -126,8 +126,8 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
             mDirtyFlags = 0;
         }
         java.lang.String viewModelStudentsItemStudentName = null;
-        te.app.notta.pages.home.models.details.StudentsItem viewModelStudentsItem = null;
-        te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+        te.app.notta.pages.groupDetails.models.details.StudentsItem viewModelStudentsItem = null;
+        te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
         java.lang.String viewModelStudentsItemStudentImage = null;
         java.lang.String viewModelStudentsItemGroupName = null;
 
@@ -161,37 +161,18 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.userAccept.setOnClickListener(mCallback8);
-            this.userReject.setOnClickListener(mCallback7);
+            this.userAccept.setOnClickListener(mCallback7);
+            this.userReject.setOnClickListener(mCallback6);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.itemAction(te.app.notta.utils.Constants.REJECT);
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewModel
-                te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+                te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
                 // viewModel != null
                 boolean viewModelJavaLangObjectNull = false;
 
@@ -204,6 +185,25 @@ public class ItemStudentRequestBindingImpl extends ItemStudentRequestBinding imp
 
 
                     viewModel.itemAction(te.app.notta.utils.Constants.ACCEPT);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.REJECT);
                 }
                 break;
             }

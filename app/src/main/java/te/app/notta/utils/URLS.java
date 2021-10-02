@@ -20,7 +20,7 @@ public class URLS {
     public final static String CONFIRM_CODE = "user/otp-check";
     public final static String UPDATE_PROFILE = "user/update-profile";
     public static final String FORGET_PASSWORD = "user/verify-email";
-    public static final String CHANGE_PASSWORD = "v1/provider/change_password";
+    public static final String CHANGE_PASSWORD = "user/change-password";
     public final static String ADD_GIFT = "teacher/create-gift";
     public final static String DELETE_GIFT = "teacher/remove-gift";
     public final static String GROUP_STUDENTS = "teacher/get-group-students?group_id=";
@@ -35,8 +35,8 @@ public class URLS {
     public final static String LEAVE_GROUP = "student/leave-group";
     public final static String GET_GIFT = "student/exchange-gift";
     public static final String CONTACT_US = " app/complains-suggestions";
-    public static final String NOTIFICATIONS = "v1/provider/notifications?page=";
-    public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
+    public static final String GROUP_STUDENT_TASKS = "teacher/get-student-tasks?student_id=";
+    public final static String GIVE_POINTS = "teacher/give-points";
     public final static String USER_PROFILE = "v1/provider/profile";
     public static final String GET_SOCIAL = "v1/social_media";
     public static final String PRIVACY = "v1/privacy_policy";

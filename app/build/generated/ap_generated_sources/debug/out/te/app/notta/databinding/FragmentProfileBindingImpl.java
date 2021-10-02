@@ -25,11 +25,11 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     private final androidx.recyclerview.widget.RecyclerView mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback41;
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback40;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,9 +57,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         this.tvUserName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback41 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback40 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -171,9 +171,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.logout.setOnClickListener(mCallback16);
-            this.mboundView2.setOnClickListener(mCallback15);
-            this.memberProfile.setOnClickListener(mCallback14);
+            this.logout.setOnClickListener(mCallback42);
+            this.mboundView2.setOnClickListener(mCallback41);
+            this.memberProfile.setOnClickListener(mCallback40);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -192,6 +192,23 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.profile();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -210,23 +227,6 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
                 break;
             }
             case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.profile();
-                }
-                break;
-            }
-            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

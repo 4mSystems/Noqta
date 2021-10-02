@@ -22,7 +22,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback35;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
         this.rcMembers.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -69,7 +69,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((te.app.notta.pages.home.viewModels.GroupDetailsViewModel) variable);
+            setViewmodel((te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -77,7 +77,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable te.app.notta.pages.home.viewModels.GroupDetailsViewModel Viewmodel) {
+    public void setViewmodel(@Nullable te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel Viewmodel) {
         updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -91,11 +91,11 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((te.app.notta.pages.home.viewModels.GroupDetailsViewModel) object, fieldId);
+                return onChangeViewmodel((te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.home.viewModels.GroupDetailsViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -118,8 +118,8 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.notta.pages.home.adapters.GroupDetailsStudentsAdapter viewmodelGroupDetailsStudentsAdapter = null;
-        te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.groupDetails.adapters.GroupDetailsStudentsAdapter viewmodelGroupDetailsStudentsAdapter = null;
+        te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -134,7 +134,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback4);
+            this.back.setOnClickListener(mCallback35);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -149,7 +149,7 @@ public class FragmentGroupStudentsBindingImpl extends FragmentGroupStudentsBindi
         // viewmodel != null
         boolean viewmodelJavaLangObjectNull = false;
         // viewmodel
-        te.app.notta.pages.home.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+        te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
 
 
 

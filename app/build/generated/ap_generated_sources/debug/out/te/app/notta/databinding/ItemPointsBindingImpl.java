@@ -25,9 +25,9 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     private final androidx.appcompat.widget.AppCompatButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback35;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,8 +55,8 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback36 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback20 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -209,8 +209,8 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icDelete.setOnClickListener(mCallback35);
-            this.mboundView6.setOnClickListener(mCallback36);
+            this.icDelete.setOnClickListener(mCallback20);
+            this.mboundView6.setOnClickListener(mCallback21);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -231,25 +231,6 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.itemAction(te.app.notta.utils.Constants.DELETE_GIFT);
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewModel
@@ -266,6 +247,25 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
 
 
                     viewModel.itemAction(te.app.notta.utils.Constants.GET_GIFT);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.DELETE_GIFT);
                 }
                 break;
             }

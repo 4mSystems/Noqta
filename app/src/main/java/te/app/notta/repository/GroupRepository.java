@@ -16,8 +16,9 @@ import te.app.notta.model.base.Mutable;
 import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.addAnswer.models.AddAnswerRequest;
 import te.app.notta.pages.addAnswer.models.TaskDetailsResponse;
-import te.app.notta.pages.home.models.details.GroupDetailsResponse;
-import te.app.notta.pages.home.models.groupStudents.GroupStudentsResponse;
+import te.app.notta.pages.groupDetails.models.details.GroupDetailsResponse;
+import te.app.notta.pages.groupDetails.models.groupStudents.GroupStudentsResponse;
+import te.app.notta.pages.groupDetails.models.studentTasks.StudentTasksResponse;
 import te.app.notta.pages.points.models.PointsResponse;
 import te.app.notta.pages.points.models.students.StudentPointsResponse;
 import te.app.notta.pages.teacher.models.AddGiftRequest;
@@ -160,6 +161,11 @@ public class GroupRepository extends BaseRepository {
                 Constants.Add_ANSWER, false);
     }
 
+    public Disposable givePoints(AddAnswerRequest addAnswerRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.GIVE_POINTS, addAnswerRequest, StatusMessage.class,
+                Constants.Add_ANSWER, false);
+    }
+
     public Disposable getAvalStudentPoints(int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.STUDENT_POINTS + page, new Object(), StudentPointsResponse.class,
                 Constants.STUDENT_GIFTS, showProgress);
@@ -182,5 +188,10 @@ public class GroupRepository extends BaseRepository {
         request.setGroupId(String.valueOf(groupId));
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LEAVE_GROUP, request, StatusMessage.class,
                 Constants.LEAVE_GROUP, true);
+    }
+
+    public Disposable groupStudentTasks(int page, boolean showProgress, int groupId, String studentId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GROUP_STUDENT_TASKS + studentId + "&group_id=" + groupId + "&page=" + page, new Object(), StudentTasksResponse.class,
+                Constants.STUDENT_TASKS, showProgress);
     }
 }

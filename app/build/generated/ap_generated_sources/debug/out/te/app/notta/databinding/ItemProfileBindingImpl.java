@@ -20,7 +20,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback74;
+    private final android.view.View.OnClickListener mCallback32;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding implements te.app
         this.tvGroupName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback74 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -146,7 +146,7 @@ public class ItemProfileBindingImpl extends ItemProfileBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback74);
+            this.mboundView0.setOnClickListener(mCallback32);
         }
     }
     // Listener Stub Implementations

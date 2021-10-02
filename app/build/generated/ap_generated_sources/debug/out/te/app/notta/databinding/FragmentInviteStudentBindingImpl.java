@@ -21,9 +21,9 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback65;
+    private final android.view.View.OnClickListener mCallback78;
     @Nullable
-    private final android.view.View.OnClickListener mCallback66;
+    private final android.view.View.OnClickListener mCallback79;
     // values
     // listeners
     private OnTextChangedImpl mViewModelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -50,8 +50,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         this.rcStudents.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback65 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback66 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback78 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback79 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -192,8 +192,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnClose.setOnClickListener(mCallback66);
-            this.dialogHeader.setOnClickListener(mCallback65);
+            this.btnClose.setOnClickListener(mCallback79);
+            this.dialogHeader.setOnClickListener(mCallback78);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1

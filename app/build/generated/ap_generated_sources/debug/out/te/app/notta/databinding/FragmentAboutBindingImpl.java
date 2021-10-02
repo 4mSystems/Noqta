@@ -23,7 +23,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback50;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
         this.tvProfileTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback37 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -204,7 +204,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback37);
+            this.back.setOnClickListener(mCallback50);
         }
     }
     // Listener Stub Implementations

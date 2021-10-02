@@ -45,8 +45,16 @@ public class MyGroupsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getHome(page, showProgress, searchText));
     }
 
+    public void studentTasks(int page, boolean showProgress) {
+        compositeDisposable.add(repository.studentTasks(page, showProgress));
+    }
+
     public void removeGroup(int groupId) {
         compositeDisposable.add(repository.deleteGroup(groupId));
+    }
+
+    public void leaveGroup(int groupId) {
+        compositeDisposable.add(repository.leaveGroup(groupId));
     }
 
     @Bindable

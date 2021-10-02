@@ -29,15 +29,15 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback17;
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback13;
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -149,11 +149,11 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback24 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback25 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback22 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback16 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback17 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback13 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.notta.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -431,13 +431,13 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding i
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback25);
+            this.appCompatButtonNext.setOnClickListener(mCallback17);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.back.setOnClickListener(mCallback21);
-            this.mboundView3.setOnClickListener(mCallback23);
+            this.back.setOnClickListener(mCallback13);
+            this.mboundView3.setOnClickListener(mCallback15);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
-            this.mboundView8.setOnClickListener(mCallback24);
-            this.memberProfile.setOnClickListener(mCallback22);
+            this.mboundView8.setOnClickListener(mCallback16);
+            this.memberProfile.setOnClickListener(mCallback14);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1

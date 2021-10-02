@@ -19,7 +19,7 @@ import java.util.List;
 import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.databinding.ItemHomeBinding;
-import te.app.notta.pages.home.GroupDetailsFragment;
+import te.app.notta.pages.groupDetails.GroupDetailsFragment;
 import te.app.notta.pages.home.models.GroupItem;
 import te.app.notta.pages.home.viewModels.ItemHomeViewModel;
 import te.app.notta.pages.teacher.AddTaskFragment;

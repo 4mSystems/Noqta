@@ -63,7 +63,7 @@ public class Constants {
     public static final String LEAVE_GROUP = "LEAVE_GROUP";
     public static final String GET_GIFT = "GET_GIFT";
     public static final String SHARE_BAR = "SHARE_BAR";
-    public static final String PROFILE = "PROFILE";
+    public static final String STUDENT_TASKS = "STUDENT_TASKS";
 
 
     //REQUESTS
@@ -81,10 +81,7 @@ public class Constants {
     public final static int FILE_TYPE_VIDEO = 379;
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
-
-    public static final String front_car_image = "front_car_image";
-    public static final int ORDER_DETAILS_REQUEST = 380;
-
+    public static final String SHOW_ANSWERS = "SHOW_ANSWERS";
     public static final String back_car_image = "back_car_image";
     public static final int ADD_GROUP_REQUEST = 381;
 

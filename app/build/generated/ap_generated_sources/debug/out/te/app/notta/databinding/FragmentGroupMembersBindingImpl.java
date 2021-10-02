@@ -23,7 +23,7 @@ public class FragmentGroupMembersBindingImpl extends FragmentGroupMembersBinding
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback76;
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentGroupMembersBindingImpl extends FragmentGroupMembersBinding
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback76 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback33 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,7 +117,7 @@ public class FragmentGroupMembersBindingImpl extends FragmentGroupMembersBinding
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback76);
+            this.back.setOnClickListener(mCallback33);
         }
     }
     // Listener Stub Implementations

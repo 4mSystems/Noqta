@@ -14,10 +14,11 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.GroupDetailsViewModel" />
+            type="te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:visibility="@{viewmodel.groupDetails.createdAt!=null?View.VISIBLE:View.GONE}"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -277,7 +278,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp7"
-                    android:visibility="@{viewmodel.groupDetails.member==1?View.VISIBLE:viewmodel.groupDetails.teacher.id==viewmodel.userData.id?View.GONE:View.INVISIBLE}"
+                    android:visibility="@{viewmodel.groupDetails.member==1?View.VISIBLE:viewmodel.groupDetails.teacher.id==viewmodel.userData.id?View.GONE:View.GONE}"
                     app:backgroundTint="@color/red"
                     app:icon="@drawable/ic_exit"
                     app:iconGravity="textTop" />

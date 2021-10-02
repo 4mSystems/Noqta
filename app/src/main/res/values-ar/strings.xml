@@ -177,4 +177,13 @@
     <string name="leave_group_successfully">Are you sure want to leav Group ?</string>
     <string name="leave_group_body_successfully">You will leave Group and all your points that you gain from Tasks Will Deleted</string>
     <string name="enough_points_warning">Sorry, you don\'t have enough points</string>
+    <string name="show_answers">Show Answers</string>
+    <string name="answer">Answers</string>
+    <string name="give_points">Give points</string>
+    <string name="give_points_to">Give points to</string>
+    <string name="points_body1">You will Give</string>
+    <string name="points_body2">points to get any gift from Noqta as appreciate to his effort</string>
+    <string name="images_selected">You have select some of images successfully to view or edit , CLICK HERE</string>
+    <string name="video_warning">نأسف المده المسموح بها هى 15 ثانية</string>
+    <string name="compressing">Please wait...</string>
 </resources>

@@ -2,6 +2,7 @@ package te.app.notta.pages.auth.models;
 
 import androidx.databinding.ObservableField;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import te.app.notta.utils.Constants;
@@ -19,6 +20,8 @@ public class RegisterRequest {
     private String phone;
     @SerializedName("password")
     private String password;
+    @SerializedName("old_password")
+    @Expose
     private String oldPassword;
     private String confirmPassword;
     @SerializedName("token")

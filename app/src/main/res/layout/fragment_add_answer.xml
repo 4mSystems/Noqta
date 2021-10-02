@@ -19,7 +19,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewmodel.taskDetailsData.createdAt!=null?View.VISIBLE:View.GONE}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,7 +44,7 @@
                 android:layout_marginEnd="24dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="@string/add_answer"
+                android:text="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?viewmodel.taskDetailsData.taskAnswer!=null?viewmodel.taskDetailsData.taskAnswer.studentName.concat(` `).concat(@string/answer):``:@string/add_answer}"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/white"
@@ -131,30 +132,33 @@
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="tv_details,MaterialCardView" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/main_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp150h"
                 android:layout_margin="@dimen/dp10h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
-                android:visibility="@{viewmodel.taskMediaAdapter.itemCount>0?View.INVISIBLE:View.GONE}"
+                android:visibility="@{viewmodel.taskMediaAdapter.itemCount>0?View.VISIBLE:View.GONE}"
                 app:imageFullUrl="@{viewmodel.taskMediaAdapter.itemCount>0?viewmodel.taskMediaAdapter.filesItemList.get(0).file:``}"
                 app:layout_constraintStart_toStartOf="@id/tv_tasks"
-                app:layout_constraintTop_toBottomOf="@id/br4" />
+                app:layout_constraintTop_toBottomOf="@id/br4"
+                app:riv_border_color="@color/medium_color"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="@dimen/dp6h" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rc_task_media"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp2h"
+                android:layout_marginTop="@dimen/dp4h"
                 android:orientation="horizontal"
                 app:adapter="@{viewmodel.taskMediaAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_tasks"
                 app:layout_constraintTop_toBottomOf="@id/main_image"
-                app:orientation="@{`1`}"
+                app:orientation="@{`2`}"
                 app:span="@{`1`}"
                 tools:listitem="@layout/item_task_media" />
 
@@ -197,6 +201,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp90h"
+                    android:enabled="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?false:true}"
                     android:gravity="top"
                     android:inputType="textMultiLine"
                     android:text="@={viewmodel.addAnswerRequest.answerText}"
@@ -215,6 +220,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?View.GONE:View.VISIBLE}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_answer" />
 
@@ -225,6 +231,7 @@
                 android:layout_marginTop="@dimen/dp18h"
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_gray_border"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?View.GONE:View.VISIBLE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_images"
                 app:layout_constraintTop_toBottomOf="@id/tv_images">
@@ -240,18 +247,37 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
                 <te.app.notta.customViews.views.CustomTextViewRegular
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp13w"
+                    android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
                     android:text="@string/upload_images_hint"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/medium_color"
+                    android:visibility="@{viewmodel.selectedUri.size()==0?View.VISIBLE:View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/ic_cloud_upload" />
+
+                <te.app.notta.customViews.views.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp13w"
+                    android:onClick="@{()->viewmodel.action(Constants.IMAGE)}"
+                    android:text="@string/images_selected"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color"
+                    android:visibility="@{viewmodel.selectedUri.size()>0?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_cloud_upload" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <te.app.notta.customViews.views.CustomTextViewMedium
@@ -264,6 +290,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?View.GONE:View.VISIBLE}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/images_container" />
 
@@ -274,6 +301,7 @@
                 android:layout_marginTop="@dimen/dp18h"
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_gray_border"
+                android:visibility="@{viewmodel.passingObject.object.equals(Constants.SHOW_ANSWERS)?View.GONE:View.VISIBLE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_video"
                 app:layout_constraintTop_toBottomOf="@id/tv_video">
@@ -310,7 +338,7 @@
                 android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_gradient:@drawable/corner_view_primary_medium,default=@drawable/corner_view_gradient}"
                 android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
                 android:onClick="@{()-> viewmodel.answerTask()}"
-                android:text="@string/send_answer"
+                android:text="@{viewmodel.passingObject.object.equals(Constants.Add_ANSWER)?@string/send_answer:@string/give_points}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"

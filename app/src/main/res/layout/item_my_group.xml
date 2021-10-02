@@ -109,7 +109,7 @@
                 android:text="@{viewModel.groupItem.studentsCount.concat(@string/students)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp8"
+                android:textSize="@dimen/sp5"
                 app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
@@ -119,7 +119,7 @@
                 android:text="@{viewModel.groupItem.tasksCount.concat(@string/tasks)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp8"
+                android:textSize="@dimen/sp5"
                 app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
@@ -129,21 +129,21 @@
                 android:text="@{viewModel.groupItem.requestsCount.concat(@string/requests)}"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp8"
+                android:textSize="@dimen/sp5"
                 app:backgroundTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_join"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{()->viewModel.itemAction(Constants.JOIN_REQUEST)}"
-                android:text="@string/join"
+                android:onClick="@{()->viewModel.itemAction(Constants.DIALOG_SHOW_LEAVE)}"
+                android:text="@string/leave"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp8"
-                android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id?View.VISIBLE:View.GONE}"
-                app:backgroundTint="@color/colorPrimaryDark"
-                app:icon="@{viewModel.groupItem.joinSent==1?@drawable/ic_request_waiting:@drawable/ic_icon_awesome_user_plus}"
+                android:textSize="@dimen/sp5"
+                android:visibility="@{viewModel.groupItem.teacher.id!=viewModel.userData.id?View.VISIBLE:View.GONE,default=gone}"
+                app:backgroundTint="@color/red"
+                app:icon="@drawable/ic_exit"
                 app:iconGravity="textTop" />
 
             <com.google.android.material.button.MaterialButton
@@ -154,8 +154,8 @@
                 android:text="@string/remove_group"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp8"
-                android:visibility="@{viewModel.groupItem.teacher.id==viewModel.userData.id?View.VISIBLE:View.GONE}"
+                android:textSize="@dimen/sp5"
+                android:visibility="@{viewModel.groupItem.teacher.id==viewModel.userData.id?View.VISIBLE:View.GONE,default=gone}"
                 app:backgroundTint="@color/red"
                 app:icon="@drawable/ic_delete"
                 app:iconGravity="textTop" />

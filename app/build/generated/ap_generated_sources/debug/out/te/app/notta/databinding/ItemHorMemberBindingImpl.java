@@ -66,7 +66,7 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) variable);
+            setViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel) variable);
         }
         else {
             variableSet = false;
@@ -74,7 +74,7 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
             return variableSet;
     }
 
-    public void setViewModel(@Nullable te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel) {
+    public void setViewModel(@Nullable te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel ViewModel) {
         updateRegistration(0, ViewModel);
         this.mViewModel = ViewModel;
         synchronized(this) {
@@ -88,11 +88,11 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel) object, fieldId);
+                return onChangeViewModel((te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -116,8 +116,8 @@ public class ItemHorMemberBindingImpl extends ItemHorMemberBinding  {
             mDirtyFlags = 0;
         }
         java.lang.String viewModelStudentsItemStudentPoints = null;
-        te.app.notta.pages.home.models.details.StudentsItem viewModelStudentsItem = null;
-        te.app.notta.pages.home.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
+        te.app.notta.pages.groupDetails.models.details.StudentsItem viewModelStudentsItem = null;
+        te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel viewModel = mViewModel;
         java.lang.String viewModelStudentsItemStudentImage = null;
 
         if ((dirtyFlags & 0x7L) != 0) {

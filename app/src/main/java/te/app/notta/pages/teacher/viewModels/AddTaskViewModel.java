@@ -33,7 +33,8 @@ public class AddTaskViewModel extends BaseViewModel {
     GroupRepository repository;
     AddTaskRequest addTaskRequest;
     private List<Uri> selectedUri = new ArrayList<>();
-     List<FileObject> objectList = new ArrayList<>();
+    List<FileObject> objectList = new ArrayList<>();
+    public String videoPath;
 
     @Inject
     public AddTaskViewModel(GroupRepository repository) {
@@ -53,9 +54,11 @@ public class AddTaskViewModel extends BaseViewModel {
         if (getAddTaskRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             for (int i = 0; i < getSelectedUri().size(); i++) {
-                objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), Constants.FILE, Constants.FILE_TYPE_IMAGE));
+                objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), "file[" + i + "]", Constants.FILE_TYPE_IMAGE));
             }
-            compositeDisposable.add(repository.addTask(getAddTaskRequest(),objectList));
+            if (!TextUtils.isEmpty(videoPath))
+                objectList.add(new FileObject("file[" + objectList.size() + "]", videoPath, Constants.FILE_TYPE_VIDEO));
+            compositeDisposable.add(repository.addTask(getAddTaskRequest(), objectList));
         }
     }
 
@@ -71,11 +74,14 @@ public class AddTaskViewModel extends BaseViewModel {
         return this.addTaskRequest == null ? this.addTaskRequest = new AddTaskRequest() : this.addTaskRequest;
     }
 
+    @Bindable
     public List<Uri> getSelectedUri() {
         return selectedUri;
     }
 
+    @Bindable
     public void setSelectedUri(List<Uri> selectedUri) {
+        notifyChange(BR.selectedUri);
         this.selectedUri = selectedUri;
     }
 

@@ -14,7 +14,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.GroupDetailsViewModel" />
+            type="te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
