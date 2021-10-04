@@ -26,7 +26,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback34;
+    private final android.view.View.OnClickListener mCallback35;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,7 +55,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
         this.tvYourPoint2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback34 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback35 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -230,7 +230,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding implements 
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback34);
+            this.mboundView5.setOnClickListener(mCallback35);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1

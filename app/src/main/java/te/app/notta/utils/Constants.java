@@ -85,7 +85,7 @@ public class Constants {
     public static final String back_car_image = "back_car_image";
     public static final int ADD_GROUP_REQUEST = 381;
 
-    public static final String PRIVACY = "PRIVACY";
+    public static final String REMOVE_VIDEO = "REMOVE_VIDEO";
     public static final String LIKES_REACTION = "like";
     public static final String DISLIKES_REACTIONS = "dislike";
     public static final String PROFILE_POSTS = "PROFILE_POSTS";

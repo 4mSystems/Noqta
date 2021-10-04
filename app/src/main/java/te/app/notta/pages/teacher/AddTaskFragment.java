@@ -8,10 +8,14 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +30,9 @@ import com.google.gson.Gson;
 
 import java.io.File;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import javax.inject.Inject;
 
@@ -44,11 +51,13 @@ import te.app.notta.pages.teacher.viewModels.AddTaskViewModel;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
 import te.app.notta.utils.upload.FileOperations;
+import te.app.videocompressor.VideoCompress;
 
 public class AddTaskFragment extends BaseFragment {
     FragmentAddTaskBinding addTaskBinding;
     @Inject
     AddTaskViewModel viewModel;
+    ProgressDialog dialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,6 +70,7 @@ public class AddTaskFragment extends BaseFragment {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
         }
+        initProgress();
         setEvent();
         return addTaskBinding.getRoot();
     }
@@ -125,9 +135,10 @@ public class AddTaskFragment extends BaseFragment {
     @Override
     public void launchActivityResult(int request, int resultCode, Intent result) {
         if (request == Constants.FILE_TYPE_VIDEO) {
-            if (videoTime(new File(FileOperations.getPath(requireActivity(), result.getData())), requireActivity()) <= 30) {
-                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
-                new CompressVideo().execute("false", result.getData().toString(), file.getPath());
+            if (videoTime(new File(FileOperations.getPath(requireActivity(), result.getData())), requireActivity()) <= 60) {
+//                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+//                new CompressVideo().execute("false", result.getData().toString(), file.getPath());
+                compress(FileOperations.getPath(requireActivity(), result.getData()));
             } else {
                 toastErrorMessage(getString(R.string.video_warning));
             }
@@ -135,33 +146,46 @@ public class AddTaskFragment extends BaseFragment {
         super.launchActivityResult(request, resultCode, result);
     }
 
-    private class CompressVideo extends AsyncTask<String, String, String> {
-        Dialog dialog;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            dialog = ProgressDialog.show(requireActivity(), "", getString(R.string.compressing));
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-            String videoPath = null;
-//            try {
-//                Uri uri = Uri.parse(strings[1]);
-////                videoPath = SiliCompressor.with(requireActivity()).compressVideo(uri, strings[2], 1280, 720, 1500000);
-//            } catch (URISyntaxException e) {
-//                e.printStackTrace();
-//            }
-            return videoPath;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            dialog.dismiss();
-            File file = new File(s);
-            viewModel.videoPath = file.getPath();
-        }
+    private void initProgress() {
+        dialog = new ProgressDialog(requireContext(), R.style.progressDialog);
+//        dialog.setIcon(R.drawable.ic_logo_original);
+        dialog.setTitle(getString(R.string.compressing));
+        dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        dialog.setCancelable(false);
     }
+
+    private void compress(String filePath) {
+        String destPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()
+                + File.separator + "VID_" + new SimpleDateFormat("yyyyMMdd_HHmmss", new Locale("en")).format(new Date()) + ".mp4";
+        VideoCompress.compressVideoLow(filePath, destPath, new VideoCompress.CompressListener() {
+            @Override
+            public void onStart() {
+                dialog.setProgress(0);
+                dialog.show();
+            }
+
+            @Override
+            public void onSuccess() {
+                dialog.dismiss();
+                Log.e("onSuccess", "onSuccess: " + destPath);
+                Bitmap thumb = ThumbnailUtils.createVideoThumbnail(destPath,
+                        MediaStore.Images.Thumbnails.MINI_KIND);
+                addTaskBinding.postImg.setImageBitmap(thumb);
+                addTaskBinding.postImg.setVisibility(View.VISIBLE);
+                viewModel.videoPath.set(destPath);
+            }
+
+            @Override
+            public void onFail() {
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onProgress(float percent) {
+                dialog.setProgress((int) percent);
+            }
+        });
+
+    }
+
 }

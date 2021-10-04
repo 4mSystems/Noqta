@@ -34,7 +34,7 @@
     <string name="login_phone">Mobile number</string>
     <string name="login_header_number">Mobile number</string>
     <string name="login_forget">Forget Password ?</string>
-    <string name="forget_header">Fogot <font fgcolor='#FBB32A'>Noqta </font> Password</string>
+    <string name="forget_header">Forget <font fgcolor='#FBB32A'>Noqta </font> Password</string>
     <string name="confirm_header">Please enter code we’ve sent to your E-mail Address</string>
     <string name="confirm_account">activate the account</string>
     <string name="forget_remember">I remembered the password</string>
@@ -58,7 +58,7 @@
     <string name="password_hint_confirm">Confirm password</string>
     <string name="change_password">Change password</string>
     <string name="forget_header1">Forget password</string>
-    <string name="privacy">Provcay</string>
+    <string name="privacy">Privacy</string>
     <string name="terms">Terms And Conditions</string>
     <string name="have_not_account">Don’t have an account? </string>
     <string name="have_not_account_bold">Sign up</string>
@@ -182,8 +182,8 @@
     <string name="points_body1">You will Give</string>
     <string name="points_body2">points to get any gift from Noqta as appreciate to his effort</string>
     <string name="images_selected">You have select some of images successfully to view or edit ,<b> <font fgcolor='colorPrimaryDark'>CLICK HERE</font></b></string>
-    <string name="video_warning">Sorry , only 30 seconds </string>
-    <string name="compressing">Please wait...</string>
+    <string name="video_warning">Sorry , only 1 minute </string>
+    <string name="compressing">Please wait…</string>
     <string name="track_selection_title">Select tracks</string>
     <string name="storage_permission_denied">Storage pernission denied</string>
     <string name="error_generic">Playback failed</string>

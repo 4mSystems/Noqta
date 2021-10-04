@@ -39,17 +39,22 @@
     <!--            app:layout_constraintStart_toStartOf="parent"-->
     <!--            app:layout_constraintTop_toTopOf="parent" />-->
     <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:keepScreenOn="true">
 
-        <com.potyvideo.library.AndExoPlayerView
-            android:id="@+id/andExoPlayerView"
+        <com.google.android.exoplayer2.ui.StyledPlayerView
+            android:id="@+id/player_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:andexo_aspect_ratio="aspect_16_9" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:auto_show="true"
+            app:resize_mode="fit"
+            app:show_shuffle_button="false"
+            app:show_subtitle_button="false" />
+
+    </FrameLayout>
 </layout>

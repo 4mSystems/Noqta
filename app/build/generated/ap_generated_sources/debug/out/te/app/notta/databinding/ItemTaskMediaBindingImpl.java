@@ -22,7 +22,7 @@ public class ItemTaskMediaBindingImpl extends ItemTaskMediaBinding implements te
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback84;
+    private final android.view.View.OnClickListener mCallback85;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemTaskMediaBindingImpl extends ItemTaskMediaBinding implements te
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback84 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback85 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -166,7 +166,7 @@ public class ItemTaskMediaBindingImpl extends ItemTaskMediaBinding implements te
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback84);
+            this.mboundView2.setOnClickListener(mCallback85);
         }
     }
     // Listener Stub Implementations

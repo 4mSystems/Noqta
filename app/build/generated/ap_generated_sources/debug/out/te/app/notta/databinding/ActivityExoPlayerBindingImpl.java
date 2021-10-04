@@ -14,9 +14,11 @@ public class ActivityExoPlayerBindingImpl extends ActivityExoPlayerBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.andExoPlayerView, 1);
+        sViewsWithIds.put(R.id.player_view, 1);
     }
     // views
+    @NonNull
+    private final android.widget.FrameLayout mboundView0;
     // variables
     // values
     // listeners
@@ -27,10 +29,10 @@ public class ActivityExoPlayerBindingImpl extends ActivityExoPlayerBinding  {
     }
     private ActivityExoPlayerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.potyvideo.library.AndExoPlayerView) bindings[1]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
+            , (com.google.android.exoplayer2.ui.StyledPlayerView) bindings[1]
             );
-        this.root.setTag(null);
+        this.mboundView0 = (android.widget.FrameLayout) bindings[0];
+        this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

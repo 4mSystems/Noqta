@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 import androidx.databinding.Bindable;
+import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class AddTaskViewModel extends BaseViewModel {
     AddTaskRequest addTaskRequest;
     private List<Uri> selectedUri = new ArrayList<>();
     List<FileObject> objectList = new ArrayList<>();
-    public String videoPath;
+    public ObservableField<String> videoPath= new ObservableField<>();
 
     @Inject
     public AddTaskViewModel(GroupRepository repository) {
@@ -56,8 +57,8 @@ public class AddTaskViewModel extends BaseViewModel {
             for (int i = 0; i < getSelectedUri().size(); i++) {
                 objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), "file[" + i + "]", Constants.FILE_TYPE_IMAGE));
             }
-            if (!TextUtils.isEmpty(videoPath))
-                objectList.add(new FileObject("file[" + objectList.size() + "]", videoPath, Constants.FILE_TYPE_VIDEO));
+            if (!TextUtils.isEmpty(videoPath.get()))
+                objectList.add(new FileObject("file[" + objectList.size() + "]", videoPath.get(), Constants.FILE_TYPE_VIDEO));
             compositeDisposable.add(repository.addTask(getAddTaskRequest(), objectList));
         }
     }

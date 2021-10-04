@@ -1,16 +1,16 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">نقطة</string>
     <string name="gallery">المعرض</string>
     <string name="camera">كاميرا</string>
     <string name="design_program">Design and programming</string>
     <string name="call_grand">Contact</string>
     <string name="whats">What\'s app</string>
-    <string name="call">اتصال</string>
+    <string name="call">call</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="select_image_from">إختر صورتك</string>
-    <string name="select_file">إختر</string>
-    <string name="connection_invaild_body">Check your Internet connection and try again</string>
+    <string name="select_image_from">اختر الصورة</string>
+    <string name="select_file">غختر</string>
+    <string name="connection_invaild_body">تحقق من اتصالك بالانترنت وحاول مره اخرى</string>
     <string name="connection_On">Please turn on</string>
     <string name="connection_Wifi">Wifi</string>
     <string name="connection_Data">Mobile data</string>
@@ -19,101 +19,98 @@
     <string name="connection_AirPlane_Mode">Airplane mode</string>
     <string name="connection_invaild_msg">Poor Internet Connection</string>
     <string name="please_select_another_file">Please select another file</string>
-    <string name="google_map">AIzaSyAG9F2HDaTi93fzTTB0vdj5G0Ol6ys2SgQ</string>
-    <string name="email_hint">البريد الالكترونى</string>
-    <string name="email"> البريد الإلكترونى</string>
-    <string name="password">كلمة المرور</string>
-    <string name="login">تسجيل الدخول</string>
-    <string name="phone">من فضلك ادخل رقم الجوال او البريد الاكتروني</string>
-    <string name="invalidEmail">بريد الكترونى خاطئ, ِAber@example.com</string>
-    <string name="invalidPassword">كلمة المرور ضعيفه على الاقل 8 حروف وارقام</string>
-    <string name="invalidPhone">Invalid phone</string>
-    <string name="fieldRequired">هذا الحقل مطلوب</string>
+    <string name="email_hint">E-mail</string>
+    <string name="email">E-mail</string>
+    <string name="password">password</string>
+    <string name="login"><font fgcolor='#FBB32A'>نقطة </font>مرحبا بك فى تطبيق </string>
+    <string name="phone">الرجاء إدخال رقم هاتفك المحمول أو البريد الإلكتروني</string>
+    <string name="invalidEmail">بريد إلكتروني خاطئ ، Noqta@example.com</string>
+    <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف وأرقام</string>
+    <string name="invalidPhone">كلمة المرور ضعيفة ، على الأقل 8 أحرف وأرقام</string>
+    <string name="fieldRequired">حقل مطلوب</string>
     <string name="next">التالي</string>
-    <string name="startApp">بدأ التطبيق</string>
-    <string name="select_country">إختر الدولة</string>
-    <string name="country_next">التالى</string>
+    <string name="startApp">بدء التطبيق</string>
     <string name="login_header">تسجيل الدخول</string>
-    <string name="login_phone">رقم الجوال </string>
-    <string name="login_header_number"> رقم الجوال</string>
-    <string name="login_forget">نسيت كلمة المرور ؟</string>
-    <string name="forget_header">نسيت كلمة المرور</string>
-    <string name="confirm_header">كود استرجاع كلمة المرور</string>
+    <string name="login_phone">رقم الهاتف </string>
+    <string name="login_header_number">رقم الهاتف </string>
+    <string name="login_forget">هل نسيت كلمة السر ؟</string>
+    <string name="forget_header">كلمة المرور <font fgcolor = '# FBB32A'> نقطة </font> نسيت</string>
+    <string name="confirm_header">الرجاء إدخال الرمز الذي أرسلناه إلى عنوان بريدك الإلكتروني</string>
     <string name="confirm_account">تفعيل الحساب</string>
     <string name="forget_remember">تذكرت كلمة المرور</string>
     <string name="send">إرسال</string>
-    <string name="confirm_header_text">سيتم ارسال كود التفعيل علي الهاتف الخاص بك برجاء ادخال الكود</string>
-    <string name="confirm_header_text_forget">من فضلك قم بكتابه الكود</string>
+    <string name="confirm_header_text">سيتم إرسال رمز التفعيل إلى هاتفك. الرجاء إدخال الرمز</string>
+    <string name="confirm_header_text_forget">الرجاء كتابة الكود</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_resend">إعادة إرسال</string>
-    <string name="change_header">إنشاء كلمة مرور جديدة</string>
-    <string name="change_header_text">من فضلك قم بكتابة كلمة مرور جديدة</string>
-    <string name="change_new_password">كلمة المرور الجديدة</string>
+    <string name="change_header">أنشئ كلمة مرور جديدة</string>
+    <string name="change_header_text">الرجاء إدخال كلمة المرور الجديدة الخاصة بك والتأكد من أن أي شخص يعرفها</string>
+    <string name="change_new_password">كلمة مرور جديدة</string>
     <string name="change_confirm_password">تأكيد كلمة المرور</string>
-    <string name="password_hint">قم بإدخال كلمة المرور</string>
-    <string name="register_header">إنشاء حساب جديد</string>
-    <string name="register_name">الاسم بالكامل</string>
-    <string name="name_hint">من فضلك قم بكتابة اسمك</string>
-    <string name="register_phone">رقم الجوال </string>
-    <string name="register"> حفظ البيانات</string>
-    <string name="have_account"> لدي حساب بالفعل؟</string>
-    <string name="old_password">Old password</string>
-    <string name="password_hint_confirm">Confirm password</string>
-    <string name="change_password">Change password</string>
-    <string name="forget_header1">forget_header1</string>
-    <string name="privacy">Provcay</string>
-    <string name="terms">terms</string>
-    <string name="have_not_account">have_not_account</string>
-    <string name="have_not_account_bold">have_not_account_bold</string>
-    <string name="drop_off_skip">Skip</string>
-    <string name="password_not_match">Password doesn\'t match</string>
-    <string name="msg_server_error">errors occurred try again</string>
-    <string name="login_body">Please Login to your account</string>
-    <string name="register_header1">Sign up With Noqta App</string>
-    <string name="student">Student</string>
-    <string name="teacher">Teacher</string>
-    <string name="certificates">Teatching Certificate</string>
-    <string name="verify_phone">Phone Verification</string>
-    <string name="verify">Verify</string>
-    <string name="forget_body">Please enter your email address. You will recive a link to create a new password via email.</string>
-    <string name="save">Save</string>
-    <string name="home_title">Choose your Group and Join Now !</string>
-    <string name="search_home_hint">Search Group Name or teacher name ?</string>
-    <string name="home_body">Noqta Groups , Join Now !</string>
-    <string name="join">Join</string>
-    <string name="tasks_body">Noqta Group Tasks , Les Go</string>
+    <string name="password_hint">أدخل كلمة المرور</string>
+    <string name="register_header">يرجى ملء استمارة التسجيل</string>
+    <string name="register_name">الاسم</string>
+    <string name="name_hint">يرجى كتابة اسمك</string>
+    <string name="register_phone">رقم الهاتف</string>
+    <string name="register">انشاء الحساب</string>
+    <string name="have_account">هل لديك حساب؟</string>
+    <string name="old_password">كلمة سر قديمة</string>
+    <string name="password_hint_confirm">تأكيد كلمة المرور</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="forget_header1">هل نسيت كلمة السر</string>
+    <string name="privacy">سياسة الخصوصية</string>
+    <string name="terms">الأحكام والشروط</string>
+    <string name="have_not_account">ليس لديك حساب؟</string>
+    <string name="have_not_account_bold">انشاء حساب جديد</string>
+    <string name="drop_off_skip">تخطي</string>
+    <string name="password_not_match">كلمة المرور غير متطابقة</string>
+    <string name="msg_server_error">حدثت أخطاء حاول مرة أخرى</string>
+    <string name="login_body">يرجى تسجيل الدخول إلى حسابك</string>
+    <string name="register_header1"><font fgcolor = '# FBB32A'> نقطة </font>أنشئ حساب جديد مع تطبيق  </string>
+    <string name="student">طالب</string>
+    <string name="teacher">معلم</string>
+    <string name="certificates">شهادة تدريس</string>
+    <string name="verify_phone">التحقق من الهاتف</string>
+    <string name="verify">التحقق</string>
+    <string name="forget_body">الرجاء إدخال عنوان البريد الإلكتروني الخاص بك. سوف تتلقى رابطًا لإنشاء كلمة مرور جديدة عبر البريد الإلكتروني.</string>
+    <string name="save">حفظ</string>
+    <string name="home_title">اختر مجموعتك وانضم الآن!</string>
+    <string name="search_home_hint">البحث عن اسم المجموعة أو اسم المعلم؟</string>
+    <string name="home_body">مجموعات  <font fgcolor = '# FBB32A'> نقطة </font>, إنضم الان</string>
+    <string name="join">انضم</string>
+    <string name="tasks_body"><font fgcolor='#FBB32A'>Noqta </font> Group Tasks , Les Go</string>
     <string name="shop">Shop</string>
     <string name="your_point1">You have</string>
     <string name="your_point2">Points</string>
     <string name="exchange">Exchage points Now</string>
     <string name="logout">Logout</string>
-    <string name="edit_profile">Edit profile</string>
-    <string name="my_groups">My Groups</string>
-    <string name="my_points">My points</string>
-    <string name="my_gifts">My gifts</string>
+    <string name="edit_profile">Edit <font fgcolor='#FBB32A'>profile</font></string>
+    <string name="my_groups">My <font fgcolor='#FBB32A'>Groups</font></string>
+    <string name="my_points">My <font fgcolor='#FBB32A'>points</font></string>
+    <string name="my_gifts">My <font fgcolor='#FBB32A'>gifts</font></string>
     <string name="about_title">About Noqta</string>
-    <string name="about_app">About Noqta</string>
+    <string name="about_app">About <font fgcolor='#FBB32A'>Noqta </font></string>
     <string name="contact_title">Contact us</string>
     <string name="message_hint">Message</string>
-    <string name="group_desc">About Group</string>
-    <string name="group_info">Groups Basic information</string>
+    <string name="group_desc"><font fgcolor='#FBB32A'>About </font> Group</string>
+    <string name="group_info"><font fgcolor='#FBB32A'>Group </font> Basic information</string>
     <string name="leave">Leave Group</string>
-    <string name="group_members_info">Group Students</string>
-    <string name="show_all">Show All</string>
-    <string name="group_members_tasks">Recent Tasks</string>
+    <string name="group_members_info"><font fgcolor='#FBB32A'>Group </font>Students</string>
+    <string name="show_all"><u>Show All</u></string>
+    <string name="group_members_tasks"><font fgcolor='#FBB32A'>Recent </font> Tasks</string>
     <string name="finish">Finsh Now</string>
     <string name="take_chance">Take Chance</string>
     <string name="add_answer">Answer Task</string>
-    <string name="task_answer">Task Answer</string>
+    <string name="task_answer"><font fgcolor='#FBB32A'>Task </font>Answer</string>
     <string name="task_answer_hint">Text Answer</string>
-    <string name="upload_images">Upload Images</string>
+    <string name="upload_images"><font fgcolor='#FBB32A'>Upload </font> Images</string>
     <string name="upload_images_hint">Please Upload answer images that the task required and shown by the teacher</string>
-    <string name="upload_video">Upload Video</string>
+    <string name="upload_video"><font fgcolor='#FBB32A'>Upload </font>Video</string>
     <string name="upload_video_hint">Please Upload answer video that the task required and shown by the teacher</string>
     <string name="send_answer">Send answer Now</string>
     <string name="group_student">Group Student</string>
     <string name="specialist">Specialist</string>
-    <string name="group_name">Gruop Name</string>
+    <string name="group_name">Group Name</string>
     <string name="group_description">Group Description</string>
     <string name="group_students_number">Number of students</string>
     <string name="group_tasks_number">Number of Tasks</string>
@@ -122,14 +119,14 @@
     <string name="create_group">Create Group</string>
     <string name="create_gift">Add Gift</string>
     <string name="gift_name">Gift Name</string>
-    <string name="gift_description">Gift Desciption</string>
+    <string name="gift_description">Gift Description</string>
     <string name="gift_points_number">Number of Points</string>
     <string name="gift_image">Gift Image</string>
-    <string name="my_requests">My Requests</string>
+    <string name="my_requests">My <font fgcolor='#FBB32A'>Requests</font></string>
     <string name="reject">Reject</string>
     <string name="accept">Accept</string>
     <string name="change_lang">Change Language</string>
-    <string name="change_lang_page">Change Language</string>
+    <string name="change_lang_page">Change <font fgcolor='#FBB32A'>Language</font></string>
     <string name="change_lang_body">Select the preferred language to use in Noqta application , we work in several languages</string>
     <string name="arabic">عربي</string>
     <string name="english">English</string>
@@ -141,11 +138,12 @@
     <string name="success_title">You Created Group Successfully</string>
     <string name="success_body">The group will be shown automatically at the time you created you can receive student Request Too</string>
     <string name="close">Close</string>
-    <string name="students">\nStudents</string>
-    <string name="tasks">\ntasks</string>
+    <string name="students">\nStudent</string>
+    <string name="tasks">\ntask</string>
     <string name="requests">\nRequest</string>
     <string name="invite_student">Invite students to your group</string>
     <string name="invite">Invite</string>
+    <string name="search_student_hint">Search for student</string>
     <string name="add_task">Add Tasks</string>
     <string name="task_desc">Task Description</string>
     <string name="points_number">Number of Points</string>
@@ -170,11 +168,11 @@
     <string name="rate_app">Rate App</string>
     <string name="share_app">Share App</string>
     <string name="edit_profile_title">Edit profile</string>
-    <string name="Kuwait">الكويت</string>
+    <string name="Kuwait">Kuwait</string>
     <string name="answer_task">Answer Task</string>
     <string name="my_points_question">Are you sure want to Exchange ?</string>
     <string name="my_points_question_desc">you will exchange the points , it will be moved to the points in your Store</string>
-    <string name="leave_group_successfully">Are you sure want to leav Group ?</string>
+    <string name="leave_group_successfully">Are you sure want to leave Group ?</string>
     <string name="leave_group_body_successfully">You will leave Group and all your points that you gain from Tasks Will Deleted</string>
     <string name="enough_points_warning">Sorry, you don\'t have enough points</string>
     <string name="show_answers">Show Answers</string>
@@ -183,9 +181,16 @@
     <string name="give_points_to">Give points to</string>
     <string name="points_body1">You will Give</string>
     <string name="points_body2">points to get any gift from Noqta as appreciate to his effort</string>
-    <string name="images_selected">You have select some of images successfully to view or edit , CLICK HERE</string>
-    <string name="video_warning">نأسف المده المسموح بها هى 15 ثانية</string>
-    <string name="compressing">Please wait...</string>
+    <string name="images_selected">You have select some of images successfully to view or edit ,<b> <font fgcolor='colorPrimaryDark'>CLICK HERE</font></b></string>
+    <string name="video_warning">Sorry , only 1 minute </string>
+    <string name="compressing">Please wait…</string>
     <string name="track_selection_title">Select tracks</string>
     <string name="storage_permission_denied">Storage pernission denied</string>
+    <string name="error_generic">Playback failed</string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
 </resources>

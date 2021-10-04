@@ -23,7 +23,7 @@ public class ItemMyGroupBindingImpl extends ItemMyGroupBinding implements te.app
     @Nullable
     private final android.view.View.OnClickListener mCallback45;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback46;
     @Nullable
     private final android.view.View.OnClickListener mCallback44;
     // values
@@ -61,9 +61,9 @@ public class ItemMyGroupBindingImpl extends ItemMyGroupBinding implements te.app
         this.tvUserWork.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback45 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback43 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback45 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback46 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback44 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -261,15 +261,34 @@ public class ItemMyGroupBindingImpl extends ItemMyGroupBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnJoin.setOnClickListener(mCallback44);
-            this.btnTask.setOnClickListener(mCallback45);
-            this.mboundView0.setOnClickListener(mCallback43);
+            this.btnJoin.setOnClickListener(mCallback45);
+            this.btnTask.setOnClickListener(mCallback46);
+            this.mboundView0.setOnClickListener(mCallback44);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.itemAction(te.app.notta.utils.Constants.DIALOG_SHOW_LEAVE);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewModel
@@ -305,25 +324,6 @@ public class ItemMyGroupBindingImpl extends ItemMyGroupBinding implements te.app
 
 
                     viewModel.itemAction(te.app.notta.utils.Constants.GROUP_DETAILS);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.home.viewModels.ItemHomeViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.itemAction(te.app.notta.utils.Constants.DIALOG_SHOW_LEAVE);
                 }
                 break;
             }

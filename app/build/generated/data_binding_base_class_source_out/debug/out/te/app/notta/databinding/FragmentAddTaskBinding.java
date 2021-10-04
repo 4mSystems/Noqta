@@ -16,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
@@ -64,6 +65,9 @@ public abstract class FragmentAddTaskBinding extends ViewDataBinding {
   public final TextInputEditText noOfStudents;
 
   @NonNull
+  public final CircleImageView postImg;
+
+  @NonNull
   public final CircularProgressIndicator progress;
 
   @NonNull
@@ -87,7 +91,7 @@ public abstract class FragmentAddTaskBinding extends ViewDataBinding {
       AppCompatImageView icCloudUploadVideo, AppCompatImageView icLogo,
       ConstraintLayout imagesContainer, IncrementalView incrementalViewStudentCount,
       TextInputLayout inputGroupDesc, TextInputLayout inputGroupName, TextInputLayout inputStudents,
-      TextInputEditText noOfStudents, CircularProgressIndicator progress,
+      TextInputEditText noOfStudents, CircleImageView postImg, CircularProgressIndicator progress,
       CustomTextViewMedium tvImages, CustomTextViewMedium tvProfileTitle,
       CustomTextViewMedium tvVideo, ConstraintLayout videoContainer) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -104,6 +108,7 @@ public abstract class FragmentAddTaskBinding extends ViewDataBinding {
     this.inputGroupName = inputGroupName;
     this.inputStudents = inputStudents;
     this.noOfStudents = noOfStudents;
+    this.postImg = postImg;
     this.progress = progress;
     this.tvImages = tvImages;
     this.tvProfileTitle = tvProfileTitle;

@@ -36,11 +36,11 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback70;
-    @Nullable
     private final android.view.View.OnClickListener mCallback71;
     @Nullable
     private final android.view.View.OnClickListener mCallback74;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback75;
     @Nullable
     private final android.view.View.OnClickListener mCallback72;
     @Nullable
@@ -138,11 +138,11 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         this.videoContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback70 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback71 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback74 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback72 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback73 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback71 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback74 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback75 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback72 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback73 = new te.app.notta.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -654,11 +654,11 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback74);
-            this.back.setOnClickListener(mCallback70);
-            this.icCloudUpload.setOnClickListener(mCallback71);
-            this.mboundView12.setOnClickListener(mCallback72);
-            this.mboundView13.setOnClickListener(mCallback73);
+            this.appCompatButtonNext.setOnClickListener(mCallback75);
+            this.back.setOnClickListener(mCallback71);
+            this.icCloudUpload.setOnClickListener(mCallback72);
+            this.mboundView12.setOnClickListener(mCallback73);
+            this.mboundView13.setOnClickListener(mCallback74);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x45L) != 0) {
@@ -725,7 +725,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 }
                 break;
             }
-            case 2: {
+            case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -761,7 +761,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 }
                 break;
             }
-            case 3: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -780,7 +780,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 }
                 break;
             }
-            case 4: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

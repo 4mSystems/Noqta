@@ -60,7 +60,7 @@
         </activity>
         <activity
             android:name=".activity.ExoPlayerActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+            android:screenOrientation="fullSensor" />
         <!--        noqta.firststep@gmail.com-->
         <!--        asd123$noqta-->
         <service

@@ -6,26 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.potyvideo.library.AndExoPlayerView;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 
 public abstract class ActivityExoPlayerBinding extends ViewDataBinding {
   @NonNull
-  public final AndExoPlayerView andExoPlayerView;
-
-  @NonNull
-  public final ConstraintLayout root;
+  public final StyledPlayerView playerView;
 
   protected ActivityExoPlayerBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AndExoPlayerView andExoPlayerView, ConstraintLayout root) {
+      StyledPlayerView playerView) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.andExoPlayerView = andExoPlayerView;
-    this.root = root;
+    this.playerView = playerView;
   }
 
   @NonNull

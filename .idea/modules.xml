@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Notta.iml" filepath="$PROJECT_DIR$/.idea/modules/Notta.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Notta.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Notta.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/doubletapplayerview/Notta.doubletapplayerview.iml" filepath="$PROJECT_DIR$/.idea/modules/doubletapplayerview/Notta.doubletapplayerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videoCompressor/Notta.videoCompressor.iml" filepath="$PROJECT_DIR$/.idea/modules/videoCompressor/Notta.videoCompressor.iml" />
     </modules>
   </component>
 </project>

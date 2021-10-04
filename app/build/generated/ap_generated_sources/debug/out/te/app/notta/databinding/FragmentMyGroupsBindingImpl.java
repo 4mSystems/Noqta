@@ -22,7 +22,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
         this.rcGroups.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback60 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback61 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -178,7 +178,7 @@ public class FragmentMyGroupsBindingImpl extends FragmentMyGroupsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback60);
+            this.back.setOnClickListener(mCallback61);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
