@@ -560,13 +560,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   @Override
   public List<DataBinderMapper> collectDependencies() {
-    ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(1);
+    ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(2);
     result.add(new androidx.databinding.library.baseAdapters.DataBinderMapperImpl());
+    result.add(new com.potyvideo.library.DataBinderMapperImpl());
     return result;
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(38);
+    static final SparseArray<String> sKeys = new SparseArray<String>(39);
 
     static {
       sKeys.put(0, "_all");
@@ -587,26 +588,27 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(15, "onBoardAdapter");
       sKeys.put(16, "onBoardViewModels");
       sKeys.put(17, "passingObject");
-      sKeys.put(18, "pointsAdapter");
-      sKeys.put(19, "pointsData");
-      sKeys.put(20, "profileAdaptersAdapter");
-      sKeys.put(21, "profileItem");
-      sKeys.put(22, "request");
-      sKeys.put(23, "selectedUri");
-      sKeys.put(24, "student");
-      sKeys.put(25, "studentMainData");
-      sKeys.put(26, "studentMainPoints");
-      sKeys.put(27, "studentTasksMain");
-      sKeys.put(28, "studentsItem");
-      sKeys.put(29, "studentsRequestsAdapter");
-      sKeys.put(30, "taskDetailsData");
-      sKeys.put(31, "taskFilesItem");
-      sKeys.put(32, "taskMediaAdapter");
-      sKeys.put(33, "tasksAdapter");
-      sKeys.put(34, "tasksItem");
-      sKeys.put(35, "teacherPointsMain");
-      sKeys.put(36, "viewModel");
-      sKeys.put(37, "viewmodel");
+      sKeys.put(18, "playerControllerViewModel");
+      sKeys.put(19, "pointsAdapter");
+      sKeys.put(20, "pointsData");
+      sKeys.put(21, "profileAdaptersAdapter");
+      sKeys.put(22, "profileItem");
+      sKeys.put(23, "request");
+      sKeys.put(24, "selectedUri");
+      sKeys.put(25, "student");
+      sKeys.put(26, "studentMainData");
+      sKeys.put(27, "studentMainPoints");
+      sKeys.put(28, "studentTasksMain");
+      sKeys.put(29, "studentsItem");
+      sKeys.put(30, "studentsRequestsAdapter");
+      sKeys.put(31, "taskDetailsData");
+      sKeys.put(32, "taskFilesItem");
+      sKeys.put(33, "taskMediaAdapter");
+      sKeys.put(34, "tasksAdapter");
+      sKeys.put(35, "tasksItem");
+      sKeys.put(36, "teacherPointsMain");
+      sKeys.put(37, "viewModel");
+      sKeys.put(38, "viewmodel");
     }
   }
 

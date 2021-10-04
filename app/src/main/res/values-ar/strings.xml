@@ -186,4 +186,6 @@
     <string name="images_selected">You have select some of images successfully to view or edit , CLICK HERE</string>
     <string name="video_warning">نأسف المده المسموح بها هى 15 ثانية</string>
     <string name="compressing">Please wait...</string>
+    <string name="track_selection_title">Select tracks</string>
+    <string name="storage_permission_denied">Storage pernission denied</string>
 </resources>

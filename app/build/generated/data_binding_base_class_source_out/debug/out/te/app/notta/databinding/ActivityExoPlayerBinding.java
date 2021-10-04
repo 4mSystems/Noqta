@@ -4,28 +4,28 @@ package te.app.notta.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.exoplayer2.ui.PlayerView;
+import com.potyvideo.library.AndExoPlayerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 
 public abstract class ActivityExoPlayerBinding extends ViewDataBinding {
   @NonNull
-  public final ProgressBar spinnerVideoDetails;
+  public final AndExoPlayerView andExoPlayerView;
 
   @NonNull
-  public final PlayerView videoFullScreenPlayer;
+  public final ConstraintLayout root;
 
   protected ActivityExoPlayerBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ProgressBar spinnerVideoDetails, PlayerView videoFullScreenPlayer) {
+      AndExoPlayerView andExoPlayerView, ConstraintLayout root) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.spinnerVideoDetails = spinnerVideoDetails;
-    this.videoFullScreenPlayer = videoFullScreenPlayer;
+    this.andExoPlayerView = andExoPlayerView;
+    this.root = root;
   }
 
   @NonNull

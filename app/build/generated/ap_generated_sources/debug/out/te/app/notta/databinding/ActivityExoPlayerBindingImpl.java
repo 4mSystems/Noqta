@@ -14,27 +14,23 @@ public class ActivityExoPlayerBindingImpl extends ActivityExoPlayerBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.videoFullScreenPlayer, 1);
-        sViewsWithIds.put(R.id.spinnerVideoDetails, 2);
+        sViewsWithIds.put(R.id.andExoPlayerView, 1);
     }
     // views
-    @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ActivityExoPlayerBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
     }
     private ActivityExoPlayerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.ProgressBar) bindings[2]
-            , (com.google.android.exoplayer2.ui.PlayerView) bindings[1]
+            , (com.potyvideo.library.AndExoPlayerView) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.root.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

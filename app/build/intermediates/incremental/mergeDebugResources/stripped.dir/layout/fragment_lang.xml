@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+
+    
+
+                                           
+
+                                                
+
+                                                      
+
+                 
+                            
+                                                                              
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_lang_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_change"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/board_header"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp100h"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_board_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_profile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:text="@string/change_lang"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/back" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:tag="binding_1"                           
+                    android:src="@drawable/ic_back"
+                    app:backgroundTint="@color/white"
+                    app:fabCustomSize="@dimen/dp25h"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_change_lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp25h"
+                    android:text="@string/change_lang_page"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/board_header" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_change_lang_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp32w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp32w"
+                    android:text="@string/change_lang_body"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_change_lang" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ic_ar"
+                    android:layout_width="@dimen/dp40w"
+                    android:layout_height="@dimen/dp40h"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:layout_marginTop="@dimen/dp25h"
+                    android:src="@drawable/ic_kuwait"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_change_lang_body" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:text="@string/arabic"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_ar"
+                    app:layout_constraintEnd_toStartOf="@id/ic_ar_check"
+                    app:layout_constraintStart_toEndOf="@id/ic_ar"
+                    app:layout_constraintTop_toTopOf="@id/ic_ar" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_ar_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp25w"
+                    android:src="@drawable/ic_check_accent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_ar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ic_ar" />
+
+                <View
+                    android:id="@+id/v_line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/ic_ar" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ic_en"
+                    android:layout_width="@dimen/dp40w"
+                    android:layout_height="@dimen/dp40h"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:layout_marginTop="@dimen/dp25h"
+                    android:src="@drawable/ic_united_states"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_line5" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_en"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:text="@string/english"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_en"
+                    app:layout_constraintEnd_toStartOf="@id/ic_en_check"
+                    app:layout_constraintStart_toEndOf="@id/ic_en"
+                    app:layout_constraintTop_toTopOf="@id/ic_en" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_en_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp25w"
+                    android:src="@drawable/ic_check_accent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_en"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ic_en" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40w"
+            android:layout_marginEnd="@dimen/dp40w"
+            android:layout_marginBottom="@dimen/dp15h"
+            android:text="@string/change_lang"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorAccent"
+            app:cornerRadius="@dimen/dp15h"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

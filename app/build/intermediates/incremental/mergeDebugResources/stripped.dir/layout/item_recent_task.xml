@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                           
+
+                                                      
+
+                 
+                            
+                                                                                        
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="layout/item_recent_task_0"                                xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/MaterialCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h"
+            app:cardCornerRadius="@dimen/dp150h"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:layout_width="@dimen/dp30w"
+                android:layout_height="@dimen/dp30h"
+                android:layout_margin="@dimen/dp10h"
+                android:gravity="center"
+                android:tag="binding_1"                                 
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <te.app.notta.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginEnd="@dimen/dp8h"
+            android:tag="binding_2"                        
+            android:textColor="@color/medium_color"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.notta.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8w"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:tag="binding_3"                          
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/MaterialCardView"
+            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tech_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginEnd="@dimen/dp4w"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:tag="binding_4"                                            
+            android:text="@string/finish"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp8"
+            android:visibility="gone"                                                                                                                                                                      
+            app:backgroundTint="@color/green"
+            app:layout_constraintStart_toEndOf="@id/MaterialCardView"
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4w"
+            android:layout_marginEnd="@dimen/dp4w"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/take_chance"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp8"
+            android:visibility="gone"                                                                                                                                                                      
+            app:backgroundTint="@color/red_chance"
+            app:layout_constraintStart_toEndOf="@id/btn_tech_type"
+            app:layout_constraintTop_toBottomOf="@id/tv_details"  android:tag="binding_5"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4w"
+            android:layout_marginEnd="@dimen/dp4w"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:tag="binding_6"                                             
+            android:text="@string/remove_task"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp8"
+            android:visibility="gone"                                                                                                                             
+            app:backgroundTint="@color/red_chance"
+            app:layout_constraintStart_toEndOf="@id/btn_tech"
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/br4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="btn_tech,btn_tech_type,MaterialCardView,btn_remove" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp8h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/br4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

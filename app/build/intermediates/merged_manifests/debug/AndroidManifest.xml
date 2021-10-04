@@ -23,12 +23,6 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
-    <queries>
-        <intent>
-            <action android:name="android.media.browse.MediaBrowserService" />
-        </intent>
-    </queries>
-
     <application
         android:name="te.app.notta.base.MyApplication"
         android:allowBackup="false"
@@ -70,7 +64,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="te.app.notta.activity.ExoPlayerActivity" />
+        <activity
+            android:name="te.app.notta.activity.ExoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
         <!-- noqta.firststep@gmail.com -->
         <!-- asd123$noqta -->
         <service

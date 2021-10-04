@@ -58,9 +58,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ExoPlayerActivity" />
-<!--        noqta.firststep@gmail.com-->
-<!--        asd123$noqta-->
+        <activity
+            android:name=".activity.ExoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+        <!--        noqta.firststep@gmail.com-->
+        <!--        asd123$noqta-->
         <service
             android:name="te.app.notta.base.MyFirebaseMessagingService"
             android:exported="true"

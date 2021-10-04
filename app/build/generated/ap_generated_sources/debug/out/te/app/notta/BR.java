@@ -37,43 +37,45 @@ public class BR {
 
   public static final int passingObject = 17;
 
-  public static final int pointsAdapter = 18;
+  public static final int playerControllerViewModel = 18;
 
-  public static final int pointsData = 19;
+  public static final int pointsAdapter = 19;
 
-  public static final int profileAdaptersAdapter = 20;
+  public static final int pointsData = 20;
 
-  public static final int profileItem = 21;
+  public static final int profileAdaptersAdapter = 21;
 
-  public static final int request = 22;
+  public static final int profileItem = 22;
 
-  public static final int selectedUri = 23;
+  public static final int request = 23;
 
-  public static final int student = 24;
+  public static final int selectedUri = 24;
 
-  public static final int studentMainData = 25;
+  public static final int student = 25;
 
-  public static final int studentMainPoints = 26;
+  public static final int studentMainData = 26;
 
-  public static final int studentTasksMain = 27;
+  public static final int studentMainPoints = 27;
 
-  public static final int studentsItem = 28;
+  public static final int studentTasksMain = 28;
 
-  public static final int studentsRequestsAdapter = 29;
+  public static final int studentsItem = 29;
 
-  public static final int taskDetailsData = 30;
+  public static final int studentsRequestsAdapter = 30;
 
-  public static final int taskFilesItem = 31;
+  public static final int taskDetailsData = 31;
 
-  public static final int taskMediaAdapter = 32;
+  public static final int taskFilesItem = 32;
 
-  public static final int tasksAdapter = 33;
+  public static final int taskMediaAdapter = 33;
 
-  public static final int tasksItem = 34;
+  public static final int tasksAdapter = 34;
 
-  public static final int teacherPointsMain = 35;
+  public static final int tasksItem = 35;
 
-  public static final int viewModel = 36;
+  public static final int teacherPointsMain = 36;
 
-  public static final int viewmodel = 37;
+  public static final int viewModel = 37;
+
+  public static final int viewmodel = 38;
 }

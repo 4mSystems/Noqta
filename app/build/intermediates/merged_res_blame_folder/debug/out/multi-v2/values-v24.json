@@ -4,7 +4,7 @@
             "outputFile": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/59b4f81adb9934568be0d4ce188cea79/media-1.3.1/res/values-v24/values-v24.xml",
+                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/50c44ce28a3eadcce6b986fa3d1b95af/media-1.2.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

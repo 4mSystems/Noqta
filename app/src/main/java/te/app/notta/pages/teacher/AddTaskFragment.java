@@ -23,7 +23,6 @@ import androidx.lifecycle.Observer;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
-import com.iceteck.silicompressorr.SiliCompressor;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -148,12 +147,12 @@ public class AddTaskFragment extends BaseFragment {
         @Override
         protected String doInBackground(String... strings) {
             String videoPath = null;
-            try {
-                Uri uri = Uri.parse(strings[1]);
-                videoPath = SiliCompressor.with(requireActivity()).compressVideo(uri, strings[2], 1280, 720, 1500000);
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                Uri uri = Uri.parse(strings[1]);
+////                videoPath = SiliCompressor.with(requireActivity()).compressVideo(uri, strings[2], 1280, 720, 1500000);
+//            } catch (URISyntaxException e) {
+//                e.printStackTrace();
+//            }
             return videoPath;
         }
 
