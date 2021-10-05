@@ -76,13 +76,12 @@ public class Constants {
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
     public static final int RESPONSE_CHANGE = 300;
-    public final static int AUTOCOMPLETE_REQUEST_CODE = 203;
     public final static int FILE_TYPE_IMAGE = 378;
     public final static int FILE_TYPE_VIDEO = 379;
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
     public static final String SHOW_ANSWERS = "SHOW_ANSWERS";
-    public static final String back_car_image = "back_car_image";
+    public static final String TAKE_CHANCE = "TAKE_CHANCE";
     public static final int ADD_GROUP_REQUEST = 381;
 
     public static final String REMOVE_VIDEO = "REMOVE_VIDEO";
@@ -156,7 +155,7 @@ public class Constants {
     public static final String GET_APP_MONEY = "GET_APP_MONEY";
     // NOTIFICATIONS
     public static final String TYPE = "type";
-    public static final String ORDER_ID = "order_service_id";
+    public static final String GROUP_ID = "group_id";
     public static final String SERVICE_TYPE = "service";
     public static final String ORDER_SERVICE = "order_service";
     //NOTIFICATIONS TYPES

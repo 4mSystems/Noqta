@@ -60,6 +60,10 @@ public class GroupDetailsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.deleteTask(getTasksAdapter().selectedId));
     }
 
+    public void takeChance(int taskId) {
+        compositeDisposable.add(repository.takeChance(taskId));
+    }
+
     public void leaveGroup() {
         if (getGroupDetails().isJoinSent() != 1)
             compositeDisposable.add(repository.leaveGroup(getPassingObject().getId()));

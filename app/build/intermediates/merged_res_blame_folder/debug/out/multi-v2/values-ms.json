@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "outputFile": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
             "map": [
                 {
                     "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/f433333afead3ae71efe78f73f7e1b9f/jetified-exoplayer-ui-2.15.1/res/values-ms/values-ms.xml",

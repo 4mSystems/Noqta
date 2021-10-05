@@ -30,7 +30,7 @@ public class GroupTasksAdapter extends RecyclerView.Adapter<GroupTasksAdapter.Vi
     List<TasksItem> tasksItemList;
     Context context;
     private int techId;
-    public MutableLiveData<Object> liveData = new MutableLiveData<>();
+    public MutableLiveData<PassingObject> liveData = new MutableLiveData<>();
     public int selectedId, lastPosition;
     public String studentId;
 
@@ -61,8 +61,8 @@ public class GroupTasksAdapter extends RecyclerView.Adapter<GroupTasksAdapter.Vi
         itemMenuViewModel.getLiveData().observeForever(o -> {
             selectedId = item.getId();
             lastPosition = position;
-            if (o.equals(Constants.DELETE_TASK))
-                liveData.setValue(item.getId());
+            if (o.equals(Constants.DELETE_TASK) || o.equals(Constants.TAKE_CHANCE))
+                liveData.setValue(new PassingObject(item.getId(), String.valueOf(o)));
             else if (o.equals(Constants.Add_ANSWER))
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(item.getId(), String.valueOf(o)), null, AddAnswerFragment.class.getName(), Constants.ADD_GROUP_REQUEST);
             else if (o.equals(Constants.SHOW_ANSWERS))

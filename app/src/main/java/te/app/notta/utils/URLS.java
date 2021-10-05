@@ -37,8 +37,8 @@ public class URLS {
     public static final String CONTACT_US = " app/complains-suggestions";
     public static final String GROUP_STUDENT_TASKS = "teacher/get-student-tasks?student_id=";
     public final static String GIVE_POINTS = "teacher/give-points";
-    public final static String USER_PROFILE = "v1/provider/profile";
-    public static final String GET_SOCIAL = "v1/social_media";
+    public final static String NOTIFICATIONS = "app/get-notifications";
+    public static final String TAKE_CHANCE = "student/take-chance";
     public static final String PRIVACY = "v1/privacy_policy";
     public static final String REPORT_REASONS = "v1/report_reasons";
     public static final String CHANGE_PROFILE_PASSWORD = "v1/provider/profile/password";

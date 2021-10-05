@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+
+    
+
+                                                      
+
+                                           
+
+                 
+                            
+                                                                      
+           
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_tasks_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/board_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_board_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14h"
+                android:layout_marginTop="@dimen/dp25h"
+                android:tag="binding_1"                                                                         
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/ic_home_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14h"
+                android:layout_marginTop="@dimen/dp4h"
+                android:text="@string/home_title"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/ic_home_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_username" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_home_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp16w"
+                android:tag="binding_2"                                            
+                android:src="@drawable/ic_home_notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_home_username" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp14h"
+                android:background="@drawable/corner_view_gray_border"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/dp6w"
+                android:hint="@string/search_home_hint"
+                android:padding="@dimen/dp8h"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_home_desc"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:text="@string/tasks_body"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/ic_home_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_input" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_groups"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/dp12w"
+                android:tag="binding_3"                 
+                app:layout_constraintBottom_toTopOf="@id/progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_body"
+                                        
+                                 
+                tools:listitem="@layout/item_home" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4h"
+                android:indeterminate="true"
+                android:visibility="gone"                                                                  
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h"  android:tag="binding_4"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp16h"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:rippleColor="@color/overlayBackground"
+            app:srcCompat="@drawable/ic_icon_awesome_user_plus"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+         

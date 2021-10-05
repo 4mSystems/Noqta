@@ -28,6 +28,7 @@ import te.app.notta.pages.teacher.StudentRequestsFragment;
 import te.app.notta.repository.AuthRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.notta.utils.Constants;
+import te.app.notta.utils.session.LanguagesHelper;
 
 
 public class SettingsViewModel extends BaseViewModel {
@@ -81,6 +82,15 @@ public class SettingsViewModel extends BaseViewModel {
         profileItems.add(new ProfileItem(6, getString(R.string.change_lang), R.drawable.ic_lang, LangFragment.class.getName()));
         getMoreAdapter().update(profileItems);
         notifyChange(BR.moreAdapter);
+    }
+
+    public void changeLang(String selectedLang) {
+        lang = selectedLang;
+        notifyChange();
+    }
+
+    public void restart() {
+        liveData.setValue(new Mutable(Constants.LANGUAGE));
     }
 
     @Bindable

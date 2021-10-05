@@ -83,9 +83,17 @@ public class GroupDetailsFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getGroupDetails().setJoinSent(1);
                 viewModel.notifyChange(BR.groupDetails);
+            } else if (mutable.message.equals(Constants.TAKE_CHANCE)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
             }
         });
-        viewModel.getTasksAdapter().liveData.observeForever(o -> showDeleteDialog(Constants.DELETE_TASK));
+        viewModel.getTasksAdapter().liveData.observeForever(o -> {
+            if (o.getObject().equals(Constants.DELETE_TASK))
+                showDeleteDialog(Constants.DELETE_TASK);
+            else if (o.getObject().equals(Constants.TAKE_CHANCE))
+                viewModel.takeChance(o.getId());
+
+        });
     }
 
     private void showDeleteDialog(String o) {

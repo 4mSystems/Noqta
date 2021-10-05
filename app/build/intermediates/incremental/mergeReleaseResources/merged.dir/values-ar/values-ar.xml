@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="zero">تقديم سريع للفيديو بمقدار %d ثانية</item>
+    <item quantity="one">تقديم سريع للفيديو بمقدار ثانية واحدة (%d)</item>
+    <item quantity="two">تقديم سريع للفيديو بمقدار ثانيتَين (%d)</item>
+    <item quantity="few">تقديم سريع للفيديو بمقدار %d ثوانٍ</item>
+    <item quantity="many">تقديم سريع للفيديو بمقدار %d ثانية</item>
+    <item quantity="other">تقديم سريع للفيديو بمقدار %d ثانية</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="zero">ترجيع الفيديو بمقدار %d ثانية</item>
+    <item quantity="one">ترجيع الفيديو بمقدار ثانية واحدة (%d)</item>
+    <item quantity="two">ترجيع الفيديو بمقدار ثانيتَين (%d)</item>
+    <item quantity="few">ترجيع الفيديو بمقدار %d ثوانٍ</item>
+    <item quantity="many">ترجيع الفيديو بمقدار %d ثانية</item>
+    <item quantity="other">ترجيع الفيديو بمقدار %d ثانية</item>
+  </plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="zero">%d إشعار جديد</item>
+    <item quantity="one">إشعار جديد واحد (%d)</item>
+    <item quantity="two">إشعاران جديدان (%d)</item>
+    <item quantity="few">%d إشعارات جديدة</item>
+    <item quantity="many">%d إشعارًا جديدًا</item>
+    <item quantity="other">%d إشعار جديد</item>
+  </plurals>
+    <string name="Kuwait">الكويت</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"التوجه إلى المنزل"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"خيارات أكثر"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"تم"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"إيقاف"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"تفعيل"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"حذف"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"فضاء"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"القائمة+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"بحث…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"محو طلب البحث"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"طلب بحث"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"البحث"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"بحث صوتي"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"مشاركة مع <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <string name="about_app"> عن تطبيق  <font fgcolor="#FBB32A">نقطة </font></string>
+    <string name="about_title">عن تطبيق نقطة</string>
+    <string name="accept">قبول</string>
+    <string name="add_answer">اجابة المهام</string>
+    <string name="add_task">أضف المهام</string>
+    <string name="add_task_title">إضافة مهمة</string>
+    <string name="answer">الإجابات</string>
+    <string name="answer_task">اجابة المهام</string>
+    <string name="app_name">نقطة</string>
+    <string name="arabic">عربي</string>
+    <string name="bottomsheet_action_expand_halfway">توسيع البطاقة السفلية</string>
+    <string name="call">call</string>
+    <string name="call_grand">Contact</string>
+    <string name="camera">كاميرا</string>
+    <string name="cancel">الغاء</string>
+    <string name="certificates">شهادة تدريس</string>
+    <string name="change_confirm_password">تأكيد كلمة المرور</string>
+    <string name="change_header">أنشئ كلمة مرور جديدة</string>
+    <string name="change_header_text">الرجاء إدخال كلمة المرور الجديدة الخاصة بك والتأكد من أن أي شخص يعرفها</string>
+    <string name="change_lang">تغير اللغة</string>
+    <string name="change_lang_body">اختر اللغة المفضلة لاستخدامها في تطبيق النقطة ، فنحن نعمل بعدة لغات</string>
+    <string name="change_lang_page">تغيير  <font fgcolor="#FBB32A">اللغة</font></string>
+    <string name="change_new_password">كلمة مرور جديدة</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="character_counter_content_description">تمّ إدخال %1$d حرف من إجمالي %2$d.</string>
+    <string name="character_counter_overflowed_content_description">تجاوز عدد الأحرف المسموح به %1$d من %2$d.</string>
+    <string name="clear_text_end_icon_content_description">محو النص</string>
+    <string name="close">الغاء</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"تفعيل"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"‏لن يعمل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تفعيل خدمات Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"‏تفعيل خدمات Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"تثبيت"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي لا تتوفر على جهازك."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"‏الحصول على خدمات Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"‏مدى توفّر خدمات Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"‏خطأ في خدمات Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"‏لدى <ns1:g id="APP_NAME">%1$s</ns1:g> مشكلة في خدمات Google Play. يُرجى إعادة المحاولة."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play التي لا يوفرها جهازك."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"تحديث"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تحديث خدمات Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"‏تحديث خدمات Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي يتم تحديثها حاليًا."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"‏يجب توفر إصدار جديد من خدمات Google Play. سيتم تحديثها تلقائيًا قريبًا."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"فتح على الهاتف"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"تسجل الدخول"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"‏تسجيل الدخول عبر Google"</string>
+    <string name="compressing">ارجوك انتظر…</string>
+    <string name="confirm">تأكيد</string>
+    <string name="confirm_account">تفعيل الحساب</string>
+    <string name="confirm_header">الرجاء إدخال الرمز الذي أرسلناه إلى عنوان بريدك الإلكتروني</string>
+    <string name="confirm_header_text">سيتم إرسال رمز التفعيل إلى هاتفك. الرجاء إدخال الرمز</string>
+    <string name="confirm_header_text_forget">الرجاء كتابة الكود</string>
+    <string name="confirm_resend">إعادة إرسال</string>
+    <string name="connection_AirPlane">You have turned on the airplane mode.</string>
+    <string name="connection_AirPlane_Mode">Airplane mode</string>
+    <string name="connection_AirPlane_TurnOff">Please turn off</string>
+    <string name="connection_Data">Mobile data</string>
+    <string name="connection_On">Please turn on</string>
+    <string name="connection_Wifi">Wifi</string>
+    <string name="connection_invaild_body">تحقق من اتصالك بالانترنت وحاول مره اخرى</string>
+    <string name="connection_invaild_msg">Poor Internet Connection</string>
+    <string name="contact_title">تواصل معنا</string>
+    <string name="create_gift">أضف هدية</string>
+    <string name="create_group">إنشاء مجموعة</string>
+    <string name="delete_body">ستحذف المجموعة وسيقوم جميع طلابك بإخطار ذلك</string>
+    <string name="delete_title">هل أنت متأكد من أنك تريد إزالة المجموعة؟</string>
+    <string name="design_program">Design and programming</string>
+    <string name="drop_off_skip">تخطي</string>
+    <string name="edit_profile">تعديل <font fgcolor="#FBB32A">الصفحه الشخصية </font> </string>
+    <string name="edit_profile_title">تعديل الملف الشخصي</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="email_hint">البريد الالكترونى</string>
+    <string name="english">English</string>
+    <string name="enough_points_warning">عذرا ، ليس لديك نقاط كافية</string>
+    <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_generic">Playback failed</string>
+    <string name="error_icon_content_description">خطأ</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <ns1:g id="decoder_name">%1$s</ns1:g></string>
+    <string name="error_no_decoder">This device does not provide a decoder for <ns1:g id="mime_type">%1$s</ns1:g></string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <ns1:g id="mime_type">%1$s</ns1:g></string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="exchange">استبدل  النقاط الآن</string>
+    <string name="exo_controls_cc_disabled_description">تفعيل الترجمة</string>
+    <string name="exo_controls_cc_enabled_description">إيقاف الترجمة</string>
+    <string name="exo_controls_fastforward_description">تقديم سريع</string>
+    <string name="exo_controls_fullscreen_enter_description">دخول إلى وضع ملء الشاشة</string>
+    <string name="exo_controls_fullscreen_exit_description">خروج من وضع ملء الشاشة</string>
+    <string name="exo_controls_hide">إخفاء عناصر التحكم بالمشغّل</string>
+    <string name="exo_controls_next_description">التالي</string>
+    <string name="exo_controls_overflow_hide_description">إخفاء الإعدادات الإضافية</string>
+    <string name="exo_controls_overflow_show_description">عرض الإعدادات الإضافية</string>
+    <string name="exo_controls_pause_description">إيقاف مؤقت</string>
+    <string name="exo_controls_play_description">تشغيل</string>
+    <string name="exo_controls_playback_speed">السرعة</string>
+    <string name="exo_controls_playback_speed_normal">عادية</string>
+    <string name="exo_controls_previous_description">السابق</string>
+    <string name="exo_controls_repeat_all_description">تكرار الكل</string>
+    <string name="exo_controls_repeat_off_description">عدم التكرار</string>
+    <string name="exo_controls_repeat_one_description">تكرار مقطع صوتي واحد</string>
+    <string name="exo_controls_rewind_description">ترجيع</string>
+    <string name="exo_controls_seek_bar_description">مستوى تقدُّم التشغيل</string>
+    <string name="exo_controls_settings_description">الإعدادات</string>
+    <string name="exo_controls_show">عرض عناصر التحكم بالمشغّل</string>
+    <string name="exo_controls_shuffle_off_description">إيقاف الترتيب العشوائي</string>
+    <string name="exo_controls_shuffle_on_description">تفعيل الترتيب العشوائي</string>
+    <string name="exo_controls_stop_description">إيقاف</string>
+    <string name="exo_controls_vr_description">وضع VR</string>
+    <string name="exo_download_completed">اكتمل التنزيل</string>
+    <string name="exo_download_description">تنزيل</string>
+    <string name="exo_download_downloading">جارٍ التنزيل.</string>
+    <string name="exo_download_failed">تعذّر التنزيل</string>
+    <string name="exo_download_notification_channel_name">عمليات التنزيل</string>
+    <string name="exo_download_removing">تجري إزالة المحتوى الذي تم تنزيله</string>
+    <string name="exo_item_list">%1$s، %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f ميغابت في الثانية</string>
+    <string name="exo_track_mono">قناة أحادية</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">بديل</string>
+    <string name="exo_track_role_closed_captions">الترجمة والشرح</string>
+    <string name="exo_track_role_commentary">التعليقات</string>
+    <string name="exo_track_role_supplementary">تكميلي</string>
+    <string name="exo_track_selection_auto">تلقائي</string>
+    <string name="exo_track_selection_none">بدون اختيار</string>
+    <string name="exo_track_selection_title_audio">صوت</string>
+    <string name="exo_track_selection_title_text">نص</string>
+    <string name="exo_track_selection_title_video">فيديو</string>
+    <string name="exo_track_stereo">استريو</string>
+    <string name="exo_track_surround">صوت مجسّم</string>
+    <string name="exo_track_surround_5_point_1">صوت مجسّم 5.1</string>
+    <string name="exo_track_surround_7_point_1">صوت مجسّم 7.1</string>
+    <string name="exo_track_unknown">غير معروف</string>
+    <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"متنوعة"</string>
+    <string name="fieldRequired">حقل مطلوب</string>
+    <string name="finish">إنهاء الان</string>
+    <string name="forget_body">الرجاء إدخال عنوان البريد الإلكتروني الخاص بك. سوف تتلقى رابطًا لإنشاء كلمة مرور جديدة عبر البريد الإلكتروني.</string>
+    <string name="forget_header">فقد <font fgcolor="# FBB32A"> نقطة </font>  كلمة المرور</string>
+    <string name="forget_header1">هل نسيت كلمة السر</string>
+    <string name="forget_remember">تذكرت كلمة المرور</string>
+    <string name="gallery">المعرض</string>
+    <string name="gift_body_deleted_successfully">ستحذف هذه الهدية من الهدايا الخاصة بك ولن تظهر لمجموعات الطلاب</string>
+    <string name="gift_deleted_successfully">هل أنت متأكد من حذف الهدية؟</string>
+    <string name="gift_description">وصف الهدية</string>
+    <string name="gift_image">صورة الهدية</string>
+    <string name="gift_name">اسم الهدية</string>
+    <string name="gift_points_number">عدد النقاط</string>
+    <string name="give_points">أعط نقاط</string>
+    <string name="give_points_to">إعطاء نقاط ل</string>
+    <string name="group_date">تاريخ المجموعة</string>
+    <string name="group_desc"> <font fgcolor="#FBB32A">عن </font> المجموعة</string>
+    <string name="group_description">وصف المجموعة</string>
+    <string name="group_info"> معلومات عن المجموعة <font fgcolor="#FBB32A">المجموعة</font> </string>
+    <string name="group_members_info">طلاب <font fgcolor="#FBB32A">المجموعة </font></string>
+    <string name="group_members_tasks">المهام <font fgcolor="#FBB32A">الحالية </font> </string>
+    <string name="group_name">أسم المجموعة</string>
+    <string name="group_student">طلاب المجموعة</string>
+    <string name="group_student_mention">اذكر الطلاب للانضمام إلى المجموعة</string>
+    <string name="group_students_number">عدد الطلاب</string>
+    <string name="group_tasks_number">عدد المهام</string>
+    <string name="have_account">هل لديك حساب؟</string>
+    <string name="have_not_account">ليس لديك حساب؟</string>
+    <string name="have_not_account_bold">انشاء حساب جديد</string>
+    <string name="hi">مرحبا ,</string>
+    <string name="home_body">مجموعات  <font fgcolor="# FBB32A"> نقطة </font>, إنضم الان</string>
+    <string name="home_title">اختر مجموعتك وانضم الآن!</string>
+    <string name="icon_content_description">رمز مربع الحوار</string>
+    <string name="images_selected"><b> <font fgcolor="colorPrimaryDark">انقر هنا</font></b>لقد قمت بتحديد بعض الصور بنجاح لعرضها أو تحريرها ،</string>
+    <string name="invalidEmail">بريد إلكتروني خاطئ ، Noqta@example.com</string>
+    <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف وأرقام</string>
+    <string name="invalidPhone">كلمة المرور ضعيفة ، على الأقل 8 أحرف وأرقام</string>
+    <string name="invite">دعوة</string>
+    <string name="invite_student">ادعُ الطلاب إلى مجموعتك</string>
+    <string name="item_view_role_description">علامة تبويب</string>
+    <string name="join">انضم</string>
+    <string name="leave">خروج</string>
+    <string name="leave_group_body_successfully">ستغادر المجموعة وسيتم حذف جميع نقاطك التي تربحها من المهام</string>
+    <string name="leave_group_successfully">هل أنت متأكد من أنك تريد مغادرة المجموعة؟</string>
+    <string name="login"><font fgcolor="#FBB32A">نقطة </font>مرحبا بك فى تطبيق </string>
+    <string name="login_body">يرجى تسجيل الدخول إلى حسابك</string>
+    <string name="login_forget">هل نسيت كلمة السر ؟</string>
+    <string name="login_header">تسجيل الدخول</string>
+    <string name="login_header_number">رقم الهاتف </string>
+    <string name="login_phone">رقم الهاتف </string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="material_clock_toggle_content_description">يُرجى اختيار صباحًا أو مساءً.</string>
+    <string name="material_hour_selection">تحديد الساعة</string>
+    <string name="material_hour_suffix">الساعة %1$s</string>
+    <string name="material_minute_selection">تحديد الدقائق</string>
+    <string name="material_minute_suffix">%1$s دقيقة</string>
+    <string name="material_timepicker_am">صباحًا</string>
+    <string name="material_timepicker_clock_mode_description">يُرجى التبديل إلى وضع الساعة لإدخال الوقت.</string>
+    <string name="material_timepicker_hour">الساعة</string>
+    <string name="material_timepicker_minute">دقيقة</string>
+    <string name="material_timepicker_pm">مساءً</string>
+    <string name="material_timepicker_select_time">اختيار الوقت</string>
+    <string name="material_timepicker_text_input_mode_description">يُرجى التبديل إلى وضع إدخال النص لإدخال الوقت.</string>
+    <string name="menuHome">الرئيسية</string>
+    <string name="menuMore">المزيد</string>
+    <string name="menuProfile">الصفحة الشخصية</string>
+    <string name="menuTasks">المهام</string>
+    <string name="message_hint">الرسالة</string>
+    <string name="msg_server_error">حدثت أخطاء حاول مرة أخرى</string>
+    <string name="mtrl_badge_numberless_content_description">إشعار جديد</string>
+    <string name="mtrl_chip_close_icon_content_description">إزالة %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">يبلغ عدد الإشعارات الجديدة أكثر من %1$d.</string>
+    <string name="mtrl_picker_a11y_next_month">التغيير إلى الشهر التالي</string>
+    <string name="mtrl_picker_a11y_prev_month">التغيير إلى الشهر السابق</string>
+    <string name="mtrl_picker_announce_current_selection">الاختيار الحالي: %1$s</string>
+    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">يُرجى اختيار تاريخ.</string>
+    <string name="mtrl_picker_date_header_unselected">التاريخ المحدَّد</string>
+    <string name="mtrl_picker_day_of_week_column_header">عمود الأيام: %1$s</string>
+    <string name="mtrl_picker_invalid_format">التنسيق غير صالح</string>
+    <string name="mtrl_picker_invalid_format_example">مثال: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">استخدام: %1$s</string>
+    <string name="mtrl_picker_invalid_range">النطاق غير صالح</string>
+    <string name="mtrl_picker_navigate_to_year_description">التنقل إلى العام %1$s</string>
+    <string name="mtrl_picker_out_of_range">خارج النطاق: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">تاريخ البدء – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – تاريخ الانتهاء</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">يُرجى اختيار نطاق زمني.</string>
+    <string name="mtrl_picker_range_header_unselected">تاريخ البدء - تاريخ الانتهاء</string>
+    <string name="mtrl_picker_save">حفظ</string>
+    <string name="mtrl_picker_text_input_date_hint">التاريخ</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">تاريخ الانتهاء</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">تاريخ البدء</string>
+    <string name="mtrl_picker_text_input_day_abbr">ي</string>
+    <string name="mtrl_picker_text_input_month_abbr">ش</string>
+    <string name="mtrl_picker_text_input_year_abbr">س</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">التبديل إلى وضع \"الإدخال في التقويم\"</string>
+    <string name="mtrl_picker_toggle_to_day_selection">انقر للتبديل إلى اختيار يوم</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">التبديل إلى وضع \"إدخال النص\"</string>
+    <string name="mtrl_picker_toggle_to_year_selection">انقر للتبديل إلى اختيار عام</string>
+    <string name="my_gifts"> <font fgcolor="#FBB32A">الهدايا</font></string>
+    <string name="my_groups"> <font fgcolor="#FBB32A">مجموعاتى</font></string>
+    <string name="my_points"> <font fgcolor="#FBB32A">نقاطى</font></string>
+    <string name="my_points_question">هل أنت متأكد من أنك تريد الصرف؟</string>
+    <string name="my_points_question_desc">ستقوم بتبادل النقاط ، وسيتم نقلها إلى النقاط الموجودة في متجرك</string>
+    <string name="my_requests"> <font fgcolor="#FBB32A">طلباتى</font></string>
+    <string name="name_hint">يرجى كتابة اسمك</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="next">التالي</string>
+    <string name="notification">إشعارات</string>
+    <string name="old_password">كلمة سر قديمة</string>
+    <string name="password">كلمة المرور</string>
+    <string name="password_hint">أدخل كلمة المرور</string>
+    <string name="password_hint_confirm">تأكيد كلمة المرور</string>
+    <string name="password_not_match">كلمة المرور غير متطابقة</string>
+    <string name="password_toggle_content_description">عرض كلمة المرور</string>
+    <string name="phone">الرجاء إدخال رقم هاتفك المحمول أو البريد الإلكتروني</string>
+    <string name="please_select_another_file">Please select another file</string>
+    <string name="points_body1">سوف تعطي</string>
+    <string name="points_body2">نقطة للحصول على أي هدية من نقطة تقديراً لجهوده</string>
+    <string name="points_number">عدد النقاط</string>
+    <string name="privacy">سياسة الخصوصية</string>
+    <string name="rate_app">قيم التطبيق</string>
+    <string name="register">انشاء الحساب</string>
+    <string name="register_header">يرجى ملء استمارة التسجيل</string>
+    <string name="register_header1"><font fgcolor="# FBB32A"> نقطة </font>أنشئ حساب جديد مع تطبيق  </string>
+    <string name="register_name">الاسم</string>
+    <string name="register_phone">رقم الهاتف</string>
+    <string name="reject">رفض</string>
+    <string name="remove_group">إزالة المجموعة</string>
+    <string name="remove_task">إزالة مهمة</string>
+    <string name="requests">\nطلب</string>
+    <string name="save">حفظ</string>
+    <string name="search_home_hint">البحث عن اسم المجموعة أو اسم المعلم؟</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"البحث"</string>
+    <string name="search_student_hint">ابحث عن طالب</string>
+    <string name="select_file">غختر</string>
+    <string name="select_image_from">اختر الصورة</string>
+    <string name="select_max_count_warning">أقصى اختيار 5</string>
+    <string name="selected">منتهي</string>
+    <string name="send">إرسال</string>
+    <string name="send_answer">أرسل الجواب الآن</string>
+    <string name="share_app">شارك التطبيق</string>
+    <string name="shop">تسوق</string>
+    <string name="show_all"><u>المزيد</u></string>
+    <string name="show_answers">اعرض اجابات</string>
+    <string name="specialist">التخصص</string>
+    <string name="startApp">بدء التطبيق</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="storage_permission_denied">Storage pernission denied</string>
+    <string name="student">طالب</string>
+    <string name="students">\nطالب</string>
+    <string name="success_body">سيتم عرض المجموعة تلقائيًا في الوقت الذي قمت بإنشائه ، حيث يمكنك تلقي طلب الطالب أيضًا</string>
+    <string name="success_title">لقد قمت بإنشاء المجموعة بنجاح</string>
+    <string name="tab_select">انقر لتحديد الصور</string>
+    <string name="take_chance">خذ الفرصة</string>
+    <string name="task_added_successfully">لقد قمت بإنشاء المهمة بنجاح</string>
+    <string name="task_answer"><font fgcolor="#FBB32A">المهام  </font>اجابة</string>
+    <string name="task_answer_hint">إجابة نصية</string>
+    <string name="task_body_added_successfully">سيتم عرض المهمة تلقائيًا لجميع الطلاب في المجموعة المحددة</string>
+    <string name="task_body_deleted_successfully">ستقوم بحذف المهمة وسوف يقوم جميع طلابك بإخطار ذلك</string>
+    <string name="task_deleted_successfully">هل تريد حذف هذه المهمة؟</string>
+    <string name="task_desc">وصف المهمة</string>
+    <string name="tasks">\nمهام</string>
+    <string name="tasks_body">تاسكات المجموعه , هيا بنا<font fgcolor="#FBB32A">نقطة </font> </string>
+    <string name="teacher">معلم</string>
+    <string name="terms">الأحكام والشروط</string>
+    <string name="track_selection_title">حدد المسارات</string>
+    <string name="upload_images"><font fgcolor="#FBB32A">رفع </font> الصور</string>
+    <string name="upload_images_hint">يرجى تحميل صور الاجابة ان المهمة مطلوبة ويوضحها المعلم</string>
+    <string name="upload_task_images_hint">يرجى تحميل صور المهمة لتظهر لمجموعة طلابك</string>
+    <string name="upload_task_video_hint">يرجى تحميل مقاطع الفيديو الخاصة بالمهام لعرضها على مجموعة طلابك</string>
+    <string name="upload_video"><font fgcolor="#FBB32A">رفع </font>فيديو</string>
+    <string name="upload_video_hint">من فضلك ارفع فيديو الجواب ان المهمة مطلوبة و أظهرها المعلم</string>
+    <string name="verify">التحقق</string>
+    <string name="verify_phone">التحقق من الهاتف</string>
+    <string name="video_warning">آسف ، دقيقة واحدة فقط</string>
+    <string name="whats">What\'s app</string>
+    <string name="yes">نعم</string>
+    <string name="your_point1">لديك</string>
+    <string name="your_point2">نقاط</string>
+</resources>

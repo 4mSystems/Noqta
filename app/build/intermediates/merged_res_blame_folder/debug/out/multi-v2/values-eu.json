@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
+            "outputFile": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
             "map": [
                 {
                     "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/339bcfdbb05171193e3bd9443d30c6af/jetified-firebase-messaging-21.0.1/res/values-eu/values.xml",

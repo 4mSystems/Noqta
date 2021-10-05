@@ -1,9 +1,17 @@
 package te.app.notta.pages.addAnswer;
 
+import static te.app.notta.utils.upload.FileOperations.videoTime;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +23,12 @@ import androidx.lifecycle.Observer;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -34,11 +48,14 @@ import te.app.notta.pages.addAnswer.models.TaskDetailsResponse;
 import te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
+import te.app.notta.utils.upload.FileOperations;
+import te.app.videocompressor.VideoCompress;
 
 public class AddAnswerFragment extends BaseFragment {
     FragmentAddAnswerBinding addAnswerBinding;
     @Inject
     AddAnswerViewModel viewModel;
+    ProgressDialog dialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,6 +69,7 @@ public class AddAnswerFragment extends BaseFragment {
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
             viewModel.taskDetails();
         }
+        initProgress();
         setEvent();
         return addAnswerBinding.getRoot();
     }
@@ -67,6 +85,9 @@ public class AddAnswerFragment extends BaseFragment {
                     break;
                 case Constants.IMAGE:
                     picImages();
+                    break;
+                case Constants.PLAY_VIDEO:
+                    pickVideo(requireActivity());
                     break;
                 case Constants.Add_ANSWER:
                     toastMessage(((StatusMessage) mutable.object).mMessage);
@@ -117,5 +138,56 @@ public class AddAnswerFragment extends BaseFragment {
         super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
+    @Override
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        if (request == Constants.FILE_TYPE_VIDEO) {
+            if (videoTime(new File(Objects.requireNonNull(FileOperations.getPath(requireActivity(), result.getData()))), requireActivity()) <= 60) {
+                compress(FileOperations.getPath(requireActivity(), result.getData()));
+            } else {
+                toastErrorMessage(getString(R.string.video_warning));
+            }
+        }
+        super.launchActivityResult(request, resultCode, result);
+    }
 
+    private void initProgress() {
+        dialog = new ProgressDialog(requireContext(), R.style.progressDialog);
+//        dialog.setIcon(R.drawable.ic_logo_original);
+        dialog.setTitle(getString(R.string.compressing));
+        dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        dialog.setCancelable(false);
+    }
+
+    private void compress(String filePath) {
+        String destPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()
+                + File.separator + "VID_" + new SimpleDateFormat("yyyyMMdd_HHmmss", new Locale("en")).format(new Date()) + ".mp4";
+        VideoCompress.compressVideoLow(filePath, destPath, new VideoCompress.CompressListener() {
+            @Override
+            public void onStart() {
+                dialog.setProgress(0);
+                dialog.show();
+            }
+
+            @Override
+            public void onSuccess() {
+                dialog.dismiss();
+                Bitmap thumb = ThumbnailUtils.createVideoThumbnail(destPath,
+                        MediaStore.Images.Thumbnails.MINI_KIND);
+                addAnswerBinding.postImg.setImageBitmap(thumb);
+                addAnswerBinding.postImg.setVisibility(View.VISIBLE);
+                viewModel.videoPath.set(destPath);
+            }
+
+            @Override
+            public void onFail() {
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onProgress(float percent) {
+                dialog.setProgress((int) percent);
+            }
+        });
+
+    }
 }

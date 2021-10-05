@@ -311,10 +311,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp25h"
+                    android:onClick="@{()->viewmodel.action(Constants.PLAY_VIDEO)}"
                     android:src="@drawable/ic_cloud_upload"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/post_img"
+                    android:layout_width="@dimen/dp50w"
+                    android:layout_height="@dimen/dp50h"
+                    android:layout_margin="@dimen/dp8h"
+                    android:src="@drawable/splash"
+                    android:visibility="@{!TextUtils.isEmpty(viewmodel.videoPath)?View.VISIBLE:View.GONE}"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="@dimen/dp2h"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp15w"
+                    android:layout_height="@dimen/dp15h"
+                    android:onClick="@{()-> viewmodel.action(Constants.REMOVE_VIDEO)}"
+                    android:src="@drawable/ic_remove_video"
+                    android:visibility="@{!TextUtils.isEmpty(viewmodel.videoPath)?View.VISIBLE:View.GONE}"
+                    app:layout_constraintEnd_toEndOf="@+id/post_img"
+                    app:layout_constraintTop_toTopOf="@id/post_img" />
 
                 <te.app.notta.customViews.views.CustomTextViewRegular
                     android:layout_width="0dp"
@@ -322,6 +344,7 @@
                     android:layout_margin="@dimen/dp13w"
                     android:text="@string/upload_video_hint"
                     android:textAlignment="center"
+                    android:onClick="@{()->viewmodel.action(Constants.PLAY_VIDEO)}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/medium_color"
                     app:layout_constraintBottom_toBottomOf="parent"

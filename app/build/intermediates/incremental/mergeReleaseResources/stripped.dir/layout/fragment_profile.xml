@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+    
+                 
+                            
+                                                                              
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_profile_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/board_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_board_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/member_profile"
+                android:layout_width="@dimen/dp70w"
+                android:layout_height="@dimen/dp70h"
+                android:layout_marginTop="@dimen/dp15h"
+                android:src="@drawable/splash"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                android:tag="binding_1"                     
+                                                          
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp21w"
+                android:layout_height="@dimen/dp21h"
+                android:layout_marginEnd="@dimen/dp4w"
+                android:src="@drawable/ic_edit_profile"
+                android:tag="binding_2"                     
+                app:layout_constraintBottom_toBottomOf="@id/member_profile"
+                app:layout_constraintEnd_toEndOf="@id/member_profile" />
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8h"
+                android:tag="binding_3"                  
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/member_profile" />
+
+            <te.app.notta.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:tag="binding_4"                   
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout"
+                android:layout_width="@dimen/dp100w"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6h"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:tag="binding_5"                    
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="@dimen/dp15h"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp15w"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/logout">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp28h"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:tag="binding_6"                          
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                            
+                                     
+                    app:spanCount="2"
+                    tools:listitem="@layout/item_profile" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

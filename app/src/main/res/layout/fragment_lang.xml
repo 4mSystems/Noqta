@@ -100,6 +100,7 @@
                     android:layout_height="@dimen/dp40h"
                     android:layout_marginStart="@dimen/dp18w"
                     android:layout_marginTop="@dimen/dp25h"
+                    android:onClick="@{()->viewmodel.changeLang(`ar`)}"
                     android:src="@drawable/ic_kuwait"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_change_lang_body" />
@@ -113,6 +114,7 @@
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"
+                    android:onClick="@{()->viewmodel.changeLang(`ar`)}"
                     app:layout_constraintBottom_toBottomOf="@id/ic_ar"
                     app:layout_constraintEnd_toStartOf="@id/ic_ar_check"
                     app:layout_constraintStart_toEndOf="@id/ic_ar"
@@ -124,6 +126,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp25w"
                     android:src="@drawable/ic_check_accent"
+                    android:visibility="@{viewmodel.lang.equals(`ar`)?View.VISIBLE:View.GONE}"
                     app:layout_constraintBottom_toBottomOf="@id/ic_ar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/ic_ar" />
@@ -142,6 +145,7 @@
                     android:layout_height="@dimen/dp40h"
                     android:layout_marginStart="@dimen/dp18w"
                     android:layout_marginTop="@dimen/dp25h"
+                    android:onClick="@{()->viewmodel.changeLang(`en`)}"
                     android:src="@drawable/ic_united_states"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/v_line5" />
@@ -155,6 +159,7 @@
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"
+                    android:onClick="@{()->viewmodel.changeLang(`en`)}"
                     app:layout_constraintBottom_toBottomOf="@id/ic_en"
                     app:layout_constraintEnd_toStartOf="@id/ic_en_check"
                     app:layout_constraintStart_toEndOf="@id/ic_en"
@@ -166,6 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp25w"
                     android:src="@drawable/ic_check_accent"
+                    android:visibility="@{viewmodel.lang.equals(`en`)?View.VISIBLE:View.GONE}"
                     app:layout_constraintBottom_toBottomOf="@id/ic_en"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/ic_en" />
@@ -182,6 +188,7 @@
             android:layout_marginBottom="@dimen/dp15h"
             android:text="@string/change_lang"
             android:textAllCaps="false"
+            android:onClick="@{()-> viewmodel.restart()}"
             app:backgroundTint="@color/colorAccent"
             app:cornerRadius="@dimen/dp15h"
             app:layout_constraintBottom_toBottomOf="parent" />

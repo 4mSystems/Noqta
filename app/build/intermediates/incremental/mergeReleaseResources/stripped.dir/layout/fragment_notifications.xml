@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                 
+                                  
+                                                                                         
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_notifications_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/board_header"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp100h"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_board_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.notta.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_profile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6h"
+            android:text="@string/notification"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:contentDescription="@string/app_name"
+            android:tag="binding_1"                                 
+            android:src="@drawable/ic_back"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/dp100w"
+            android:layout_height="@dimen/dp100h"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dp6h"
+            android:visibility="gone"                                                                                                        
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_notification.json"
+            app:lottie_loop="true"  android:tag="binding_2"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:tag="binding_3"                              
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            app:layout_constraintTop_toBottomOf="@+id/board_header"
+                                    
+                             
+            tools:listitem="@layout/notify_item" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="gone"                                                                        
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h"  android:tag="binding_4"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         

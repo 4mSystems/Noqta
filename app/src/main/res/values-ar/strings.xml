@@ -19,9 +19,9 @@
     <string name="connection_AirPlane_Mode">Airplane mode</string>
     <string name="connection_invaild_msg">Poor Internet Connection</string>
     <string name="please_select_another_file">Please select another file</string>
-    <string name="email_hint">E-mail</string>
-    <string name="email">E-mail</string>
-    <string name="password">password</string>
+    <string name="email_hint">البريد الالكترونى</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="password">كلمة المرور</string>
     <string name="login"><font fgcolor='#FBB32A'>نقطة </font>مرحبا بك فى تطبيق </string>
     <string name="phone">الرجاء إدخال رقم هاتفك المحمول أو البريد الإلكتروني</string>
     <string name="invalidEmail">بريد إلكتروني خاطئ ، Noqta@example.com</string>
@@ -34,7 +34,7 @@
     <string name="login_phone">رقم الهاتف </string>
     <string name="login_header_number">رقم الهاتف </string>
     <string name="login_forget">هل نسيت كلمة السر ؟</string>
-    <string name="forget_header">كلمة المرور <font fgcolor = '# FBB32A'> نقطة </font> نسيت</string>
+    <string name="forget_header">فقد <font fgcolor = '# FBB32A'> نقطة </font>  كلمة المرور</string>
     <string name="confirm_header">الرجاء إدخال الرمز الذي أرسلناه إلى عنوان بريدك الإلكتروني</string>
     <string name="confirm_account">تفعيل الحساب</string>
     <string name="forget_remember">تذكرت كلمة المرور</string>
@@ -78,113 +78,113 @@
     <string name="search_home_hint">البحث عن اسم المجموعة أو اسم المعلم؟</string>
     <string name="home_body">مجموعات  <font fgcolor = '# FBB32A'> نقطة </font>, إنضم الان</string>
     <string name="join">انضم</string>
-    <string name="tasks_body"><font fgcolor='#FBB32A'>Noqta </font> Group Tasks , Les Go</string>
-    <string name="shop">Shop</string>
-    <string name="your_point1">You have</string>
-    <string name="your_point2">Points</string>
-    <string name="exchange">Exchage points Now</string>
-    <string name="logout">Logout</string>
-    <string name="edit_profile">Edit <font fgcolor='#FBB32A'>profile</font></string>
-    <string name="my_groups">My <font fgcolor='#FBB32A'>Groups</font></string>
-    <string name="my_points">My <font fgcolor='#FBB32A'>points</font></string>
-    <string name="my_gifts">My <font fgcolor='#FBB32A'>gifts</font></string>
-    <string name="about_title">About Noqta</string>
-    <string name="about_app">About <font fgcolor='#FBB32A'>Noqta </font></string>
-    <string name="contact_title">Contact us</string>
-    <string name="message_hint">Message</string>
-    <string name="group_desc"><font fgcolor='#FBB32A'>About </font> Group</string>
-    <string name="group_info"><font fgcolor='#FBB32A'>Group </font> Basic information</string>
-    <string name="leave">Leave Group</string>
-    <string name="group_members_info"><font fgcolor='#FBB32A'>Group </font>Students</string>
-    <string name="show_all"><u>Show All</u></string>
-    <string name="group_members_tasks"><font fgcolor='#FBB32A'>Recent </font> Tasks</string>
-    <string name="finish">Finsh Now</string>
-    <string name="take_chance">Take Chance</string>
-    <string name="add_answer">Answer Task</string>
-    <string name="task_answer"><font fgcolor='#FBB32A'>Task </font>Answer</string>
-    <string name="task_answer_hint">Text Answer</string>
-    <string name="upload_images"><font fgcolor='#FBB32A'>Upload </font> Images</string>
-    <string name="upload_images_hint">Please Upload answer images that the task required and shown by the teacher</string>
-    <string name="upload_video"><font fgcolor='#FBB32A'>Upload </font>Video</string>
-    <string name="upload_video_hint">Please Upload answer video that the task required and shown by the teacher</string>
-    <string name="send_answer">Send answer Now</string>
-    <string name="group_student">Group Student</string>
-    <string name="specialist">Specialist</string>
-    <string name="group_name">Group Name</string>
-    <string name="group_description">Group Description</string>
-    <string name="group_students_number">Number of students</string>
-    <string name="group_tasks_number">Number of Tasks</string>
-    <string name="group_date">Date of Group</string>
-    <string name="group_student_mention">Mention Students for Join Group</string>
-    <string name="create_group">Create Group</string>
-    <string name="create_gift">Add Gift</string>
-    <string name="gift_name">Gift Name</string>
-    <string name="gift_description">Gift Description</string>
-    <string name="gift_points_number">Number of Points</string>
-    <string name="gift_image">Gift Image</string>
-    <string name="my_requests">My <font fgcolor='#FBB32A'>Requests</font></string>
-    <string name="reject">Reject</string>
-    <string name="accept">Accept</string>
-    <string name="change_lang">Change Language</string>
-    <string name="change_lang_page">Change <font fgcolor='#FBB32A'>Language</font></string>
-    <string name="change_lang_body">Select the preferred language to use in Noqta application , we work in several languages</string>
+    <string name="tasks_body">تاسكات المجموعه , هيا بنا<font fgcolor='#FBB32A'>نقطة </font> </string>
+    <string name="shop">تسوق</string>
+    <string name="your_point1">لديك</string>
+    <string name="your_point2">نقاط</string>
+    <string name="exchange">استبدل  النقاط الآن</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="edit_profile">تعديل <font fgcolor='#FBB32A'>الصفحه الشخصية </font> </string>
+    <string name="my_groups"> <font fgcolor='#FBB32A'>مجموعاتى</font></string>
+    <string name="my_points"> <font fgcolor='#FBB32A'>نقاطى</font></string>
+    <string name="my_gifts"> <font fgcolor='#FBB32A'>الهدايا</font></string>
+    <string name="about_title">عن تطبيق نقطة</string>
+    <string name="about_app"> عن تطبيق  <font fgcolor='#FBB32A'>نقطة </font></string>
+    <string name="contact_title">تواصل معنا</string>
+    <string name="message_hint">الرسالة</string>
+    <string name="group_desc"> <font fgcolor='#FBB32A'>عن </font> المجموعة</string>
+    <string name="group_info"> معلومات عن المجموعة <font fgcolor='#FBB32A'>المجموعة</font> </string>
+    <string name="leave">خروج</string>
+    <string name="group_members_info">طلاب <font fgcolor='#FBB32A'>المجموعة </font></string>
+    <string name="show_all"><u>المزيد</u></string>
+    <string name="group_members_tasks">المهام <font fgcolor='#FBB32A'>الحالية </font> </string>
+    <string name="finish">إنهاء الان</string>
+    <string name="take_chance">خذ الفرصة</string>
+    <string name="add_answer">اجابة المهام</string>
+    <string name="task_answer"><font fgcolor='#FBB32A'>المهام  </font>اجابة</string>
+    <string name="task_answer_hint">إجابة نصية</string>
+    <string name="upload_images"><font fgcolor='#FBB32A'>رفع </font> الصور</string>
+    <string name="upload_images_hint">يرجى تحميل صور الاجابة ان المهمة مطلوبة ويوضحها المعلم</string>
+    <string name="upload_video"><font fgcolor='#FBB32A'>رفع </font>فيديو</string>
+    <string name="upload_video_hint">من فضلك ارفع فيديو الجواب ان المهمة مطلوبة و أظهرها المعلم</string>
+    <string name="send_answer">أرسل الجواب الآن</string>
+    <string name="group_student">طلاب المجموعة</string>
+    <string name="specialist">التخصص</string>
+    <string name="group_name">أسم المجموعة</string>
+    <string name="group_description">وصف المجموعة</string>
+    <string name="group_students_number">عدد الطلاب</string>
+    <string name="group_tasks_number">عدد المهام</string>
+    <string name="group_date">تاريخ المجموعة</string>
+    <string name="group_student_mention">اذكر الطلاب للانضمام إلى المجموعة</string>
+    <string name="create_group">إنشاء مجموعة</string>
+    <string name="create_gift">أضف هدية</string>
+    <string name="gift_name">اسم الهدية</string>
+    <string name="gift_description">وصف الهدية</string>
+    <string name="gift_points_number">عدد النقاط</string>
+    <string name="gift_image">صورة الهدية</string>
+    <string name="my_requests"> <font fgcolor='#FBB32A'>طلباتى</font></string>
+    <string name="reject">رفض</string>
+    <string name="accept">قبول</string>
+    <string name="change_lang">تغير اللغة</string>
+    <string name="change_lang_page">تغيير  <font fgcolor='#FBB32A'>اللغة</font></string>
+    <string name="change_lang_body">اختر اللغة المفضلة لاستخدامها في تطبيق النقطة ، فنحن نعمل بعدة لغات</string>
     <string name="arabic">عربي</string>
     <string name="english">English</string>
-    <string name="menuHome">Home</string>
-    <string name="menuTasks">Tasks</string>
-    <string name="menuProfile">Profile</string>
-    <string name="menuMore">More</string>
-    <string name="hi">Hi ,</string>
-    <string name="success_title">You Created Group Successfully</string>
-    <string name="success_body">The group will be shown automatically at the time you created you can receive student Request Too</string>
-    <string name="close">Close</string>
-    <string name="students">\nStudent</string>
-    <string name="tasks">\ntask</string>
-    <string name="requests">\nRequest</string>
-    <string name="invite_student">Invite students to your group</string>
-    <string name="invite">Invite</string>
-    <string name="search_student_hint">Search for student</string>
-    <string name="add_task">Add Tasks</string>
-    <string name="task_desc">Task Description</string>
-    <string name="points_number">Number of Points</string>
-    <string name="upload_task_images_hint">Please Upload Task images to be shown to your students Group</string>
-    <string name="upload_task_video_hint">Please Upload Task Videos to be shown to your students Group</string>
-    <string name="add_task_title">Add Task</string>
-    <string name="selected">Done</string>
-    <string name="tab_select">Tab to select images</string>
-    <string name="select_max_count_warning">Max selection 5</string>
-    <string name="task_added_successfully">You Created Task Successfully</string>
-    <string name="task_body_added_successfully">The Task will be shown automatically to all Students in the Selected Group</string>
-    <string name="remove_group">Remove group</string>
-    <string name="remove_task">Remove Task</string>
-    <string name="delete_title">Are you sure want to Remove Group ?</string>
-    <string name="delete_body">You will Delete Group and all your Students will notify with this</string>
-    <string name="yes">Yes</string>
-    <string name="task_deleted_successfully">Are you want to delete this task ?</string>
-    <string name="task_body_deleted_successfully">You will Delete Task and all your Students will notify with this</string>
-    <string name="gift_deleted_successfully">Are you sure delete Gift ?</string>
-    <string name="gift_body_deleted_successfully">You will delete this gift from your gifts and wont be shown to the groups students</string>
-    <string name="cancel">Cancel</string>
-    <string name="rate_app">Rate App</string>
-    <string name="share_app">Share App</string>
-    <string name="edit_profile_title">Edit profile</string>
-    <string name="Kuwait">Kuwait</string>
-    <string name="answer_task">Answer Task</string>
-    <string name="my_points_question">Are you sure want to Exchange ?</string>
-    <string name="my_points_question_desc">you will exchange the points , it will be moved to the points in your Store</string>
-    <string name="leave_group_successfully">Are you sure want to leave Group ?</string>
-    <string name="leave_group_body_successfully">You will leave Group and all your points that you gain from Tasks Will Deleted</string>
-    <string name="enough_points_warning">Sorry, you don\'t have enough points</string>
-    <string name="show_answers">Show Answers</string>
-    <string name="answer">Answers</string>
-    <string name="give_points">Give points</string>
-    <string name="give_points_to">Give points to</string>
-    <string name="points_body1">You will Give</string>
-    <string name="points_body2">points to get any gift from Noqta as appreciate to his effort</string>
-    <string name="images_selected">You have select some of images successfully to view or edit ,<b> <font fgcolor='colorPrimaryDark'>CLICK HERE</font></b></string>
-    <string name="video_warning">Sorry , only 1 minute </string>
-    <string name="compressing">Please wait…</string>
-    <string name="track_selection_title">Select tracks</string>
+    <string name="menuHome">الرئيسية</string>
+    <string name="menuTasks">المهام</string>
+    <string name="menuProfile">الصفحة الشخصية</string>
+    <string name="menuMore">المزيد</string>
+    <string name="hi">مرحبا ,</string>
+    <string name="success_title">لقد قمت بإنشاء المجموعة بنجاح</string>
+    <string name="success_body">سيتم عرض المجموعة تلقائيًا في الوقت الذي قمت بإنشائه ، حيث يمكنك تلقي طلب الطالب أيضًا</string>
+    <string name="close">الغاء</string>
+    <string name="students">\nطالب</string>
+    <string name="tasks">\nمهام</string>
+    <string name="requests">\nطلب</string>
+    <string name="invite_student">ادعُ الطلاب إلى مجموعتك</string>
+    <string name="invite">دعوة</string>
+    <string name="search_student_hint">ابحث عن طالب</string>
+    <string name="add_task">أضف المهام</string>
+    <string name="task_desc">وصف المهمة</string>
+    <string name="points_number">عدد النقاط</string>
+    <string name="upload_task_images_hint">يرجى تحميل صور المهمة لتظهر لمجموعة طلابك</string>
+    <string name="upload_task_video_hint">يرجى تحميل مقاطع الفيديو الخاصة بالمهام لعرضها على مجموعة طلابك</string>
+    <string name="add_task_title">إضافة مهمة</string>
+    <string name="selected">منتهي</string>
+    <string name="tab_select">انقر لتحديد الصور</string>
+    <string name="select_max_count_warning">أقصى اختيار 5</string>
+    <string name="task_added_successfully">لقد قمت بإنشاء المهمة بنجاح</string>
+    <string name="task_body_added_successfully">سيتم عرض المهمة تلقائيًا لجميع الطلاب في المجموعة المحددة</string>
+    <string name="remove_group">إزالة المجموعة</string>
+    <string name="remove_task">إزالة مهمة</string>
+    <string name="delete_title">هل أنت متأكد من أنك تريد إزالة المجموعة؟</string>
+    <string name="delete_body">ستحذف المجموعة وسيقوم جميع طلابك بإخطار ذلك</string>
+    <string name="yes">نعم</string>
+    <string name="task_deleted_successfully">هل تريد حذف هذه المهمة؟</string>
+    <string name="task_body_deleted_successfully">ستقوم بحذف المهمة وسوف يقوم جميع طلابك بإخطار ذلك</string>
+    <string name="gift_deleted_successfully">هل أنت متأكد من حذف الهدية؟</string>
+    <string name="gift_body_deleted_successfully">ستحذف هذه الهدية من الهدايا الخاصة بك ولن تظهر لمجموعات الطلاب</string>
+    <string name="cancel">الغاء</string>
+    <string name="rate_app">قيم التطبيق</string>
+    <string name="share_app">شارك التطبيق</string>
+    <string name="edit_profile_title">تعديل الملف الشخصي</string>
+    <string name="Kuwait">الكويت</string>
+    <string name="answer_task">اجابة المهام</string>
+    <string name="my_points_question">هل أنت متأكد من أنك تريد الصرف؟</string>
+    <string name="my_points_question_desc">ستقوم بتبادل النقاط ، وسيتم نقلها إلى النقاط الموجودة في متجرك</string>
+    <string name="leave_group_successfully">هل أنت متأكد من أنك تريد مغادرة المجموعة؟</string>
+    <string name="leave_group_body_successfully">ستغادر المجموعة وسيتم حذف جميع نقاطك التي تربحها من المهام</string>
+    <string name="enough_points_warning">عذرا ، ليس لديك نقاط كافية</string>
+    <string name="show_answers">اعرض اجابات</string>
+    <string name="answer">الإجابات</string>
+    <string name="give_points">أعط نقاط</string>
+    <string name="give_points_to">إعطاء نقاط ل</string>
+    <string name="points_body1">سوف تعطي</string>
+    <string name="points_body2">نقطة للحصول على أي هدية من نقطة تقديراً لجهوده</string>
+    <string name="images_selected"><b> <font fgcolor='colorPrimaryDark'>انقر هنا</font></b>لقد قمت بتحديد بعض الصور بنجاح لعرضها أو تحريرها ،</string>
+    <string name="video_warning">آسف ، دقيقة واحدة فقط</string>
+    <string name="compressing">ارجوك انتظر…</string>
+    <string name="track_selection_title">حدد المسارات</string>
     <string name="storage_permission_denied">Storage pernission denied</string>
     <string name="error_generic">Playback failed</string>
     <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
@@ -193,4 +193,5 @@
     <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
     <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
     <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
+    <string name="notification">إشعارات</string>
 </resources>

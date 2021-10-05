@@ -17,6 +17,7 @@ import te.app.notta.pages.groupDetails.GroupMembersFragment;
 import te.app.notta.pages.groupDetails.GroupStudentFragment;
 import te.app.notta.pages.groupDetails.StudentTasksFragment;
 import te.app.notta.pages.home.HomeFragment;
+import te.app.notta.pages.notifications.NotificationsFragment;
 import te.app.notta.pages.points.MyPointsFragment;
 import te.app.notta.pages.points.PointsFragment;
 import te.app.notta.pages.home.TasksFragment;
@@ -97,6 +98,8 @@ public interface IApplicationComponent {
     void inject(MyPointsFragment myPointsFragment);
 
     void inject(StudentTasksFragment studentTasksFragment);
+
+    void inject(NotificationsFragment notificationsFragment);
 
     @Component.Builder
     interface Builder {

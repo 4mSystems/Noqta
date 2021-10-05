@@ -94,6 +94,7 @@
             android:minHeight="0dp"
             android:text="@string/take_chance"
             android:textAllCaps="false"
+            android:onClick="@{()->viewModel.itemAction(Constants.TAKE_CHANCE)}"
             android:textColor="@color/white"
             android:textSize="@dimen/sp8"
             android:visibility="@{viewModel.tasksItem.tech_id!=0&amp;&amp;viewModel.tasksItem.tech_id!=viewModel.userData.id&amp;&amp;viewModel.tasksItem.answered==0?View.VISIBLE:View.GONE,default=gone}"

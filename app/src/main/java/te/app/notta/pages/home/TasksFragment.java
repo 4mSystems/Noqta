@@ -26,6 +26,7 @@ import te.app.notta.model.base.Mutable;
 import te.app.notta.model.base.StatusMessage;
 import te.app.notta.pages.home.models.HomeResponse;
 import te.app.notta.pages.home.viewModels.HomeViewModel;
+import te.app.notta.pages.notifications.NotificationsFragment;
 import te.app.notta.pages.teacher.AddGroupFragment;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
@@ -64,6 +65,10 @@ public class TasksFragment extends BaseFragment {
                     toastMessage(((StatusMessage) mutable.object).mMessage);
                     viewModel.getGroupsAdapter().updateItemJoinRequest();
                     break;
+                case Constants.NOTIFICATIONS:
+                    MovementHelper.startActivity(requireActivity(), NotificationsFragment.class.getName(), null, null);
+                    break;
+
             }
         });
         viewModel.getGroupsAdapter().liveData.observeForever(groupId -> viewModel.studentJoinRequest(groupId));

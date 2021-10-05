@@ -1,6 +1,7 @@
 package te.app.notta.activity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -8,12 +9,18 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.gson.Gson;
+
+import te.app.notta.PassingObject;
 import te.app.notta.R;
 import te.app.notta.base.IApplicationComponent;
 import te.app.notta.base.MyApplication;
 import te.app.notta.base.ParentActivity;
 import te.app.notta.customViews.actionbar.BackActionBarView;
 import te.app.notta.databinding.ActivityBaseBinding;
+import te.app.notta.pages.groupDetails.GroupDetailsFragment;
+import te.app.notta.pages.notifications.NotificationsFragment;
+import te.app.notta.pages.points.MyPointsFragment;
 import te.app.notta.pages.splash.SplashFragment;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
@@ -70,21 +77,22 @@ public class BaseActivity extends ParentActivity {
             if (getIntent().getSerializableExtra(Constants.TYPE) != null) {
                 notification_checked = true;
                 String typeNotifications = getIntent().getStringExtra(Constants.TYPE);
-                String postId = getIntent().getStringExtra(Constants.ORDER_ID);
+                String postId = getIntent().getStringExtra(Constants.GROUP_ID);
                 Log.e("getNotification", "getNotification: " + postId);
                 Bundle bundle = new Bundle();
                 backActionBarView.flag = 1;
-//                if (!TextUtils.isEmpty(postId)) {
-//                    if (Constants.ORDER_SERVICE.equals(typeNotifications)) {  // post details
-//                        setTitleName(ResourceManager.getString(R.string.service_details));
-//                        OrderDetailsFragment homeMainFragment = new OrderDetailsFragment();
-//                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId))));
-//                        homeMainFragment.setArguments(bundle);
-//                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
-//                    } else {
-//                        MovementHelper.startActivityMain(this);
-//                    }
-//                }
+                if (typeNotifications.equals("1")) {
+                    GroupDetailsFragment homeMainFragment = new GroupDetailsFragment();
+                    bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(postId))));
+                    homeMainFragment.setArguments(bundle);
+                    MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+                } else if (typeNotifications.equals("2")) {
+                    MyPointsFragment homeMainFragment = new MyPointsFragment();
+                    MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+                } else {
+                    NotificationsFragment homeMainFragment = new NotificationsFragment();
+                    MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+                }
             }
         }
     }

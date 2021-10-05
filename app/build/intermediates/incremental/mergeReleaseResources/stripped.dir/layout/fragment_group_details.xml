@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+
+    
+
+                                           
+
+                                                
+
+                                                      
+
+                 
+                            
+                                                                                      
+           
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:tag="layout/fragment_group_details_0"                                        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/board_header"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp100h"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_board_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_profile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginEnd="24dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:tag="binding_1"                      
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/back"
+                    app:layout_constraintTop_toTopOf="@id/back" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:contentDescription="@string/app_name"
+                    android:tag="binding_2"                           
+                    android:src="@drawable/ic_back"
+                    app:backgroundTint="@color/white"
+                    app:fabSize="mini"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ic_teacher"
+                    android:layout_width="@dimen/dp100w"
+                    android:layout_height="@dimen/dp100h"
+                    android:layout_marginStart="@dimen/dp18w"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash"
+                    android:tag="binding_3"                                   
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/board_header"
+                    app:riv_corner_radius="@dimen/dp8h" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_teacher_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:tag="binding_4"                              
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_teacher"
+                    app:layout_constraintTop_toTopOf="@id/ic_teacher" />
+
+                <te.app.notta.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_user_work"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp2h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:tag="binding_5"                              
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/sp10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_teacher_name" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_tech_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:tag="binding_6"                                        
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp8"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:layout_constraintStart_toEndOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_work" />
+
+                <te.app.notta.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_icon_material_location_on"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:text="@string/Kuwait"
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/sp8" />
+
+                <te.app.notta.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_icon_ionic_md_time"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:tag="binding_7"                           
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/sp8" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    app:constraint_referenced_ids="tv_location,tv_date"
+                    app:flow_horizontalStyle="spread_inside"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_teacher"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_teacher" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/br3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="ic_teacher,flow" />
+
+                <View
+                    android:id="@+id/v_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/br3" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_group_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:text="@string/group_desc"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line" />
+
+                <te.app.notta.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_group_desc_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp4h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:tag="binding_8"                             
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_group_desc" />
+
+                <View
+                    android:id="@+id/v_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_group_desc_value" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:text="@string/group_info"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_students"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:tag="binding_9"                                     
+                                                                                                   
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp7"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_groups"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:tag="binding_10"                                                 
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp7"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_requests"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:tag="binding_11"                                             
+                                                                                                   
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp7"
+                    app:backgroundTint="@color/colorAccent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_12"                               
+                    android:text="@string/join"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp8"
+                                                                                                                                                                      
+                    app:backgroundTint="@color/colorPrimaryDark"
+                                                                                                                                     
+                    app:iconGravity="textTop" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_13"                                              
+                    android:text="@string/leave"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp7"
+                                                                                                                                                                      
+                    app:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_exit"
+                    app:iconGravity="textTop" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_14"                                        
+                    android:text="@string/remove_group"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp7"
+                                                                                                                           
+                    app:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_delete"
+                    app:iconGravity="textTop" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    app:constraint_referenced_ids="btn_students,btn_groups,btn_requests,btn_join,btn_leave,btn_remove"
+                    app:flow_horizontalGap="@dimen/dp2w"
+                    app:flow_horizontalStyle="spread"
+                    app:flow_verticalGap="@dimen/dp6w"
+                    app:flow_wrapMode="chain"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+                <View
+                    android:id="@+id/v_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/flow1" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_members"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:text="@string/group_members_info"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line2" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_show_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:tag="binding_15"                                    
+                    android:text="@string/show_all"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:orientation="horizontal"
+                    android:tag="binding_16"                              
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_members"
+                                            
+                                     
+                    tools:listitem="@layout/item_hor_member" />
+
+                <View
+                    android:id="@+id/v_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    android:tag="binding_17"                                                                                                                  
+                    app:layout_constraintTop_toBottomOf="@id/rc_members" />
+
+                <te.app.notta.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_tasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:text="@string/group_members_tasks"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:tag="binding_18"                                                                                                                  
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:tag="binding_19"                                                                                                                  
+                                                           
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ic_teacher"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tasks"
+                                            
+                                     
+                    tools:listitem="@layout/item_recent_task" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp8h"
+            android:contentDescription="@string/app_name"
+            android:tag="binding_20"                                      
+                                                                                                                    
+            app:backgroundTint="@color/colorAccent"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/overlayBackground"
+            app:srcCompat="@drawable/ic_add_task"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+         

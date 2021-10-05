@@ -6,43 +6,43 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml
+8-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml
+9-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-11-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:6:5-75
-11-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:6:22-72
+11-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:6:5-75
+11-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:6:22-72
 12    <uses-permission android:name="android.permission.CALL_PHONE" />
-12-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:7:5-69
-12-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:7:22-66
+12-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:7:5-69
+12-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:7:22-66
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:8:5-65
-13-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:8:22-62
+13-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:8:5-65
+13-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:8:22-62
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:9:5-80
-14-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:9:22-77
+14-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:9:5-80
+14-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:9:22-77
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:10:5-12:40
-15-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:11:9-65
+15-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:10:5-12:40
+15-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:11:9-65
 16    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-16-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:13:5-15:40
-16-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:14:9-66
+16-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:13:5-15:40
+16-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:14:9-66
 17    <uses-permission android:name="android.permission.INTERNET" />
-17-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:16:5-67
-17-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:16:22-64
+17-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:16:5-67
+17-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:16:22-64
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:17:5-79
-18-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:17:22-76
+18-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:17:5-79
+18-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:17:22-76
 19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-19-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:18:5-81
-19-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:18:22-78
+19-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:18:5-81
+19-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:18:22-78
 20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-20-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:19:5-79
-20-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:19:22-76
+20-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:19:5-79
+20-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:19:22-76
 21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-21-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:20:5-77
-21-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:20:22-74
+21-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:20:5-77
+21-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:20:22-74
 22    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 22-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3902f35e1378f2d4466ce2cbe3dc017d/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:5-68
 22-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3902f35e1378f2d4466ce2cbe3dc017d/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:22-65
@@ -64,102 +64,102 @@
 30    </queries>
 31
 32    <application
-32-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:22:5-75:19
+32-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:22:5-75:19
 33        android:name="te.app.notta.base.MyApplication"
-33-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:23:9-55
+33-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:23:9-55
 34        android:allowBackup="false"
-34-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:24:9-36
+34-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:24:9-36
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 35-->[androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/dcc93007e9b0fd67049be7a503ea53f1/core-1.5.0/AndroidManifest.xml:24:18-86
 36        android:debuggable="true"
 37        android:extractNativeLibs="false"
 38        android:hardwareAccelerated="true"
-38-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:25:9-43
+38-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:25:9-43
 39        android:icon="@mipmap/ic_launcher"
-39-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:26:9-43
+39-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:26:9-43
 40        android:label="@string/app_name"
-40-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:27:9-41
+40-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:27:9-41
 41        android:largeHeap="true"
-41-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:28:9-33
+41-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:28:9-33
 42        android:launchMode="singleTask"
-42-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:29:9-40
+42-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:29:9-40
 43        android:requestLegacyExternalStorage="true"
-43-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:30:9-52
+43-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:30:9-52
 44        android:supportsRtl="true"
-44-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:31:9-35
+44-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:31:9-35
 45        android:testOnly="true"
 46        android:theme="@style/AppTheme"
-46-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:32:9-40
+46-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:32:9-40
 47        android:usesCleartextTraffic="true" >
-47-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:33:9-44
+47-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:33:9-44
 48        <meta-data
-48-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:35:9-37:69
+48-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:35:9-37:69
 49            android:name="com.google.android.gms.version"
-49-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:36:13-58
+49-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:36:13-58
 50            android:value="@integer/google_play_services_version" />
-50-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:37:13-66
+50-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:37:13-66
 51        <meta-data
-51-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:38:9-40:54
+51-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:38:9-40:54
 52            android:name="com.google.firebase.messaging.default_notification_icon"
-52-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:39:13-83
+52-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:39:13-83
 53            android:resource="@mipmap/ic_launcher" />
-53-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:40:13-51
+53-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:40:13-51
 54        <meta-data
-54-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:41:9-43:54
+54-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:41:9-43:54
 55            android:name="com.google.firebase.messaging.default_notification_color"
-55-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:42:13-84
+55-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:42:13-84
 56            android:resource="@color/colorPrimary" />
-56-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:43:13-51
+56-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:43:13-51
 57
 58        <activity
-58-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:45:9-48:70
+58-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:45:9-48:70
 59            android:name="te.app.notta.activity.MainActivity"
-59-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:46:13-62
+59-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:46:13-62
 60            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-60-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:47:13-96
+60-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:47:13-96
 61            android:windowSoftInputMode="stateHidden|adjustResize" />
-61-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:48:13-67
+61-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:48:13-67
 62        <activity
-62-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:50:9-60:20
+62-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:50:9-60:20
 63            android:name="te.app.notta.activity.BaseActivity"
-63-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:51:13-62
+63-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:51:13-62
 64            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-64-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:52:13-96
+64-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:52:13-96
 65            android:windowSoftInputMode="stateHidden|adjustResize" >
-65-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:53:13-67
+65-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:53:13-67
 66            <intent-filter>
-66-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:54:13-59:29
+66-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:54:13-59:29
 67                <action android:name="android.intent.action.MAIN" />
-67-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:55:17-69
-67-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:55:25-66
+67-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:55:17-69
+67-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:55:25-66
 68                <action android:name="android.intent.action.VIEW" />
-68-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:56:17-69
-68-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:56:25-66
+68-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:56:17-69
+68-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:56:25-66
 69
 70                <category android:name="android.intent.category.LAUNCHER" />
-70-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:58:17-77
-70-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:58:27-74
+70-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:58:17-77
+70-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:58:27-74
 71            </intent-filter>
 72        </activity>
 73        <activity
-73-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:61:9-63:54
+73-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:61:9-63:54
 74            android:name="te.app.notta.activity.ExoPlayerActivity"
-74-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:62:13-55
+74-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:62:13-55
 75            android:screenOrientation="fullSensor" />
-75-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:63:13-51
+75-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:63:13-51
 76        <!-- noqta.firststep@gmail.com -->
 77        <!-- asd123$noqta -->
 78        <service
-78-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:66:9-73:19
+78-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:66:9-73:19
 79            android:name="te.app.notta.base.MyFirebaseMessagingService"
-79-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:67:13-72
+79-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:67:13-72
 80            android:exported="true" >
-80-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:68:13-36
+80-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:68:13-36
 81            <intent-filter>
-81-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:70:13-72:29
+81-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:70:13-72:29
 82                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-82-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:71:17-78
-82-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:71:25-75
+82-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:71:17-78
+82-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:71:25-75
 83            </intent-filter>
 84        </service>
 85
@@ -211,10 +211,10 @@
 112            android:exported="false" >
 112-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/339bcfdbb05171193e3bd9443d30c6af/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:31:13-37
 113            <intent-filter android:priority="-500" >
-113-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:70:13-72:29
+113-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:70:13-72:29
 114                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-114-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:71:17-78
-114-->/home/elnagar/StudioProjects/aberprovider/app/src/main/AndroidManifest.xml:71:25-75
+114-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:71:17-78
+114-->/home/elnagar/StudioProjects/Noqta/app/src/main/AndroidManifest.xml:71:25-75
 115            </intent-filter>
 116        </service>
 117        <service

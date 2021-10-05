@@ -4,14 +4,11 @@ import static te.app.notta.utils.upload.FileOperations.videoTime;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -29,10 +26,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
 import java.io.File;
-import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -135,9 +132,7 @@ public class AddTaskFragment extends BaseFragment {
     @Override
     public void launchActivityResult(int request, int resultCode, Intent result) {
         if (request == Constants.FILE_TYPE_VIDEO) {
-            if (videoTime(new File(FileOperations.getPath(requireActivity(), result.getData())), requireActivity()) <= 60) {
-//                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
-//                new CompressVideo().execute("false", result.getData().toString(), file.getPath());
+            if (videoTime(new File(Objects.requireNonNull(FileOperations.getPath(requireActivity(), result.getData()))), requireActivity()) <= 60) {
                 compress(FileOperations.getPath(requireActivity(), result.getData()));
             } else {
                 toastErrorMessage(getString(R.string.video_warning));
@@ -148,7 +143,6 @@ public class AddTaskFragment extends BaseFragment {
 
     private void initProgress() {
         dialog = new ProgressDialog(requireContext(), R.style.progressDialog);
-//        dialog.setIcon(R.drawable.ic_logo_original);
         dialog.setTitle(getString(R.string.compressing));
         dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         dialog.setCancelable(false);

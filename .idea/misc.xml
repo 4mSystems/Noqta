@@ -116,7 +116,7 @@
         <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_group_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_group_details.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_group_members.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_group_students.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -126,6 +126,7 @@
         <entry key="app/src/main/res/layout/fragment_more.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_my_groups.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/fragment_my_points.xml" value="0.19638157894736843" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.18519736842105264" />
         <entry key="app/src/main/res/layout/fragment_onboard.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_points.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
@@ -151,10 +152,13 @@
         <entry key="app/src/main/res/layout/item_student_request.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_task_media.xml" value="0.22" />
         <entry key="app/src/main/res/layout/layout_action_bar_home.xml" value="0.10230263157894737" />
+        <entry key="app/src/main/res/layout/loader_animation.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/menu.xml" value="0.10230263157894737" />
+        <entry key="app/src/main/res/layout/notify_item.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/option_dialog.xml" value="0.10230263157894737" />
         <entry key="app/src/main/res/layout/success_sheet.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.19638157894736843" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -70,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp16w"
+                    android:onClick="@{()-> viewmodel.action(Constants.NOTIFICATIONS)}"
                     android:src="@drawable/ic_home_notification"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tv_home_username" />

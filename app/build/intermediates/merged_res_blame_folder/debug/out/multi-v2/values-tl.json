@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/elnagar/StudioProjects/aberprovider/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml",
+            "outputFile": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml",
             "map": [
                 {
                     "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/f8bd7520f2a4bd1804b828cc575b2a07/jetified-play-services-base-17.0.0/res/values-tl/values.xml",

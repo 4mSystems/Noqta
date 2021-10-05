@@ -106,6 +106,13 @@ public class GroupRepository extends BaseRepository {
                 Constants.DELETE_TASK, true);
     }
 
+    public Disposable takeChance(int taskId) {
+        MainRequest request = new MainRequest();
+        request.setTaskId(String.valueOf(taskId));
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.TAKE_CHANCE, request, StatusMessage.class,
+                Constants.TAKE_CHANCE, true);
+    }
+
     public Disposable getPoints(int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.POINTS + page, new Object(), PointsResponse.class,
                 Constants.MENU_GIFTS, showProgress);

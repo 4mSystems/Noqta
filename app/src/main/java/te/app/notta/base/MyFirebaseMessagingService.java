@@ -43,10 +43,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
         Log.e("MyFirebaseMessagingService", ": " + remoteMessage.getData());
         UserHelper.getInstance(MyApplication.getInstance()).addCountNotification(UserHelper.getInstance(MyApplication.getInstance()).getCountNotification() + 1);
-        Intent intent = new Intent();
-        intent.putExtra("counter", UserHelper.getInstance(MyApplication.getInstance()).getCountNotification());
-        intent.setAction("app.te.receiver");
-        sendBroadcast(intent);
         showNotification(remoteMessage.getData());
     }
 
@@ -54,7 +50,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Intent intent = new Intent(this, BaseActivity.class);
         intent.putExtra("is_notification", true);
         intent.putExtra(Constants.TYPE, notification.get(Constants.TYPE));
-        intent.putExtra(Constants.ORDER_ID, notification.get(Constants.ORDER_ID));
+        intent.putExtra(Constants.GROUP_ID, notification.get(Constants.GROUP_ID));
         // Set the Activity to start in a new, empty task
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);

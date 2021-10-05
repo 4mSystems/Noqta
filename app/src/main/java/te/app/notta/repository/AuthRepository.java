@@ -19,6 +19,7 @@ import te.app.notta.pages.auth.models.LoginRequest;
 import te.app.notta.pages.auth.models.RegisterRequest;
 import te.app.notta.pages.auth.models.SpecialistResponse;
 import te.app.notta.pages.auth.models.UsersResponse;
+import te.app.notta.pages.notifications.models.NotificationsResponse;
 import te.app.notta.pages.onBoard.models.BoardResponse;
 import te.app.notta.pages.settings.models.AboutResponse;
 import te.app.notta.pages.settings.models.ContactUsRequest;
@@ -104,6 +105,11 @@ public class AuthRepository extends BaseRepository {
     public Disposable getSpecialist() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SPECIALIST, new Object(), SpecialistResponse.class,
                 Constants.SPECIALIST, true);
+    }
+
+    public Disposable getNotifications(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.NOTIFICATIONS, new Object(), NotificationsResponse.class,
+                Constants.NOTIFICATIONS, true);
     }
 
     public Disposable getAboutOrTerms(int type) {

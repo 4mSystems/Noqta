@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 import androidx.databinding.Bindable;
+import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class AddAnswerViewModel extends BaseViewModel {
     AddAnswerRequest addAnswerRequest;
     private List<Uri> selectedUri = new ArrayList<>();
     List<FileObject> objectList = new ArrayList<>();
+    public ObservableField<String> videoPath = new ObservableField<>();
 
     @Inject
     public AddAnswerViewModel(GroupRepository repository) {
@@ -57,6 +59,9 @@ public class AddAnswerViewModel extends BaseViewModel {
                     objectList.add(FileOperations.getFileObject(MyApplication.getInstance(), getSelectedUri().get(i), "file[" + i + "]", Constants.FILE_TYPE_IMAGE));
                 }
             }
+            if (!TextUtils.isEmpty(videoPath.get()))
+                objectList.add(new FileObject("file[" + objectList.size() + "]", videoPath.get(), Constants.FILE_TYPE_VIDEO));
+
             if (objectList.size() > 0 || !TextUtils.isEmpty(getAddAnswerRequest().getAnswerText())) {
                 setMessage(Constants.SHOW_PROGRESS);
                 compositeDisposable.add(repository.answerTask(getAddAnswerRequest(), objectList));
@@ -109,11 +114,14 @@ public class AddAnswerViewModel extends BaseViewModel {
         return this.addAnswerRequest == null ? this.addAnswerRequest = new AddAnswerRequest() : this.addAnswerRequest;
     }
 
+    @Bindable
     public List<Uri> getSelectedUri() {
         return selectedUri;
     }
 
+    @Bindable
     public void setSelectedUri(List<Uri> selectedUri) {
+        notifyChange(BR.selectedUri);
         this.selectedUri = selectedUri;
     }
 
