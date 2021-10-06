@@ -1,206 +1,206 @@
 [
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_recent_task.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_recent_task.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_grand.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\layout_grand.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_more.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_onboard.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_password.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_splash.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tasks.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_tasks.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/layout_action_bar_home.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_group.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_add_group.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_invite_student.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_invite_student.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_lang.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_lang.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_confirm_code.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_task_media.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_task_media.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_member.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_member.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_recent_task.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_recent_task.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_groups.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_my_groups.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_onboard.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_onboard.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_details.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_details.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_student_tasks.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_student_tasks.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_profile.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_hor_member.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_hor_member.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/success_sheet.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/success_sheet.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_points.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_my_points.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_requests.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_requests.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_home.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_points.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_points.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_hor_member.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_hor_member.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_invite_student.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_invite_student.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_exo_player.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/activity_exo_player.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_login.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_change_password.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_exo_player.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\activity_exo_player.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/layout_action_bar_back.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_group_students.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_group_students.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/delete_sheet.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/delete_sheet.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\notify_item.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\notify_item.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/menu.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/menu.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_base.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\activity_base.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_task_media.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_task_media.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_member.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_member.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_more.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_more.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_group_members.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_group_members.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_student_request.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_student_request.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_notifications.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_edit_profile.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_edit_profile.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lang.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_lang.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_group.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_add_group.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_student_request.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_student_request.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/activity_main.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_home.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_home.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_points.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_points.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_profile.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_profile.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_answer.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_add_answer.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_action_bar_home.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\layout_action_bar_home.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_contact.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_contact.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/give_points_sheet.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/give_points_sheet.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_answer.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_add_answer.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_students.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_students.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_profile.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_profile.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_group_details.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_group_details.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_members.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_members.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\success_sheet.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\success_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forget_password.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_forget_password.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_my_group.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_my_group.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_student_tasks.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_student_tasks.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_about.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_more.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_more.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_points.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_points.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_task.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_add_task.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notify_item.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/notify_item.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forget_password.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_forget_password.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_student_invite.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_student_invite.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_action_bar_back.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\layout_action_bar_back.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/activity_base.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_more.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_more.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_home.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_requests.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_requests.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_gift.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_add_gift.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_points.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_points.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_login.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_confirm_code.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_confirm_code.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_task.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_add_task.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\menu.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_register.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_student_invite.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\item_student_invite.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_my_group.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_my_group.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_gift.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_add_gift.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_grand.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/layout_grand.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\give_points_sheet.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\give_points_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_tasks.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_tasks.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_groups.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_my_groups.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_profile.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_edit_profile.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\delete_sheet.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\delete_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_points.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_my_points.xml"
+        "merged": "F:\\Noqta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_about.xml",
+        "source": "F:\\Noqta\\app\\src\\main\\res\\layout\\fragment_about.xml"
     }
 ]

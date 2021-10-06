@@ -78,7 +78,7 @@
     <string name="search_home_hint">البحث عن اسم المجموعة أو اسم المعلم؟</string>
     <string name="home_body">مجموعات  <font fgcolor = '# FBB32A'> نقطة </font>, إنضم الان</string>
     <string name="join">انضم</string>
-    <string name="tasks_body">تاسكات المجموعه , هيا بنا<font fgcolor='#FBB32A'>نقطة </font> </string>
+    <string name="tasks_body">تاسكات المجموعه , هيا بنا <font fgcolor='#FBB32A'>نقطة </font> </string>
     <string name="shop">تسوق</string>
     <string name="your_point1">لديك</string>
     <string name="your_point2">نقاط</string>

@@ -1,6 +1,7 @@
 package te.app.notta.pages.splash;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ import te.app.notta.pages.auth.login.LoginFragment;
 import te.app.notta.pages.onBoard.OnBoardFragment;
 import te.app.notta.utils.Constants;
 import te.app.notta.utils.helper.MovementHelper;
+import te.app.notta.utils.session.LanguagesHelper;
 import te.app.notta.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
@@ -53,6 +55,7 @@ public class SplashFragment extends BaseFragment {
                 MovementHelper.startActivityMain(requireActivity());
             } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
                 if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
+                    LanguagesHelper.setLanguage(Resources.getSystem().getConfiguration().locale.getLanguage());
                     MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
                 } else {
                     MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);

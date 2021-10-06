@@ -2,11 +2,11 @@ te/app/notta/pages/splash/SplashViewModel.java
  te.app.notta.pages.splash.SplashViewModel
 te/app/notta/databinding/FragmentGroupDetailsBinding.java
  te.app.notta.databinding.FragmentGroupDetailsBinding
-te/app/notta/pages/notifications/models/NotificationsResponse.java
- te.app.notta.pages.notifications.models.NotificationsResponse
 te/app/notta/pages/home/TasksFragment.java
  te.app.notta.pages.home.TasksFragment
  te.app.notta.pages.home.TasksFragment$1
+te/app/notta/pages/notifications/models/NotificationsResponse.java
+ te.app.notta.pages.notifications.models.NotificationsResponse
 te/app/notta/databinding/ItemStudentInviteBinding.java
  te.app.notta.databinding.ItemStudentInviteBinding
 te/app/notta/utils/images/PhotoFullPopupWindow.java
@@ -23,14 +23,14 @@ te/app/notta/databinding/FragmentStudentTasksBinding.java
  te.app.notta.databinding.FragmentStudentTasksBinding
 te/app/notta/base/BaseFragment.java
  te.app.notta.base.BaseFragment
-te/app/notta/base/MyApplication.java
- te.app.notta.base.MyApplication
-te/app/notta/pages/settings/ContactUsFragment.java
- te.app.notta.pages.settings.ContactUsFragment
+te/app/notta/pages/teacher/models/inviteStudents/StudentMainData.java
+ te.app.notta.pages.teacher.models.inviteStudents.StudentMainData
+te/app/notta/utils/PopUp/PopUpMenuHelper.java
+ te.app.notta.utils.PopUp.PopUpMenuHelper
+te/app/notta/pages/myGroups/viewModels/MyGroupsViewModel.java
+ te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel
 te/app/notta/databinding/FragmentGroupStudentsBinding.java
  te.app.notta.databinding.FragmentGroupStudentsBinding
-te/app/notta/base/ApplicationComponent.java
- te.app.notta.base.ApplicationComponent
 te/app/notta/databinding/ItemHorMemberBinding.java
  te.app.notta.databinding.ItemHorMemberBinding
 te/app/notta/utils/services/RealTimeReceiver.java
@@ -39,8 +39,8 @@ te/app/notta/utils/services/RealTimeReceiver.java
  te.app.notta.utils.services.RealTimeReceiver$NotificationCounterListener
 te/app/notta/pages/notifications/itemViewModels/NotificationsItemViewModels.java
  te.app.notta.pages.notifications.itemViewModels.NotificationsItemViewModels
-te/app/notta/databinding/FragmentMoreBinding.java
- te.app.notta.databinding.FragmentMoreBinding
+te/app/notta/pages/groupDetails/GroupDetailsFragment.java
+ te.app.notta.pages.groupDetails.GroupDetailsFragment
 te/app/notta/databinding/FragmentAddTaskBinding.java
  te.app.notta.databinding.FragmentAddTaskBinding
 te/app/notta/connection/ConnectionModule.java
@@ -107,10 +107,10 @@ te/app/notta/pages/teacher/models/AddTaskRequest.java
  te.app.notta.pages.teacher.models.AddTaskRequest
 te/app/notta/databinding/LayoutActionBarBackBinding.java
  te.app.notta.databinding.LayoutActionBarBackBinding
-te/app/notta/pages/points/models/students/AvailableGiftsPaginate.java
- te.app.notta.pages.points.models.students.AvailableGiftsPaginate
 te/app/notta/databinding/ItemRecentTaskBinding.java
  te.app.notta.databinding.ItemRecentTaskBinding
+te/app/notta/pages/points/models/students/AvailableGiftsPaginate.java
+ te.app.notta.pages.points.models.students.AvailableGiftsPaginate
 te/app/notta/pages/groupDetails/models/details/TasksItem.java
  te.app.notta.pages.groupDetails.models.details.TasksItem
 te/app/notta/databinding/ItemStudentRequestBinding.java
@@ -127,9 +127,8 @@ te/app/notta/utils/VideoPlayerConfig.java
  te.app.notta.utils.VideoPlayerConfig
 te/app/notta/databinding/FragmentConfirmCodeBinding.java
  te.app.notta.databinding.FragmentConfirmCodeBinding
-te/app/notta/base/IApplicationComponent.java
- te.app.notta.base.IApplicationComponent
- te.app.notta.base.IApplicationComponent$Builder
+te/app/notta/pages/settings/models/AboutResponse.java
+ te.app.notta.pages.settings.models.AboutResponse
 te/app/notta/pages/home/models/HomeResponse.java
  te.app.notta.pages.home.models.HomeResponse
 te/app/notta/databinding/FragmentAddGroupBinding.java
@@ -212,9 +211,8 @@ te/app/notta/utils/upload/FileUpload.java
  te.app.notta.utils.upload.FileUpload
 te/app/notta/databinding/FragmentOnboardBinding.java
  te.app.notta.databinding.FragmentOnboardBinding
-te/app/notta/pages/settings/adapters/MoreAdapter.java
- te.app.notta.pages.settings.adapters.MoreAdapter
- te.app.notta.pages.settings.adapters.MoreAdapter$ViewHolder
+te/app/notta/customViews/actionbar/BackActionBarView.java
+ te.app.notta.customViews.actionbar.BackActionBarView
 te/app/notta/pages/settings/viewModels/ItemProfileViewModel.java
  te.app.notta.pages.settings.viewModels.ItemProfileViewModel
 te/app/notta/pages/onBoard/OnBoardFragment.java
@@ -250,12 +248,13 @@ te/app/notta/pages/addAnswer/adapters/TaskMediaAdapter.java
  te.app.notta.pages.addAnswer.adapters.TaskMediaAdapter$ViewHolder
 te/app/notta/pages/auth/models/UserData.java
  te.app.notta.pages.auth.models.UserData
-te/app/notta/databinding/FragmentLangBinding.java
- te.app.notta.databinding.FragmentLangBinding
+te/app/notta/databinding/FragmentChangePasswordBinding.java
+ te.app.notta.databinding.FragmentChangePasswordBinding
 te/app/notta/model/MainRequest.java
  te.app.notta.model.MainRequest
-te/app/notta/pages/settings/viewModels/SettingsViewModel.java
- te.app.notta.pages.settings.viewModels.SettingsViewModel
+te/app/notta/pages/home/HomeFragment.java
+ te.app.notta.pages.home.HomeFragment
+ te.app.notta.pages.home.HomeFragment$1
 te/app/notta/databinding/FragmentMyPointsBinding.java
  te.app.notta.databinding.FragmentMyPointsBinding
 te/app/notta/utils/helper/LauncherHelper.java
@@ -299,20 +298,20 @@ te/app/notta/customViews/grandDialog/GrandImageDialog.java
  te.app.notta.customViews.grandDialog.GrandImageDialog
 te/app/notta/databinding/GivePointsSheetBinding.java
  te.app.notta.databinding.GivePointsSheetBinding
+te/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment.java
+ te.app.notta.pages.auth.forgetPassword.ForgetPasswordFragment
 te/app/notta/pages/points/adapters/PointsAdapter.java
  te.app.notta.pages.points.adapters.PointsAdapter
  te.app.notta.pages.points.adapters.PointsAdapter$ViewHolder
-te/app/notta/pages/settings/ProfileFragment.java
- te.app.notta.pages.settings.ProfileFragment
 te/app/notta/pages/notifications/NotificationsFragment.java
  te.app.notta.pages.notifications.NotificationsFragment
  te.app.notta.pages.notifications.NotificationsFragment$1
 te/app/notta/model/base/StatusMessage.java
  te.app.notta.model.base.StatusMessage
-te/app/notta/pages/groupDetails/models/groupStudents/GroupStudentsResponse.java
- te.app.notta.pages.groupDetails.models.groupStudents.GroupStudentsResponse
 te/app/notta/pages/auth/models/SpecialistResponse.java
  te.app.notta.pages.auth.models.SpecialistResponse
+te/app/notta/pages/groupDetails/models/groupStudents/GroupStudentsResponse.java
+ te.app.notta.pages.groupDetails.models.groupStudents.GroupStudentsResponse
 te/app/notta/pages/groupDetails/models/groupStudents/GroupStudentsMain.java
  te.app.notta.pages.groupDetails.models.groupStudents.GroupStudentsMain
 te/app/notta/databinding/LayoutGrandBinding.java
@@ -327,8 +326,9 @@ te/app/notta/utils/PopUp/PopUpInterface.java
  te.app.notta.utils.PopUp.PopUpInterface
 te/app/notta/databinding/ActivityBaseBinding.java
  te.app.notta.databinding.ActivityBaseBinding
-te/app/notta/pages/settings/MoreFragment.java
- te.app.notta.pages.settings.MoreFragment
+te/app/notta/pages/groupDetails/adapters/GroupTasksAdapter.java
+ te.app.notta.pages.groupDetails.adapters.GroupTasksAdapter
+ te.app.notta.pages.groupDetails.adapters.GroupTasksAdapter$ViewHolder
 te/app/notta/pages/addAnswer/models/TaskDetailsResponse.java
  te.app.notta.pages.addAnswer.models.TaskDetailsResponse
 te/app/notta/databinding/LayoutActionBarHomeBinding.java
@@ -338,16 +338,16 @@ te/app/notta/pages/groupDetails/models/studentTasks/StudentTasksMain.java
 te/app/notta/pages/groupDetails/adapters/GroupStudentsRequestsAdapter.java
  te.app.notta.pages.groupDetails.adapters.GroupStudentsRequestsAdapter
  te.app.notta.pages.groupDetails.adapters.GroupStudentsRequestsAdapter$ViewHolder
-te/app/notta/databinding/FragmentAboutBinding.java
- te.app.notta.databinding.FragmentAboutBinding
+te/app/notta/pages/onBoard/IntroItem.java
+ te.app.notta.pages.onBoard.IntroItem
 te/app/notta/pages/auth/register/RegisterViewModel.java
  te.app.notta.pages.auth.register.RegisterViewModel
 te/app/notta/utils/timer/TimePickerFragment.java
  te.app.notta.utils.timer.TimePickerFragment
-te/app/notta/pages/points/models/PointsResponse.java
- te.app.notta.pages.points.models.PointsResponse
 te/app/notta/databinding/ActivityExoPlayerBinding.java
  te.app.notta.databinding.ActivityExoPlayerBinding
+te/app/notta/pages/points/models/PointsResponse.java
+ te.app.notta.pages.points.models.PointsResponse
 te/app/notta/pages/points/models/students/StudentMainPoints.java
  te.app.notta.pages.points.models.students.StudentMainPoints
 te/app/notta/activity/MainActivity.java
@@ -359,11 +359,11 @@ te/app/notta/pages/addAnswer/AddAnswerFragment.java
  te.app.notta.pages.addAnswer.AddAnswerFragment$1
 te/app/notta/databinding/FragmentNotificationsBinding.java
  te.app.notta.databinding.FragmentNotificationsBinding
-te/app/notta/pages/notifications/models/NotificationsData.java
- te.app.notta.pages.notifications.models.NotificationsData
 te/app/notta/pages/auth/confirmCode/ConfirmCodeFragment.java
  te.app.notta.pages.auth.confirmCode.ConfirmCodeFragment
  te.app.notta.pages.auth.confirmCode.ConfirmCodeFragment$1
+te/app/notta/pages/notifications/models/NotificationsData.java
+ te.app.notta.pages.notifications.models.NotificationsData
 te/app/notta/pages/points/models/PointsData.java
  te.app.notta.pages.points.models.PointsData
 te/app/notta/pages/groupDetails/adapters/GroupDetailsStudentsAdapter.java
@@ -372,8 +372,8 @@ te/app/notta/pages/groupDetails/adapters/GroupDetailsStudentsAdapter.java
 te/app/notta/customViews/views/IncrementalView.java
  te.app.notta.customViews.views.IncrementalView
  te.app.notta.customViews.views.IncrementalView$1
-te/app/notta/activity/BaseActivity.java
- te.app.notta.activity.BaseActivity
+te/app/notta/pages/auth/changePassword/ChangePasswordFragment.java
+ te.app.notta.pages.auth.changePassword.ChangePasswordFragment
 te/app/notta/utils/URLS.java
  te.app.notta.utils.URLS
 te/app/notta/pages/groupDetails/viewModels/ItemGroupStudentViewModel.java
@@ -388,10 +388,10 @@ te/app/notta/pages/myGroups/adapters/MyGroupsAdapter.java
  te.app.notta.pages.myGroups.adapters.MyGroupsAdapter$ViewHolder
 te/app/notta/customViews/views/CustomTextViewRegular.java
  te.app.notta.customViews.views.CustomTextViewRegular
-te/app/notta/connection/FileObject.java
- te.app.notta.connection.FileObject
 te/app/notta/customViews/views/MenuViewModel.java
  te.app.notta.customViews.views.MenuViewModel
+te/app/notta/connection/FileObject.java
+ te.app.notta.connection.FileObject
 te/app/notta/pages/myGroups/MyGroupsFragment.java
  te.app.notta.pages.myGroups.MyGroupsFragment
  te.app.notta.pages.myGroups.MyGroupsFragment$1
@@ -404,8 +404,9 @@ te/app/notta/utils/helper/LauncherInterface.java
  te.app.notta.utils.helper.LauncherInterface
  te.app.notta.utils.helper.LauncherInterface$activityResultInterface
  te.app.notta.utils.helper.LauncherInterface$permissionInterface
-te/app/notta/databinding/FragmentContactBinding.java
- te.app.notta.databinding.FragmentContactBinding
+te/app/notta/pages/groupDetails/GroupStudentFragment.java
+ te.app.notta.pages.groupDetails.GroupStudentFragment
+ te.app.notta.pages.groupDetails.GroupStudentFragment$1
 te/app/notta/pages/auth/login/LoginViewModel.java
  te.app.notta.pages.auth.login.LoginViewModel
 te/app/notta/pages/addAnswer/models/TaskAnswerFilesItem.java
@@ -424,8 +425,8 @@ te/app/notta/pages/teacher/models/SendInvitationsRequest.java
  te.app.notta.pages.teacher.models.SendInvitationsRequest
 te/app/notta/base/ParentActivity.java
  te.app.notta.base.ParentActivity
-te/app/notta/pages/splash/SplashFragment.java
- te.app.notta.pages.splash.SplashFragment
+te/app/notta/utils/Constants.java
+ te.app.notta.utils.Constants
 te/app/notta/model/PaginateMain.java
  te.app.notta.model.PaginateMain
 te/app/notta/activity/ExoPlayerActivity.java
@@ -446,47 +447,46 @@ te/app/notta/DataBindingTriggerClass.java
  te.app.notta.DataBindingTriggerClass
 te/app/notta/pages/teacher/models/AddGroupResponse.java
  te.app.notta.pages.teacher.models.AddGroupResponse
-te/app/notta/databinding/FragmentProfileBinding.java
- te.app.notta.databinding.FragmentProfileBinding
+te/app/notta/pages/teacher/InviteStudentsToGroupFragment.java
+ te.app.notta.pages.teacher.InviteStudentsToGroupFragment
+ te.app.notta.pages.teacher.InviteStudentsToGroupFragment$1
 te/app/notta/databinding/FragmentGroupMembersBinding.java
  te.app.notta.databinding.FragmentGroupMembersBinding
 te/app/notta/databinding/ItemHomeBinding.java
  te.app.notta.databinding.ItemHomeBinding
-te/app/notta/pages/auth/forgetPassword/ForgetPasswordFragment.java
- te.app.notta.pages.auth.forgetPassword.ForgetPasswordFragment
-te/app/notta/utils/PopUp/PopUpMenuHelper.java
- te.app.notta.utils.PopUp.PopUpMenuHelper
-te/app/notta/pages/auth/changePassword/ChangePasswordFragment.java
- te.app.notta.pages.auth.changePassword.ChangePasswordFragment
-te/app/notta/customViews/actionbar/BackActionBarView.java
- te.app.notta.customViews.actionbar.BackActionBarView
-te/app/notta/pages/teacher/InviteStudentsToGroupFragment.java
- te.app.notta.pages.teacher.InviteStudentsToGroupFragment
- te.app.notta.pages.teacher.InviteStudentsToGroupFragment$1
-te/app/notta/pages/groupDetails/adapters/GroupTasksAdapter.java
- te.app.notta.pages.groupDetails.adapters.GroupTasksAdapter
- te.app.notta.pages.groupDetails.adapters.GroupTasksAdapter$ViewHolder
-te/app/notta/pages/home/HomeFragment.java
- te.app.notta.pages.home.HomeFragment
- te.app.notta.pages.home.HomeFragment$1
-te/app/notta/pages/groupDetails/GroupDetailsFragment.java
- te.app.notta.pages.groupDetails.GroupDetailsFragment
-te/app/notta/pages/groupDetails/GroupStudentFragment.java
- te.app.notta.pages.groupDetails.GroupStudentFragment
- te.app.notta.pages.groupDetails.GroupStudentFragment$1
+te/app/notta/base/IApplicationComponent.java
+ te.app.notta.base.IApplicationComponent
+ te.app.notta.base.IApplicationComponent$Builder
+te/app/notta/pages/splash/SplashFragment.java
+ te.app.notta.pages.splash.SplashFragment
+te/app/notta/base/MyApplication.java
+ te.app.notta.base.MyApplication
+te/app/notta/pages/settings/ContactUsFragment.java
+ te.app.notta.pages.settings.ContactUsFragment
+te/app/notta/databinding/FragmentAboutBinding.java
+ te.app.notta.databinding.FragmentAboutBinding
+te/app/notta/base/ApplicationComponent.java
+ te.app.notta.base.ApplicationComponent
 te/app/notta/pages/settings/LangFragment.java
  te.app.notta.pages.settings.LangFragment
-te/app/notta/databinding/FragmentChangePasswordBinding.java
- te.app.notta.databinding.FragmentChangePasswordBinding
-te/app/notta/pages/onBoard/IntroItem.java
- te.app.notta.pages.onBoard.IntroItem
-te/app/notta/pages/myGroups/viewModels/MyGroupsViewModel.java
- te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel
+te/app/notta/databinding/FragmentContactBinding.java
+ te.app.notta.databinding.FragmentContactBinding
+te/app/notta/databinding/FragmentLangBinding.java
+ te.app.notta.databinding.FragmentLangBinding
+te/app/notta/databinding/FragmentMoreBinding.java
+ te.app.notta.databinding.FragmentMoreBinding
+te/app/notta/pages/settings/viewModels/SettingsViewModel.java
+ te.app.notta.pages.settings.viewModels.SettingsViewModel
+te/app/notta/pages/settings/MoreFragment.java
+ te.app.notta.pages.settings.MoreFragment
+te/app/notta/databinding/FragmentProfileBinding.java
+ te.app.notta.databinding.FragmentProfileBinding
+te/app/notta/pages/settings/adapters/MoreAdapter.java
+ te.app.notta.pages.settings.adapters.MoreAdapter
+ te.app.notta.pages.settings.adapters.MoreAdapter$ViewHolder
+te/app/notta/activity/BaseActivity.java
+ te.app.notta.activity.BaseActivity
 te/app/notta/pages/settings/AboutFragment.java
  te.app.notta.pages.settings.AboutFragment
-te/app/notta/pages/teacher/models/inviteStudents/StudentMainData.java
- te.app.notta.pages.teacher.models.inviteStudents.StudentMainData
-te/app/notta/utils/Constants.java
- te.app.notta.utils.Constants
-te/app/notta/pages/settings/models/AboutResponse.java
- te.app.notta.pages.settings.models.AboutResponse
+te/app/notta/pages/settings/ProfileFragment.java
+ te.app.notta.pages.settings.ProfileFragment

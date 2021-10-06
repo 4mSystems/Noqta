@@ -50,7 +50,7 @@ public class Constants {
 
 
     public final static String LANGUAGE = "language";
-    public static final String DEFAULT_LANGUAGE = "en";
+    public static final String DEFAULT_LANGUAGE = "";
     public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
