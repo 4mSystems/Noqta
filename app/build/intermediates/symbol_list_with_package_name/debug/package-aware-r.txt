@@ -1315,6 +1315,7 @@ color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
 color infoColor
+color lang_tint_check
 color line_color
 color material_blue_grey_800
 color material_blue_grey_900
@@ -3309,6 +3310,7 @@ drawable ic_user
 drawable ic_verify
 drawable ic_warning
 drawable img_error
+drawable lang_check_icon
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3446,6 +3448,7 @@ id answer_task
 id antiClockwise
 id anticipate
 id appCompatButtonNext
+id arabic
 id arc
 id asConfigured
 id async
@@ -3577,6 +3580,7 @@ id elastic
 id end
 id endToStart
 id end_padder
+id english
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -3874,6 +3878,7 @@ id progress
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
 id ratio
 id rc_gallery
 id rc_groups
@@ -4072,6 +4077,7 @@ id tv_members
 id tv_profile_title
 id tv_setting_item
 id tv_show_all
+id tv_take_me
 id tv_tasks
 id tv_teacher_name
 id tv_title
@@ -4415,6 +4421,7 @@ string change_header_text
 string change_lang
 string change_lang_body
 string change_lang_page
+string change_lang_splash
 string change_new_password
 string change_password
 string character_counter_content_description

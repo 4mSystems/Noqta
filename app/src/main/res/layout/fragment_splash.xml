@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
+
+        <import type="android.view.View" />
+
+        <import type="te.app.notta.utils.session.UserHelper" />
 
         <variable
             name="viewmodel"
@@ -19,5 +24,78 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/splash" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_dialog"
+            android:visibility="@{UserHelper.getInstance(context).isFirst==true &amp;&amp;viewmodel.isLangShow?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <te.app.notta.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_take_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:text="@string/change_lang_splash"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black_op"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                android:onCheckedChanged="@{viewmodel.onLangChange}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_take_me">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/english"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:button="@drawable/lang_check_icon"
+                    android:checked="@{viewmodel.lang.equals(`en`)?true:false}"
+                    android:text="@string/english"
+                    android:textAlignment="viewEnd"
+                    app:buttonTint="@color/lang_tint_check" />
+
+                <RadioButton
+                    android:id="@+id/arabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/white"
+                    android:button="@drawable/lang_check_icon"
+                    android:checked="@{viewmodel.lang.equals(`ar`)?true:false}"
+                    android:text="@string/arabic"
+                    android:textAlignment="viewEnd"
+                    app:buttonTint="@color/lang_tint_check" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:layout_marginBottom="@dimen/dp20h"
+                android:background="@drawable/corner_view_gradient"
+                android:onClick="@{()-> viewmodel.changeLang()}"
+                android:text="@string/next"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

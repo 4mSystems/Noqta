@@ -24,9 +24,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback64;
+    private final android.view.View.OnClickListener mCallback65;
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback64;
     @Nullable
     private final android.view.View.OnClickListener mCallback63;
     // values
@@ -94,9 +94,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback64 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback62 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback63 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback65 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback64 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback63 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback64);
-            this.back.setOnClickListener(mCallback62);
+            this.appCompatButtonNext.setOnClickListener(mCallback65);
+            this.back.setOnClickListener(mCallback63);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinValidate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinValidateandroidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback63);
+            this.tvLoginForget.setOnClickListener(mCallback64);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -324,6 +324,23 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.resendCode();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -339,23 +356,6 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.resendCode();
                 }
                 break;
             }

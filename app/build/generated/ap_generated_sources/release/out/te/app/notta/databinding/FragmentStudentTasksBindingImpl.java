@@ -21,7 +21,7 @@ public class FragmentStudentTasksBindingImpl extends FragmentStudentTasksBinding
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback66;
+    private final android.view.View.OnClickListener mCallback67;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class FragmentStudentTasksBindingImpl extends FragmentStudentTasksBinding
         this.tvProfileTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback66 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback67 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -213,7 +213,7 @@ public class FragmentStudentTasksBindingImpl extends FragmentStudentTasksBinding
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback66);
+            this.back.setOnClickListener(mCallback67);
         }
         if ((dirtyFlags & 0x13L) != 0) {
             // api target 1

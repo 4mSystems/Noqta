@@ -4,22 +4,49 @@ package te.app.notta.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
+import te.app.notta.customViews.views.CustomTextViewMedium;
 import te.app.notta.pages.splash.SplashViewModel;
 
 public abstract class FragmentSplashBinding extends ViewDataBinding {
+  @NonNull
+  public final RadioButton arabic;
+
+  @NonNull
+  public final AppCompatButton btnPhone;
+
+  @NonNull
+  public final MaterialRadioButton english;
+
+  @NonNull
+  public final RadioGroup radioGroup;
+
+  @NonNull
+  public final CustomTextViewMedium tvTakeMe;
+
   @Bindable
   protected SplashViewModel mViewmodel;
 
-  protected FragmentSplashBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentSplashBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      RadioButton arabic, AppCompatButton btnPhone, MaterialRadioButton english,
+      RadioGroup radioGroup, CustomTextViewMedium tvTakeMe) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.arabic = arabic;
+    this.btnPhone = btnPhone;
+    this.english = english;
+    this.radioGroup = radioGroup;
+    this.tvTakeMe = tvTakeMe;
   }
 
   public abstract void setViewmodel(@Nullable SplashViewModel viewmodel);

@@ -21,7 +21,7 @@ public class ItemStudentInviteBindingImpl extends ItemStudentInviteBinding imple
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback89;
+    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback90;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class ItemStudentInviteBindingImpl extends ItemStudentInviteBinding imple
         this.tvTeacherName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new te.app.notta.generated.callback.OnCheckedChangeListener(this, 1);
+        mCallback90 = new te.app.notta.generated.callback.OnCheckedChangeListener(this, 1);
         invalidateAll();
     }
 
@@ -144,7 +144,7 @@ public class ItemStudentInviteBindingImpl extends ItemStudentInviteBinding imple
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback89, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback90, (androidx.databinding.InverseBindingListener)null);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

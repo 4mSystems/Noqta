@@ -74,6 +74,7 @@
     <string name="change_lang">تغير اللغة</string>
     <string name="change_lang_body">اختر اللغة المفضلة لاستخدامها في تطبيق النقطة ، فنحن نعمل بعدة لغات</string>
     <string name="change_lang_page">تغيير  <font fgcolor="#FBB32A">اللغة</font></string>
+    <string name="change_lang_splash">Choose your favorite language</string>
     <string name="change_new_password">كلمة مرور جديدة</string>
     <string name="change_password">تغيير كلمة المرور</string>
     <string name="character_counter_content_description">تمّ إدخال %1$d حرف من إجمالي %2$d.</string>

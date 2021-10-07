@@ -25,9 +25,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback54;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -58,8 +58,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.tvHomeUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback54 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback55 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback54 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -248,8 +248,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.icHomeNotification.setOnClickListener(mCallback53);
-            this.mboundView6.setOnClickListener(mCallback54);
+            this.icHomeNotification.setOnClickListener(mCallback54);
+            this.mboundView6.setOnClickListener(mCallback55);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1

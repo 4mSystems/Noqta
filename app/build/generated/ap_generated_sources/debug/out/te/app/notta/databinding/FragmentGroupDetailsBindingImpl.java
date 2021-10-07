@@ -39,7 +39,7 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
     @Nullable
     private final android.view.View.OnClickListener mCallback70;
     @Nullable
-    private final android.view.View.OnClickListener mCallback68;
+    private final android.view.View.OnClickListener mCallback76;
     @Nullable
     private final android.view.View.OnClickListener mCallback75;
     @Nullable
@@ -115,14 +115,14 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         this.vLine3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback74 = new te.app.notta.generated.callback.OnClickListener(this, 7);
-        mCallback70 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback68 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback75 = new te.app.notta.generated.callback.OnClickListener(this, 8);
-        mCallback71 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback69 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback72 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback73 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback74 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback70 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback76 = new te.app.notta.generated.callback.OnClickListener(this, 8);
+        mCallback75 = new te.app.notta.generated.callback.OnClickListener(this, 7);
+        mCallback71 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback69 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback72 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback73 = new te.app.notta.generated.callback.OnClickListener(this, 5);
         invalidateAll();
     }
 
@@ -447,14 +447,14 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback68);
-            this.btnJoin.setOnClickListener(mCallback71);
-            this.btnLeave.setOnClickListener(mCallback72);
-            this.btnRemove.setOnClickListener(mCallback73);
-            this.btnRequests.setOnClickListener(mCallback70);
-            this.btnStudents.setOnClickListener(mCallback69);
-            this.mboundView20.setOnClickListener(mCallback75);
-            this.tvShowAll.setOnClickListener(mCallback74);
+            this.back.setOnClickListener(mCallback69);
+            this.btnJoin.setOnClickListener(mCallback72);
+            this.btnLeave.setOnClickListener(mCallback73);
+            this.btnRemove.setOnClickListener(mCallback74);
+            this.btnRequests.setOnClickListener(mCallback71);
+            this.btnStudents.setOnClickListener(mCallback70);
+            this.mboundView20.setOnClickListener(mCallback76);
+            this.tvShowAll.setOnClickListener(mCallback75);
         }
         if ((dirtyFlags & 0x13L) != 0) {
             // api target 1
@@ -494,6 +494,63 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.DIALOG_SHOW);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.STUDENT);
+                }
+                break;
+            }
+            case 8: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.ADD_TASK);
+                }
+                break;
+            }
             case 7: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -550,25 +607,6 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
                 }
                 break;
             }
-            case 8: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.ADD_TASK);
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -583,25 +621,6 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
 
                     viewmodel.studentJoinRequest();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.STUDENT);
                 }
                 break;
             }
@@ -621,25 +640,6 @@ public class FragmentGroupDetailsBindingImpl extends FragmentGroupDetailsBinding
 
 
                     viewmodel.action(te.app.notta.utils.Constants.DIALOG_SHOW_LEAVE);
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.DIALOG_SHOW);
                 }
                 break;
             }

@@ -29,7 +29,7 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback94;
     @Nullable
-    private final android.view.View.OnClickListener mCallback92;
+    private final android.view.View.OnClickListener mCallback98;
     @Nullable
     private final android.view.View.OnClickListener mCallback97;
     @Nullable
@@ -71,12 +71,12 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
         this.tvEn.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback96 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback94 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback92 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback97 = new te.app.notta.generated.callback.OnClickListener(this, 6);
-        mCallback95 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback93 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback96 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback94 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback98 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback97 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback95 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback93 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -195,12 +195,12 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.back.setOnClickListener(mCallback92);
-            this.btnChange.setOnClickListener(mCallback97);
-            this.icAr.setOnClickListener(mCallback93);
-            this.icEn.setOnClickListener(mCallback95);
-            this.tvAr.setOnClickListener(mCallback94);
-            this.tvEn.setOnClickListener(mCallback96);
+            this.back.setOnClickListener(mCallback93);
+            this.btnChange.setOnClickListener(mCallback98);
+            this.icAr.setOnClickListener(mCallback94);
+            this.icEn.setOnClickListener(mCallback96);
+            this.tvAr.setOnClickListener(mCallback95);
+            this.tvEn.setOnClickListener(mCallback97);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -213,6 +213,59 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeLang("en");
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeLang("ar");
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.restart();
+                }
+                break;
+            }
             case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -264,59 +317,6 @@ public class FragmentLangBindingImpl extends FragmentLangBinding implements te.a
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.restart();
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeLang("en");
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeLang("ar");
                 }
                 break;
             }

@@ -1,13 +1,13 @@
-#Wed Oct 06 17:19:39 EET 2021
+#Fri Oct 08 00:48:03 EET 2021
 path.3=classes_0.dex
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
-base.3=F\:\\Noqta\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_0.dex
-base.2=F\:\\Noqta\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.1=F\:\\Noqta\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.0=F\:\\Noqta\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+base.3=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_0.dex
+base.2=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.1=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
+base.0=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex

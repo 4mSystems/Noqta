@@ -23,7 +23,7 @@ public class FragmentMyPointsBindingImpl extends FragmentMyPointsBinding impleme
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback22;
@@ -49,7 +49,7 @@ public class FragmentMyPointsBindingImpl extends FragmentMyPointsBinding impleme
             );
         this.appCompatButtonNext.setTag(null);
         this.cardPoints.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.progress.setTag(null);
         this.tvYourPoint2.setTag(null);

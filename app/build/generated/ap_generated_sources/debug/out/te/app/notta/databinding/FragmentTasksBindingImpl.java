@@ -24,7 +24,7 @@ public class FragmentTasksBindingImpl extends FragmentTasksBinding implements te
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback67;
+    private final android.view.View.OnClickListener mCallback68;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class FragmentTasksBindingImpl extends FragmentTasksBinding implements te
         this.tvHomeUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback68 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -218,7 +218,7 @@ public class FragmentTasksBindingImpl extends FragmentTasksBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.icHomeNotification.setOnClickListener(mCallback67);
+            this.icHomeNotification.setOnClickListener(mCallback68);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

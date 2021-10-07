@@ -37,7 +37,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
     private final android.view.View.OnClickListener mCallback57;
     @Nullable
@@ -321,12 +321,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.specialist.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback56 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback57 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback60 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback58 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback61 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback59 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback62 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback57 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback60 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback58 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback61 = new te.app.notta.generated.callback.OnClickListener(this, 5);
         invalidateAll();
     }
 
@@ -732,17 +732,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback59);
+            this.appCompatButtonNext.setOnClickListener(mCallback60);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            this.loginNoAccount.setOnClickListener(mCallback60);
-            this.loginNoAccountBold.setOnClickListener(mCallback61);
-            this.mboundView1.setOnClickListener(mCallback56);
+            this.loginNoAccount.setOnClickListener(mCallback61);
+            this.loginNoAccountBold.setOnClickListener(mCallback62);
+            this.mboundView1.setOnClickListener(mCallback57);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView11, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView11androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView13, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView13androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
-            this.mboundView7.setOnClickListener(mCallback57);
+            this.mboundView7.setOnClickListener(mCallback58);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
-            this.specialist.setOnClickListener(mCallback58);
+            this.specialist.setOnClickListener(mCallback59);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.specialist, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, specialistandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x2c0L) != 0) {
@@ -792,7 +792,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -805,7 +805,27 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.register();
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.POP);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }
@@ -824,6 +844,23 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
                 }
                 break;
             }
@@ -847,43 +884,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 break;
             }
             case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.POP);
-                }
-                break;
-            }
-            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

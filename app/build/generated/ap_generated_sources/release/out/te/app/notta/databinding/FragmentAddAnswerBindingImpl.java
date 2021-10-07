@@ -53,7 +53,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
     @Nullable
     private final android.view.View.OnClickListener mCallback81;
     @Nullable
-    private final android.view.View.OnClickListener mCallback76;
+    private final android.view.View.OnClickListener mCallback84;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -154,14 +154,14 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         this.videoContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback79 = new te.app.notta.generated.callback.OnClickListener(this, 4);
-        mCallback82 = new te.app.notta.generated.callback.OnClickListener(this, 7);
-        mCallback83 = new te.app.notta.generated.callback.OnClickListener(this, 8);
-        mCallback77 = new te.app.notta.generated.callback.OnClickListener(this, 2);
-        mCallback80 = new te.app.notta.generated.callback.OnClickListener(this, 5);
-        mCallback78 = new te.app.notta.generated.callback.OnClickListener(this, 3);
-        mCallback81 = new te.app.notta.generated.callback.OnClickListener(this, 6);
-        mCallback76 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback79 = new te.app.notta.generated.callback.OnClickListener(this, 3);
+        mCallback82 = new te.app.notta.generated.callback.OnClickListener(this, 6);
+        mCallback83 = new te.app.notta.generated.callback.OnClickListener(this, 7);
+        mCallback77 = new te.app.notta.generated.callback.OnClickListener(this, 1);
+        mCallback80 = new te.app.notta.generated.callback.OnClickListener(this, 4);
+        mCallback78 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback81 = new te.app.notta.generated.callback.OnClickListener(this, 5);
+        mCallback84 = new te.app.notta.generated.callback.OnClickListener(this, 8);
         invalidateAll();
     }
 
@@ -729,14 +729,14 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
         if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback83);
-            this.back.setOnClickListener(mCallback76);
-            this.icCloudUpload.setOnClickListener(mCallback77);
-            this.icCloudUploadVideo.setOnClickListener(mCallback80);
-            this.mboundView12.setOnClickListener(mCallback78);
-            this.mboundView13.setOnClickListener(mCallback79);
-            this.mboundView18.setOnClickListener(mCallback81);
-            this.mboundView19.setOnClickListener(mCallback82);
+            this.appCompatButtonNext.setOnClickListener(mCallback84);
+            this.back.setOnClickListener(mCallback77);
+            this.icCloudUpload.setOnClickListener(mCallback78);
+            this.icCloudUploadVideo.setOnClickListener(mCallback81);
+            this.mboundView12.setOnClickListener(mCallback79);
+            this.mboundView13.setOnClickListener(mCallback80);
+            this.mboundView18.setOnClickListener(mCallback82);
+            this.mboundView19.setOnClickListener(mCallback83);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x10aL) != 0) {
@@ -791,7 +791,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -807,6 +807,25 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
 
 
                     viewmodel.action(te.app.notta.utils.Constants.IMAGE);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.REMOVE_VIDEO);
                 }
                 break;
             }
@@ -829,7 +848,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 }
                 break;
             }
-            case 8: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -842,7 +861,27 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.answerTask();
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.notta.utils.Constants.IMAGE);
                 }
                 break;
             }
@@ -884,7 +923,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 }
                 break;
             }
-            case 3: {
+            case 8: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -897,46 +936,7 @@ public class FragmentAddAnswerBindingImpl extends FragmentAddAnswerBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.IMAGE);
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.notta.utils.Constants.REMOVE_VIDEO);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.notta.pages.addAnswer.viewModels.AddAnswerViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.goBack(getRoot().getContext());
+                    viewmodel.answerTask();
                 }
                 break;
             }

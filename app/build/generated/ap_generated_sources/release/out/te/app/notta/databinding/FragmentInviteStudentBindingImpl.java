@@ -21,7 +21,7 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
     private final android.view.View.OnClickListener mCallback88;
     // values
@@ -50,8 +50,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         this.rcStudents.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback87 = new te.app.notta.generated.callback.OnClickListener(this, 1);
-        mCallback88 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback89 = new te.app.notta.generated.callback.OnClickListener(this, 2);
+        mCallback88 = new te.app.notta.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -192,8 +192,8 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnClose.setOnClickListener(mCallback88);
-            this.dialogHeader.setOnClickListener(mCallback87);
+            this.btnClose.setOnClickListener(mCallback89);
+            this.dialogHeader.setOnClickListener(mCallback88);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1
@@ -226,6 +226,23 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.notta.pages.teacher.viewModels.AddGroupViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.sendInvitations();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewModel
@@ -241,23 +258,6 @@ public class FragmentInviteStudentBindingImpl extends FragmentInviteStudentBindi
 
 
                     viewModel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.notta.pages.teacher.viewModels.AddGroupViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.sendInvitations();
                 }
                 break;
             }

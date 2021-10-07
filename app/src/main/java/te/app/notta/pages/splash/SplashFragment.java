@@ -22,7 +22,6 @@ import te.app.notta.base.MyApplication;
 import te.app.notta.model.base.Mutable;
 import te.app.notta.R;
 import te.app.notta.databinding.FragmentSplashBinding;
-import te.app.notta.pages.addAnswer.AddAnswerFragment;
 import te.app.notta.pages.auth.login.LoginFragment;
 import te.app.notta.pages.onBoard.OnBoardFragment;
 import te.app.notta.utils.Constants;
@@ -55,7 +54,7 @@ public class SplashFragment extends BaseFragment {
                 MovementHelper.startActivityMain(requireActivity());
             } else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
                 if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-                    LanguagesHelper.setLanguage(Resources.getSystem().getConfiguration().locale.getLanguage());
+                    LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals(Resources.getSystem().getConfiguration().locale.getLanguage()) ? Resources.getSystem().getConfiguration().locale.getLanguage() : LanguagesHelper.getCurrentLanguage());
                     MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
                 } else {
                     MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
