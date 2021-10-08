@@ -28,7 +28,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
     }
 
     public void submit() {
-        request.setType(userData.getType());
+//        request.setType("2");
         if (userData == null) {
             if (request.isPasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {

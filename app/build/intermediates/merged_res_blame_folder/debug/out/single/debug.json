@@ -20,12 +20,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-hdpi/ic_logo_colored.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/menu_bottom_navigation_menu.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/menu/bottom_navigation_menu.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_badge_bg_with_shadow.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/badge_bg_with_shadow.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/menu_bottom_navigation_menu.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/menu/bottom_navigation_menu.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/layout_delete_sheet.xml.flat",
@@ -80,12 +80,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_delete.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_lang.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_lang.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_board_header.png.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-xxhdpi/board_header.png"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_lang.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_lang.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
@@ -116,12 +116,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_board_home.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_by_grand.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/by_grand.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_points.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_points.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_by_grand.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/by_grand.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_icon_ionic_md_time.xml.flat",
@@ -172,24 +172,24 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_students.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-mdpi_board_header.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-mdpi/board_header.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_ic_rectangle_students.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_rectangle_students.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-mdpi_board_header.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-mdpi/board_header.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_cloud_upload.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_cloud_upload.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_warning.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_warning.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/layout_fragment_points.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_points.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_warning.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_warning.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/color_lang_tint_check.xml.flat",
@@ -308,12 +308,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_email.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_by_grand_black.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/by_grand_black.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_corner_view_gray_border.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/corner_view_gray_border.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/drawable_by_grand_black.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/by_grand_black.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/debug/layout_fragment_group_members.xml.flat",

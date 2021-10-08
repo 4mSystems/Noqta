@@ -16,6 +16,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.notta.R;
 import te.app.notta.customViews.views.CustomTextViewMedium;
+import te.app.notta.customViews.views.CustomTextViewRegular;
 import te.app.notta.pages.points.viewModels.ItemPointsViewModel;
 
 public abstract class ItemPointsBinding extends ViewDataBinding {
@@ -29,23 +30,28 @@ public abstract class ItemPointsBinding extends ViewDataBinding {
   public final RoundedImageView icUser;
 
   @NonNull
-  public final CustomTextViewMedium tvDescPoint;
+  public final CustomTextViewRegular tvDescPoint;
 
   @NonNull
   public final CustomTextViewMedium tvGroupName;
+
+  @NonNull
+  public final CustomTextViewRegular tvPoints;
 
   @Bindable
   protected ItemPointsViewModel mViewModel;
 
   protected ItemPointsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Barrier br2, AppCompatImageView icDelete, RoundedImageView icUser,
-      CustomTextViewMedium tvDescPoint, CustomTextViewMedium tvGroupName) {
+      CustomTextViewRegular tvDescPoint, CustomTextViewMedium tvGroupName,
+      CustomTextViewRegular tvPoints) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br2 = br2;
     this.icDelete = icDelete;
     this.icUser = icUser;
     this.tvDescPoint = tvDescPoint;
     this.tvGroupName = tvGroupName;
+    this.tvPoints = tvPoints;
   }
 
   public abstract void setViewModel(@Nullable ItemPointsViewModel viewModel);

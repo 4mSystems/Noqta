@@ -14,15 +14,15 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.br2, 7);
+        sViewsWithIds.put(R.id.br2, 8);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     @NonNull
-    private final android.view.View mboundView5;
+    private final android.view.View mboundView6;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView6;
+    private final androidx.appcompat.widget.AppCompatButton mboundView7;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback21;
@@ -33,26 +33,28 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
     // Inverse Binding Event Handlers
 
     public ItemPointsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private ItemPointsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[7]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (androidx.constraintlayout.widget.Barrier) bindings[8]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[1]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[4]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[2]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[5]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.notta.customViews.views.CustomTextViewRegular) bindings[2]
             );
         this.icDelete.setTag(null);
         this.icUser.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView5 = (android.view.View) bindings[5];
-        this.mboundView5.setTag(null);
-        this.mboundView6 = (androidx.appcompat.widget.AppCompatButton) bindings[6];
+        this.mboundView6 = (android.view.View) bindings[6];
         this.mboundView6.setTag(null);
+        this.mboundView7 = (androidx.appcompat.widget.AppCompatButton) bindings[7];
+        this.mboundView7.setTag(null);
         this.tvDescPoint.setTag(null);
         this.tvGroupName.setTag(null);
+        this.tvPoints.setTag(null);
         setRootTag(root);
         // listeners
         mCallback21 = new te.app.notta.generated.callback.OnClickListener(this, 2);
@@ -135,11 +137,14 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         int viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = 0;
         java.lang.String viewModelPointsDataImage = null;
         java.lang.String viewModelPointsDataName = null;
+        java.lang.String viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2 = null;
         te.app.notta.pages.points.models.PointsData viewModelPointsData = null;
         boolean viewModelUserDataTypeEqualsJavaLangString2 = false;
         te.app.notta.pages.auth.models.UserData viewModelUserData = null;
+        java.lang.String viewModelPointsDataPointsConcatJavaLangString = null;
         java.lang.String viewModelPointsDataDescription = null;
         int viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE = 0;
+        java.lang.String viewModelPointsDataPoints = null;
         boolean viewModelUserDataTypeEqualsJavaLangString1 = false;
         te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
 
@@ -160,6 +165,20 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
                     viewModelPointsDataName = viewModelPointsData.getName();
                     // read viewModel.pointsData.description
                     viewModelPointsDataDescription = viewModelPointsData.getDescription();
+                    // read viewModel.pointsData.points
+                    viewModelPointsDataPoints = viewModelPointsData.getPoints();
+                }
+
+
+                if (viewModelPointsDataPoints != null) {
+                    // read viewModel.pointsData.points.concat(" ")
+                    viewModelPointsDataPointsConcatJavaLangString = viewModelPointsDataPoints.concat(" ");
+                }
+
+
+                if (viewModelPointsDataPointsConcatJavaLangString != null) {
+                    // read viewModel.pointsData.points.concat(" ").concat(@android:string/your_point2)
+                    viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2 = viewModelPointsDataPointsConcatJavaLangString.concat(tvPoints.getResources().getString(R.string.your_point2));
                 }
             if ((dirtyFlags & 0x5L) != 0) {
 
@@ -210,14 +229,14 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
             // api target 1
 
             this.icDelete.setOnClickListener(mCallback20);
-            this.mboundView6.setOnClickListener(mCallback21);
+            this.mboundView7.setOnClickListener(mCallback21);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
             this.icDelete.setVisibility(viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
-            this.mboundView5.setVisibility(viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
-            this.mboundView6.setVisibility(viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE);
+            this.mboundView6.setVisibility(viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE);
+            this.mboundView7.setVisibility(viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -225,6 +244,7 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
             te.app.notta.base.ApplicationBinding.loadImage(this.icUser, viewModelPointsDataImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDescPoint, viewModelPointsDataDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupName, viewModelPointsDataName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPoints, viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2);
         }
     }
     // Listener Stub Implementations

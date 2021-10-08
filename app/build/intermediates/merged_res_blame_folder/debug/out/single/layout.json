@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_recent_task.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_recent_task.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more.xml",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_more.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_onboard.xml"
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_recent_task.xml",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_recent_task.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_onboard.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
@@ -36,12 +36,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_my_groups.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_details.xml",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_details.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_group_details.xml",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_details.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/success_sheet.xml",

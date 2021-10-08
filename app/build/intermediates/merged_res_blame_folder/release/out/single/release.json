@@ -52,12 +52,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_icon_feather_check_circle.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_icon_material_location_on.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_icon_material_location_on.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_exit.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_exit.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_icon_material_location_on.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_icon_material_location_on.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_item_home.xml.flat",
@@ -92,12 +92,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/build/generated/res/pngs/release/drawable-xhdpi/ic_board_home.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_item_points.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_points.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_logo_colored.png.flat",
@@ -152,12 +152,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-hdpi/ic_logo.png"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_logo.png.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-xhdpi/ic_logo.png"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_contact.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_contact.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_logo.png.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable-xhdpi/ic_logo.png"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_fragment_group_students.xml.flat",
@@ -176,12 +176,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/onboard_slider_item.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_fragment_group_details.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_details.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_search.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_search.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_fragment_group_details.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_group_details.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher_foreground.png.flat",
@@ -192,12 +192,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_add_answer.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_icon_ionic_md_time.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_icon_ionic_md_time.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_item_recent_task.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_recent_task.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_icon_ionic_md_time.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/drawable/ic_icon_ionic_md_time.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable_ic_user.xml.flat",
@@ -288,12 +288,12 @@
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/item_my_group.xml"
     },
     {
-        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/color_text_input_layout_stroke_color_medium.xml.flat",
-        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/color/text_input_layout_stroke_color_medium.xml"
-    },
-    {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/layout_fragment_edit_profile.xml.flat",
         "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/layout/fragment_edit_profile.xml"
+    },
+    {
+        "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/color_text_input_layout_stroke_color_medium.xml.flat",
+        "source": "/home/elnagar/StudioProjects/Noqta/app/src/main/res/color/text_input_layout_stroke_color_medium.xml"
     },
     {
         "merged": "/home/elnagar/StudioProjects/Noqta/app/build/intermediates/res/merged/release/drawable-mdpi_board_header_small.png.flat",
