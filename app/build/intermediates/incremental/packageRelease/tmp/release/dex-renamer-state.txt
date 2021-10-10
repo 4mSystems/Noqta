@@ -1,4 +1,4 @@
-#Fri Oct 08 14:25:50 EET 2021
+#Sun Oct 10 21:39:10 EET 2021
 base.0=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

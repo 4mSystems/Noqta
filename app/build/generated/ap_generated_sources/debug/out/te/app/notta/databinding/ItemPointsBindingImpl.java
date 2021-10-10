@@ -136,17 +136,23 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         java.lang.String viewModelUserDataType = null;
         int viewModelUserDataTypeEqualsJavaLangString2ViewVISIBLEViewGONE = 0;
         java.lang.String viewModelPointsDataImage = null;
+        int viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidColorMediumColorMboundView7AndroidColorColorAccent = 0;
+        java.lang.String viewModelPointsDataNum = null;
         java.lang.String viewModelPointsDataName = null;
         java.lang.String viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2 = null;
+        boolean viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumBooleanFalseBooleanTrue = false;
+        java.lang.String viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidStringSoldOutMboundView7AndroidStringExchange = null;
         te.app.notta.pages.points.models.PointsData viewModelPointsData = null;
         boolean viewModelUserDataTypeEqualsJavaLangString2 = false;
         te.app.notta.pages.auth.models.UserData viewModelUserData = null;
         java.lang.String viewModelPointsDataPointsConcatJavaLangString = null;
+        boolean viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum = false;
         java.lang.String viewModelPointsDataDescription = null;
         int viewModelUserDataTypeEqualsJavaLangString1ViewVISIBLEViewGONE = 0;
         java.lang.String viewModelPointsDataPoints = null;
         boolean viewModelUserDataTypeEqualsJavaLangString1 = false;
         te.app.notta.pages.points.viewModels.ItemPointsViewModel viewModel = mViewModel;
+        java.lang.String viewModelPointsDataReplacedNum = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -161,12 +167,16 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
                 if (viewModelPointsData != null) {
                     // read viewModel.pointsData.image
                     viewModelPointsDataImage = viewModelPointsData.getImage();
+                    // read viewModel.pointsData.num
+                    viewModelPointsDataNum = viewModelPointsData.getNum();
                     // read viewModel.pointsData.name
                     viewModelPointsDataName = viewModelPointsData.getName();
                     // read viewModel.pointsData.description
                     viewModelPointsDataDescription = viewModelPointsData.getDescription();
                     // read viewModel.pointsData.points
                     viewModelPointsDataPoints = viewModelPointsData.getPoints();
+                    // read viewModel.pointsData.replaced_num
+                    viewModelPointsDataReplacedNum = viewModelPointsData.getReplaced_num();
                 }
 
 
@@ -174,12 +184,34 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
                     // read viewModel.pointsData.points.concat(" ")
                     viewModelPointsDataPointsConcatJavaLangString = viewModelPointsDataPoints.concat(" ");
                 }
+                if (viewModelPointsDataNum != null) {
+                    // read viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num)
+                    viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum = viewModelPointsDataNum.equals(viewModelPointsDataReplacedNum);
+                }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum) {
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x200L;
+                }
+            }
 
 
                 if (viewModelPointsDataPointsConcatJavaLangString != null) {
                     // read viewModel.pointsData.points.concat(" ").concat(@android:string/your_point2)
                     viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2 = viewModelPointsDataPointsConcatJavaLangString.concat(tvPoints.getResources().getString(R.string.your_point2));
                 }
+                // read viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:color/medium_color : @android:color/colorAccent
+                viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidColorMediumColorMboundView7AndroidColorColorAccent = ((viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum) ? (getColorFromResource(mboundView7, R.color.medium_color)) : (getColorFromResource(mboundView7, R.color.colorAccent)));
+                // read viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? false : true
+                viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumBooleanFalseBooleanTrue = ((viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum) ? (false) : (true));
+                // read viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:string/sold_out : @android:string/exchange
+                viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidStringSoldOutMboundView7AndroidStringExchange = ((viewModelPointsDataNumEqualsViewModelPointsDataReplacedNum) ? (mboundView7.getResources().getString(R.string.sold_out)) : (mboundView7.getResources().getString(R.string.exchange)));
             if ((dirtyFlags & 0x5L) != 0) {
 
                     if (viewModel != null) {
@@ -210,10 +242,10 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
                 }
                 if((dirtyFlags & 0x5L) != 0) {
                     if(viewModelUserDataTypeEqualsJavaLangString1) {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x1000L;
                     }
                     else {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x800L;
                     }
                 }
 
@@ -242,6 +274,9 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
             // api target 1
 
             te.app.notta.base.ApplicationBinding.loadImage(this.icUser, viewModelPointsDataImage);
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.mboundView7, androidx.databinding.adapters.Converters.convertColorToDrawable(viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidColorMediumColorMboundView7AndroidColorColorAccent));
+            this.mboundView7.setEnabled(viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumBooleanFalseBooleanTrue);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewModelPointsDataNumEqualsViewModelPointsDataReplacedNumMboundView7AndroidStringSoldOutMboundView7AndroidStringExchange);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDescPoint, viewModelPointsDataDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvGroupName, viewModelPointsDataName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPoints, viewModelPointsDataPointsConcatJavaLangStringConcatTvPointsAndroidStringYourPoint2);
@@ -299,8 +334,14 @@ public class ItemPointsBindingImpl extends ItemPointsBinding implements te.app.n
         flag 2 (0x3L): null
         flag 3 (0x4L): viewModel.userData.type.equals("2") ? View.VISIBLE : View.GONE
         flag 4 (0x5L): viewModel.userData.type.equals("2") ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewModel.userData.type.equals("1") ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewModel.userData.type.equals("1") ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:color/medium_color : @android:color/colorAccent
+        flag 6 (0x7L): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:color/medium_color : @android:color/colorAccent
+        flag 7 (0x8L): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? false : true
+        flag 8 (0x9L): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? false : true
+        flag 9 (0xaL): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:string/sold_out : @android:string/exchange
+        flag 10 (0xbL): viewModel.pointsData.num.equals(viewModel.pointsData.replaced_num) ? @android:string/sold_out : @android:string/exchange
+        flag 11 (0xcL): viewModel.userData.type.equals("1") ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): viewModel.userData.type.equals("1") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

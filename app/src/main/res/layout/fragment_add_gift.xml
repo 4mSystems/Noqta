@@ -201,6 +201,48 @@
                 app:value="@{viewmodel.request.points}" />
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_gift_taker"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp16h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:hint="@string/gift_owner_number"
+                app:boxCornerRadiusBottomEnd="@dimen/dp27h"
+                app:boxCornerRadiusBottomStart="@dimen/dp27h"
+                app:boxCornerRadiusTopEnd="@dimen/dp27h"
+                app:boxCornerRadiusTopStart="@dimen/dp27h"
+                app:error="@{viewmodel.request.winnersError}"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_points">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:onTextChanged="@{viewmodel.onWinnersTextChanged}"
+                    android:text="@={viewmodel.request.numOfWinners}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <te.app.notta.customViews.views.IncrementalView
+                android:id="@+id/incrementalViewGiftCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp14h"
+                android:layout_marginEnd="@dimen/dp6w"
+                app:layout_constraintBottom_toBottomOf="@id/input_gift_taker"
+                app:layout_constraintEnd_toEndOf="@id/input_gift_taker"
+                app:layout_constraintTop_toTopOf="@id/input_gift_taker"
+                app:type="ADD_TWO"
+                app:value="@{viewmodel.request.numOfWinners}" />
+
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButtonNext"
                 android:layout_width="0dp"
@@ -215,7 +257,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_points" />
+                app:layout_constraintTop_toBottomOf="@id/input_gift_taker" />
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"

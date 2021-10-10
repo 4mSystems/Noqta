@@ -14,13 +14,15 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.board_header, 13);
-        sViewsWithIds.put(R.id.tv_profile_title, 14);
-        sViewsWithIds.put(R.id.ic_logo, 15);
+        sViewsWithIds.put(R.id.board_header, 16);
+        sViewsWithIds.put(R.id.tv_profile_title, 17);
+        sViewsWithIds.put(R.id.ic_logo, 18);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView12;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView5;
     @NonNull
@@ -37,6 +39,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
+    private OnTextChangedImpl1 mViewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener autoandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
@@ -71,6 +74,43 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
 
 
                     viewmodelRequest.setName(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener mboundView12androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.request.numOfWinners
+            //         is viewmodel.request.setNumOfWinners((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView12);
+            // localize variables for thread safety
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.request
+            te.app.notta.pages.teacher.models.AddGiftRequest viewmodelRequest = null;
+            // viewmodel.request.numOfWinners
+            java.lang.String viewmodelRequestNumOfWinners = null;
+            // viewmodel
+            te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
+            // viewmodel.request != null
+            boolean viewmodelRequestJavaLangObjectNull = false;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelRequest = viewmodel.getRequest();
+
+                viewmodelRequestJavaLangObjectNull = (viewmodelRequest) != (null);
+                if (viewmodelRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelRequest.setNumOfWinners(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -188,33 +228,39 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     };
 
     public FragmentAddGiftBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
     }
     private FragmentAddGiftBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 5
-            , (androidx.appcompat.widget.AppCompatButton) bindings[11]
+        super(bindingComponent, root, 6
+            , (androidx.appcompat.widget.AppCompatButton) bindings[14]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[1]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[15]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[16]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[18]
+            , (te.app.notta.customViews.views.IncrementalView) bindings[13]
             , (te.app.notta.customViews.views.IncrementalView) bindings[10]
             , (com.google.android.material.textfield.TextInputLayout) bindings[6]
             , (com.google.android.material.textfield.TextInputLayout) bindings[2]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
             , (com.google.android.material.textfield.TextInputLayout) bindings[4]
             , (com.google.android.material.textfield.TextInputLayout) bindings[8]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[12]
-            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[14]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[15]
+            , (te.app.notta.customViews.views.CustomTextViewMedium) bindings[17]
             );
         this.appCompatButtonNext.setTag(null);
         this.auto.setTag(null);
         this.back.setTag(null);
+        this.incrementalViewGiftCount.setTag(null);
         this.incrementalViewStudentCount.setTag(null);
         this.inputGiftImage.setTag(null);
         this.inputGiftName.setTag(null);
+        this.inputGiftTaker.setTag(null);
         this.inputGroupDesc.setTag(null);
         this.inputPoints.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView12 = (com.google.android.material.textfield.TextInputEditText) bindings[12];
+        this.mboundView12.setTag(null);
         this.mboundView5 = (com.google.android.material.textfield.TextInputEditText) bindings[5];
         this.mboundView5.setTag(null);
         this.mboundView7 = (androidx.appcompat.widget.AppCompatEditText) bindings[7];
@@ -233,7 +279,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x80L;
+                mDirtyFlags = 0x100L;
         }
         requestRebind();
     }
@@ -261,10 +307,10 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     }
 
     public void setViewmodel(@Nullable te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel) {
-        updateRegistration(4, Viewmodel);
+        updateRegistration(5, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x10L;
+            mDirtyFlags |= 0x20L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -278,10 +324,12 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             case 1 :
                 return onChangeViewmodelRequestPointsError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 2 :
-                return onChangeViewmodelRequestImageError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewmodelRequestWinnersError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 3 :
-                return onChangeViewmodelRequestNameError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewmodelRequestImageError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 4 :
+                return onChangeViewmodelRequestNameError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 5 :
                 return onChangeViewmodel((te.app.notta.pages.points.viewModels.PointsViewModel) object, fieldId);
         }
         return false;
@@ -304,7 +352,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelRequestImageError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestImageError, int fieldId) {
+    private boolean onChangeViewmodelRequestWinnersError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestWinnersError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -313,7 +361,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelRequestNameError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestNameError, int fieldId) {
+    private boolean onChangeViewmodelRequestImageError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestImageError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
@@ -322,22 +370,31 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelRequestNameError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestNameError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
             }
             return true;
         }
-        else if (fieldId == BR.request) {
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.notta.pages.points.viewModels.PointsViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
             }
             return true;
         }
-        else if (fieldId == BR.message) {
+        else if (fieldId == BR.request) {
             synchronized(this) {
                     mDirtyFlags |= 0x40L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80L;
             }
             return true;
         }
@@ -360,6 +417,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelRequestName = null;
         java.lang.String viewmodelRequestPoints = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelRequestWinnersError = null;
         java.lang.String viewmodelMessage = null;
         java.lang.String viewmodelRequestImageErrorGet = null;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
@@ -369,25 +427,28 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestImageError = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelRequestDescription = null;
+        java.lang.String viewmodelRequestNumOfWinners = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestNameError = null;
+        java.lang.String viewmodelRequestWinnersErrorGet = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
         java.lang.String viewmodelRequestPointsErrorGet = null;
         te.app.notta.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0xffL) != 0) {
+        if ((dirtyFlags & 0x1ffL) != 0) {
 
 
-            if ((dirtyFlags & 0xbfL) != 0) {
+            if ((dirtyFlags & 0x17fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.request
                         viewmodelRequest = viewmodel.getRequest();
                     }
 
-                if ((dirtyFlags & 0xb1L) != 0) {
+                if ((dirtyFlags & 0x161L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.descError
@@ -401,7 +462,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                             viewmodelRequestDescErrorGet = viewmodelRequestDescError.get();
                         }
                 }
-                if ((dirtyFlags & 0xb2L) != 0) {
+                if ((dirtyFlags & 0x162L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.pointsError
@@ -415,7 +476,7 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                             viewmodelRequestPointsErrorGet = viewmodelRequestPointsError.get();
                         }
                 }
-                if ((dirtyFlags & 0xb0L) != 0) {
+                if ((dirtyFlags & 0x160L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.image
@@ -426,15 +487,31 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                             viewmodelRequestPoints = viewmodelRequest.getPoints();
                             // read viewmodel.request.description
                             viewmodelRequestDescription = viewmodelRequest.getDescription();
+                            // read viewmodel.request.numOfWinners
+                            viewmodelRequestNumOfWinners = viewmodelRequest.getNumOfWinners();
                         }
                 }
-                if ((dirtyFlags & 0xb4L) != 0) {
+                if ((dirtyFlags & 0x164L) != 0) {
+
+                        if (viewmodelRequest != null) {
+                            // read viewmodel.request.winnersError
+                            viewmodelRequestWinnersError = viewmodelRequest.winnersError;
+                        }
+                        updateRegistration(2, viewmodelRequestWinnersError);
+
+
+                        if (viewmodelRequestWinnersError != null) {
+                            // read viewmodel.request.winnersError.get()
+                            viewmodelRequestWinnersErrorGet = viewmodelRequestWinnersError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x168L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.imageError
                             viewmodelRequestImageError = viewmodelRequest.imageError;
                         }
-                        updateRegistration(2, viewmodelRequestImageError);
+                        updateRegistration(3, viewmodelRequestImageError);
 
 
                         if (viewmodelRequestImageError != null) {
@@ -442,13 +519,13 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                             viewmodelRequestImageErrorGet = viewmodelRequestImageError.get();
                         }
                 }
-                if ((dirtyFlags & 0xb8L) != 0) {
+                if ((dirtyFlags & 0x170L) != 0) {
 
                         if (viewmodelRequest != null) {
                             // read viewmodel.request.nameError
                             viewmodelRequestNameError = viewmodelRequest.nameError;
                         }
-                        updateRegistration(3, viewmodelRequestNameError);
+                        updateRegistration(4, viewmodelRequestNameError);
 
 
                         if (viewmodelRequestNameError != null) {
@@ -457,14 +534,16 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                         }
                 }
             }
-            if ((dirtyFlags & 0x90L) != 0) {
+            if ((dirtyFlags & 0x120L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel::onPointsTextChanged
                         viewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel::onWinnersTextChanged
+                        viewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl1()) : mViewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
                     }
             }
-            if ((dirtyFlags & 0xd0L) != 0) {
+            if ((dirtyFlags & 0x1a0L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.message
@@ -474,38 +553,38 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
 
                     // read TextUtils.isEmpty(viewmodel.message)
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
-                if((dirtyFlags & 0xd0L) != 0) {
+                if((dirtyFlags & 0x1a0L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x1000L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x800L;
                     }
                 }
 
 
                     // read !TextUtils.isEmpty(viewmodel.message)
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0xd0L) != 0) {
+                if((dirtyFlags & 0x1a0L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x20000L;
+                            dirtyFlags |= 0x40000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000L;
+                            dirtyFlags |= 0x20000L;
                     }
                 }
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x400L) != 0) {
+        if ((dirtyFlags & 0x800L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
                     viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.notta.utils.Constants.HIDE_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x20000L) != 0) {
+        if ((dirtyFlags & 0x40000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
@@ -513,28 +592,28 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 }
         }
 
-        if ((dirtyFlags & 0xd0L) != 0) {
+        if ((dirtyFlags & 0x1a0L) != 0) {
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0xd0L) != 0) {
+            if((dirtyFlags & 0x1a0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x4000L;
+                }
+                else {
                         dirtyFlags |= 0x200L;
                         dirtyFlags |= 0x2000L;
                 }
-                else {
-                        dirtyFlags |= 0x100L;
-                        dirtyFlags |= 0x1000L;
-                }
             }
-            if((dirtyFlags & 0xd0L) != 0) {
+            if((dirtyFlags & 0x1a0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x8000L;
+                        dirtyFlags |= 0x10000L;
                 }
                 else {
-                        dirtyFlags |= 0x4000L;
+                        dirtyFlags |= 0x8000L;
                 }
             }
 
@@ -547,14 +626,14 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0xd0L) != 0) {
+        if ((dirtyFlags & 0x1a0L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewGradientAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium);
             this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x80L) != 0) {
+        if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
             this.appCompatButtonNext.setOnClickListener(mCallback87);
@@ -564,38 +643,46 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
             this.mboundView7.setOnClickListener(mCallback86);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0xb0L) != 0) {
+        if ((dirtyFlags & 0x160L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.auto, viewmodelRequestName);
+            te.app.notta.customViews.views.IncrementalView.getValue(this.incrementalViewGiftCount, viewmodelRequestNumOfWinners);
             te.app.notta.customViews.views.IncrementalView.getValue(this.incrementalViewStudentCount, viewmodelRequestPoints);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewmodelRequestNumOfWinners);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewmodelRequestDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewmodelRequestImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView9, viewmodelRequestPoints);
         }
-        if ((dirtyFlags & 0xb4L) != 0) {
+        if ((dirtyFlags & 0x168L) != 0) {
             // api target 1
 
             this.inputGiftImage.setError(viewmodelRequestImageErrorGet);
         }
-        if ((dirtyFlags & 0xb8L) != 0) {
+        if ((dirtyFlags & 0x170L) != 0) {
             // api target 1
 
             this.inputGiftName.setError(viewmodelRequestNameErrorGet);
         }
-        if ((dirtyFlags & 0xb1L) != 0) {
+        if ((dirtyFlags & 0x164L) != 0) {
+            // api target 1
+
+            this.inputGiftTaker.setError(viewmodelRequestWinnersErrorGet);
+        }
+        if ((dirtyFlags & 0x161L) != 0) {
             // api target 1
 
             this.inputGroupDesc.setError(viewmodelRequestDescErrorGet);
         }
-        if ((dirtyFlags & 0xb2L) != 0) {
+        if ((dirtyFlags & 0x162L) != 0) {
             // api target 1
 
             this.inputPoints.setError(viewmodelRequestPointsErrorGet);
         }
-        if ((dirtyFlags & 0x90L) != 0) {
+        if ((dirtyFlags & 0x120L) != 0) {
             // api target 1
 
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnWinnersTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView9, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnPointsTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView9androidTextAttrChanged);
         }
     }
@@ -609,6 +696,17 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
         @Override
         public void onTextChanged(java.lang.CharSequence arg0, int arg1, int arg2, int arg3) {
             this.value.onPointsTextChanged(arg0, arg1, arg2, arg3); 
+        }
+    }
+    public static class OnTextChangedImpl1 implements androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged{
+        private te.app.notta.pages.points.viewModels.PointsViewModel value;
+        public OnTextChangedImpl1 setValue(te.app.notta.pages.points.viewModels.PointsViewModel value) {
+            this.value = value;
+            return value == null ? null : this;
+        }
+        @Override
+        public void onTextChanged(java.lang.CharSequence arg0, int arg1, int arg2, int arg3) {
+            this.value.onWinnersTextChanged(arg0, arg1, arg2, arg3); 
         }
     }
     // callback impls
@@ -675,22 +773,23 @@ public class FragmentAddGiftBindingImpl extends FragmentAddGiftBinding implement
     /* flag mapping
         flag 0 (0x1L): viewmodel.request.descError
         flag 1 (0x2L): viewmodel.request.pointsError
-        flag 2 (0x3L): viewmodel.request.imageError
-        flag 3 (0x4L): viewmodel.request.nameError
-        flag 4 (0x5L): viewmodel
-        flag 5 (0x6L): viewmodel.request
-        flag 6 (0x7L): viewmodel.message
-        flag 7 (0x8L): null
-        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
+        flag 2 (0x3L): viewmodel.request.winnersError
+        flag 3 (0x4L): viewmodel.request.imageError
+        flag 4 (0x5L): viewmodel.request.nameError
+        flag 5 (0x6L): viewmodel
+        flag 6 (0x7L): viewmodel.request
+        flag 7 (0x8L): viewmodel.message
+        flag 8 (0x9L): null
         flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_gradient : @android:drawable/corner_view_primary_medium
         flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
         flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

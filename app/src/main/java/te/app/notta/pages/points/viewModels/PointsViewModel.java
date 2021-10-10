@@ -95,6 +95,13 @@ public class PointsViewModel extends BaseViewModel {
         notifyChange(BR.request);
     }
 
+    public void onWinnersTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(s)) {
+            getRequest().setNumOfWinners("1");
+        }
+        notifyChange(BR.request);
+    }
+
     @Bindable
     public AddGiftRequest getRequest() {
         return this.request == null ? this.request = new AddGiftRequest() : this.request;

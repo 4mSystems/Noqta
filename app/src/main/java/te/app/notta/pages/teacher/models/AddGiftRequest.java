@@ -14,10 +14,13 @@ public class AddGiftRequest {
     private String description;
     @SerializedName("points")
     private String points = "1";
+    @SerializedName("num")
+    private String numOfWinners = "1";
     private transient String image;
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> descError = new ObservableField<>();
     public transient ObservableField<String> pointsError = new ObservableField<>();
+    public transient ObservableField<String> winnersError = new ObservableField<>();
     public transient ObservableField<String> imageError = new ObservableField<>();
 
     public boolean isValid() {
@@ -33,6 +36,9 @@ public class AddGiftRequest {
             valid = false;
         } else if (!Validate.isValid(points, Constants.FIELD)) {
             pointsError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(numOfWinners, Constants.FIELD)) {
+            winnersError.set(Validate.error);
             valid = false;
         }
         return valid;
@@ -72,5 +78,14 @@ public class AddGiftRequest {
     public void setImage(String image) {
         imageError.set(null);
         this.image = image;
+    }
+
+    public String getNumOfWinners() {
+        return numOfWinners;
+    }
+
+    public void setNumOfWinners(String numOfWinners) {
+        setNumOfWinners(null);
+        this.numOfWinners = numOfWinners;
     }
 }

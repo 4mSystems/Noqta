@@ -56,6 +56,8 @@ public class AddGiftFragment extends BaseFragment {
         getParentActivity().mutableLiveData.observeForever(mutable -> {
             if (mutable.message.equals(Constants.ADD_ONE))
                 viewModel.getRequest().setPoints((String) mutable.object);
+            else
+                viewModel.getRequest().setNumOfWinners((String) mutable.object);
             viewModel.notifyChange(BR.request);
         });
     }
@@ -86,5 +88,4 @@ public class AddGiftFragment extends BaseFragment {
         super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
-
 }

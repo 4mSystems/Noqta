@@ -195,4 +195,6 @@
     <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
     <string name="notification">Notifications</string>
     <string name="change_lang_splash">Choose your favorite language</string>
+    <string name="gift_owner_number">Number winners</string>
+    <string name="sold_out">Sold out</string>
 </resources>

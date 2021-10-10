@@ -3704,6 +3704,7 @@ id img_login_header
 id immediateStop
 id included
 id increment
+id incrementalViewGiftCount
 id incrementalViewStudentCount
 id incrementalViewTasksCount
 id incrementalViewText
@@ -3716,6 +3717,7 @@ id input_date
 id input_email
 id input_gift_image
 id input_gift_name
+id input_gift_taker
 id input_group_desc
 id input_group_name
 id input_name
@@ -4557,6 +4559,7 @@ string gift_deleted_successfully
 string gift_description
 string gift_image
 string gift_name
+string gift_owner_number
 string gift_points_number
 string give_points
 string give_points_to
@@ -4726,6 +4729,7 @@ string share_app
 string shop
 string show_all
 string show_answers
+string sold_out
 string specialist
 string startApp
 string status_bar_notification_info_overflow

@@ -149,7 +149,7 @@
         <entry key="app/src/main/res/layout/item_member.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_more.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_my_group.xml" value="0.17567567567567569" />
-        <entry key="app/src/main/res/layout/item_points.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_points.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_profile.xml" value="0.19638157894736843" />
         <entry key="app/src/main/res/layout/item_recent_task.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_requet.xml" value="0.19638157894736843" />

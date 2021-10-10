@@ -39,6 +39,9 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
   public final AppCompatImageView icLogo;
 
   @NonNull
+  public final IncrementalView incrementalViewGiftCount;
+
+  @NonNull
   public final IncrementalView incrementalViewStudentCount;
 
   @NonNull
@@ -46,6 +49,9 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
 
   @NonNull
   public final TextInputLayout inputGiftName;
+
+  @NonNull
+  public final TextInputLayout inputGiftTaker;
 
   @NonNull
   public final TextInputLayout inputGroupDesc;
@@ -65,8 +71,9 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
   protected FragmentAddGiftBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatButton appCompatButtonNext, TextInputEditText auto, FloatingActionButton back,
       AppCompatImageView boardHeader, AppCompatImageView icLogo,
-      IncrementalView incrementalViewStudentCount, TextInputLayout inputGiftImage,
-      TextInputLayout inputGiftName, TextInputLayout inputGroupDesc, TextInputLayout inputPoints,
+      IncrementalView incrementalViewGiftCount, IncrementalView incrementalViewStudentCount,
+      TextInputLayout inputGiftImage, TextInputLayout inputGiftName, TextInputLayout inputGiftTaker,
+      TextInputLayout inputGroupDesc, TextInputLayout inputPoints,
       CircularProgressIndicator progress, CustomTextViewMedium tvProfileTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
@@ -74,9 +81,11 @@ public abstract class FragmentAddGiftBinding extends ViewDataBinding {
     this.back = back;
     this.boardHeader = boardHeader;
     this.icLogo = icLogo;
+    this.incrementalViewGiftCount = incrementalViewGiftCount;
     this.incrementalViewStudentCount = incrementalViewStudentCount;
     this.inputGiftImage = inputGiftImage;
     this.inputGiftName = inputGiftName;
+    this.inputGiftTaker = inputGiftTaker;
     this.inputGroupDesc = inputGroupDesc;
     this.inputPoints = inputPoints;
     this.progress = progress;
