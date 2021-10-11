@@ -85,7 +85,7 @@ public class AddGiftRequest {
     }
 
     public void setNumOfWinners(String numOfWinners) {
-        setNumOfWinners(null);
+        winnersError.set(null);
         this.numOfWinners = numOfWinners;
     }
 }
