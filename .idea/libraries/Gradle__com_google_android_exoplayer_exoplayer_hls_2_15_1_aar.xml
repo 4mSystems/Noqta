@@ -2,15 +2,19 @@
   <library name="Gradle: com.google.android.exoplayer:exoplayer-hls:2.15.1@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/77d32c12c8e08856f65e26a9db824831/jetified-exoplayer-hls-2.15.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-hls/2.15.1/580933a2fa280c4195440562c58baafea5b63805/exoplayer-hls-2.15.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-hls/2.15.1/580933a2fa280c4195440562c58baafea5b63805/exoplayer-hls-2.15.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

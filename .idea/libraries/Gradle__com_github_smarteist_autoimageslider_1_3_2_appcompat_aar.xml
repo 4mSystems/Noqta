@@ -16,12 +16,15 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e9d249f6d4af8b699316de7910cae4c/jetified-autoimageslider-1.3.2-appcompat/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e9d249f6d4af8b699316de7910cae4c/jetified-autoimageslider-1.3.2-appcompat/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e9d249f6d4af8b699316de7910cae4c/jetified-autoimageslider-1.3.2-appcompat/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/1fa902c51193d16ec4f4e1790705fbff/jetified-autoimageslider-1.3.2-appcompat/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/1fa902c51193d16ec4f4e1790705fbff/jetified-autoimageslider-1.3.2-appcompat/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/1fa902c51193d16ec4f4e1790705fbff/jetified-autoimageslider-1.3.2-appcompat/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.smarteist/autoimageslider/1.3.2-appcompat/132af344c4c683e0c88f28dac77029cff34c7d33/autoimageslider-1.3.2-appcompat-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.github.smarteist/autoimageslider/1.3.2-appcompat/132af344c4c683e0c88f28dac77029cff34c7d33/autoimageslider-1.3.2-appcompat-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.smarteist/autoimageslider/1.3.2-appcompat/1d2b0752ba05f72267b7fa42bed82baa78903da1/autoimageslider-1.3.2-appcompat-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.github.smarteist/autoimageslider/1.3.2-appcompat/1d2b0752ba05f72267b7fa42bed82baa78903da1/autoimageslider-1.3.2-appcompat-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
