@@ -10,11 +10,11 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.auth.register.RegisterViewModel" />
+            type="te.app.nottaa.pages.auth.register.RegisterViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/board_header" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -335,7 +335,7 @@
                 app:trackColor="@color/white"
                 app:trackThickness="@dimen/dp4h" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -345,7 +345,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/login_no_account_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

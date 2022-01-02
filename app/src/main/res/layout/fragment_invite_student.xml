@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.teacher.viewModels.AddGroupViewModel" />
+            type="te.app.nottaa.pages.teacher.viewModels.AddGroupViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +37,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_header"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

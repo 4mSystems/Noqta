@@ -5,6 +5,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd2bb7e7cd66438e6659278e2e984d16/jetified-roundedimageview-2.3.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/efdaa3b33dd6b3ba5c32e056a7443838/jetified-roundedimageview-2.3.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92060eedd5d051a27a0c6e2eb1bd7c1/jetified-roundedimageview-2.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/8bc71e3b6e704a261e14c46699cc0433/jetified-roundedimageview-2.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/f34febbea957677d193a4f0d27352c2f/jetified-roundedimageview-2.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/7189c750f63e618416180dec28e3d046/jetified-roundedimageview-2.3.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9829ac64bae16297302bb582b39ef268/jetified-roundedimageview-2.3.0/AndroidManifest.xml" />
@@ -19,12 +22,21 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92060eedd5d051a27a0c6e2eb1bd7c1/jetified-roundedimageview-2.3.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92060eedd5d051a27a0c6e2eb1bd7c1/jetified-roundedimageview-2.3.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d92060eedd5d051a27a0c6e2eb1bd7c1/jetified-roundedimageview-2.3.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/8bc71e3b6e704a261e14c46699cc0433/jetified-roundedimageview-2.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/8bc71e3b6e704a261e14c46699cc0433/jetified-roundedimageview-2.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/8bc71e3b6e704a261e14c46699cc0433/jetified-roundedimageview-2.3.0/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/f34febbea957677d193a4f0d27352c2f/jetified-roundedimageview-2.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/f34febbea957677d193a4f0d27352c2f/jetified-roundedimageview-2.3.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/f34febbea957677d193a4f0d27352c2f/jetified-roundedimageview-2.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/7189c750f63e618416180dec28e3d046/jetified-roundedimageview-2.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/7189c750f63e618416180dec28e3d046/jetified-roundedimageview-2.3.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/7189c750f63e618416180dec28e3d046/jetified-roundedimageview-2.3.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.makeramen/roundedimageview/2.3.0/30a0f5d140791f4ade3ac418dddaf0d59ca694cc/roundedimageview-2.3.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.makeramen/roundedimageview/2.3.0/30a0f5d140791f4ade3ac418dddaf0d59ca694cc/roundedimageview-2.3.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.makeramen/roundedimageview/2.3.0/a74d35b08232b1e1fe0c50eeb4a27d43d6a53e1b/roundedimageview-2.3.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.makeramen/roundedimageview/2.3.0/a74d35b08232b1e1fe0c50eeb4a27d43d6a53e1b/roundedimageview-2.3.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

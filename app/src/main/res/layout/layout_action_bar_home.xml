@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize">
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_home_bar_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/badge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

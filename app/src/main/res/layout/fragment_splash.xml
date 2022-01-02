@@ -8,11 +8,11 @@
 
         <import type="android.view.View" />
 
-        <import type="te.app.notta.utils.session.UserHelper" />
+        <import type="te.app.nottaa.utils.session.UserHelper" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.splash.SplashViewModel" />
+            type="te.app.nottaa.pages.splash.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,7 +32,7 @@
             android:visibility="@{UserHelper.getInstance(context).isFirst==true &amp;&amp;viewmodel.isLangShow?View.VISIBLE:View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_take_me"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

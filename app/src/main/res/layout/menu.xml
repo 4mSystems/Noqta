@@ -6,11 +6,11 @@
 
         <import type="android.view.View" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="menuViewModel"
-            type="te.app.notta.customViews.views.MenuViewModel" />
+            type="te.app.nottaa.customViews.views.MenuViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView

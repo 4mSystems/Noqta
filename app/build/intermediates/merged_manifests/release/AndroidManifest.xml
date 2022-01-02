@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="te.app.notta"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="te.app.nottaa"
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -13,12 +13,10 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
@@ -30,9 +28,10 @@
     </queries>
 
     <application
-        android:name="te.app.notta.base.MyApplication"
+        android:name="te.app.nottaa.base.MyApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
         android:extractNativeLibs="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,6 +40,7 @@
         android:launchMode="singleTask"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <meta-data
@@ -54,11 +54,11 @@
             android:resource="@color/colorPrimary" />
 
         <activity
-            android:name="te.app.notta.activity.MainActivity"
+            android:name="te.app.nottaa.activity.MainActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="te.app.notta.activity.BaseActivity"
+            android:name="te.app.nottaa.activity.BaseActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
@@ -69,12 +69,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="te.app.notta.activity.ExoPlayerActivity"
+            android:name="te.app.nottaa.activity.ExoPlayerActivity"
             android:screenOrientation="fullSensor" />
         <!-- noqta.firststep@gmail.com -->
         <!-- asd123$noqta -->
         <service
-            android:name="te.app.notta.base.MyFirebaseMessagingService"
+            android:name="te.app.nottaa.base.MyFirebaseMessagingService"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -83,7 +83,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="te.app.notta.provider"
+            android:authorities="te.app.nottaa.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -166,7 +166,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="te.app.notta.firebaseinitprovider"
+            android:authorities="te.app.nottaa.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -178,7 +178,7 @@
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="te.app.notta.com.squareup.picasso"
+            android:authorities="te.app.nottaa.com.squareup.picasso"
             android:exported="false" />
 
         <service
@@ -191,7 +191,7 @@
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="te.app.notta.lifecycle-process"
+            android:authorities="te.app.nottaa.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
 

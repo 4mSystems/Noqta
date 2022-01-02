@@ -8,11 +8,11 @@
 
         <import type="android.view.View" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.points.viewModels.PointsViewModel" />
+            type="te.app.nottaa.pages.points.viewModels.PointsViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -33,7 +33,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_home_username"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <te.app.notta.customViews.views.CustomTextViewMedium
+                    <te.app.nottaa.customViews.views.CustomTextViewMedium
                         android:id="@+id/tv_your_point1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark" />
 
-                    <te.app.notta.customViews.views.CustomTextViewMedium
+                    <te.app.nottaa.customViews.views.CustomTextViewMedium
                         android:id="@+id/tv_your_point2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent" />
 
-                    <te.app.notta.customViews.views.CustomTextViewMedium
+                    <te.app.nottaa.customViews.views.CustomTextViewMedium
                         android:id="@+id/tv_your_point3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

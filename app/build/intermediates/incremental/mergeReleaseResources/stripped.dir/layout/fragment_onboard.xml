@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                           
+
+                                                       
+
+                 
+                                    
+                                                                
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_onboard_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp20w"
+            android:layout_marginEnd="@dimen/dp20w"
+            app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderCircularHandlerEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@color/colorPrimaryDark"
+            app:sliderIndicatorUnselectedColor="@color/colorPrimaryOp"
+            app:sliderScrollTimeInSec="3"
+            app:sliderStartAutoCycle="false" />
+
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15w"
+            android:layout_marginEnd="@dimen/dp15w"
+            android:drawableEnd="@drawable/ic_double_arrow"
+            android:tag="binding_1"                                           
+            android:text="@string/drop_off_skip"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatButtonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp14w"
+            android:layout_marginBottom="@dimen/dp14h"
+            android:tag="binding_2"                                          
+            android:src="@drawable/ic_next"
+                                                                                                              
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.HomeViewModel" />
+            type="te.app.nottaa.pages.home.viewModels.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ll_base_action_bar_container" />
 
 
-        <te.app.notta.customViews.views.CustomBottomNavigationView
+        <te.app.nottaa.customViews.views.CustomBottomNavigationView
             android:id="@+id/home_navigation_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

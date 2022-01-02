@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                            
+                                                                                       
+           
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:tag="layout/item_student_invite_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tv_member"
+            android:layout_width="@dimen/dp40w"
+            android:layout_height="@dimen/dp40h"
+            android:layout_margin="@dimen/dp4h"
+            android:src="@drawable/splash"
+            android:tag="binding_1"                  
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:tag="binding_2"                 
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checkbox"
+            app:layout_constraintStart_toEndOf="@id/tv_member"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp6w"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:tag="binding_3"                                                                                      
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/br5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_member,tv_teacher_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp10h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/br5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

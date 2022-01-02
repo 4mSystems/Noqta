@@ -1,7 +1,13 @@
-#Mon Oct 11 20:41:27 EET 2021
-base.0=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-path.1=classes2.dex
-renamed.1=classes2.dex
+#Fri Dec 31 17:28:57 EET 2021
+path.3=classes_0.dex
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
-base.1=/home/elnagar/StudioProjects/Noqta/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+base.3=/home/elnagar/Android projects/Noqta/app/build/intermediates/dex/release/mergeLibDexRelease/classes_0.dex
+base.2=/home/elnagar/Android projects/Noqta/app/build/intermediates/dex/release/mergeExtDexRelease/classes2.dex
+base.1=/home/elnagar/Android projects/Noqta/app/build/intermediates/dex/release/mergeProjectDexRelease/classes.dex
+base.0=/home/elnagar/Android projects/Noqta/app/build/intermediates/dex/release/mergeExtDexRelease/classes.dex

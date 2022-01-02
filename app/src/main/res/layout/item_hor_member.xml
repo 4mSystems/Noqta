@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
+            type="te.app.nottaa.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 
@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <te.app.notta.customViews.views.CustomTextViewRegular
+        <te.app.nottaa.customViews.views.CustomTextViewRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableBottom="@drawable/ic_icon_feather_check_circle"

@@ -5,13 +5,13 @@
 
     <data>
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <import type="android.view.View" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.myGroups.viewModels.MyGroupsViewModel" />
+            type="te.app.nottaa.pages.myGroups.viewModels.MyGroupsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

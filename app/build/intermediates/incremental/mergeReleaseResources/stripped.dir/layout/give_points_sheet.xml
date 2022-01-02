@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                
+
+                                                       
+
+                                           
+
+                 
+                            
+                                                                                 
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h" android:tag="layout/give_points_sheet_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:tag="binding_1"                                                                                      
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.nottaa.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:tag="binding_2"                                                                                                                 
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_points"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp14w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:layout_marginEnd="@dimen/dp15w"
+            android:hint="@string/points_number"
+            app:boxCornerRadiusBottomEnd="@dimen/dp27h"
+            app:boxCornerRadiusBottomStart="@dimen/dp27h"
+            app:boxCornerRadiusTopEnd="@dimen/dp27h"
+            app:boxCornerRadiusTopStart="@dimen/dp27h"
+            android:tag="binding_3"                              
+            app:helperTextTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noOfStudents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:tag="binding_4"                                 
+                                                                    
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <te.app.nottaa.customViews.views.IncrementalView
+            android:id="@+id/incrementalViewStudentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp6w"
+            app:layout_constraintBottom_toBottomOf="@id/input_points"
+            app:layout_constraintEnd_toEndOf="@id/input_points"
+            app:layout_constraintTop_toTopOf="@id/input_points"
+            app:type="ADD_ONE"
+            android:tag="binding_5"                          />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp14h"
+            android:padding="@dimen/dp10h"
+            android:text="@string/send"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:backgroundTint="@color/colorAccent"
+            app:cornerRadius="@dimen/dp16h"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_points" />
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:tag="binding_6"                                                                                                                        
+            app:layout_constraintBottom_toBottomOf="@id/btn_close"
+            app:layout_constraintStart_toStartOf="@id/btn_close"
+            app:layout_constraintTop_toTopOf="@id/btn_close"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

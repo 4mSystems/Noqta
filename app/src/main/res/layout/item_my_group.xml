@@ -6,11 +6,11 @@
 
         <import type="android.view.View" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.home.viewModels.ItemHomeViewModel" />
+            type="te.app.nottaa.pages.home.viewModels.ItemHomeViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -37,7 +37,7 @@
                 app:riv_corner_radius_bottom_left="@dimen/dp4h"
                 app:riv_corner_radius_bottom_right="@dimen/dp4h" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_group_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 app:layout_constraintStart_toEndOf="@+id/ic_user"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_user_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 app:layout_constraintStart_toEndOf="@+id/ic_user"
                 app:layout_constraintTop_toBottomOf="@+id/tv_group_name" />
 
-            <te.app.notta.customViews.views.CustomTextViewRegular
+            <te.app.nottaa.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_user_work"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

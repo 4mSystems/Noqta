@@ -10,11 +10,11 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.groupDetails.viewModels.GroupDetailsViewModel" />
+            type="te.app.nottaa.pages.groupDetails.viewModels.GroupDetailsViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -41,7 +41,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_profile_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                     app:layout_constraintTop_toBottomOf="@id/board_header"
                     app:riv_corner_radius="@dimen/dp8h" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_teacher_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                     app:layout_constraintStart_toEndOf="@id/ic_teacher"
                     app:layout_constraintTop_toTopOf="@id/ic_teacher" />
 
-                <te.app.notta.customViews.views.CustomTextViewRegular
+                <te.app.nottaa.customViews.views.CustomTextViewRegular
                     android:id="@+id/tv_user_work"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                     app:layout_constraintStart_toEndOf="@id/ic_teacher"
                     app:layout_constraintTop_toBottomOf="@id/tv_user_work" />
 
-                <te.app.notta.customViews.views.CustomTextViewRegular
+                <te.app.nottaa.customViews.views.CustomTextViewRegular
                     android:id="@+id/tv_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                     android:textColor="@color/medium_color"
                     android:textSize="@dimen/sp8" />
 
-                <te.app.notta.customViews.views.CustomTextViewRegular
+                <te.app.nottaa.customViews.views.CustomTextViewRegular
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                     android:background="@color/line_color"
                     app:layout_constraintTop_toBottomOf="@id/br3" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_group_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                     app:layout_constraintStart_toStartOf="@id/ic_teacher"
                     app:layout_constraintTop_toBottomOf="@+id/v_line" />
 
-                <te.app.notta.customViews.views.CustomTextViewRegular
+                <te.app.nottaa.customViews.views.CustomTextViewRegular
                     android:id="@+id/tv_group_desc_value"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
                     android:background="@color/line_color"
                     app:layout_constraintTop_toBottomOf="@id/tv_group_desc_value" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_info"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -320,7 +320,7 @@
                     android:background="@color/line_color"
                     app:layout_constraintTop_toBottomOf="@id/flow1" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_members"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -332,7 +332,7 @@
                     app:layout_constraintStart_toStartOf="@id/ic_teacher"
                     app:layout_constraintTop_toBottomOf="@+id/v_line2" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_show_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -370,7 +370,7 @@
                     android:visibility="@{viewmodel.groupDetails.teacher.id==viewmodel.userData.id ||viewmodel.groupDetails.member==1?View.VISIBLE:View.GONE}"
                     app:layout_constraintTop_toBottomOf="@id/rc_members" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_tasks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

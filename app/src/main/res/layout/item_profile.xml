@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.settings.viewModels.ItemProfileViewModel" />
+            type="te.app.nottaa.pages.settings.viewModels.ItemProfileViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:riv_corner_radius="@dimen/dp10h" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_group_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

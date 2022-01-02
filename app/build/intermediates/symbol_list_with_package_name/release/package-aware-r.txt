@@ -1,4 +1,4 @@
-te.app.notta
+te.app.nottaa
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom

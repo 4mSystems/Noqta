@@ -10,11 +10,11 @@
 
                                                 
 
-                                                      
+                                                       
 
                  
                             
-                                                                          
+                                                                           
            
 
     <androidx.core.widget.NestedScrollView
@@ -35,7 +35,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_profile_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.notta.customViews.views.IncrementalView
+            <te.app.nottaa.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewStudentCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.notta.customViews.views.IncrementalView
+            <te.app.nottaa.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewGiftCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

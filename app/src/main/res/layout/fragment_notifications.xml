@@ -9,7 +9,7 @@
 
         <variable
             name="notifyViewModel"
-            type="te.app.notta.pages.notifications.viewModels.NotificationsViewModels" />
+            type="te.app.nottaa.pages.notifications.viewModels.NotificationsViewModels" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

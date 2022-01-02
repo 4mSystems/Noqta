@@ -4,11 +4,11 @@
 
     <data>
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
+            type="te.app.nottaa.pages.groupDetails.viewModels.ItemGroupStudentViewModel" />
     </data>
 
 
@@ -29,7 +29,7 @@
             app:riv_corner_radius="@dimen/dp8h" />
 
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_teacher_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             app:layout_constraintStart_toEndOf="@id/tv_member"
             app:layout_constraintTop_toTopOf="@id/tv_member" />
 
-        <te.app.notta.customViews.views.CustomTextViewRegular
+        <te.app.nottaa.customViews.views.CustomTextViewRegular
             android:id="@+id/tv_user_work"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

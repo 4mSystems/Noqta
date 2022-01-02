@@ -12,7 +12,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.settings.viewModels.SettingsViewModel" />
+            type="te.app.nottaa.pages.settings.viewModels.SettingsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +27,7 @@
             android:src="@drawable/ic_board_home"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <te.app.notta.customViews.views.CustomTextViewMedium
+                    <te.app.nottaa.customViews.views.CustomTextViewMedium
                         android:id="@+id/about_sub_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/ic_logo" />
 
-                    <te.app.notta.customViews.views.CustomTextViewMedium
+                    <te.app.nottaa.customViews.views.CustomTextViewMedium
                         android:id="@+id/about_body"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

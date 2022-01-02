@@ -11,7 +11,7 @@
 
         <variable
             name="baseViewModel"
-            type="te.app.notta.base.BaseViewModel" />
+            type="te.app.nottaa.base.BaseViewModel" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

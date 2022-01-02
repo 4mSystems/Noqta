@@ -6,13 +6,13 @@
 
     <data>
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <import type="android.view.View" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.home.viewModels.HomeViewModel" />
+            type="te.app.nottaa.pages.home.viewModels.HomeViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -37,7 +37,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_home_username"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_home_desc"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                     app:layout_constraintStart_toStartOf="@id/tv_home_desc"
                     app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
 
-                <te.app.notta.customViews.views.CustomTextViewMedium
+                <te.app.nottaa.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_home_body"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

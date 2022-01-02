@@ -6,11 +6,11 @@
 
         <import type="android.view.View" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.groupDetails.viewModels.ItemGroupTasksViewModel" />
+            type="te.app.nottaa.pages.groupDetails.viewModels.ItemGroupTasksViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:layout_width="@dimen/dp30w"
                 android:layout_height="@dimen/dp30h"
                 android:layout_margin="@dimen/dp10h"
@@ -38,7 +38,7 @@
                 android:textColor="@color/black" />
         </com.google.android.material.card.MaterialCardView>
 
-        <te.app.notta.customViews.views.CustomTextViewRegular
+        <te.app.nottaa.customViews.views.CustomTextViewRegular
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

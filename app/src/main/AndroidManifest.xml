@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="te.app.notta">
+    package="te.app.nottaa">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -10,17 +10,13 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <uses-permission
-        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="te.app.notta.base.MyApplication"
+        android:name="te.app.nottaa.base.MyApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -43,12 +39,12 @@
             android:resource="@color/colorPrimary" />
 
         <activity
-            android:name="te.app.notta.activity.MainActivity"
+            android:name="te.app.nottaa.activity.MainActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
-            android:name="te.app.notta.activity.BaseActivity"
+            android:name="te.app.nottaa.activity.BaseActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -59,12 +55,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ExoPlayerActivity"
+            android:name="te.app.nottaa.activity.ExoPlayerActivity"
             android:screenOrientation="fullSensor" />
         <!--        noqta.firststep@gmail.com-->
         <!--        asd123$noqta-->
         <service
-            android:name="te.app.notta.base.MyFirebaseMessagingService"
+            android:name="te.app.nottaa.base.MyFirebaseMessagingService"
             android:exported="true"
             tools:ignore="ExportedService">
             <intent-filter>

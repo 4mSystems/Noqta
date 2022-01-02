@@ -10,11 +10,11 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="te.app.notta.utils.Constants" />
+        <import type="te.app.nottaa.utils.Constants" />
 
         <variable
             name="viewmodel"
-            type="te.app.notta.pages.teacher.viewModels.AddGroupViewModel" />
+            type="te.app.nottaa.pages.teacher.viewModels.AddGroupViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -35,7 +35,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_profile_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.notta.customViews.views.IncrementalView
+            <te.app.nottaa.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewStudentCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -200,7 +200,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.notta.customViews.views.IncrementalView
+            <te.app.nottaa.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewTasksCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_tasks">
 
-                <te.app.notta.customViews.views.FutureDateEditText
+                <te.app.nottaa.customViews.views.FutureDateEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"

@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.teacher.viewModels.ItemStudentInviteViewModel" />
+            type="te.app.nottaa.pages.teacher.viewModels.ItemStudentInviteViewModel" />
     </data>
 
 
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <te.app.notta.customViews.views.CustomTextViewMedium
+        <te.app.nottaa.customViews.views.CustomTextViewMedium
             android:id="@+id/tv_teacher_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

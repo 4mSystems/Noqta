@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="te.app.notta.pages.addAnswer.viewModels.ItemTaskMediaViewModel" />
+            type="te.app.nottaa.pages.addAnswer.viewModels.ItemTaskMediaViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

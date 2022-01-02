@@ -6,7 +6,7 @@
 
         <variable
             name="notifyItemViewModels"
-            type="te.app.notta.pages.notifications.itemViewModels.NotificationsItemViewModels" />
+            type="te.app.nottaa.pages.notifications.itemViewModels.NotificationsItemViewModels" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,7 @@
             android:onClick="@{() -> notifyItemViewModels.itemAction()}"
             android:orientation="vertical">
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/textView13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 app:riv_border_width="1dp"
                 app:riv_corner_radius="@dimen/dp8h" />
 
-            <te.app.notta.customViews.views.CustomTextViewMedium
+            <te.app.nottaa.customViews.views.CustomTextViewMedium
                 android:id="@+id/textView14"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
